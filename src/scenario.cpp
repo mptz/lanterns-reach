@@ -202,8 +202,13 @@ void parseInto(const json& j, Scenario& s, const std::string& directory, int dep
         }
     }
     if (j.contains("world")) {
-        onlyFields(j["world"], "world", {"grid"});
-        if (j["world"].contains("grid")) s.grid = static_cast<int>(integer(j["world"]["grid"], "world.grid", 1, 512));
+        if (j["world"].is_object() && j["world"].contains("grid"))
+            fail("world.grid", "removed in v0.2.1 (the world is a 64³ chunk); use world.generator");
+        onlyFields(j["world"], "world", {"generator"});
+        if (j["world"].contains("generator")) {
+            s.generator = string(j["world"]["generator"], "world.generator");
+            if (s.generator != "empty") fail("world.generator", "must be \"empty\"");
+        }
     }
     if (j.contains("scene")) parseScene(j["scene"], s);
     if (j.contains("camera")) {

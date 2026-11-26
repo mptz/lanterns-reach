@@ -47,7 +47,7 @@ inline constexpr int kOverlayCount = 8;
 
 struct Scenario {
     // world
-    int grid = 32;
+    std::string generator = "empty";  // fills the chunk with air; the scene is applied on top
     // scene: applied in order as one edit set
     std::vector<SceneOp> scene;
     // camera (the v0.1 start view: within reach of the surface, about 9 blocks)

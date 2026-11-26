@@ -1,4 +1,4 @@
-#include "grid_world.h"
+#include "chunk_world.h"
 
 #include <algorithm>
 #include <cmath>
@@ -14,48 +14,41 @@ constexpr double kInf = std::numeric_limits<double>::infinity();
 
 }  // namespace
 
-DenseGrid::DenseGrid(const BlockRegistry& registry, int size, WorldPos origin)
-    : registry_(registry), size_(size), origin_(origin),
-      cells_(static_cast<std::size_t>(size) * static_cast<std::size_t>(size) * static_cast<std::size_t>(size)) {}
+ChunkWorld::ChunkWorld(const BlockRegistry& registry) : registry_(registry) {}
 
-bool DenseGrid::contains(const CellPos& c) const {
-    return c.x >= 0 && c.y >= 0 && c.z >= 0 && c.x < size_ && c.y < size_ && c.z < size_;
+bool ChunkWorld::contains(const CellPos& c) const { return chunkOf(c) == kChunk.coord; }
+
+BlockState ChunkWorld::probe(const CellPos& cell) const {
+    return contains(cell) ? chunk_.get(localOf(cell)) : BlockState::air();
 }
 
-std::size_t DenseGrid::index(const CellPos& c) const {
-    const auto s = static_cast<std::size_t>(size_);
-    return (static_cast<std::size_t>(c.z) * s + static_cast<std::size_t>(c.y)) * s + static_cast<std::size_t>(c.x);
+std::vector<ChunkId> ChunkWorld::dirtyChunks() const {
+    if (meshedGeneration_ == generation_) return {};
+    return {kChunk};
 }
 
-BlockState DenseGrid::probe(const CellPos& cell) const {
-    return contains(cell) ? cells_[index(cell)] : BlockState::air();
-}
-
-ApplyResult DenseGrid::apply(const EditSet& edits) {
+ApplyResult ChunkWorld::apply(const EditSet& edits) {
     ApplyResult result;
     for (const Edit& e : edits.edits) {
         if (!contains(e.cell)) {
             result.rejected.push_back(e.cell);
             continue;
         }
-        BlockState& slot = cells_[index(e.cell)];
-        if (slot == e.state) continue;
-        slot = e.state;
-        ++result.changed;
+        if (chunk_.set(localOf(e.cell), e.state)) ++result.changed;
     }
     if (result.changed) ++generation_;
     return result;
 }
 
-// Amanatides–Woo DDA in grid-local f64 coordinates. A ray starting outside
-// the grid is first clipped to its box (slab test) and enters through a face.
-std::optional<RayHit> DenseGrid::raycast(const WorldPos& worldOrigin, const glm::dvec3& rawDir,
+// Amanatides–Woo DDA in chunk-local f64 coordinates. A ray starting outside
+// the chunk is first clipped to its box (slab test) and enters through a face.
+std::optional<RayHit> ChunkWorld::raycast(const WorldPos& worldOrigin, const glm::dvec3& rawDir,
                                          double maxDistance) const {
     const double len = std::sqrt(rawDir.x * rawDir.x + rawDir.y * rawDir.y + rawDir.z * rawDir.z);
     if (!(len > 0.0)) return std::nullopt;
     const glm::dvec3 d = rawDir / len;
-    const glm::dvec3 o = worldOrigin - origin_;  // grid-local
-    const double s = static_cast<double>(size_);
+    const glm::dvec3 o = worldOrigin - cellCorner(chunkOrigin(kChunk.coord));  // chunk-local
+    const double s = static_cast<double>(kChunkSize);
 
     // Entry into [0, s]³.
     double tEnter = 0.0, tExit = kInf;
@@ -85,13 +78,13 @@ std::optional<RayHit> DenseGrid::raycast(const WorldPos& worldOrigin, const glm:
         step[a] = d[a] > 0.0 ? 1 : (d[a] < 0.0 ? -1 : 0);
         if (a == enterAxis) p[a] = d[a] > 0.0 ? 0.0 : s;  // exactly on the entered face
         cell[a] = std::clamp(static_cast<std::int64_t>(std::floor(p[a])), std::int64_t{0},
-                             static_cast<std::int64_t>(size_ - 1));
+                             static_cast<std::int64_t>(kChunkSize - 1));
     }
     if (enterAxis >= 0) normal[enterAxis] = -step[enterAxis];
 
     auto hitAt = [&](double t) {
         const CellPos c{cell.x, cell.y, cell.z};
-        return RayHit{c, normal, origin_ + o + d * t, probe(c), t};
+        return RayHit{c, normal, cellCorner(chunkOrigin(kChunk.coord)) + o + d * t, probe(c), t};
     };
     if (!probe({cell.x, cell.y, cell.z}).isAir()) return hitAt(tEnter);  // inside (normal 0) or the entered cell
 
@@ -114,7 +107,7 @@ std::optional<RayHit> DenseGrid::raycast(const WorldPos& worldOrigin, const glm:
         const double t = tMax[a];
         if (t > maxDistance) return std::nullopt;
         cell[a] += step[a];
-        if (cell[a] < 0 || cell[a] >= size_) return std::nullopt;  // left the grid
+        if (cell[a] < 0 || cell[a] >= kChunkSize) return std::nullopt;  // left the chunk
         tMax[a] += tDelta[a];
         normal = glm::ivec3(0);
         normal[a] = -step[a];
@@ -129,7 +122,7 @@ std::optional<RayHit> DenseGrid::raycast(const WorldPos& worldOrigin, const glm:
 // Bits 0–3 (−R, +R, −U, +U): the edge is a boundary unless the in-plane
 // neighbour is the same type with an identical face (emitted, same surface
 // state) toward n — i.e. the region's surface continues flat across it.
-std::uint32_t DenseGrid::frameBits(const CellPos& c, BlockTypeId type, glm::ivec3 n) const {
+std::uint32_t ChunkWorld::frameBits(const CellPos& c, BlockTypeId type, glm::ivec3 n) const {
     auto surfaceOn = [&](const CellPos& cell) -> int {  // −1: no face; 0: face, no surface layer; 1: framed face
         const BlockState across = probe(cell + n);
         if (across.type == type) return -1;
@@ -151,24 +144,29 @@ std::uint32_t DenseGrid::frameBits(const CellPos& c, BlockTypeId type, glm::ivec
     return bits;
 }
 
-// Naive culled mesh. An opaque cell emits a face wherever its neighbour isn't
-// opaque (air, translucent, or outside the grid). A translucent cell emits a
-// face (into the translucent mesh) wherever its neighbour isn't the same
-// group — block type — so a run of one tint has no internal faces, an
-// interface between two tints is two coplanar faces, and glass against
-// stone keeps its face (it closes the volume for absorbance). Face textures
-// come from block_mesh.h (faceTexture); a connected set's tile is chosen
-// here from the frame bits; random and matched tiles by the fragment shader
-// (opaque) or here (translucent).
-WorldMesh DenseGrid::buildMesh() const {
+
+// Naive culled mesh of one chunk. An opaque cell emits a face wherever its
+// neighbour isn't opaque (air, translucent, or outside the chunk: everything
+// outside the world is air). A translucent cell emits a face (into the
+// translucent mesh) wherever its neighbour isn't the same group — block type
+// — so a run of one tint has no internal faces, an interface between two
+// tints is two coplanar faces, and glass against stone keeps its face (it
+// closes the volume for absorbance). Face textures come from block_mesh.h
+// (faceTexture); a connected set's tile is chosen here from the frame bits;
+// random and matched tiles by the fragment shader (opaque) or here
+// (translucent). Vertex positions are relative to the chunk's minimum corner.
+WorldMesh ChunkWorld::buildMesh(const ChunkId& id) {
     WorldMesh mesh;
-    mesh.origin = origin_;
-    for (int z = 0; z < size_; ++z)
-        for (int y = 0; y < size_; ++y)
-            for (int x = 0; x < size_; ++x) {
-                const CellPos c{x, y, z};
-                const BlockState st = cells_[index(c)];
+    mesh.origin = cellCorner(chunkOrigin(id.coord));
+    if (id != kChunk) return mesh;  // every other chunk is air
+    meshedGeneration_ = generation_;
+    for (int z = 0; z < kChunkSize; ++z)
+        for (int y = 0; y < kChunkSize; ++y)
+            for (int x = 0; x < kChunkSize; ++x) {
+                const glm::ivec3 local(x, y, z);
+                const BlockState st = chunk_.get(local);
                 if (st.isAir()) continue;
+                const CellPos c = cellAt(id.coord, local);
                 const BlockDef& def = registry_.def(st.type);
                 const bool translucent = def.translucent();
                 auto& verts = translucent ? mesh.translucentVertices : mesh.vertices;
@@ -202,12 +200,12 @@ WorldMesh DenseGrid::buildMesh() const {
     return mesh;
 }
 
-std::vector<Emitter> DenseGrid::emitters() const {
+std::vector<Emitter> ChunkWorld::emitters() const {
     std::vector<Emitter> out;
-    for (int z = 0; z < size_; ++z)
-        for (int y = 0; y < size_; ++y)
-            for (int x = 0; x < size_; ++x) {
-                const BlockState st = cells_[index({x, y, z})];
+    for (int z = 0; z < kChunkSize; ++z)
+        for (int y = 0; y < kChunkSize; ++y)
+            for (int x = 0; x < kChunkSize; ++x) {
+                const BlockState st = chunk_.get({x, y, z});
                 if (st.isAir()) continue;
                 const BlockDef& def = registry_.def(st.type);
                 const glm::vec3 e = def.translucent() ? def.translucency->emission : def.material.emissive;

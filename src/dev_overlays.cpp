@@ -365,9 +365,9 @@ void boxEdges(const WorldPos& lo, double size, const glm::vec3& color, std::vect
 
 }  // namespace
 
-// F10: the grid's bounds.
-void boundsOverlay(const DenseGrid& grid, std::vector<DebugLine>& lines) {
-    boxEdges(grid.origin(), grid.size(), {0.9f, 0.5f, 0.1f}, lines);
+// F10: a chunk's bounds.
+void boundsOverlay(const ChunkId& chunk, std::vector<DebugLine>& lines) {
+    boxEdges(cellCorner(chunkOrigin(chunk.coord)), kChunkSize, {0.9f, 0.5f, 0.1f}, lines);
 }
 
 

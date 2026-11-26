@@ -1,4 +1,4 @@
-// The v0.1 harness: an editable 32³ grid behind WorldQuery, rendered with
+// The v0.1 harness: an editable 64³ chunk behind WorldQuery, rendered with
 // deferred PBR (point lights from emitters), commutative translucency
 // (moment-based OIT) and 16×16 block textures with variant sets; the
 // intention layer, two hotbars, tools as pure edit-set functions with a

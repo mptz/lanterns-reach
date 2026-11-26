@@ -513,7 +513,10 @@ Display-required:
 ---
 
 ## v0.2.1 — One chunk
-- Status: SPECIFIED 2026-11-10, not started. Depends on v0.2.0.
+- Status: **CLOSED 2026-11-26.** Criteria 1–5 pass; criterion 5 and the Clang
+  captures confirmed by the owner. The meshing measurement was taken on one
+  reference machine only (`BUILD-NOTES.md`); the owner did not gate the
+  release on the second. Depends on v0.2.0.
 - **Claim:** the world can live in a 64³ chunk without changing anything the
   game sees. **Falsifying test:** any v0.2.0 scenario capture differs.
 - **Builds on:** v0.2.0; `world/cubic-chunks`, `world/brick` (the palette

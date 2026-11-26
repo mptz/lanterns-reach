@@ -15,7 +15,7 @@
 #include "camera.h"
 #include "frame_stats.h"
 #include "game.h"
-#include "grid_world.h"
+#include "chunk.h"
 #include "intentions.h"
 #include "renderer.h"
 #include "translucency.h"
@@ -46,7 +46,7 @@ void inputOverlay(const IntentionFrame& f, const FiredLog& log, double now);
 void orientationOverlay(const RayHit& target, const BlockRegistry& registry, const Renderer& renderer,
                         const Camera& camera, std::vector<DebugLine>& lines);
 void targetingOverlay(const Camera& camera, const std::optional<RayHit>& target, std::vector<DebugLine>& lines);
-void boundsOverlay(const DenseGrid& grid, std::vector<DebugLine>& lines);
+void boundsOverlay(const ChunkId& chunk, std::vector<DebugLine>& lines);
 // The preview outline: a cell's 12 edges, just outside its faces.
 void outlineCell(const CellPos& c, const glm::vec3& color, std::vector<DebugLine>& lines);
 void editSetOverlay(Game& game, const PlannedEdit& plan);

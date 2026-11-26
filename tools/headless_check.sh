@@ -10,8 +10,8 @@
 #
 # usage: tools/headless_check.sh [build-dir] [out-dir]
 set -euo pipefail
-BIN="${1:-build}/sandbox"
-OUT="${2:-build/headless}"
+BIN="${1:-build-debug}/sandbox"
+OUT="${2:-build-debug/headless}"
 mkdir -p "$OUT"
 export VK_DRIVER_FILES="${VK_DRIVER_FILES:-/usr/share/vulkan/icd.d/lvp_icd.json}"
 

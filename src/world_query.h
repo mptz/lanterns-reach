@@ -7,8 +7,7 @@
 // `probe` is a single-cell read for bounded, edit-local use only (pick-block,
 // placement checks, a tool's small footprint) — never looped over a region.
 //
-// v0.1.5 implements it with a dense in-memory grid (grid_world.h); v0.2
-// swaps real chunks in underneath without touching callers.
+// v0.2.1 implements it with one 64³ chunk (chunk_world.h).
 
 #include <cstdint>
 #include <optional>
@@ -18,6 +17,7 @@
 #include <glm/vec3.hpp>
 
 #include "blocks.h"
+#include "chunk.h"
 #include "coords.h"
 
 struct RayHit {
@@ -97,7 +97,12 @@ public:
     // generation.
     virtual ApplyResult apply(const EditSet& edits) = 0;
 
-    virtual WorldMesh buildMesh() const = 0;
+    // Meshing is chunk-granular: the chunks edited since they were last
+    // meshed, and the mesh of one chunk (positions relative to its minimum
+    // corner, which is the mesh origin). Building a chunk's mesh clears its
+    // dirtiness. Everything outside a chunk is treated as air.
+    virtual std::vector<ChunkId> dirtyChunks() const = 0;
+    virtual WorldMesh buildMesh(const ChunkId& chunk) = 0;
     virtual std::vector<Emitter> emitters() const = 0;
 
     // Monotonic edit counter: changes whenever apply() changes a cell, so

@@ -1,5 +1,5 @@
 #pragma once
-// Textured block faces, shared by the world mesh (grid_world.cpp) and the
+// Textured block faces, shared by the world mesh (chunk_world.cpp) and the
 // preview ghosts (renderer.cpp), so a ghost shows exactly the faces the
 // placed block will: same texture layers, same turns, same orientation.
 

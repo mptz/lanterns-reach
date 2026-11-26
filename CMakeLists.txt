@@ -1,10 +1,21 @@
 cmake_minimum_required(VERSION 3.21)
+# deps/toolchain: Clang is the only supported compiler. It is the default
+# here; a caller's CC/CXX or -DCMAKE_CXX_COMPILER must also be Clang.
+if(NOT DEFINED CMAKE_CXX_COMPILER AND NOT DEFINED ENV{CXX})
+  set(CMAKE_C_COMPILER clang)
+  set(CMAKE_CXX_COMPILER clang++)
+endif()
 # The one version label: the window title and Vulkan app name come from
 # PROJECT_VERSION (SANDBOX_VERSION below).
 project(sandbox VERSION 0.1.9 LANGUAGES C CXX)
 
 # The v0.1.x validation harness (see versions.md).
 # Compiling needs no display; running needs a GPU + window system.
+
+if(NOT CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  message(FATAL_ERROR "Clang is required (deps/toolchain); found ${CMAKE_CXX_COMPILER_ID}. "
+                      "Use a fresh build directory with CC=clang CXX=clang++.")
+endif()
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -141,17 +152,22 @@ target_link_libraries(imgui PUBLIC Vulkan::Vulkan glfw)
 # ---------------------------------------------------------------------------
 # The v0.1.x harness.
 # ---------------------------------------------------------------------------
+# deps/toolchain: no fused multiply-add contraction, so float results don't depend on the target.
+add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-ffp-contract=off>)
 set(SANDBOX_WARNINGS -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wno-missing-field-initializers -Werror)
+# deps/toolchain: Clang, libstdc++, thread-safety analysis on (the annotations arrive with the concurrency work).
+list(APPEND SANDBOX_WARNINGS -Wthread-safety)
 
 # CPU-only core (no Vulkan): orientation group, block definitions, the
-# WorldQuery grid, placement rule, hands/hotbars, the intention layer and
+# WorldQuery chunk, placement rule, hands/hotbars, the intention layer and
 # the free-fly camera.
 # Shared by the engine and sandbox_tests.
 add_library(sandbox_core STATIC
   src/orientation.cpp
   src/blocks.cpp
   src/cube.cpp
-  src/grid_world.cpp
+  src/chunk.cpp
+  src/chunk_world.cpp
   src/placement.cpp
   src/hands.cpp
   src/intentions.cpp
@@ -213,7 +229,20 @@ target_link_libraries(sandbox PRIVATE
 enable_testing()
 find_package(Python3 REQUIRED COMPONENTS Interpreter)
 
-add_executable(sandbox_tests tests/sandbox_tests.cpp)
+add_executable(sandbox_tests
+  tests/sandbox_tests.cpp
+  tests/test_support.cpp
+  tests/tests_coords.cpp
+  tests/tests_chunk.cpp
+  tests/tests_orientation.cpp
+  tests/tests_blocks.cpp
+  tests/tests_shading.cpp
+  tests/tests_world.cpp
+  tests/tests_placement.cpp
+  tests/tests_input.cpp
+  tests/tests_translucency.cpp
+  tests/tests_tools.cpp
+  tests/tests_scenario.cpp)
 target_include_directories(sandbox_tests PRIVATE tests shaders)  # tests include shaders/pbr.glsl as C++
 target_compile_options(sandbox_tests PRIVATE ${SANDBOX_WARNINGS})
 target_link_libraries(sandbox_tests PRIVATE sandbox_core)
@@ -240,8 +269,8 @@ foreach(entry ${BAD_FIXTURES})
   add_test(NAME engine_rejects_${fixture}
     COMMAND ${EXPECT_FAIL} "${why}" $<TARGET_FILE:sandbox> --check-blocks --blocks ${BAD_BLOCKS}/${fixture})
 endforeach()
-add_test(NAME grid_confined_to_setup
-  COMMAND ${Python3_EXECUTABLE} -I ${CMAKE_CURRENT_SOURCE_DIR}/tests/check_grid_confined.py ${CMAKE_CURRENT_SOURCE_DIR})
+add_test(NAME no_dense_grid
+  COMMAND ${Python3_EXECUTABLE} -I ${CMAKE_CURRENT_SOURCE_DIR}/tests/check_no_dense_grid.py ${CMAKE_CURRENT_SOURCE_DIR})
 # The texture generator creates its output directory and reproduces the
 # committed assets byte for byte.
 add_test(NAME gen_block_texture

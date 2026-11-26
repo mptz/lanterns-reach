@@ -5,10 +5,10 @@ and its scene, the camera, the window, what is shown, render and tool
 settings, a timed input script, how long to run, and checks.
 
 ```
-build/sandbox --scenario scenarios/v0.1-scene.json        # interactive, in that state
-build/sandbox --scenario scenarios/headless/lit.json --capture lit.png
-build/sandbox --scenario scenarios/perf-1080p.json --gpu-report
-build/sandbox --scenario scenarios/v0.1-scene.json --check-absorbance
+build-debug/sandbox --scenario scenarios/v0.1-scene.json        # interactive, in that state
+build-debug/sandbox --scenario scenarios/headless/lit.json --capture lit.png
+build-debug/sandbox --scenario scenarios/perf-1080p.json --gpu-report
+build-debug/sandbox --scenario scenarios/v0.1-scene.json --check-absorbance
 ```
 
 Without `--scenario`, `scenarios/v0.1-scene.json` runs. The remaining flags
@@ -36,7 +36,7 @@ All optional. Coordinates are world cells or positions (z up).
 | Field | Meaning | Default |
 |---|---|---|
 | `include` | a scenario (path relative to this file) whose fields are the defaults; see below | — |
-| `world.grid` | edge of the dense grid (cells) | 32 |
+| `world.generator` | how the world's chunk is filled: `empty` (air; `scene` is applied on top). The world is one 64³ chunk, cells 0–63. `world.grid` (v0.1's dense grid) is rejected | `empty` |
 | `scene` | a list of operations, applied in order as one edit set: `{"fill": type, "from": [x,y,z], "to": [x,y,z]}` (inclusive box) or `{"place": type, "at": [x,y,z], "rotation": r}` (`r` the rotation index 0–23, canonicalized; default 0). Type `"air"` clears. A missing block type is skipped with one warning | empty |
 | `camera.pos`, `camera.look` | eye position and look-at point | (10, 10, 19), (16, 16, 15) |
 | `window.size` | `[width, height]` at start | [1280, 720] |

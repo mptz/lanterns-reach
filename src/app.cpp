@@ -4,6 +4,8 @@
 #include <array>
 #include <cmath>
 #include <cstdio>
+#include <optional>
+#include <set>
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -12,10 +14,10 @@
 
 #include "app_input.h"
 #include "block_mesh.h"
+#include "chunk_world.h"
 #include "dev_overlays.h"
 #include "frame_stats.h"
 #include "game.h"
-#include "grid_world.h"
 #include "harness_checks.h"
 #include "png_write.h"
 #include "renderer.h"
@@ -83,15 +85,16 @@ int run(const RunOptions& opt, const Scenario& sc, bool validation, const BlockR
         state.renderer = &renderer;
         DevUi::setMouseEnabled(!state.captured);
 
-        DenseGrid grid(registry, sc.grid);
+        ChunkWorld chunkWorld(registry);  // generator "empty": all air; the scene goes on top
         {
             std::vector<std::string> warnings;
-            grid.apply(sceneEdits(sc, registry, &warnings));
+            chunkWorld.apply(sceneEdits(sc, registry, &warnings));
             for (const std::string& w : warnings) std::fprintf(stderr, "[sandbox] warning: %s\n", w.c_str());
         }
-        WorldQuery& world = grid;  // everything below goes through the seam
+        WorldQuery& world = chunkWorld;  // everything below goes through the seam
         Game game = makeGame(world, registry, sc);
-        std::uint64_t meshGeneration = ~0ull;
+        std::set<ChunkId> meshedChunks;  // the renderer keeps one mesh per chunk (one, until v0.2.24)
+        std::optional<std::uint64_t> lightsGeneration;  // the world generation the lights were built from
         MeshStats meshStats;
         std::vector<PointLight> lights;
         FiredLog firedLog;
@@ -222,20 +225,31 @@ int run(const RunOptions& opt, const Scenario& sc, bool validation, const BlockR
             // Derived views follow the world: rebuild the mesh and lights after
             // edits (or a translucent face reorder from the F9 panel). The
             // translucent faces are ordered from the camera at build time.
-            if (world.generation() != meshGeneration || reorder) {
-                meshGeneration = world.generation();
+            std::vector<ChunkId> stale = world.dirtyChunks();
+            if (reorder) {
+                for (const ChunkId& id : meshedChunks)
+                    if (std::find(stale.begin(), stale.end(), id) == stale.end()) stale.push_back(id);
                 reorder = false;
+            }
+            if (!stale.empty() || lightsGeneration != world.generation()) {
                 const double t0 = glfwGetTime();
-                WorldMesh mesh = world.buildMesh();
-                orderTranslucentFaces(mesh, order, camera.position);
-                if (sc.mergedQuad && !mergeTopFaces(mesh, kMergedQuadCell, kMergedQuadSize)) {
-                    std::fprintf(stderr, "[sandbox] error: --merged-quad: the stone floor region isn't one flat texture\n");
-                    rc = 1;
-                    break;
+                bool meshOk = true;
+                for (const ChunkId& id : stale) {
+                    WorldMesh mesh = world.buildMesh(id);
+                    orderTranslucentFaces(mesh, order, camera.position);
+                    if (sc.mergedQuad && !mergeTopFaces(mesh, kMergedQuadCell, kMergedQuadSize)) {
+                        std::fprintf(stderr, "[sandbox] error: --merged-quad: the stone floor region isn't one flat texture\n");
+                        rc = 1;
+                        meshOk = false;
+                        break;
+                    }
+                    renderer.setWorldMesh(mesh);  // one chunk: the renderer holds one mesh
+                    meshedChunks.insert(id);
+                    meshStats = {(glfwGetTime() - t0) * 1000.0, mesh.indices.size() / 6, meshStats.rebuilds + 1};
                 }
-                renderer.setWorldMesh(mesh);
+                if (!meshOk) break;
                 lights = lightsFromEmitters(world.emitters(), Renderer::kMaxPointLights);
-                meshStats = {(glfwGetTime() - t0) * 1000.0, mesh.indices.size() / 6, meshStats.rebuilds + 1};
+                lightsGeneration = world.generation();
             }
 
             const std::optional<RayHit> target = world.raycast(camera.position, camera.forward(), kReach);
@@ -268,7 +282,8 @@ int run(const RunOptions& opt, const Scenario& sc, bool validation, const BlockR
             if (frameOpts.lighting) lightingPanel(frameOpts.light, lights.size());
             if (targeting) targetingOverlay(camera, target, lines);
             if (input) inputOverlay(in, firedLog, now);
-            if (bounds) boundsOverlay(grid, lines);
+            if (bounds)
+                for (const ChunkId& id : meshedChunks) boundsOverlay(id, lines);
             if (editSet) editSetOverlay(game, mainPlan);
             if (frameOpts.oit.view != 0) translucencyPanel(frameOpts.oit, order, reorder);
 

@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <cstddef>
 #include <numbers>
 #include <stdexcept>
 
@@ -19,8 +20,8 @@ Mat3i axisMatrix(glm::ivec3 axis, int degrees) {
     const double c = std::cos(t), s = std::sin(t);
     const double cross[3][3] = {{0, -a[2], a[1]}, {a[2], 0, -a[0]}, {-a[1], a[0], 0}};
     Mat3i m{};
-    for (int r = 0; r < 3; ++r)
-        for (int col = 0; col < 3; ++col) {
+    for (std::size_t r = 0; r < 3; ++r)
+        for (std::size_t col = 0; col < 3; ++col) {
             const double v = (r == col ? c : 0.0) + s * cross[r][col] + (1.0 - c) * a[r] * a[col];
             const double rounded = std::round(v);
             if (std::abs(v - rounded) > 1e-9) throw std::logic_error("rotation is not lattice-preserving");
@@ -192,9 +193,9 @@ glm::ivec3 rotateVec(const Mat3i& m, const glm::ivec3& v) {
 
 Mat3i multiply(const Mat3i& a, const Mat3i& b) {
     Mat3i m{};
-    for (int r = 0; r < 3; ++r)
-        for (int c = 0; c < 3; ++c)
-            for (int k = 0; k < 3; ++k) m[r][c] += a[r][k] * b[k][c];
+    for (std::size_t r = 0; r < 3; ++r)
+        for (std::size_t c = 0; c < 3; ++c)
+            for (std::size_t k = 0; k < 3; ++k) m[r][c] += a[r][k] * b[k][c];
     return m;
 }
 
