@@ -1,0 +1,5 @@
+# CMake out-of-source build trees (incl. FetchContent dependency sources)
+/build*/
+# Python bytecode (tools/ and tests/ scripts)
+__pycache__/
+*.pyc
