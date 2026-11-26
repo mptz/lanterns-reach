@@ -1,0 +1,4994 @@
+# north-america chunk 1: regions/north-america.yaml entries 0-48
+- id: aspen
+  names:
+  - aspen
+  - quaking aspen
+  - trembling aspen
+  - bigtooth aspen
+  scientific: Populus tremuloides
+  rank: group
+  stands_for:
+  - Populus grandidentata (bigtooth aspen)
+  distinct_from:
+  - 'cottonwood: lowland riparian poplar'
+  - 'balsam-poplar: resinous buds'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  - well-known
+  - product
+  habitat:
+    range: Alaska and across Canada to Newfoundland, south through the Rockies to northern Mexico; the
+      most widely distributed tree in North America; bigtooth aspen in the northeast
+    ecosystem: boreal forest, montane forest and aspen parkland
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'temperature: cold to cool-temperate; moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 3500
+    substrate: wide range, best on deep moist loams; often on burned or disturbed ground
+    niche: pioneer after fire and clearing; large single-clone groves that sucker from a shared root system
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: slender straight trunk with a short rounded crown; grows in clonal groves of many stems
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: 317
+    growth_rate: fast
+    leaves: deciduous broadleaf; small round leaves with a short point and fine teeth on long flattened
+      stalks, so they quiver in the slightest breeze
+    seasonal: whole hillsides turn gold, sometimes orange-red, in autumn; neighbouring clones change colour
+      on different days
+    flowers: drooping grey-brown catkins in early spring before the leaves
+    fruit_visible: catkins of small capsules releasing cottony seed in late spring
+    bark: smooth, greenish-white to cream with a chalky powder, black knots and scars; dark and furrowed
+      only near the base of old stems
+  timber:
+    heartwood: light brown
+    sapwood: wide, pale yellow to nearly white, blending into the heartwood
+    grain: straight
+    texture: uniform, medium
+    density_kg_m3: 415
+    janka_n: 1560
+    workability: easy with hand and machine tools; planes fuzzy unless cutters are sharp; poor nail holding;
+      warps in drying
+    rot_resistance: non-durable; susceptible to insects
+    scent: none
+    fuel: light, quick-burning, little heat; low-smoke and does not spark
+    uses:
+    - pulp and paper
+    - boxes and crates
+    - plywood and veneer
+    - matches
+    - excelsior
+    - sauna benches
+    - chopsticks
+  products:
+    food:
+    - inner bark and cambium eaten in spring by Indigenous peoples
+    sap_resin_latex: []
+    bark:
+    - inner bark used medicinally; chalky bark powder rubbed on skin as a folk sunscreen
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark contains salicin (the source of the willow-family aspirin-like compounds)
+    - used for fever and pain
+    toxicity: null
+  lore:
+    folklore:
+    - European Christian legend that aspen trembles because the Cross was made of its wood or because
+      it alone did not bow to Christ; applied to aspens in general
+    - Plains peoples' accounts of the leaves as talking or whispering
+    cultures:
+    - important browse and beaver food in fur-trade country
+    - Basque sheepherders' arborglyphs carved on aspens in Nevada and the western ranges
+    symbolism:
+    - state tree of Utah (2014)
+    notable_trees:
+    - 'Pando, Fishlake National Forest, Utah: one male clone of about 47,000 stems over 43 ha, among the
+      heaviest known organisms; its age is uncertain, with estimates from several thousand to tens of
+      thousands of years'
+  game_fit:
+    fields:
+      liminality: 'high: trembling, whispering leaves and the Cross legend; whole groves are one hidden
+        organism'
+    dimensions: []
+    hooks:
+    - fast pioneer that refills burned or cleared ground
+    - groves as one connected clone (cut one stem and the grove resprouts)
+    - soft white wood for early boxes and matches
+    - carving signs into bark as a player mark
+  sources:
+  - https://www.wood-database.com/quaking-aspen/
+  - https://research.fs.usda.gov/silvics/quaking-aspen
+  - https://www.rmtrr.org/oldlist.htm
+- id: bald-cypress
+  names:
+  - bald cypress
+  scientific: Taxodium distichum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pond-cypress: smaller, scale-leaved pond form'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  - product
+  habitat:
+    range: southeastern United States, Atlantic and Gulf coastal plains from Delaware to Texas and up
+      the Mississippi valley to southern Illinois and Indiana
+    ecosystem: river swamps, floodplain forests, lake margins and blackwater rivers
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to subtropical'
+    elevation_m:
+    - 0
+    - 530
+    substrate: wet, often permanently flooded muck, peat and alluvium
+    niche: standing water and seasonally flooded bottomlands, often with water tupelo
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: deciduous conifer; tall straight trunk swelling into a fluted buttress at the base; conical
+      crown becoming flat-topped and irregular with age; woody "knees" rise from the roots above the water
+    height_m:
+    - 25
+    - 45
+    trunk_diameter_m:
+    - 1.0
+    - 3.0
+    lifespan_y: 2624
+    growth_rate: moderate
+    leaves: deciduous needles, flat and feathery, in two ranks on slender branchlets that fall with them
+    seasonal: soft light green in spring; turns rusty orange-brown and drops its needles in autumn (hence
+      "bald")
+    flowers: drooping purplish male catkin panicles in late winter
+    fruit_visible: round, wrinkled green cones about 2.5 cm, turning brown and breaking apart
+    bark: reddish-brown to grey, fibrous, in long shreddy strips; trunks often hung with Spanish moss
+  timber:
+    heartwood: light yellowish brown to dark brown; "pecky cypress" has scattered fungal pockets
+    sapwood: nearly white
+    grain: straight
+    texture: medium to coarse; greasy feel
+    density_kg_m3: 515
+    janka_n: 2270
+    workability: easy to work; glues and finishes well
+    rot_resistance: old-growth heartwood durable to very durable ("the wood eternal"); second growth only
+      moderately durable
+    scent: distinct, somewhat sour while being worked
+    fuel: null
+    uses:
+    - shingles and siding
+    - water tanks and vats
+    - boatbuilding
+    - docks and pilings
+    - coffins
+    - dugout canoes
+    - pecky cypress panelling
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - the knees long debated as breathing organs (pneumatophores); their purpose is still uncertain
+    cultures:
+    - dugout canoes of Southeastern peoples
+    - cypress lumber industry of Louisiana and Florida swamps
+    symbolism:
+    - state tree of Louisiana
+    notable_trees:
+    - a tree on the Black River, North Carolina, dated at 2,624 years or more (Stahle et al. 2019), among
+      the oldest trees in eastern North America
+  game_fit:
+    fields:
+      liminality: 'high: ancient trees in mist-hung swamps, rising knees, Spanish moss'
+    dimensions: []
+    hooks:
+    - rot-proof wood for docks and boats
+    - knees as a distinctive swamp floor feature
+    - needles drop in autumn so swamp light changes with season
+  sources:
+  - https://www.wood-database.com/bald-cypress/
+  - https://research.fs.usda.gov/silvics/baldcypress
+  - https://www.rmtrr.org/oldlist.htm
+- id: balsam-fir
+  names:
+  - balsam fir
+  - Fraser fir
+  scientific: Abies balsamea
+  rank: group
+  stands_for:
+  - Abies fraseri (Fraser fir)
+  distinct_from:
+  - 'subalpine-fir: spire-shaped western mountain fir'
+  - 'white-fir: western silvery fir'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - medicinal
+  - product
+  habitat:
+    range: boreal Canada from Alberta to Newfoundland and the northeastern and Great Lakes United States;
+      Fraser fir only on the high peaks of the southern Appalachians
+    ecosystem: boreal and sub-boreal spruce-fir forest
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      moisture:
+      - humid
+      note: 'temperature: cold to cool-temperate'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: moist acid soils, peat and thin soil over rock
+    niche: mixed with black and white spruce, paper birch and aspen; dense regeneration beneath its own
+      canopy
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: narrow, symmetrical spire with a sharply pointed top and dense branches to the ground
+    height_m:
+    - 12
+    - 25
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: 200
+    growth_rate: moderate
+    leaves: flat, blunt evergreen needles, dark glossy green above with two white bands below, aromatic
+      when crushed
+    seasonal: evergreen
+    flowers: small purplish female and yellowish male cones in late spring
+    fruit_visible: upright dark purple cones 5–10 cm, sticky with resin, that break apart on the branch
+      in autumn
+    bark: smooth grey on young trees with raised resin blisters; becomes scaly with age
+  timber:
+    heartwood: white to reddish brown, not distinct from sapwood
+    sapwood: pale
+    grain: straight
+    texture: uniform, medium-coarse
+    density_kg_m3: 400
+    janka_n: 1780
+    workability: easy to work; light and weak
+    rot_resistance: non-durable to perishable; little insect resistance
+    scent: none in dry wood; needles and resin strongly balsamic
+    fuel: poor, burns fast with sparks
+    uses:
+    - pulpwood
+    - construction lumber
+    - crates
+    - Christmas trees and wreaths
+    - balsam pillows
+  products:
+    food: []
+    sap_resin_latex:
+    - Canada balsam, the clear resin from bark blisters, used as microscope-slide and optical-lens cement
+    bark: []
+    leaves:
+    - needles stuffed into fragrant balsam pillows; boughs as bedding
+    dyes: []
+    medicinal:
+    - resin applied to cuts
+    - burns and sores by Indigenous peoples; inhaled for colds
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Cree and Mi'kmaq medicine; North America's classic Christmas tree (with Fraser fir)
+    symbolism:
+    - provincial tree of New Brunswick
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: Christmas tree, healing balm'
+    dimensions: []
+    hooks:
+    - resin blisters tapped for a clear adhesive (optics
+    - lenses)
+    - boughs as early bedding
+    - aromatic pillow item
+  sources:
+  - https://www.wood-database.com/balsam-fir/
+  - https://research.fs.usda.gov/silvics/balsam-fir
+- id: black-locust
+  names:
+  - black locust
+  - false acacia
+  scientific: Robinia pseudoacacia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - flowers
+  - striking
+  - product
+  habitat:
+    range: native to the southern Appalachians and the Ozark-Ouachita region; naturalized throughout North
+      America, Europe and Asia
+    ecosystem: open woods, forest edges and old fields
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 150
+    - 1600
+    substrate: wide range, best on rich moist limestone soils; fixes nitrogen and colonizes poor and disturbed
+      ground
+    niche: fast pioneer of clearings and spoil banks; spreads by root suckers
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: straight trunk with an open, irregular crown of zigzag twigs; suckers into thickets
+    height_m:
+    - 12
+    - 30
+    trunk_diameter_m:
+    - 0.3
+    - 0.9
+    lifespan_y: 100
+    growth_rate: fast
+    leaves: deciduous, pinnately compound with 7–21 small oval leaflets; paired thorns at the leaf bases
+    seasonal: little autumn colour, leaves drop yellowish
+    flowers: dense hanging racemes of fragrant white pea flowers with a yellow blotch, late spring
+    fruit_visible: flat brown pods 5–10 cm that hang on through winter
+    bark: grey-brown, deeply furrowed into thick, interlacing rope-like ridges
+  timber:
+    heartwood: greenish-yellow to brown, darkening to russet with age
+    sapwood: narrow, pale
+    grain: usually straight
+    texture: medium
+    density_kg_m3: 770
+    janka_n: 7560
+    workability: hard to work by hand; turns well; tends to split when nailed
+    rot_resistance: very durable; one of the longest-lasting woods in ground contact
+    scent: none
+    fuel: excellent; dense, hot and long-burning
+    uses:
+    - fence posts
+    - treenails (trunnels) for shipbuilding
+    - mine timbers
+    - railroad ties
+    - vineyard stakes
+    - longbows
+    - outdoor furniture
+  products:
+    food:
+    - flowers eaten fried as fritters or made into syrup; acacia honey from the blossoms
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: bark, leaves and seeds contain the toxic lectin robin (and robitin); poisonous to people
+      and horses if eaten; flowers are the edible exception
+  lore:
+    folklore: []
+    cultures:
+    - Jamestown settlers used it for houses and fence posts
+    - its trunnels were exported for British shipbuilding
+    - one of the earliest American trees planted in Europe
+    symbolism: []
+    notable_trees:
+    - the tree planted by Jean Robin in Paris about 1601, in the Square René-Viviani, often called the
+      oldest tree in Paris
+  game_fit:
+    fields:
+      yield: 'high: nitrogen-fixer improving poor soil, best rot-proof posts'
+    dimensions: []
+    hooks:
+    - fence posts that never rot
+    - wooden nails (trunnels)
+    - hot firewood
+    - edible flowers but toxic bark as a foraging lesson
+  sources:
+  - https://www.wood-database.com/black-locust/
+  - https://research.fs.usda.gov/silvics/black-locust
+  - https://plants.usda.gov/DocumentLibrary/plantguide/pdf/pg_ROPS.pdf
+- id: black-tupelo
+  names:
+  - black tupelo
+  - blackgum
+  scientific: Nyssa sylvatica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'water-tupelo: swamp tupelo, tupelo honey'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: eastern North America from southern Ontario and Maine to Florida and eastern Texas; also in
+      Mexico
+    ecosystem: temperate deciduous and mixed forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 1200
+    substrate: wide range, from dry ridges to wet bottomland soils
+    niche: scattered through upland oak-hickory forest and swamp margins
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: straight trunk with horizontal branches and a dense, often flat-topped crown
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m:
+    - 0.5
+    - 1.2
+    lifespan_y: 679
+    growth_rate: slow
+    leaves: deciduous, glossy oval leaves 5–12 cm, smooth-edged, crowded at the twig tips
+    seasonal: one of the earliest and most brilliant autumn trees, scarlet to purple-red
+    flowers: small greenish-white clusters, spring; important nectar for bees
+    fruit_visible: small dark blue oval drupes on long stalks, autumn
+    bark: dark grey, broken into thick blocky ridges like alligator hide on old trees
+  timber:
+    heartwood: medium brown to grey
+    sapwood: very wide, pale yellow
+    grain: interlocked
+    texture: fine
+    density_kg_m3: 545
+    janka_n: 3570
+    workability: hard to split and difficult to work because of the interlocked grain; turns and carves
+      acceptably
+    rot_resistance: non-durable to perishable; susceptible to insects
+    scent: none
+    fuel: hard to split; burns moderately
+    uses:
+    - crates and pallets
+    - veneer
+    - wooden bowls and mauls
+    - hollow-log bee gums (hives)
+    - utility wood
+  products:
+    food:
+    - sour fruit eaten by wildlife; fine-flavoured honey
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - 'Appalachian ''bee gums'': hollow blackgum logs used as beehives, giving the tree its name'
+    symbolism: []
+    notable_trees:
+    - blackgums in New Hampshire dated to about 679 years, the oldest known hardwoods in eastern North
+      America
+  game_fit:
+    fields:
+      liminality: 'high: unassumingly ancient, the oldest dated eastern hardwood'
+    dimensions: []
+    hooks:
+    - hollow logs as early beehives
+    - splitting-resistant wood for mallets and wheel hubs
+    - scarlet autumn landmark
+  sources:
+  - https://www.wood-database.com/black-tupelo/
+  - https://research.fs.usda.gov/silvics/black-tupelo
+  - https://www.rmtrr.org/oldlist.htm
+- id: black-walnut
+  names:
+  - black walnut
+  - Arizona walnut
+  - California black walnut
+  scientific: Juglans nigra
+  rank: group
+  stands_for:
+  - Juglans californica (California black walnut)
+  - Juglans major (Arizona walnut)
+  distinct_from:
+  - 'butternut: pale wood, oily nut'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - toxic
+  - fruit
+  - product
+  habitat:
+    range: central and eastern United States and southern Ontario; Arizona walnut in the Southwest and
+      northern Mexico; California black walnut in coastal California
+    ecosystem: temperate deciduous forest and riparian woodland
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - humid
+      note: 'temperature: temperate; moisture: humid; the western relatives semi-arid'
+    elevation_m:
+    - 0
+    - 1200
+    substrate: deep, fertile, well-drained alluvial loams
+    niche: scattered in rich bottomlands and coves, along streams and field edges
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tall straight trunk with an open rounded crown in the open
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 0.6
+    - 1.5
+    lifespan_y: 250
+    growth_rate: moderate
+    leaves: deciduous, pinnately compound, 15–23 lance-shaped leaflets, aromatic
+    seasonal: leaves yellow and fall early in autumn
+    flowers: long drooping green male catkins, small female flowers, spring
+    fruit_visible: round green husked nuts 4–6 cm that fall and blacken; very hard, deeply ridged shell
+    bark: dark brown to blackish, with deep furrows and narrow interlacing diamond ridges
+  timber:
+    heartwood: light to dark chocolate brown, sometimes with grey, purple or reddish cast
+    sapwood: pale yellow-grey, often steamed to match the heartwood
+    grain: usually straight, sometimes irregular; figured crotch and burl wood prized
+    texture: medium; moderate lustre
+    density_kg_m3: 610
+    janka_n: 4490
+    workability: easy to work; glues, carves, turns and finishes very well
+    rot_resistance: very durable; susceptible to insects
+    scent: faint, mild
+    fuel: good
+    uses:
+    - gunstocks
+    - fine furniture and cabinetry
+    - veneer
+    - carving
+    - turned bowls
+  products:
+    food:
+    - rich
+    - strongly flavoured nuts
+    - eaten raw or in baking
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes:
+    - green husks give a dark brown to black dye and stain for wool
+    - baskets and hair
+    medicinal:
+    - husk preparations used as a folk vermifuge and against fungal skin infections
+    toxicity: roots, leaves and husks exude juglone, which stunts or kills tomatoes, apples and many other
+      plants nearby; shavings used as bedding cause laminitis in horses
+  lore:
+    folklore: []
+    cultures:
+    - nuts a staple food of eastern Indigenous peoples
+    - the walnut gunstock of American long rifles
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: juglone poisons the ground around it so little grows beneath'
+    dimensions: []
+    hooks:
+    - black walnut dye from husks
+    - premium dark wood for gunstocks and fine items
+    - nuts as a hard-to-crack food
+    - bare ground under walnuts in worldgen
+  sources:
+  - https://www.wood-database.com/black-walnut/
+  - https://research.fs.usda.gov/silvics/black-walnut
+- id: blue-spruce
+  names:
+  - Colorado blue spruce
+  - blue spruce
+  scientific: Picea pungens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'engelmann-spruce: Rocky Mountain timber spruce'
+  - 'white-spruce: boreal spruce'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - product
+  habitat:
+    range: central and southern Rocky Mountains, Wyoming and Idaho to Arizona and New Mexico
+    ecosystem: montane conifer forest
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'temperature: cold-temperate; moisture: semi-arid to subhumid'
+    elevation_m:
+    - 1800
+    - 3000
+    substrate: moist, gravelly or rocky soils of stream terraces
+    niche: along mountain streams and canyon bottoms, rarely in pure stands
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: dense, symmetrical conical crown with horizontal tiers of stiff branches
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.6
+    - 0.9
+    lifespan_y: 600
+    growth_rate: slow
+    leaves: stiff, sharp four-sided evergreen needles, silver-blue to blue-green from a waxy coating,
+      bluest on new growth
+    seasonal: evergreen; new spring growth is the most vividly silver-blue
+    flowers: small reddish cones in late spring
+    fruit_visible: pale brown hanging cones 6–11 cm with papery, wavy-edged scales
+    bark: grey-brown, scaly, becoming furrowed into rough plates
+  timber:
+    heartwood: pale, nearly white
+    sapwood: not distinct
+    grain: straight but knotty
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: light and weak; seldom sawn because of its knots and small stands
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - Christmas trees
+    - ornamental planting
+    - occasional local lumber
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - Keres and Navajo peoples used the needles in ceremonial and medicinal preparations
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - sacred to the Navajo and Keres; the Navajo use its boughs in ceremonies
+    symbolism:
+    - state tree of Colorado; was the state tree of Utah until 2014
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - blue foliage as a distinctive streamside landmark in mountain valleys
+  sources:
+  - https://research.fs.usda.gov/silvics/blue-spruce
+  - https://arboretum.buffalostate.edu/picea-pungens-var-glauca
+- id: boojum
+  names:
+  - boojum
+  - cirio
+  scientific: Fouquieria columnaris
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: central Baja California (Vizcaíno and Central Gulf Coast deserts), Ángel de la Guarda island
+      and one small coastal range in Sonora
+    ecosystem: Sonoran Desert scrub
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - arid
+      - wet
+      note: 'temperature: warm; moisture: arid with coastal fog'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: rocky granite and volcanic slopes and plains
+    niche: open desert with cardón cactus and elephant trees
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single tapering succulent trunk like an upturned carrot, sometimes bent into arches or forking
+      into a few arms at the top; covered in short thorny twigs
+    height_m:
+    - 5
+    - 20
+    trunk_diameter_m:
+    - 0.3
+    - 0.5
+    lifespan_y: 500
+    growth_rate: slow
+    leaves: small oval leaves sprouting from the thorny twigs after rains, drought-deciduous
+    seasonal: leafless and grey for much of the dry season; leafs out within days of rain
+    flowers: clusters of small creamy-yellow, honey-scented flowers at the top of the trunk in summer
+      and autumn
+    fruit_visible: small dry capsules
+    bark: yellowish-grey to whitish, smooth and waxy, ringed with short spiny branchlets
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - named 'cirio' (wax candle) by Spanish missionaries; named 'boojum' in 1922 by the botanist Godfrey
+      Sykes, after the creature in Lewis Carroll's The Hunting of the Snark
+    symbolism:
+    - emblem of the Valle de los Cirios protected area in Baja California
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: one of the strangest real tree shapes, upside-down carrot trunks bent into arches'
+    dimensions:
+    - enigma
+    hooks:
+    - landmark for a strange desert biome
+    - slow growth makes each one old
+  sources:
+  - https://animals.sandiegozoo.org/plants/boojum-tree
+  - https://apps.cals.arizona.edu/arboretum/taxon.aspx?id=424
+  - https://www.aloesinwonderland.com/plant-gallery/fouquieria-columnaris
+- id: bristlecone-pine
+  names:
+  - Great Basin bristlecone pine
+  - foxtail pine
+  - Rocky Mountain bristlecone pine
+  scientific: Pinus longaeva
+  rank: group
+  stands_for:
+  - Pinus aristata (Rocky Mountain bristlecone pine)
+  - Pinus balfouriana (foxtail pine)
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  habitat:
+    range: Great Basin mountains of California, Nevada and Utah; Rocky Mountain bristlecone in Colorado,
+      New Mexico and Arizona; foxtail pine in the Klamath Mountains and southern Sierra Nevada
+    ecosystem: subalpine woodland and treeline
+    climate:
+      temperature:
+      - cold
+      moisture:
+      - arid
+      - semi-arid
+      note: 'moisture: arid to semi-arid'
+    elevation_m:
+    - 2500
+    - 3700
+    substrate: thin, rocky dolomite and limestone soils; the oldest trees grow on the poorest dolomite
+    niche: scattered open stands near treeline, often with limber pine
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: short, gnarled and twisted trunk; old trees mostly dead wood with a narrow living strip of
+      bark feeding a few branches
+    height_m:
+    - 5
+    - 15
+    trunk_diameter_m:
+    - 0.5
+    - 2.5
+    lifespan_y: 4850
+    growth_rate: slow
+    leaves: short evergreen needles in fives, packed densely along the branch tips like a bottlebrush
+      ("foxtail"), retained for decades
+    seasonal: evergreen
+    flowers: small purple-red cones in summer
+    fruit_visible: dark purple-brown cones with a bristle on each scale
+    bark: thin, red-brown and scaly on the living strip; the exposed deadwood is sand-polished silver-gold
+      and twisted
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: very narrow rings; spirally twisted
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: dense resinous wood resists decay for thousands of years in the dry cold air
+    scent: null
+    fuel: null
+    uses:
+    - dendrochronology and the calibration of radiocarbon dating
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the tree-ring work of Edmund Schulman
+    - whose bristlecone chronology recalibrated radiocarbon dating
+    symbolism:
+    - state tree of Nevada (with single-leaf pinyon)
+    notable_trees:
+    - Methuselah, White Mountains, California, about 4,850 years old, its location kept secret
+    - Prometheus, Wheeler Peak, Nevada, at least 4,900 years old, cut down for research in 1964
+  game_fit:
+    fields:
+      liminality: 'high: the oldest living non-clonal trees, mostly dead wood yet alive'
+      savagery: 'low: sparse, barren high ground'
+    dimensions: []
+    hooks:
+    - treeline landmark
+    - ancient deadwood as a rare long-lasting material
+    - tree-ring dating as a knowledge mechanic
+  sources:
+  - https://www.rmtrr.org/oldlist.htm
+  - https://www.fs.usda.gov/database/feis/plants/tree/pinlon/all.html
+- id: cabbage-palmetto
+  names:
+  - cabbage palmetto
+  - sabal palm
+  scientific: Sabal palmetto
+  rank: species
+  stands_for:
+  - Sabal mexicana (Texas or Mexican palmetto)
+  distinct_from:
+  - 'dwarf-palmetto: trunkless understory palm'
+  - 'saw-palmetto: creeping medicinal palm'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  habitat:
+    range: coastal southeastern United States from North Carolina to Florida and the Gulf coast, the Bahamas
+      and Cuba; Sabal mexicana in south Texas and Mexico
+    ecosystem: coastal hammocks, maritime forest and pine flatwoods
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to subtropical'
+    elevation_m:
+    - 0
+    - 100
+    substrate: sandy and shell soils, brackish marsh edges, limestone
+    niche: coastal islands and hammocks, often under or among live oaks; palm savannas
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: single unbranched trunk topped by a round head of fan leaves; often with a crisscross of old
+      leaf bases ("boots")
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen costapalmate fans 1.5–2 m, deeply split, with threads along the segments
+    seasonal: evergreen
+    flowers: long arching sprays of small creamy-white fragrant flowers in early summer
+    fruit_visible: masses of small round black drupes
+    bark: grey-brown fibrous trunk, smooth on old palms, boot-jacked with old leaf bases on younger ones
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: fibrous palm stem
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: resists marine borers; used for wharf pilings
+    scent: null
+    fuel: null
+    uses:
+    - wharf pilings
+    - fort walls
+    - brushes from the leaf fibre
+  products:
+    food:
+    - swamp cabbage (heart of palm), the terminal bud, which kills the palm when cut
+    - fruit eaten by Indigenous peoples
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - thatch
+    - hats
+    - baskets and mats; brush fibre
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Seminole chickee huts thatched with its fronds
+    - Palm Sunday fronds in the Southeast
+    symbolism:
+    - state tree of South Carolina and of Florida
+    - on the flag and seal of South Carolina
+    notable_trees:
+    - the palmetto-log walls of Fort Moultrie (then Fort Sullivan) absorbed British cannon fire on 28
+      June 1776, hence the palmetto on South Carolina's flag
+  game_fit:
+    fields:
+      alignment: 'high: defender''s tree, its fibrous logs stopped cannonballs'
+    dimensions: []
+    hooks:
+    - thatch for early shelters
+    - heart of palm food that kills the palm (a sustainability choice)
+    - shock-absorbing walls
+  sources:
+  - https://research.fs.usda.gov/silvics/cabbage-palmetto
+  - https://www.fnps.org/plant/sabal-palmetto
+  - https://plants.usda.gov/DocumentLibrary/plantguide/pdf/cs_sapa.pdf
+- id: california-fan-palm
+  names:
+  - California fan palm
+  - desert fan palm
+  scientific: Washingtonia filifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mexican-fan-palm: tall slender Baja relative'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: Colorado and Sonoran Deserts of southern California, a few sites in western Arizona, and northern
+      Baja California
+    ecosystem: desert palm oases
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      - tropical
+      moisture:
+      - arid
+      note: 'temperature: warm to hot'
+    elevation_m:
+    - 150
+    - 1200
+    substrate: alkaline soils at springs, seeps and fault lines
+    niche: oases along fault lines where groundwater surfaces, often in canyons
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: stout columnar trunk with a dense skirt or petticoat of dead fronds hanging to the ground unless
+      burned
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.6
+    - 1.0
+    lifespan_y: 90
+    growth_rate: moderate
+    leaves: evergreen grey-green fan leaves 1–2 m across, with white threads hanging from the segments;
+      spiny stalks
+    seasonal: evergreen
+    flowers: long hanging panicles of small white flowers in late spring
+    fruit_visible: clusters of small black berries
+    bark: grey trunk, fire-scarred black where skirts have burned
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: dead skirts burn fiercely
+    uses:
+    - roof beams and fibre
+  products:
+    food:
+    - sweet
+    - date-like fruit eaten fresh or ground into flour by the Cahuilla
+    - palm heart in famine
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - fronds for thatch
+    - sandals
+    - baskets and cordage
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the Cahuilla set fire to palm groves to clear the skirts, kill pests and raise fruit yields; the
+      oases were village sites
+    symbolism:
+    - Palm Springs and Twentynine Palms are named for its oases
+    notable_trees:
+    - Thousand Palms Oasis
+    - Palm Canyon in the Agua Caliente Indian Reservation (the largest grove)
+  game_fit:
+    fields:
+      yield: 'high: palm groves mark water in the desert'
+    dimensions: []
+    hooks:
+    - oases signal surface water in deserts
+    - fruit and thatch
+    - fire clears skirts
+  sources:
+  - https://research.fs.usda.gov/feis/species-reviews/wasfil
+  - https://nathistoc.bio.uci.edu/plants/Arecaceae/Washingtonia%20filifera.htm
+- id: cascara
+  names:
+  - cascara
+  - cascara buckthorn
+  - Rhamnus purshiana (synonym)
+  scientific: Frangula purshiana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  habitat:
+    range: Pacific Northwest from southern British Columbia to northern California, east to Idaho and
+      Montana
+    ecosystem: temperate coniferous rainforest and mixed forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: moist, rich soils; also bogs and streamsides
+    niche: understory and edges of Douglas-fir, western hemlock and red alder forest
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: small tree or tall shrub with an irregular rounded crown
+    height_m:
+    - 4
+    - 12
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: 50
+    growth_rate: moderate
+    leaves: deciduous, elliptic, 5–15 cm, glossy, with conspicuous parallel veins
+    seasonal: leaves turn yellow in autumn
+    flowers: small greenish-yellow flowers in clusters, spring
+    fruit_visible: pea-sized berries ripening from red to purple-black
+    bark: thin, smooth, silvery-grey to brown, often mottled with lichen; bright yellow inner bark
+  timber:
+    heartwood: yellowish-orange to reddish-brown
+    sapwood: pale
+    grain: tight
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - berries eaten by birds and bears; bitter for people
+    sap_resin_latex: []
+    bark:
+    - cascara sagrada ('sacred bark'), dried and aged at least a year, a stimulant laxative
+    leaves: []
+    dyes:
+    - bark gives a yellow-green dye
+    medicinal:
+    - aged bark a laxative, used by Northwest Coast peoples and then in pharmacy worldwide; removed from
+      US over-the-counter laxatives by the FDA in 2002 for lack of safety data
+    toxicity: fresh bark and berries cause violent purging and vomiting; the bark must be aged or heated
+      before use
+  lore:
+    folklore: []
+    cultures:
+    - bark peeling was a seasonal livelihood in Oregon and Washington; millions of kilograms a year were
+      exported, and wild trees were heavily overharvested
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - bark that must be aged before it heals instead of harms (a preparation-time mechanic)
+    - yellow dye
+  sources:
+  - https://www.fs.usda.gov/database/feis/plants/shrub/frapur/all.html
+  - https://cfcg.forestry.ubc.ca/resources/species-reports/cascara-sagrada/
+- id: catalpa
+  names:
+  - catalpa
+  - cigar tree
+  - northern catalpa
+  - southern catalpa
+  - Indian bean tree
+  scientific: Catalpa speciosa
+  rank: group
+  stands_for:
+  - Catalpa bignonioides (southern catalpa)
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - product
+  habitat:
+    range: northern catalpa native to the central Mississippi and lower Ohio valleys; southern catalpa
+      to the Gulf states; both widely planted and naturalized
+    ecosystem: floodplain and bottomland forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 500
+    substrate: moist, fertile alluvial soils; tolerant of most soils
+    niche: river bottoms and forest edges; farmsteads and roadsides
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: short trunk with spreading branches and an open, irregular crown
+    height_m:
+    - 12
+    - 30
+    trunk_diameter_m:
+    - 0.4
+    - 1.0
+    lifespan_y: 60
+    growth_rate: fast
+    leaves: deciduous, very large heart-shaped leaves 15–30 cm, in whorls of three; late to emerge
+    seasonal: leaves drop yellow-green after early frost, among the first trees to go bare
+    flowers: showy upright panicles of white trumpet flowers 5–6 cm, frilled, with yellow stripes and
+      purple spots inside; early summer
+    fruit_visible: long thin green-to-brown bean-like pods 20–50 cm hanging through winter
+    bark: grey-brown, in thin scaly ridges
+  timber:
+    heartwood: greyish tan to golden brown; nearly all heartwood
+    sapwood: narrow, pale grey
+    grain: straight
+    texture: open, coarse
+    density_kg_m3: 460
+    janka_n: 2450
+    workability: easy to work; soft
+    rot_resistance: durable in ground contact
+    scent: faint, spicy
+    fuel: poor
+    uses:
+    - fence posts
+    - railroad ties planted in catalpa plantations
+    - carving
+    - cabinetry
+    - utility wood
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - leaves feed the catalpa sphinx caterpillar ("catawba worm")
+    - gathered as fishing bait
+    dyes: []
+    medicinal: []
+    toxicity: roots are considered poisonous
+  lore:
+    folklore: []
+    cultures:
+    - anglers in the South plant catalpas to harvest catawba worms for bait
+    - planted widely around 1900 as fence-post and railroad-tie plantations
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - bait source for fishing (caterpillars on its leaves)
+    - rot-resistant posts from a fast tree
+    - bean-pod "cigars" as a recognizable silhouette
+  sources:
+  - https://www.wood-database.com/catalpa/
+  - https://plants.usda.gov/DocumentLibrary/factsheet/pdf/fs_casp8.pdf
+- id: coast-redwood
+  names:
+  - coast redwood
+  scientific: Sequoia sempervirens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'giant-sequoia: Sierra Nevada giant'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - product
+  habitat:
+    range: Pacific coast fog belt from southwestern Oregon to Monterey County, California
+    ecosystem: temperate coastal rainforest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: 'temperature: mild maritime; moisture: humid with summer fog'
+    elevation_m:
+    - 0
+    - 900
+    substrate: deep alluvial flats and slopes; tolerates flood silt deposits
+    niche: valley flats and lower slopes within reach of summer fog
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: extremely tall straight trunk with a narrow conical crown; sprouts rings of clones ("fairy
+      rings") from burls and stumps
+    height_m:
+    - 60
+    - 116
+    trunk_diameter_m:
+    - 3
+    - 7
+    lifespan_y: 2200
+    growth_rate: fast
+    leaves: evergreen; flat needles in two ranks on lower shoots, scale-like near the sunny top
+    seasonal: evergreen
+    flowers: tiny cones in winter
+    fruit_visible: small egg-shaped cones about 2.5 cm
+    bark: very thick (up to 30 cm), fibrous, deeply furrowed, cinnamon to red-brown, fire-resistant
+  timber:
+    heartwood: light pinkish brown to deep reddish brown
+    sapwood: pale white or yellow
+    grain: generally straight; burls and curly figure prized
+    texture: coarse; low lustre
+    density_kg_m3: 415
+    janka_n: 2000
+    workability: easy to work; weak but stable
+    rot_resistance: moderately to very durable; old-growth more durable
+    scent: distinct odour when worked, fading afterwards
+    fuel: null
+    uses:
+    - shingles and siding
+    - beams and posts
+    - decking
+    - water tanks
+    - outdoor furniture
+    - burl tabletops and turnings
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - fibrous bark used for clothing and mats by coastal peoples
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - sacred to the Yurok, Tolowa and other coastal peoples, who made canoes and plank houses from fallen
+      redwoods
+    - the 'Save the Redwoods' conservation movement and Redwood National Park
+    symbolism:
+    - state tree of California (with giant sequoia)
+    notable_trees:
+    - Hyperion, about 116 m, the tallest known living tree, Redwood National Park
+    - petrified stumps of the fossil relative Sequoia affinis stand at Florissant Fossil Beds, Colorado,
+      and in Yellowstone's petrified forests
+  game_fit:
+    fields:
+      liminality: 'high: fog-bound cathedral groves of the tallest trees'
+    dimensions: []
+    hooks:
+    - tallest-tree vertical climbing challenge
+    - burls that clone the tree
+    - rot-resistant building wood
+    - fossil stumps as a worldgen petrified-forest feature
+  sources:
+  - https://www.wood-database.com/redwood/
+  - https://research.fs.usda.gov/silvics/redwood
+  - https://www.nps.gov/redw/learn/nature/about-the-trees.htm
+- id: cottonwood
+  names:
+  - cottonwood
+  - Fremont cottonwood
+  - eastern cottonwood
+  - plains cottonwood
+  scientific: Populus deltoides
+  rank: group
+  stands_for:
+  - Populus fremontii (Fremont cottonwood)
+  - Populus deltoides subsp. monilifera (plains cottonwood)
+  distinct_from:
+  - 'balsam-poplar: boreal and Pacific, resinous buds'
+  - 'aspen: smaller upland poplar'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: eastern and central North America to the Great Plains; Fremont cottonwood along rivers of the
+      Southwest and California
+    ecosystem: riparian forest and gallery woodland across prairie and desert
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - arid
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      - humid
+      note: 'temperature: temperate to warm; moisture: humid to arid'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: moist sandy and silty alluvium on river bars and floodplains
+    niche: pioneer of fresh river sandbars; the only big trees along prairie and desert streams
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: massive trunk often forked low, with a broad, open, spreading crown
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 1.0
+    - 2.5
+    lifespan_y: 370
+    growth_rate: fast
+    leaves: deciduous, triangular (deltoid) leaves with coarse teeth and flattened stalks that rattle
+      in wind
+    seasonal: bright yellow in autumn, lighting river valleys
+    flowers: red male and green female catkins before the leaves
+    fruit_visible: catkins of capsules that burst in early summer, filling the air and ground with white
+      cotton-like seed fluff
+    bark: smooth yellowish-grey when young, becoming thick, dark grey and deeply furrowed
+  timber:
+    heartwood: light brown
+    sapwood: pale yellow to nearly white
+    grain: straight to irregular or interlocked
+    texture: uniform, medium
+    density_kg_m3: 450
+    janka_n: 1910
+    workability: easy to work but fuzzy; warps
+    rot_resistance: non-durable
+    scent: sour when green
+    fuel: poor; fast-burning
+    uses:
+    - pulp
+    - crates and pallets
+    - veneer
+    - Hopi katsina carvings from Fremont cottonwood root
+    - dugout canoes
+  products:
+    food:
+    - inner bark and sweet sap eaten by Plains peoples; buds and catkins eaten
+    sap_resin_latex: []
+    bark:
+    - inner bark fed to horses in winter by Plains peoples
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - the Lakota say a cottonwood twig cut crosswise shows a five-pointed star, which inspired the tipi
+    cultures:
+    - the Sun Dance pole of Plains nations is a cottonwood
+    - Hopi and Zuni katsina dolls carved from Fremont cottonwood root
+    - landmark and campsite trees on the Oregon and Santa Fe trails
+    symbolism:
+    - state tree of Kansas
+    - Nebraska and Wyoming
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: big trees mark water across plains and deserts'
+    dimensions: []
+    hooks:
+    - rivers lined with cottonwoods visible from afar
+    - seed fluff as a summer weather effect
+    - soft carving wood
+  sources:
+  - https://www.wood-database.com/eastern-cottonwood/
+  - https://research.fs.usda.gov/silvics/eastern-cottonwood
+  - https://www.rmtrr.org/oldlist.htm
+- id: desert-ironwood
+  names:
+  - desert ironwood
+  scientific: Olneya tesota
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: Sonoran Desert of southern Arizona, southeastern California, Sonora and Baja California
+    ecosystem: Sonoran Desert scrub
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: 'temperature: hot'
+    elevation_m:
+    - 0
+    - 750
+    substrate: sandy and gravelly washes, bajadas and rocky slopes
+    niche: desert washes and plains; nurse tree under which saguaros and other cacti establish
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: broad, spreading crown on a short, often multi-stemmed trunk; spiny branches
+    height_m:
+    - 5
+    - 10
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: 800
+    growth_rate: slow
+    leaves: evergreen in most years, small grey-green pinnate leaves; sheds them in severe drought or
+      cold
+    seasonal: bursts into lavender bloom in late spring
+    flowers: pea-shaped lavender to pink-purple flowers in dense clusters, late spring
+    fruit_visible: short, hairy brown pods with a few seeds
+    bark: grey, smooth on young branches, becoming shreddy on old trunks
+  timber:
+    heartwood: orange-yellow to dark red-brown with violet-black streaks; some pieces nearly black
+    sapwood: narrow, yellow
+    grain: wild or gnarled
+    texture: fine, even, with excellent lustre
+    density_kg_m3: 1210
+    janka_n: 14500
+    workability: very difficult; dulls tools; oily
+    rot_resistance: dead wood persists in the desert for centuries
+    scent: distinct, somewhat unpleasant when worked
+    fuel: excellent, very hot, long-burning charcoal; heavily cut for firewood and charcoal
+    uses:
+    - Seri carvings
+    - knife handles
+    - tool handles
+    - turned objects
+  products:
+    food:
+    - seeds eaten roasted or parched by the Seri and Tohono O'odham
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Seri (Comcaac) carvers have carved ironwood animal figures since the 1960s, now a major craft trade
+    symbolism:
+    - Ironwood Forest National Monument
+    - Arizona
+    - was created to protect it
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: wood so dense it sinks, in harsh desert'
+    dimensions: []
+    hooks:
+    - densest native wood
+    - sinks in water
+    - best charcoal
+    - nurse tree that seeds cacti beneath it in worldgen
+  sources:
+  - https://www.wood-database.com/desert-ironwood/
+  - https://www.britannica.com/plant/desert-ironwood
+  - http://www.desertmuseum.org/programs/ifnm_ironwoodtree.htm
+- id: douglas-fir
+  names:
+  - Douglas fir
+  scientific: Pseudotsuga menziesii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bigcone-douglas-fir: heavy-coned southern California relative'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - product
+  habitat:
+    range: western North America from British Columbia to central California (coast variety) and through
+      the Rocky Mountains to Mexico (interior variety)
+    ecosystem: temperate coniferous rainforest and montane forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      - humid
+      note: 'moisture: humid to semi-arid'
+    elevation_m:
+    - 0
+    - 3000
+    substrate: deep, well-drained soils
+    niche: dominant after fire in Pacific Northwest forests, with western hemlock and western redcedar
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall straight trunk, clear of branches for much of its length in forest; conical crown flattening
+      with age
+    height_m:
+    - 40
+    - 100
+    trunk_diameter_m:
+    - 1.0
+    - 4.0
+    lifespan_y: 1350
+    growth_rate: fast
+    leaves: soft flat evergreen needles 2–3 cm, spreading all round the twig; sharp-pointed reddish buds
+    seasonal: evergreen
+    flowers: small reddish female and yellow male cones in spring
+    fruit_visible: hanging cones 5–10 cm with three-pointed bracts sticking out between the scales like
+      the hind legs and tails of hiding mice
+    bark: very thick, corky, deeply furrowed, dark red-brown; fire-resistant on old trees
+  timber:
+    heartwood: light brown with red or yellow tint and darker growth rings
+    sapwood: whitish
+    grain: generally straight
+    texture: medium to coarse
+    density_kg_m3: 510
+    janka_n: 2760
+    workability: works well; strong for its weight; resinous
+    rot_resistance: moderately durable
+    scent: distinct, resinous
+    fuel: good
+    uses:
+    - structural timber
+    - plywood
+    - beams and bridges
+    - ship masts and spars
+    - railway ties
+    - flooring
+  products:
+    food:
+    - young needle tips for tea
+    sap_resin_latex:
+    - pitch used as glue and to caulk canoes
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - pitch applied to wounds by Indigenous peoples
+    toxicity: null
+  lore:
+    folklore:
+    - a widely retold legend explains the mouse-tail cone bracts as mice that hid in the cones from a
+      forest fire, sheltered by the tree; its tribal source is uncertain
+    cultures:
+    - the leading lumber tree of the Pacific Northwest timber economy
+    symbolism:
+    - state tree of Oregon
+    notable_trees:
+    - the Red Creek Fir, Vancouver Island, the largest known Douglas fir
+    - Doerner Fir, Oregon, about 100 m
+  game_fit:
+    fields:
+      yield: 'high: the region''s main structural timber'
+    dimensions: []
+    hooks:
+    - mouse-tail cones as an identification hint
+    - long straight beams for building and masts
+  sources:
+  - https://www.wood-database.com/douglas-fir/
+  - https://research.fs.usda.gov/silvics/douglas-fir
+  - https://www.rmtrr.org/oldlist.htm
+- id: eastern-hemlock
+  names:
+  - eastern hemlock
+  scientific: Tsuga canadensis
+  rank: group
+  stands_for:
+  - Tsuga caroliniana (Carolina hemlock)
+  distinct_from:
+  - 'western-hemlock: Pacific giant'
+  - 'mountain-hemlock: subalpine blue-green hemlock'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  habitat:
+    range: Nova Scotia and the Great Lakes to the southern Appalachians; Carolina hemlock in the southern
+      Appalachian mountains
+    ecosystem: temperate mixed forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1700
+    substrate: moist, acid soils; rocky ridges and ravines
+    niche: cool, shaded ravines and north slopes, often along streams, with yellow birch and beech
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: dense, broadly conical crown with a drooping leader and down-swept branch tips
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 0.6
+    - 1.5
+    lifespan_y: 555
+    growth_rate: slow
+    leaves: short flat evergreen needles 1–2 cm, dark green above with two white bands beneath, on short
+      stalks
+    seasonal: evergreen; creates deep year-round shade
+    flowers: tiny cones in spring
+    fruit_visible: small oval cones 1.5–2.5 cm hanging from the twig tips
+    bark: cinnamon-red to grey-brown, deeply furrowed into broad ridges; inner bark purplish-red
+  timber:
+    heartwood: light reddish brown
+    sapwood: slightly lighter, not distinct
+    grain: generally straight; may be spiral
+    texture: coarse, uneven
+    density_kg_m3: 450
+    janka_n: 2220
+    workability: splinters and has ring shake; holds nails well
+    rot_resistance: non-durable
+    scent: none
+    fuel: poor; sparks
+    uses:
+    - framing
+    - barn boards
+    - pallets and crates
+    - pulp
+    - railroad ties
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - the leading 19th-century source of tannin for leather in the northeastern US
+    leaves:
+    - needle tea used by the Haudenosaunee
+    - Ojibwe and others for colds and scurvy
+    dyes:
+    - bark gives a red-brown dye
+    medicinal:
+    - inner bark poultices for wounds
+    toxicity: not related to poison hemlock (Conium), which is a herb
+  lore:
+    folklore: []
+    cultures:
+    - the 'hemlock tanneries' of Pennsylvania and New York stripped vast forests for bark, often leaving
+      the logs to rot
+    symbolism:
+    - state tree of Pennsylvania
+    notable_trees:
+    - Tionesta, Pennsylvania, hemlocks dated to about 555 years
+  game_fit:
+    fields:
+      liminality: 'high: dark, hushed ravines where little else grows'
+    dimensions: []
+    hooks:
+    - bark tannin for leather (crafting/material-classes)
+    - deep shade suppresses undergrowth beneath it
+    - hemlock woolly adelgid as a blight event
+  sources:
+  - https://www.wood-database.com/eastern-hemlock/
+  - https://research.fs.usda.gov/silvics/eastern-hemlock
+  - https://www.rmtrr.org/oldlist.htm
+- id: eastern-redcedar
+  names:
+  - eastern redcedar
+  - Rocky Mountain juniper
+  scientific: Juniperus virginiana
+  rank: group
+  stands_for:
+  - Juniperus scopulorum (Rocky Mountain juniper)
+  distinct_from:
+  - 'utah-juniper: arid-zone shreddy juniper'
+  - 'alligator-juniper: chequered bark'
+  - 'ashe-juniper: Texas hill country cedar'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: eastern and central North America from southern Ontario to the Gulf and west across the Great
+      Plains; Rocky Mountain juniper from British Columbia to Arizona and New Mexico
+    ecosystem: old fields, glades, prairie edges, bluffs and dry woodland
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      - humid
+      note: 'temperature: temperate; moisture: humid to semi-arid'
+    elevation_m:
+    - 0
+    - 2700
+    substrate: dry, rocky, often limestone soils; tolerant of poor soils
+    niche: pioneer of old fields and limestone glades; invades prairies without fire
+    strata:
+    - open
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: dense, narrow pyramid or column when young, irregular and broad with age; cliff trees stunted
+      and twisted
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: 940
+    growth_rate: moderate
+    leaves: evergreen; sharp awl-shaped juvenile needles and tiny overlapping scale leaves on adults;
+      bronze in winter
+    seasonal: foliage turns bronze-brown in winter
+    flowers: tiny yellow-brown male cones on separate trees, shedding pollen in late winter
+    fruit_visible: berry-like blue cones with a pale waxy bloom on female trees
+    bark: reddish-brown, thin, peeling in long fibrous strips
+  timber:
+    heartwood: reddish to violet-brown, with streaks of pale sapwood
+    sapwood: pale yellow
+    grain: straight, usually knotty
+    texture: very fine, even
+    density_kg_m3: 530
+    janka_n: 4000
+    workability: easy to work; knots can cause tear-out
+    rot_resistance: excellent resistance to decay and insects
+    scent: strong, distinctive cedar scent that repels moths
+    fuel: aromatic kindling
+    uses:
+    - pencils
+    - cedar chests and closet linings
+    - fence posts
+    - bows
+    - carvings
+    - birdhouses
+  products:
+    food:
+    - cones flavour gin as a substitute for common juniper
+    sap_resin_latex: []
+    bark:
+    - shredded bark used as tinder and for cordage and mats
+    leaves:
+    - foliage burned as ceremonial smudge
+    dyes: []
+    medicinal:
+    - cedar oil used in perfumery and as an insect repellent; cones and twigs used in folk remedies
+    toxicity: oil is an irritant; large amounts of cones or foliage are toxic
+  lore:
+    folklore:
+    - for many Plains peoples the cedar is a sacred tree associated with thunder and the Lakota Thunder
+      Beings
+    cultures:
+    - cedar smoke purifies in ceremonies of the Lakota, Kiowa and others
+    - the Cherokee kept sacred objects wrapped in cedar
+    symbolism: []
+    notable_trees:
+    - cliff-face redcedars in West Virginia dated to about 940 years
+  game_fit:
+    fields:
+      alignment: 'high: purifying smoke and sacred tree'
+      liminality: 'high: ancient stunted cliff trees'
+    dimensions: []
+    hooks:
+    - moth-proof chest lining (storage that protects contents)
+    - smudge for purification rites
+    - pencil wood
+    - rot-proof posts
+  sources:
+  - https://www.wood-database.com/aromatic-red-cedar/
+  - https://research.fs.usda.gov/silvics/eastern-redcedar
+  - https://www.rmtrr.org/oldlist.htm
+- id: eastern-white-pine
+  names:
+  - eastern white pine
+  - western white pine
+  scientific: Pinus strobus
+  rank: group
+  stands_for:
+  - Pinus monticola (western white pine)
+  distinct_from:
+  - 'sugar-pine: largest pine and cones'
+  - 'whitebark-pine: high-elevation nut pine'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  habitat:
+    range: eastern Canada and the northeastern US to the Great Lakes and south in the Appalachians to
+      Georgia; western white pine from British Columbia to the Sierra Nevada and northern Rockies
+    ecosystem: temperate mixed and conifer forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: sandy, well-drained soils; also bogs and rocky ridges
+    niche: emergent over hardwoods in mixed forest; old fields and burns
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall straight trunk with whorls of horizontal branches; old trees become flat-topped and windswept,
+      branches sweeping east
+    height_m:
+    - 25
+    - 50
+    trunk_diameter_m:
+    - 0.8
+    - 1.5
+    lifespan_y: 450
+    growth_rate: fast
+    leaves: soft, slender blue-green needles 5–13 cm in bundles of five
+    seasonal: evergreen
+    flowers: small yellow male cones and pinkish female cones in spring
+    fruit_visible: slender curved cones 8–20 cm with resin-tipped scales
+    bark: smooth greenish-grey on young trees; thick, dark grey and deeply furrowed into broad ridges
+      on old trees
+  timber:
+    heartwood: light brown, sometimes reddish
+    sapwood: pale yellow to nearly white
+    grain: straight
+    texture: even, medium
+    density_kg_m3: 400
+    janka_n: 1690
+    workability: very easy to work, carves cleanly; a favourite for carving
+    rot_resistance: moderate to low
+    scent: faint, resinous
+    fuel: moderate; resinous kindling
+    uses:
+    - ship masts
+    - carving
+    - millwork
+    - panelling
+    - boxes
+    - construction lumber
+    - Native longhouse building
+  products:
+    food:
+    - inner bark eaten in famine; needle tea rich in vitamin C
+    sap_resin_latex:
+    - pitch for caulking and as a salve
+    bark:
+    - inner bark used medicinally
+    leaves:
+    - needle tea against scurvy
+    dyes: []
+    medicinal:
+    - resin salve for wounds
+    - inner bark for coughs
+    - used by many eastern peoples
+    toxicity: null
+  lore:
+    folklore:
+    - 'the Haudenosaunee Great Tree of Peace: the Peacemaker buried weapons under a white pine; its five
+      needles stand for the five original nations, and an eagle perches on top to watch for danger'
+    cultures:
+    - 'the King''s Broad Arrow: from 1691 the Crown reserved large white pines in New England as Royal
+      Navy masts, provoking the Pine Tree Riot of 1772'
+    symbolism:
+    - state tree of Maine and Michigan
+    - provincial tree of Ontario
+    - Idaho's state tree is the western white pine
+    - the pine-tree flag of the American Revolution
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: the Tree of Peace'
+    dimensions: []
+    hooks:
+    - mast timber (tall straight logs for ships)
+    - soft carving wood
+    - needle tea against scurvy
+  sources:
+  - https://www.wood-database.com/eastern-white-pine/
+  - https://research.fs.usda.gov/silvics/eastern-white-pine
+- id: flowering-dogwood
+  names:
+  - flowering dogwood
+  scientific: Cornus florida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pacific-dogwood: giant-bract western dogwood'
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - folklore
+  - cultural
+  - product
+  habitat:
+    range: eastern United States from southern Maine and Ontario to Florida and eastern Texas; also in
+      northeastern Mexico
+    ecosystem: temperate deciduous forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: well-drained, acid to neutral loams
+    niche: understory of oak, hickory and pine forest and forest edges
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: small tree with a short trunk and a flat-topped spreading crown of layered horizontal branches
+    height_m:
+    - 5
+    - 10
+    trunk_diameter_m:
+    - 0.15
+    - 0.45
+    lifespan_y: 125
+    growth_rate: moderate
+    leaves: deciduous, oval, 8–13 cm, with veins curving parallel to the edge
+    seasonal: red to purple autumn leaves with scarlet berries
+    flowers: tiny greenish-yellow flower heads surrounded by four large white (sometimes pink) notched
+      bracts, before the leaves in spring
+    fruit_visible: clusters of shiny scarlet oval drupes in autumn
+    bark: dark grey-brown, broken into small square blocks like alligator skin
+  timber:
+    heartwood: narrow, reddish brown
+    sapwood: wide, cream to pale pink
+    grain: interlocked
+    texture: fine, uniform
+    density_kg_m3: 815
+    janka_n: 9560
+    workability: hard to work; turns and polishes very well; does not splinter with wear
+    rot_resistance: non-durable to perishable
+    scent: none
+    fuel: hot and dense
+    uses:
+    - textile shuttles and spindles
+    - golf-club heads
+    - mallets and pulleys
+    - jewellers' blocks
+    - bows
+    - skewers
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - bark and root bark used as a quinine substitute and to make a red dye
+    leaves: []
+    dyes:
+    - root bark gives a scarlet dye
+    medicinal:
+    - bark used for fevers and malaria in the Civil War South
+    - twigs chewed as toothbrushes
+    toxicity: fruits are inedible and mildly toxic to people; eaten by birds
+  lore:
+    folklore:
+    - a Christian legend that the Cross was made of dogwood, which was then made small and twisted; the
+      four bracts form a cross with rusty 'nail marks' at their tips and a crown of thorns in the centre
+    cultures:
+    - Cherokee and settlers planted corn when the dogwood bloomed
+    symbolism:
+    - state tree of Missouri and Virginia
+    - state flower of Virginia and North Carolina
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: blossoms read as a holy sign in folklore'
+    dimensions: []
+    hooks:
+    - spring bloom marks the planting season
+    - hard shuttle and mallet wood
+    - scarlet dye
+  sources:
+  - https://www.wood-database.com/dogwood/
+  - https://research.fs.usda.gov/silvics/flowering-dogwood
+- id: giant-sequoia
+  names:
+  - giant sequoia
+  - Sierra redwood
+  scientific: Sequoiadendron giganteum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'coast-redwood: giant sequoia is the stouter Sierra Nevada tree'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  habitat:
+    range: about 70 groves on the western slope of the Sierra Nevada, California
+    ecosystem: montane mixed conifer forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - semi-arid
+      - subhumid
+      note: 'moisture: subhumid with winter snow and dry summers'
+    elevation_m:
+    - 1400
+    - 2500
+    substrate: deep, moist granitic soils
+    niche: groves with white fir, sugar pine and incense cedar; needs fire to bare mineral soil and open
+      its cones
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: enormous columnar trunk with a buttressed base and a rounded crown of massive branches; conical
+      when young
+    height_m:
+    - 50
+    - 95
+    trunk_diameter_m:
+    - 5
+    - 9
+    lifespan_y: 3266
+    growth_rate: fast
+    leaves: evergreen, short awl-shaped scale leaves pressed spirally along the shoots, blue-green
+    seasonal: evergreen
+    flowers: small cones in late winter
+    fruit_visible: egg-shaped green cones 5–8 cm that stay closed on the tree for up to 20 years until
+      heat or beetles open them
+    bark: very thick (up to 60 cm), soft, spongy and fibrous, bright cinnamon-red, deeply furrowed; resists
+      fire
+  timber:
+    heartwood: light pinkish brown to deep reddish brown
+    sapwood: pale white or yellow
+    grain: straight
+    texture: coarse
+    density_kg_m3: 375
+    janka_n: 1850
+    workability: easy; very brittle, so old fallen giants often shattered when felled
+    rot_resistance: moderately to very durable
+    scent: distinct odour when worked
+    fuel: null
+    uses:
+    - fence posts
+    - shingles
+    - matchsticks
+    - grape stakes
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the Tübatulabal and Mono peoples called the trees 'wawona'; 19th-century logging of the brittle
+      giants caused public outcry and led to Sequoia and Yosemite's protections
+    symbolism:
+    - state tree of California (with coast redwood)
+    notable_trees:
+    - General Sherman, Sequoia National Park, the largest single-stem tree by volume, about 1,487 m³
+    - General Grant, the 'Nation's Christmas Tree'
+    - the tree crossdated at about 3,266 years (CBR26)
+  game_fit:
+    fields:
+      liminality: 'high: the most massive living things, millennia old'
+    dimensions: []
+    hooks:
+    - fire-opened cones (regrowth only after fire)
+    - giant landmark trees
+    - brittle wood that shatters when felled
+  sources:
+  - https://www.wood-database.com/giant-sequoia/
+  - https://research.fs.usda.gov/silvics/giant-sequoia
+  - https://www.rmtrr.org/oldlist.htm
+- id: honey-locust
+  names:
+  - honey locust
+  scientific: Gleditsia triacanthos
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  habitat:
+    range: central and eastern United States, mainly the Mississippi and Ohio valleys to the Gulf; widely
+      planted
+    ecosystem: floodplain forest and old fields
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 750
+    substrate: moist, rich bottomland soils and limestone
+    niche: floodplain bottoms and pastures
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: short trunk with an open, spreading flat-topped crown
+    height_m:
+    - 20
+    - 30
+    trunk_diameter_m:
+    - 0.6
+    - 1.0
+    lifespan_y: 125
+    growth_rate: fast
+    leaves: deciduous, feathery pinnate and bipinnate leaves of many small leaflets; light dappled shade
+    seasonal: clear yellow in autumn
+    flowers: small fragrant greenish-yellow racemes, late spring
+    fruit_visible: long twisted flat reddish-brown pods 15–45 cm with sweet pulp, hanging into winter
+    bark: grey-brown, with long scaly plates; trunk and branches bristle with huge branched thorns up
+      to 20 cm in clusters
+  timber:
+    heartwood: medium to light reddish brown
+    sapwood: wide, light yellow
+    grain: straight to slightly irregular
+    texture: medium, uneven
+    density_kg_m3: 755
+    janka_n: 7030
+    workability: works fairly well; dense
+    rot_resistance: moderately durable to durable
+    scent: none
+    fuel: good, hot
+    uses:
+    - fence posts
+    - wagon hubs
+    - furniture
+    - turned objects
+    - utility lumber
+  products:
+    food:
+    - sweet pod pulp eaten and brewed into beer; pods fed to livestock
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - Cherokee and others used pod and bark preparations for whooping cough and indigestion
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - thorns used as nails and pins; pods a sweetener for Indigenous peoples
+    - thought to be adapted to dispersal by extinct megafauna
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: trunk bristling with large branched thorns'
+    dimensions: []
+    hooks:
+    - thorns as early nails and a hazard to climb
+    - sweet pods as forage and brewing sugar
+  sources:
+  - https://www.wood-database.com/honey-locust/
+  - https://research.fs.usda.gov/silvics/honeylocust
+- id: joshua-tree
+  names:
+  - Joshua tree
+  scientific: Yucca brevifolia
+  rank: group
+  stands_for:
+  - Yucca jaegeriana
+  - Yucca filifera
+  distinct_from:
+  - 'soaptree-yucca: tall grassy desert yucca'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: Mojave Desert of California, Nevada, Arizona and Utah (Yucca jaegeriana in the eastern Mojave);
+      Yucca filifera in the Chihuahuan Desert of Mexico
+    ecosystem: desert woodland
+    climate:
+      temperature:
+      - cold
+      - warm-temperate
+      moisture:
+      - arid
+      note: 'temperature: warm with cold winters'
+    elevation_m:
+    - 400
+    - 1800
+    substrate: sandy and gravelly loam on desert plains and bajadas
+    niche: open "forests" on Mojave upland plains, pollinated only by yucca moths
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tree-like yucca; a stout shaggy trunk branching after flowering into crooked raised arms, each
+      ending in a rosette of leaves
+    height_m:
+    - 4
+    - 12
+    trunk_diameter_m:
+    - 0.3
+    - 0.9
+    lifespan_y: 300
+    growth_rate: slow
+    leaves: stiff, dagger-shaped blue-green evergreen leaves 15–35 cm, toothed, in dense clusters at the
+      branch ends; old dead leaves hang down the trunk as a shag
+    seasonal: evergreen; flowers only in good years after rain and cold
+    flowers: dense clusters of waxy creamy-white to greenish bell flowers at the branch tips, late winter
+      to spring
+    fruit_visible: green egg-shaped fleshy capsules drying brown
+    bark: shaggy with dead leaves when young; old trunks corky, grey-brown and furrowed into small plates
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: spongy, fibrous
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - fence and corral posts by settlers
+  products:
+    food:
+    - flower buds and seeds roasted or eaten by the Cahuilla and other desert peoples
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - leaf fibre woven into baskets and sandals; red roots used for basket patterns
+    dyes:
+    - roots give a red-brown basket dye
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - said to be named by Mormon settlers crossing the Mojave in the 1850s, who saw Joshua raising his
+      arms in prayer or leading them west; the story is traditional and undocumented
+    cultures:
+    - Cahuilla and Serrano basketry and food
+    - the namesake of Joshua Tree National Park and U2's 1987 album The Joshua Tree
+    symbolism:
+    - a symbol of the Mojave Desert
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: crooked, bristling silhouettes unlike any ordinary tree'
+    dimensions:
+    - enigma
+    hooks:
+    - fibre for cordage and baskets
+    - landmark silhouettes in the desert
+    - flowering only after a cold
+    - wet winter
+  sources:
+  - https://research.fs.usda.gov/feis/species-reviews/yucspp
+  - https://scholarsarchive.byu.edu/wnan/vol66/iss2/6/
+  - https://missouribotanicalgarden.org/plantfinder/PlantFinderDetails.aspx?taxonid=282014
+- id: kentucky-coffeetree
+  names:
+  - Kentucky coffeetree
+  scientific: Gymnocladus dioicus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  habitat:
+    range: central United States and southern Ontario, mainly the Ohio and Mississippi valleys and southern
+      Great Lakes
+    ecosystem: floodplain and mixed deciduous forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 100
+    - 600
+    substrate: deep, rich, moist bottomland soils
+    niche: scattered in floodplains and ravines; rare everywhere
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: few coarse, stubby branches forming a narrow, open crown; bare and gaunt-looking in winter
+    height_m:
+    - 18
+    - 30
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: 150
+    growth_rate: moderate
+    leaves: deciduous, huge bipinnate leaves up to 1 m long with many oval leaflets; late to leaf out,
+      early to drop
+    seasonal: leaflets yellow in autumn; leafless for half the year
+    flowers: greenish-white clusters on separate male and female trees, late spring
+    fruit_visible: thick, leathery, reddish-brown pods 15–25 cm with a few hard seeds in sticky green
+      pulp, hanging into winter
+    bark: grey-brown, with hard scaly ridges curling outward along their edges
+  timber:
+    heartwood: orange to reddish brown, like honey locust
+    sapwood: narrow, yellowish white
+    grain: straight, porous
+    texture: coarse
+    density_kg_m3: 675
+    janka_n: 6180
+    workability: works easily
+    rot_resistance: moderately to very durable, does well in ground contact
+    scent: none
+    fuel: null
+    uses:
+    - fence posts
+    - furniture
+    - cabinetry
+    - railroad ties
+    - utility wood
+  products:
+    food:
+    - seeds roasted as a coffee substitute by settlers; roasting destroys the toxin
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - Indigenous peoples used preparations of the pods and roots for various ailments
+    toxicity: raw seeds, pods and leaves contain the alkaloid cytisine; poisonous to people and livestock
+  lore:
+    folklore: []
+    cultures:
+    - seeds used as gaming pieces by some Indigenous peoples; the saponin-rich pod pulp used as soap
+    symbolism:
+    - state tree of Kentucky from 1976 to 1994, then named the state's heritage tree when the tulip poplar
+      replaced it
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: gaunt ''dead-looking'' winter tree with seeds poisonous raw, safe roasted'
+    dimensions: []
+    hooks:
+    - toxic raw seeds that become a coffee drink when roasted (processing changes safety)
+    - seeds as game dice
+  sources:
+  - https://www.wood-database.com/coffeetree/
+  - https://plants.usda.gov/DocumentLibrary/plantguide/pdf/cs_gydi.pdf
+  - https://ufi.mgcafe.uky.edu/tree-highlight-ky-coffeetree
+- id: live-oak
+  names:
+  - southern live oak
+  scientific: Quercus virginiana
+  rank: group
+  stands_for:
+  - Quercus fusiformis (plateau live oak)
+  - Quercus oleoides (tropical live oak)
+  distinct_from:
+  - 'coast-live-oak: Californian'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: coastal plain of the southeastern United States from Virginia to Florida and Texas; plateau
+      live oak on the Edwards Plateau of Texas; tropical live oak from Mexico to Costa Rica
+    ecosystem: maritime forest, coastal hammocks and oak savanna
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to subtropical'
+    elevation_m:
+    - 0
+    - 300
+    substrate: sandy soils and coastal dunes; tolerant of salt spray
+    niche: dominant in coastal hammocks and on barrier islands
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: short, massive trunk with huge, nearly horizontal limbs that spread wider than the tree is
+      tall, sometimes resting on the ground; draped with Spanish moss and resurrection fern
+    height_m:
+    - 12
+    - 25
+    trunk_diameter_m:
+    - 1.0
+    - 2.5
+    lifespan_y: 500
+    growth_rate: moderate
+    leaves: evergreen (sheds and replaces in spring), leathery, oval, glossy dark green above, grey-hairy
+      below, edges often rolled
+    seasonal: brief leaf change in spring; otherwise evergreen
+    flowers: yellow-green catkins, spring
+    fruit_visible: small dark, elongated acorns in clusters, autumn
+    bark: dark grey-brown, deeply furrowed into small blocky plates
+  timber:
+    heartwood: light to medium brown
+    sapwood: paler
+    grain: straight to irregular, with natural curves in the limbs
+    texture: coarse, uneven
+    density_kg_m3: 1000
+    janka_n: 11920
+    workability: very hard to work
+    rot_resistance: very durable
+    scent: typical oak smell
+    fuel: excellent, very hot
+    uses:
+    - ship knees and frames from naturally curved limbs
+    - mallets
+    - tool handles
+  products:
+    food:
+    - sweet acorns eaten and pressed for oil by Indigenous peoples
+    sap_resin_latex: []
+    bark:
+    - tannin
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: acorns contain tannins that are harmful to livestock in large amounts
+  lore:
+    folklore: []
+    cultures:
+    - the US Navy bought live-oak forests (the first federal timber reserves) for warships; USS Constitution's
+      live-oak hull earned her the name 'Old Ironsides' when British shot bounced off in 1812
+    - the Live Oak Society registers great live oaks as members
+    symbolism:
+    - state tree of Georgia
+    - an emblem of the Old South
+    notable_trees:
+    - Angel Oak, Johns Island, South Carolina, estimated at 400–500 years
+    - Seven Sisters Oak, Mandeville, Louisiana, president of the Live Oak Society
+    - the Treaty Oak in Austin, Texas
+  game_fit:
+    fields:
+      liminality: 'high: moss-hung ancient limbs over coastal hammocks'
+    dimensions: []
+    hooks:
+    - naturally curved limbs for ship knees
+    - shot-resistant hull timber
+    - wide climbable limbs
+  sources:
+  - https://www.wood-database.com/live-oak/
+  - https://research.fs.usda.gov/silvics/live-oak
+  - https://www.nps.gov/subjects/iconictrees/visit.htm
+- id: longleaf-pine
+  names:
+  - longleaf pine
+  scientific: Pinus palustris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'loblolly-pine: shorter needles, no grass stage'
+  - 'pitch-pine: sandy barrens fire pine'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: southeastern coastal plain from southeastern Virginia to Florida and eastern Texas; once about
+      36 million ha, now about 3%
+    ecosystem: fire-maintained pine savanna with wiregrass
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to subtropical'
+    elevation_m:
+    - 0
+    - 600
+    substrate: deep sands and sandy loams; also clay hills
+    niche: open, frequently burned savannas with a grassy floor
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tall straight trunk with an open crown of a few thick branches; seedlings spend years in a
+      tufted, trunkless "grass stage"
+    height_m:
+    - 25
+    - 35
+    trunk_diameter_m:
+    - 0.6
+    - 1.0
+    lifespan_y: 458
+    growth_rate: moderate
+    leaves: very long bright green needles 20–45 cm in bundles of three, in tufts at the ends of stout
+      branches; large silvery-white buds
+    seasonal: evergreen; "candles" of new shoots in spring
+    flowers: purple male catkins in late winter
+    fruit_visible: large cones 15–25 cm
+    bark: orange-brown to grey, thick, in scaly plates; fire-resistant
+  timber:
+    heartwood: reddish brown, very resinous ("heart pine", "fat lighter")
+    sapwood: yellowish white
+    grain: straight
+    texture: fine to medium
+    density_kg_m3: 650
+    janka_n: 4120
+    workability: works fairly well; resin gums tools
+    rot_resistance: heartwood moderately resistant; resin-soaked fat lighter very durable
+    scent: strong pine resin
+    fuel: resin-soaked heartwood ("fat lighter") makes the best fire-starter
+    uses:
+    - heart-pine flooring
+    - beams
+    - ship timbers
+    - poles and piling
+    - naval stores
+  products:
+    food: []
+    sap_resin_latex:
+    - pine gum tapped for turpentine and rosin; tar and pitch from burned wood
+    bark: []
+    leaves:
+    - needles woven into coiled baskets
+    dyes: []
+    medicinal:
+    - turpentine used as a folk remedy
+    toxicity: null
+  lore:
+    folklore:
+    - North Carolina's 'Tar Heel' nickname comes from the tar, pitch and turpentine industry
+    cultures:
+    - the naval-stores industry, worked largely by enslaved and later convict and turpentine-camp labour
+    - pine-needle basketry of the Southeast
+    symbolism:
+    - state tree of Alabama and North Carolina
+    notable_trees:
+    - '''Old Survivor'', Weymouth Woods, North Carolina, dated at about 458 years'
+  game_fit:
+    fields:
+      savagery: 'low: open, park-like fire-maintained savanna'
+    dimensions: []
+    hooks:
+    - tapped resin for turpentine
+    - rosin
+    - tar and pitch (crafting/material-classes)
+    - fat lighter fire-starters
+    - grass-stage seedlings that need fire
+  sources:
+  - https://www.wood-database.com/longleaf-pine/
+  - https://research.fs.usda.gov/silvics/longleaf-pine
+  - https://www.rmtrr.org/oldlist.htm
+- id: mesquite
+  names:
+  - mesquite
+  - honey mesquite
+  - velvet mesquite
+  - Prosopis glandulosa (syn.)
+  scientific: Neltuma glandulosa
+  rank: group
+  stands_for:
+  - Neltuma juliflora (syn. Prosopis juliflora)
+  - Neltuma velutina (velvet mesquite)
+  distinct_from:
+  - 'screwbean-mesquite: spiral pods'
+  - 'algarrobo: South American Prosopis'
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - well-known
+  - product
+  habitat:
+    range: southwestern United States and northern Mexico from Kansas and Texas to California; velvet
+      mesquite in the Sonoran Desert; N. juliflora in Mexico, Central America and the Caribbean
+    ecosystem: desert grassland, thornscrub and desert riparian bosques
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      - tropical
+      moisture:
+      - arid
+      - semi-arid
+      note: 'temperature: warm to hot; moisture: arid to semi-arid'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: wide range; deep alluvium in washes and floodplains
+    niche: dense bosques along washes; invades overgrazed grasslands as a shrub
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small tree with crooked, spreading branches and a low, open crown, or a multi-stemmed shrub;
+      very deep taproot
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, bipinnate with narrow leaflets; paired straight spines at the nodes
+    seasonal: bare in winter; leafs out late, a traditional sign that frosts are over
+    flowers: yellow cylindrical catkin-like spikes, spring
+    fruit_visible: long straw-coloured, sometimes red-streaked pods 10–25 cm hanging in clusters in summer
+    bark: dark reddish-brown to grey, rough and shreddy
+  timber:
+    heartwood: reddish brown, darkening with age
+    sapwood: thin, yellow
+    grain: straight to wavy; often wild or full of defects
+    texture: medium to coarse
+    density_kg_m3: 820
+    janka_n: 10410
+    workability: hard but very stable; works reasonably well
+    rot_resistance: very durable
+    scent: sweet smoke when burned
+    fuel: excellent; hot coals with a sweet, pungent smoke prized for barbecue
+    uses:
+    - fence posts
+    - flooring
+    - furniture
+    - turned objects
+    - charcoal
+    - barbecue smoking wood
+  products:
+    food:
+    - sweet pods ground into mesquite flour (pinole) and drinks by the O'odham
+    - Cahuilla
+    - Seri and others; mesquite honey
+    sap_resin_latex:
+    - black gum used as glue
+    - pottery paint and hair dye
+    bark:
+    - inner bark used for basketry and cordage
+    leaves: []
+    dyes:
+    - gum and bark give black and brown dyes
+    medicinal:
+    - gum and leaves used for eye washes
+    - sore throats and wounds
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - mesquite pods were a staple for many desert peoples, stored in granary baskets
+    - barbecue culture of Texas and the Southwest
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: food, fuel and glue from one desert tree'
+    dimensions: []
+    hooks:
+    - pod flour as a desert staple
+    - black gum as glue and paint
+    - best smoking wood for cooking
+  sources:
+  - https://www.wood-database.com/honey-mesquite/
+  - https://research.fs.usda.gov/feis/species-reviews/progla
+  - https://plants.usda.gov/DocumentLibrary/plantguide/pdf/pg_prglt.pdf
+- id: osage-orange
+  names:
+  - Osage orange
+  - hedge apple
+  - bois d'arc
+  scientific: Maclura pomifera
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  - product
+  habitat:
+    range: native to the Red River region of Texas, Oklahoma and Arkansas; planted across the US as hedges
+    ecosystem: prairie-edge bottomland woods and hedgerows
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: 'temperature: temperate to warm-temperate'
+    elevation_m:
+    - 100
+    - 500
+    substrate: rich bottomland soils; very tolerant once planted
+    niche: river bottoms and blackland prairie edges; planted fencerows
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: short, often crooked trunk with a dense, rounded, thorny crown; planted hedges form impenetrable
+      thickets
+    height_m:
+    - 8
+    - 20
+    trunk_diameter_m:
+    - 0.3
+    - 1.0
+    lifespan_y: 250
+    growth_rate: fast
+    leaves: deciduous, glossy oval leaves with a pointed tip; sharp straight thorns at the leaf bases
+    seasonal: bright yellow in autumn
+    flowers: small greenish flowers on separate male and female trees, early summer
+    fruit_visible: heavy, bumpy, brain-like yellow-green balls 8–15 cm, with milky sap, falling in autumn
+    bark: orange-brown, deeply furrowed into interlacing ridges; roots bright orange
+  timber:
+    heartwood: golden to bright yellow, ageing to medium brown
+    sapwood: thin, pale yellow
+    grain: straight
+    texture: fine to medium; high natural lustre
+    density_kg_m3: 855
+    janka_n: 11640
+    workability: hard and difficult; bends well when properly prepared
+    rot_resistance: extremely durable; among the most decay-resistant woods in North America
+    scent: none
+    fuel: very hot, sparks heavily
+    uses:
+    - bows (bois d'arc)
+    - war clubs
+    - fence posts
+    - wagon wheels
+    - dye
+    - turnery
+  products:
+    food: []
+    sap_resin_latex:
+    - milky latex in the fruit and twigs
+    bark:
+    - root bark used for a yellow dye and tannin
+    leaves: []
+    dyes:
+    - wood gives a yellow-to-khaki dye (used for World War I uniforms)
+    medicinal: []
+    toxicity: fruit is inedible to people and livestock; the latex irritates skin
+  lore:
+    folklore:
+    - hedge apples are widely believed to repel spiders and insects indoors, a claim without good evidence
+    cultures:
+    - bows of Osage orange were so prized that a good bow could be traded for a horse and blanket
+    - planted across the Great Plains as living 'horse-high, bull-strong, pig-tight' fences before barbed
+      wire
+    symbolism: []
+    notable_trees:
+    - the national champion at Red Hill, Patrick Henry's home in Virginia
+  game_fit:
+    fields:
+      savagery: 'high: thorny hedges, war-bow wood'
+    dimensions: []
+    hooks:
+    - top bow-stave wood
+    - thorny hedge as a living wall
+    - yellow dye
+    - its odd fruit was eaten by extinct megafauna
+  sources:
+  - https://www.wood-database.com/osage-orange/
+  - https://research.fs.usda.gov/silvics/osage-orange
+  - https://wildlifedepartment.com/outdoorok/ooj/wildlife-food-thought-osage-orange
+- id: pacific-madrone
+  names:
+  - Pacific madrone
+  - arbutus
+  scientific: Arbutus menziesii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'texas-madrone: Chihuahuan pale-barked relative'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: Pacific coast from southwestern British Columbia to southern California; also the Sierra Nevada
+      foothills
+    ecosystem: mixed evergreen forest and oak woodland
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - subhumid
+      note: 'temperature: mild maritime to Mediterranean; moisture: subhumid with dry summers'
+    elevation_m:
+    - 0
+    - 1800
+    substrate: well-drained, often rocky or shallow soils
+    niche: dry, sunny bluffs and slopes, often with Douglas fir, tanoak and Garry oak
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: broad-leaved evergreen tree with a crooked, leaning trunk reaching for light and an irregular,
+      rounded crown
+    height_m:
+    - 10
+    - 35
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: 400
+    growth_rate: moderate
+    leaves: evergreen, glossy dark green oval leaves 7–15 cm, pale beneath; old leaves turn red before
+      falling in summer
+    seasonal: bark peels in summer, revealing new green-gold skin
+    flowers: drooping clusters of small white urn-shaped flowers, spring
+    fruit_visible: clusters of bright orange-red granular berries in autumn and winter
+    bark: thin, peeling in papery sheets and curls of cinnamon to deep red, over smooth satiny green to
+      yellow-gold new bark
+  timber:
+    heartwood: cream to pinkish brown with dark red patches; burls with clustered eyes
+    sapwood: pale
+    grain: straight
+    texture: very fine, even
+    density_kg_m3: 795
+    janka_n: 6490
+    workability: difficult to dry; warps and checks badly; turns well
+    rot_resistance: non-durable to perishable
+    scent: none
+    fuel: excellent, hot and long-burning
+    uses:
+    - burl veneer
+    - turned objects
+    - charcoal for gunpowder
+    - firewood
+  products:
+    food:
+    - berries eaten raw
+    - cooked or dried by some coastal peoples; also cider
+    sap_resin_latex: []
+    bark:
+    - bark used for tanning and in remedies
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark and leaves used for colds
+    - stomach ailments and sores
+    toxicity: null
+  lore:
+    folklore:
+    - a Saanich story says madrone was the tree that anchored people's canoes in the Great Flood, so it
+      is not burned
+    cultures:
+    - Coast Salish peoples respect it as the flood-surviving tree
+    symbolism:
+    - arbutus is a symbol of the Gulf Islands and Vancouver Island coast
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: shedding red skin to reveal green; the flood-anchor tree'
+    dimensions: []
+    hooks:
+    - peeling bark texture as a seasonal visual
+    - hot fuel and charcoal
+    - flood-legend tree
+  sources:
+  - https://www.wood-database.com/madrone/
+  - https://research.fs.usda.gov/silvics/pacific-madrone
+  - https://owic.oregonstate.edu/pacific-madrone-arbutus-menziesii
+- id: palo-verde
+  names:
+  - palo verde
+  - blue palo verde
+  scientific: Parkinsonia florida
+  rank: group
+  stands_for:
+  - Parkinsonia aculeata
+  - Parkinsonia microphylla (foothill palo verde)
+  distinct_from:
+  - 'desert-ironwood: shares Sonoran washes, dark wood'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  - product
+  habitat:
+    range: Sonoran Desert of Arizona, California, Sonora and Baja California; P. aculeata from Texas to
+      South America and widely naturalized
+    ecosystem: Sonoran Desert scrub
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: 'temperature: hot'
+    elevation_m:
+    - 0
+    - 1200
+    substrate: sandy and gravelly washes (blue); rocky slopes and bajadas (foothill)
+    niche: desert washes; foothill palo verde is the commonest nurse tree for saguaros
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small, multi-stemmed tree with a broad, airy crown; green bark on trunk and branches
+    height_m:
+    - 5
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: 100
+    growth_rate: moderate
+    leaves: drought-deciduous; small bipinnate leaves with tiny leaflets, shed in drought; short spines
+    seasonal: in spring the whole crown blooms solid yellow; leafless much of the year, photosynthesizing
+      through green bark
+    flowers: masses of bright yellow five-petalled flowers, one petal red-spotted, spring
+    fruit_visible: flat, beaded brown pods with a few seeds
+    bark: smooth blue-green (blue palo verde) or yellow-green (foothill) on trunk and branches; grey and
+      rough only at the base of old trees
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: soft wood, poor fuel
+    uses: []
+  products:
+    food:
+    - green seeds and pods eaten fresh
+    - dried seeds ground into flour by the O'odham
+    - Seri and Cahuilla
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - '''palo verde'' means ''green stick'' in Spanish'
+    symbolism:
+    - state tree of Arizona (1954)
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'low: soft wood, but edible seeds'
+    dimensions: []
+    hooks:
+    - nurse tree that shelters young saguaros in worldgen
+    - spring bloom turns desert washes yellow
+  sources:
+  - https://desertmuseum.org/kids/oz/long-fact-sheets/Foothills%20Palo%20Verde.php
+  - https://www.desertusa.com/flora/palo-verde-tree.html
+  - https://research.fs.usda.gov/feis/species-briefs/parmic
+- id: pawpaw
+  names:
+  - pawpaw
+  scientific: Asimina triloba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  habitat:
+    range: eastern United States from New York and southern Ontario to the Florida panhandle and eastern
+      Texas, west to Nebraska
+    ecosystem: temperate deciduous forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 0
+    - 800
+    substrate: deep, moist, fertile bottomland soils
+    niche: understory of rich floodplain and ravine forests, forming clonal patches from root suckers
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: small tree or tall shrub with a narrow crown, in dense clonal thickets
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, very large drooping obovate leaves 15–30 cm, giving a tropical look; smell of green
+      pepper when crushed
+    seasonal: clear yellow in autumn
+    flowers: nodding maroon to purple-brown three-lobed flowers 3–5 cm with a faint carrion smell, before
+      the leaves in spring
+    fruit_visible: clusters of plump greenish-yellow oblong fruits 7–15 cm, ripening in late summer and
+      autumn
+    bark: thin, smooth, grey-brown with warty lenticels
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - soft custardy fruit with a banana-mango flavour
+    - eaten fresh or in baking; spoils within days
+    sap_resin_latex: []
+    bark:
+    - inner bark twisted into cordage and fish stringers by Indigenous peoples
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: seeds, bark and leaves contain acetogenins (annonacin) and are toxic; the fruit causes digestive
+      upset in some people
+  lore:
+    folklore:
+    - the folk song 'Way down yonder in the pawpaw patch'
+    cultures:
+    - Lewis and Clark's party lived on pawpaws in 1806
+    - pawpaw festivals in Ohio
+    symbolism:
+    - state native fruit of Ohio
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - perishable wild fruit to eat quickly
+    - food of the forest understory
+    - main larval food plant of the zebra swallowtail butterfly
+  sources:
+  - https://ohiodnr.gov/discover-and-learn/plants-trees/broad-leaf-trees/pawpaw-asimina-triloba
+  - https://extension.okstate.edu/fact-sheets/pawpaw-history,-cultivation-and-containerized-production-practices-for-oklahoma
+- id: pecan
+  names:
+  - pecan
+  scientific: Carya illinoinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'shagbark-hickory: pecan is a tall riverbottom nut crop with smooth bark'
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  habitat:
+    range: Mississippi valley from Iowa and Illinois to Louisiana, west through Texas into northern Mexico
+    ecosystem: floodplain forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'temperature: temperate to warm-temperate; moisture: humid to subhumid'
+    elevation_m:
+    - 0
+    - 600
+    substrate: deep, well-drained alluvial soils
+    niche: river bottoms and natural levees
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tall straight trunk with a broad, symmetrical, oval crown; the largest hickory
+    height_m:
+    - 30
+    - 45
+    trunk_diameter_m:
+    - 0.6
+    - 1.2
+    lifespan_y: 300
+    growth_rate: moderate
+    leaves: deciduous, pinnately compound with 9–17 curved, lance-shaped leaflets
+    seasonal: yellow in autumn
+    flowers: long green male catkins in spring
+    fruit_visible: clusters of green four-winged husks splitting in autumn to drop thin-shelled, brown
+      oblong nuts
+    bark: light grey-brown, with narrow forked scaly ridges
+  timber:
+    heartwood: light to medium brown with a reddish hue
+    sapwood: paler yellowish brown
+    grain: usually straight
+    texture: medium
+    density_kg_m3: 735
+    janka_n: 8100
+    workability: hard to work; holds up to shock
+    rot_resistance: non-durable to perishable
+    scent: none
+    fuel: excellent; smoking wood
+    uses:
+    - tool handles
+    - flooring
+    - furniture
+    - ladder rungs
+    - smoking meat
+  products:
+    food:
+    - pecan nuts eaten raw
+    - roasted
+    - in pies and pralines; a major orchard crop
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes:
+    - husks give a brown dye
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - a staple food of Indigenous peoples of the southern Plains; the name is from an Algonquian word
+      for a nut needing a stone to crack
+    - grafted improved varieties were first propagated by Antoine, an enslaved gardener in Louisiana,
+      in 1846
+    symbolism:
+    - state tree of Texas
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: abundant nut harvest in river bottoms'
+    dimensions: []
+    hooks:
+    - nut harvest in autumn
+    - smoking wood for cooking
+    - shock-resistant handles
+  sources:
+  - https://www.wood-database.com/pecan/
+  - https://research.fs.usda.gov/silvics/pecan
+- id: pinyon-pine
+  names:
+  - pinyon
+  - piñon
+  scientific: Pinus edulis
+  rank: group
+  stands_for:
+  - Pinus cembroides (Mexican pinyon)
+  - Pinus quadrifolia (Parry pinyon)
+  distinct_from:
+  - 'single-leaf-pinyon: one-needle Great Basin pinyon'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  habitat:
+    range: Colorado Plateau and southern Rockies of Colorado, Utah, Arizona and New Mexico; Mexican pinyon
+      in northern Mexico and border ranges; Parry pinyon in southern California and Baja California
+    ecosystem: pinyon-juniper woodland
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: 'temperature: cool to warm-temperate'
+    elevation_m:
+    - 1400
+    - 2700
+    substrate: dry, rocky and gravelly soils on mesas and foothills
+    niche: open woodland with Utah and one-seed junipers between grassland and montane forest
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small, bushy, round-crowned tree, often with a short crooked trunk
+    height_m:
+    - 5
+    - 12
+    trunk_diameter_m:
+    - 0.3
+    - 0.8
+    lifespan_y: 1101
+    growth_rate: slow
+    leaves: stiff, curved, dark green needles 2–5 cm in bundles of two
+    seasonal: evergreen; heavy nut crops every few years, synchronized across whole regions
+    flowers: small reddish cones in late spring
+    fruit_visible: small round woody cones 4–5 cm that open to show large wingless brown seeds
+    bark: grey to red-brown, rough and scaly, furrowed into irregular plates
+  timber:
+    heartwood: yellowish brown
+    sapwood: pale
+    grain: irregular and knotty
+    texture: medium to fine
+    density_kg_m3: 595
+    janka_n: 3830
+    workability: knotty and resinous; seldom sawn
+    rot_resistance: mediocre
+    scent: resinous; its burning smell is the scent of Southwestern winters
+    fuel: prized firewood with a sweet fragrance
+    uses:
+    - firewood
+    - fence posts
+    - charcoal
+    - hogan and corral building
+  products:
+    food:
+    - piñon nuts, rich in oil, gathered in autumn as a staple and trade good
+    sap_resin_latex:
+    - pitch used to waterproof baskets and water jars
+    - as glue and chewing gum
+    bark: []
+    leaves: []
+    dyes:
+    - pitch used in black dyes for wool
+    medicinal:
+    - pitch applied to cuts and sores
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - autumn piñon harvests were central to the Washoe, Paiute, Shoshone, Navajo and Pueblo peoples; Washoe
+      pine-nut ceremonies
+    - Hispano piñon-picking traditions in northern New Mexico
+    symbolism:
+    - state tree of New Mexico
+    notable_trees:
+    - pinyons in Nine Mile Canyon, Utah, crossdated to about 1,100 years
+  game_fit:
+    fields:
+      yield: 'high: mast years give huge nut harvests'
+    dimensions: []
+    hooks:
+    - autumn nut gathering as a food stockpile
+    - pitch to waterproof containers
+    - fragrant firewood
+  sources:
+  - https://www.wood-database.com/pinyon-pine/
+  - https://research.fs.usda.gov/silvics/pinyon
+  - https://www.rmtrr.org/oldlist.htm
+- id: red-oak
+  names:
+  - northern red oak
+  - red oak
+  - eastern black oak
+  - pin oak
+  - scarlet oak
+  scientific: Quercus rubra
+  rank: group
+  stands_for:
+  - Quercus palustris (pin oak)
+  - Quercus coccinea (scarlet oak)
+  - Quercus velutina (eastern black oak)
+  - Quercus phellos (willow oak)
+  - Quercus marilandica (blackjack oak)
+  - Quercus falcata (southern red oak)
+  distinct_from:
+  - 'white-oak: rounded lobes, sweet acorns, tight barrel wood'
+  - 'california-black-oak: western red oak'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - product
+  habitat:
+    range: eastern North America from Nova Scotia and southern Ontario to Georgia and eastern Oklahoma;
+      the absorbed relatives cover the whole East
+    ecosystem: temperate deciduous forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 0
+    - 1650
+    substrate: well-drained loams; tolerates acid and sandy soils
+    niche: mixed hardwood forest on slopes and uplands
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: straight trunk with a rounded crown of stout spreading branches
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.6
+    - 1.2
+    lifespan_y: 326
+    growth_rate: fast
+    leaves: deciduous, 7–11 pointed lobes with bristle tips
+    seasonal: deep red to russet in autumn; scarlet oak brightest
+    flowers: hanging yellow-green catkins in spring
+    fruit_visible: acorns maturing in their second year, with shallow saucer-like cups
+    bark: dark grey, with long flat-topped shiny ridges ("ski tracks") on the upper trunk
+  timber:
+    heartwood: light to medium brown with a reddish cast
+    sapwood: paler
+    grain: straight; prominent rays when quartersawn
+    texture: coarse; pores so open that air blows through the end grain
+    density_kg_m3: 700
+    janka_n: 5430
+    workability: works well; steam-bends; stains easily
+    rot_resistance: non-durable; porous, so useless for liquid-tight barrels
+    scent: typical oak smell
+    fuel: excellent firewood when seasoned
+    uses:
+    - flooring
+    - furniture
+    - cabinetry
+    - railroad ties
+    - veneer
+    - dry (slack) cooperage
+  products:
+    food:
+    - bitter acorns
+    - edible after leaching
+    sap_resin_latex: []
+    bark:
+    - tannin for leather
+    leaves: []
+    dyes:
+    - black oak inner bark gives quercitron
+    - a yellow dye
+    medicinal:
+    - bark used as an astringent
+    toxicity: leaves and acorns contain tannins harmful to livestock in quantity
+  lore:
+    folklore: []
+    cultures: []
+    symbolism:
+    - state tree of New Jersey
+    - provincial tree of Prince Edward Island
+    - oak is the US national tree (2004)
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: abundant hardwood and acorn mast'
+    dimensions: []
+    hooks:
+    - common hardwood for floors and furniture
+    - quercitron dye
+    - bitter acorns that need leaching
+  sources:
+  - https://www.wood-database.com/red-oak/
+  - https://research.fs.usda.gov/silvics/northern-red-oak
+  - https://www.rmtrr.org/oldlist.htm
+- id: saguaro
+  names:
+  - saguaro
+  scientific: Carnegiea gigantea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cardon: Baja giant cactus'
+  - 'organ-pipe-cactus: multi-stemmed fruit cactus'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  - product
+  habitat:
+    range: Sonoran Desert of southern Arizona, a little of southeastern California, and Sonora
+    ecosystem: Sonoran Desert scrub
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      - seasonally-dry
+      note: 'temperature: hot; killed by long hard frosts; moisture: arid with summer monsoon'
+    elevation_m:
+    - 0
+    - 1400
+    substrate: rocky slopes and bajadas
+    niche: south-facing rocky slopes; seedlings survive only under nurse trees such as palo verde and
+      ironwood
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: giant columnar cactus, a single pleated stem that grows upturned arms only after 50–100 years
+    height_m:
+    - 5
+    - 16
+    trunk_diameter_m:
+    - 0.3
+    - 0.75
+    lifespan_y: 200
+    growth_rate: slow
+    leaves: none; green photosynthetic stem with 12–24 ribs swelling with stored water after rain
+    seasonal: white flowers in May and June, red fruit in early summer
+    flowers: large waxy white flowers with yellow centres at the stem tips, opening at night; pollinated
+      by bats, birds and bees
+    fruit_visible: red-green fleshy fruits splitting to show red pulp with tiny black seeds
+    bark: green ribbed skin with clusters of grey spines; scarred grey-brown corky at the base of old
+      plants; woodpecker holes ("boots")
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: internal skeleton of woody ribs
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: dry ribs make kindling
+    uses:
+    - ribs for house roofs
+    - fences and fruit-harvesting poles
+  products:
+    food:
+    - fruit eaten fresh
+    - dried
+    - boiled into syrup and fermented into wine; seeds ground into meal
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - for the Tohono O'odham, saguaros are people, some said to be children who sank into the earth and
+      rose as cacti
+    cultures:
+    - the saguaro fruit harvest (bahidaj) begins the Tohono O'odham new year, and saguaro wine is drunk
+      at the rain-bringing ceremony
+    - woodpecker-made saguaro 'boots' were used as containers
+    symbolism:
+    - the saguaro blossom is the state flower of Arizona
+    - Saguaro National Park
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: in O''odham lore saguaros are people'
+    dimensions: []
+    hooks:
+    - fruit harvest with long rib poles
+    - needs a nurse tree to grow
+    - desert landmark that grows arms only after decades
+  sources:
+  - https://www.nps.gov/articles/saguaro-cactus.htm
+  - https://www.fs.usda.gov/wildflowers/plant-of-the-week/carnegiea_gigantea.shtml
+  - https://www.nps.gov/places/ajo-mountain-drive-stop-3.htm
+- id: sassafras
+  names:
+  - sassafras
+  scientific: Sassafras albidum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - medicinal
+  - toxic
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: eastern North America from southern Maine and Ontario to central Florida and eastern Texas
+    ecosystem: temperate deciduous forest edges and old fields
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: well-drained sandy loams; tolerant of poor soil
+    niche: pioneer of old fields, forest edges and gaps; spreads by root suckers into thickets
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small to medium tree with layered horizontal branches and a flat crown; colonial thickets from
+      roots
+    height_m:
+    - 9
+    - 25
+    trunk_diameter_m:
+    - 0.3
+    - 0.9
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, aromatic leaves of three shapes on one tree, unlobed oval, two-lobed mitten and
+      three-lobed; green twigs
+    seasonal: brilliant orange, scarlet and purple in autumn
+    flowers: small greenish-yellow clusters in early spring before the leaves
+    fruit_visible: dark blue drupes on bright red stalks, late summer
+    bark: red-brown, deeply furrowed into flat corky ridges; green on young twigs
+  timber:
+    heartwood: medium to light brown, sometimes orange or olive
+    sapwood: paler yellowish brown
+    grain: straight
+    texture: coarse, uneven
+    density_kg_m3: 495
+    janka_n: 2800
+    workability: easy to work
+    rot_resistance: durable to very durable
+    scent: spicy, root-beer scent when worked
+    fuel: crackles and sparks
+    uses:
+    - fence posts
+    - boatbuilding
+    - furniture
+    - dugout canoes
+    - utility lumber
+  products:
+    food:
+    - filé powder from dried leaves, a thickener and flavour in Creole and Cajun gumbo
+    - root-bark tea and the original root beer
+    sap_resin_latex: []
+    bark:
+    - root bark distilled for sassafras oil
+    leaves:
+    - mucilaginous leaves for filé
+    dyes:
+    - bark gives an orange dye
+    medicinal:
+    - root-bark tea a spring tonic and a supposed cure for syphilis; in 1602 it was one of the first exports
+      of the New World to Europe
+    toxicity: oil of sassafras is mostly safrole, a carcinogen in rodent studies; the US FDA banned it
+      as a food additive in 1960. Leaves contain little safrole
+  lore:
+    folklore:
+    - in Appalachian folklore, burning sassafras wood is bad luck
+    cultures:
+    - Choctaw origin of filé for gumbo; sassafras-root expeditions to Virginia drove early English colonial
+      voyages
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: three leaf shapes on one tree, burning it brings bad luck'
+    dimensions: []
+    hooks:
+    - root-bark tea and spice with a hidden toxin
+    - orange dye
+    - three leaf shapes as an identification puzzle
+  sources:
+  - https://www.wood-database.com/sassafras/
+  - https://www.fs.usda.gov/database/feis/plants/tree/sasalb/all.html
+  - https://research.fs.usda.gov/silvics/sassafras
+- id: serviceberry
+  names:
+  - serviceberry
+  - saskatoon
+  - juneberry
+  scientific: Amelanchier alnifolia
+  rank: group
+  stands_for:
+  - Amelanchier arborea (downy serviceberry)
+  - Amelanchier canadensis
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - flowers
+  habitat:
+    range: saskatoon across western and central North America from Alaska and Yukon to Ontario and south
+      to California and New Mexico; the eastern serviceberries from Newfoundland to the Gulf
+    ecosystem: forest edges, aspen parkland, coulees and open woods
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: 'temperature: cold to temperate'
+    elevation_m:
+    - 0
+    - 3000
+    substrate: well-drained loams; tolerant of dry and alkaline soils
+    niche: forest margins, riverbanks, coulees and understory openings; suckers into thickets
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: multi-stemmed tall shrub or small tree; eastern species up to small trees
+    height_m:
+    - 2
+    - 12
+    trunk_diameter_m:
+    - 0.05
+    - 0.3
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, oval to round, finely toothed toward the tip
+    seasonal: white bloom in early spring; orange to red in autumn
+    flowers: clusters of starry white five-petalled flowers before or with the leaves, very early spring
+    fruit_visible: clusters of small dark purple-blue pomes like blueberries, early summer
+    bark: smooth grey with faint vertical stripes, becoming furrowed at the base
+  timber:
+    heartwood: narrow, reddish brown, maple-like
+    sapwood: wide, pale tan
+    grain: straight
+    texture: fine, uniform
+    density_kg_m3: 835
+    janka_n: 8010
+    workability: hard; turns well
+    rot_resistance: mostly perishable sapwood
+    scent: none
+    fuel: null
+    uses:
+    - arrow shafts
+    - digging sticks
+    - turned objects
+    - tool handles
+  products:
+    food:
+    - sweet berries eaten fresh
+    - dried into cakes and pounded into pemmican
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes:
+    - berries give purple and blue dyes
+    medicinal: []
+    toxicity: leaves and seeds contain cyanogenic glycosides
+  lore:
+    folklore:
+    - '''serviceberry'' is said to come from its bloom coinciding with the first church services of spring,
+      when Appalachian roads thawed; the story is folk etymology'
+    cultures:
+    - the Cree word misâskwatômina gave Saskatoon its name
+    - saskatoons were a key ingredient of pemmican for Plains peoples and the fur trade
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: an early-summer berry harvest'
+    dimensions: []
+    hooks:
+    - pemmican ingredient (preserved trail food)
+    - straight arrow shafts
+    - first white bloom marks spring
+  sources:
+  - https://www.wood-database.com/serviceberry/
+  - https://www.fs.usda.gov/database/feis/plants/shrub/amealn/all.html
+- id: shagbark-hickory
+  names:
+  - hickory
+  - shagbark hickory
+  scientific: Carya ovata
+  rank: group
+  stands_for:
+  - Carya laciniosa (shellbark hickory)
+  - Carya tomentosa (mockernut hickory)
+  - Carya glabra (pignut hickory)
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - fruit
+  habitat:
+    range: eastern North America from southern Quebec and Maine to Georgia and eastern Texas, west to
+      Minnesota
+    ecosystem: oak-hickory forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 0
+    - 1000
+    substrate: well-drained upland loams and moist bottomland
+    niche: upland oak-hickory forests and valleys
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall straight trunk with an open, irregular crown
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: 350
+    growth_rate: slow
+    leaves: deciduous, pinnately compound, usually five large leaflets
+    seasonal: golden yellow to brown in autumn
+    flowers: green male catkins in spring
+    fruit_visible: round nuts in thick green husks that split into four, autumn
+    bark: grey, peeling in long curving plates loose at both ends, giving a shaggy look
+  timber:
+    heartwood: light to medium brown with a reddish hue
+    sapwood: paler yellowish brown
+    grain: usually straight
+    texture: medium
+    density_kg_m3: 800
+    janka_n: 8360
+    workability: hard to work; excellent shock resistance; bends well
+    rot_resistance: non-durable; susceptible to insects
+    scent: none in wood; sweet smoke
+    fuel: among the best firewoods; classic smoking wood for bacon and ham
+    uses:
+    - axe and hammer handles
+    - wagon wheels and spokes
+    - bows
+    - skis
+    - drumsticks
+    - smoking meat
+  products:
+    food:
+    - sweet hickory nuts; pounded into "pawcohiccora" nut milk; syrup from bark
+    sap_resin_latex: []
+    bark:
+    - bark boiled into a syrup
+    leaves: []
+    dyes:
+    - inner bark gives a yellow dye
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - '''hickory'' comes from the Powhatan word pawcohiccora, a hickory-nut milk'
+    - Andrew Jackson was called 'Old Hickory' for his toughness
+    symbolism:
+    - toughness
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: nuts and the best handle wood'
+    dimensions: []
+    hooks:
+    - tool handles and wheel spokes
+    - best smoking and firewood
+    - shaggy bark as a strong identification cue
+  sources:
+  - https://www.wood-database.com/shagbark-hickory/
+  - https://research.fs.usda.gov/silvics/shagbark-hickory
+- id: sitka-spruce
+  names:
+  - Sitka spruce
+  scientific: Picea sitchensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-spruce: boreal'
+  - 'engelmann-spruce: interior'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: Pacific coast fog belt from Kodiak Island, Alaska, to northern California
+    ecosystem: temperate coastal rainforest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - wet
+      note: 'temperature: cool maritime; moisture: very humid'
+    elevation_m:
+    - 0
+    - 900
+    substrate: moist, deep soils; sand dunes and river flats
+    niche: narrow coastal strip within reach of salt spray and fog, with western hemlock
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: very tall straight trunk with a buttressed base and an open, conical crown of drooping branchlets
+    height_m:
+    - 45
+    - 90
+    trunk_diameter_m:
+    - 1.5
+    - 5.0
+    lifespan_y: 700
+    growth_rate: fast
+    leaves: stiff, sharp, flattened blue-green needles 1.5–2.5 cm with white bands
+    seasonal: evergreen
+    flowers: small reddish cones in spring
+    fruit_visible: pale orange-brown cones 5–10 cm with thin, papery, wavy scales
+    bark: thin, grey to purplish-brown, broken into loose round scales
+  timber:
+    heartwood: cream to light yellow, sometimes pinkish
+    sapwood: not clearly distinct
+    grain: consistently straight
+    texture: fine, even
+    density_kg_m3: 425
+    janka_n: 2270
+    workability: easy to work; exceptional strength for its weight
+    rot_resistance: slightly resistant to non-resistant
+    scent: none
+    fuel: null
+    uses:
+    - aircraft frames (the Spruce Goose
+    - WWI aircraft)
+    - guitar and piano soundboards
+    - masts and spars
+    - oars
+    - ladders
+  products:
+    food:
+    - young shoots eaten; spruce-tip beer
+    sap_resin_latex:
+    - pitch used as glue and medicine
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - pitch used on sores and wounds
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Tlingit and Haida weave its roots into fine watertight baskets and hats
+    - the US Army's Spruce Production Division logged it for WWI warplanes
+    symbolism:
+    - state tree of Alaska
+    notable_trees:
+    - the Golden Spruce (K'iid K'iyaas), a sacred yellow-needled mutant on Haida Gwaii, cut down by a
+      protester in 1997
+    - Quinault Lake Spruce, Washington
+  game_fit:
+    fields:
+      liminality: 'high: the sacred Golden Spruce'
+    dimensions: []
+    hooks:
+    - light-and-strong wood for gliders
+    - masts and musical instruments
+    - roots for watertight baskets
+  sources:
+  - https://www.wood-database.com/sitka-spruce/
+  - https://research.fs.usda.gov/silvics/sitka-spruce
+- id: southern-magnolia
+  names:
+  - southern magnolia
+  - bull bay
+  scientific: Magnolia grandiflora
+  rank: group
+  stands_for:
+  - Magnolia virginiana (sweetbay magnolia)
+  - Magnolia acuminata (cucumber tree)
+  distinct_from:
+  - 'bigleaf-magnolia: leaf giant'
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - well-known
+  - product
+  habitat:
+    range: coastal plain of the southeastern US from North Carolina to central Florida and east Texas;
+      sweetbay along the Atlantic and Gulf coasts; cucumber tree in the Appalachians and Ozarks
+    ecosystem: warm-temperate broadleaved forest and coastal hammocks
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to subtropical'
+    elevation_m:
+    - 0
+    - 450
+    substrate: moist, rich, well-drained soils
+    niche: mixed hardwood forest on bluffs, hammocks and stream terraces with American beech and oaks
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: dense, pyramidal crown of glossy evergreen leaves, branched nearly to the ground
+    height_m:
+    - 18
+    - 30
+    trunk_diameter_m:
+    - 0.6
+    - 1.2
+    lifespan_y: 120
+    growth_rate: moderate
+    leaves: evergreen, large stiff leathery leaves 12–25 cm, glossy dark green above with rusty brown
+      fuzz below
+    seasonal: evergreen; blooms from late spring through summer
+    flowers: huge creamy-white cup-shaped flowers 20–30 cm across with a lemony fragrance
+    fruit_visible: cone-like rusty fruit clusters 7–10 cm splitting to dangle bright red seeds on threads
+    bark: smooth grey-brown, becoming thinly scaly
+  timber:
+    heartwood: medium to dark brown, sometimes green, purple or black streaked
+    sapwood: very wide, creamy white
+    grain: straight
+    texture: medium to fine
+    density_kg_m3: 560
+    janka_n: 4540
+    workability: easy to work
+    rot_resistance: non-durable to perishable
+    scent: none
+    fuel: null
+    uses:
+    - furniture frames
+    - venetian blinds
+    - veneer
+    - interior trim
+    - boxes
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - glossy leaves used in wreaths and Christmas decorations
+    dyes: []
+    medicinal:
+    - bark used as a folk remedy for fevers and rheumatism
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - emblem of the American South
+    - Steel Magnolias
+    symbolism:
+    - state tree and state flower of Mississippi
+    - state flower of Louisiana
+    notable_trees:
+    - the Jackson Magnolias on the White House south lawn, planted by Andrew Jackson in the 1830s (partly
+      removed in 2017)
+  game_fit:
+    fields:
+      alignment: 'high: emblem of grace and hospitality'
+    dimensions: []
+    hooks:
+    - ancient lineage (magnolias predate bees)
+    - red seeds as a striking decorative drop
+    - evergreen southern canopy
+  sources:
+  - https://www.wood-database.com/southern-magnolia/
+  - https://research.fs.usda.gov/silvics/southern-magnolia
+  - https://plants.usda.gov/DocumentLibrary/plantguide/pdf/pg_magr4.pdf
+- id: sugar-maple
+  names:
+  - sugar maple
+  - hard maple
+  - rock maple
+  scientific: Acer saccharum
+  rank: group
+  stands_for:
+  - Acer nigrum (black maple)
+  distinct_from:
+  - 'red-maple: swamp maple, red autumn'
+  - 'silver-maple: floodplain maple'
+  - 'bigleaf-maple: Pacific maple with huge leaves'
+  - 'boxelder: compound-leaved weedy maple'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: eastern North America from Nova Scotia and southern Quebec and Ontario to Tennessee and Missouri
+    ecosystem: northern hardwood forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1600
+    substrate: deep, moist, well-drained loams; tolerates limestone
+    niche: dominant in beech-maple and maple-basswood forests
+    strata:
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: single trunk with a dense, rounded crown
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.6
+    - 1.0
+    lifespan_y: 400
+    growth_rate: slow
+    leaves: deciduous, palmately five-lobed with few large teeth
+    seasonal: brilliant orange, red and yellow in autumn
+    flowers: inconspicuous yellow-green tassels, early spring
+    fruit_visible: paired U-shaped samaras
+    bark: grey, furrowed into long irregular plates with age
+  timber:
+    heartwood: light reddish brown
+    sapwood: nearly white, the usual commercial wood
+    grain: straight; curly, quilted and bird's-eye figure
+    texture: fine, even
+    density_kg_m3: 705
+    janka_n: 6450
+    workability: hard to work by hand; turns and finishes well
+    rot_resistance: non-durable
+    scent: none
+    fuel: hot, steady, little smoke
+    uses:
+    - flooring (basketball courts
+    - bowling alleys)
+    - butcher blocks
+    - baseball bats
+    - bowling pins
+    - furniture
+    - violin backs and necks
+  products:
+    food:
+    - maple syrup and maple sugar from boiled spring sap
+    sap_resin_latex:
+    - sweet spring sap
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - Anishinaabe stories tell how sap once ran as pure syrup until the trickster Nanabozho watered it
+      down so people would have to work for it
+    cultures:
+    - the sugar moon and Haudenosaunee Maple Ceremony giving thanks for the first sap
+    - sugaring-off parties and the sugar shack (cabane à sucre) of Quebec and New England
+    symbolism:
+    - the maple leaf on Canada's flag and maple as Canada's national tree
+    - state tree of New York
+    - Vermont
+    - West Virginia and Wisconsin
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: a giving tree of thanksgiving ceremonies'
+      yield: 'high: annual sap harvest'
+    dimensions: []
+    hooks:
+    - spring sap tapping and boiling into syrup and sugar (a seasonal crafting chain)
+    - hardest flooring wood
+    - figured wood for instruments
+  sources:
+  - https://www.wood-database.com/hard-maple/
+  - https://research.fs.usda.gov/silvics/sugar-maple
+- id: sweetgum
+  names:
+  - sweetgum
+  - American storax
+  scientific: Liquidambar styraciflua
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  - product
+  habitat:
+    range: southeastern and south-central United States from Connecticut to Florida and east Texas; mountains
+      of Mexico and Central America
+    ecosystem: bottomland and mixed hardwood forest
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to subtropical'
+    elevation_m:
+    - 0
+    - 900
+    substrate: moist alluvial soils; also old fields
+    niche: pioneer of old fields and bottomlands, with oaks and loblolly pine
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: straight trunk with a conical crown when young, becoming oval; corky wings on twigs
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 0.6
+    - 1.2
+    lifespan_y: 300
+    growth_rate: fast
+    leaves: deciduous, glossy, star-shaped with five to seven pointed lobes, fragrant when crushed
+    seasonal: mixed yellow, orange, red and purple on one tree in autumn
+    flowers: small greenish balls, spring
+    fruit_visible: hard, spiky brown "gumballs" 2.5–4 cm hanging on long stalks through winter
+    bark: grey-brown, deeply furrowed into narrow scaly ridges
+  timber:
+    heartwood: grey to reddish brown with dark streaks ("figured red gum")
+    sapwood: wide, whitish to pink ("sap gum")
+    grain: interlocked
+    texture: very fine, uniform; satiny lustre ("satin walnut")
+    density_kg_m3: 545
+    janka_n: 3780
+    workability: works well but warps and twists in drying
+    rot_resistance: moderately durable to non-durable
+    scent: none
+    fuel: moderate
+    uses:
+    - veneer and plywood
+    - furniture
+    - interior trim
+    - boxes
+    - speaker cabinets
+  products:
+    food: []
+    sap_resin_latex:
+    - storax (liquidambar), an aromatic balsam from wounds in the trunk, used in perfume, incense and
+      chewing gum
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - storax used for sores
+    - coughs and dysentery by Indigenous peoples and in old pharmacopoeias
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the Aztecs mixed liquidambar resin with tobacco for smoking (recorded by Spanish chroniclers)
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - tapped balsam for incense and perfume
+    - spiky gumballs as ground clutter
+    - multicoloured autumn
+  sources:
+  - https://www.wood-database.com/sweetgum/
+  - https://research.fs.usda.gov/silvics/sweetgum
+  - https://arboretum.buffalostate.edu/liquidambar-styraciflua
+- id: tulip-tree
+  names:
+  - tulip tree
+  - tulip poplar
+  - yellow poplar
+  scientific: Liriodendron tulipifera
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - cultural
+  habitat:
+    range: eastern United States from southern New England and Ontario to northern Florida and Louisiana
+    ecosystem: temperate deciduous forest (Appalachian cove forest)
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 0
+    - 1400
+    substrate: deep, moist, well-drained loams
+    niche: rich coves and lower slopes; pioneer of clearings
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: very tall, straight, branch-free trunk with a narrow oval crown; one of the tallest eastern
+      hardwoods
+    height_m:
+    - 30
+    - 50
+    trunk_diameter_m:
+    - 0.6
+    - 2.0
+    lifespan_y: 509
+    growth_rate: fast
+    leaves: deciduous, distinctive four-lobed leaves with a squared, notched tip like a cat's face
+    seasonal: clear golden yellow in autumn
+    flowers: upright tulip-shaped flowers 4–6 cm, greenish-yellow petals with an orange band at the base,
+      late spring
+    fruit_visible: upright cone-like clusters of winged seeds, persisting in winter
+    bark: grey with interlacing furrows; smooth with white streaks when young
+  timber:
+    heartwood: light cream to yellowish brown, with streaks of grey, green or purple ("rainbow poplar")
+    sapwood: pale yellow to white
+    grain: straight, uniform
+    texture: medium
+    density_kg_m3: 455
+    janka_n: 2400
+    workability: very easy to work; paints well
+    rot_resistance: moderately durable to non-durable
+    scent: none
+    fuel: moderate
+    uses:
+    - dugout canoes
+    - painted furniture
+    - cabinetry frames
+    - pallets
+    - plywood
+    - carving
+    - organ pipes
+  products:
+    food:
+    - nectar for tulip-poplar honey
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - inner bark and root bark used as a tonic and for fevers
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - eastern Indigenous peoples hollowed single trunks into large dugout canoes, giving the name 'canoewood'
+    - Daniel Boone is said to have carried his family down the Ohio in a tulip-tree canoe
+    symbolism:
+    - state tree of Indiana
+    - Kentucky and Tennessee
+    notable_trees:
+    - the Queens Giant, Alley Pond Park, New York, among the oldest living things in New York City
+    - a tulip tree in the Great Smoky Mountains dated at about 509 years
+  game_fit:
+    fields:
+      yield: 'high: huge clear trunks of easy-working wood'
+    dimensions: []
+    hooks:
+    - dugout canoes from a single trunk
+    - honey from its nectar
+    - tall clear logs for building
+  sources:
+  - https://www.wood-database.com/yellow-poplar/
+  - https://research.fs.usda.gov/silvics/yellow-poplar
+  - https://statesymbolsusa.org/symbol-official-item/kentucky/state-tree/tulip-poplar
+- id: western-redcedar
+  names:
+  - western redcedar
+  - giant arborvitae
+  scientific: Thuja plicata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'northern-white-cedar: eastern arborvitae'
+  - 'alaska-yellow-cedar: Pacific yellow cedar'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: Pacific coast from southeastern Alaska to northern California, and inland in the northern Rockies
+      of British Columbia, Idaho and Montana
+    ecosystem: temperate coastal and interior rainforest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - wet
+      note: 'temperature: cool maritime; moisture: very humid'
+    elevation_m:
+    - 0
+    - 2300
+    substrate: moist to wet soils, swamps, seepage slopes and floodplains
+    niche: wet sites with western hemlock, Sitka spruce and Douglas fir
+    strata:
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: massive, buttressed and fluted trunk tapering to a conical crown with drooping, upturned branches;
+      old trees have candelabra tops and dead spires
+    height_m:
+    - 45
+    - 70
+    trunk_diameter_m:
+    - 1.5
+    - 6.0
+    lifespan_y: 1460
+    growth_rate: moderate
+    leaves: evergreen, flattened sprays of tiny scale leaves, glossy green with faint white butterfly
+      marks beneath, fruity-aromatic
+    seasonal: evergreen; older sprays turn rusty and drop in autumn
+    flowers: tiny cones
+    fruit_visible: small upright egg-shaped cones about 1 cm, in clusters
+    bark: thin, reddish-brown to grey, fibrous, peeling in long vertical strips
+  timber:
+    heartwood: reddish to pinkish brown with darker streaks
+    sapwood: narrow, pale yellowish white
+    grain: straight
+    texture: coarse; moderate lustre
+    density_kg_m3: 370
+    janka_n: 1560
+    workability: very easy to work and split; soft and weak
+    rot_resistance: durable to very durable (thujaplicins)
+    scent: strong, lingering, aromatic
+    fuel: excellent kindling
+    uses:
+    - totem poles
+    - ocean-going dugout canoes
+    - longhouse planks and posts
+    - shingles and shakes
+    - siding
+    - bentwood boxes
+    - guitar soundboards
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - inner bark stripped
+    - shredded and woven into clothing
+    - capes
+    - hats
+    - mats
+    - rope and baskets
+    leaves: []
+    dyes: []
+    medicinal:
+    - boughs and bark used in medicine and purification
+    toxicity: wood dust can cause asthma (plicatic acid)
+  lore:
+    folklore:
+    - Coast Salish story of the generous man whom the Creator turned into the cedar, so he would go on
+      providing for the people
+    cultures:
+    - the 'tree of life' (Kwakwaka'wakw 'long life maker') of Northwest Coast peoples, giving totem poles,
+      canoes, houses, clothing and baskets
+    - culturally modified trees bearing scars of bark stripping and plank removal
+    symbolism:
+    - provincial tree of British Columbia
+    notable_trees:
+    - Cheewhat Giant, Vancouver Island, the largest known western redcedar
+  game_fit:
+    fields:
+      alignment: 'high: the generous ''tree of life'''
+    dimensions: []
+    hooks:
+    - bark strips for cloth and rope
+    - split planks for houses
+    - rot-proof shingles
+    - totem poles and canoes from single trunks
+  sources:
+  - https://www.wood-database.com/western-red-cedar/
+  - https://research.fs.usda.gov/silvics/western-redcedar
+  - https://file.dnr.wa.gov/publications/lm_hcp_west_oldgrowth_guide_wrc_hires.pdf
+- id: white-oak
+  names:
+  - white oak
+  - eastern white oak
+  - post oak
+  - swamp white oak
+  scientific: Quercus alba
+  rank: group
+  stands_for:
+  - Quercus bicolor (swamp white oak)
+  - Quercus stellata (post oak)
+  - Quercus gambelii (Gambel oak)
+  distinct_from:
+  - 'red-oak: pointed bristle-tipped lobes'
+  - 'bur-oak: fringed acorn cups'
+  - 'chestnut-oak: unlobed wavy leaves, ridged bark'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - fruit
+  habitat:
+    range: eastern North America from southern Quebec and Maine to northern Florida and east Texas; post
+      oak to the southern Plains; Gambel oak in the southern Rockies
+    ecosystem: temperate deciduous forest and oak savanna
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 0
+    - 1600
+    substrate: wide range; deep well-drained loams best; post oak on dry, poor soils
+    niche: upland oak-hickory forest and savanna
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: broad, spreading crown of massive horizontal limbs in the open; straight trunk in forest
+    height_m:
+    - 20
+    - 30
+    trunk_diameter_m:
+    - 0.9
+    - 1.5
+    lifespan_y: 407
+    growth_rate: slow
+    leaves: deciduous, 7–9 rounded finger-like lobes without bristles, pale beneath; dead leaves often
+      hang on through winter
+    seasonal: wine-red to brown in autumn
+    flowers: yellow-green catkins in spring
+    fruit_visible: oblong acorns with warty bowl-like cups, maturing in one season
+    bark: light ash-grey, in shallow scaly plates or loose flakes
+  timber:
+    heartwood: light to medium brown with an olive cast
+    sapwood: paler
+    grain: straight; showy ray flecks when quartersawn
+    texture: coarse, uneven
+    density_kg_m3: 755
+    janka_n: 5990
+    workability: works well; steam-bends; split for staves and baskets
+    rot_resistance: very durable; tyloses plug the pores, making it liquid-tight
+    scent: typical oak smell
+    fuel: excellent
+    uses:
+    - whiskey and wine barrels (tight cooperage)
+    - shipbuilding
+    - timber framing
+    - flooring
+    - furniture
+    - split-oak baskets
+  products:
+    food:
+    - sweet acorns with little tannin
+    - roasted or ground into meal by many Indigenous peoples
+    sap_resin_latex: []
+    bark:
+    - bark used for tannin and as an astringent
+    leaves: []
+    dyes:
+    - bark gives brown dyes
+    medicinal:
+    - bark as an astringent for sores and diarrhoea
+    toxicity: acorns and leaves contain tannins harmful to livestock in quantity
+  lore:
+    folklore:
+    - Connecticut's Royal Charter was said to be hidden in the Charter Oak in 1687 to keep it from the
+      royal governor
+    cultures:
+    - new, charred white-oak barrels are required by law for bourbon
+    symbolism:
+    - state tree of Connecticut
+    - Illinois and Maryland
+    notable_trees:
+    - the Charter Oak, Hartford, Connecticut (fell in 1856)
+    - the Wye Oak, Maryland, about 460 years old when it fell in 2002
+    - a white oak in Iowa crossdated at about 407 years
+  game_fit:
+    fields:
+      alignment: 'high: protector of the charter, a tree of liberty'
+    dimensions: []
+    hooks:
+    - liquid-tight barrel staves for storage and ageing drinks
+    - sweet acorn meal
+    - white-oak splint baskets
+  sources:
+  - https://www.wood-database.com/white-oak/
+  - https://research.fs.usda.gov/silvics/white-oak
+  - https://www.rmtrr.org/oldlist.htm
+- id: witch-hazel
+  names:
+  - witch hazel
+  scientific: Hamamelis virginiana
+  rank: group
+  stands_for:
+  - Hamamelis vernalis
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - folklore
+  - flowers
+  - product
+  habitat:
+    range: eastern North America from Nova Scotia and southern Ontario to northern Florida and east Texas;
+      Ozark witch hazel (H. vernalis) in the Ozarks
+    ecosystem: temperate deciduous forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: moist, acid to neutral loams; Ozark witch hazel on gravelly stream banks
+    niche: understory and edges of hardwood forest
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: multi-stemmed large shrub or small tree with a broad, open crown
+    height_m:
+    - 3
+    - 9
+    trunk_diameter_m:
+    - 0.05
+    - 0.25
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, broad oval leaves with wavy-scalloped edges and lopsided bases
+    seasonal: yellow autumn leaves, then flowers on bare twigs in late autumn and winter
+    flowers: spidery yellow flowers with four crinkled, ribbon-like petals, October to December (Ozark
+      witch hazel in late winter)
+    fruit_visible: woody two-beaked capsules that ripen a year later and shoot their black seeds up to
+      10 m
+    bark: smooth, light grey-brown, sometimes scaly
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: pliant forked twigs
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - dowsing rods
+    - bows
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - bark and twigs distilled into witch hazel extract
+    leaves:
+    - leaves rich in tannins
+    dyes: []
+    medicinal:
+    - astringent extract for bruises, insect bites, haemorrhoids and inflammation, learned by settlers
+      from Indigenous peoples; still sold as witch hazel water
+    toxicity: null
+  lore:
+    folklore:
+    - forked witch-hazel twigs used for water dowsing ('water witching')
+    - the name is from Old English wice, 'pliant', not witches, though the dowsing link stuck
+    cultures:
+    - Mohegan, Haudenosaunee and other peoples used the bark for medicine; T.N. Dickinson's witch hazel
+      distillery in Connecticut since the 1860s
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: blooms in the dead of winter, dowsing rods find hidden water'
+    dimensions: []
+    hooks:
+    - dowsing rod that hints at underground water
+    - astringent healing extract
+    - flowers when nothing else does
+  sources:
+  - https://www.fs.usda.gov/database/feis/plants/tree/hamvir/all.html
+  - https://herbalgram.org/resources/herbalgram/issues/116/table-of-contents/hg116-herbprofile/
+- id: balsam-poplar
+  names:
+  - balsam poplar
+  - balm of Gilead
+  - tacamahac
+  - black cottonwood
+  scientific: Populus balsamifera
+  rank: group
+  stands_for:
+  - Populus trichocarpa (black cottonwood)
+  distinct_from:
+  - 'cottonwood: eastern and desert-river cottonwood'
+  - 'aspen: no resinous buds'
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - medicinal
+  - product
+  habitat:
+    range: boreal North America from Alaska to Labrador and south to the Great Lakes; black cottonwood
+      from Alaska to Baja California along the Pacific and in the northern Rockies
+    ecosystem: boreal floodplain and riparian forest
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'temperature: cold to cool-temperate; moisture: humid to subhumid'
+    elevation_m:
+    - 0
+    - 2100
+    substrate: moist alluvial soils on floodplains and gravel bars
+    niche: river floodplains, lake margins and boreal treeline stands
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: straight trunk with a narrow, open crown; black cottonwood very tall
+    height_m:
+    - 20
+    - 50
+    trunk_diameter_m:
+    - 0.3
+    - 1.8
+    lifespan_y: 200
+    growth_rate: fast
+    leaves: deciduous, oval to broadly lance-shaped, finely toothed, glossy dark green above and pale,
+      often rust-stained below
+    seasonal: yellow in autumn; spring air smells of balsam as buds open
+    flowers: catkins in early spring
+    fruit_visible: catkins of capsules shedding cottony seed
+    bark: smooth greenish-grey on young trees, becoming dark grey and deeply furrowed
+  timber:
+    heartwood: light brown
+    sapwood: pale yellow to nearly white
+    grain: straight to slightly interlocked
+    texture: uniform, medium
+    density_kg_m3: 370
+    janka_n: 1330
+    workability: easy to work, fuzzy surfaces
+    rot_resistance: non-durable
+    scent: sour when green
+    fuel: poor
+    uses:
+    - pulp
+    - plywood
+    - crates
+    - dugout canoes on the Pacific coast
+  products:
+    food:
+    - inner bark eaten in spring by northern peoples
+    sap_resin_latex:
+    - sticky, fragrant resin on the winter buds, steeped in oil or fat as balm of Gilead salve
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - bud resin salve for cuts, burns, sore muscles and chest colds; the name borrows the biblical balm
+      of Gilead
+    toxicity: null
+  lore:
+    folklore:
+    - named after the biblical balm of Gilead, a healing resin from a different Middle Eastern tree
+    cultures:
+    - Dene and Cree peoples made bud salves; Pacific peoples carved dugout canoes from black cottonwood
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: healing balm'
+    dimensions: []
+    hooks:
+    - winter bud resin for a healing salve (crafting/material-classes)
+    - fragrant spring air as an ambient cue
+  sources:
+  - https://www.wood-database.com/balsam-poplar/
+  - https://research.fs.usda.gov/silvics/balsam-poplar
+  - https://www.wood-database.com/black-cottonwood/
+- id: pond-cypress
+  names:
+  - pond cypress
+  scientific: Taxodium distichum var. imbricarium
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bald-cypress: floodplain tree with flat needles'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: southeastern coastal plain from southeastern Virginia to Florida and southeastern Louisiana
+    ecosystem: cypress domes, ponds and blackwater swamps in pine flatwoods
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to subtropical'
+    elevation_m:
+    - 0
+    - 100
+    substrate: nutrient-poor, acid, sandy and peaty soils of still water
+    niche: cypress domes and pond margins, not river floodplains
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: smaller than bald cypress with a narrow crown and a swollen, buttressed base and knees; trees
+      in a dome grow tallest in the middle
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous; scale-like or awl-shaped needles pressed against upright, thread-like branchlets
+    seasonal: rusty brown in autumn before dropping its branchlets
+    flowers: drooping male catkins in late winter
+    fruit_visible: small round cones about 2.5 cm
+    bark: light brown to grey, thick and deeply furrowed
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - sold with bald cypress as cypress lumber
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees:
+    - The Senator, Big Tree Park, Longwood, Florida, about 38 m tall and estimated at about 3,500 years
+      old, destroyed by an arson fire in January 2012; sources variously call it a pond cypress or a bald
+      cypress
+  game_fit:
+    fields:
+      liminality: 'high: dome-shaped groves around dark still pools'
+    dimensions: []
+    hooks:
+    - cypress domes as a distinctive circular worldgen feature
+  sources:
+  - https://research.fs.usda.gov/silvics/baldcypress
+  - https://www.nationalforests.org/article/cypress-and-tupelo-trees/

@@ -1,0 +1,2244 @@
+- id: agathoxylon
+  names:
+  - petrified araucarian
+  - Araucarioxylon
+  scientific: Agathoxylon arizonicum
+  rank: group
+  stands_for:
+  - Araucaria mirabilis (Cerro Cuadrado)
+  - Woodworthia
+  - Schilderia
+  distinct_from:
+  - 'monkey-puzzle: living Andean araucaria'
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  - well-known
+  habitat:
+    range: 'Late Triassic: Chinle Formation of Arizona and the US Southwest (Petrified Forest National
+      Park); the Jurassic Araucaria mirabilis forest of Cerro Cuadrado, Santa Cruz, Patagonia'
+    ecosystem: floodplain and river-channel conifer forest; Jurassic volcanic-ash forest in Patagonia
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-subtropical; moisture: seasonally humid'
+    elevation_m: null
+    substrate: river floodplain sediments; volcanic ash in Patagonia
+    niche: large araucarian conifer of lowland forest; logs rafted into river channels and buried
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: Late Triassic (Chinle); Middle-Late Jurassic (Cerro Cuadrado)
+  form:
+    habit: tall single-trunked araucarian conifer with a high crown (the Arizona logs are mostly trunks,
+      found without crowns)
+    height_m:
+    - null
+    - 60
+    trunk_diameter_m:
+    - 1
+    - 3
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen conifer foliage, not preserved with the Arizona logs; Araucaria mirabilis had broad
+      scale-like leaves on spirally arranged shoots
+    seasonal: growth rings visible in the wood, so growth was seasonal
+    flowers: cones only; Araucaria mirabilis has large, round, beautifully preserved seed cones with seeds
+    fruit_visible: large round araucarian seed cones (Cerro Cuadrado); cones are not found with the Arizona
+      logs
+    bark: rarely preserved on the logs; fossil wood is split into long fractured segments, agatized in
+      red, orange, yellow, purple, black and white from iron and manganese oxides
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - fossil wood was made into jewellery, bookends and polished slabs; the park forbids collecting
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - the Navajo regard petrified wood at Petrified Forest as the bones of the monster Yeitso
+    - park lore holds that visitors who take petrified wood suffer bad luck; the park receives pieces
+      returned by post with apologetic notes
+    cultures:
+    - Petrified Forest National Park was made a national monument in 1906 and a national park in 1962
+    - ancestral Puebloan villages at the park used the fossil logs for building and tools
+    symbolism:
+    - Arizona's official state fossil is Araucarioxylon arizonicum (petrified wood)
+    notable_trees:
+    - Agate Bridge, a 33 m log spanning an arroyo in Petrified Forest National Park
+    - Cerro Cuadrado petrified forest, Argentina (Araucaria mirabilis with preserved cones)
+  game_fit:
+    fields:
+      yield: 'high: jewel-coloured agatized wood is a lasting mineral resource'
+      weirdness: 'high: standing stone logs where a forest was turned to gem'
+    dimensions:
+    - terra
+    hooks:
+    - 'fossil-log worldgen feature: agate-coloured stone log blocks that can be mined and polished'
+    - 'crafting/material-classes: petrified wood as a decorative gem-stone material'
+  sources:
+  - https://www.nps.gov/pefo/learn/nature/fossils.htm
+  - https://www.nps.gov/pefo/learn/nature/petrified-wood.htm
+  - https://en.wikipedia.org/wiki/Agathoxylon
+- id: archaeopteris
+  names:
+  - Archaeopteris
+  - Callixylon
+  scientific: Archaeopteris
+  rank: genus
+  stands_for:
+  - Callixylon (trunk wood)
+  distinct_from:
+  - 'wattieza: cladoxylopsid with branchlets, no true leaves or secondary wood of this kind'
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: 'Middle to Late Devonian: eastern North America (Cairo and Gilboa, New York; Oklahoma), Ireland
+      (Kiltorcan), Europe, Russia, China, North Africa'
+    ecosystem: floodplain and seasonally dry riparian forest, the first closed-canopy forests
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm; moisture: humid, seasonally drier'
+    elevation_m: null
+    substrate: floodplain soils
+    niche: first modern-style forest tree, shading and building soil along rivers
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: Devonian (Givetian to Famennian, about 386-360 Ma)
+  form:
+    habit: single straight trunk bearing a spreading crown of flat, frond-like branch systems; extensive
+      woody root system
+    height_m:
+    - null
+    - 30
+    trunk_diameter_m:
+    - null
+    - 1.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: flattened, fern-like branches covered in wedge-shaped leaflets that were shed whole, probably
+      deciduous
+    seasonal: possibly deciduous; branch systems shed like leaves
+    flowers: none; reproduced by spores (some species with two spore sizes)
+    fruit_visible: clusters of spore-bearing structures on fertile branches
+    bark: not well documented; secondary wood (Callixylon) similar to conifer wood with growth rings
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - named by John William Dawson in 1871 from Irish Kiltorcan leaf fossils; the matching wood (Callixylon)
+      was linked to it in 1960 by Charles Beck
+    symbolism:
+    - called the first modern tree, with wood, leaves and deep roots
+    notable_trees:
+    - 'Cairo, New York, fossil forest (about 386 Ma): extensive Archaeopteris root systems'
+    - Callixylon logs of Oklahoma
+  game_fit:
+    fields:
+      weirdness: 'high: familiar tree shape, ancient fern-like foliage'
+      yield: 'low: no wood or fruit to harvest'
+    dimensions:
+    - terra
+    hooks:
+    - early-tier forest tree for a 'deep time' biome
+    - its wood is conifer-like, so it can stand in for an ancient timber block
+  sources:
+  - https://www.cell.com/current-biology/fulltext/S0960-9822(19)31569-6
+  - https://www.smithsonianmag.com/science-nature/385-million-year-old-fossils-reveal-worlds-oldest-forest-had-modern-tree-roots-180973810/
+  - https://en.wikipedia.org/wiki/Archaeopteris
+- id: calamites
+  names:
+  - Calamites
+  - giant horsetail
+  scientific: Calamites
+  rank: genus
+  stands_for:
+  - Arthropitys
+  distinct_from:
+  - 'pseudobornia: Devonian sphenopsid with forked, not needle-like, leaf whorls'
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Carboniferous and Permian coal-swamp lowlands of Euramerica and Cathaysia
+    ecosystem: coal swamp, river banks and disturbed wetlands
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m: null
+    substrate: waterlogged mud and sand; rooted from underground rhizomes
+    niche: colonist of flooded and silted ground, forming thickets
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: intolerant
+    period: Carboniferous to Permian (about 330-250 Ma)
+  form:
+    habit: tall hollow-stemmed horsetail with whorled branches, spreading from rhizomes in dense stands
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.1
+    - 0.6
+    lifespan_y: null
+    growth_rate: fast
+    leaves: whorls of narrow, needle-like or lance-shaped leaves at each node on the branches
+    seasonal: null
+    flowers: none; spore cones on branches
+    fruit_visible: slender cones at branch tips
+    bark: stem is jointed and finely ribbed lengthwise, with a node every few centimetres; the pith was
+      hollow
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - pith casts of Calamites are among the commonest coal-measure fossils and are collected worldwide
+    symbolism:
+    - 'coal-swamp scenery: giant horsetail'
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'moderate: contributes peat and coal'
+      savagery: 'high: dark coal swamp biome'
+    dimensions:
+    - terra
+    hooks:
+    - coal-swamp biome tree
+    - hollow, ribbed stems could suit pipe or reed-like blocks
+  sources:
+  - https://en.wikipedia.org/wiki/Calamites
+  - https://ucmp.berkeley.edu/plants/sphenophyta/sphenophyta.html
+- id: cordaites
+  names:
+  - Cordaites
+  scientific: Cordaites
+  rank: genus
+  stands_for: []
+  distinct_from:
+  - 'walchia: needle-leaved early conifer, not strap-leaved'
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Late Carboniferous to Permian, Euramerica, Angara and Cathaysia
+    ecosystem: floodplain and swamp forest, coal-swamp margins and drier uplands; some species in mangrove-like
+      coastal swamps
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - seasonally-dry
+      - subhumid
+      - humid
+      - wet
+      note: 'temperature: warm to cool; moisture: wet to seasonally dry'
+    elevation_m: null
+    substrate: swamp mud, coastal brackish ground, drier uplands
+    niche: tall gymnosperm forming a canopy; some smaller species stood on stilt roots in coastal swamps
+      like mangroves
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: Late Carboniferous to Permian
+  form:
+    habit: tall trunk with terminal, spirally arranged, well-spread branches bearing tufts of strap leaves;
+      Cridland's (1964) coastal reconstruction is about 5 m tall on mangrove-like stilt roots
+    height_m:
+    - 5
+    - 30
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, large, leathery, strap- or paddle-shaped leaves with parallel veins, up to about
+      1 m long and about 15 cm wide, in spirals at branch tips
+    seasonal: null
+    flowers: small bud-like cones (Cordaianthus, about 1 cm) on slender fertile shoots about 10 cm long
+      among the leaves
+    fruit_visible: small seed-bearing cones
+    bark: not well known; wood had a large pith and thin cylinder, with growth rings
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism:
+    - 'the mother of the conifers: the group Cordaitales is close to conifer origins'
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'moderate: coal former'
+    dimensions:
+    - terra
+    hooks:
+    - coal-age forest canopy tree with long banner-like leaves
+  sources:
+  - https://www.britannica.com/plant/Cordaites
+  - https://www.britannica.com/plant/Cordaitales
+  - https://iscnagpur.ac.in/study_material/2.3_SDN_Cordaitales.pdf
+- id: dicroidium
+  names:
+  - Dicroidium
+  scientific: Dicroidium
+  rank: genus
+  stands_for:
+  - Umkomasia
+  distinct_from:
+  - 'glossopteris: Permian tongue-leaved predecessor in the same Gondwanan lands'
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  habitat:
+    range: 'Triassic Gondwana: Australia, Antarctica, South Africa, South America, India and New Zealand'
+    ecosystem: Gondwanan lowland and riparian forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate to warm'
+    elevation_m: null
+    substrate: floodplain soils
+    niche: dominant seed-fern tree of the Triassic after the Glossopteris forests
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intermediate
+    period: Triassic (about 250-200 Ma)
+  form:
+    habit: seed-fern tree; trunks show two kinds of Dicroidium-bearing trees, one palm-like (Rhexoxylon
+      stems) and one more Ginkgo-like and branched (Kykloxylon stems); some were shrubby
+    height_m: null
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: fronds whose rachis forks once near the base into two halves; most species once pinnate with
+      ovate leaflets
+    seasonal: possibly deciduous in polar Antarctica
+    flowers: none; pollen organs (Pteruchus) and seed-bearing structures (Umkomasia) on separate organs
+    fruit_visible: seed-bearing cupules or cones (Umkomasia)
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism:
+    - one of the plants used with Glossopteris to show Gondwana was once joined
+    notable_trees:
+    - Antarctic Triassic fossil forests, e.g. the Fremouw Formation, with Dicroidium leaves
+  game_fit:
+    fields:
+      weirdness: 'moderate: fern-like fronds on a tree'
+    dimensions:
+    - terra
+    hooks:
+    - Triassic southern forest tree with forked fern fronds
+  sources:
+  - https://hal.science/halsde-00961820/
+  - https://s3.amazonaws.com/Antarctica/AJUS/AJUSvXXVIIn5/AJUSvXXVIIn5p2.pdf
+  - https://www.museum.qld.gov.au/assets/media/project/qm/qm-website/collections-and-research/memoirs/nature-memoirs/nature-volume-52/mqm-n52-2-1-anderson-et-al.pdf
+- id: glossopteris
+  names:
+  - Glossopteris
+  scientific: Glossopteris
+  rank: genus
+  stands_for:
+  - Vertebraria (roots)
+  - Gangamopteris
+  distinct_from: []
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - cultural
+  habitat:
+    range: 'Permian Gondwana: South America, Africa, India, Australia, New Zealand and Antarctica'
+    ecosystem: lowland swamp and riparian forest, from temperate to polar latitudes
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      moisture:
+      - wet
+      note: 'temperature: cool-temperate (often polar)'
+    elevation_m: null
+    substrate: peat and waterlogged floodplain soils
+    niche: dominant tree of Gondwanan coal-forming forests
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: Permian (about 298-252 Ma)
+  form:
+    habit: single-trunked tree with a rounded or spreading crown and broad tongue-shaped leaves; roots
+      called Vertebraria had air spaces for swamp life
+    height_m:
+    - null
+    - 30
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: simple tongue- or spear-shaped leaves with a midrib and netted veins, deciduous in the polar
+      forests
+    seasonal: deciduous in cool and polar regions; the wood shows distinct growth rings
+    flowers: none; seeds on leaf-borne structures
+    fruit_visible: seed-bearing structures attached to leaves
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - fossil leaves on the Beardmore Glacier, collected by Edward Wilson, were hauled by Scott's polar
+      party until they died in 1912
+    symbolism:
+    - the fossil that helped prove Gondwana and continental drift
+    notable_trees:
+    - Permian Glossopteris stumps and leaf beds of Antarctica's Transantarctic Mountains
+  game_fit:
+    fields:
+      yield: 'moderate: coal former'
+      alignment: 'high: tied to a heroic polar expedition'
+    dimensions:
+    - terra
+    hooks:
+    - polar swamp-forest tree
+    - its fossil leaves could be a collectible on cold-biome expeditions
+  sources:
+  - https://aad.gov.au/about-antarctica/geography-and-geology/geology/antarctic-prehistory/
+  - https://pubs.usgs.gov/of/2007/1047/srp/srp082/of2007-1047srp082.pdf
+  - https://en.wikipedia.org/wiki/Glossopteris
+- id: lepidodendron
+  names:
+  - Lepidodendron
+  - scale tree
+  scientific: Lepidodendron
+  rank: group
+  stands_for:
+  - Lepidophloios
+  - Diaphorodendron
+  - Synchysidendron
+  - Stigmaria (rootstocks)
+  distinct_from:
+  - 'sigillaria: mostly unbranched ribbed trunk'
+  - 'cyclostigma: smaller Devonian forerunner'
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  - well-known
+  habitat:
+    range: Late Devonian to Permian; Carboniferous coal swamps of Euramerica and Cathaysia
+    ecosystem: Carboniferous coal swamp
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m: null
+    substrate: waterlogged peat
+    niche: giant swamp tree whose remains became much of Pennsylvanian coal
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: Carboniferous (about 340-300 Ma)
+  form:
+    habit: tall, tapering trunk with a forked (dichotomous) crown of branches, held by a forked root system
+      (Stigmaria)
+    height_m:
+    - 30
+    - 50
+    trunk_diameter_m:
+    - 1
+    - 2
+    lifespan_y: null
+    growth_rate: fast
+    leaves: stiff, narrow, grass-like leaves a few cm to over 1 m long, borne on the young trunk and branch
+      tips
+    seasonal: null
+    flowers: none; large spore cones (Lepidostrobus) at branch tips
+    fruit_visible: cones up to 0.5 m long at branch tips
+    bark: diamond-shaped leaf cushions in spiral rows over the whole trunk, giving a scaly, snakeskin
+      look
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - miners and collectors have called the scaly fossils 'snakeskin' or 'scale tree' fossils
+    cultures:
+    - named 'scale tree' for its bark pattern; fossils are among the best-known coal measures plants
+    symbolism:
+    - emblem of the Carboniferous coal forests
+    notable_trees:
+    - 'Fossil Grove in Victoria Park, Glasgow: 11 Lepidodendron stumps with root systems, found in 1887'
+  game_fit:
+    fields:
+      yield: 'high: coal and peat'
+      savagery: 'high: dark swamp giant'
+    dimensions:
+    - terra
+    hooks:
+    - 'iconic coal-swamp giant: bark texture is a tree-function showcase'
+    - 'coal fuel chain: wood to peat to coal'
+  sources:
+  - http://palaeos.com/plants/lycopodiophyta/lepidodendrales.html
+  - https://ucmp.berkeley.edu/exhibits/mysteryfossil/mystery61ans.php
+  - https://en.wikipedia.org/wiki/Lepidodendron
+- id: medullosa
+  names:
+  - Medullosa
+  scientific: Medullosa
+  rank: genus
+  stands_for:
+  - Alethopteris (foliage)
+  - Neuropteris (foliage)
+  distinct_from:
+  - 'psaronius: true tree fern with a root mantle; Medullosa bore seeds'
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  habitat:
+    range: Carboniferous to Permian, Euramerica and Cathaysia
+    ecosystem: coal-swamp and drier lowland forest
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      - tropical
+      moisture:
+      - seasonally-dry
+      - subhumid
+      - humid
+      note: 'temperature: tropical to warm; moisture: humid to seasonally dry'
+    elevation_m: null
+    substrate: peat and floodplain soils
+    niche: large-fronded seed fern of the lower storey of tropical coal forests and seasonally dry basins;
+      some species climbed or leaned on other plants
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: Carboniferous to Permian
+  form:
+    habit: slender, self-supporting stem with a crown of enormous fronds, built like a tree fern or cycad
+      (M. stellata); other species were climbers, scramblers or leaners
+    height_m:
+    - null
+    - 5
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: large forking fronds up to about 3.5 m long, bipinnate, with leaflets of Alethopteris or Neuropteris
+      type on Myeloxylon petioles
+    seasonal: null
+    flowers: none; large seeds borne on the fronds
+    fruit_visible: large seeds borne on the fronds
+    bark: rough and covered with the bases of old fronds
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees:
+    - Medullosa stellata crown from the Chemnitz Petrified Forest, found in 2010 buried upside-down in
+      volcanic ash with ten fronds still attached
+    - silicified Medullosa stems of the Permian Autun (France) and Chemnitz (Germany) fossil sites
+  game_fit:
+    fields:
+      yield: low
+    dimensions:
+    - terra
+    hooks:
+    - big-fronded understory plant for coal swamps
+  sources:
+  - https://peerj.com/articles/13051/
+  - https://www.journals.uchicago.edu/doi/10.1086/707109
+  - https://en.wikipedia.org/wiki/Medullosa
+- id: prototaxites
+  names:
+  - Prototaxites
+  scientific: Prototaxites
+  rank: genus
+  stands_for:
+  - Prototaxites loganii
+  - Prototaxites southworthii
+  distinct_from: []
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Late Silurian to Late Devonian; North America (Gaspe, Quebec), Europe (Rhynie chert, Scotland),
+      Saudi Arabia, and elsewhere
+    ecosystem: early terrestrial landscape, before forests
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm'
+    elevation_m: null
+    substrate: damp ground near water
+    niche: tallest organism on land, standing in open ground with low plants
+    strata:
+    - open
+    shade_tolerance: null
+    period: Late Silurian to Late Devonian (about 420-370 Ma)
+  form:
+    habit: unbranched or sparsely branched, trunk-like column of tightly packed tubes
+    height_m:
+    - null
+    - 8
+    trunk_diameter_m:
+    - null
+    - 1
+    lifespan_y: null
+    growth_rate: null
+    leaves: none
+    seasonal: null
+    flowers: none
+    fruit_visible: null
+    bark: no bark; the surface is smooth to faintly fibrous and the interior shows growth-ring-like banding
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - named in 1859 by John William Dawson, who took it for a fossil conifer (Prototaxites loganii, Gaspe)
+    symbolism:
+    - long argued to be a giant fungus; a 2025 preprint and a 2026 Science Advances paper argue it belonged
+      to an extinct lineage of its own
+    notable_trees:
+    - Rhynie chert Prototaxites taiti, about 407 Ma
+  game_fit:
+    fields:
+      weirdness: 'high: not plant, not fungus, nothing alive resembles it'
+      liminality: 'high: an organism with no living kin'
+    dimensions:
+    - terra
+    - enigma
+    hooks:
+    - landmark spire in prehistoric zones
+    - first-session 'what is that' discovery
+  sources:
+  - https://www.smithsonianmag.com/smart-news/giant-mysterious-spires-ruled-the-earth-long-before-trees-did-what-exactly-are-these-odd-looking-fossils-13709647/
+  - https://biology.ed.ac.uk/drp/news-events/selected-publications/prototaxites-fossils
+  - https://en.wikipedia.org/wiki/Prototaxites
+- id: psaronius
+  names:
+  - Psaronius
+  scientific: Psaronius
+  rank: genus
+  stands_for:
+  - Tietea
+  distinct_from:
+  - 'tree-fern: Psaronius is the extinct Paleozoic tree fern'
+  - 'tempskya: Cretaceous false trunk of many stems'
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Late Carboniferous to Permian; Europe (Scotland, Saxony), North America (Illinois), China,
+      Brazil
+    ecosystem: wet lowlands, peat-forming swamp woodland, periodically dry ground and volcanic-ash forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      - subhumid
+      - humid
+      - wet
+      note: 'moisture: wet to seasonally dry'
+    elevation_m: null
+    substrate: peat and ash-rich soils
+    niche: tree fern forming the understory and mid-canopy of coal forests
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: tolerant
+    period: Carboniferous to Permian
+  form:
+    habit: tree fern with an unbranched stem, thickened at the base by a broad mantle of adventitious
+      roots
+    height_m:
+    - null
+    - 15
+    trunk_diameter_m:
+    - null
+    - 1
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: crown of large pinnate Pecopteris-type fern fronds 2-3 m long
+    seasonal: null
+    flowers: none; spores
+    fruit_visible: clusters of spore sacs under the fronds (Scolecopteris)
+    bark: the lower trunk is wrapped in a thick, downward-widening mantle of adventitious roots; the upper
+      stem, above the mantle, shows scars of fallen fronds
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - Saxon finds of polished root mantle are called Staarsteine ('star stones') for the star-shaped root
+      cores; chert with Psaronius fronds was called Madensteine ('maggot stones') because the leaflets
+      looked like fossil maggots
+    cultures:
+    - Chemnitz's petrified Psaronius trunks are sawn and polished as decorative stone, the root spaces
+      filled with agate
+    symbolism: []
+    notable_trees:
+    - 'Chemnitz Petrified Forest, Saxony: a Permian forest turned to stone by volcanic ash, with many
+      Psaronius trunks'
+  game_fit:
+    fields:
+      yield: low
+    dimensions:
+    - terra
+    hooks:
+    - fern-like understory for ancient-swamp biome
+  sources:
+  - https://steurh.home.xs4all.nl/engpsar/epsaron.html
+  - https://www.researchgate.net/publication/257986340_Psaronius_Forests_at_the_Feet_of_Volcanoes
+  - https://en.wikipedia.org/wiki/Psaronius
+- id: sigillaria
+  names:
+  - Sigillaria
+  scientific: Sigillaria
+  rank: genus
+  stands_for: []
+  distinct_from:
+  - 'lepidodendron: branched crown and diamond bark'
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Late Carboniferous to Permian; Euramerica, Cathaysia and elsewhere
+    ecosystem: coal swamp and slightly drier lowland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m: null
+    substrate: peat and mud
+    niche: giant lycopsid of coal swamps, often forming dense stands
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: Carboniferous to Permian
+  form:
+    habit: tall, single or sparsely branched trunk with a slender strand of wood and thick bark, topped
+      by a tuft of long leaves
+    height_m:
+    - null
+    - 30
+    trunk_diameter_m:
+    - null
+    - 1
+    lifespan_y: null
+    growth_rate: fast
+    leaves: long, thin, grass-like leaves in a spiral, persisting only near the growing tip
+    seasonal: null
+    flowers: none; spore cones on stalks
+    fruit_visible: stalked (pedunculate) spore cones, Sigillariostrobus, attached to the stem
+    bark: vertical rows of polygonal leaf scars, often set in lengthwise ribs, left where leaves fell,
+      like seal impressions
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - named from Latin sigillum, 'seal', for the leaf scars
+    symbolism: []
+    notable_trees:
+    - upright Sigillaria trunks of the Joggins Fossil Cliffs, Nova Scotia (UNESCO World Heritage Site),
+      whose hollow stumps trapped early tetrapods; Lyell and Dawson found the first animal remains inside
+      one in 1851
+  game_fit:
+    fields:
+      yield: 'high: coal'
+    dimensions:
+    - terra
+    hooks:
+    - ribbed trunk for coal-swamp biome
+    - unbranched tuft tree shape for the tree function
+  sources:
+  - https://www.britannica.com/plant/Sigillaria-fossil-plant
+  - https://ucmp.berkeley.edu/carboniferous/joggins.html
+  - https://royalsocietypublishing.org/doi/10.1098/rstl.1882.0013
+- id: tempskya
+  names:
+  - Tempskya
+  scientific: Tempskya
+  rank: genus
+  stands_for: []
+  distinct_from:
+  - 'psaronius: single true trunk with a root mantle'
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Cretaceous; western North America, Europe (Spain) and Asia
+    ecosystem: Cretaceous fern-dominated lowland forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm'
+    elevation_m: null
+    substrate: lowland soils
+    niche: tree-like fern mass dominating wet lowland clearings
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: intermediate
+    period: Cretaceous
+  form:
+    habit: unbranched false trunk of many closely packed stems bound in a mantle of adventitious roots,
+      tapering bluntly at the top
+    height_m:
+    - null
+    - 6
+    trunk_diameter_m:
+    - null
+    - 0.4
+    lifespan_y: null
+    growth_rate: null
+    leaves: small fern leaves growing densely over the upper two-thirds of the false trunk
+    seasonal: null
+    flowers: none; spores
+    fruit_visible: null
+    bark: a wiry, root-woven surface
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - polished sections of Tempskya false trunks are sold to collectors
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'moderate: a tree made of many stems'
+    dimensions:
+    - terra
+    hooks:
+    - Cretaceous tree fern with a woven look
+  sources:
+  - https://www.britannica.com/plant/Tempskya
+  - https://www.cambridge.org/core/journals/earth-and-environmental-science-transactions-of-royal-society-of-edinburgh/article/abs/extinct-tree-fern-tempskya-corda-from-the-albian-of-spain-palaeophytogeographical-and-palaeoenvironmental-implications/90622809330D7587AE5C0D25927C625F
+  - https://purl.fdlp.gov/GPO/gpo80337
+- id: walchia
+  names:
+  - Walchia
+  - Lebachia
+  scientific: Walchia
+  rank: group
+  stands_for:
+  - Utrechtia
+  - Otovicia
+  - Ullmannia
+  distinct_from:
+  - 'voltzia: later Triassic conifer with looser, broader-leaved shoots'
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  habitat:
+    range: Late Carboniferous to Permian; Europe and North America
+    ecosystem: well-drained, seasonally dry lowlands and streamsides, above the coal swamps
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - seasonally-dry
+      note: 'temperature: warm; moisture: seasonally dry'
+    elevation_m: null
+    substrate: drier, better-drained soils
+    niche: early conifer of drier, fire-prone ground
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: Late Carboniferous to Permian
+  form:
+    habit: small tree with a straight trunk and whorled branches, like a Norfolk Island pine in outline
+    height_m: null
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: short, needle-like leaves spirally arranged on flat branch sprays, resembling an Araucaria
+      seedling
+    seasonal: evergreen; whole lower branch systems were shed (self-pruning), probably an adaptation to
+      frequent fire
+    flowers: none; seed cones borne on short shoots
+    fruit_visible: small seed cones
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - named by Kaspar Sternberg; the type, Walchia piniformis, is held in collections such as the Smithsonian
+      NMNH
+    symbolism: []
+    notable_trees:
+    - 'Brule fossil forest, Nova Scotia: a rare standing forest of in-situ Walchia trunks'
+  game_fit:
+    fields:
+      yield: low
+    dimensions:
+    - terra
+    hooks:
+    - dry-upland early conifer for Permian biome
+  sources:
+  - https://ucmp.berkeley.edu/seedplants/conifers/araucariafr.html
+  - https://www.jstor.org/stable/42004240
+  - https://archives.datapages.com/data/atlantic-geology-journal/data/049/049001/pdfs/47.pdf
+- id: wattieza
+  names:
+  - Wattieza
+  - Gilboa tree
+  scientific: Wattieza
+  rank: group
+  stands_for:
+  - Eospermatopteris (trunk)
+  - Calamophyton
+  - Pseudosporochnus
+  - Xinicaulis
+  distinct_from:
+  - 'archaeopteris: progymnosperm with true leaves and modern-like wood'
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Middle to Late Devonian; Gilboa and Cairo (New York), Svalbard, Belgium, Germany, China
+    ecosystem: floodplain and wetland forest, the earliest forests
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm'
+    elevation_m: null
+    substrate: swampy floodplains
+    niche: palm-like canopy of the first forests
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: Middle to Late Devonian (about 390-380 Ma)
+  form:
+    habit: single trunk swollen at the base, topped by a crown of many once-forked branchlets
+    height_m:
+    - null
+    - 8
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: fast
+    leaves: 'no true leaves: branchlets carried tiny green forks (finely divided photosynthetic shoots)'
+    seasonal: branches were shed
+    flowers: none; spores
+    fruit_visible: spore sacs on shed branchlets
+    bark: rough trunk of outer cortex with narrow, shallow roots
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Stein et al. 2007 matched the Gilboa stump (Eospermatopteris) to the crown (Wattieza) in a Nature
+      paper
+    symbolism: []
+    notable_trees:
+    - 'Gilboa fossil forest, New York: stumps first found in the 19th century'
+  game_fit:
+    fields:
+      weirdness: 'high: palm-like tree with no leaves'
+    dimensions:
+    - terra
+    hooks:
+    - earliest-forest biome tree
+  sources:
+  - https://www.nature.com/articles/nature05543
+  - https://e360.yale.edu/digest/scientists-find-the-worlds-oldest-known-forest-dating-back-386-million-years
+  - https://en.wikipedia.org/wiki/Wattieza
+- id: williamsonia
+  names:
+  - Williamsonia
+  scientific: Williamsonia
+  rank: group
+  stands_for:
+  - Wielandiella
+  distinct_from:
+  - 'cycadeoidea: squat barrel trunk, not a branched stem'
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Jurassic to Cretaceous; Europe (Yorkshire), India (Rajmahal Hills), western North America,
+      Mexico, Australia
+    ecosystem: warm-temperate to subtropical Mesozoic forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm'
+    elevation_m: null
+    substrate: lowland soils
+    niche: understory cycad-like shrub-tree
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: tolerant
+    period: Jurassic to Cretaceous
+  form:
+    habit: slender, branching woody stems armoured with persistent leaf bases and topped by crowns of
+      cycad-like fronds; W. sewardiana was reconstructed as a miniature, sparsely branched cycad-like
+      tree
+    height_m: null
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: pinnate fronds (Ptilophyllum or Zamites type)
+    seasonal: null
+    flowers: flower-like reproductive structures surrounded by whorls of bracts; Williamsonia is the seed-bearing
+      cone, the pollen organ is Weltrichia
+    fruit_visible: stalked, rounded seed cones among bracts
+    bark: covered with persistent leaf bases
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - originally described as Zamia gigas by William Crawford Williamson; William Carruthers named Williamsonia
+      for him in 1870, with W. gigas as type
+    - Birbal Sahni reconstructed W. sewardiana from the Rajmahal Hills in 1932 (Bucklandia stem, Ptilophyllum
+      leaves, Williamsonia cone)
+    symbolism: []
+    notable_trees:
+    - Williamsonia gigas, the type species, from the Middle Jurassic of Yorkshire
+  game_fit:
+    fields:
+      weirdness: 'moderate: cycad with flowers'
+    dimensions:
+    - terra
+    hooks:
+    - Jurassic flowering-looking cycad
+  sources:
+  - https://ucmp.berkeley.edu/seedplants/bennettitales.html
+  - https://www.nature.com/articles/130024b0.pdf
+  - https://en.wikipedia.org/wiki/Williamsonia_(plant)
+- id: cycadeoidea
+  names:
+  - Cycadeoidea
+  - fossil cycad
+  scientific: Cycadeoidea
+  rank: genus
+  stands_for:
+  - Monanthesia
+  distinct_from:
+  - 'williamsonia: slender branched bennettite'
+  - 'cycad: living cycads are a separate order'
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  - cultural
+  habitat:
+    range: Jurassic and Cretaceous; Black Hills (South Dakota), Wyoming, Maryland, Isle of Portland (England),
+      Europe, India
+    ecosystem: Mesozoic seasonally dry lowland forest and scrub
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - seasonally-dry
+      note: 'temperature: warm; moisture: seasonally dry'
+    elevation_m: null
+    substrate: sandy lowland soils
+    niche: squat trunk below taller conifers and ferns
+    strata:
+    - understory
+    - open
+    shade_tolerance: intermediate
+    period: Jurassic to Cretaceous (peak in Early Cretaceous)
+  form:
+    habit: short, barrel- or pineapple-shaped trunk, usually unbranched, with a crown of fronds
+    height_m:
+    - null
+    - 1.5
+    trunk_diameter_m:
+    - null
+    - 0.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: stiff pinnate fronds at the top
+    seasonal: null
+    flowers: bisexual flower-like cones embedded between the leaf bases, with closed bracts
+    fruit_visible: cones half-sunk in the trunk
+    bark: trunk covered in armour of old leaf bases
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - the Isle of Portland quarrymen called fossil cycad trunks 'crow's nests'
+    cultures:
+    - collectors stripped Fossil Cycad National Monument, established in 1922, until nothing remained;
+      Congress abolished it on 1 September 1957
+    symbolism: []
+    notable_trees:
+    - Black Hills cycadeoid trunks studied by Yale's George Reber Wieland
+  game_fit:
+    fields:
+      yield: 'moderate: fossil collectors'' prize'
+    dimensions:
+    - terra
+    hooks:
+    - collectible fossil trunk with a ruined-monument backstory
+  sources:
+  - https://www.nps.gov/articles/000/50-nifty-finds-10-an-extinct-monument.htm
+  - https://home.nps.gov/subjects/fossils/fossil-cycad.htm
+  - https://en.wikipedia.org/wiki/Cycadeoidea
+- id: pseudobornia
+  names:
+  - Pseudobornia
+  scientific: Pseudobornia ursina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'calamites: later, with simple needle-like leaf whorls'
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Late Devonian; Bear Island (Bjornoya), Norway
+    ecosystem: Late Devonian floodplain and riparian forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm'
+    elevation_m: null
+    substrate: floodplain soils
+    niche: large horsetail relative on river banks
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intolerant
+    period: Late Devonian (Famennian)
+  form:
+    habit: tall tree with jointed stems; basal nodes put out one or two branches up to 3 m long, with
+      opposite, decussate higher branches
+    height_m:
+    - 15
+    - 20
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: fast
+    leaves: highly dissected leaflets on twice-forked stalks, borne only on the highest-order branches
+    seasonal: null
+    flowers: none; fertile branches up to 30 cm long with whorled bracts and sporangiophores
+    fruit_visible: spore-bearing fertile branches up to 30 cm long
+    bark: jointed, ribbed stem
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - named Pseudobornia ursina by Nathorst in 1894; 'ursina' refers to Bear Island
+    - Hans-Joachim Schweitzer of Bonn University showed it was a tree up to about 20 m tall
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions:
+    - terra
+    hooks:
+    - Devonian horsetail tree
+  sources:
+  - https://www.britannica.com/plant/Pseudobornia-ursina
+  - https://sites.google.com/site/paleoplant/classification/pseudobornia
+  - https://time.com/archive/6890637/paleontology-worlds-first-tall-tree/
+- id: cyclostigma
+  names:
+  - Cyclostigma
+  - Jurinodendron
+  scientific: Cyclostigma kiltorkense
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lepidodendron: much larger Carboniferous scale tree'
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  habitat:
+    range: Late Devonian (latest Famennian); Kiltorcan Hill, County Kilkenny, Ireland
+    ecosystem: Late Devonian floodplain
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm'
+    elevation_m: null
+    substrate: river floodplains
+    niche: early scale-tree lycopsid
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: Late Devonian
+  form:
+    habit: tall unbranched or sparsely forking trunk with a crown of long leaves
+    height_m: null
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: fast
+    leaves: long, narrow, grass-like leaves
+    seasonal: null
+    flowers: none; spore cones
+    fruit_visible: null
+    bark: finely wrinkled, striated bark with small round leaf scars 8-13 mm apart in oblique rows
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - reported by Samuel Haughton from Kiltorcan in 1860 and validly published by Oswald Heer in 1871;
+      because the name is a botanical homonym, Doweld renamed it Jurinodendron kiltorkense in 2001
+    - the Kiltorcan beds also yielded Archaeopteris hibernica; Cyclostigma kiltorkense is an index fossil
+      for the uppermost Devonian
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions:
+    - terra
+    hooks:
+    - early scale-tree
+  sources:
+  - https://jm.copernicus.org/articles/9/87/1990/
+  - https://www.lyellcollection.org/doi/abs/10.1144/GSL.JGS.1872.028.01-02.30
+  - https://repository.geologyscience.ru/server/api/core/bitstreams/13176da2-3d83-4e76-b6a6-3b519e285a4c/content
+- id: pleuromeia
+  names:
+  - Pleuromeia
+  scientific: Pleuromeia sternbergii
+  rank: group
+  stands_for:
+  - Pleuromeia rossica
+  distinct_from:
+  - 'sigillaria: far taller Paleozoic lycopsid'
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Early to Middle Triassic; Germany (Buntsandstein), Russia, China, Australia
+    ecosystem: coastal and floodplain flats after the end-Permian extinction
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      note: 'temperature: warm; moisture: dry to seasonally dry'
+    elevation_m: null
+    substrate: mineral soils with little competition
+    niche: pioneer lycopsid forming monospecific stands
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: Early to Middle Triassic
+  form:
+    habit: unbranched pole-like stem on a lobed, bulb-like rootstock, ending in a single cone; usually
+      shorter than the 2 m maximum
+    height_m:
+    - null
+    - 2
+    trunk_diameter_m:
+    - null
+    - 0.1
+    lifespan_y: null
+    growth_rate: fast
+    leaves: lance-shaped leaves about 10 cm long on the upper stem
+    seasonal: null
+    flowers: none; one large spore cone at the top
+    fruit_visible: a terminal cone
+    bark: faint spiral leaf scars
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - fossil pole stems from the Buntsandstein are classic German fossils; the Merkel quarry near Bernburg
+      yielded about 70 rare specimens, now in Museum Schloss Bernburg
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: low
+      savagery: 'moderate: recolonising a post-extinction wasteland'
+    dimensions:
+    - terra
+    hooks:
+    - pioneer plant for post-catastrophe zones
+  sources:
+  - https://www.britannica.com/plant/Pleuromeia
+  - https://st.museum-digital.de/object/130
+  - http://palaeos.com/_backup/plants/lycopodiophyta/pleuromeiales.html
+- id: paratingia
+  names:
+  - Paratingia
+  - Noeggerathiales
+  scientific: Paratingia wudensis
+  rank: group
+  stands_for:
+  - Noeggerathia
+  - Tingia
+  distinct_from:
+  - 'psaronius: tree fern, whereas Paratingia bore cones under once-divided fronds'
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Earliest Permian; Wuda, Inner Mongolia, China
+    ecosystem: peat-forming swamp forest buried by volcanic ash
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m: null
+    substrate: peat swamp
+    niche: small tuft tree in a swamp understory
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: Early Permian (about 298 Ma)
+  form:
+    habit: small tree with a slender trunk and a tuft of fronds
+    height_m: null
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: once-divided fern-like fronds in a crown
+    seasonal: null
+    flowers: none; spore cones
+    fruit_visible: cones among the fronds
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the Wuda forest is called the Pompeii of prehistoric plants because ash fall preserved it in place
+    symbolism: []
+    notable_trees:
+    - Wuda tuff forest, Inner Mongolia (PNAS 2012)
+  game_fit:
+    fields:
+      weirdness: moderate
+    dimensions:
+    - terra
+    hooks:
+    - volcanic-ash fossil forest feature
+  sources:
+  - https://earth.sas.upenn.edu/content/paratingia-wudensis-sp-nov-whoel-noeggerathialean-plant-preserved-earliest-permian-air-fall
+  - https://phys.org/news/2021-03-pompeii-prehistoric-evolutionary-secret.html
+- id: voltzia
+  names:
+  - Voltzia
+  scientific: Voltzia
+  rank: genus
+  stands_for:
+  - Pseudovoltzia
+  - Aethophyllum
+  distinct_from:
+  - 'walchia: earlier, with tight regular sprays'
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  habitat:
+    range: Permian to Triassic; Vosges (France), Germany, the Dolomites (Italy) and other parts of Europe
+    ecosystem: Triassic coastal lowland and delta forest (the Gres a Voltzia delta of the Vosges)
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - seasonally-dry
+      note: 'temperature: warm; moisture: seasonally dry'
+    elevation_m: null
+    substrate: sandy coastal soils
+    niche: transitional conifer of the Buntsandstein lowlands
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: Late Permian to Triassic
+  form:
+    habit: tree with whorled branches like a modern conifer
+    height_m: null
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: needle-like, broader on some shoots, in spirals
+    seasonal: null
+    flowers: none; seed cones with scales like modern conifer cones
+    fruit_visible: small seed cones
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - named in 1828 by Adolphe Brongniart (type Voltzia brevifolia) for Philippe Louis Voltz, the French
+      geologist who first worked on the flora of the Vosges Voltzia sandstone
+    - the Vosges 'Gres a Voltzia' sandstone is named after it
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions:
+    - terra
+    hooks:
+    - early modern conifer
+  sources:
+  - https://paleobiodb.org/classic/checkTaxonInfo?is_real_user=1&taxon_no=164617
+  - https://www.researchgate.net/publication/311608130_The_Conifer_Voltzia_in_the_Alps
+  - https://www.researchgate.net/publication/248289476_An_herbaceous_fossil_conifer_Gymnospermous_ruderals_in_the_evolution_of_Mesozoic_vegetation
+- id: sphenobaiera
+  names:
+  - Sphenobaiera
+  scientific: Sphenobaiera
+  rank: group
+  stands_for:
+  - Baiera
+  - Ginkgoites
+  distinct_from:
+  - 'ginkgo: the one surviving ginkgophyte, with fan leaves on stalks'
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Permian to Cretaceous; Europe (Spain), Greenland, Australia
+    ecosystem: warm-temperate forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: temperate'
+    elevation_m: null
+    substrate: lowland soils
+    niche: ginkgophyte tree
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: Permian to Cretaceous
+  form:
+    habit: presumed tree with branching shoots
+    height_m: null
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: large, wedge-shaped leaves with no distinct stalk, narrowing to the base and deeply divided
+      into narrow, dichotomously veined ribbons
+    seasonal: presumably deciduous like Ginkgo
+    flowers: null
+    fruit_visible: null
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions:
+    - terra
+    hooks:
+    - ribbon-leaved fossil ginkgo relative
+  sources:
+  - https://zaguan.unizar.es/record/79704/files/texto_completo.pdf
+  - https://ui.adsabs.harvard.edu/abs/2003Palgy..46..413L/abstract
+  - https://www.tandfonline.com/doi/epub/10.1080/23818107.2022.2076259
+- id: pentoxylon
+  names:
+  - Pentoxylon
+  scientific: Pentoxylon sahnii
+  rank: species
+  stands_for:
+  - Nipaniophyllum (leaves)
+  distinct_from:
+  - 'williamsonia: bennettite with pinnate fronds, not strap leaves'
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  habitat:
+    range: Jurassic to Early Cretaceous eastern Gondwana; Rajmahal Hills (India), New Zealand, eastern
+      Australia, South Shetland Islands (Antarctica)
+    ecosystem: Gondwanan forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm'
+    elevation_m: null
+    substrate: lowland soils
+    niche: branched shrub or small xerophytic tree
+    strata:
+    - understory
+    shade_tolerance: intermediate
+    period: Jurassic to Early Cretaceous
+  form:
+    habit: branched shrub or small tree with long and short shoots; a reconstruction gives a robust, crinkled
+      stem 2-6 m tall, with a five-part vascular core
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: bunches of stiff, leathery, strap-shaped leaves (Nipaniophyllum) at the tips of short shoots
+    seasonal: deciduous, dropping its leaves whole
+    flowers: none; pollen organs (Sahnia) and seed cones (Carnoconites) on short shoots
+    fruit_visible: stalked seed heads (Carnoconites) with spirally set, fleshy-coated seeds, like mulberries
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the stem Pentoxylon sahnii was described by Srivastava in 1946 and named for Birbal Sahni, who reconstructed
+      the whole plant in 1948 and named the group Pentoxyleae
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions:
+    - terra
+    hooks:
+    - mulberry-headed Mesozoic tree
+  sources:
+  - http://acta.bibl.u-szeged.hu/47897/1/plant_cell_013_011-018.pdf
+  - http://www.geosocindia.org/index.php/jgsi/article/download/69830/54869/114192
+  - https://en.wikipedia.org/wiki/Pentoxylon
+- id: frenelopsis
+  names:
+  - Frenelopsis
+  - cheirolepid conifer
+  scientific: Frenelopsis
+  rank: group
+  stands_for:
+  - Pseudofrenelopsis
+  - Brachyphyllum (cheirolepid shoots)
+  - Pagiophyllum (cheirolepid shoots)
+  - Hirmeriella
+  distinct_from:
+  - 'agathoxylon: araucarian with ordinary leafy shoots'
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  habitat:
+    range: Cretaceous; Portugal, Spain, Czech Republic (Bohemia), Poland, Japan, Texas, Brazil
+    ecosystem: coastal, tidally influenced river and estuary margins
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - arid
+      - semi-arid
+      - seasonally-dry
+      note: 'temperature: warm; moisture: arid to seasonally dry'
+    elevation_m: null
+    substrate: salty coastal soils
+    niche: salt-tolerant (halophytic) coastal conifer
+    strata:
+    - open
+    - shrub
+    shade_tolerance: intolerant
+    period: Cretaceous
+  form:
+    habit: shrub or small tree with jointed branches
+    height_m: null
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: leaves reduced to small sheathing scales at the nodes, opposite or in whorls of three, giving
+      jointed, succulent-looking shoots
+    seasonal: null
+    flowers: none; small cones
+    fruit_visible: small cones
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions:
+    - terra
+    hooks:
+    - salt-marsh conifer
+  sources:
+  - https://dspace.cuni.cz/bitstream/handle/20.500.11956/74801/120229107.pdf?isAllowed=y&sequence=3
+  - https://www.biodiversitylibrary.org/partpdf/82912
+  - https://fr.copernicus.org/articles/9/213/2006/
+- id: baltic-amber-tree
+  names:
+  - Baltic amber tree
+  - amber pine
+  scientific: Pinites succinifer (form taxon)
+  rank: group
+  stands_for: []
+  distinct_from:
+  - 'umbrella-pine: living relative that the resin chemistry most resembles'
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - product
+  - cultural
+  - well-known
+  habitat:
+    range: Eocene forests of what is now Scandinavia and the Baltic region
+    ecosystem: humid warm-temperate coniferous forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: forest soils
+    niche: resin-producing conifer
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: Eocene
+  form:
+    habit: resinous conifer tree
+    height_m: null
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: needles
+    seasonal: null
+    flowers: null
+    fruit_visible: null
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - resin that fossilised as Baltic amber (succinite)
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - amber teething necklaces, oil of amber (traditional)
+    toxicity: null
+  lore:
+    folklore:
+    - 'Greek myth: tears of the Heliades became amber'
+    - Baltic legend of Jurate and Kastytis
+    cultures:
+    - amber traded from the Baltic since the Stone Age along amber routes
+    - the Amber Room
+    symbolism:
+    - Baltic gold
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: amber'
+      liminality: 'moderate: a tree frozen in time'
+    dimensions:
+    - terra
+    hooks:
+    - amber resin as a material class
+  sources:
+  - https://pubmed.ncbi.nlm.nih.gov/19570786
+  - https://academic.oup.com/botlinnean/article/180/2/258/2416544
+  - https://en.wikipedia.org/wiki/Baltic_amber
+- id: dominican-amber-tree
+  names:
+  - Dominican amber tree
+  scientific: Hymenaea protera
+  rank: species
+  stands_for:
+  - Hymenaea mexicana (Chiapas amber)
+  distinct_from:
+  - 'baltic-amber-tree: conifer, whereas this is a broadleaf legume'
+  - 'jatoba: living relative that looks alike; this one is known from its amber'
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - product
+  - striking
+  habitat:
+    range: Oligocene to Miocene Hispaniola; relatives across northern South America to southern Mexico
+    ecosystem: moist tropical forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: forest soils
+    niche: resin-producing legume tree
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: Oligocene to Miocene (amber about 15-20 Ma, perhaps older)
+  form:
+    habit: large tropical legume tree
+    height_m: null
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: paired leaflets as in living Hymenaea
+    seasonal: null
+    flowers: flowers preserved in amber
+    fruit_visible: null
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - resin that fossilised as Dominican amber
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - its amber inspired the amber-trapped mosquito in Jurassic Park
+    symbolism:
+    - Dominican amber
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: amber'
+    dimensions:
+    - terra
+    hooks:
+    - blue amber and inclusions as collectibles
+  sources:
+  - https://www.sciencealert.com/WASP-FLOWER-AND-FLY-TRAPPED-IN-AMBER-REVEAL-30-MILLION-YEAR-OLD-MICROCOSM
+  - https://en.wikipedia.org/wiki/Dominican_amber

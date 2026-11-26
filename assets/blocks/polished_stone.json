@@ -1,0 +1,3 @@
+{ "name": "polished_stone", "symmetry": "uniform",
+  "textures": { "+z": "polished.png" },
+  "roughness": 0.15 }

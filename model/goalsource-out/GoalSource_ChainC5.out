@@ -1,0 +1,40 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 63 and seed -7644773941201839349 with 2 workers on 8 cores with 3641MB heap and 1024MB offheap memory [pid: 842691] (Linux 6.12.115-140.210.amzn2023.x86_64 amd64, Amazon.com Inc. 21.0.13 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file goal-model/model/GoalSource.tla
+Parsing file /tmp/Integers.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module GoalSource
+Starting... (2026-11-14 23:19:11)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-14 23:19:11.
+Progress(16) at 2026-11-14 23:19:14: 335,882 states generated (335,882 s/min), 83,410 distinct states found (83,410 ds/min), 31,177 states left on queue.
+Progress(25) at 2026-11-14 23:20:14: 9,507,363 states generated (9,171,481 s/min), 1,875,683 distinct states found (1,792,273 ds/min), 461,398 states left on queue.
+Progress(27) at 2026-11-14 23:21:14: 18,562,262 states generated (9,054,899 s/min), 3,460,417 distinct states found (1,584,734 ds/min), 711,978 states left on queue.
+Progress(29) at 2026-11-14 23:22:14: 27,513,730 states generated (8,951,468 s/min), 4,957,873 distinct states found (1,497,456 ds/min), 885,310 states left on queue.
+Progress(30) at 2026-11-14 23:23:14: 36,391,865 states generated (8,878,135 s/min), 6,397,248 distinct states found (1,439,375 ds/min), 1,006,618 states left on queue.
+Progress(32) at 2026-11-14 23:24:14: 45,226,651 states generated (8,834,786 s/min), 7,787,273 distinct states found (1,390,025 ds/min), 1,076,661 states left on queue.
+Progress(33) at 2026-11-14 23:25:14: 54,139,535 states generated (8,912,884 s/min), 9,122,960 distinct states found (1,335,687 ds/min), 1,097,654 states left on queue.
+Progress(34) at 2026-11-14 23:26:14: 63,073,932 states generated (8,934,397 s/min), 10,454,593 distinct states found (1,331,633 ds/min), 1,105,505 states left on queue.
+Progress(35) at 2026-11-14 23:27:14: 71,883,091 states generated (8,809,159 s/min), 11,780,416 distinct states found (1,325,823 ds/min), 1,113,746 states left on queue.
+Progress(36) at 2026-11-14 23:28:14: 80,613,200 states generated (8,730,109 s/min), 13,076,248 distinct states found (1,295,832 ds/min), 1,098,375 states left on queue.
+Progress(38) at 2026-11-14 23:29:14: 89,319,540 states generated (8,706,340 s/min), 14,350,487 distinct states found (1,274,239 ds/min), 1,052,266 states left on queue.
+Progress(39) at 2026-11-14 23:30:14: 98,028,197 states generated (8,708,657 s/min), 15,583,926 distinct states found (1,233,439 ds/min), 969,517 states left on queue.
+Progress(40) at 2026-11-14 23:31:14: 106,604,623 states generated (8,576,426 s/min), 16,832,024 distinct states found (1,248,098 ds/min), 900,731 states left on queue.
+Progress(42) at 2026-11-14 23:32:14: 115,009,107 states generated (8,404,484 s/min), 18,015,994 distinct states found (1,183,970 ds/min), 748,592 states left on queue.
+Progress(44) at 2026-11-14 23:33:14: 123,238,031 states generated (8,228,924 s/min), 19,149,946 distinct states found (1,133,952 ds/min), 529,157 states left on queue.
+Progress(48) at 2026-11-14 23:34:14: 131,123,474 states generated (7,885,443 s/min), 20,179,227 distinct states found (1,029,281 ds/min), 116,972 states left on queue.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 1.2E-4
+  based on the actual fingerprints:  val = 1.3E-5
+131877575 states generated, 20261627 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 52.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 7 and the 95th percentile is 3).
+Finished in 15min 11s at (2026-11-14 23:34:22)

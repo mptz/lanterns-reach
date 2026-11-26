@@ -1,0 +1,3 @@
+{ "name": "lamp", "symmetry": "uniform",
+  "textures": { "+z": "lamp.png" },
+  "roughness": 0.5, "emissive": [3.0, 1.9, 0.8] }

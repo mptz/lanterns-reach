@@ -1,0 +1,4016 @@
+# east-asia chunk 1: regions/east-asia.yaml entries 0-40
+- id: bamboo
+  names:
+  - giant bamboo
+  - moso bamboo
+  - mōsō-chiku
+  - máo zhú
+  - Phyllostachys pubescens (syn.)
+  scientific: Phyllostachys edulis
+  rank: group
+  stands_for:
+  - Bambusa vulgaris
+  - Dendrocalamus giganteus
+  distinct_from:
+  - 'madake: thin-walled timber bamboo'
+  - 'black-bamboo: black culms'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: southern and central China; long naturalized in Japan and Taiwan; the absorbed clumping bamboos
+      are tropical South and Southeast Asian
+    ecosystem: subtropical evergreen forest and hill groves; vast managed bamboo forests
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to subtropical'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: deep, moist, well-drained acid loam
+    niche: dense single-species groves spreading by running rhizomes; invades neighbouring broadleaf and
+      conifer forest
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: giant woody grass; unbranched hollow culms in dense groves, a feathery crown of fine branches
+      at the top; running (leptomorph) rhizomes
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.08
+    - 0.2
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, small narrow lanceolate leaves in sprays; pale green
+    seasonal: culms reach full height in about two months after spring shoots emerge; the grove flowers
+      gregariously at long intervals (a cycle of about 67 years has been reported for moso), then the
+      flowering culms die
+    flowers: rarely seen; grassy spikelets during mass flowering
+    fruit_visible: none normally; grain-like seed after mass flowering
+    bark: none; culms smooth, velvety grey-green when young, ageing yellow-green with a white waxy ring
+      below each node; nodes with a single ridge
+  timber:
+    heartwood: culm wall pale straw to yellow; caramel brown when carbonized
+    sapwood: not distinct
+    grain: straight, fibrous, with prominent nodes
+    texture: fine, with visible vascular bundles
+    density_kg_m3: 700
+    janka_n: 6270
+    workability: splits very easily along the culm; strong in tension; hard on tools because of silica
+    rot_resistance: perishable outdoors and very prone to powder-post beetles unless treated
+    scent: null
+    fuel: burns fast; culms burst when heated unless split; bamboo charcoal (takesumi) is made from it
+    uses:
+    - scaffolding
+    - house frames
+    - flooring and laminated boards
+    - mats and baskets
+    - chopsticks
+    - paper pulp
+    - charcoal
+  products:
+    food:
+    - spring bamboo shoots (takenoko in Japanese, sǔn in Chinese), boiled to remove bitterness
+    sap_resin_latex: []
+    bark:
+    - culm sheaths used to wrap food and make hats and sandals
+    leaves:
+    - leaves used to wrap rice dumplings
+    dyes: []
+    medicinal:
+    - tabasheer, a siliceous concretion from the culms of tropical bamboos, in traditional Asian medicine
+    toxicity: raw shoots contain cyanogenic glycosides (taxiphyllin) and must be boiled before eating
+  lore:
+    folklore:
+    - The Tale of the Bamboo Cutter (Taketori Monogatari), in which Kaguya-hime is found inside a glowing
+      bamboo culm and later returns to the Moon
+    - '''Bamboo flowering brings famine'': mass flowering feeds rat plagues in parts of Asia'
+    cultures:
+    - Chinese literati painting (ink bamboo)
+    - the Seven Sages of the Bamboo Grove
+    - Japanese tea-ceremony utensils and kadomatsu New Year decorations
+    symbolism:
+    - one of the Four Gentlemen and one of the Three Friends of Winter (with pine and plum) in Chinese
+      culture
+    - integrity and resilience (bends but does not break)
+    - hollow culm read as humility
+    notable_trees:
+    - Sagano (Arashiyama) bamboo grove, Kyoto
+    - Shunan Bamboo Sea (Shunan Zhuhai), Sichuan
+  game_fit:
+    fields:
+      yield: 'high: fast-regrowing construction and fibre source'
+    dimensions: []
+    hooks:
+    - early scaffolding
+    - pipes and fences from split culms
+    - bamboo charcoal (crafting/material-classes)
+    - mass-flowering die-off as a rare world event
+  sources:
+  - https://www.gbif.org/species/5290168
+  - https://www.wood-database.com/bamboo/
+- id: camellia
+  names:
+  - camellia
+  - tsubaki
+  - Japanese camellia
+  scientific: Camellia japonica
+  rank: genus
+  stands_for:
+  - Camellia reticulata (Yunnan camellia)
+  distinct_from:
+  - 'oil-camellia: tea-oil seed crop'
+  - 'tea-plant: small white flowers, tea leaves'
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - product
+  habitat:
+    range: southern Japan, southern Korea, Taiwan and eastern China; C. reticulata in Yunnan
+    ecosystem: warm-temperate evergreen broadleaf (laurel) forest and coastal woods
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1100
+    substrate: acid, humus-rich, moist but well-drained soils
+    niche: understory of evergreen broadleaf forest; coastal thickets
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: evergreen shrub or small tree with a dense conical to rounded crown
+    height_m:
+    - 3
+    - 11
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, glossy dark green, leathery, elliptic, finely toothed
+    seasonal: flowers in winter to early spring; whole flowers drop intact and carpet the ground
+    flowers: large red cup-shaped flowers 5–10 cm with a central boss of yellow stamens; white and pink
+      in cultivation
+    fruit_visible: round woody capsule 3–5 cm, splitting to release large dark brown seeds
+    bark: smooth, pale grey-brown
+  timber:
+    heartwood: pale pinkish brown
+    sapwood: not distinct
+    grain: straight to slightly irregular
+    texture: very fine, even
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and dense; turns and carves cleanly
+    rot_resistance: null
+    scent: null
+    fuel: wood burned for high-quality charcoal, and its ash used as a mordant for dyes
+    uses:
+    - combs
+    - small turnery
+    - carved tools
+    - charcoal
+  products:
+    food:
+    - seed oil (tsubaki oil) used in cooking
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes:
+    - wood ash (tsubaki-bai) as an aluminium-rich mordant for murasaki (gromwell purple) dyeing
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - the whole flower falling at once was said to resemble a severed head, so camellias were reputedly
+      avoided by some samurai and as gifts to the sick
+    cultures:
+    - tsubaki oil for sumo wrestlers' and geisha hair, and for protecting sword blades
+    - Japanese tea ceremony winter flower
+    symbolism:
+    - state flower of Alabama
+    - city flower of Chongqing
+    - Chanel emblem
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: flower drops whole like a severed head, an ill omen in samurai lore'
+    dimensions: []
+    hooks:
+    - seed oil for blade care and hair (crafting/material-classes)
+    - ash mordant for purple dye
+    - winter flowering colour in evergreen forest
+  sources:
+  - https://www.gbif.org/species/3189636
+  - https://plants.ces.ncsu.edu/plants/camellia-japonica/
+- id: camphor-tree
+  names:
+  - camphor tree
+  - camphor laurel
+  - kusunoki
+  - zhāng shù
+  - Cinnamomum camphora (syn.)
+  scientific: Camphora officinarum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'nanmu: golden imperial timber'
+  - 'stout-camphor: Taiwan giant'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - striking
+  - product
+  habitat:
+    range: southern China, Taiwan, southern Japan, Korea and Vietnam; invasive in Australia and Florida
+    ecosystem: subtropical and warm-temperate evergreen broadleaf forest; planted at shrines and temples
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: subtropical to warm-temperate'
+    elevation_m:
+    - 0
+    - 1800
+    substrate: deep, fertile, moist soils; tolerates poorer ground
+    niche: lowland forest and valleys; shrine groves
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: massive evergreen tree with a short, buttressed trunk and broad, dense, domed crown
+    height_m:
+    - 20
+    - 30
+    trunk_diameter_m:
+    - 1.0
+    - 5.0
+    lifespan_y: 1500
+    growth_rate: moderate
+    leaves: evergreen, glossy, ovate with three prominent veins, smelling of camphor when crushed; new
+      flush bronze-red
+    seasonal: old leaves turn red and drop in spring as the new flush appears
+    flowers: tiny creamy-yellow in loose panicles, spring
+    fruit_visible: small glossy black berries about 1 cm
+    bark: grey-brown, rough, deeply fissured into small blocks
+  timber:
+    heartwood: variable, yellow-brown to reddish brown, sometimes with greenish streaks
+    sapwood: paler, not sharply distinct
+    grain: interlocked and irregular; burls and figure common
+    texture: medium to coarse
+    density_kg_m3: 520
+    janka_n: 4440
+    workability: easy to carve and machine; finishes well
+    rot_resistance: durable; repels insects
+    scent: strong camphor
+    fuel: null
+    uses:
+    - chests and wardrobes (insect-repelling)
+    - Buddhist sculpture
+    - temple building
+    - ship building
+    - mokugyo temple drums
+  products:
+    food: []
+    sap_resin_latex:
+    - camphor crystals and camphor oil, steam-distilled from wood and leaves
+    bark: []
+    leaves:
+    - leaves distilled for camphor
+    dyes: []
+    medicinal:
+    - camphor as a topical counter-irritant and for coughs and muscle pain
+    toxicity: camphor is poisonous if swallowed in quantity, causing seizures; dangerous to children
+  lore:
+    folklore:
+    - great camphors are kami-trees (shinboku) at Shinto shrines, roped with shimenawa
+    cultures:
+    - Taiwan was the world's main camphor supplier under Qing and Japanese government monopolies
+    - camphor was the raw material for celluloid and smokeless powder
+    symbolism:
+    - prefectural tree of Kagoshima, Kumamoto, Saga and Hyogo
+    notable_trees:
+    - 'Kamō no Ōkusu, Kagoshima: Japan''s largest tree by trunk girth (about 24 m), estimated at about
+      1,500 years'
+    - Kinomiya Shrine camphor, Atami
+    - Takeo Shrine great camphor, Saga
+  game_fit:
+    fields:
+      liminality: 'high: shrine kami-trees roped with shimenawa'
+    dimensions: []
+    hooks:
+    - camphor distillation as an early chemistry step (crafting/material-classes)
+    - insect-repelling storage chests
+    - giant shrine trees as landmarks
+  sources:
+  - https://www.wood-database.com/camphor/
+  - https://www.jawic.or.jp/woods/sch.php?nam0=kusunoki
+  - https://plants.ces.ncsu.edu/plants/cinnamomum-camphora/
+- id: chinese-bayberry
+  names:
+  - yangmei
+  - Chinese bayberry
+  - red bayberry
+  - yamamomo
+  - Morella rubra (syn.)
+  scientific: Myrica rubra
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  habitat:
+    range: southern and eastern China (Zhejiang a centre of cultivation), Taiwan, southern Japan, Korea,
+      the Philippines
+    ecosystem: warm-temperate and subtropical evergreen forest and hillside orchards
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to subtropical'
+    elevation_m:
+    - 100
+    - 1500
+    substrate: acid, well-drained, poor soils; fixes nitrogen through Frankia root nodules
+    niche: hill forests and slopes, often on thin soil
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: evergreen tree with a dense rounded crown
+    height_m:
+    - 5
+    - 15
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, leathery, dark green, oblanceolate
+    seasonal: fruit ripens in early summer (June)
+    flowers: small catkins in spring; trees male or female
+    fruit_visible: round knobbly crimson to near-black drupes 1.5–2.5 cm, densely studded with small bumps
+    bark: grey, smooth to finely fissured
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - fresh fruit
+    - yangmei wine and liqueur
+    - preserves and juice
+    sap_resin_latex: []
+    bark:
+    - bark used as a tannin source and brown dye in Japan
+    leaves: []
+    dyes:
+    - bark (yōbaihi) gives brown and yellow dyes
+    medicinal:
+    - bark and fruit in traditional Chinese medicine
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Zhejiang summer fruit festivals; Yuyao and Xianju yangmei
+    symbolism:
+    - prefectural flower of Kōchi and prefectural tree of Tokushima
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - early-summer fruit
+    - fruit wine
+    - nitrogen-fixer that greens poor soil
+  sources:
+  - https://www.gbif.org/species/8216229
+- id: chinese-fir
+  names:
+  - Chinese fir
+  - shān mù
+  - Cunninghamia
+  scientific: Cunninghamia lanceolata
+  rank: species
+  stands_for:
+  - Cunninghamia konishii
+  distinct_from:
+  - 'taiwania: far taller, scale leaves'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  habitat:
+    range: southern and central China, northern Vietnam, Laos; C. konishii in Taiwan
+    ecosystem: subtropical mixed evergreen forest; huge plantations
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: subtropical to warm-temperate'
+    elevation_m:
+    - 200
+    - 2800
+    substrate: deep, moist, acid soils
+    niche: valley slopes and plantations
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: evergreen conifer with a straight trunk and conical crown; resprouts from stumps
+    height_m:
+    - 20
+    - 45
+    trunk_diameter_m:
+    - 0.5
+    - 3.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: stiff, sharp, flat lanceolate needles 2–6 cm, glossy green with two white bands beneath, in
+      two ranks
+    seasonal: dead needles persist on branches and turn rusty brown
+    flowers: inconspicuous cones
+    fruit_visible: round cones 3–4 cm with leathery pointed scales
+    bark: reddish brown, peeling in long fibrous strips to show red inner bark
+  timber:
+    heartwood: light yellowish to reddish brown
+    sapwood: pale
+    grain: straight
+    texture: fine to medium, even
+    density_kg_m3: 370
+    janka_n: null
+    workability: light, soft and easy to work
+    rot_resistance: moderately durable; resistant to brown rot and termites in tests
+    scent: fragrant
+    fuel: null
+    uses:
+    - coffins
+    - house construction
+    - bridges
+    - boats
+    - furniture
+    - poles
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - bark strips used for roofing
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - China's main plantation timber for over a thousand years; fir coffins were prized
+    - among the Dong and Miao of Guizhou and Hunan, 'eighteen-year firs' are planted when a daughter is
+      born and cut for her dowry
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: fast plantation timber'
+    dimensions: []
+    hooks:
+    - light construction and coffin timber
+    - peelable bark for roofing
+  sources:
+  - https://www.gbif.org/species/5284278
+  - https://conifersociety.org/conifers/cunninghamia-lanceolata/
+  - https://iforest.sisef.org/contents/?id=ifor2922-012
+- id: cycad
+  names:
+  - cycad
+  - sago cycad
+  - sago palm
+  - king sago
+  - sotetsu
+  scientific: Cycas revoluta
+  rank: group
+  stands_for:
+  - Cycas taitungensis
+  - Cycas panzhihuaensis
+  - Cycas circinalis (Indian cycad)
+  distinct_from:
+  - 'woods-cycad: South African Encephalartos, a single male clone'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - toxic
+  - product
+  habitat:
+    range: Ryukyu Islands and southern Kyushu, Fujian; C. taitungensis in Taiwan, C. panzhihuaensis in
+      Sichuan-Yunnan, C. circinalis in southern India
+    ecosystem: coastal scrub and cliffs, dry open woodland
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - subhumid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: sandy, rocky or coral limestone soils, well-drained
+    niche: sunny coastal slopes and cliffs
+    strata:
+    - shrub
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: palm-like; stout unbranched or sparsely branched trunk crowned by a rosette of stiff fronds
+    height_m:
+    - 1
+    - 6
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: 1000
+    growth_rate: slow
+    leaves: evergreen pinnate fronds 0.5–1.5 m, glossy dark green with stiff, sharp, rolled-edged leaflets
+    seasonal: new fronds flush together as a pale green ring
+    flowers: none; male plants bear an upright golden cone, females a felted dome of seed leaves
+    fruit_visible: bright orange-red seeds about 4 cm in the female crown
+    bark: trunk armoured with persistent brown leaf bases
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - starch (sago) from the trunk pith and seeds, eaten only after long soaking, fermenting and washing
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - fronds used in funeral wreaths and Palm Sunday decorations
+    dyes: []
+    medicinal: []
+    toxicity: all parts, especially seeds, contain cycasin and BMAA; raw or poorly processed seeds or
+      pith cause liver damage and neurological illness, and kill dogs and livestock
+  lore:
+    folklore:
+    - the cycad at Myōkoku-ji, Sakai, is said to have cried 'take me back to Myōkoku-ji' after Oda Nobunaga
+      moved it to Azuchi Castle
+    cultures:
+    - '''Sotetsu jigoku'' (cycad hell): Okinawans in the 1920s famine survived on processed cycad and
+      some died of poisoning'
+    - Amami and Okinawa sotetsu miso
+    symbolism: []
+    notable_trees:
+    - 'Myōkoku-ji cycad, Sakai: a national natural monument said to be over 1,000 years old'
+  game_fit:
+    fields:
+      weirdness: 'high: palm-like seed plant of a lineage far older than flowers'
+      savagery: 'high: famine food that poisons when processed wrongly'
+    dimensions: []
+    hooks:
+    - famine starch needing a soak-and-ferment processing chain
+    - poisonous seeds as an early hazard
+  sources:
+  - https://www.gbif.org/species/2683217
+  - https://plants.ces.ncsu.edu/plants/cycas-revoluta/
+- id: dawn-redwood
+  names:
+  - dawn redwood
+  - shuǐ shān
+  - water fir
+  scientific: Metasequoia glyptostroboides
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'glyptostrobus: swamp cypress relic'
+  - 'cathaya: relic conifer'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  habitat:
+    range: wild only in a small area of Lichuan (Hubei), Shizhu (Chongqing) and Longshan (Hunan), China;
+      planted worldwide
+    ecosystem: moist valley bottoms in subtropical montane forest, now mostly among rice paddies
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 750
+    - 1500
+    substrate: wet, deep, acid alluvial soils along streams
+    niche: stream banks and wet valley floors
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous conifer with a straight, buttressed, fluted trunk and narrow conical crown; armpit-like
+      hollows below branches
+    height_m:
+    - 25
+    - 50
+    trunk_diameter_m:
+    - 1.0
+    - 2.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous; soft flat needles in opposite pairs on feathery deciduous shoots, bright green
+    seasonal: needles turn orange-brown to pinkish russet in autumn and fall with their shoots; bare in
+      winter
+    flowers: pendulous male catkins in early spring
+    fruit_visible: small round long-stalked cones about 2 cm
+    bark: reddish brown, fibrous, peeling in long strips
+  timber:
+    heartwood: reddish brown
+    sapwood: pale yellowish white
+    grain: straight
+    texture: medium
+    density_kg_m3: 335
+    janka_n: 1390
+    workability: light and easy to work
+    rot_resistance: moderately durable to very durable; older trees more so
+    scent: null
+    fuel: null
+    uses:
+    - local construction
+    - boats
+    - coffins
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - villagers at Moudao venerated the mother tree as a shrine tree (shuishan) before botanists knew
+      of it
+    cultures:
+    - described from fossils by Shigeru Miki in 1941 and found alive in the 1940s in Hubei; named in 1948,
+      and seed sent worldwide by the Arnold Arboretum
+    symbolism:
+    - living-fossil symbol of plant discovery in the 20th century
+    notable_trees:
+    - the 'mother tree' at Moudao (Modaoxi), Lichuan, Hubei, the type tree
+  game_fit:
+    fields:
+      weirdness: 'high: known only as a fossil until rediscovered alive'
+    dimensions: []
+    hooks:
+    - rare relic tree in a wet valley as an exploration find
+    - deciduous conifer seasonal colour
+  sources:
+  - https://www.wood-database.com/dawn-redwood/
+  - https://conifersociety.org/conifers/metasequoia-glyptostroboides/
+  - https://www.gbif.org/species/5284231
+- id: dove-tree
+  names:
+  - dove tree
+  - handkerchief tree
+  - ghost tree
+  - gǒng tóng
+  scientific: Davidia involucrata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'wilson-tree: relic with bracts'
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  habitat:
+    range: mountains of south-central and south-western China (Sichuan, Hubei, Hunan, Guizhou, Yunnan)
+    ecosystem: moist mixed deciduous and evergreen montane forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 1100
+    - 2600
+    substrate: moist, deep, humus-rich soils
+    niche: ravines and slopes in cloudy mountain forest
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: deciduous tree with a broadly conical to rounded crown
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, broadly heart-shaped, coarsely toothed, bright green, felted beneath
+    seasonal: in late spring the tree hangs with fluttering white bracts; yellow autumn colour is weak
+    flowers: dense purple-red ball of stamens held between two unequal creamy-white bracts 10–20 cm long
+    fruit_visible: hard green ridged drupe 3–4 cm, ripening purple-brown and hanging through winter
+    bark: orange-brown to grey, flaking in small scales
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - discovered by Armand David in 1869; Ernest Wilson's 1904 expedition for its seed is a famous plant-hunting
+      story
+    symbolism:
+    - a Chinese state-protected 'living fossil' and symbol of peace (doves)
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: white doves and peace symbolism'
+      liminality: 'high: called ghost tree for its pale fluttering bracts'
+    dimensions: []
+    hooks:
+    - rare late-spring spectacle in misty mountain forest
+  sources:
+  - https://www.gbif.org/species/7322122
+  - https://plants.ces.ncsu.edu/plants/davidia-involucrata/
+- id: eucommia
+  names:
+  - hardy rubber tree
+  - du zhong
+  - gutta-percha tree
+  scientific: Eucommia ulmoides
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - striking
+  - product
+  habitat:
+    range: central China; wild populations rare or possibly extinct, widely cultivated
+    ecosystem: temperate mixed forest; cultivated in medicinal plantations
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to cool-temperate'
+    elevation_m:
+    - 300
+    - 2500
+    substrate: deep, fertile, well-drained soils
+    niche: forest margins and valleys
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous tree with a rounded to broad crown; resembles an elm
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.3
+    - 0.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, glossy dark green, elliptic, toothed; torn leaves trail fine silvery latex threads
+    seasonal: little autumn colour; leaves fall green-yellow
+    flowers: inconspicuous, without petals, early spring
+    fruit_visible: flat winged samaras about 3–4 cm
+    bark: grey-brown, ridged; broken bark shows silky white rubber strands
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - leaves made into du zhong tea
+    sap_resin_latex:
+    - gutta-percha-like trans-polyisoprene rubber in the bark, leaves and seed coats
+    bark:
+    - dried bark (du zhong) is the medicinal part
+    leaves:
+    - leaf tea
+    dyes: []
+    medicinal:
+    - bark used in traditional Chinese medicine as a tonic for the liver and kidneys, to strengthen bones
+      and to lower blood pressure
+    toxicity: null
+  lore:
+    folklore:
+    - named after a legendary Daoist, Du Zhong, said to have gained immortality from the bark
+    cultures:
+    - one of the oldest-recorded Chinese medicinal trees, listed in the Shennong Bencao Jing
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - temperate rubber source (crafting/material-classes)
+    - leaf-tearing latex threads as a discoverable identification clue
+  sources:
+  - https://www.gbif.org/species/3723584
+  - https://plants.ces.ncsu.edu/plants/eucommia-ulmoides/
+- id: ginkgo
+  names:
+  - ginkgo
+  - maidenhair tree
+  scientific: Ginkgo biloba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - cultural
+  - medicinal
+  - toxic
+  habitat:
+    range: native to south-western and eastern China (relict wild stands in Guizhou, Chongqing and Zhejiang);
+      planted for millennia at temples across China, Korea and Japan
+    ecosystem: temperate deciduous mixed forest; temple and street plantings
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: cool-temperate to warm-temperate'
+    elevation_m:
+    - 300
+    - 1100
+    substrate: deep, well-drained soils; tolerates compaction and urban pollution
+    niche: disturbed stream banks and slopes in the wild; temple grounds
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk with irregular, sparse spur-shoot branching; conical when young, broad with age;
+      old trees grow hanging burls (chichi, "breasts")
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 1.0
+    - 4.0
+    lifespan_y: 1000
+    growth_rate: slow
+    leaves: deciduous, fan-shaped with radiating veins and a notched upper edge, on short spur shoots
+    seasonal: turns uniform butter-yellow in autumn and drops nearly all at once, often within a day or
+      two
+    flowers: inconspicuous; male catkins and paired ovules on separate trees, spring
+    fruit_visible: female trees bear plum-like apricot-yellow seeds about 2.5 cm with a fleshy coat smelling
+      of rancid butter
+    bark: grey-brown, rough, deeply furrowed with age
+  timber:
+    heartwood: pale yellowish white
+    sapwood: not distinct
+    grain: straight
+    texture: fine, even
+    density_kg_m3: 465
+    janka_n: 3340
+    workability: easy to work, carves and finishes well
+    rot_resistance: not durable; "does not decay quickly" is reported
+    scent: null
+    fuel: null
+    uses:
+    - Go and shogi boards (cheaper than kaya)
+    - carving (mokugyo temple drums, seals)
+    - lacquerware cores
+    - chopping boards
+  products:
+    food:
+    - roasted seed kernels (ginnan, bái guǒ), eaten at autumn festivals and in chawanmushi and congee
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - leaf extract (EGb) sold as a herbal supplement
+    dyes: []
+    medicinal:
+    - seeds and leaves used in traditional Chinese medicine for coughs and asthma
+    - leaf extract taken for memory and circulation
+    toxicity: 'seeds contain ginkgotoxin (4''-O-methylpyridoxine): eating many, especially raw or by children,
+      causes vomiting and convulsions; the fleshy seed coat contains ginkgolic acids that cause contact
+      dermatitis'
+  lore:
+    folklore:
+    - the hanging burls of old trees are prayed to by women for breast milk in Japan
+    - the great ginkgo of Tsurugaoka Hachimangū, Kamakura, was said to have hidden the assassin of the
+      shogun Minamoto no Sanetomo in 1219
+    cultures:
+    - 'a living fossil: the genus is known from Jurassic fossils, and the species was spread by Buddhist
+      monks to temples across East Asia'
+    - six ginkgos within 2 km of the Hiroshima hypocentre survived the 1945 bomb and are hibakujumoku
+      (A-bombed trees)
+    symbolism:
+    - symbol of Tokyo (the city emblem is a ginkgo leaf)
+    - symbol of longevity and endurance
+    - tree of Seoul
+    notable_trees:
+    - the Gu Guanyin Temple ginkgo, Xi'an, said to have been planted by Emperor Taizong of Tang about
+      1,400 years ago
+    - Hōsen-ji ginkgo, Hiroshima, an A-bombed tree 1.1 km from the hypocentre
+    - Tsurugaoka Hachimangū great ginkgo, Kamakura, blown down in 2010 and resprouting
+  game_fit:
+    fields:
+      weirdness: 'high: sole survivor of a lineage unchanged since the Jurassic'
+      liminality: 'high: temple tree that survived Hiroshima'
+    dimensions: []
+    hooks:
+    - foul-smelling seeds needing processing before eating
+    - golden leaf-fall as a one-day seasonal event
+    - fire-resistant temple tree (it oozes sap when burnt)
+  sources:
+  - https://www.wood-database.com/ginkgo/
+  - https://www.jawic.or.jp/woods/sch.php?nam0=icyou
+  - https://plants.ces.ncsu.edu/plants/ginkgo-biloba/
+- id: goldenrain-tree
+  names:
+  - goldenrain tree
+  scientific: Koelreuteria paniculata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  habitat:
+    range: northern and central China, Korea; planted in Japan
+    ecosystem: temperate deciduous woodland and dry hillsides
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: 'temperature: cool-temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: tolerates poor, dry, alkaline and calcareous soils
+    niche: open woods, hillsides and villages
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small deciduous tree with a broad, rounded, open crown
+    height_m:
+    - 8
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, pinnate to bipinnate with coarsely toothed leaflets; pinkish when unfolding
+    seasonal: covered in yellow in midsummer, then pink-to-brown papery pods; yellow autumn colour
+    flowers: large upright panicles of small bright yellow flowers with red centres, early summer
+    fruit_visible: inflated three-sided papery capsules like Chinese lanterns, pale green to pink then
+      brown, with hard round black seeds
+    bark: light grey-brown, shallowly furrowed
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes:
+    - flowers give a yellow dye in China
+    medicinal:
+    - flowers used in traditional Chinese medicine for eye inflammation
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - hard black seeds are strung as Buddhist prayer beads
+    - 'Zhou-dynasty ritual texts assign a tree to each rank''s grave: pine for the emperor, cypress for
+      feudal lords, luan (goldenrain) for officials, pagoda tree for scholars and poplar for commoners'
+    symbolism:
+    - a grave tree of officials and scholars in ancient China
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: a traditional grave tree of ancient Chinese officials'
+    dimensions: []
+    hooks:
+    - seeds as beads
+    - yellow dye from flowers
+  sources:
+  - https://www.gbif.org/species/5421180
+  - https://plants.ces.ncsu.edu/plants/koelreuteria-paniculata/
+- id: hinoki
+  names:
+  - hinoki cypress
+  - hinoki
+  scientific: Chamaecyparis obtusa
+  rank: species
+  stands_for:
+  - Chamaecyparis obtusa var. formosana (Taiwan yellow cypress)
+  distinct_from:
+  - 'sawara: finer sprays'
+  - 'taiwan-cypress: Taiwan giants'
+  - 'hiba: broad scale leaves'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: central and southern Japan (Honshu, Shikoku, Kyushu); var. formosana in the mountains of Taiwan
+    ecosystem: temperate montane conifer forest; huge plantations
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to cool-temperate'
+    elevation_m:
+    - 10
+    - 2200
+    substrate: well-drained, moist acid soils; ridges and rocky slopes
+    niche: mixed conifer forest on ridges; plantations
+    strata:
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: evergreen conifer with a straight trunk and dense conical crown of flattened sprays
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 0.6
+    - 2.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: small blunt scale leaves in flat fan-like sprays, glossy dark green above with white X- or
+      Y-shaped stomatal marks beneath
+    seasonal: evergreen; little seasonal change
+    flowers: inconspicuous
+    fruit_visible: small round cones about 1 cm, green ripening reddish brown
+    bark: reddish brown, soft, fibrous, peeling in long vertical strips (harvested as hiwada roofing)
+  timber:
+    heartwood: pale pinkish brown
+    sapwood: nearly white
+    grain: very straight
+    texture: fine, even, with a natural sheen
+    density_kg_m3: 440
+    janka_n: null
+    workability: easy to work with hand tools; planes to a silky lustre
+    rot_resistance: durable; resists long wet exposure
+    scent: strong lemony-resinous scent
+    fuel: null
+    uses:
+    - Shinto shrines and Buddhist temples
+    - bathtubs (hinoki-buro)
+    - masu sake cups
+    - Buddhist sculpture
+    - cutting boards
+    - Noh stages
+  products:
+    food: []
+    sap_resin_latex:
+    - hinoki essential oil distilled from wood
+    bark:
+    - bark strips (hiwada) for shrine roofing, as at Izumo
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - in the Nihon Shoki, the god Susanoo pulls hairs from his body that become trees and decrees hinoki
+      for palaces
+    cultures:
+    - the Grand Shrine of Ise is rebuilt every 20 years from hinoki (Shikinen Sengū)
+    - Hōryū-ji, among the oldest surviving wooden buildings in the world, is built mainly of hinoki
+    - first of the Five Trees of Kiso, protected by the Owari domain in the Edo period
+    symbolism:
+    - purity in Shinto architecture
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: the sacred wood of Shinto shrines, associated with purity'
+    dimensions: []
+    hooks:
+    - top-tier aromatic construction wood
+    - bark-strip roofing
+    - hot-bath and shrine building hooks
+  sources:
+  - https://www.jawic.or.jp/woods/sch.php?nam0=hinoki
+  - https://www.pref.hokkaido.lg.jp/fs/6/5/1/9/5/1/3/_/%E6%A8%B9%E7%A8%AE%E5%88%A5%E3%81%AE%E6%B0%97%E4%B9%BE%E5%AF%86%E5%BA%A6%E3%81%AE%E5%80%A4%E3%81%AE%E4%BE%8B.pdf
+  - https://conifersociety.org/conifers/chamaecyparis-obtusa/
+- id: japanese-black-pine
+  names:
+  - Japanese black pine
+  - kuromatsu
+  scientific: Pinus thunbergii
+  rank: species
+  stands_for:
+  - Pinus luchuensis (Ryukyu pine, Okinawa prefectural tree)
+  distinct_from:
+  - 'japanese-red-pine: orange bark, inland'
+  - 'korean-pine: nut pine'
+  - 'huangshan-pine: cliff pine'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: coasts of Japan (except Hokkaido) and southern Korea; P. luchuensis in the Ryukyus
+    ecosystem: coastal pine forest and planted windbreaks
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: sand dunes and rocky shores; tolerates salt spray and poor sandy soil
+    niche: seashores, dunes and coastal cliffs
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: evergreen pine with an irregular, often leaning trunk and spreading, flat-topped crown shaped
+      by wind
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 0.5
+    - 2.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: stiff, dark green needles in pairs, 7–12 cm; buds conspicuously silvery-white
+    seasonal: candles of new growth in spring
+    flowers: yellow-brown pollen cones and reddish seed cones in spring
+    fruit_visible: ovoid brown cones 4–6 cm
+    bark: dark blackish grey, thick, broken into deep plates; young bark grey-brown
+  timber:
+    heartwood: light reddish brown
+    sapwood: yellowish white
+    grain: straight
+    texture: coarse, with distinct annual rings
+    density_kg_m3: 540
+    janka_n: null
+    workability: resinous; works fairly easily
+    rot_resistance: not durable above ground; durable fully submerged (used for foundation piles)
+    scent: resinous
+    fuel: resin-rich; pine charcoal and pine soot
+    uses:
+    - house framing and floors
+    - water piles
+    - pine soot (shōen) for sumi ink
+  products:
+    food: []
+    sap_resin_latex:
+    - pine resin (turpentine)
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - the pine is a yorishiro, an object a kami descends into, hence kadomatsu pine decorations at New
+      Year
+    cultures:
+    - the stock tree of bonsai and of Japanese gardens, trained into cloud forms
+    - planted along coasts as wind, sand and tsunami breaks since the Edo period, as at Niji no Matsubara
+      (Karatsu), about a million pines over 5 km
+    symbolism:
+    - longevity and steadfastness; one of the Three Friends of Winter (pine, bamboo, plum) and of shōchikubai
+    - kuromatsu is the masculine pine (omatsu), akamatsu the feminine (mematsu)
+    notable_trees:
+    - Niji no Matsubara, Karatsu, Saga
+    - Miho no Matsubara, Shizuoka, setting of the Hagoromo legend
+  game_fit:
+    fields:
+      alignment: 'high: New Year kami-pine of longevity'
+    dimensions: []
+    hooks:
+    - coastal windbreak placement on dunes
+    - pine soot for ink
+    - resin for torches and sealing
+  sources:
+  - https://www.jawic.or.jp/woods/sch.php?nam0=akamatsu
+  - https://www.pref.hokkaido.lg.jp/fs/6/5/1/9/5/1/3/_/%E6%A8%B9%E7%A8%AE%E5%88%A5%E3%81%AE%E6%B0%97%E4%B9%BE%E5%AF%86%E5%BA%A6%E3%81%AE%E5%80%A4%E3%81%AE%E4%BE%8B.pdf
+  - https://conifersociety.org/conifers/pinus-thunbergii/
+- id: japanese-cherry
+  names:
+  - Japanese cherry
+  - sakura
+  - Yoshino cherry
+  - somei-yoshino
+  - sato-zakura
+  scientific: Prunus serrulata
+  rank: group
+  stands_for:
+  - Prunus × yedoensis (Somei-yoshino, the grafted clone of most hanami)
+  - Prunus serrulata cultivars (Kanzan, sato-zakura)
+  distinct_from:
+  - 'yamazakura: wild hill cherry'
+  - 'higan-cherry: weeping long-lived cherry'
+  - 'taiwan-cherry: deep pink bells'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - flowers
+  habitat:
+    range: wild P. serrulata in Japan, Korea and China; Somei-yoshino arose in Edo (Tokyo) as a cultivated
+      hybrid and is planted throughout Japan and worldwide
+    ecosystem: temperate deciduous forest margins; parks, riverbanks, castles and schools
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: cool-temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: moist, well-drained fertile soil; dislikes waterlogging
+    niche: planted avenues and parks; wild trees on hill forest margins
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous tree with a broad, spreading, vase-shaped crown
+    height_m:
+    - 5
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 1.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, ovate with long pointed tips and finely bristle-toothed edges; bronze when young
+      in P. serrulata
+    seasonal: masses of blossom for about a week in spring before or with the leaves; petals fall in drifts;
+      orange-red autumn colour
+    flowers: 'Somei-yoshino: pale pink fading to white, five petals; P. serrulata cultivars: white to
+      deep pink, many double (Kanzan)'
+    fruit_visible: small black cherries in early summer, few on Somei-yoshino
+    bark: shiny reddish-brown to grey with prominent horizontal lenticel bands; peels in horizontal strips
+  timber:
+    heartwood: reddish brown with greenish streaks
+    sapwood: pale yellowish brown
+    grain: straight
+    texture: fine
+    density_kg_m3: 620
+    janka_n: null
+    workability: works easily and takes a fine finish
+    rot_resistance: durable
+    scent: null
+    fuel: cherry wood chips smoke food (sakura chips)
+    uses:
+    - woodblock printing blocks (ukiyo-e)
+    - furniture
+    - turnery
+    - bark-veneered kabazaiku boxes
+  products:
+    food:
+    - salted blossoms (sakurayu tea) and salted leaves wrapping sakuramochi
+    sap_resin_latex: []
+    bark:
+    - bark (kabazaiku) for Kakunodate tea caddies
+    - inner bark of wild cherry (ōhi) as a cough medicine
+    leaves:
+    - salt-pickled leaves for sakuramochi
+    dyes: []
+    medicinal:
+    - ōhi, the dried bark of wild cherries, used for coughs
+    toxicity: leaves, bark and seeds contain cyanogenic glycosides; wilted leaves are poisonous to livestock
+  lore:
+    folklore:
+    - spirits were believed to dwell in cherry trees, and blossom predicted the rice harvest
+    cultures:
+    - hanami, picnicking under blossom, dates to Heian court parties
+    - Somei-yoshino is a single grafted clone, so whole avenues bloom together; the Japan Meteorological
+      Agency tracks a cherry-blossom front each spring
+    - Japan gave Washington, D.C. its cherry trees in 1912
+    symbolism:
+    - mono no aware, transience and the beauty of brief life
+    - used in WWII propaganda for the fallen soldier
+    notable_trees:
+    - Hirosaki Park, Aomori, holds what is said to be the oldest Somei-yoshino, planted in 1882
+  game_fit:
+    fields:
+      liminality: 'high: brief blossom tied to transience and the dead'
+    dimensions: []
+    hooks:
+    - spring blossom event, with petals as a seasonal particle
+    - smoking chips
+    - bark marquetry
+  sources:
+  - https://plants.ces.ncsu.edu/plants/prunus-serrulata/
+  - https://plants.ces.ncsu.edu/plants/prunus-x-yedoensis/
+  - https://www.jawic.or.jp/woods/sch.php?nam0=sakura
+- id: japanese-maple
+  names:
+  - Japanese maple
+  - momiji
+  - full-moon maple
+  - hauchiwa-kaede
+  scientific: Acer palmatum
+  rank: group
+  stands_for:
+  - Acer shirasawanum
+  - Acer japonicum (fullmoon maple)
+  distinct_from:
+  - 'sugar-maple: syrup maple'
+  - 'snakebark-maple: striped bark'
+  - 'trident-maple: three-lobed bonsai maple'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  habitat:
+    range: Japan, Korea, eastern China, Taiwan and eastern Russia
+    ecosystem: temperate deciduous and mixed forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: cool-temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 1300
+    substrate: moist, well-drained, slightly acid soils
+    niche: understory of forest and streamsides; gardens
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: small deciduous tree or large shrub, often multi-stemmed with a layered, dome-shaped crown
+    height_m:
+    - 5
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, palmate with 5–9 deep, finely toothed lobes; green, or red-purple and finely dissected
+      in many cultivars
+    seasonal: brilliant scarlet, crimson, orange or gold in autumn (momiji); new leaves often red
+    flowers: small red-purple flowers in spring
+    fruit_visible: paired red samaras in summer
+    bark: smooth grey-green, often with paler streaks; young twigs red
+  timber:
+    heartwood: pale reddish brown
+    sapwood: pale
+    grain: straight to wavy
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and fine; turns well
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - small turnery
+    - carving
+  products:
+    food:
+    - momiji tempura, maple leaves preserved in salt and fried in batter, a specialty of Minoh, Osaka
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - in Noh, the demon-woman of Momijigari lures the hero under autumn maples
+    cultures:
+    - momijigari, autumn excursions to view red leaves, from the Heian period
+    - a central tree of Japanese gardens, with hundreds of named cultivars
+    symbolism:
+    - autumn and the passing season
+    - the deer-and-maple card of October in hanafuda
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - strong autumn-colour tree for forest understory
+    - small fine wood for handles
+  sources:
+  - https://www.gbif.org/species/3189882
+  - https://plants.ces.ncsu.edu/plants/acer-palmatum/
+- id: japanese-raisin-tree
+  names:
+  - Japanese raisin tree
+  scientific: Hovenia dulcis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  habitat:
+    range: eastern China, Korea, Japan and the Himalaya
+    ecosystem: temperate deciduous and mixed forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to cool-temperate'
+    elevation_m:
+    - 0
+    - 2100
+    substrate: moist, sandy or loamy well-drained soil
+    niche: valley forest and forest margins; invasive in southern Brazil
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: deciduous tree with a straight trunk and a rounded to oval crown
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.3
+    - 1.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, glossy, broadly ovate, toothed, three-veined from the base
+    seasonal: yellow autumn colour
+    flowers: small creamy-green flowers in loose clusters, early summer
+    fruit_visible: small round dry capsules on swollen, twisted, fleshy reddish-brown stalks that become
+      sweet after frost
+    bark: grey-brown, shallowly fissured into flat ridges
+  timber:
+    heartwood: light reddish brown
+    sapwood: pale yellowish
+    grain: straight
+    texture: medium to coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - furniture
+    - musical instruments
+    - construction in Korea and Japan
+  products:
+    food:
+    - swollen fruit stalks, eaten fresh or dried, taste like raisins
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - fruit and stalks (zhǐ jǔ zǐ) used in Chinese and Korean medicine as a hangover remedy; still sold
+      in Korean hangover drinks
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - heotgae tea and hangover beverages in Korea
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - frost-sweetened snack
+    - hangover cure item
+  sources:
+  - https://www.gbif.org/species/3039410
+  - https://plants.ces.ncsu.edu/plants/hovenia-dulcis/
+- id: jujube
+  names:
+  - jujube
+  - Chinese date
+  scientific: Ziziphus jujuba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - product
+  habitat:
+    range: northern and central China, domesticated there over 4,000 years ago; cultivated from Korea
+      to the Mediterranean
+    ecosystem: dry temperate scrub, loess hills and orchards
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: 'temperature: warm-temperate to cool-temperate'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: tolerates drought, alkaline and saline soils
+    niche: dry hillsides, field edges and village orchards
+    strata:
+    - open
+    - shrub
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small deciduous tree or shrub with zigzag, drooping branchlets, paired thorns and suckering
+      roots
+    height_m:
+    - 5
+    - 12
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, glossy, ovate, finely toothed, three-veined; fruiting twigs shed with the leaves
+    seasonal: yellow in autumn
+    flowers: small fragrant yellow-green star-shaped flowers, early summer
+    fruit_visible: oval drupes 2–5 cm turning from green to glossy mahogany-red, then wrinkling like dates
+    bark: dark grey-brown, rough, deeply furrowed
+  timber:
+    heartwood: reddish brown
+    sapwood: pale yellow
+    grain: interlocked
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: very hard and heavy; carves cleanly
+    rot_resistance: durable
+    scent: null
+    fuel: null
+    uses:
+    - woodblock printing blocks
+    - carving
+    - tool handles
+    - mallets and pestles
+  products:
+    food:
+    - fresh and dried red dates (hóng zǎo) in soups, cakes and teas
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - dried fruit (dà zǎo) a common herb in Chinese medicine as a calming tonic
+    - seed (suān zǎo rén, of the sour variety) for insomnia
+    toxicity: null
+  lore:
+    folklore:
+    - peach and jujube wood seals were used as protective charms in Daoist practice
+    cultures:
+    - red dates are scattered on the wedding bed with peanuts, longan and lotus seeds, a pun on zǎo shēng
+      guì zǐ, "soon give birth to a noble son"
+    symbolism:
+    - fertility and early children
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - drought-tolerant thorny hedge fruit
+    - hard wood for printing blocks
+    - wedding custom item
+  sources:
+  - https://www.gbif.org/species/3039423
+  - https://plants.ces.ncsu.edu/plants/ziziphus-jujuba/
+- id: katsura
+  names:
+  - katsura
+  scientific: Cercidiphyllum japonicum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Japan and China (C. japonicum); C. magnificum in central Japan
+    ecosystem: cool-temperate deciduous forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 2000
+    substrate: moist, deep soils
+    niche: stream banks and moist valley bottoms
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: large deciduous tree, often multi-stemmed from the base, with a broad crown; one of the largest
+      broadleaf trees in Japan
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, rounded heart-shaped leaves with crenate edges, opposite; emerge reddish purple
+    seasonal: yellow, apricot and pink in autumn, smelling of burnt sugar or candy floss (maltol)
+    flowers: tiny red flowers without petals before the leaves
+    fruit_visible: small curved pods in clusters
+    bark: grey-brown, shaggy, splitting into narrow vertical strips with age
+  timber:
+    heartwood: brown
+    sapwood: yellowish white
+    grain: straight
+    texture: fine
+    density_kg_m3: 500
+    janka_n: null
+    workability: light, soft, easy to carve and machine; finishes well
+    rot_resistance: not durable
+    scent: null
+    fuel: null
+    uses:
+    - drawer sides
+    - Go and shogi boards (cheaper than kaya)
+    - carving
+    - woodblock printing blocks
+    - Japanese wooden sandals
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - fallen leaves were dried and powdered as incense (the name may come from kazura, "fragrance")
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - in Japanese and Chinese poetry a katsura (or gui) grows on the Moon
+    cultures:
+    - katsura leaves with hollyhock decorate the Aoi Matsuri of Kamigamo and Shimogamo shrines, Kyoto
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - autumn leaf-litter with a sweet smell as a sensory cue
+    - soft carving wood
+  sources:
+  - https://www.jawic.or.jp/woods/sch.php?nam0=katsura
+  - https://www.pref.hokkaido.lg.jp/fs/6/5/1/9/5/1/3/_/%E6%A8%B9%E7%A8%AE%E5%88%A5%E3%81%AE%E6%B0%97%E4%B9%BE%E5%AF%86%E5%BA%A6%E3%81%AE%E5%80%A4%E3%81%AE%E4%BE%8B.pdf
+  - https://plants.ces.ncsu.edu/plants/cercidiphyllum-japonicum/
+- id: lacquer-tree
+  names:
+  - lacquer tree
+  - urushi
+  scientific: Toxicodendron vernicifluum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-wax-tree: wax rather than lacquer'
+  tier: 1
+  status: extant
+  inclusion:
+  - toxic
+  - cultural
+  - product
+  habitat:
+    range: China and the Himalaya; long cultivated in Japan and Korea
+    ecosystem: temperate and subtropical mountain forest; plantations
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to cool-temperate'
+    elevation_m:
+    - 800
+    - 2800
+    substrate: moist, fertile soils
+    niche: mountain slopes and managed lacquer groves
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous tree with a rounded crown
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, pinnate with 7–19 ovate leaflets
+    seasonal: bright red to orange autumn colour
+    flowers: small yellowish-green flowers in drooping panicles, early summer
+    fruit_visible: drooping clusters of small flattened yellow-brown drupes
+    bark: grey, with horizontal tapping scars on managed trees
+  timber:
+    heartwood: yellow to greenish yellow
+    sapwood: pale
+    grain: straight
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - small boxes
+    - charms
+  products:
+    food: []
+    sap_resin_latex:
+    - raw sap (ki-urushi), tapped from horizontal cuts in the bark through the summer, hardens into urushi
+      lacquer
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: 'all parts contain urushiol, the same allergen as poison ivy: touching sap or green leaves,
+      or smoke from burning wood, causes severe blistering rashes'
+  lore:
+    folklore: []
+    cultures:
+    - lacquerware is about 9,000 years old in Japan (Kakinoshima site, Hokkaido, Jōmon period)
+    - 'East Asian lacquerware: Chinese carved lacquer, Japanese maki-e, Korean najeonchilgi'
+    - some Japanese Buddhist monks (sokushinbutsu) drank urushi tea in self-mummification
+    symbolism:
+    - durability and refinement; "japan" became an English word for lacquerware
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: sap blisters skin on contact'
+    dimensions: []
+    hooks:
+    - tapping and curing urushi lacquer as a mid-game finish for weatherproofing (crafting/material-classes)
+    - contact hazard when harvesting
+  sources:
+  - https://www.gbif.org/species/3190612
+- id: loquat
+  names:
+  - loquat
+  - biwa
+  - pí pa
+  - Eriobotrya japonica (syn.)
+  scientific: Rhaphiolepis bibas
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  habitat:
+    range: south-central China (Hubei, Sichuan); cultivated in Japan for over 1,000 years and worldwide
+      in warm climates
+    ecosystem: subtropical evergreen forest margins and orchards
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: subtropical to warm-temperate'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: well-drained loam
+    niche: gardens and orchards
+    strata:
+    - understory
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: small evergreen tree with a rounded crown of large stiff leaves
+    height_m:
+    - 5
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, large (15–30 cm), stiff, deeply veined, dark green, toothed; rusty-woolly beneath
+    seasonal: flowers in late autumn to winter; fruit ripens in spring
+    flowers: fragrant creamy-white flowers in woolly rust-coloured panicles
+    fruit_visible: clusters of yellow-orange pear-shaped fruit 3–5 cm with downy skin and large brown
+      seeds
+    bark: grey-brown, smooth
+  timber:
+    heartwood: pinkish brown
+    sapwood: pale
+    grain: straight
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and tough
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - walking sticks
+    - drawing instruments
+    - wooden swords (bokken)
+  products:
+    food:
+    - fresh fruit in spring
+    - loquat wine and preserves
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - leaves made into tea and pipa gao cough syrup
+    dyes: []
+    medicinal:
+    - leaf syrup (pi pa gao) for coughs and sore throats
+    toxicity: seeds and young leaves contain cyanogenic glycosides; seeds are poisonous in quantity
+  lore:
+    folklore: []
+    cultures:
+    - named pipa in Chinese because its leaf resembles the pipa lute
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - winter flower and spring fruit filling a seasonal gap
+    - cough-syrup recipe
+    - bokken wood
+  sources:
+  - https://plants.ces.ncsu.edu/plants/eriobotrya-japonica/
+  - https://hort.purdue.edu/newcrop/morton/loquat.html
+  - https://www.gbif.org/species/10786206
+- id: lychee
+  names:
+  - lychee
+  scientific: Litchi chinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'longan: smaller brown-skinned relative'
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  habitat:
+    range: lowlands of Guangdong, Fujian and Hainan, southern China, and northern Vietnam; cultivated
+      across the tropics and subtropics
+    ecosystem: subtropical lowland forest, riverbanks and orchards
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - humid
+      note: 'temperature: subtropical to tropical'
+    elevation_m:
+    - 0
+    - 600
+    substrate: deep, moist, acid soils along rivers
+    niche: riverbanks and coastal lowlands; orchards
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: dense, round-topped evergreen tree, as broad as tall
+    height_m:
+    - 9
+    - 30
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, pinnate with 4–8 glossy, leathery dark-green leaflets; new flush coppery red
+    seasonal: flowers in spring; fruit ripens in early summer
+    flowers: tiny greenish-white to yellowish petalless flowers in panicles up to 75 cm
+    fruit_visible: pendent clusters of round strawberry-red fruit 3–4 cm with a rough, warty skin around
+      translucent white flesh
+    bark: grey to grey-black, smooth
+  timber:
+    heartwood: pink to deep red
+    sapwood: null
+    grain: irregular, wild figure
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: very dense; hard to work, prone to cupping and checking when dried
+    rot_resistance: null
+    scent: null
+    fuel: slow-burning; prized for smoking and roasting (Cantonese roast goose over lychee wood)
+    uses:
+    - cutting boards
+    - furniture
+    - smoking wood
+  products:
+    food:
+    - fresh fruit
+    - dried lychee
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - dried fruit and seeds used in traditional Chinese medicine
+    toxicity: unripe fruit contains hypoglycin A and MCPG and has caused fatal hypoglycaemic encephalopathy
+      in undernourished children who ate it on an empty stomach
+  lore:
+    folklore: []
+    cultures:
+    - relays of horses carried fresh lychees 1,000 km to the Tang court for the consort Yang Guifei, recalled
+      in Du Mu's poem
+    - the poet Su Shi, exiled to Guangdong, wrote he would happily eat 300 lychees a day
+    symbolism:
+    - romance and luxury
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - early-summer fruit
+    - premium smoking and roasting wood
+  sources:
+  - https://hort.purdue.edu/newcrop/morton/lychee.html
+  - https://www.gbif.org/species/3190002
+- id: orange
+  names:
+  - sweet orange
+  - orange
+  - bitter orange
+  - Citrus × sinensis (syn.)
+  scientific: Citrus × aurantium
+  rank: group
+  stands_for:
+  - Citrus × aurantium bitter-orange group (Seville orange)
+  distinct_from:
+  - 'mandarin: loose peel'
+  - 'kumquat: eaten whole'
+  - 'yuzu: aromatic hardy citrus'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - cultural
+  - flowers
+  - product
+  habitat:
+    range: sweet orange arose by hybridization in southern China and north-east India; bitter orange in
+      South-East Asia; cultivated throughout warm regions, notably the Mediterranean
+    ecosystem: subtropical orchards and gardens
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: well-drained, sandy loam
+    niche: orchards, courtyards and street plantings
+    strata:
+    - open
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: small evergreen tree with a rounded, dense crown and spiny twigs
+    height_m:
+    - 5
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, glossy dark green, aromatic, elliptic, with winged petioles (broad in bitter orange)
+    seasonal: flowers in spring; fruit ripens through winter and hangs among flowers
+    flowers: very fragrant waxy white five-petalled flowers (orange blossom)
+    fruit_visible: round orange fruit 7–10 cm with a dimpled oil-gland skin
+    bark: grey-brown, smooth
+  timber:
+    heartwood: pale yellow
+    sapwood: not distinct
+    grain: straight
+    texture: fine, even
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and fine; turns well
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - manicure sticks (orangewood)
+    - turnery
+    - carving
+  products:
+    food:
+    - fresh fruit and juice
+    - marmalade from Seville bitter orange
+    - candied peel
+    - dried peel (chén pí) in Chinese cooking
+    sap_resin_latex:
+    - 'essential oils: neroli from flowers, petitgrain from leaves, orange oil from peel'
+    bark: []
+    leaves:
+    - leaves distilled for petitgrain oil
+    dyes: []
+    medicinal:
+    - dried peel (chen pi) and unripe bitter orange (zhi shi) in traditional Chinese medicine
+    toxicity: bitter orange contains synephrine, a stimulant; peel oils can sensitize skin to sunlight
+  lore:
+    folklore: []
+    cultures:
+    - mandarins and oranges are given at Chinese New Year because their names pun on gold and luck
+    - orange-blossom wreaths for brides in Europe
+    - Seville's streets are planted with bitter orange
+    symbolism:
+    - luck and wealth (China)
+    - fertility and purity (orange blossom)
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: fruit, peel and oils'
+    dimensions: []
+    hooks:
+    - essential-oil distillation from flowers, leaves and peel (crafting/material-classes)
+    - winter fruit
+  sources:
+  - https://plants.ces.ncsu.edu/plants/citrus-x-aurantium/
+  - https://hort.purdue.edu/newcrop/morton/orange.html
+  - https://hort.purdue.edu/newcrop/morton/sour_orange.html
+- id: osmanthus
+  names:
+  - sweet osmanthus
+  scientific: Osmanthus fragrans
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - folklore
+  - cultural
+  - product
+  habitat:
+    range: southern and south-western China; cultivated across China, Japan and Taiwan
+    ecosystem: subtropical evergreen broadleaf forest; gardens
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to subtropical'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: moist, well-drained acid soils
+    niche: forest understory and gardens
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: evergreen large shrub or small tree with a dense rounded crown
+    height_m:
+    - 3
+    - 12
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, glossy dark green, leathery, elliptic, finely toothed or entire
+    seasonal: flowers in autumn, scenting whole districts for a week or two
+    flowers: tiny four-lobed waxy flowers in clusters at the leaf axils, cream (silver), yellow (gold)
+      or orange (red), with an apricot-like fragrance
+    fruit_visible: small blue-black oval drupes
+    bark: pale grey, smooth
+  timber:
+    heartwood: pale brown
+    sapwood: null
+    grain: fine
+    texture: fine, even
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and fine; good for carving
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - carving
+    - small turnery
+  products:
+    food:
+    - flowers flavour tea, wine (guì huā jiǔ), sweet syrup, jams and mooncakes
+    sap_resin_latex:
+    - flower absolute for perfume
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - flowers used in traditional Chinese medicine for coughs
+    toxicity: null
+  lore:
+    folklore:
+    - Wu Gang is condemned to fell an osmanthus on the Moon that heals each cut, so he labours forever
+    - the moon palace of Chang'e stands beside the osmanthus
+    cultures:
+    - osmanthus wine is drunk at the Mid-Autumn Festival
+    - Guilin, "osmanthus forest", is named after the trees
+    - '"plucking osmanthus in the toad palace" meant passing the imperial exam'
+    symbolism:
+    - scholarly success
+    - the Moon
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: the tree of the Moon palace in Chinese myth'
+    dimensions:
+    - aether
+    hooks:
+    - flower flavouring for tea and wine
+    - autumn scent as an ambient cue
+    - endless-felling Moon tree as a quest seed
+  sources:
+  - https://www.gbif.org/species/3172278
+  - https://plants.ces.ncsu.edu/plants/osmanthus-fragrans/
+- id: pagoda-tree
+  names:
+  - Japanese pagoda tree
+  - Chinese scholar tree
+  - Sophora japonica (syn.)
+  scientific: Styphnolobium japonicum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - medicinal
+  - product
+  habitat:
+    range: China and Korea; long planted in Japan and as a street tree worldwide
+    ecosystem: temperate deciduous woodland; courtyards, temples and streets
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: 'temperature: cool-temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: tolerates poor, dry, compacted soils
+    niche: village squares, courtyards and roadsides
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: deciduous tree with a broad, rounded crown; old trees hollow and gnarled
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 2.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, pinnate with 7–17 dark green pointed leaflets
+    seasonal: flowers late summer, long after most trees
+    flowers: creamy-white pea flowers in large terminal panicles, late summer
+    fruit_visible: green, constricted, bead-like pods 5–8 cm, hanging into winter
+    bark: grey-brown, furrowed; young stems green
+  timber:
+    heartwood: yellowish brown to olive brown
+    sapwood: pale yellow
+    grain: straight
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - furniture
+    - building columns (tokobashira)
+    - carving
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes:
+    - dried flower buds (huái mǐ) give a yellow dye, and with mordants green; used for imperial silk
+    medicinal:
+    - flower buds are a source of rutin and used in Chinese medicine to stop bleeding
+    toxicity: seeds and pods are poisonous if eaten
+  lore:
+    folklore:
+    - many Shanxi families trace their origin to the Big Pagoda Tree of Hongtong, the gathering point
+      for Ming-dynasty forced migrations
+    cultures:
+    - three huai trees in the Zhou court marked the places of the three highest ministers (sān gōng)
+    - the last Ming emperor, Chongzhen, hanged himself from a pagoda tree on Jingshan in 1644
+    symbolism:
+    - high office and scholarly rank
+    - city tree of Beijing
+    notable_trees:
+    - Big Pagoda Tree of Hongtong, Shanxi
+  game_fit:
+    fields:
+      liminality: 'high: courtyard tree of hangings and grave plantings in Chinese lore'
+    dimensions: []
+    hooks:
+    - yellow-green dye from buds (crafting/material-classes)
+    - late-summer bloom for bees
+  sources:
+  - https://www.gbif.org/species/2963569
+  - https://plants.ces.ncsu.edu/plants/styphnolobium-japonicum/
+- id: paper-mulberry
+  names:
+  - paper mulberry
+  scientific: Broussonetia papyrifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'xuan-paper-elm: other Chinese paper bark'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  habitat:
+    range: mainland East Asia and Taiwan (genetic origin of Pacific populations); carried by Austronesian
+      voyagers across Polynesia; invasive in many countries
+    ecosystem: forest margins, disturbed ground and village plantings
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      - tropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to tropical'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: tolerates poor and disturbed soils
+    niche: gaps, roadsides, riverbanks and gardens
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: fast-growing deciduous small tree or large shrub, suckering into thickets
+    height_m:
+    - 5
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, rough and sandpapery above, velvety beneath; ovate or deeply mitten-lobed on the
+      same tree
+    seasonal: yellow-green autumn colour
+    flowers: male trees bear woolly cylindrical catkins; females round heads
+    fruit_visible: round orange-red fruit heads 2–3 cm with protruding juicy segments
+    bark: smooth grey-brown with orange lenticels; tough fibrous inner bark
+  timber:
+    heartwood: pale yellowish
+    sapwood: null
+    grain: null
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: soft
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - fruit edible but rarely eaten
+    sap_resin_latex:
+    - milky latex
+    bark:
+    - inner bark fibre is beaten into washi (kōzo) and Chinese paper, and into tapa (siapo, kapa, masi)
+      bark cloth across Polynesia
+    leaves:
+    - leaves fed to livestock
+    dyes: []
+    medicinal:
+    - fruit (chǔ shí zǐ) used in Chinese medicine
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Cai Lun's paper of 105 CE used bark of this tree among its fibres
+    - kōzo washi, including paper for shoji, umbrellas and banknotes
+    - a canoe plant carried by Polynesian voyagers to Hawaiʻi, Tonga, Samoa and Rapa Nui for tapa cloth
+    symbolism:
+    - Pacific tapa is ceremonial wealth exchanged at weddings and funerals
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - inner-bark fibre for paper and bark cloth (crafting/material-classes)
+    - fast colonizer of cleared land
+  sources:
+  - https://www.gbif.org/species/5361944
+  - https://plants.ces.ncsu.edu/plants/broussonetia-papyrifera/
+- id: paulownia
+  names:
+  - paulownia
+  - princess tree
+  - kiri
+  scientific: Paulownia tomentosa
+  rank: genus
+  stands_for:
+  - Paulownia fortunei
+  - Paulownia elongata
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - striking
+  - product
+  habitat:
+    range: central and western China; long cultivated in Japan, Korea and Taiwan; invasive in eastern
+      North America
+    ecosystem: disturbed forest, riverbanks and plantations
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1800
+    substrate: tolerates poor and disturbed soils
+    niche: gaps, burns, roadsides; farm plantings
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: fast-growing deciduous tree with a broad rounded crown and stout twigs
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.6
+    - 1.2
+    lifespan_y: 70
+    growth_rate: fast
+    leaves: deciduous, huge (to 60 cm on young shoots), heart-shaped, velvety
+    seasonal: violet flowers before the leaves in spring; brown seed capsules persist all winter
+    flowers: large fragrant pale violet foxglove-like tubular flowers in upright panicles
+    fruit_visible: clusters of pointed woody egg-shaped capsules 3–4 cm, releasing thousands of winged
+      seeds
+    bark: grey-brown, smooth with lenticels, becoming shallowly fissured
+  timber:
+    heartwood: light brown, sometimes faintly purplish
+    sapwood: pale, not distinct
+    grain: straight
+    texture: coarse, uneven
+    density_kg_m3: 280
+    janka_n: 1330
+    workability: very light and easy to work; stable
+    rot_resistance: durable to decay; susceptible to insects
+    scent: null
+    fuel: null
+    uses:
+    - tansu clothing chests
+    - koto and guqin soundboards
+    - geta sandals
+    - hagoita paddles
+    - surfboards
+    - boxes for valuables
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - flowers and bark used in traditional Chinese medicine
+    toxicity: null
+  lore:
+    folklore:
+    - in Japan and China the phoenix perches only on paulownia (or wutong); the hō-ō is paired with kiri
+      on the December hanafuda card
+    - parents planted a paulownia at a daughter's birth and cut it for her bridal chest
+    cultures:
+    - the go-shichi no kiri paulownia crest is the emblem of the Government of Japan and the Prime Minister
+    - Aizu (Fukushima) kiri is the best-known Japanese source
+    symbolism:
+    - state, nobility and the phoenix
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: one of the fastest-growing timber trees'
+    dimensions: []
+    hooks:
+    - very light wood for chests, instruments and floats
+    - fire-resistant chests (it chars slowly)
+    - bridal-chest custom
+  sources:
+  - https://www.wood-database.com/paulownia/
+  - https://www.jawic.or.jp/woods/sch.php?nam0=kiri
+  - https://www.fs.usda.gov/database/feis/plants/tree/pautom/all.html
+- id: peach
+  names:
+  - peach
+  - nectarine
+  scientific: Prunus persica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - folklore
+  - flowers
+  habitat:
+    range: domesticated in the lower Yangtze region of China at least 7,000 years ago; cultivated in temperate
+      regions worldwide
+    ecosystem: orchards, villages and garden plantings
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: null
+    elevation_m:
+    - 0
+    - 2000
+    substrate: well-drained sandy loam
+    niche: orchards and village gardens
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small deciduous tree with a spreading open crown
+    height_m:
+    - 4
+    - 8
+    trunk_diameter_m:
+    - 0.15
+    - 0.3
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, long narrow lanceolate leaves, finely toothed, folded along the midrib
+    seasonal: pink blossom before the leaves in early spring
+    flowers: pink to deep rose, sometimes white or double, five petals
+    fruit_visible: downy, rounded yellow-red fruit 5–8 cm with a deep groove and a pitted stone (smooth
+      in nectarine)
+    bark: reddish-brown to grey, smooth with horizontal lenticels; oozes amber gum
+  timber:
+    heartwood: reddish brown
+    sapwood: pale
+    grain: null
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - peach-wood charms and swords for exorcism
+    - small carvings
+  products:
+    food:
+    - fresh fruit, dried and canned peaches
+    sap_resin_latex:
+    - amber gum (tao jiao) eaten in Chinese desserts
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - seed kernel (tao ren) used in Chinese medicine to move blood
+    toxicity: seed kernels contain amygdalin, which releases cyanide when crushed and eaten
+  lore:
+    folklore:
+    - the Queen Mother of the West (Xiwangmu) grows peaches of immortality that ripen once in 3,000 years;
+      Sun Wukong steals them in Journey to the West
+    - 'peach wood frightens demons: door gods Shentu and Yulei guarded a giant peach tree, and peach-wood
+      charms (taofu) were hung on doors at New Year'
+    - in Japan, Momotarō is born from a peach and defeats the demons of Onigashima
+    - in the Kojiki, Izanagi drives off the pursuers from the underworld by throwing peaches
+    cultures:
+    - Tao Yuanming's Peach Blossom Spring, the hidden utopia
+    - the Oath of the Peach Garden in Romance of the Three Kingdoms
+    symbolism:
+    - longevity and immortality
+    - spring, love and marriage
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: peach wood wards off demons'
+      liminality: 'high: Izanagi''s peaches repel the underworld'
+    dimensions:
+    - aether
+    hooks:
+    - peach-wood ward against hostile spirits
+    - immortality-peach quest seed
+    - early spring blossom
+  sources:
+  - https://www.gbif.org/species/8149923
+  - https://plants.ces.ncsu.edu/plants/prunus-persica/
+- id: persimmon
+  names:
+  - persimmon
+  - kaki
+  scientific: Diospyros kaki
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ebony: black heartwood relative'
+  - 'american-persimmon: smaller North American fruit'
+  - 'date-plum: small blue-black fruit'
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  habitat:
+    range: China, domesticated there; cultivated in Japan and Korea for over 1,000 years
+    ecosystem: village orchards and warm-temperate deciduous woodland
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: deep, well-drained loam
+    niche: farmyards, villages and orchards
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: deciduous tree with a rounded crown and spreading branches
+    height_m:
+    - 5
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, large, glossy, leathery, oval
+    seasonal: brilliant orange and red autumn leaves; bare trees hung with orange fruit into winter
+    flowers: small creamy-yellow bell-shaped flowers, early summer
+    fruit_visible: glossy orange fruit 5–10 cm with a persistent four-lobed green calyx
+    bark: dark grey, broken into small square blocks like alligator hide
+  timber:
+    heartwood: pale orange-brown; occasional black-streaked heart (kurogaki) is ebony-like
+    sapwood: not distinct
+    grain: straight; ripple marks
+    texture: fine
+    density_kg_m3: 690
+    janka_n: null
+    workability: hard and heavy; works and finishes well
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - tokobashira alcove posts and marquetry (kurogaki)
+    - golf club heads
+    - furniture
+  products:
+    food:
+    - fresh fruit, astringent types after bletting
+    - hoshigaki and gotgam dried persimmons
+    - persimmon-leaf tea and persimmon vinegar
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - leaves for tea and for wrapping kaki-no-ha sushi
+    dyes:
+    - kakishibu, fermented juice of unripe fruit, dyes and waterproofs paper, cloth, wood and fishing
+      nets in tan to brown
+    medicinal:
+    - calyx (shi di) for hiccups in Chinese medicine
+    toxicity: unripe astringent fruit eaten in quantity can form bezoars (diospyrobezoars) in the stomach
+  lore:
+    folklore:
+    - Saru Kani Gassen, the folktale of the crab and the monkey who steals its persimmons
+    cultures:
+    - dried persimmons hung under the eaves are an autumn sight in Japan and Korea
+    - the Kaki Tree Project plants offspring of a persimmon that survived the Nagasaki bomb
+    symbolism:
+    - autumn and the countryside
+    - in China shi puns on 事, "affairs", wishing "everything goes as you wish"
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - astringent fruit that must be dried or bletted
+    - kakishibu waterproofing and dye (crafting/material-classes)
+    - black-heart wood as a rare find
+  sources:
+  - https://www.jawic.or.jp/woods/sch.php?nam0=kaki
+  - https://www.pref.hokkaido.lg.jp/fs/6/5/1/9/5/1/3/_/%E6%A8%B9%E7%A8%AE%E5%88%A5%E3%81%AE%E6%B0%97%E4%B9%BE%E5%AF%86%E5%BA%A6%E3%81%AE%E5%80%A4%E3%81%AE%E4%BE%8B.pdf
+  - https://hort.purdue.edu/newcrop/morton/japanese_persimmon.html
+- id: sichuan-pepper
+  names:
+  - Sichuan pepper
+  scientific: Zanthoxylum bungeanum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sansho: Japanese pepper, leaf spice'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: China (Sichuan, Gansu, Shaanxi and neighbouring provinces)
+    ecosystem: dry temperate hill scrub and mountain field edges
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: 'temperature: warm-temperate to cool-temperate'
+    elevation_m:
+    - 500
+    - 2500
+    substrate: well-drained, often stony or calcareous soils
+    niche: hillsides, terraces and field margins
+    strata:
+    - shrub
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous shrub or small tree with paired broad-based prickles on stems and leaves
+    height_m:
+    - 3
+    - 7
+    trunk_diameter_m:
+    - 0.1
+    - 0.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, pinnate with 5–13 small aromatic leaflets dotted with oil glands
+    seasonal: red fruit in late summer
+    flowers: tiny yellow-green flowers in spring
+    fruit_visible: clusters of small round reddish husks that split to show glossy black seeds
+    bark: grey-brown with corky, pyramid-shaped prickles
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - husks (huā jiāo) are the numbing spice of Sichuan mala cooking and five-spice powder
+    - young leaves eaten
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - husks used in Chinese medicine for stomach pain and as a vermifuge
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the empress's quarters in the Han palace were called the Pepper Chamber (jiāo fáng), its walls plastered
+      with pepper for warmth, scent and fertility
+    symbolism:
+    - fertility and many offspring (it bears abundant seed)
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - spice crop with a numbing effect
+    - thorny hedge
+  sources:
+  - https://www.gbif.org/species/7269010
+- id: snakebark-maple
+  names:
+  - snakebark maple
+  scientific: Acer davidii
+  rank: group
+  stands_for:
+  - Acer capillipes
+  distinct_from:
+  - 'paperbark-maple: peeling cinnamon bark'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: central and south-western China; A. capillipes in Japan
+    ecosystem: temperate mixed mountain forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: cool-temperate to warm-temperate'
+    elevation_m:
+    - 500
+    - 3500
+    substrate: moist, acid, well-drained soil
+    niche: forest edges and understory in mountains
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: small deciduous tree, often multi-stemmed, with arching branches
+    height_m:
+    - 8
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, ovate to shallowly three-lobed, glossy, finely toothed; reddish stalks
+    seasonal: yellow, orange and red autumn colour
+    flowers: small yellow-green flowers in pendulous racemes, spring
+    fruit_visible: long hanging chains of winged samaras, often red-tinged
+    bark: smooth green bark striped with white or pale-green vertical lines like snakeskin; reddens on
+      young shoots
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - named after Armand David, who collected it in China
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - identification-by-bark tree for understory variety
+  sources:
+  - https://www.gbif.org/species/7262943
+  - https://plants.ces.ncsu.edu/plants/acer-davidii/
+- id: star-anise
+  names:
+  - star anise
+  scientific: Illicium verum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'shikimi: toxic Japanese star anise'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - toxic
+  - medicinal
+  - product
+  habitat:
+    range: south-western China (Guangxi, Yunnan) and north-eastern Vietnam
+    ecosystem: subtropical evergreen forest; plantations
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 200
+    - 1600
+    substrate: acid, humus-rich, well-drained soil
+    niche: hill plantations and forest understory
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: small evergreen tree with a conical to rounded crown
+    height_m:
+    - 8
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, glossy, elliptic, leathery; aromatic when crushed
+    seasonal: two fruit crops a year in plantations
+    flowers: solitary pink to red cup-shaped flowers with many tepals
+    fruit_visible: star-shaped woody fruit of usually eight boat-shaped carpels, green ripening rusty
+      brown, each with a glossy seed
+    bark: pale grey, smooth
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - dried fruit is star anise, a main spice of Chinese five-spice and Vietnamese pho
+    sap_resin_latex:
+    - star anise oil (anethole) distilled from fruit and leaves
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - shikimic acid extracted from the fruit was the starting material for oseltamivir (Tamiflu)
+    - fruit for colic in traditional medicine
+    toxicity: not itself very toxic, but its close relative Japanese star anise (I. anisatum, shikimi)
+      contains neurotoxic anisatin; mixed or substituted batches have poisoned infants
+  lore:
+    folklore: []
+    cultures:
+    - spice traded along the Silk Road and to Europe from the 17th century
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - spice and medicine precursor
+    - look-alike toxic relative as an identification test
+  sources:
+  - https://www.gbif.org/species/2889756
+- id: sugi
+  names:
+  - Japanese cedar
+  - sugi
+  - yakusugi
+  - Jōmon Sugi
+  scientific: Cryptomeria japonica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'chinese-fir: broad flat needles'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: endemic to Japan (Honshu to Yakushima); planted throughout Japan and in China and Taiwan
+    ecosystem: warm- and cool-temperate conifer forest; vast plantations covering about 18% of Japan's
+      forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to cool-temperate'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: deep, moist soils; granite on Yakushima
+    niche: humid mountain forest and shrine groves
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall evergreen conifer with a straight, buttressed trunk and narrow conical crown; ancient
+      trees gnarled and broad-crowned
+    height_m:
+    - 30
+    - 55
+    trunk_diameter_m:
+    - 1.0
+    - 5.0
+    lifespan_y: 2000
+    growth_rate: fast
+    leaves: awl-shaped, curved, spirally arranged needles 0.5–1.5 cm, bright green, turning bronze in
+      winter
+    seasonal: foliage bronzes in cold winters; heavy pollen in spring
+    flowers: small yellow pollen cones release clouds of pollen in early spring
+    fruit_visible: round spiky brown cones about 2 cm
+    bark: reddish brown, soft, fibrous, peeling in long vertical strips
+  timber:
+    heartwood: pink to dark reddish brown, sometimes nearly black
+    sapwood: pale
+    grain: straight, prominent annual rings
+    texture: coarse
+    density_kg_m3: 360
+    janka_n: 1420
+    workability: easy to work with hand tools; soft
+    rot_resistance: moderately durable to durable
+    scent: distinctive sweet resinous scent (the smell of taruzake)
+    fuel: null
+    uses:
+    - house posts and boards
+    - ceilings
+    - sake barrels and tubs
+    - waribashi chopsticks
+    - geta
+    - boats
+    - shou sugi ban charred cladding
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - bark for roofing
+    leaves:
+    - leaves bound into sugidama balls hung at sake breweries
+    - leaf powder used in incense sticks
+    dyes: []
+    medicinal: []
+    toxicity: pollen causes widespread hay fever in Japan
+  lore:
+    folklore:
+    - ancient sugi are shinboku, sacred trees with shimenawa ropes, at shrines across Japan
+    cultures:
+    - the Cedar Avenue of Nikkō, about 12,000 trees along 35 km planted in the 17th century
+    - Yakushima's yakusugi forests inspired Princess Mononoke
+    symbolism:
+    - often called Japan's national tree, though none is official
+    notable_trees:
+    - Jōmon Sugi, Yakushima, estimated at 2,170 to over 7,000 years
+    - Wilson's Stump, Yakushima, felled about 1586
+    - Meoto Sugi (husband-and-wife cedars)
+  game_fit:
+    fields:
+      liminality: 'high: ancient shrine kami-trees'
+      yield: 'high: Japan''s main plantation timber'
+    dimensions: []
+    hooks:
+    - first-session soft construction wood
+    - charred shou sugi ban cladding
+    - giant ancient trees as landmarks
+  sources:
+  - https://www.wood-database.com/sugi/
+  - https://www.jawic.or.jp/woods/sch.php?nam0=sugi
+  - https://conifersociety.org/conifers/cryptomeria-japonica/
+- id: tea-plant
+  names:
+  - tea plant
+  scientific: Camellia sinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'assam-tea: large-leaved tea'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - medicinal
+  - product
+  habitat:
+    range: south-western China (Yunnan) and neighbouring Myanmar, Laos and Assam; cultivated across East
+      and South Asia
+    ecosystem: subtropical montane forest; tea gardens
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: subtropical to warm-temperate'
+    elevation_m:
+    - 300
+    - 2500
+    substrate: acid, well-drained soils
+    niche: mountain slopes; ancient tea forests in Yunnan
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: evergreen shrub kept pruned to waist height; unpruned, a small tree with a dense crown
+    height_m:
+    - 1
+    - 15
+    trunk_diameter_m:
+    - 0.1
+    - 1.0
+    lifespan_y: 1000
+    growth_rate: slow
+    leaves: evergreen, glossy, leathery, elliptic, serrated, 4–15 cm
+    seasonal: flowers in autumn
+    flowers: nodding white flowers 2–4 cm with a mass of yellow stamens
+    fruit_visible: small woody capsules with 1–3 round seeds
+    bark: smooth pale grey
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - tea leaves processed into green, white, oolong, black and pu'er tea
+    - seed oil
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - young shoots and leaves are tea
+    dyes: []
+    medicinal:
+    - tea as a stimulant (caffeine) and digestive in traditional Chinese medicine
+    toxicity: caffeine is toxic in very large doses
+  lore:
+    folklore:
+    - Shennong is said to have discovered tea when leaves blew into his boiling water
+    - Bodhidharma cut off his eyelids to stay awake, and the first tea plants grew where they fell
+    cultures:
+    - Lu Yu wrote the Classic of Tea in the 8th century
+    - the Japanese tea ceremony (chadō)
+    - the Tea Horse Road from Yunnan to Tibet
+    symbolism:
+    - hospitality and harmony
+    notable_trees:
+    - Xiangzhuqing ancient tea tree, Fengqing, Yunnan, claimed to be over 3,000 years old
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - stimulant crop
+    - processing chain from leaf to tea
+  sources:
+  - https://plants.ces.ncsu.edu/plants/camellia-sinensis/
+  - https://www.gbif.org/species/3189635
+- id: torreya
+  names:
+  - torreya
+  - kaya
+  scientific: Torreya nucifera
+  rank: genus
+  stands_for:
+  - Torreya grandis
+  distinct_from:
+  - 'florida-torreya: rare North American relative'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - striking
+  - product
+  habitat:
+    range: southern Japan and Jeju Island, Korea; T. grandis in eastern China (Zhejiang)
+    ecosystem: warm-temperate evergreen broadleaf and mixed forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1100
+    substrate: moist, deep soils
+    niche: shady valleys and slopes under broadleaf forest
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: evergreen conifer with a dense broad-conical crown
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: 800
+    growth_rate: slow
+    leaves: stiff, flat, sharp-pointed needles 2–3 cm in two ranks, glossy dark green, pungent when crushed
+    seasonal: evergreen
+    flowers: inconspicuous
+    fruit_visible: olive-like seeds 2–4 cm in a green to purplish fleshy coat
+    bark: grey-brown, scaling in long strips
+  timber:
+    heartwood: yellow to golden brown
+    sapwood: yellowish white
+    grain: very straight, indistinct rings
+    texture: fine
+    density_kg_m3: 530
+    janka_n: null
+    workability: finishes to a lustrous surface
+    rot_resistance: very durable, including to termites
+    scent: faintly resinous
+    fuel: null
+    uses:
+    - Go and shogi boards
+    - bathtubs
+    - bowls
+  products:
+    food:
+    - roasted seeds (kaya nuts; xiāng fěi of T. grandis)
+    - seed oil for cooking
+    sap_resin_latex:
+    - seed oil (kaya oil)
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - seeds as a vermifuge in Chinese and Korean medicine
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - kaya boards are prized for the ring of a stone when played
+    - in Zhejiang, Kuaijishan holds thousands of grafted T. grandis, some over 1,000 years old
+    symbolism: []
+    notable_trees:
+    - 'Bijarim, Jeju: about 2,800 kaya, 500–800 years old, a natural monument'
+    - the "new millennium tree" at Bijarim, said to be over 800 years old
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - Go-board wood as a prestige craft
+    - edible nuts
+  sources:
+  - https://www.jawic.or.jp/woods/sch.php?nam0=kaya
+  - https://www.pref.hokkaido.lg.jp/fs/6/5/1/9/5/1/3/_/%E6%A8%B9%E7%A8%AE%E5%88%A5%E3%81%AE%E6%B0%97%E4%B9%BE%E5%AF%86%E5%BA%A6%E3%81%AE%E5%80%A4%E3%81%AE%E4%BE%8B.pdf
+  - https://conifersociety.org/conifers/torreya-nucifera/
+- id: tree-of-heaven
+  names:
+  - tree of heaven
+  scientific: Ailanthus altissima
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: northern and central China and Taiwan; invasive in Europe, North America and elsewhere
+    ecosystem: disturbed ground, forest gaps, cities
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: 'temperature: cool-temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: any, including rubble and pavement cracks
+    niche: disturbed sites, roadsides, railways and urban lots
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: fast-growing deciduous tree with a smooth trunk and few stout branches; suckers form clonal
+      thickets
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.6
+    - 1.0
+    lifespan_y: 70
+    growth_rate: fast
+    leaves: deciduous, huge pinnate leaves 30–90 cm with 11–41 leaflets, each with glandular teeth at
+      the base; rank-smelling when crushed
+    seasonal: yellow-green leaves fall early; reddish seed clusters hang into winter
+    flowers: large panicles of small yellow-green flowers, males foul-smelling
+    fruit_visible: dense clusters of twisted pale-green to red-brown samaras
+    bark: smooth pale grey with lighter diamond-shaped streaks
+  timber:
+    heartwood: pale yellow to light brown
+    sapwood: not distinct
+    grain: straight
+    texture: coarse
+    density_kg_m3: 600
+    janka_n: 6300
+    workability: easy to work; turns, glues and finishes well
+    rot_resistance: insect resistant
+    scent: null
+    fuel: null
+    uses:
+    - cabinetry
+    - turned objects
+    - pulpwood
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - root bark (chū bái pí) used in Chinese medicine
+    leaves:
+    - leaves fed to the ailanthus silkmoth (Samia cynthia) for coarse wild silk
+    dyes: []
+    medicinal:
+    - bark for dysentery in Chinese medicine
+    toxicity: sap irritates skin; the plant releases ailanthone, which suppresses other plants
+  lore:
+    folklore: []
+    cultures:
+    - a symbol of resilience in Betty Smith's novel A Tree Grows in Brooklyn (1943)
+    - brought to Europe and America in the 18th century for silk and as an ornamental
+    symbolism:
+    - in China, chūn (with Toona) stands for longevity and the father
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: invasive, allelopathic thicket-former'
+    dimensions: []
+    hooks:
+    - wild silk from a moth fed on its leaves
+    - weed tree that colonizes ruins
+  sources:
+  - https://www.wood-database.com/ailanthus/
+  - https://www.fs.usda.gov/database/feis/plants/tree/ailalt/all.html
+- id: tung-tree
+  names:
+  - tung tree
+  scientific: Vernicia fordii
+  rank: species
+  stands_for:
+  - Vernicia montana
+  distinct_from:
+  - 'chinese-tallow: tallow instead of oil'
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - cultural
+  - product
+  habitat:
+    range: central and southern China, Myanmar and Vietnam (V. montana further south)
+    ecosystem: subtropical evergreen and mixed forest; plantations
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: subtropical to warm-temperate'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: well-drained, acid soils
+    niche: hill slopes and plantations
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small deciduous tree with a broad crown
+    height_m:
+    - 6
+    - 12
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, large, heart-shaped or three-lobed, with two red glands at the base of the blade
+    seasonal: flowers before the leaves in spring
+    flowers: showy white flowers 3–5 cm with red-and-yellow throat veins
+    fruit_visible: round green fruit 4–6 cm, ripening brown, with 3–5 large seeds
+    bark: grey-brown, smooth
+  timber:
+    heartwood: pale
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: light and soft
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - tung oil from the seeds, a drying oil used as wood finish, waterproofing and in paint, ink and caulking
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: seeds and oil are poisonous; eating seeds causes vomiting, diarrhoea and can be fatal
+  lore:
+    folklore: []
+    cultures:
+    - tung oil waterproofed Chinese junks, umbrellas and paper for centuries; China's main export oil
+      before WWII
+    symbolism:
+    - in Taiwan the white blossom (May snow) is a Hakka symbol
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - drying oil for waterproofing and finishes (crafting/material-classes)
+    - poisonous look-edible seed
+  sources:
+  - https://www.gbif.org/species/3074906
+  - https://plants.ces.ncsu.edu/plants/vernicia-fordii/
+- id: umbrella-pine
+  names:
+  - Japanese umbrella pine
+  - koyamaki
+  scientific: Sciadopitys verticillata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: endemic to Japan (Honshu, Shikoku, Kyushu)
+    ecosystem: temperate montane conifer forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: cool-temperate to warm-temperate'
+    elevation_m:
+    - 200
+    - 1700
+    substrate: rocky, acid soils on ridges
+    niche: steep slopes and ridges, notably around Kōyasan and Kiso
+    strata:
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: evergreen conifer with a dense, narrow conical crown
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: glossy, thick, grooved, 6–12 cm flat "needles" (fused leaf pairs) in whorls of 20–30 like
+      umbrella spokes
+    seasonal: evergreen
+    flowers: inconspicuous
+    fruit_visible: ovoid cones 6–10 cm
+    bark: reddish brown, peeling in long strips
+  timber:
+    heartwood: pale yellowish brown
+    sapwood: white
+    grain: straight
+    texture: fine
+    density_kg_m3: 420
+    janka_n: null
+    workability: easy to work
+    rot_resistance: very resistant to water
+    scent: distinctive odour
+    fuel: null
+    uses:
+    - bathtubs and sink boards
+    - boats
+    - ancient coffins
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - bark (maki-hada) caulks boats and tubs
+    leaves:
+    - branches offered at graves and altars on Kōyasan
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the only surviving member of the family Sciadopityaceae, with fossils from the Triassic and Jurassic
+    - one of the Five Trees of Kiso
+    - koyamaki coffins in ancient Japanese royal tombs
+    symbolism:
+    - Prince Hisahito's personal emblem
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: lone survivor of an ancient family'
+      liminality: 'high: grave offering tree of Kōyasan'
+    dimensions: []
+    hooks:
+    - waterproof tub wood
+    - bark caulking
+  sources:
+  - https://www.jawic.or.jp/woods/sch.php?nam0=kouyamaki
+  - https://www.pref.hokkaido.lg.jp/fs/6/5/1/9/5/1/3/_/%E6%A8%B9%E7%A8%AE%E5%88%A5%E3%81%AE%E6%B0%97%E4%B9%BE%E5%AF%86%E5%BA%A6%E3%81%AE%E5%80%A4%E3%81%AE%E4%BE%8B.pdf
+  - https://conifersociety.org/conifers/sciadopitys-verticillata/
+- id: ume
+  names:
+  - ume
+  - Japanese apricot
+  - Chinese plum
+  - mei
+  scientific: Prunus mume
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - fruit
+  habitat:
+    range: southern China; cultivated in China, Korea, Japan and Taiwan for over 1,500 years
+    ecosystem: warm-temperate orchards, temple gardens and hillsides
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 3000
+    substrate: well-drained loam
+    niche: orchards, gardens and shrine precincts
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small deciduous tree with a rounded crown and zigzag twigs; old trees gnarled
+    height_m:
+    - 4
+    - 8
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, ovate with a long tip, finely toothed
+    seasonal: flowers in late winter on bare branches, often in snow
+    flowers: fragrant flowers 2–3 cm, white, pink or red, five rounded petals
+    fruit_visible: round green to yellow apricot-like fruit 2–3 cm
+    bark: dark grey-brown, rough; young twigs green
+  timber:
+    heartwood: reddish brown
+    sapwood: null
+    grain: null
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - abacus beads
+    - carving
+  products:
+    food:
+    - umeboshi pickled plums
+    - umeshu liqueur
+    - Chinese suanmeitang (smoked plum drink)
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes:
+    - plum-wood and bark dyes in Japanese textile dyeing
+    medicinal:
+    - smoked fruit (wū méi) in Chinese medicine for coughs and diarrhoea
+    toxicity: unripe fruit and seeds contain amygdalin and are poisonous raw
+  lore:
+    folklore:
+    - Cao Cao told thirsty troops of an ume grove ahead to make their mouths water
+    cultures:
+    - the scholar Sugawara no Michizane's plum flew from Kyoto to Dazaifu to join him in exile (tobiume)
+    - Japanese ume-viewing preceded cherry-viewing in the Nara period
+    symbolism:
+    - one of the Four Gentlemen and Three Friends of Winter; perseverance through hardship
+    - national flower of the Republic of China (Taiwan)
+    notable_trees:
+    - Tobiume, Dazaifu Tenmangū, Fukuoka
+  game_fit:
+    fields:
+      alignment: 'high: emblem of perseverance and scholarship'
+    dimensions: []
+    hooks:
+    - late-winter blossom when nothing else flowers
+    - pickling and liqueur recipes
+  sources:
+  - https://www.gbif.org/species/3021046
+  - https://plants.ces.ncsu.edu/plants/prunus-mume/
+- id: weeping-willow
+  names:
+  - weeping willow
+  scientific: Salix babylonica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'corkscrew-willow: twisted branches'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  habitat:
+    range: northern China; cultivated across Eurasia for millennia
+    ecosystem: riverbanks, lakes and canals
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: cool-temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: moist to wet soils
+    niche: water edges, moats and canals
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous tree with a short trunk and long, slender, pendulous branches reaching the ground
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, narrow lanceolate, finely toothed, bright green above, grey-green beneath
+    seasonal: one of the first trees to leaf out in spring; yellow in autumn
+    flowers: yellowish catkins with the leaves in spring
+    fruit_visible: small capsules releasing cottony seed
+    bark: grey-brown, rough, deeply fissured into ridges
+  timber:
+    heartwood: pale brown to pinkish brown
+    sapwood: white
+    grain: straight
+    texture: fine
+    density_kg_m3: 550
+    janka_n: null
+    workability: soft and light; easy to work
+    rot_resistance: not durable
+    scent: null
+    fuel: willow charcoal for drawing and gunpowder
+    uses:
+    - chopping boards
+    - drawing charcoal
+    - charcoal for gunpowder
+    - baskets from shoots
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - bark contains salicin, the origin of aspirin
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark and leaves for pain and fever in traditional medicine
+    toxicity: null
+  lore:
+    folklore:
+    - in Japanese folklore, yūrei ghosts appear beneath willows
+    - willow branches ward off ghosts at Qingming in China
+    cultures:
+    - Chinese travellers were given a broken willow twig at parting, a pun on liú (stay)
+    - the Willow pattern plate
+    - Linnaeus misnamed it babylonica after the willows of Psalm 137, which were Euphrates poplars
+    symbolism:
+    - parting and longing
+    - feminine grace
+    notable_trees:
+    - Napoleon's willow at his St Helena grave, from which many cuttings were taken
+  game_fit:
+    fields:
+      liminality: 'high: ghosts appear beneath it in Japanese lore'
+    dimensions: []
+    hooks:
+    - waterside placement
+    - drawing and gunpowder charcoal (crafting/material-classes)
+    - pain-relief bark
+  sources:
+  - https://www.jawic.or.jp/woods/sch.php?nam0=yanagi
+  - https://plants.ces.ncsu.edu/plants/salix-babylonica/
+  - https://www.gbif.org/species/5372639
+- id: white-mulberry
+  names:
+  - white mulberry
+  scientific: Morus alba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - fruit
+  - product
+  habitat:
+    range: northern and central China; spread with sericulture across Asia and Europe; naturalized in
+      North America
+    ecosystem: temperate woodland, field edges, plantations
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: 'temperature: warm-temperate to cool-temperate'
+    elevation_m:
+    - 0
+    - 2500
+    substrate: tolerates poor and dry soils
+    niche: field margins, villages and sericulture plantations
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous tree with a rounded crown; pollarded for leaves in sericulture
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.3
+    - 1.0
+    lifespan_y: 200
+    growth_rate: fast
+    leaves: deciduous, glossy, ovate to deeply lobed on the same tree, toothed
+    seasonal: yellow in autumn
+    flowers: small greenish catkins
+    fruit_visible: blackberry-like fruit 1–2.5 cm, white, pink or purple-black
+    bark: light grey-brown to orange-brown, furrowed
+  timber:
+    heartwood: golden to medium brown, darkening
+    sapwood: pale yellow-white
+    grain: straight to irregular; figured
+    texture: medium
+    density_kg_m3: 690
+    janka_n: 7470
+    workability: works well and turns well
+    rot_resistance: very durable
+    scent: null
+    fuel: null
+    uses:
+    - furniture
+    - turnery
+    - bows (in East Asia)
+    - musical instruments
+  products:
+    food:
+    - fresh and dried fruit
+    sap_resin_latex:
+    - milky latex
+    bark:
+    - inner bark fibre for paper
+    leaves:
+    - the staple food of the silkworm
+    dyes:
+    - fruit and root bark yield dyes
+    medicinal:
+    - root bark (sāng bái pí), leaves and twigs used in Chinese medicine
+    toxicity: unripe fruit and milky sap can cause stomach upset and hallucinations
+  lore:
+    folklore:
+    - Fusang, the cosmic mulberry in the east where ten suns rest and rise
+    - Leizu, wife of the Yellow Emperor, discovered silk when a cocoon fell into her tea
+    cultures:
+    - sericulture with mulberry leaves underlies the Silk Road
+    symbolism:
+    - home and livelihood (sāng zǐ, "mulberry and catalpa", means one's homeland)
+    notable_trees:
+    - George Washington's white mulberry at Mount Vernon, planted 1785, alive in 1990
+  game_fit:
+    fields:
+      yield: 'high: leaves feed silkworms for silk'
+    dimensions:
+    - aether
+    hooks:
+    - silk production chain (crafting/material-classes)
+    - sun-tree myth as a quest seed
+  sources:
+  - https://www.wood-database.com/mulberry/
+  - https://www.fs.usda.gov/database/feis/plants/tree/moralb/all.html
+  - https://plants.ces.ncsu.edu/plants/morus-alba/
+- id: wutong
+  names:
+  - Chinese parasol tree
+  - wutong
+  scientific: Firmiana simplex
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  habitat:
+    range: southern and central China, Taiwan, Ryukyus; planted in Japan
+    ecosystem: warm-temperate deciduous and mixed woodland; courtyards
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: moist, well-drained soils
+    niche: courtyards, temples and limestone slopes
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous tree with a straight green trunk and an umbrella-like crown of huge leaves
+    height_m:
+    - 10
+    - 16
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, very large (to 30 cm), palmately 3–5 lobed
+    seasonal: yellow in autumn and early to drop
+    flowers: small lemon-yellow flowers in large panicles, early summer
+    fruit_visible: papery leaf-like pods that split into four boat-shaped segments with pea-sized seeds
+      on the edges
+    bark: smooth green to grey-green bark, which gives the Japanese name aogiri ("green paulownia")
+  timber:
+    heartwood: pale
+    sapwood: null
+    grain: straight
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: light and resonant
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - guqin soundboards (with paulownia)
+    - furniture
+  products:
+    food:
+    - roasted seeds eaten and once used as a coffee substitute
+    sap_resin_latex: []
+    bark:
+    - bark fibre for rope
+    leaves: []
+    dyes: []
+    medicinal:
+    - leaves, seeds and roots used in traditional Chinese medicine
+    toxicity: null
+  lore:
+    folklore:
+    - the phoenix (fenghuang) perches on no tree but the wutong; a saying goes that planting a wutong
+      will draw the phoenix
+    cultures:
+    - '"one leaf falls and all know autumn has come" refers to the wutong''s early leaf fall'
+    - a courtyard tree of rain-on-leaves poetry, such as Li Yu's
+    symbolism:
+    - nobility and virtue, as the perch of the phoenix
+    - solitude and autumn melancholy
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: the only perch of the phoenix'
+    dimensions:
+    - aether
+    hooks:
+    - autumn herald tree
+    - resonant instrument wood
+  sources:
+  - https://www.gbif.org/species/3152111
+  - https://plants.ces.ncsu.edu/plants/firmiana-simplex/

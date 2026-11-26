@@ -1,0 +1,30 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 121 and seed -2678765428513701333 with 2 workers on 8 cores with 3641MB heap and 1024MB offheap memory [pid: 879118] (Linux 6.12.115-140.210.amzn2023.x86_64 amd64, Amazon.com Inc. 21.0.13 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file goal-model/model/GoalSource.tla
+Parsing file /tmp/Integers.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module GoalSource
+Starting... (2026-11-15 00:25:27)
+Implied-temporal checking--satisfiability problem has 9 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-15 00:25:27.
+Checking 9 branches of temporal properties for the current state space with 49383 total distinct states at (2026-11-15 00:25:30)
+Finished checking temporal properties in 00s at 2026-11-15 00:25:30
+Progress(12) at 2026-11-15 00:25:30: 19,791 states generated (19,791 s/min), 5,487 distinct states found (5,487 ds/min), 2,239 states left on queue.
+Checking 9 branches of temporal properties for the current state space with 1142100 total distinct states at (2026-11-15 00:26:30)
+Finished checking temporal properties in 07s at 2026-11-15 00:26:38
+Progress(20) at 2026-11-15 00:26:38: 570,312 states generated (550,521 s/min), 126,901 distinct states found (121,414 ds/min), 35,446 states left on queue.
+Checking 9 branches of temporal properties for the current state space with 2105964 total distinct states at (2026-11-15 00:27:38)
+Finished checking temporal properties in 17s at 2026-11-15 00:27:55
+Progress(22) at 2026-11-15 00:27:55: 1,106,671 states generated (536,359 s/min), 233,997 distinct states found (107,096 ds/min), 57,348 states left on queue.
+Checking 9 branches of temporal properties for the current state space with 3061269 total distinct states at (2026-11-15 00:28:55)
+Finished checking temporal properties in 27s at 2026-11-15 00:29:23
+Progress(23) at 2026-11-15 00:29:23: 1,637,435 states generated (530,764 s/min), 340,141 distinct states found (106,144 ds/min), 79,089 states left on queue.
+Progress(24) at 2026-11-15 00:30:23: 2,169,708 states generated (532,273 s/min), 443,166 distinct states found (103,025 ds/min), 98,578 states left on queue.
+Checking 9 branches of temporal properties for the current state space with 4883175 total distinct states at (2026-11-15 00:31:23)

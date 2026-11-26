@@ -1,0 +1,497 @@
+# Tree candidates: prehistoric. Fields per design/trees.md.
+# Fossil-record trees and tree-like organisms only; living fossils and trees
+# extinct in historic times belong to their living regions.
+# Total: 26; tiers: 1: 8, 2: 11, 3: 7
+# Status: extinct 26
+# Inclusion: well-known 3, cultural 3, striking 18, product 2, prehistoric 26
+# Genera with 5+ entries: none
+
+- id: agathoxylon
+  names:
+  - petrified araucarian
+  - Araucarioxylon
+  scientific: Agathoxylon arizonicum
+  rank: group
+  stands_for:
+  - Araucaria mirabilis (Cerro Cuadrado)
+  - Woodworthia
+  - Schilderia
+  distinct_from:
+  - 'monkey-puzzle: living Andean araucaria'
+  split_from: null
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  - well-known
+  region: prehistoric
+  why: Late Triassic conifer logs of Arizona's Petrified Forest, with jewel-coloured agatized wood; also
+    stands for the Jurassic Araucaria mirabilis of Patagonia's Cerro Cuadrado petrified forest, famous
+    for its petrified cones.
+- id: archaeopteris
+  names:
+  - Archaeopteris
+  - Callixylon
+  scientific: Archaeopteris
+  rank: genus
+  stands_for:
+  - Callixylon (trunk wood)
+  distinct_from:
+  - 'wattieza: cladoxylopsid with branchlets, no true leaves or secondary wood of this kind'
+  split_from: null
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Late Devonian progymnosperm, the first tree with modern-like wood, leaves and branches; its roots
+    run through the 386-million-year-old Cairo fossil forest in New York.
+- id: calamites
+  names:
+  - Calamites
+  - giant horsetail
+  scientific: Calamites
+  rank: genus
+  stands_for:
+  - Arthropitys
+  distinct_from:
+  - 'pseudobornia: Devonian sphenopsid with forked, not needle-like, leaf whorls'
+  split_from: null
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Tree-sized horsetail of Carboniferous swamps, commonly 10-20 m, with a jointed, ribbed trunk.
+- id: cordaites
+  names:
+  - Cordaites
+  scientific: Cordaites
+  rank: genus
+  stands_for: []
+  distinct_from:
+  - 'walchia: needle-leaved early conifer, not strap-leaved'
+  split_from: null
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Late Carboniferous to Permian gymnosperm with strap leaves up to a metre long, near the origin
+    of conifers; some grew in coal-swamp mangroves.
+- id: dicroidium
+  names:
+  - Dicroidium
+  scientific: Dicroidium
+  rank: genus
+  stands_for:
+  - Umkomasia
+  distinct_from:
+  - 'glossopteris: Permian tongue-leaved predecessor in the same Gondwanan lands'
+  split_from: null
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  region: prehistoric
+  why: Triassic seed fern trees of Gondwana with forked, feathery fronds.
+- id: glossopteris
+  names:
+  - Glossopteris
+  scientific: Glossopteris
+  rank: genus
+  stands_for:
+  - Vertebraria (roots)
+  - Gangamopteris
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - cultural
+  region: prehistoric
+  why: Dominant Permian tree of Gondwana; its fossils across southern continents were early evidence for
+    continental drift, and Scott's polar party hauled Glossopteris fossils from the Beardmore Glacier
+    until they died in 1912.
+- id: lepidodendron
+  names:
+  - Lepidodendron
+  - scale tree
+  scientific: Lepidodendron
+  rank: group
+  stands_for:
+  - Lepidophloios
+  - Diaphorodendron
+  - Synchysidendron
+  - Stigmaria (rootstocks)
+  distinct_from:
+  - 'sigillaria: mostly unbranched ribbed trunk'
+  - 'cyclostigma: smaller Devonian forerunner'
+  split_from: null
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  - well-known
+  region: prehistoric
+  why: Carboniferous lycopsid with diamond-patterned bark and a forked crown, commonly 30-40 m tall, a
+    main source of coal; Lepidophloios differs mainly in leaf-cushion shape.
+- id: medullosa
+  names:
+  - Medullosa
+  scientific: Medullosa
+  rank: genus
+  stands_for:
+  - Alethopteris (foliage)
+  - Neuropteris (foliage)
+  distinct_from:
+  - 'psaronius: true tree fern with a root mantle; Medullosa bore seeds'
+  split_from: null
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  region: prehistoric
+  why: Carboniferous seed fern with a stem up to about 5 m crowned by very large fronds.
+- id: prototaxites
+  names:
+  - Prototaxites
+  scientific: Prototaxites
+  rank: genus
+  stands_for:
+  - Prototaxites loganii
+  - Prototaxites southworthii
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Branchless trunk-like organism up to 8 m tall, the largest organism on land in the Late Silurian
+    and Devonian; long thought a giant fungus, argued in 2025 to be an extinct lineage of its own.
+- id: psaronius
+  names:
+  - Psaronius
+  scientific: Psaronius
+  rank: genus
+  stands_for:
+  - Tietea
+  distinct_from:
+  - 'tree-fern: Psaronius is the extinct Paleozoic tree fern'
+  - 'tempskya: Cretaceous false trunk of many stems'
+  split_from: null
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Carboniferous-Permian marattialean tree fern with a mantle of roots around its trunk.
+- id: sigillaria
+  names:
+  - Sigillaria
+  scientific: Sigillaria
+  rank: genus
+  stands_for: []
+  distinct_from:
+  - 'lepidodendron: branched crown and diamond bark'
+  split_from: null
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Carboniferous lycopsid with a mostly unbranched ribbed trunk and a tuft of leaves.
+- id: tempskya
+  names:
+  - Tempskya
+  scientific: Tempskya
+  rank: genus
+  stands_for: []
+  distinct_from:
+  - 'psaronius: single true trunk with a root mantle'
+  split_from: null
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Cretaceous tree fern whose 'trunk' was a mass of stems and roots.
+- id: walchia
+  names:
+  - Walchia
+  - Lebachia
+  scientific: Walchia
+  rank: group
+  stands_for:
+  - Utrechtia
+  - Otovicia
+  - Ullmannia
+  distinct_from:
+  - 'voltzia: later Triassic conifer with looser, broader-leaved shoots'
+  split_from: null
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  region: prehistoric
+  why: Among the earliest conifers in the Late Carboniferous and Permian, with flat sprays like a monkey-puzzle
+    seedling.
+- id: wattieza
+  names:
+  - Wattieza
+  - Gilboa tree
+  scientific: Wattieza
+  rank: group
+  stands_for:
+  - Eospermatopteris (trunk)
+  - Calamophyton
+  - Pseudosporochnus
+  - Xinicaulis
+  distinct_from:
+  - 'archaeopteris: progymnosperm with true leaves and modern-like wood'
+  split_from: null
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Middle Devonian cladoxylopsid up to about 8 m, palm-like with a crown of branchlets, among the
+    earliest trees; stumps of the Gilboa forest in New York. Its smaller relative Calamophyton formed
+    the oldest known fossil forest, on Svalbard.
+- id: williamsonia
+  names:
+  - Williamsonia
+  scientific: Williamsonia
+  rank: group
+  stands_for:
+  - Wielandiella
+  distinct_from:
+  - 'cycadeoidea: squat barrel trunk, not a branched stem'
+  split_from: null
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Jurassic-Cretaceous bennettite, cycad-like with slender branched stems and flower-like reproductive
+    structures.
+- id: cycadeoidea
+  names:
+  - Cycadeoidea
+  - fossil cycad
+  scientific: Cycadeoidea
+  rank: genus
+  stands_for:
+  - Monanthesia
+  distinct_from:
+  - 'williamsonia: slender branched bennettite'
+  - 'cycad: living cycads are a separate order'
+  split_from: williamsonia
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  - cultural
+  region: prehistoric
+  why: Cretaceous bennettite with a squat barrel trunk studded with flower-like cones; collectors stripped
+    the Fossil Cycad National Monument in South Dakota bare, and it was abolished in 1957.
+- id: pseudobornia
+  names:
+  - Pseudobornia
+  scientific: Pseudobornia ursina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'calamites: later, with simple needle-like leaf whorls'
+  split_from: null
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Late Devonian horsetail relative from Bear Island, possibly up to 15-20 m, with whorls of deeply
+    forked leaves.
+- id: cyclostigma
+  names:
+  - Cyclostigma
+  scientific: Cyclostigma kiltorkense
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lepidodendron: much larger Carboniferous scale tree'
+  split_from: null
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  region: prehistoric
+  why: Late Devonian lycopsid tree of about 8 m from Kiltorcan, Ireland, an early scale tree with sparse
+    leaf scars.
+- id: pleuromeia
+  names:
+  - Pleuromeia
+  scientific: Pleuromeia sternbergii
+  rank: group
+  stands_for:
+  - Pleuromeia rossica
+  distinct_from:
+  - 'sigillaria: far taller Paleozoic lycopsid'
+  split_from: null
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Early-Middle Triassic pole-like lycopsid, an unbranched stem up to about 2 m on a lobed rootstock,
+    topped by grassy leaves and a cone; it carpeted coasts after the end-Permian extinction.
+- id: paratingia
+  names:
+  - Paratingia
+  - Noeggerathiales
+  scientific: Paratingia wudensis
+  rank: group
+  stands_for:
+  - Noeggerathia
+  - Tingia
+  distinct_from:
+  - 'psaronius: tree fern, whereas Paratingia bore cones under once-divided fronds'
+  split_from: null
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Early Permian small tree with a crown of fern-like fronds, preserved standing in the Wuda volcanic-ash
+    'Pompeii' forest of Inner Mongolia.
+- id: voltzia
+  names:
+  - Voltzia
+  scientific: Voltzia
+  rank: genus
+  stands_for:
+  - Pseudovoltzia
+  - Aethophyllum
+  distinct_from:
+  - 'walchia: earlier, with tight regular sprays'
+  split_from: null
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  region: prehistoric
+  why: Triassic conifer of the Grès à Voltzia sandstone of the Vosges, a transition toward modern conifer
+    families.
+- id: sphenobaiera
+  names:
+  - Sphenobaiera
+  scientific: Sphenobaiera
+  rank: group
+  stands_for:
+  - Baiera
+  - Ginkgoites
+  distinct_from:
+  - 'ginkgo: the one surviving ginkgophyte, with fan leaves on stalks'
+  split_from: null
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Permian-Cretaceous ginkgophyte trees whose stalkless wedge leaves split into narrow ribbons.
+- id: pentoxylon
+  names:
+  - Pentoxylon
+  scientific: Pentoxylon sahnii
+  rank: species
+  stands_for:
+  - Nipaniophyllum (leaves)
+  distinct_from:
+  - 'williamsonia: bennettite with pinnate fronds, not strap leaves'
+  split_from: null
+  tier: 3
+  status: extinct
+  inclusion:
+  - prehistoric
+  region: prehistoric
+  why: Early Cretaceous small tree of India's Rajmahal Hills with tufts of thick strap leaves and mulberry-like
+    seed heads.
+- id: frenelopsis
+  names:
+  - Frenelopsis
+  - cheirolepid conifer
+  scientific: Frenelopsis
+  rank: group
+  stands_for:
+  - Pseudofrenelopsis
+  - Brachyphyllum (cheirolepid shoots)
+  - Pagiophyllum (cheirolepid shoots)
+  - Hirmeriella
+  distinct_from:
+  - 'agathoxylon: araucarian with ordinary leafy shoots'
+  split_from: null
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - striking
+  region: prehistoric
+  why: Cretaceous salt-tolerant conifer with jointed, succulent, almost leafless shoots like a woody glasswort;
+    its family, the Cheirolepidiaceae, dominated Mesozoic coasts.
+- id: baltic-amber-tree
+  names:
+  - Baltic amber tree
+  - amber pine
+  scientific: Pinites succinifer (form taxon)
+  rank: group
+  stands_for: []
+  distinct_from:
+  - 'umbrella-pine: living relative that the resin chemistry most resembles'
+  split_from: null
+  tier: 1
+  status: extinct
+  inclusion:
+  - prehistoric
+  - product
+  - cultural
+  - well-known
+  region: prehistoric
+  why: Eocene conifer whose resin became Baltic amber, traded since the Stone Age; its identity is debated
+    between pine and umbrella-pine relatives.
+- id: dominican-amber-tree
+  names:
+  - Dominican amber tree
+  scientific: Hymenaea protera
+  rank: species
+  stands_for:
+  - Hymenaea mexicana (Chiapas amber)
+  distinct_from:
+  - 'baltic-amber-tree: conifer, whereas this is a broadleaf legume'
+  - 'jatoba: living relative that looks alike; this one is known from its amber'
+  split_from: null
+  tier: 2
+  status: extinct
+  inclusion:
+  - prehistoric
+  - product
+  - striking
+  region: prehistoric
+  why: Oligocene-Miocene tropical legume tree whose resin became Dominican amber, famous for trapped insects
+    and lizards.

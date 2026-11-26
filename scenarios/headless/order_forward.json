@@ -1,0 +1,19 @@
+{
+  "include": "../v0.1-scene.json",
+  "frames": 30,
+  "camera": {
+    "pos": [
+      14.0,
+      9.0,
+      21.0
+    ],
+    "look": [
+      15.0,
+      22.0,
+      16.0
+    ]
+  },
+  "render": {
+    "faceOrder": "forward"
+  }
+}

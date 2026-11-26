@@ -1,0 +1,3772 @@
+# Tree candidates: south-southeast-asia. Fields per design/trees.md.
+# Total: 209; tiers: 1: 28, 2: 101, 3: 80
+# Inclusion: well-known 12, folklore 19, cultural 112, striking 74, flowers 42, fruit 60, medicinal 39, toxic 24, product 90
+# Genera with 5+ entries: Citrus 7, Terminalia 6, Ficus 5
+
+- id: abaca
+  names:
+  - abaca
+  - Manila hemp
+  scientific: Musa textilis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'banana: abaca is grown for fibre, not fruit'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: south-southeast-asia
+  why: Philippine banana grown for leaf-sheath fibre made into ropes, tea bags and banknotes.
+- id: agarwood
+  names:
+  - agarwood
+  - oud
+  - gaharu
+  scientific: Aquilaria malaccensis
+  rank: genus
+  stands_for:
+  - Aquilaria crassna
+  - Aquilaria sinensis
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - medicinal
+  - product
+  region: south-southeast-asia
+  why: Infected heartwood becomes resinous agarwood, the most expensive incense raw material (oud); Tripura's
+    state tree.
+- id: aini
+  names:
+  - aini
+  - anjili
+  - wild jack
+  scientific: Artocarpus hirsutus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jackfruit: aini has small spiny fruit and is a boat timber'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  region: south-southeast-asia
+  why: Kerala jackfruit relative whose durable wood builds the chundan snake boats of the monsoon races.
+- id: almaciga
+  names:
+  - almaciga
+  - Manila copal
+  scientific: Agathis dammara
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kauri: almaciga is the tropical Asian Agathis tapped for copal'
+  split_from: kauri
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: south-southeast-asia
+  why: Philippine and Moluccan kauri tapped by forest peoples for copal resin used in varnish and torches.
+- id: ambarella
+  names:
+  - ambarella
+  - kedondong
+  - hog plum
+  scientific: Spondias dulcis
+  rank: group
+  stands_for:
+  - Spondias pinnata (Indian hog plum)
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: south-southeast-asia
+  why: Crisp sour green plum with a spiny seed, pickled or eaten with chili.
+- id: amla
+  names:
+  - amla
+  - Indian gooseberry
+  scientific: Phyllanthus emblica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - fruit
+  region: south-southeast-asia
+  why: Sour vitamin-rich fruit central to Ayurveda.
+- id: anahaw
+  names:
+  - anahaw
+  - footstool palm
+  - Livistona rotundifolia (syn.)
+  scientific: Saribus rotundifolius
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: south-southeast-asia
+  why: Round-leaved fan palm, the national leaf of the Philippines, used for thatch and fans.
+- id: areca-palm
+  names:
+  - areca palm
+  - betel nut
+  scientific: Areca catechu
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - toxic
+  - product
+  region: south-southeast-asia
+  why: Betel nut chewed with lime and leaf across South Asia and the Pacific, a stimulant and carcinogen.
+- id: arjuna
+  names:
+  - arjuna
+  scientific: Terminalia arjuna
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tropical-almond: tropical almond is a coastal tree with big red-turning leaves'
+  - 'haritaki: haritaki is the small-fruited myrobalan of triphala'
+  - 'bibhitaki: bibhitaki is the tall dice-nut tree with leaves crowded at the twig tips'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Smooth pale-barked riverbank tree whose bark is the Ayurvedic heart tonic; a host of tasar silkworms.
+- id: ashoka
+  names:
+  - ashoka
+  - sorrowless tree
+  scientific: Saraca asoca
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'false-ashoka: false ashoka is the columnar weeping-leaved avenue tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - flowers
+  region: south-southeast-asia
+  why: Sacred to Hindus and Buddhists; Sita waited in an ashoka grove in the Ramayana; orange-red flower
+    clusters.
+- id: assam-tea
+  names:
+  - Assam tea
+  - large-leaf tea
+  scientific: Camellia sinensis var. assamica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tea-plant: Assam tea is the large-leaved tree form'
+  split_from: tea-plant
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: south-southeast-asia
+  why: Large-leaved tea that grows wild into a 15 m tree, 'discovered' among the Singpho people in 1823.
+- id: bachang
+  names:
+  - bachang
+  - binjai
+  - bambangan
+  scientific: Mangifera foetida
+  rank: group
+  stands_for:
+  - Mangifera caesia (binjai)
+  - Mangifera pajang (bambangan)
+  - Mangifera odorata (kuini)
+  distinct_from:
+  - 'mango: bachang are the wild strong-smelling Bornean mangoes'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - toxic
+  region: south-southeast-asia
+  why: Wild Bornean mangoes with pungent fruit and sap that blisters the lips.
+- id: bael
+  names:
+  - bael
+  - wood apple
+  scientific: Aegle marmelos
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - medicinal
+  region: south-southeast-asia
+  why: Trifoliate leaves sacred to Shiva and hard-shelled fruit made into sherbet; state tree of Puducherry.
+- id: bakul
+  names:
+  - bakul
+  - Spanish cherry
+  - maulsari
+  scientific: Mimusops elengi
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - fruit
+  region: south-southeast-asia
+  why: Tiny star-shaped flowers that keep their scent when dried; in Sanskrit poetry it blooms when a
+    woman sprays it with wine from her mouth.
+- id: banana
+  names:
+  - banana
+  - plantain
+  scientific: Musa acuminata
+  rank: group
+  stands_for:
+  - Musa balbisiana
+  - Musa × paradisiaca (plantain)
+  distinct_from:
+  - 'abaca: abaca is grown for fibre, not fruit'
+  - 'enset: enset is the Ethiopian false banana eaten for its starchy stem'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - cultural
+  region: south-southeast-asia
+  why: Giant tree-like herb whose pseudostem of leaf sheaths carries the banana bunch; domesticated in
+    New Guinea and Southeast Asia.
+- id: banyan
+  names:
+  - banyan
+  - strangler fig
+  - balete
+  - bargad
+  scientific: Ficus benghalensis
+  rank: group
+  stands_for:
+  - Ficus microcarpa (Chinese banyan, curtain fig)
+  - Ficus aurea (Florida strangler fig)
+  - Ficus watkinsiana
+  - Philippine balete strangler figs
+  distinct_from:
+  - 'sacred-fig: sacred fig is the heart-leaved Bodhi tree'
+  - 'sycamore-fig: sycamore fig fruits on the trunk without prop roots'
+  - 'rubber-fig: rubber fig has huge glossy leaves and is grown for latex'
+  - 'cluster-fig: cluster fig bears fruit in clusters on the trunk and has no prop roots'
+  - 'weeping-fig: weeping fig is a small-leaved drooping tree'
+  - 'moreton-bay-fig: the Australian buttressed fig'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - folklore
+  - striking
+  region: south-southeast-asia
+  why: India's national tree, spreading by prop roots into a forest (the Great Banyan of Kolkata); strangler
+    figs start life atop other trees.
+- id: benzoin
+  names:
+  - benzoin
+  - styrax
+  scientific: Styrax benzoin
+  rank: genus
+  stands_for:
+  - Styrax tonkinensis
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: south-southeast-asia
+  why: Bark resin burned as incense and used in friar's balsam.
+- id: ber
+  names:
+  - ber
+  - Indian jujube
+  scientific: Ziziphus mauritiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jujube: ber is the evergreen tropical jujube with woolly leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  - cultural
+  region: south-southeast-asia
+  why: Thorny dry-country fruit tree of India and lac-insect host whose berries are offered to Shiva.
+- id: bhutan-cypress
+  names:
+  - Bhutan cypress
+  - Kashmir cypress
+  - tsenden
+  scientific: Cupressus cashmeriana
+  rank: species
+  stands_for:
+  - Cupressus torulosa (Himalayan cypress)
+  distinct_from:
+  - 'italian-cypress: Bhutan cypress weeps rather than forming a column'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: south-southeast-asia
+  why: Weeping blue-green cypress planted at dzongs and monasteries; the cypress (tsenden, often given
+    as C. torulosa) is Bhutan's national tree.
+- id: bibhitaki
+  names:
+  - bibhitaki
+  - belleric myrobalan
+  - baheda
+  scientific: Terminalia bellirica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'haritaki: haritaki is a smaller tree with ribbed fruit'
+  split_from: arjuna
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - folklore
+  - product
+  region: south-southeast-asia
+  why: Tall tree whose nuts served as the dice of the Rigveda's Gambler's Lament; one of triphala's three.
+- id: bilimbi
+  names:
+  - bilimbi
+  - belimbing wuluh
+  scientific: Averrhoa bilimbi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'star-fruit: bilimbi has small cucumber-shaped fruit on the trunk'
+  split_from: star-fruit
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: south-southeast-asia
+  why: Very sour cucumber-shaped fruit hanging from the trunk, used in pickles and to clean brass.
+- id: blind-your-eye
+  names:
+  - blind-your-eye mangrove
+  - milky mangrove
+  scientific: Excoecaria agallocha
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'agarwood: this is a false agarwood'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  region: south-southeast-asia
+  why: Mangrove whose milky sap blisters skin and can blind; its rotten wood is a substitute agarwood.
+- id: bornean-camphor
+  names:
+  - Borneo camphor
+  - kapur
+  scientific: Dryobalanops aromatica
+  rank: species
+  stands_for:
+  - Dryobalanops lanceolata
+  distinct_from:
+  - 'meranti: Borneo camphor has camphor crystals and crown shyness'
+  - 'camphor-tree: kapur is a dipterocarp, not a laurel'
+  split_from: meranti
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - medicinal
+  region: south-southeast-asia
+  why: Dipterocarp whose trunk yields camphor crystals traded to China and Arabia; famous for crown shyness.
+- id: bornean-ironwood
+  names:
+  - Bornean ironwood
+  - belian
+  scientific: Eusideroxylon zwageri
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'merbau: merbau is a red-brown durable timber, belian is darker and far denser'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Extremely durable dense wood used for houses on stilts and shingles.
+- id: buddhas-hand
+  names:
+  - Buddha's hand
+  - fingered citron
+  scientific: Citrus medica var. sarcodactylis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'citron: Buddha''s hand has fingered fruit'
+  split_from: citron
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  - cultural
+  region: south-southeast-asia
+  why: Fruit split into finger-like segments, offered at Buddhist temples and kept for fragrance.
+- id: burma-padauk
+  names:
+  - Burma padauk
+  - Andaman padauk
+  scientific: Pterocarpus macrocarpus
+  rank: group
+  stands_for:
+  - Pterocarpus dalbergioides (Andaman padauk)
+  distinct_from:
+  - 'padauk: Burma padauk is the Asian species with festival flowers'
+  - 'narra: Burma padauk is the Myanmar species with April golden flowers'
+  split_from: padauk
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - striking
+  region: south-southeast-asia
+  why: Myanmar's national flower, blooming gold for one day around Thingyan; red-orange timber; Andaman
+    padauk is the state tree of the Andaman and Nicobar Islands.
+- id: buttercup-tree
+  names:
+  - buttercup tree
+  - yellow silk cotton
+  scientific: Cochlospermum religiosum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Yellow flowers on leafless branches, offered in temples; seeds give floss and bark gives gum.
+- id: cajeput
+  names:
+  - cajeput
+  - kayu putih
+  scientific: Melaleuca cajuputi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'paperbark: cajeput is the SE Asian oil-distilling paperbark'
+  split_from: paperbark
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: south-southeast-asia
+  why: White-barked paperbark of the Moluccas distilled for minyak kayu putih oil.
+- id: calamansi
+  names:
+  - calamansi
+  - calamondin
+  scientific: Citrus × microcarpa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lemon: calamansi is a tiny round sour fruit'
+  - 'lime: calamansi is a kumquat hybrid with orange flesh'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: south-southeast-asia
+  why: Tiny sour orange-fleshed citrus squeezed over nearly every Filipino dish.
+- id: campbells-magnolia
+  names:
+  - Campbell's magnolia
+  - Himalayan magnolia
+  scientific: Magnolia campbellii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'champak: Campbell''s magnolia is a Himalayan tree with huge pink flowers'
+  - 'yulan-magnolia: Campbell''s magnolia is the Himalayan tree magnolia'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: south-southeast-asia
+  why: Huge pink saucer flowers on bare branches around Darjeeling and Sikkim.
+- id: cannonball-mangrove
+  names:
+  - cannonball mangrove
+  - puzzle-nut tree
+  scientific: Xylocarpus granatum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: south-southeast-asia
+  why: Mangrove with snaking plank roots and cannonball fruit of puzzle-piece seeds; bark gives tannin.
+- id: cempedak
+  names:
+  - cempedak
+  - marang
+  scientific: Artocarpus integer
+  rank: group
+  stands_for:
+  - Artocarpus odoratissimus (marang)
+  distinct_from:
+  - 'jackfruit: cempedak has smaller, softer, strongly scented fruit'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: south-southeast-asia
+  why: Smaller, softer, intensely aromatic jackfruit relative, often fried in batter.
+- id: ceylon-satinwood
+  names:
+  - Ceylon satinwood
+  - East Indian satinwood
+  scientific: Chloroxylon swietenia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'haldu: satinwood is lustrous gold with ribbon figure'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Golden lustrous timber with ribbon and bee's-wing figure, prized in Sheraton furniture.
+- id: champak
+  names:
+  - champak
+  - Michelia champaca (syn.)
+  scientific: Magnolia champaca
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'southern-magnolia: champak bears small fragrant golden flowers'
+  - 'campbells-magnolia: Campbell''s magnolia is a Himalayan tree with huge pink flowers'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Intensely fragrant golden flowers offered at Hindu and Buddhist temples.
+- id: chaulmoogra
+  names:
+  - chaulmoogra
+  - hydnocarpus
+  - Hydnocarpus wightianus (syn.)
+  scientific: Hydnocarpus pentandrus
+  rank: group
+  stands_for:
+  - Hydnocarpus kurzii
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - toxic
+  - product
+  region: south-southeast-asia
+  why: Seed oil was the main leprosy treatment before sulfa drugs.
+- id: chengal
+  names:
+  - chengal
+  scientific: Neobalanocarpus heimii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'merbau: chengal is a yellow-brown dipterocarp'
+  - 'bornean-ironwood: chengal is lighter and yellow-brown'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: south-southeast-asia
+  why: Extremely durable yellow-brown Malay timber of traditional houses, palaces and boats.
+- id: chickrassy
+  names:
+  - chickrassy
+  - Chittagong wood
+  scientific: Chukrasia tabularis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mahogany: chickrassy is the Asian mahogany relative'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Reddish figured 'Indian mahogany' with a satiny shimmer.
+- id: chinaberry
+  names:
+  - chinaberry
+  - bead tree
+  - Persian lilac
+  scientific: Melia azedarach
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - flowers
+  region: south-southeast-asia
+  why: Lilac flowers and toxic yellow berries strung as beads.
+- id: chir-pine
+  names:
+  - chir pine
+  - longleaf Indian pine
+  scientific: Pinus roxburghii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'himalayan-blue-pine: blue pine is a soft five-needled high-altitude pine'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: south-southeast-asia
+  why: Fire-adapted Himalayan pine with long drooping needles, tapped for Indian turpentine and rosin.
+- id: chironji
+  names:
+  - chironji
+  - cuddapah almond
+  - Buchanania cochinchinensis (syn.)
+  scientific: Buchanania lanzan
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: south-southeast-asia
+  why: Dry-forest tree whose small almond-flavoured kernels garnish Indian sweets, gathered by Adivasi
+    communities.
+- id: cinnamon
+  names:
+  - cinnamon
+  - Ceylon cinnamon
+  scientific: Cinnamomum verum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'camphor-tree: cinnamon is the spice-bark Cinnamomum'
+  - 'cassia: cassia gives thick hard bark, cinnamon fine papery quills'
+  - 'tejpat: tejpat is used for its leaves, not bark'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: south-southeast-asia
+  why: Inner bark spice of Sri Lanka, rolled into fine quills, traded since ancient Egypt.
+- id: citron
+  names:
+  - citron
+  - etrog
+  scientific: Citrus medica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lemon: citron is thick-rinded and ritual'
+  - 'buddhas-hand: Buddha''s hand has fingered fruit'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - striking
+  region: south-southeast-asia
+  why: Thick-rinded fruit of the Jewish Sukkot ritual and the oldest cultivated citrus.
+- id: clove
+  names:
+  - clove
+  scientific: Syzygium aromaticum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jamun: clove is the spice-bud Syzygium of the Moluccas'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: south-southeast-asia
+  why: Dried flower buds from the Moluccas, a spice traded since antiquity; eugenol numbs toothache.
+- id: cluster-fig
+  names:
+  - cluster fig
+  - udumbara
+  - gular
+  scientific: Ficus racemosa
+  rank: species
+  stands_for:
+  - Ficus auriculata (Roxburgh fig)
+  distinct_from:
+  - 'banyan: cluster fig bears fruit in clusters on the trunk and has no prop roots'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - fruit
+  region: south-southeast-asia
+  why: Sacred udumbara of Hindu and Buddhist lore, its figs hanging in clusters from the trunk.
+- id: coconut
+  names:
+  - coconut palm
+  scientific: Cocos nucifera
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - fruit
+  - product
+  region: south-southeast-asia
+  why: Leaning tropical beach palm, 'tree of life' providing food, water, fibre, oil and timber; national
+    tree of the Maldives and state tree of Kerala.
+- id: copper-pod
+  names:
+  - copper pod
+  - yellow flame tree
+  scientific: Peltophorum pterocarpum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  region: south-southeast-asia
+  why: Spreading tree with yellow flower plumes followed by coppery pods.
+- id: crepe-myrtle
+  names:
+  - crape myrtle
+  - pride of India
+  scientific: Lagerstroemia indica
+  rank: genus
+  stands_for:
+  - Lagerstroemia subcostata var. fauriei (Japanese crepe myrtle)
+  distinct_from:
+  - 'jarul: jarul is a large timber tree with big mauve flower spikes'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: south-southeast-asia
+  why: Crinkled flowers through summer and smooth mottled peeling bark.
+- id: crown-flower
+  names:
+  - crown flower
+  - giant milkweed
+  - madar
+  scientific: Calotropis gigantea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sodom-apple: crown flower is the taller lilac-flowered species'
+  - 'sodom-apple: Sodom apple is a pale-flowered Arabian-African species'
+  split_from: sodom-apple
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - toxic
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Waxy lilac crown-shaped flowers offered to Shiva and strung into Hawaiian leis; toxic latex and
+    silky floss.
+- id: curry-tree
+  names:
+  - curry tree
+  - kadi patta
+  - Murraya koenigii (syn.)
+  scientific: Bergera koenigii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tejpat: curry leaves are small pinnate leaflets, used fresh'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: south-southeast-asia
+  why: Small tree whose aromatic leaves are fried into South Indian and Sri Lankan dishes.
+- id: damar
+  names:
+  - damar
+  - damar mata kucing
+  - Shorea javanica (syn.)
+  scientific: Anthoshorea javanica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'meranti: damar is a Shorea tapped for resin in gardens'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: south-southeast-asia
+  why: Tapped for clear damar resin in the Krui agroforests of Sumatra, tended by families for generations.
+- id: deodar
+  names:
+  - deodar
+  - Himalayan cedar
+  scientific: Cedrus deodara
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cedar-of-lebanon: deodar has drooping tips and Himalayan sacred lore'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: south-southeast-asia
+  why: '''Timber of the gods'' planted at Himalayan temples, with durable fragrant wood; national tree
+    of Pakistan and state tree of Himachal Pradesh.'
+- id: devil-tree
+  names:
+  - devil tree
+  - blackboard tree
+  - saptaparni
+  scientific: Alstonia scholaris
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - medicinal
+  region: south-southeast-asia
+  why: Saptaparni, held to be a haunt of spirits in South and Southeast Asia; wood used for school slates;
+    West Bengal's state tree.
+- id: dhawa
+  names:
+  - dhawa
+  - axlewood
+  - ghatti
+  - Anogeissus latifolia (syn.)
+  scientific: Terminalia anogeissiana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: south-southeast-asia
+  why: Dry-forest tree (now placed in Terminalia) yielding gum ghatti and tough axle wood; a tasar silk
+    host.
+- id: durian
+  names:
+  - durian
+  scientific: Durio zibethinus
+  rank: genus
+  stands_for:
+  - Durio kutejensis
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: '''King of fruits'', spiky and notoriously smelly, banned on Singapore transit.'
+- id: ebony
+  names:
+  - ebony
+  - Ceylon ebony
+  - Gabon ebony
+  scientific: Diospyros ebenum
+  rank: group
+  stands_for:
+  - Diospyros tesselaria (Mauritius ebony)
+  - Diospyros marmorata (Andaman marblewood)
+  distinct_from:
+  - 'macassar-ebony: Macassar ebony is striped, not jet black'
+  - 'persimmon: ebony is grown for black heartwood, not fruit'
+  - 'mabolo: mabolo is grown for its velvety fruit as well as timber'
+  - 'tendu: tendu is a dry-forest ebony grown for bidi leaves'
+  - 'african-ebony: the Gabon ebony of West and Central Africa'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - well-known
+  region: south-southeast-asia
+  why: Jet-black heartwood of piano keys, chess pieces and carvings since ancient Egypt.
+- id: elephant-apple
+  names:
+  - elephant apple
+  - chalta
+  scientific: Dillenia indica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - flowers
+  - striking
+  region: south-southeast-asia
+  why: Big white flowers and fist-sized sour fruit wrapped in fleshy sepals, eaten by elephants.
+- id: false-ashoka
+  names:
+  - false ashoka
+  - mast tree
+  - Polyalthia longifolia (syn.)
+  scientific: Monoon longifolium
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ashoka: false ashoka is the columnar weeping-leaved avenue tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: Narrow column of drooping wavy leaves lining Indian avenues and temples.
+- id: gamboge
+  names:
+  - gamboge
+  scientific: Garcinia hanburyi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mangosteen: gamboge is grown for its yellow resin'
+  split_from: mangosteen
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - toxic
+  region: south-southeast-asia
+  why: Yellow resin of Cambodia and Thailand used as a pigment and to dye Buddhist robes; a violent purgative.
+- id: gandaria
+  names:
+  - gandaria
+  - plum mango
+  - marian plum
+  scientific: Bouea macrophylla
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mango: gandaria fruit is plum-sized'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: south-southeast-asia
+  why: Small orange mango-like fruit with edible purple young leaves.
+- id: gmelina
+  names:
+  - gmelina
+  - gamhar
+  scientific: Gmelina arborea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - flowers
+  region: south-southeast-asia
+  why: Fast-growing pale-wooded tree with yellow-brown flowers, Meghalaya's state tree, a root of Ayurveda's
+    dashamoola and a plantation timber.
+- id: gnetum
+  names:
+  - melinjo
+  - gnetum
+  scientific: Gnetum gnemon
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: south-southeast-asia
+  why: Broad-leaved gymnosperm tree whose seeds are flattened into emping crackers.
+- id: golden-shower
+  names:
+  - golden shower
+  - Indian laburnum
+  scientific: Cassia fistula
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pink-shower: pink shower has pink flowers on upright sprays'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - medicinal
+  region: south-southeast-asia
+  why: Hanging golden flower sprays offered at Kerala's Vishu festival; Thailand's national tree; laxative
+    pods.
+- id: guggul
+  names:
+  - guggul
+  - Indian bdellium
+  scientific: Commiphora wightii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'myrrh: guggul is the Indian Commiphora'
+  split_from: myrrh
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: south-southeast-asia
+  why: Thorny desert shrub-tree of Rajasthan and Gujarat tapped for an Ayurvedic incense resin, now endangered.
+- id: gutta-percha
+  names:
+  - gutta-percha
+  scientific: Palaquium gutta
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jelutong: jelutong latex is chewing-gum base, not insulation'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: south-southeast-asia
+  why: Latex insulated the first submarine telegraph cables and made early golf balls.
+- id: haldu
+  names:
+  - haldu
+  - yellow teak
+  - Haldina cordifolia (syn.)
+  scientific: Adina cordifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ceylon-satinwood: haldu is plain yellow without figure'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Fine yellow even wood of Indian forests used for combs, carvings and boxes.
+- id: halmaddi
+  names:
+  - halmaddi
+  - white cedar
+  scientific: Ailanthus triphysa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: south-southeast-asia
+  why: Western Ghats tree tapped for the soft halmaddi resin of Indian incense sticks.
+- id: haritaki
+  names:
+  - haritaki
+  - chebulic myrobalan
+  scientific: Terminalia chebula
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'arjuna: arjuna is the riverbank bark-tonic tree'
+  split_from: arjuna
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Small ribbed fruit, the 'king of medicines' in Tibetan medicine and one of triphala's three; a
+    tannin and black dye.
+- id: hibiscus
+  names:
+  - Chinese hibiscus
+  - bunga raya
+  - gumamela
+  - japa
+  scientific: Hibiscus rosa-sinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'waru: waru is the coastal tree hibiscus with yellow flowers'
+  - 'rose-of-sharon: rose of Sharon is the hardy deciduous East Asian hibiscus'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: south-southeast-asia
+  why: Large shrub with big red trumpet flowers, Malaysia's national flower and the red flower offered
+    to Kali; its petals were rubbed on shoes as black polish.
+- id: himalayan-alder
+  names:
+  - Himalayan alder
+  - utis
+  scientific: Alnus nepalensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'alder: Himalayan alder flowers in autumn'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: south-southeast-asia
+  why: Fast-growing nitrogen-fixing tree of Himalayan landslides and terraces; Nagaland farmers pollard
+    it in jhum fields and it is Nagaland's state tree.
+- id: himalayan-birch
+  names:
+  - Himalayan birch
+  - bhojpatra
+  scientific: Betula utilis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'birch: Himalayan birch bark peels in sheets used as paper'
+  split_from: birch
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - striking
+  region: south-southeast-asia
+  why: Treeline birch with papery pinkish-white bark that carried Sanskrit and Buddhist manuscripts.
+- id: himalayan-blue-pine
+  names:
+  - Himalayan blue pine
+  - Bhutan pine
+  - kail
+  scientific: Pinus wallichiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'eastern-white-pine: blue pine has longer drooping needles and Himalayan habitat'
+  - 'chir-pine: blue pine is a soft five-needled high-altitude pine'
+  split_from: eastern-white-pine
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: south-southeast-asia
+  why: Soft drooping blue-grey five-needled pine of the high Himalaya, with long resinous cones.
+- id: himalayan-cherry
+  names:
+  - Himalayan cherry
+  - paiyun
+  - padam
+  scientific: Prunus cerasoides
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-cherry: Himalayan cherry flowers in autumn'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: south-southeast-asia
+  why: Wild cherry that blooms pink in autumn, sacred in Nepal and used at Tihar.
+- id: himalayan-fir
+  names:
+  - Himalayan fir
+  - pindrow fir
+  scientific: Abies spectabilis
+  rank: group
+  stands_for:
+  - Abies pindrow (west Himalayan fir)
+  - Abies densa
+  distinct_from:
+  - 'silver-fir: Himalayan firs form the high monsoon conifer belt'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Dark tall firs forming the Himalaya's high conifer belt.
+- id: himalayan-juniper
+  names:
+  - Himalayan juniper
+  - drooping juniper
+  scientific: Juniperus recurva
+  rank: group
+  stands_for:
+  - Juniperus indica (black juniper)
+  distinct_from:
+  - 'common-juniper: Himalayan junipers are trees burned as incense'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Treeline juniper burned as sang incense at Tibetan Buddhist shrines.
+- id: himalayan-oak
+  names:
+  - banj oak
+  - kharsu oak
+  scientific: Quercus leucotrichophora
+  rank: group
+  stands_for:
+  - Quercus semecarpifolia (kharsu oak)
+  - Quercus floribunda (moru oak)
+  distinct_from:
+  - 'holm-oak: Himalayan oaks are monsoon montane oaks'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  region: south-southeast-asia
+  why: Himalayan evergreen oaks lopped for fodder, central to hill-village livelihoods.
+- id: himalayan-spruce
+  names:
+  - Himalayan spruce
+  - morinda spruce
+  scientific: Picea smithiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'norway-spruce: Himalayan spruce has weeping branchlets'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Spruce with long drooping branchlets, of the western Himalaya.
+- id: himalayan-yew
+  names:
+  - Himalayan yew
+  - thuner
+  scientific: Taxus wallichiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'yew: Himalayan yew is the Asian taxol source'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - toxic
+  region: south-southeast-asia
+  why: Bark and leaves stripped for taxol cancer drugs until the tree became endangered.
+- id: illipe
+  names:
+  - illipe
+  - tengkawang
+  - Shorea macrophylla (syn.)
+  - engkabang
+  scientific: Rubroshorea macrophylla
+  rank: group
+  stands_for:
+  - Rubroshorea stenoptera
+  distinct_from:
+  - 'meranti: illipe is a riverside Shorea grown for its fat-rich nuts'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - fruit
+  - cultural
+  region: south-southeast-asia
+  why: Riverside Bornean Shorea whose mast-year nuts are pressed into illipe butter, a cocoa-butter substitute.
+- id: indian-coral-tree
+  names:
+  - Indian coral tree
+  - tiger's claw
+  - pangara
+  scientific: Erythrina variegata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'coral-tree: the Indian coral tree flowers scarlet on leafless branches'
+  split_from: coral-tree
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: south-southeast-asia
+  why: Thorny tree bursting into scarlet claw-shaped flowers on bare branches; Okinawa's prefectural flower.
+- id: indian-cork-tree
+  names:
+  - Indian cork tree
+  - tree jasmine
+  scientific: Millingtonia hortensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - product
+  region: south-southeast-asia
+  why: Tall narrow tree with long white night-scented tubular flowers and corky bark.
+- id: indian-date-palm
+  names:
+  - silver date palm
+  - wild date palm
+  - khejur
+  - sugar date palm
+  - khajur
+  scientific: Phoenix sylvestris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'date-palm: the silver date palm is tapped for sap, not grown for dates'
+  - 'date-palm: date palm is grown for fruit, this one for sap'
+  split_from: date-palm
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Tapped in Bengal winters for sap boiled into khejur gur jaggery.
+- id: indian-frankincense
+  names:
+  - Indian frankincense
+  - salai
+  scientific: Boswellia serrata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'frankincense: salai is the Indian dry-forest Boswellia'
+  - 'frankincense: Arabian frankincense is the classic temple incense'
+  split_from: frankincense
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - cultural
+  region: south-southeast-asia
+  why: Dry-forest tree of peninsular India whose gum resin is burned as incense and taken for arthritis.
+- id: indian-horse-chestnut
+  names:
+  - Indian horse chestnut
+  - Himalayan horse chestnut
+  scientific: Aesculus indica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'horse-chestnut: the Indian horse chestnut flowers later, in pink-flushed candles'
+  split_from: horse-chestnut
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - medicinal
+  - toxic
+  region: south-southeast-asia
+  why: Himalayan horse chestnut with white-and-pink candles, whose bitter seeds are leached into flour
+    in famine.
+- id: indian-kino
+  names:
+  - Indian kino tree
+  - vijaysar
+  - bijasal
+  scientific: Pterocarpus marsupium
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'red-sandalwood: Indian kino is a larger tree with golden-brown heartwood'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: south-southeast-asia
+  why: Red kino gum tree whose heartwood is carved into tumblers whose water is drunk for diabetes.
+- id: indian-rosewood
+  names:
+  - Indian rosewood
+  - sonokeling
+  - Bombay blackwood
+  scientific: Dalbergia latifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'brazilian-rosewood: Indian rosewood is the plantation-grown purple-brown species'
+  - 'sheesham: sheesham is the lighter golden-brown north Indian roadside rosewood'
+  - 'siamese-rosewood: Siamese rosewood is the red hongmu timber'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: Purple-brown instrument and furniture wood of peninsular India and Java.
+- id: ironwood-mesua
+  names:
+  - Ceylon ironwood
+  - nagkesar
+  scientific: Mesua ferrea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - striking
+  region: south-southeast-asia
+  why: National tree of Sri Lanka and state tree of Mizoram, with red young leaves, fragrant flowers and
+    very hard wood.
+- id: jackfruit
+  names:
+  - jackfruit
+  scientific: Artocarpus heterophyllus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'breadfruit: breadfruit is the Pacific starch fruit'
+  - 'cempedak: cempedak has smaller, softer, strongly scented fruit'
+  - 'aini: aini has small spiny fruit and is a boat timber'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  - product
+  region: south-southeast-asia
+  why: Largest tree-borne fruit, up to 50 kg, growing on the trunk; its heartwood dyes Buddhist monks'
+    robes.
+- id: jamun
+  names:
+  - jamun
+  - Java plum
+  scientific: Syzygium cumini
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'clove: clove is the spice-bud Syzygium of the Moluccas'
+  - 'rose-apple: rose apple has rose-scented hollow pale fruit'
+  - 'wax-apple: wax apple has glossy bell-shaped pink fruit'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  - cultural
+  region: south-southeast-asia
+  why: Purple fruit; Jambudvipa, the Indian name for the world island, is named after it.
+- id: jarul
+  names:
+  - jarul
+  - queen's crape myrtle
+  - banaba
+  - pride of India
+  scientific: Lagerstroemia speciosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'crepe-myrtle: jarul is a large timber tree with big mauve flower spikes'
+  split_from: crepe-myrtle
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - medicinal
+  region: south-southeast-asia
+  why: Large timber tree with big mauve flower spikes, Maharashtra's state flower; banaba leaf tea in
+    the Philippines.
+- id: jelutong
+  names:
+  - jelutong
+  scientific: Dyera costulata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'gutta-percha: jelutong latex is chewing-gum base, not insulation'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: south-southeast-asia
+  why: Malaysian giant whose latex was the base of chewing gum and whose soft even wood is used for pattern-making.
+- id: jering
+  names:
+  - jering
+  - djenkol
+  - Archidendron jiringa (syn.)
+  - jengkol
+  scientific: Archidendron pauciflorum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - toxic
+  region: south-southeast-asia
+  why: Strong-smelling beans eaten across Indonesia that can cause djenkolism, a kidney poisoning.
+- id: kadam
+  names:
+  - kadam
+  - burflower tree
+  scientific: Neolamarckia cadamba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - flowers
+  region: south-southeast-asia
+  why: Golf-ball orange flowers linked to Krishna, who played the flute beneath it.
+- id: kafal
+  names:
+  - kafal
+  - box myrtle
+  scientific: Myrica esculenta
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  region: south-southeast-asia
+  why: Himalayan tree with red berries; in a Kumaoni folk tale a bird still cries 'kafal pako, main ni
+    chakho' (the kafal is ripe, I never tasted it).
+- id: kamala
+  names:
+  - kamala
+  - monkey-face tree
+  scientific: Mallotus philippensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: south-southeast-asia
+  why: Red glandular powder on its fruit dyed silk orange and expelled worms.
+- id: kanak-champa
+  names:
+  - kanak champa
+  - dinner-plate tree
+  scientific: Pterospermum acerifolium
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: south-southeast-asia
+  why: Huge leaves used as plates and fragrant white flowers from velvety brown buds.
+- id: karaya
+  names:
+  - karaya
+  - ghost tree
+  scientific: Sterculia urens
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: south-southeast-asia
+  why: Chalk-white-barked tree glowing in dry forests at night, tapped for karaya gum.
+- id: kasturi-mango
+  names:
+  - kasturi
+  - Kalimantan mango
+  scientific: Mangifera casturi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mango: kasturi has small dark purple fruit'
+  - 'bachang: bachang fruit is large and pungent'
+  split_from: null
+  tier: 3
+  status: extinct-in-wild
+  inclusion:
+  - fruit
+  - cultural
+  region: south-southeast-asia
+  why: Small purple-black fragrant mango of the Banjar people and the identity flora of South Kalimantan;
+    listed extinct in the wild since 1998, it survives in village orchards and gardens.
+- id: kepel
+  names:
+  - kepel
+  scientific: Stelechocarpus burahol
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - folklore
+  region: south-southeast-asia
+  why: Javanese royal fruit said to scent the sweat of court princesses; symbol of Yogyakarta.
+- id: kepuh
+  names:
+  - kepuh
+  - wild almond
+  - java olive
+  scientific: Sterculia foetida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'karaya: kepuh has red pods and fetid flowers'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - striking
+  region: south-southeast-asia
+  why: Flowers smell of rot; in Bali the tree grows in cemeteries and is linked with the dead.
+- id: ker
+  names:
+  - ker
+  - kair
+  - karira
+  scientific: Capparis decidua
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: south-southeast-asia
+  why: Leafless thorny caper of the Thar Desert whose flower buds and berries, cooked with khejri pods,
+    make Rajasthan's ker sangri.
+- id: kerala-legume-tree
+  names:
+  - Kerala legume tree
+  - Beddome cynometra
+  scientific: Cynometra beddomei
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extinct
+  inclusion:
+  - cultural
+  region: south-southeast-asia
+  why: Western Ghats tree described from a single tree in Kerala, never seen again after 1870 and declared
+    extinct in 1998.
+- id: keranji
+  names:
+  - keranji
+  - velvet tamarind
+  scientific: Dialium indum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tamarind: keranji pods are small velvety ovals'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: south-southeast-asia
+  why: Black velvety shells around a sweet tangy pulp sold as candy.
+- id: keruing
+  names:
+  - keruing
+  - gurjun
+  - yang
+  - hollong
+  scientific: Dipterocarpus
+  rank: group
+  stands_for:
+  - Dipterocarpus alatus (yang)
+  - Dipterocarpus turbinatus (gurjun)
+  - Dipterocarpus retusus (hollong)
+  distinct_from:
+  - 'meranti: keruing is a resin-tapped Dipterocarpus with big winged fruit'
+  split_from: meranti
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: Giant dipterocarps with two-winged fruit, tapped for gurjun oleoresin that fuels torches and caulks
+    boats; hollong is the state tree of Assam and Arunachal Pradesh.
+- id: khair
+  names:
+  - khair
+  - cutch tree
+  - catechu
+  scientific: Senegalia catechu
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'babul: khair is grown for its heartwood extract'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: south-southeast-asia
+  why: Heartwood boiled into kattha for betel quid and cutch, the brown dye of fishing nets and khaki.
+- id: khasi-sterculia
+  names:
+  - Khasi sterculia
+  - Meghalaya sterculia
+  scientific: Sterculia khasiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kepuh: kepuh is the widespread foul-flowered Sterculia'
+  - 'karaya: karaya is the white-barked gum Sterculia'
+  split_from: null
+  tier: 3
+  status: extinct
+  inclusion:
+  - cultural
+  region: south-southeast-asia
+  why: Endemic tree of the Khasi Hills of Meghalaya, lost to forest clearance; listed extinct in 1998.
+- id: khirni
+  names:
+  - khirni
+  - sawo kecik
+  scientific: Manilkara hexandra
+  rank: group
+  stands_for:
+  - Manilkara kauki (sawo kecik)
+  distinct_from:
+  - 'sapodilla: khirni has small yellow berries'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: south-southeast-asia
+  why: Small yellow sweet fruit; in Java sawo kecik is planted in palace courtyards as a symbol of goodness.
+- id: kitul-palm
+  names:
+  - kitul palm
+  - fishtail palm
+  - toddy palm
+  scientific: Caryota urens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sugar-palm: kitul has fishtail leaflets'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: Fishtail-leaflet palm tapped in Sri Lanka for kitul treacle and jaggery; its pith yields sago.
+- id: kluwek
+  names:
+  - kluwak
+  scientific: Pangium edule
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - fruit
+  - product
+  region: south-southeast-asia
+  why: Cyanide-laden seeds become a black spice for rawon after boiling and fermentation.
+- id: kokum
+  names:
+  - kokum
+  - Malabar tamarind
+  - asam gelugur
+  scientific: Garcinia indica
+  rank: group
+  stands_for:
+  - Garcinia gummi-gutta (Malabar tamarind, kudampuli)
+  - Garcinia atroviridis (asam gelugur)
+  distinct_from:
+  - 'mangosteen: kokum is a sour souring-spice Garcinia'
+  split_from: mangosteen
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  - medicinal
+  region: south-southeast-asia
+  why: Sour purple rind dried as a souring spice for Konkan and Kerala curries; seeds give kokum butter.
+- id: kratom
+  names:
+  - kratom
+  - ketum
+  scientific: Mitragyna speciosa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - toxic
+  - product
+  region: south-southeast-asia
+  why: Leaves chewed by Thai and Malay labourers as a stimulant; opioid-like at higher doses.
+- id: kusum
+  names:
+  - kusum
+  - Ceylon oak
+  - lac tree
+  scientific: Schleichera oleosa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: south-southeast-asia
+  why: Best host of the lac insect for shellac, with brilliant red new leaves; seeds gave Macassar hair
+    oil.
+- id: langsat
+  names:
+  - langsat
+  - duku
+  - lanzones
+  - Lansium parasiticum (syn.)
+  - Lansium domesticum (syn.)
+  scientific: Epicharis parasitica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: south-southeast-asia
+  why: Trunk-borne clusters of pale yellow sweet-sour fruit, celebrated at the Lanzones Festival of Camiguin.
+- id: lasoda
+  names:
+  - lasoda
+  - glue berry
+  - Indian cherry
+  scientific: Cordia dichotoma
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bocote: lasoda is grown for fruit, not timber'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: south-southeast-asia
+  why: Sticky mucilaginous fruit pickled in Rajasthan and once used as glue.
+- id: lemon
+  names:
+  - lemon
+  scientific: Citrus × limon
+  rank: group
+  stands_for: []
+  distinct_from:
+  - 'orange: oranges are sweet-fruited'
+  - 'citron: citron is thick-rinded and ritual'
+  - 'pomelo: pomelo is the giant-fruited ancestor'
+  - 'lime: limes are small, green and round'
+  - 'makrut-lime: makrut lime is grown for its double leaves'
+  - 'calamansi: calamansi is a tiny round sour fruit'
+  - 'finger-lime: the Australian finger lime'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  region: south-southeast-asia
+  why: Sour citrus fruit from the Assam foothills that saved sailors from scurvy.
+- id: lime
+  names:
+  - lime
+  - key lime
+  - Persian lime
+  scientific: Citrus aurantiifolia
+  rank: group
+  stands_for:
+  - Citrus × latifolia (Persian lime)
+  distinct_from:
+  - 'lemon: limes are small, green and round'
+  split_from: lemon
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  region: south-southeast-asia
+  why: Small green round sour citrus of Malesian origin, squeezed over food across the tropics.
+- id: lipstick-palm
+  names:
+  - lipstick palm
+  - sealing wax palm
+  scientific: Cyrtostachys renda
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Clustered peat-swamp palm with scarlet crownshafts.
+- id: mabolo
+  names:
+  - mabolo
+  - kamagong
+  - velvet apple
+  - Diospyros discolor (syn.)
+  scientific: Diospyros blancoi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ebony: mabolo is grown for its velvety fruit as well as timber'
+  split_from: ebony
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: Philippine ebony with near-black kamagong heartwood and velvety red fruit smelling of cheese.
+- id: macassar-ebony
+  names:
+  - Macassar ebony
+  scientific: Diospyros celebica
+  rank: species
+  stands_for:
+  - Diospyros quaesita (calamander)
+  distinct_from:
+  - 'persimmon: Macassar ebony is a striped timber'
+  - 'ebony: Macassar ebony is striped, not jet black'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Sulawesi ebony striped black and tawny brown, prized in Art Deco furniture.
+- id: mahua
+  names:
+  - mahua
+  scientific: Madhuca longifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  region: south-southeast-asia
+  why: Fleshy edible flowers distilled into liquor and seeds pressed for oil, central to the culture of
+    central Indian tribal peoples.
+- id: makrut-lime
+  names:
+  - makrut lime
+  - kaffir lime
+  - jeruk purut
+  scientific: Citrus hystrix
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lemon: makrut lime is grown for its double leaves'
+  split_from: lemon
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - fruit
+  region: south-southeast-asia
+  why: Hourglass-shaped double leaves and knobbly fruit, a spice of Thai and Indonesian cooking.
+- id: mango
+  names:
+  - mango
+  scientific: Mangifera indica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bachang: bachang are the wild strong-smelling Bornean mangoes'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - cultural
+  region: south-southeast-asia
+  why: National tree of Bangladesh and national fruit of India and Pakistan; the Buddha rested in a mango
+    grove.
+- id: mangosteen
+  names:
+  - mangosteen
+  scientific: Garcinia mangostana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kokum: kokum is a sour souring-spice Garcinia'
+  - 'gamboge: gamboge is grown for its yellow resin'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  region: south-southeast-asia
+  why: '''Queen of fruits'' with thick purple rind and white segments.'
+- id: mangrove-apple
+  names:
+  - mangrove apple
+  - berembang
+  scientific: Sonneratia caseolaris
+  rank: group
+  stands_for:
+  - Sonneratia alba
+  distinct_from:
+  - 'red-mangrove: mangrove apple has pencil roots and powder-puff flowers'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  - fruit
+  region: south-southeast-asia
+  why: Night-flowering mangrove whose riverside trees in Malaysia flash with synchronised fireflies.
+- id: marking-nut
+  names:
+  - marking nut
+  - bhilawa
+  scientific: Semecarpus anacardium
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cashew: marking-nut oil is a blistering ink'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - product
+  - medicinal
+  region: south-southeast-asia
+  why: Cashew relative whose caustic black nut oil marked laundry indelibly for dhobis.
+- id: matoa
+  names:
+  - matoa
+  - taun
+  - Pacific maple
+  scientific: Pometia pinnata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'rambutan: matoa has smooth, not hairy, fruit'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: south-southeast-asia
+  why: Lychee-like fruit with red young leaves, sold as Papua's signature fruit.
+- id: matti
+  names:
+  - matti
+  - Indian laurel
+  - crocodile bark
+  scientific: Terminalia elliptica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'arjuna: matti has dark crocodile-plated bark'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: Goa's state tree, with bark cracked into crocodile-skin plates that stores water against fire.
+- id: meranti
+  names:
+  - meranti
+  - lauan
+  - Philippine mahogany
+  - seraya
+  scientific: Rubroshorea and Richetia (red and yellow meranti, formerly Shorea)
+  rank: group
+  stands_for:
+  - Richetia faguetiana (Menara, formerly Shorea faguetiana)
+  - Rubroshorea leprosula
+  - Rubroshorea curtisii
+  - Parashorea (white seraya)
+  distinct_from:
+  - 'sal: meranti are the giant rainforest Shoreas'
+  - 'keruing: keruing is a resin-tapped Dipterocarpus with big winged fruit'
+  - 'bornean-camphor: Borneo camphor has camphor crystals and crown shyness'
+  - 'illipe: illipe is a riverside Shorea grown for its fat-rich nuts'
+  - 'damar: damar is a Shorea tapped for resin in gardens'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Emergent dipterocarps of Borneo and Malaya, until 2022 all in Shorea, including the tallest tropical
+    tree (Menara, about 100 m), with winged seeds and mast fruiting; sold as lauan.
+- id: merbau
+  names:
+  - merbau
+  - kwila
+  - ipil
+  scientific: Intsia bijuga
+  rank: group
+  stands_for:
+  - Intsia palembanica
+  distinct_from:
+  - 'bornean-ironwood: merbau is a red-brown durable timber, belian is darker and far denser'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: Malaysia's national tree since 2019; durable red-brown timber with yellow flecks, logged so heavily
+    that New Guinea holds most of what remains.
+- id: molave
+  names:
+  - molave
+  - tugas
+  scientific: Vitex parviflora
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: south-southeast-asia
+  why: Philippine hardwood so durable it became a byword for strength, used for church posts that outlast
+    centuries.
+- id: moringa
+  names:
+  - moringa
+  - drumstick tree
+  scientific: Moringa oleifera
+  rank: species
+  stands_for:
+  - Moringa concanensis
+  distinct_from:
+  - 'arabian-ben-tree: the Arabian desert moringa'
+  - 'phantom-tree: the swollen-trunked Namibian moringa'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - fruit
+  - product
+  region: south-southeast-asia
+  why: '''Miracle tree'' with nutritious leaves, drumstick pods and seeds that purify water.'
+- id: muli-bamboo
+  names:
+  - muli bamboo
+  - Mizo bamboo
+  - mautak
+  scientific: Melocanna baccifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bamboo: muli bamboo is the gregariously flowering bamboo with fleshy fruit'
+  - 'thorny-bamboo: thorny bamboo grows in dense spiny clumps'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - striking
+  - fruit
+  region: south-southeast-asia
+  why: Running bamboo of Mizoram and Bangladesh that flowers all at once about every 48 years, bearing
+    pear-sized fruit; the rat plagues and famine that follow (mautam, 1959 and 2007) set off the Mizo
+    uprising.
+- id: narra
+  names:
+  - narra
+  - amboyna
+  scientific: Pterocarpus indicus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'padauk: narra is the Asian species known for amboyna burl'
+  - 'burma-padauk: Burma padauk is the Myanmar species with April golden flowers'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: National tree of the Philippines whose amboyna burl is one of the most prized figured woods.
+- id: needlewood
+  names:
+  - needlewood
+  - chilauni
+  - puspa
+  scientific: Schima wallichii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Common Himalayan and Javan tree with white flowers and bark that irritates the skin.
+- id: neem
+  names:
+  - neem
+  - margosa
+  scientific: Azadirachta indica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - medicinal
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: '''Village pharmacy'' of India: twigs as toothbrushes and bark, leaves and oil as insecticide and
+    medicine; state tree of Andhra Pradesh.'
+- id: nipa-palm
+  names:
+  - nipa palm
+  scientific: Nypa fruticans
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Mangrove palm with trunk under the mud; leaves thatch roofs. Its fossils are among the oldest known
+    palms.
+- id: nutmeg
+  names:
+  - nutmeg
+  - mace
+  scientific: Myristica fragrans
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - toxic
+  - medicinal
+  - product
+  region: south-southeast-asia
+  why: Banda Islands spice tree fought over by the Dutch; seed and red aril; toxic in large doses.
+- id: orchid-tree
+  names:
+  - orchid tree
+  - Hong Kong orchid tree
+  scientific: Bauhinia variegata
+  rank: group
+  stands_for:
+  - Bauhinia purpurea
+  - Bauhinia racemosa (apta)
+  distinct_from:
+  - 'hong-kong-orchid-tree: the sterile hybrid of the Hong Kong flag'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: south-southeast-asia
+  why: Orchid-like flowers and two-lobed leaves; apta leaves are exchanged as "gold" at Dussehra.
+- id: oriental-mangrove
+  names:
+  - oriental mangrove
+  - large-leafed orange mangrove
+  - kankra
+  scientific: Bruguiera gymnorhiza
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'red-mangrove: red mangroves stand on arching stilt roots'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: south-southeast-asia
+  why: Mangrove with knee roots, red-orange calyces and long cigar-shaped propagules; its bark gives tannin
+    and the propagules are eaten after soaking in Indonesia.
+- id: oroxylum
+  names:
+  - midnight horror
+  - Indian trumpet tree
+  scientific: Oroxylum indicum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  - folklore
+  region: south-southeast-asia
+  why: Bat-pollinated foul-smelling night flowers and sword-like pods that hang like broken bones.
+- id: pala-indigo
+  names:
+  - pala indigo
+  - sweet indrajao
+  scientific: Wrightia tinctoria
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - flowers
+  region: south-southeast-asia
+  why: Small white-flowered tree whose leaves yield indigo dye.
+- id: palash
+  names:
+  - palash
+  - flame of the forest
+  scientific: Butea monosperma
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Leafless branches covered in orange flame-like flowers that once gave Holi colour.
+- id: palmyra-palm
+  names:
+  - palmyra palm
+  - toddy palm
+  scientific: Borassus flabellifer
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'african-palmyra: the African Borassus, with a swollen trunk'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  region: south-southeast-asia
+  why: National tree of Cambodia and state tree of Tamil Nadu; its leaves were the writing material of
+    palm-leaf manuscripts; sap for toddy and jaggery.
+- id: parijat
+  names:
+  - parijat
+  - night jasmine
+  - tree of sorrow
+  scientific: Nyctanthes arbor-tristis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - flowers
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Flowers open at night and fall at dawn; Krishna brought it from Indra's heaven.
+- id: petai
+  names:
+  - petai
+  - stink bean
+  - sator
+  scientific: Parkia speciosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dawadawa: petai is the Asian Parkia eaten as fresh beans'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: south-southeast-asia
+  why: Long twisted pods of pungent green beans hanging on cords from bulb-like flowerheads.
+- id: pili-nut
+  names:
+  - pili nut
+  - kenari
+  scientific: Canarium ovatum
+  rank: group
+  stands_for:
+  - Canarium luzonicum (elemi)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: south-southeast-asia
+  why: Philippine nut tree; its relative Canarium luzonicum gives Manila elemi resin for perfume.
+- id: pink-shower
+  names:
+  - pink shower
+  - Java cassia
+  scientific: Cassia javanica
+  rank: group
+  stands_for:
+  - Cassia bakeriana
+  distinct_from:
+  - 'golden-shower: pink shower has pink flowers on upright sprays'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  region: south-southeast-asia
+  why: Branches covered in pink-and-white flowers, Thailand's 'wishing tree'.
+- id: pomelo
+  names:
+  - pomelo
+  - grapefruit
+  scientific: Citrus maxima
+  rank: species
+  stands_for:
+  - Citrus × paradisi (grapefruit)
+  distinct_from:
+  - 'lemon: pomelo is the giant-fruited ancestor'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: south-southeast-asia
+  why: Largest citrus fruit, a lunar new year gift and ancestor of the grapefruit.
+- id: pongam
+  names:
+  - pongam
+  - karanja
+  - Indian beech
+  - Millettia pinnata (syn.)
+  scientific: Pongamia pinnata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: south-southeast-asia
+  why: Shade tree with seed oil once burned in lamps and now studied as biodiesel.
+- id: portia-tree
+  names:
+  - portia tree
+  - Pacific rosewood
+  - milo
+  scientific: Thespesia populnea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'waru: portia has glossy leaves and seed capsules'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: south-southeast-asia
+  why: Coastal tree with yellow hibiscus flowers whose dark wood was carved into Pacific bowls.
+- id: pride-of-burma
+  names:
+  - pride of Burma
+  - orchid tree of Burma
+  scientific: Amherstia nobilis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - striking
+  region: south-southeast-asia
+  why: Hanging red orchid-like flowers offered at Burmese pagodas.
+- id: purging-croton
+  names:
+  - purging croton
+  scientific: Croton tiglium
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - medicinal
+  - product
+  region: south-southeast-asia
+  why: Small tree with seeds yielding croton oil, a drastic purgative and skin blistering agent.
+- id: putranjiva
+  names:
+  - putranjiva
+  - child-life tree
+  - Drypetes roxburghii (syn.)
+  scientific: Putranjiva roxburghii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: south-southeast-asia
+  why: Its hard seeds are strung into rosaries worn to protect children.
+- id: pyinkado
+  names:
+  - pyinkado
+  - Burmese ironwood
+  scientific: Xylia xylocarpa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Very hard Burmese railway-sleeper timber with woody pods that split explosively.
+- id: rainbow-eucalyptus
+  names:
+  - rainbow eucalyptus
+  - Mindanao gum
+  scientific: Eucalyptus deglupta
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'river-red-gum: rainbow eucalyptus has multicoloured bark'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Bark peels in streaks of green, blue, orange and purple; the only eucalypt native to the northern
+    hemisphere.
+- id: rambai
+  names:
+  - rambai
+  - Burmese grape
+  scientific: Baccaurea motleyana
+  rank: group
+  stands_for:
+  - Baccaurea ramiflora (Burmese grape)
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: south-southeast-asia
+  why: Trunks hung with long strings of small yellow translucent fruit.
+- id: rambutan
+  names:
+  - rambutan
+  scientific: Nephelium lappaceum
+  rank: species
+  stands_for:
+  - Nephelium ramboutan-ake (pulasan)
+  distinct_from:
+  - 'lychee: lychee has a smooth bumpy shell'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  region: south-southeast-asia
+  why: Hairy red lychee-like fruit.
+- id: ramin
+  names:
+  - ramin
+  scientific: Gonystylus bancanus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: south-southeast-asia
+  why: Pale peat-swamp timber of Borneo and Sumatra, overlogged for mouldings and dowels until listed
+    by CITES.
+- id: rasamala
+  names:
+  - rasamala
+  - Altingia excelsa (syn.)
+  scientific: Liquidambar excelsa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sweetgum: rasamala is the tropical montane relative'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: south-southeast-asia
+  why: Javanese giant up to 60 m with aromatic resin used as incense.
+- id: red-sandalwood
+  names:
+  - red sandalwood
+  - red sanders
+  scientific: Pterocarpus santalinus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'padauk: red sandalwood is a small Indian dye tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: south-southeast-asia
+  why: Blood-red wood of the Eastern Ghats used as dye and for Japanese shamisen, heavily smuggled.
+- id: red-silk-cotton
+  names:
+  - red silk cotton tree
+  - semal
+  - simal
+  scientific: Bombax ceiba
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kapok: red silk cotton has red flowers and a thorny trunk'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Huge buttressed, thorn-trunked tree whose bare branches carry fleshy red flowers, then pods of
+    kapok-like floss.
+- id: rengas
+  names:
+  - rengas
+  - Borneo rosewood
+  scientific: Gluta renghas
+  rank: group
+  stands_for:
+  - Gluta wallichii
+  distinct_from:
+  - 'thitsi: rengas is a timber tree, not tapped'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  region: south-southeast-asia
+  why: Red-streaked timber with sap that causes severe blistering.
+- id: rohida
+  names:
+  - rohida
+  - desert teak
+  scientific: Tecomella undulata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: south-southeast-asia
+  why: Rajasthan's state flower, with orange trumpet flowers on a hardy desert tree.
+- id: rose-apple
+  names:
+  - rose apple
+  - jambu air mawar
+  scientific: Syzygium jambos
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jamun: rose apple has rose-scented hollow pale fruit'
+  - 'wax-apple: rose apple fruit is round and dry'
+  split_from: jamun
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - flowers
+  region: south-southeast-asia
+  why: Hollow pale fruit tasting and smelling of rose water, after pompom flowers.
+- id: rubber-fig
+  names:
+  - rubber fig
+  - India rubber tree
+  scientific: Ficus elastica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'banyan: rubber fig has huge glossy leaves and is grown for latex'
+  split_from: banyan
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  region: south-southeast-asia
+  why: Huge glossy-leaved fig once tapped for 'India rubber'; Khasi people train its roots into living
+    bridges.
+- id: rudraksha
+  names:
+  - rudraksha
+  - Elaeocarpus ganitrus (syn.)
+  scientific: Elaeocarpus sphaericus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  region: south-southeast-asia
+  why: Seeds strung as prayer beads, said to be the tears of Shiva.
+- id: sacred-fig
+  names:
+  - sacred fig
+  - Bodhi tree
+  - peepal
+  scientific: Ficus religiosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'banyan: sacred fig is the heart-leaved Bodhi tree'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - well-known
+  region: south-southeast-asia
+  why: The Buddha attained enlightenment under one; Sri Maha Bodhi is the oldest planted tree with a known
+    date; state tree of Bihar, Haryana and Odisha.
+- id: sago-palm
+  names:
+  - sago palm
+  scientific: Metroxylon sagu
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  region: south-southeast-asia
+  why: Trunk pith is the sago starch staple of New Guinea and the Moluccas.
+- id: sal
+  names:
+  - sal
+  scientific: Shorea robusta
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'meranti: meranti are the giant rainforest Shoreas'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - product
+  region: south-southeast-asia
+  why: 'Sacred in Buddhism: the Buddha was born and died under sal trees; state tree of Jharkhand and
+    Chhattisgarh, and the dominant tree of vast monsoon forests.'
+- id: salak
+  names:
+  - salak
+  - snake fruit
+  scientific: Salacca zalacca
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: south-southeast-asia
+  why: Near-stemless spiny palm with 6 m leaves, bearing clusters of fruit with scaly red-brown snakeskin
+    at its base; Bali and Java grow it in plantations.
+- id: sandalwood
+  names:
+  - sandalwood
+  - Indian sandalwood
+  - chandan
+  scientific: Santalum album
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'australian-sandalwood: the Western Australian species'
+  - 'iliahi: the Hawaiian sandalwoods'
+  - 'quandong: the Australian fruiting relative'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - medicinal
+  - product
+  region: south-southeast-asia
+  why: Fragrant heartwood for incense, perfume and Hindu ritual paste; a root parasite; Karnataka's state
+    tree, and the trade that drew Europeans to Timor.
+- id: santol
+  names:
+  - santol
+  - cotton fruit
+  - kecapi
+  scientific: Sandoricum koetjape
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: south-southeast-asia
+  why: Fuzzy apple-sized fruit with cottony sweet-sour pulp, eaten with salt.
+- id: sappanwood
+  names:
+  - sappanwood
+  - Indian redwood
+  scientific: Biancaea sappan
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'brazilwood: sappanwood is the Asian red-dye tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: south-southeast-asia
+  why: Thorny small tree whose heartwood gives a red dye traded long before brazilwood.
+- id: sea-poison-tree
+  names:
+  - sea poison tree
+  - fish poison tree
+  - box fruit
+  scientific: Barringtonia asiatica
+  rank: species
+  stands_for:
+  - Barringtonia acutangula (Indian oak, hijal)
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - flowers
+  - striking
+  region: south-southeast-asia
+  why: Beach tree with shaving-brush night flowers and four-sided floating fruit crushed to stun fish.
+- id: sheesham
+  names:
+  - sheesham
+  - shisham
+  - North Indian rosewood
+  scientific: Dalbergia sissoo
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'indian-rosewood: sheesham is the lighter golden-brown north Indian roadside rosewood'
+  split_from: indian-rosewood
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  region: south-southeast-asia
+  why: Golden-brown furniture rosewood planted along roads and canals of the north Indian plains; state
+    tree of Indian Punjab.
+- id: siamese-cassia
+  names:
+  - Siamese cassia
+  - khilek
+  - cassod tree
+  scientific: Senna siamea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  region: south-southeast-asia
+  why: Yellow-flowered shade tree whose bitter young leaves and buds are boiled for Thai kaeng khilek
+    curry; its dark heartwood is a durable timber.
+- id: siamese-rosewood
+  names:
+  - Siamese rosewood
+  - Thailand rosewood
+  - hongmu
+  scientific: Dalbergia cochinchinensis
+  rank: group
+  stands_for:
+  - Dalbergia oliveri (Burmese rosewood)
+  distinct_from:
+  - 'indian-rosewood: Siamese rosewood is the red hongmu timber'
+  split_from: indian-rosewood
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: Red-streaked hongmu of Chinese classical furniture, central to rosewood, the most trafficked wildlife
+    product by value.
+- id: simpor
+  names:
+  - simpor
+  - shrubby dillenia
+  - simpoh air
+  scientific: Dillenia suffruticosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'elephant-apple: elephant apple is the large white-flowered Dillenia with big fruit'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: south-southeast-asia
+  why: Brunei's national flower, a shrubby tree of wet open ground with large yellow flowers and leaves
+    used to wrap tempeh and food.
+- id: siris
+  names:
+  - siris
+  - woman's tongue tree
+  scientific: Albizia lebbeck
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'persian-silk-tree: siris has greenish-white flowers and rattling pods'
+  - 'persian-silk-tree: silk tree has pink silky flowers'
+  split_from: persian-silk-tree
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - product
+  region: south-southeast-asia
+  why: Fluffy fragrant powder-puff flowers and dry pods that rattle in the wind.
+- id: soapberry
+  names:
+  - soapberry
+  - soapnut
+  scientific: Sapindus mukorossi
+  rank: group
+  stands_for:
+  - Sapindus trifoliatus (South Indian soapnut)
+  - Sapindus saponaria
+  - Sapindus drummondii
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - toxic
+  - product
+  region: south-southeast-asia
+  why: Saponin-rich fruit used as soap and shampoo.
+- id: som
+  names:
+  - som
+  - muga silk tree
+  - Persea bombycina (syn.)
+  - Machilus bombycina (syn.)
+  scientific: Machilus gamblei
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'avocado: som is a small-fruited Persea grown for silk'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: south-southeast-asia
+  why: Assamese tree whose leaves feed muga silkworms, the source of golden muga silk.
+- id: star-fruit
+  names:
+  - star fruit
+  - carambola
+  scientific: Averrhoa carambola
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bilimbi: bilimbi has small cucumber-shaped fruit on the trunk'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - toxic
+  region: south-southeast-asia
+  why: Star-shaped slices; oxalic acid makes it dangerous for people with kidney disease.
+- id: strychnine-tree
+  names:
+  - strychnine tree
+  - nux vomica
+  scientific: Strychnos nux-vomica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'monkey-orange: monkey orange is an edible-fruited African Strychnos'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - medicinal
+  region: south-southeast-asia
+  why: Seeds contain strychnine, a classic poison and old tonic.
+- id: sugar-palm
+  names:
+  - sugar palm
+  - arenga
+  scientific: Arenga pinnata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  region: south-southeast-asia
+  why: Tapped for palm sugar and fibre.
+- id: suicide-tree
+  names:
+  - suicide tree
+  - pong-pong
+  scientific: Cerbera odollam
+  rank: species
+  stands_for:
+  - Cerbera manghas (sea mango)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  region: south-southeast-asia
+  why: Kernels hold cerberin, a cardiac toxin infamous in Kerala poisonings.
+- id: sumatran-pine
+  names:
+  - Sumatran pine
+  - Merkus pine
+  - Benguet pine
+  scientific: Pinus merkusii
+  rank: group
+  stands_for:
+  - Pinus kesiya (Khasi pine, Benguet pine)
+  distinct_from:
+  - 'chir-pine: Sumatran pine is a tropical lowland pine'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: south-southeast-asia
+  why: The only pine native south of the equator, tapped for resin in Java and Sumatra.
+- id: sundari
+  names:
+  - sundari
+  - looking-glass mangrove
+  scientific: Heritiera fomes
+  rank: species
+  stands_for:
+  - Heritiera littoralis (looking-glass tree)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: south-southeast-asia
+  why: Pneumatophore-ringed mangrove that gives the Sundarbans, home of the Bengal tiger, its name.
+- id: takian
+  names:
+  - takian
+  - ta-khian
+  scientific: Hopea odorata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'meranti: takian is a Hopea with spirit lore'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  region: south-southeast-asia
+  why: Haunted by Nang Takian, the Thai female tree spirit; old trees are wrapped in cloth and given offerings.
+- id: talipot-palm
+  names:
+  - talipot palm
+  scientific: Corypha umbraculifera
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Flowers once after decades with the largest inflorescence of any plant, then dies; leaves used
+    for manuscripts.
+- id: teak
+  names:
+  - teak
+  scientific: Tectona grandis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: Golden oily rot-proof timber of ships and decks, native to India, Myanmar and Thailand.
+- id: tejpat
+  names:
+  - tejpat
+  - Indian bay leaf
+  scientific: Cinnamomum tamala
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cinnamon: tejpat is used for its leaves, not bark'
+  - 'bay-laurel: tejpat leaves are three-veined and cinnamon-scented'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: south-southeast-asia
+  why: Himalayan cinnamon whose three-veined leaves are the bay leaf of north Indian cooking.
+- id: tembusu
+  names:
+  - tembusu
+  - Fagraea fragrans (syn.)
+  scientific: Cyrtophyllum fragrans
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: south-southeast-asia
+  why: Craggy-barked tree with cream flowers scenting Singapore's evenings, pictured on its $5 note.
+- id: tendu
+  names:
+  - tendu
+  - coromandel ebony
+  scientific: Diospyros melanoxylon
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ebony: tendu is a dry-forest ebony grown for bidi leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: south-southeast-asia
+  why: Its leaves wrap India's bidi cigarettes, a seasonal income for millions of forest dwellers.
+- id: tetrameles
+  names:
+  - tetrameles
+  - spung
+  - binong
+  scientific: Tetrameles nudiflora
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'banyan: tetrameles has smooth grey buttresses, not prop roots'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: south-southeast-asia
+  why: Pale buttressed giant whose roots engulf the ruins of Ta Prohm at Angkor.
+- id: thitsi
+  names:
+  - thitsi
+  - Burmese lacquer tree
+  - Melanorrhoea usitata (syn.)
+  scientific: Gluta usitata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lacquer-tree: thitsi is the Burmese Gluta lacquer tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - toxic
+  - cultural
+  region: south-southeast-asia
+  why: Tapped for the black lacquer of Bagan lacquerware.
+- id: thorny-bamboo
+  names:
+  - thorny bamboo
+  - giant thorny bamboo
+  - kattumungil
+  scientific: Bambusa bambos
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bamboo: thorny bamboo grows in dense spiny clumps'
+  - 'muli-bamboo: muli bamboo is the gregariously flowering bamboo with fleshy fruit'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Huge clumping bamboo armoured with thorny branchlets, planted as living fences across India; after
+    its rare mass flowering its seeds are gathered as bamboo rice.
+- id: timur
+  names:
+  - timur
+  - Nepal pepper
+  - winged prickly ash
+  scientific: Zanthoxylum armatum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sichuan-pepper: timur is the Himalayan species with winged thorny stems'
+  split_from: sichuan-pepper
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: south-southeast-asia
+  why: Thorny Himalayan shrub-tree whose numbing grapefruit-scented berries spice Nepali pickles.
+- id: tongkat-ali
+  names:
+  - tongkat ali
+  - pasak bumi
+  scientific: Eurycoma longifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  region: south-southeast-asia
+  why: Bitter-rooted Malay forest treelet sold as an aphrodisiac tonic.
+- id: toona
+  names:
+  - toon
+  - Indian mahogany
+  - Australian red cedar
+  scientific: Toona ciliata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'chinese-toon: Chinese toon is the temperate species eaten as a spring vegetable'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: south-southeast-asia
+  why: Red-wooded cedar of the Himalayan foothills to Australia, Manipur's state tree and the 'red gold'
+    logged out of colonial Australia's rainforests.
+- id: tree-rhododendron
+  names:
+  - tree rhododendron
+  scientific: Rhododendron arboreum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - toxic
+  - cultural
+  region: south-southeast-asia
+  why: Nepal's national flower and Uttarakhand's state tree (burans); nectar of related species makes
+    hallucinogenic 'mad honey'.
+- id: tropical-almond
+  names:
+  - tropical almond
+  - Indian almond
+  scientific: Terminalia catappa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'arjuna: tropical almond is a coastal tree with big red-turning leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  - product
+  region: south-southeast-asia
+  why: Pagoda-tiered coastal tree with edible nuts and leaves that turn red before falling, used in aquariums.
+- id: tualang
+  names:
+  - tualang
+  scientific: Koompassia excelsa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  - cultural
+  region: south-southeast-asia
+  why: Smooth-trunked emergent giant chosen by giant honeybees, with Malay honey-gathering ritual songs.
+- id: upas
+  names:
+  - upas
+  - antiaris
+  scientific: Antiaris toxicaria
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - folklore
+  - product
+  region: south-southeast-asia
+  why: Arrow-poison latex and a European legend that it killed everything within miles.
+- id: varuna
+  names:
+  - varuna
+  - sacred garlic pear
+  scientific: Crateva religiosa
+  rank: species
+  stands_for:
+  - Crateva magna (C. nurvala, the Ayurvedic varuna)
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  region: south-southeast-asia
+  why: Trifoliate sacred tree of temples with long-stamened white flowers.
+- id: waru
+  names:
+  - sea hibiscus
+  - waru
+  - hau
+  scientific: Hibiscus tiliaceus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'portia-tree: sea hibiscus has heart-shaped, felted leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - product
+  - cultural
+  region: south-southeast-asia
+  why: Coastal tree with yellow flowers that turn red by evening; its bast is twisted into cordage across
+    the Pacific.
+- id: wax-apple
+  names:
+  - wax apple
+  - jambu air
+  scientific: Syzygium samarangense
+  rank: group
+  stands_for:
+  - Syzygium aqueum (water apple)
+  distinct_from:
+  - 'jamun: wax apple has glossy bell-shaped pink fruit'
+  split_from: jamun
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - flowers
+  region: south-southeast-asia
+  why: Glossy bell-shaped pink to red watery fruit, a street-market staple from Java to Taiwan.
+- id: weeping-fig
+  names:
+  - weeping fig
+  - benjamin fig
+  scientific: Ficus benjamina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'banyan: weeping fig is a small-leaved drooping tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  region: south-southeast-asia
+  why: Small-leaved drooping fig, the beringin of Java's palace squares and the Pancasila emblem; Bangkok's
+    official tree and the world's common houseplant.
+- id: white-dammar
+  names:
+  - white dammar
+  - Malabar tallow
+  - piney
+  scientific: Vateria indica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: south-southeast-asia
+  why: Western Ghats dipterocarp whose resin is a varnish and incense and whose seeds give a solid fat.
+- id: wood-apple
+  names:
+  - wood apple
+  - kaith
+  - thanaka
+  scientific: Limonia acidissima
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bael: wood apple has a rounder, smaller fruit and pinnate leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  - cultural
+  region: south-southeast-asia
+  why: Hard-shelled sour-pulp fruit; in Myanmar its bark is ground into thanaka face paste.
+- id: ylang-ylang
+  names:
+  - ylang-ylang
+  scientific: Cananga odorata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - product
+  region: south-southeast-asia
+  why: Drooping yellow flowers distilled for perfume (Chanel No. 5).

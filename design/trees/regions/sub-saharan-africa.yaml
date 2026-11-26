@@ -1,0 +1,2974 @@
+# Tree candidates: sub-saharan-africa. Fields per design/trees.md.
+# Total: 166; tiers: 1: 29, 2: 73, 3: 64
+# Inclusion: well-known 10, folklore 21, cultural 79, striking 86, flowers 24, fruit 41, medicinal 40, toxic 13, product 60
+# Status: extant 162, extinct-in-wild 3, extinct 1
+# Genera with 5+ entries: Vachellia 6
+
+- id: ackee
+  names:
+  - ackee
+  scientific: Blighia sapida
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - toxic
+  - cultural
+  region: sub-saharan-africa
+  why: West African forest tree (Akan ankye) whose arils are Jamaica's national fruit; edible only when
+    the red pod splits open naturally, otherwise causing vomiting sickness.
+- id: african-baobab
+  names:
+  - baobab
+  - African baobab
+  - upside-down tree
+  scientific: Adansonia digitata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'grandidier-baobab: Madagascar baobabs have tall columnar trunks with flat crowns'
+  - 'boab: the Australian boab is smaller and bottle-shaped'
+  - 'fony-baobab: fony baobab is a small bottle-shaped Madagascar baobab'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  - fruit
+  - striking
+  - product
+  region: sub-saharan-africa
+  why: Massive water-storing trunk and 'upside-down' crown, folk tales that the gods planted it upside
+    down, fruit powder and lifespans over 2,000 years; national tree of Senegal (on its arms) and Angola
+    (imbondeiro).
+- id: african-blackwood
+  names:
+  - African blackwood
+  - mpingo
+  scientific: Dalbergia melanoxylon
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'brazilian-rosewood: African blackwood is nearly black'
+  - 'madagascar-rosewood: Madagascar rosewood is red-brown, not near-black'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Almost black, extremely dense wood of clarinets, oboes and bagpipes, and Makonde carvings; Tanzania's
+    national tree.
+- id: african-mahogany
+  names:
+  - African mahogany
+  - khaya
+  scientific: Khaya senegalensis
+  rank: genus
+  stands_for:
+  - Khaya ivorensis
+  - Khaya anthotheca
+  distinct_from:
+  - 'sapele: sapele has a ribbon-striped figure'
+  - 'kilimanjaro-mahogany: a montane giant rather than a lowland timber'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  region: sub-saharan-africa
+  why: Mahogany substitute; Senegal mahogany bark is a widespread fever remedy.
+- id: african-tulip-tree
+  names:
+  - African tulip tree
+  - flame of the forest
+  scientific: Spathodea campanulata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  region: sub-saharan-africa
+  why: Fiery orange tulip-like flowers that hold water.
+- id: bubinga
+  names:
+  - bubinga
+  scientific: Guibourtia tessmannii
+  rank: genus
+  stands_for:
+  - Guibourtia demeusei
+  - Guibourtia pellegriniana
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: sub-saharan-africa
+  why: Large pinkish-red timber with dramatic waterfall and flame figure.
+- id: bush-mango
+  names:
+  - bush mango
+  - ogbono
+  scientific: Irvingia gabonensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: sub-saharan-africa
+  why: Kernels thicken ogbono soup in Nigeria and Cameroon.
+- id: coffee
+  names:
+  - coffee
+  - Arabica coffee
+  scientific: Coffea arabica
+  rank: genus
+  stands_for:
+  - Coffea canephora (robusta)
+  - Coffea liberica
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - fruit
+  - product
+  region: sub-saharan-africa
+  why: Ethiopian highland understory tree of the world's coffee; the Kaldi goat legend.
+- id: dawadawa
+  names:
+  - African locust bean
+  - néré
+  scientific: Parkia biglobosa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - flowers
+  region: sub-saharan-africa
+  why: Seeds fermented into dawadawa seasoning of West Africa; red pom-pom flowers.
+- id: dendrosenecio
+  names:
+  - giant groundsel
+  scientific: Dendrosenecio kilimanjari
+  rank: genus
+  stands_for:
+  - Dendrosenecio keniodendron
+  - Dendrosenecio adnivalis
+  distinct_from:
+  - 'giant-lobelia: giant lobelias are unbranched rosettes with a flower spike'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Tree-sized groundsels of the African alpine zone on Kilimanjaro and Mount Kenya.
+- id: desert-rose
+  names:
+  - desert rose
+  - impala lily
+  - Sabi star
+  scientific: Adenium obesum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'madagascar-palm: pachypodiums are spiny columns, not smooth bottles'
+  - 'halfmens: halfmens is a single spiny column topped by leaves'
+  - 'socotra-desert-rose: the Socotra subspecies is a giant swollen tree on cliffs'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  - flowers
+  region: sub-saharan-africa
+  why: Swollen bottle trunk with pink flowers; sap is an arrow poison.
+- id: doum-palm
+  names:
+  - doum palm
+  - gingerbread palm
+  scientific: Hyphaene thebaica
+  rank: genus
+  stands_for:
+  - Hyphaene coriacea (lala palm)
+  - Hyphaene petersiana (makalani palm)
+  distinct_from:
+  - 'african-palmyra: African palmyra is unbranched with a swollen trunk'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  - cultural
+  - product
+  region: sub-saharan-africa
+  why: Rare branching palm whose fruit was laid in Tutankhamun's tomb.
+- id: fever-tree
+  names:
+  - fever tree
+  scientific: Vachellia xanthophloea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: fever tree has glowing yellow bark'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  region: sub-saharan-africa
+  why: Glowing lime-yellow photosynthetic bark in swamps once blamed for malaria; Kipling's 'fever-trees'
+    of the Limpopo.
+- id: flamboyant
+  names:
+  - flamboyant
+  - royal poinciana
+  - flame tree
+  scientific: Delonix regia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - well-known
+  region: sub-saharan-africa
+  why: Umbrella crown covered in scarlet blossom, endemic to Madagascar and planted across the tropics.
+- id: grandidier-baobab
+  names:
+  - Grandidier's baobab
+  - Madagascar baobab
+  scientific: Adansonia grandidieri
+  rank: group
+  stands_for:
+  - Adansonia za
+  - Adansonia madagascariensis
+  - Adansonia perrieri
+  - Adansonia suarezensis
+  distinct_from:
+  - 'african-baobab: Madagascar baobabs have tall columnar trunks with flat crowns'
+  - 'fony-baobab: fony baobab is small and bottle-shaped'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Smooth red columnar trunks capped by flat crowns along the Avenue of the Baobabs; baobabs are Madagascar's
+    national tree, and some are sacred (fady).
+- id: gum-arabic
+  names:
+  - gum arabic tree
+  - Senegal gum acacia
+  scientific: Senegalia senegal
+  rank: species
+  stands_for:
+  - Senegalia polyacantha
+  distinct_from:
+  - 'babul: babul is a different gum and tannin thorn with black bark'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: sub-saharan-africa
+  why: Sahel acacia tapped for gum arabic, used in food, ink and medicine since ancient Egypt.
+- id: iroko
+  names:
+  - iroko
+  - mvule
+  scientific: Milicia excelsa
+  rank: species
+  stands_for:
+  - Milicia regia
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - striking
+  region: sub-saharan-africa
+  why: Spirit-inhabited tree in Yoruba and Igbo belief, felled only with ritual; teak-like timber.
+- id: kola
+  names:
+  - kola nut
+  scientific: Cola nitida
+  rank: genus
+  stands_for:
+  - Cola acuminata
+  distinct_from:
+  - 'bitter-kola: bitter kola is a Garcinia with bitter seeds, not caffeine'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - medicinal
+  - product
+  region: sub-saharan-africa
+  why: Caffeine-rich nut shared in West African hospitality rites and an original Coca-Cola flavouring.
+- id: leadwood
+  names:
+  - leadwood
+  scientific: Combretum imberbe
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Wood so dense it sinks, and dead trunks stand for decades; the Herero tell that the first people
+    and cattle came out of a leadwood.
+- id: marula
+  names:
+  - marula
+  scientific: Sclerocarya birrea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - folklore
+  - product
+  region: sub-saharan-africa
+  why: Fruit made into Amarula liqueur and beer, with the popular myth of drunken elephants; the Zulu
+    'marriage tree'.
+- id: monkey-orange
+  names:
+  - monkey orange
+  scientific: Strychnos spinosa
+  rank: species
+  stands_for:
+  - Strychnos cocculoides
+  distinct_from:
+  - 'strychnine-tree: monkey orange is an edible-fruited African Strychnos'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  region: sub-saharan-africa
+  why: Hard-shelled orange fruit of a strychnine relative, edible when ripe.
+- id: mopane
+  names:
+  - mopane
+  - butterfly tree
+  scientific: Colophospermum mopane
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Butterfly-shaped leaves that fold in heat, very dense termite-proof wood, and edible mopane worms.
+- id: myrrh
+  names:
+  - myrrh
+  - corkwood
+  scientific: Commiphora myrrha
+  rank: genus
+  stands_for:
+  - Commiphora africana (African corkwood, host of the San arrow-poison beetle)
+  distinct_from:
+  - 'ethiopian-frankincense: frankincense comes from Boswellia, not Commiphora'
+  - 'balm-of-gilead: balm of Gilead is the Arabian balsam Commiphora'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - folklore
+  - product
+  region: sub-saharan-africa
+  why: Thorny small tree bled for myrrh resin, a gift of the Magi and an Egyptian embalming oil.
+- id: octopus-tree
+  names:
+  - octopus tree
+  - Alluaudia
+  scientific: Alluaudia procera
+  rank: group
+  stands_for:
+  - Alluaudia ascendens
+  - Didierea madagascariensis
+  distinct_from:
+  - 'spekboom: spekboom is a soft-leaved spineless succulent of the Cape thicket'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Spiny cactus-like columns of Madagascar's spiny forest, from the Didiereaceae subfamily found only
+    on the island.
+- id: oil-palm
+  names:
+  - African oil palm
+  scientific: Elaeis guineensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - product
+  region: sub-saharan-africa
+  why: West African palm whose fruit gives palm oil, the most-produced vegetable oil, and palm wine.
+- id: padauk
+  names:
+  - African padauk
+  - camwood
+  - barwood
+  scientific: Pterocarpus soyauxii
+  rank: group
+  stands_for: []
+  distinct_from:
+  - 'narra: narra is the Asian species known for amboyna burl'
+  - 'red-sandalwood: red sandalwood is a small Indian dye tree'
+  - 'kiaat: kiaat is a savanna Pterocarpus with golden-brown wood and round winged pods'
+  - 'camwood: true camwood is Baphia nitida'
+  - 'burma-padauk: Burma padauk is the Asian species with orange-gold wood'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: sub-saharan-africa
+  why: Rainforest tree with vivid coral-red wood fading to brown; its powdered heartwood was traded as
+    the red camwood dye.
+- id: persea-tree
+  names:
+  - Egyptian persea
+  - ished tree
+  scientific: Mimusops laurifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  region: sub-saharan-africa
+  why: Horn of Africa tree grown in ancient Egypt as the sacred ished of Heliopolis, on whose leaves Thoth
+    and Seshat wrote the pharaoh's name.
+- id: pink-ivory
+  names:
+  - pink ivory
+  scientific: Berchemia zeyheri
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  region: sub-saharan-africa
+  why: Rare bright pink wood said to have been reserved for Zulu royalty.
+- id: quiver-tree
+  names:
+  - quiver tree
+  - kokerboom
+  scientific: Aloidendron dichotomum
+  rank: group
+  stands_for:
+  - Aloidendron pillansii (giant quiver tree)
+  distinct_from:
+  - 'tree-aloe: tree aloe is a tall forest aloe with a dense crown'
+  - 'bitter-aloe: bitter aloe is a single-stemmed aloe'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Tree aloe whose hollowed branches the San used as quivers.
+- id: raffia-palm
+  names:
+  - raffia palm
+  scientific: Raphia farinifera
+  rank: genus
+  stands_for:
+  - Raphia regalis
+  - Raphia vinifera
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: sub-saharan-africa
+  why: Largest leaves in the plant kingdom (to 25 m), and raffia fibre and palm wine.
+- id: sapele
+  names:
+  - sapele
+  scientific: Entandrophragma cylindricum
+  rank: genus
+  stands_for:
+  - Entandrophragma utile (utile)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Mahogany-like wood with shimmering ribbon stripe figure.
+- id: sausage-tree
+  names:
+  - sausage tree
+  scientific: Kigelia africana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  - folklore
+  region: sub-saharan-africa
+  why: Huge sausage-shaped fruits hang on cords; used for skin remedies and fertility charms.
+- id: shea
+  names:
+  - shea
+  scientific: Vitellaria paradoxa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  region: sub-saharan-africa
+  why: Nuts give shea butter, 'women's gold' of the Sahel.
+- id: silver-tree
+  names:
+  - silver tree
+  scientific: Leucadendron argenteum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Silky silver leaves shimmering on the slopes of Table Mountain.
+- id: stinkwood
+  names:
+  - stinkwood
+  scientific: Ocotea bullata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - striking
+  region: sub-saharan-africa
+  why: Cape furniture wood smelling unpleasant when cut; bark used in traditional medicine.
+- id: sycamore-fig
+  names:
+  - sycamore fig
+  - odaa
+  - shola
+  scientific: Ficus sycomorus
+  rank: group
+  stands_for: []
+  distinct_from:
+  - 'banyan: banyans drop prop roots and spread to cover large areas'
+  - 'fig: sycamore fig is a larger African tree fruiting on its trunk'
+  - 'mugumo: mugumo is a strangler fig sacred to the Kikuyu'
+  - 'warka: warka has large leathery leaves and figs among the leaves, not on the trunk'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - fruit
+  region: sub-saharan-africa
+  why: Fig fruiting in clusters on its trunk; Egyptian sacred tree of Hathor and Nut whose wood made mummy
+    cases, and the odaa under which Oromo Gadaa assemblies meet.
+- id: tamarind
+  names:
+  - tamarind
+  scientific: Tamarindus indica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: sub-saharan-africa
+  why: Native to tropical Africa; sour pod pulp essential in Indian, Thai and Mexican cooking, and the
+    sacred kily of southern Madagascar; spreading crown.
+- id: tambotie
+  names:
+  - tamboti
+  scientific: Spirostachys africana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  region: sub-saharan-africa
+  why: Beautifully figured wood whose smoke and sap are poisonous.
+- id: travellers-palm
+  names:
+  - traveller's palm
+  scientific: Ravenala madagascariensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Tree-like monocot with a single flat fan of leaves whose bases hold drinkable water; Madagascar's
+    national emblem.
+- id: tree-euphorbia
+  names:
+  - candelabra tree
+  - naboom
+  scientific: Euphorbia ingens
+  rank: group
+  stands_for:
+  - Euphorbia candelabrum
+  - Euphorbia cooperi
+  distinct_from:
+  - 'pencil-tree: pencil tree has leafless pencil-thin green twigs'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - toxic
+  region: sub-saharan-africa
+  why: Cactus-like candelabra tree whose latex blinds and burns.
+- id: umbrella-thorn
+  names:
+  - umbrella thorn
+  - umbrella acacia
+  - paperbark thorn
+  scientific: Vachellia tortilis
+  rank: group
+  stands_for:
+  - Vachellia tortilis subsp. raddiana
+  - Vachellia sieberiana (paperbark thorn)
+  distinct_from:
+  - 'fever-tree: fever tree has glowing yellow bark'
+  - 'whistling-thorn: whistling thorn has swollen ant-inhabited thorns'
+  - 'camel-thorn: camel thorn has velvety ear-shaped pods and Kalahari range'
+  - 'babul: babul has black bark and necklace pods'
+  - 'sweet-thorn: sweet thorn has paired long white thorns'
+  - 'ana-tree: ana tree is leafless in the rains'
+  - 'shittim-acacia: seyal is not flat-topped and has powdery red or greenish bark'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - folklore
+  region: sub-saharan-africa
+  why: Flat-topped savanna icon; the Tree of Ténéré, once the most isolated tree on Earth until a truck
+    knocked it down in 1973, was a raddiana; a candidate for the Bible's shittah wood.
+- id: wenge
+  names:
+  - wenge
+  scientific: Millettia laurentii
+  rank: species
+  stands_for:
+  - Millettia stuhlmannii (panga panga)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Very dark chocolate-brown wood with fine black stripes.
+- id: whistling-thorn
+  names:
+  - whistling thorn
+  scientific: Vachellia drepanolobium
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: whistling thorn has swollen ant-inhabited thorns'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Hollow swollen thorns housing ants whistle in the wind.
+- id: yellowwood
+  names:
+  - real yellowwood
+  - broad-leaved yellowwood
+  - upright yellowwood
+  scientific: Podocarpus latifolius
+  rank: group
+  stands_for:
+  - Podocarpus henkelii (Henkel's yellowwood)
+  distinct_from:
+  - 'totara: African yellowwoods are the southern African podocarps'
+  - 'outeniqua-yellowwood: Outeniqua is a taller emergent with flaking, dimpled bark'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: sub-saharan-africa
+  why: South Africa's national tree, a straight-trunked podocarp of the Afromontane and Knysna forests
+    whose yellow wood made floors and furniture.
+- id: yohimbe
+  names:
+  - yohimbe
+  scientific: Pausinystalia johimbe
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - toxic
+  - product
+  region: sub-saharan-africa
+  why: Bark alkaloid yohimbine used as aphrodisiac and drug.
+- id: zebrawood
+  names:
+  - zebrawood
+  - zebrano
+  scientific: Microberlinia brazzavillensis
+  rank: species
+  stands_for:
+  - Microberlinia bisulcata
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Bold zebra-striped timber.
+- id: fony-baobab
+  names:
+  - fony baobab
+  - red-stemmed baobab
+  scientific: Adansonia rubrostipa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'grandidier-baobab: Grandidier''s baobab is a tall flat-topped column'
+  - 'african-baobab: fony baobab is far smaller, with red peeling bark'
+  split_from: grandidier-baobab
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Small bottle-bellied baobab of the dry southwest Madagascar forest, with reddish bark that peels
+    in thin sheets.
+- id: kiaat
+  names:
+  - kiaat
+  - mukwa
+  - bloodwood
+  - West African rosewood
+  scientific: Pterocarpus angolensis
+  rank: group
+  stands_for:
+  - Pterocarpus erinaceus (kosso, West African rosewood)
+  distinct_from:
+  - 'padauk: padauk is a rainforest tree with vivid coral-red wood'
+  split_from: padauk
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - medicinal
+  - product
+  region: sub-saharan-africa
+  why: Miombo savanna tree with round bristly winged pods and blood-red sap; its golden-brown wood makes
+    drums and furniture.
+- id: camel-thorn
+  names:
+  - camel thorn
+  - kameeldoring
+  scientific: Vachellia erioloba
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: camel thorn has velvety ear-shaped grey pods and a denser crown'
+  split_from: umbrella-thorn
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - well-known
+  region: sub-saharan-africa
+  why: Kalahari giant whose dead trunks have stood for centuries in Namibia's Deadvlei; its roots reach
+    groundwater more than 40 m down.
+- id: babul
+  names:
+  - babul
+  - gum arabic tree
+  - Egyptian thorn
+  - scented-pod acacia
+  - kikar
+  scientific: Vachellia nilotica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: babul has black fissured bark and necklace-like pods'
+  - 'gum-arabic: babul gum is a lesser grade; its pods and bark are tannin sources'
+  split_from: umbrella-thorn
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - cultural
+  - product
+  region: sub-saharan-africa
+  why: Black-barked thorn with constricted necklace pods, a source of gum, tannin and dye, and twigs used
+    as chewing sticks.
+- id: mugumo
+  names:
+  - mugumo
+  - Natal fig
+  - barkcloth fig
+  - mutuba
+  scientific: Ficus thonningii
+  rank: group
+  stands_for:
+  - Ficus natalensis (mutuba barkcloth fig)
+  distinct_from:
+  - 'sycamore-fig: sycamore fig fruits in clusters on its trunk and is not a strangler'
+  split_from: sycamore-fig
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - product
+  region: sub-saharan-africa
+  why: Strangler fig under which the Kikuyu prayed to Ngai, and whose bark the Baganda beat into barkcloth,
+    a UNESCO-listed craft.
+- id: tree-aloe
+  names:
+  - tree aloe
+  - Barberton's aloe
+  scientific: Aloidendron barberae
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'quiver-tree: quiver tree is a desert aloe with golden bark and a sparse crown'
+  split_from: quiver-tree
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  region: sub-saharan-africa
+  why: Largest aloe, a forked forest tree up to 18 m with rose-pink flower spikes in midwinter.
+- id: african-ebony
+  names:
+  - African ebony
+  - Gabon ebony
+  - Madagascar ebony
+  - Mauritius ebony
+  scientific: Diospyros crassiflora
+  rank: group
+  stands_for:
+  - Diospyros tessellaria (Mauritius ebony)
+  - Diospyros perrieri (Madagascar ebony)
+  distinct_from:
+  - 'ebony: the Asian Ceylon ebony entry'
+  - 'jackalberry: jackalberry is a savanna fruit tree with brown-black wood only in the core'
+  split_from: ebony
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Jet-black rainforest ebony of Cameroon and Gabon used for guitar fingerboards; Mauritius was stripped
+    of its ebony by Dutch colonists.
+- id: african-wild-olive
+  names:
+  - African wild olive
+  - brown olive
+  - woira
+  scientific: Olea europaea subsp. cuspidata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'olive: the Mediterranean olive bears oily fruit; the wild olive has small bitter fruit and brown-backed
+    leaves'
+  split_from: olive
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - striking
+  region: sub-saharan-africa
+  why: Gnarled hardwood of the Ethiopian church forests and southern African kraals; its leaves make a
+    tea and its smoke a fumigant.
+- id: ethiopian-frankincense
+  names:
+  - Ethiopian frankincense
+  - Eritrean frankincense
+  - maydi
+  scientific: Boswellia papyrifera
+  rank: group
+  stands_for:
+  - Boswellia frereana (maydi)
+  distinct_from:
+  - 'frankincense: Arabian frankincense (Boswellia sacra)'
+  - 'myrrh: myrrh comes from Commiphora'
+  split_from: frankincense
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: sub-saharan-africa
+  why: Papery-barked Horn of Africa trees tapped for most of the world's frankincense, burned in Ethiopian
+    coffee ceremonies and church services.
+- id: enset
+  names:
+  - enset
+  - false banana
+  - Ethiopian banana
+  scientific: Ensete ventricosum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'banana: enset bears no edible fruit; its pseudostem and corm are the food'
+  split_from: banana
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: sub-saharan-africa
+  why: Giant banana relative whose fermented pseudostem starch (kocho) feeds some 20 million people in
+    southern Ethiopia.
+- id: african-palmyra
+  names:
+  - African fan palm
+  - ronier
+  - deleb palm
+  scientific: Borassus aethiopum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'palmyra-palm: the Asian palmyra lacks the African palm''s mid-trunk bulge'
+  - 'doum-palm: doum branches; ronier stays single'
+  split_from: palmyra-palm
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  - product
+  region: sub-saharan-africa
+  why: Tall fan palm with a swollen bulge high on its trunk, tapped for palm wine and split for termite-proof
+    rafters across the Sahel.
+- id: coast-coral-tree
+  names:
+  - coast coral tree
+  - lucky bean tree
+  - common coral tree
+  scientific: Erythrina caffra
+  rank: group
+  stands_for:
+  - Erythrina lysistemon (common coral tree)
+  - Erythrina abyssinica
+  distinct_from:
+  - 'coral-tree: the South American cockspur coral tree has crested flowers in summer'
+  split_from: coral-tree
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - toxic
+  - cultural
+  region: sub-saharan-africa
+  why: Scarlet flowers on bare branches in late winter and red toxic seeds carried as charms.
+- id: bread-tree
+  names:
+  - bread tree
+  - Eastern Cape giant cycad
+  - Modjadji cycad
+  scientific: Encephalartos
+  rank: genus
+  stands_for:
+  - Encephalartos altensteinii
+  - Encephalartos transvenosus (Modjadji cycad)
+  distinct_from:
+  - 'cycad: the cycad entry is the East Asian sago cycad'
+  - 'woods-cycad: Wood''s cycad is extinct in the wild'
+  split_from: cycad
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - toxic
+  region: sub-saharan-africa
+  why: African cycads whose pith was made into bread; the Rain Queen's Modjadji cycads are protected by
+    royal decree.
+- id: phantom-tree
+  names:
+  - phantom tree
+  - bottle moringa
+  scientific: Moringa ovalifolia
+  rank: group
+  stands_for:
+  - Moringa drouhardii
+  distinct_from:
+  - 'moringa: the drumstick moringa is a slender fast-growing crop tree'
+  split_from: moringa
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  region: sub-saharan-africa
+  why: Ghostly pale swollen-trunked moringa of Namibia; a San story says it was thrown out of paradise
+    and landed upside down.
+- id: dracaena-ombet
+  names:
+  - Gabal Elba dragon tree
+  - Nubian dragon tree
+  scientific: Dracaena ombet
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dragon-tree: the Canary dragon tree is larger, with denser umbrella crown'
+  split_from: dragon-tree
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: sub-saharan-africa
+  why: Endangered dragon tree of the Red Sea hills in Sudan, Ethiopia and Somalia, yielding a red dragon's
+    blood resin.
+- id: african-cherry
+  names:
+  - African cherry
+  - pygeum
+  - red stinkwood
+  scientific: Prunus africana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: sub-saharan-africa
+  why: Afromontane tree whose bark, stripped for prostate remedies, made it CITES-listed.
+- id: jackalberry
+  names:
+  - jackalberry
+  - African ebony
+  - musoni
+  scientific: Diospyros mespiliformis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'african-ebony: jackalberry is a savanna fruit tree, its black wood confined to the core'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - folklore
+  region: sub-saharan-africa
+  why: Savanna giant that grows on termite mounds, with sweet fruit eaten by jackals and people and a
+    sacred status in parts of southern Africa.
+- id: mobola-plum
+  names:
+  - mobola plum
+  scientific: Parinari curatellifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: sub-saharan-africa
+  why: Miombo fruit tree whose dry plums are eaten and brewed, and whose seed oil is used for cooking.
+- id: okoume
+  names:
+  - okoumé
+  - Gaboon mahogany
+  scientific: Aucoumea klaineana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - product
+  region: sub-saharan-africa
+  why: Gabon's main timber, the light plywood of boatbuilding; its resin once fuelled torches.
+- id: afrormosia
+  names:
+  - afrormosia
+  - assamela
+  scientific: Pericopsis elata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'iroko: afrormosia is finer and darkens to golden brown'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: CITES-listed West and Central African teak substitute with fine golden-brown wood.
+- id: ekki
+  names:
+  - ekki
+  - azobé
+  - red ironwood
+  scientific: Lophira alata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: sub-saharan-africa
+  why: Dark red wood so dense and rot-proof it lines Dutch canals and sea locks; seeds give meni oil.
+- id: afzelia
+  names:
+  - pod mahogany
+  - lucky bean tree
+  - doussié
+  scientific: Afzelia quanzensis
+  rank: group
+  stands_for:
+  - Afzelia africana (doussié)
+  distinct_from:
+  - 'coast-coral-tree: afzelia''s lucky beans are black with a red aril'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: sub-saharan-africa
+  why: Woody pods hold black seeds with a scarlet aril, carried as charms and threaded into necklaces;
+    durable reddish timber.
+- id: sneezewood
+  names:
+  - sneezewood
+  - nieshout
+  scientific: Ptaeroxylon obliquum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  region: sub-saharan-africa
+  why: Oily, extremely durable wood whose sawdust causes violent sneezing; used for fence posts lasting
+    decades.
+- id: hagenia
+  names:
+  - hagenia
+  - kosso
+  - African redwood
+  scientific: Hagenia abyssinica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - flowers
+  - striking
+  region: sub-saharan-africa
+  why: Afromontane treeline tree with hanging pink-red flower plumes, the Ethiopian tapeworm remedy kosso.
+- id: bitter-kola
+  names:
+  - bitter kola
+  - orogbo
+  - akiilu
+  scientific: Garcinia kola
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kola: bitter kola seeds are bitter and caffeine-free, from a different family'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  region: sub-saharan-africa
+  why: Bitter seeds offered to guests and in Yoruba and Igbo rites, chewed against coughs.
+- id: khat
+  names:
+  - khat
+  - qat
+  - miraa
+  scientific: Catha edulis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: sub-saharan-africa
+  why: Leaves chewed as a stimulant across the Horn of Africa and Yemen; grows to a 10 m tree when not
+    cropped.
+- id: giant-lobelia
+  names:
+  - giant lobelia
+  scientific: Lobelia deckenii
+  rank: group
+  stands_for:
+  - Lobelia gibberrima
+  - Lobelia telekii
+  distinct_from:
+  - 'dendrosenecio: giant groundsels branch into candelabras; lobelias stay single rosettes'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Rosettes on stout stems sending up metre-tall flower spikes in the alpine zones of East Africa.
+- id: madagascar-rosewood
+  names:
+  - Madagascar rosewood
+  - bois de rose
+  scientific: Dalbergia baronii
+  rank: group
+  stands_for:
+  - Dalbergia maritima (bois de rose)
+  - Dalbergia louvelii
+  distinct_from:
+  - 'african-blackwood: Madagascar rosewood is red-brown, not near-black'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Rich red rosewood whose illegal logging in Masoala became an international scandal.
+- id: sweet-thorn
+  names:
+  - sweet thorn
+  - soetdoring
+  scientific: Vachellia karroo
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: sweet thorn has paired long white thorns and yellow pompoms, not a flat crown'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  - product
+  region: sub-saharan-africa
+  why: Shrubby thorn tree with paired white spines up to 10 cm and sweet gum eaten by children and bushbabies.
+- id: ana-tree
+  names:
+  - ana tree
+  - winter thorn
+  - apple-ring acacia
+  - Faidherbia
+  scientific: Faidherbia albida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: ana tree drops its leaves in the rains and has twisted orange pods'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Reverse-phenology thorn tree, leafless in the wet season, so Sahel farmers grow millet under it.
+- id: knob-thorn
+  names:
+  - knob thorn
+  - knoppiesdoring
+  scientific: Senegalia nigrescens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: knob thorn''s trunk is studded with thorn-tipped knobs'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Lowveld thorn tree whose trunk is studded with woody knobs each tipped with a hooked thorn.
+- id: desert-date
+  names:
+  - desert date
+  - soapberry tree
+  - Egyptian balsam
+  - zachun
+  - balanites
+  scientific: Balanites aegyptiaca
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - cultural
+  - product
+  - toxic
+  region: sub-saharan-africa
+  why: Spiny Sahel tree whose date-like fruit is eaten, whose kernel oil cooks, and whose fruit lather
+    washes clothes.
+- id: buffalo-thorn
+  names:
+  - buffalo thorn
+  - umphafa
+  - blinkblaar-wag-'n-bietjie
+  scientific: Ziziphus mucronata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'christs-thorn: buffalo thorn''s paired thorns point one forward, one back'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - fruit
+  - medicinal
+  region: sub-saharan-africa
+  why: Paired hooked and straight thorns read by the Zulu as 'look forward, remember the past'; branches
+    gather the spirits of the dead.
+- id: shepherds-tree
+  names:
+  - shepherd's tree
+  - witgat
+  - matopi
+  scientific: Boscia albitrunca
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - folklore
+  - fruit
+  region: sub-saharan-africa
+  why: White-trunked Kalahari tree whose roots make porridge and a coffee substitute; some communities
+    hold it bad luck to burn.
+- id: mongongo
+  names:
+  - mongongo
+  - manketti
+  scientific: Schinziophyton rautanenii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: sub-saharan-africa
+  why: Kalahari sand-ridge tree whose nuts were a staple of the Ju/'hoansi; its very light wood made floats
+    and toys.
+- id: msasa
+  names:
+  - msasa
+  - miombo
+  scientific: Brachystegia spiciformis
+  rank: group
+  stands_for:
+  - Julbernardia globiflora (munondo)
+  - Brachystegia boehmii
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - cultural
+  - product
+  region: sub-saharan-africa
+  why: Dominant tree of the miombo woodland, whose spring flush turns red and bronze; its bark makes beehives
+    and barkcloth.
+- id: anogeissus
+  names:
+  - African birch
+  - axlewood
+  - n'gálama
+  - Anogeissus leiocarpa (syn.)
+  scientific: Terminalia leiocarpa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: sub-saharan-africa
+  why: Sahel tree whose leaves give the yellow mordant dye of Malian bogolan mudcloth; twigs are chewing
+    sticks.
+- id: toothbrush-tree
+  names:
+  - toothbrush tree
+  - miswak
+  - arak
+  scientific: Salvadora persica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  - fruit
+  region: sub-saharan-africa
+  why: Twigs chewed into miswak toothbrushes across Africa and the Islamic world; a sprawling desert tree
+    with salty edible berries.
+- id: sickle-bush
+  names:
+  - sickle bush
+  - Chinese lantern tree
+  - Kalahari Christmas tree
+  scientific: Dichrostachys cinerea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - medicinal
+  region: sub-saharan-africa
+  why: Thorny small tree with two-toned pink and yellow hanging flower spikes like lanterns.
+- id: sjambok-pod
+  names:
+  - sjambok pod
+  - long-tail cassia
+  scientific: Cassia abbreviata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - medicinal
+  region: sub-saharan-africa
+  why: Yellow-flowered tree with whip-long pods; its bark is a widespread fever and malaria remedy.
+- id: wild-medlar
+  names:
+  - wild medlar
+  - mmilo
+  scientific: Vangueria infausta
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  region: sub-saharan-africa
+  why: Bushveld fruit tree whose wood is unlucky to burn in the hearth, hence the epithet infausta.
+- id: silver-cluster-leaf
+  names:
+  - silver cluster-leaf
+  - silver terminalia
+  scientific: Terminalia sericea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  region: sub-saharan-africa
+  why: Silky silver-leaved Kalahari sand tree with pinkish winged fruits.
+- id: zambezi-teak
+  names:
+  - Zambezi teak
+  - mukusi
+  - Rhodesian teak
+  scientific: Baikiaea plurijuga
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Kalahari sand-forest hardwood laid as Victoria Falls railway sleepers and parquet.
+- id: moabi
+  names:
+  - moabi
+  - djave
+  scientific: Baillonella toxisperma
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  region: sub-saharan-africa
+  why: Emergent giant of Cameroon and Gabon whose seeds give a cooking oil valued by Baka communities.
+- id: obeche
+  names:
+  - obeche
+  - ayous
+  - wawa
+  scientific: Triplochiton scleroxylon
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  region: sub-saharan-africa
+  why: Huge buttressed West African tree with pale, very light wood used for carving and model-making.
+- id: limba
+  names:
+  - limba
+  - afara
+  - korina
+  scientific: Terminalia superba
+  rank: species
+  stands_for:
+  - Terminalia ivorensis (idigbo)
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Pale buttressed tree whose 'korina' wood made the Gibson Flying V guitar; dark-streaked figure.
+- id: makore
+  names:
+  - makoré
+  - cherry mahogany
+  scientific: Tieghemella heckelii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: sub-saharan-africa
+  why: Lustrous pinkish-red West African timber; seeds give a cooking fat.
+- id: african-walnut
+  names:
+  - African walnut
+  - lovoa
+  - dibétou
+  scientific: Lovoa trichilioides
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Golden-brown walnut-like timber with dark gum-line streaks.
+- id: safou
+  names:
+  - safou
+  - African pear
+  - bush butter tree
+  scientific: Dacryodes edulis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: sub-saharan-africa
+  why: Violet-skinned fruit roasted or boiled into a buttery pulp across Central Africa; its resin is
+    burned as incense.
+- id: african-star-apple
+  names:
+  - African star apple
+  - agbalumo
+  - udara
+  scientific: Chrysophyllum albidum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: sub-saharan-africa
+  why: Seasonal sticky-sweet orange fruit sold on every Nigerian roadside in the dry season.
+- id: african-breadfruit
+  names:
+  - African breadfruit
+  - ukwa
+  scientific: Treculia africana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: sub-saharan-africa
+  why: Football-sized heavy fruits whose seeds are an Igbo festive dish; they can injure when they fall.
+- id: miracle-fruit
+  names:
+  - miracle fruit
+  - miracle berry
+  scientific: Synsepalum dulcificum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: sub-saharan-africa
+  why: Small tree whose red berries contain miraculin, making sour foods taste sweet for an hour.
+- id: grains-of-selim
+  names:
+  - grains of Selim
+  - African pepper
+  - uda
+  scientific: Xylopia aethiopica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: sub-saharan-africa
+  why: Tall forest tree whose smoky pepper pods spice West African soups and Senegalese café Touba.
+- id: calabash-nutmeg
+  names:
+  - calabash nutmeg
+  - ehuru
+  scientific: Monodora myristica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - flowers
+  region: sub-saharan-africa
+  why: Large hanging speckled flowers and gourd-like fruits whose aromatic seeds substitute for nutmeg.
+- id: njangsa
+  names:
+  - njangsa
+  - erimado
+  - groundnut tree
+  scientific: Ricinodendron heudelotii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: sub-saharan-africa
+  why: Fast-growing forest tree whose seeds are ground as a thickening spice in Cameroon.
+- id: aidan
+  names:
+  - aidan fruit
+  - prekese
+  - uyayak
+  scientific: Tetrapleura tetraptera
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: sub-saharan-africa
+  why: Four-winged dark brown pods with a strong aroma, used in soups and postpartum remedies.
+- id: ogilisi
+  names:
+  - ogilisi
+  - boundary tree
+  - akoko
+  scientific: Newbouldia laevis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - flowers
+  region: sub-saharan-africa
+  why: Sacred to Yoruba and Igbo shrines and planted to mark boundaries; mauve trumpet flowers.
+- id: ordeal-tree
+  names:
+  - ordeal tree
+  - sasswood
+  - red-water tree
+  scientific: Erythrophleum suaveolens
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - folklore
+  - cultural
+  region: sub-saharan-africa
+  why: Bark poison given in ordeal trials; the accused who vomited it was judged innocent.
+- id: lagos-rubber
+  names:
+  - Lagos silk-rubber
+  - African rubber tree
+  scientific: Funtumia elastica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: sub-saharan-africa
+  why: West and Central African latex tree tapped during the colonial rubber boom.
+- id: camwood
+  names:
+  - camwood
+  - barwood
+  scientific: Baphia nitida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'padauk: padauk is a large timber tree; camwood is a small dye tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: sub-saharan-africa
+  why: Small tree whose red heartwood powder colours cloth and is rubbed on the skin in West African rites.
+- id: african-elemi
+  names:
+  - African elemi
+  - African canarium
+  - aiele
+  scientific: Canarium schweinfurthii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - fruit
+  region: sub-saharan-africa
+  why: Giant forest tree bled for a fragrant elemi incense resin; its oily purple fruit is eaten.
+- id: african-copaiba
+  names:
+  - African copaiba balsam
+  - daniellia
+  - ogea
+  scientific: Daniellia oliveri
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: sub-saharan-africa
+  why: Savanna tree tapped for an oleoresin used as incense and medicine.
+- id: east-african-copal
+  names:
+  - Zanzibar copal
+  - East African copal
+  - Trachylobium verrucosum
+  scientific: Hymenaea verrucosa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  region: sub-saharan-africa
+  why: Coastal tree whose fossil resin, dug from old forest soils, was East Africa's great varnish export.
+- id: african-pencil-cedar
+  names:
+  - African pencil cedar
+  - East African juniper
+  - tid
+  - Arabian juniper
+  scientific: Juniperus procera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'archa-juniper: tall, slender and tropical-mountain'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  - striking
+  region: sub-saharan-africa
+  why: Tallest juniper, forming Ethiopian and Kenyan montane forests; its fragrant wood made pencils and
+    church beams.
+- id: warburgia
+  names:
+  - pepper-bark tree
+  - muthaiga
+  - isibhaha
+  scientific: Warburgia salutaris
+  rank: group
+  stands_for:
+  - Warburgia ugandensis
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: sub-saharan-africa
+  why: Peppery bark is a potent traditional remedy, so stripped that the tree is endangered.
+- id: cordia-africana
+  names:
+  - wanza
+  - large-leaved cordia
+  scientific: Cordia africana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  region: sub-saharan-africa
+  why: White-flowered Ethiopian shade tree whose light durable wood makes drums, beehives and furniture.
+- id: gesho
+  names:
+  - gesho
+  - shiny-leaf buckthorn
+  scientific: Rhamnus prinoides
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: sub-saharan-africa
+  why: Small tree whose leaves bitter Ethiopian tej honey wine and tella beer, as hops do.
+- id: croton-megalocarpus
+  names:
+  - croton
+  - mukinduri
+  scientific: Croton megalocarpus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: sub-saharan-africa
+  why: Flat-topped East African highland tree whose nuts are pressed for biofuel oil.
+- id: osyris
+  names:
+  - African sandalwood
+  - East African sandalwood
+  scientific: Osyris lanceolata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sandalwood: a different genus that is also semi-parasitic and scented'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: sub-saharan-africa
+  why: Small semi-parasitic tree smuggled from Kenya and Tanzania for sandalwood oil.
+- id: kilimanjaro-mahogany
+  names:
+  - Kilimanjaro giant
+  - mountain mahogany
+  scientific: Entandrophragma excelsum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sapele: a montane giant, not a lowland ribbon-figured timber'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Africa's tallest measured tree, 81.5 m, grows in a Kilimanjaro valley.
+- id: natal-mahogany
+  names:
+  - Natal mahogany
+  - mafura
+  - umathunzi
+  scientific: Trichilia emetica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: sub-saharan-africa
+  why: Dark evergreen shade tree whose red-arilled seeds give mafura oil and soap.
+- id: cape-chestnut
+  names:
+  - Cape chestnut
+  scientific: Calodendrum capense
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  region: sub-saharan-africa
+  why: Forest tree that covers itself in pink orchid-like flowers.
+- id: weeping-boer-bean
+  names:
+  - weeping boer-bean
+  - huilboerboon
+  scientific: Schotia brachypetala
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - fruit
+  region: sub-saharan-africa
+  why: Crimson nectar-dripping flowers ('weeping') and roastable beans.
+- id: tree-wisteria
+  names:
+  - tree wisteria
+  - elephant wood
+  scientific: Bolusanthus speciosus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  region: sub-saharan-africa
+  why: Small tree hung with violet wisteria-like flowers in spring.
+- id: keurboom
+  names:
+  - keurboom
+  - blossom tree
+  scientific: Virgilia oroboides
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  region: sub-saharan-africa
+  why: Fast-growing short-lived Cape tree smothered in pink, scented pea flowers.
+- id: cabbage-tree-cussonia
+  names:
+  - cabbage tree
+  - kiepersol
+  scientific: Cussonia spicata
+  rank: group
+  stands_for:
+  - Cussonia paniculata (mountain cabbage tree)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  region: sub-saharan-africa
+  why: Thick corky trunk topped by rounded heads of deeply divided leaves, like a vegetable on a pole.
+- id: halfmens
+  names:
+  - halfmens
+  - elephant's trunk
+  scientific: Pachypodium namaquanum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'madagascar-palm: halfmens is a single unbranched column leaning north'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  region: sub-saharan-africa
+  why: Spiny succulent column topped by a head of leaves, said by the Nama to be ancestors frozen looking
+    north toward their homeland.
+- id: mulanje-cedar
+  names:
+  - Mulanje cedar
+  - Clanwilliam cedar
+  scientific: Widdringtonia whytei
+  rank: group
+  stands_for:
+  - Widdringtonia wallichii (Clanwilliam cedar)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: sub-saharan-africa
+  why: Malawi's national tree, a fragrant cypress of Mount Mulanje, now critically endangered.
+- id: white-milkwood
+  names:
+  - white milkwood
+  - Post Office Tree
+  scientific: Sideroxylon inerme
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - fruit
+  region: sub-saharan-africa
+  why: Gnarled coastal tree; in 1500 a Portuguese sailor left a letter in a shoe under the Mossel Bay
+    milkwood, now the Post Office Tree.
+- id: assegai
+  names:
+  - assegai
+  - Cape lancewood
+  scientific: Curtisia dentata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  region: sub-saharan-africa
+  why: Tough red wood used for spear shafts; overharvested bark muthi.
+- id: wagon-tree
+  names:
+  - wagon tree
+  - waboom
+  scientific: Protea nitida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'silver-tree: wagon tree is a gnarled grey-green protea, not silver'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - product
+  region: sub-saharan-africa
+  why: The largest tree protea; its wood made wagon wheels, its bark tanned leather and its leaves made
+    ink.
+- id: hyena-poison
+  names:
+  - hyena poison
+  - wolwegif
+  scientific: Hyaenanche globosa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  region: sub-saharan-africa
+  why: Small Cape tree whose ground fruits were used to bait carcasses to poison hyenas.
+- id: bushmans-poison
+  names:
+  - bushman's poison
+  - poison arrow tree
+  scientific: Acokanthera oppositifolia
+  rank: group
+  stands_for:
+  - Acokanthera schimperi
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - medicinal
+  - flowers
+  region: sub-saharan-africa
+  why: Fragrant white flowers and plum-like fruits; cardiac glycosides in its wood made arrow poison that
+    kills elephants.
+- id: wild-plum
+  names:
+  - wild plum
+  - Transkei plum
+  scientific: Harpephyllum caffrum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: sub-saharan-africa
+  why: Glossy evergreen with sour red plums made into jelly.
+- id: kei-apple
+  names:
+  - Kei apple
+  scientific: Dovyalis caffra
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: sub-saharan-africa
+  why: Fiercely thorned hedge tree with apricot-coloured sour fruit.
+- id: waterberry
+  names:
+  - waterberry
+  - umdoni
+  scientific: Syzygium cordatum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  region: sub-saharan-africa
+  why: Stream-bank tree with purple berries and square twigs.
+- id: african-mangosteen
+  names:
+  - African mangosteen
+  - imbe
+  scientific: Garcinia livingstonei
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: sub-saharan-africa
+  why: Stiff tiered branches and bright orange tart fruits.
+- id: sour-plum
+  names:
+  - sour plum
+  - large sourplum
+  scientific: Ximenia caffra
+  rank: group
+  stands_for:
+  - Ximenia americana
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: sub-saharan-africa
+  why: Thorny semi-parasite with tart red plums and seeds pressed for cosmetic oil.
+- id: wild-loquat
+  names:
+  - wild loquat
+  - masuku
+  - mahobohobo
+  scientific: Uapaca kirkiana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: sub-saharan-africa
+  why: Miombo fruit tree whose sweet masuku are sold by the roadside in Zambia and Zimbabwe.
+- id: bitter-aloe
+  names:
+  - bitter aloe
+  - Cape aloe
+  scientific: Aloe ferox
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'quiver-tree: bitter aloe is single-stemmed with a skirt of dead leaves and spiny leaves'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  - flowers
+  region: sub-saharan-africa
+  why: Single-stemmed aloe tapped for bitter laxative sap since the 1700s; red candelabra flowers.
+- id: pencil-tree
+  names:
+  - pencil tree
+  - milk bush
+  - rubber euphorbia
+  scientific: Euphorbia tirucalli
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tree-euphorbia: pencil tree has leafless pencil-thin twigs, not ribbed columns'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  region: sub-saharan-africa
+  why: Leafless tangle of green pencil twigs whose latex burns skin and eyes; planted as living fences.
+- id: wild-date-palm
+  names:
+  - wild date palm
+  - Senegal date palm
+  scientific: Phoenix reclinata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'date-palm: wild date palm clusters, with small, thin-fleshed fruit'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: sub-saharan-africa
+  why: Clustering riverbank palm tapped for palm wine; its leaves are woven into mats.
+- id: madagascar-palm
+  names:
+  - Madagascar palm
+  - pachypodium
+  scientific: Pachypodium lamerei
+  rank: group
+  stands_for:
+  - Pachypodium geayi
+  - Pachypodium rutenbergii
+  distinct_from:
+  - 'octopus-tree: pachypodiums have thick spiny trunks with a leaf tuft, not slender spiny wands'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  region: sub-saharan-africa
+  why: Silver-spined swollen trunks crowned by a tuft of leaves and white frangipani-like flowers.
+- id: bismarck-palm
+  names:
+  - Bismarck palm
+  scientific: Bismarckia nobilis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: sub-saharan-africa
+  why: Massive silver-blue fan palm dotting the western Madagascar grasslands; leaves thatch houses.
+- id: tahina-palm
+  names:
+  - Tahina palm
+  - suicide palm
+  scientific: Tahina spectabilis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Giant fan palm, described only in 2008, that flowers once in its life in a huge terminal plume,
+    then dies.
+- id: triangle-palm
+  names:
+  - triangle palm
+  scientific: Dypsis decaryi
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Leaves rising in three vertical ranks, giving a triangular trunk top.
+- id: tapia
+  names:
+  - tapia
+  scientific: Uapaca bojeri
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - fruit
+  region: sub-saharan-africa
+  why: Fire-resistant highland woodland tree whose leaves feed the wild silk moth for Malagasy lamba akotifahana
+    silk.
+- id: ravensara
+  names:
+  - ravensara
+  - havozo
+  - clove nutmeg
+  - Ravensara aromatica
+  scientific: Cryptocarya agathophylla
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: sub-saharan-africa
+  why: Aromatic Malagasy rainforest tree distilled for ravensara oil, often confused with ravintsara,
+    which is camphor laurel grown on the island.
+- id: mouse-trap-tree
+  names:
+  - mouse-trap tree
+  - uncarina
+  scientific: Uncarina grandidieri
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  region: sub-saharan-africa
+  why: Yellow trumpet flowers and fruits armed with grappling hooks that can trap small animals.
+- id: coco-de-mer
+  names:
+  - coco de mer
+  - double coconut
+  - sea coconut
+  scientific: Lodoicea maldivica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  - fruit
+  - cultural
+  region: sub-saharan-africa
+  why: Seychelles palm with the largest seed of any plant, up to 25 kg, once thought to grow on a tree
+    under the sea; on the Seychelles coat of arms.
+- id: bottle-palm
+  names:
+  - bottle palm
+  scientific: Hyophorbe lagenicaulis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Mauritian palm with a bulbous bottle trunk; fewer than ten survive in the wild on Round Island.
+- id: dodo-tree
+  names:
+  - tambalacoque
+  - dodo tree
+  scientific: Sideroxylon grandiflorum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - striking
+  region: sub-saharan-africa
+  why: Mauritian tree whose seeds were claimed in 1977 to need the extinct dodo's gut to germinate, a
+    famous and discredited story.
+- id: jellyfish-tree
+  names:
+  - jellyfish tree
+  scientific: Medusagyne oppositifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Seychelles tree once thought extinct, whose fruits split into jellyfish-shaped umbrellas.
+- id: tamarin-des-hauts
+  names:
+  - tamarin des Hauts
+  - Réunion acacia
+  scientific: Acacia heterophylla
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Réunion highland acacia whose closest relative is the Hawaiian koa; its wood is prized for Creole
+    furniture.
+- id: warka
+  names:
+  - warka
+  scientific: Ficus vasta
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sycamore-fig: sycamore fig bears its figs in clusters on the trunk'
+  split_from: sycamore-fig
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - fruit
+  region: sub-saharan-africa
+  why: Ethiopia's giant spreading fig, with large round leathery leaves, the landmark shade tree under
+    which highland villages meet and trade.
+- id: outeniqua-yellowwood
+  names:
+  - Outeniqua yellowwood
+  - East African yellowwood
+  - zigba
+  - podo
+  scientific: Afrocarpus falcatus
+  rank: group
+  stands_for:
+  - Afrocarpus gracilior (East African yellowwood)
+  distinct_from:
+  - 'yellowwood: real yellowwood is shorter and straighter, with broader leaves'
+  split_from: yellowwood
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Emergent podocarp to 60 m whose bark flakes away leaving a dimpled trunk; the Tsitsikamma 'Big
+    Tree' is one, and in Ethiopia it is the zigba of church forests.
+- id: woods-cycad
+  names:
+  - Wood's cycad
+  - loneliest plant
+  scientific: Encephalartos woodii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bread-tree: the other African cycads still grow wild'
+  split_from: bread-tree
+  tier: 2
+  status: extinct-in-wild
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Found in 1895 as a single male clump in Ngoye Forest; its last wild stem was removed in 1916, so
+    every plant alive is a clone of that one male.
+- id: loneliest-palm
+  names:
+  - palmiste marron
+  - world's loneliest palm
+  scientific: Hyophorbe amaricaulis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bottle-palm: bottle palm has a short bulbous trunk'
+  split_from: null
+  tier: 3
+  status: extinct-in-wild
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Mauritian palm known from a single tree in Curepipe Botanic Garden; extinct in the wild, and seed
+    raised from it has barely survived.
+- id: st-helena-gumwood
+  names:
+  - St Helena gumwood
+  - gumwood
+  scientific: Commidendrum robustum
+  rank: group
+  stands_for:
+  - Commidendrum rotundifolium (bastard gumwood)
+  - Commidendrum spurium (false gumwood)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: sub-saharan-africa
+  why: Gnarled umbrella-crowned daisy tree whose woodland once covered St Helena, and the island's national
+    tree; the bastard gumwood has been extinct in the wild since its last wild tree died in 1986.
+- id: st-helena-cabbage-tree
+  names:
+  - St Helena cabbage tree
+  - he cabbage
+  - she cabbage
+  - black cabbage
+  scientific: Pladaroxylon leucadendron
+  rank: group
+  stands_for:
+  - Lachanodes arborea (she cabbage)
+  - Melanodendron integrifolium (black cabbage)
+  distinct_from:
+  - 'st-helena-gumwood: gumwoods have small leaves on a flat spreading crown'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: sub-saharan-africa
+  why: Small daisy trees of St Helena's cloud-forest ridge, with big leaves in rosettes at the branch
+    tips.
+- id: st-helena-olive
+  names:
+  - St Helena olive
+  - bastard olive
+  scientific: Nesiota elliptica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extinct
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Small St Helena tree, not a true olive; the last wild tree died in 1994 and the last cultivated
+    tree in 2003, when the species went extinct.
+- id: st-helena-redwood
+  names:
+  - St Helena redwood
+  scientific: Trochetiopsis erythroxylon
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'st-helena-ebony: St Helena ebony is a low sprawling shrub'
+  split_from: null
+  tier: 3
+  status: extinct-in-wild
+  inclusion:
+  - product
+  - flowers
+  - cultural
+  region: sub-saharan-africa
+  why: Stripped for its tanning bark and red timber until no wild trees remained; every living plant descends
+    from one surviving tree. White flowers age to pink.
+- id: st-helena-ebony
+  names:
+  - St Helena ebony
+  scientific: Trochetiopsis ebenus
+  rank: species
+  stands_for:
+  - Trochetiopsis melanoxylon (dwarf ebony, extinct)
+  distinct_from:
+  - 'st-helena-redwood: St Helena redwood is an upright tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  region: sub-saharan-africa
+  why: Sprawling shrub with black heartwood and white hibiscus-like flowers, thought extinct until two
+    plants were found on a cliff in 1980; the dwarf ebony has not been seen since 1771.
+- id: african-alpine-bamboo
+  names:
+  - African alpine bamboo
+  - mountain bamboo
+  - Yushania alpina
+  - Arundinaria alpina
+  scientific: Oldeania alpina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bamboo: moso bamboo is the East Asian giant timber bamboo'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: sub-saharan-africa
+  why: Forms dense bamboo belts at 2,400-3,200 m on East African mountains, food of mountain gorillas
+    and golden monkeys and building cane in the Ethiopian highlands.
+- id: african-tree-fern
+  names:
+  - common tree fern
+  - Alsophila dregei
+  scientific: Cyathea dregei
+  rank: group
+  stands_for:
+  - Cyathea manniana
+  distinct_from:
+  - 'tree-fern: the New Zealand silver fern is a forest tree fern with silver-backed fronds'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  region: sub-saharan-africa
+  why: Stout-trunked tree fern of southern and East African grassland streams and montane forest, whose
+    pith is a traditional remedy.
+- id: iboga
+  names:
+  - iboga
+  - eboka
+  scientific: Tabernanthe iboga
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - toxic
+  - product
+  region: sub-saharan-africa
+  why: Rainforest shrub to small tree whose root bark is eaten in Bwiti initiation in Gabon, which declared
+    it a national treasure in 2000; source of ibogaine, which can stop the heart.
+- id: bitterleaf
+  names:
+  - bitter leaf
+  - ndolé
+  - onugbu
+  - Vernonia amygdalina
+  scientific: Gymnanthemum amygdalinum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  region: sub-saharan-africa
+  why: Shrub or small tree whose bitter leaves make Cameroon's ndolé and Igbo onugbu soup; sick chimpanzees
+    chew its pith.
+- id: spekboom
+  names:
+  - spekboom
+  - elephant bush
+  - porkbush
+  scientific: Portulacaria afra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'octopus-tree: octopus trees are spiny columns, not soft-leaved shrubs'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: sub-saharan-africa
+  why: Succulent small tree with round fleshy leaves that dominates the Albany thicket, browsed by elephants
+    and replanted for carbon capture.
+- id: giant-bird-of-paradise
+  names:
+  - giant bird of paradise
+  - Natal wild banana
+  - giant white bird of paradise
+  scientific: Strelitzia nicolai
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'travellers-palm: traveller''s palm holds its leaves in one flat fan on a single trunk'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: sub-saharan-africa
+  why: Clumping banana-like tree to 10 m of the coastal dune forest, with blue-and-white flowers like
+    birds' heads.
+- id: african-moringa
+  names:
+  - African moringa
+  - cabbage tree
+  - shelagda
+  scientific: Moringa stenopetala
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'moringa: the drumstick moringa is slender, with small leaflets'
+  - 'phantom-tree: phantom tree is a pale desert moringa of Namibia'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - striking
+  region: sub-saharan-africa
+  why: Swollen-trunked moringa of southern Ethiopia and northern Kenya whose leaves are the Konso's daily
+    vegetable.

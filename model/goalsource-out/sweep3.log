@@ -1,0 +1,10 @@
+GoalSource_LiveXpairNoEnd | Error: Temporal properties were violated. | 45468 states generated, 11785 distinct states found | depth State 29: | 4s | peak 776 MB
+GoalSource_LivePairF3 | No error has been found | 13591 states generated, 3824 distinct states found | depth 28 | 2s | peak 0 MB
+GoalSource_LivePairF124 | No error has been found | 22375 states generated, 6273 distinct states found | depth 28 | 4s | peak 795 MB
+GoalSource_LiveXpairF3 | No error has been found | 45468 states generated, 11785 distinct states found | depth 35 | 6s | peak 1179 MB
+GoalSource_LiveXpairF124 | No error has been found | 134228 states generated, 30230 distinct states found | depth 35 | 14s | peak 1236 MB
+GoalSource_LiveChain3F3 | No error has been found | 477027 states generated, 92836 distinct states found | depth 40 | 40s | peak 1501 MB
+GoalSource_LiveChain3F124 | No error has been found | 878414 states generated, 177632 distinct states found | depth 40 | 111s | peak 1898 MB
+GoalSource_LiveCrossF124 | killed (1802s cap) | not claimed | last: Progress(33) at 2026-11-15 17:55:18: 11,158,865 states generated (518,687 s/min), 1,967,158 distinct states found (79,463 ds/min), 201,843 states left on queue. | 1812s | peak 4255 MB
+GoalSource_LiveChainF3 | No error has been found | 11825543 states generated, 1778227 distinct states found | depth 52 | 1788s | peak 3813 MB
+GoalSource_LiveChainF124 | killed (1802s cap) | not claimed | last: Progress(30) at 2026-11-15 18:58:29: 11,445,699 states generated (498,436 s/min), 1,954,281 distinct states found (81,928 ds/min), 214,052 states left on queue. | 1812s | peak 4319 MB

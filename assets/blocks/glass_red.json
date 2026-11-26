@@ -1,0 +1,4 @@
+{ "name": "glass_red", "symmetry": "uniform",
+  "textures": { "+z": { "connected": "glass_frames.png" } },
+  "roughness": 0.08,
+  "translucency": { "absorption": [0.15, 1.9, 2.2] } }

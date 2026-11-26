@@ -1,0 +1,3156 @@
+- id: almond
+  names:
+  - almond
+  scientific: Prunus dulcis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'peach: peach is grown for its flesh, almond for its seed'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - toxic
+  - flowers
+  - cultural
+  - product
+  habitat:
+    range: Iran and Central Asia (Tian Shan and Kopet Dag foothills) wild; cultivated across the Mediterranean
+      and California
+    ecosystem: dry foothill scrub and orchard
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 2000
+    substrate: well-drained stony or calcareous soils; drought-tolerant
+    niche: sunny dry hill slopes
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small spreading tree or large shrub, open rounded crown
+    height_m:
+    - 4
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, narrow lanceolate, finely toothed, dark green
+    seasonal: blossom before the leaves in late winter; leaves yellow in autumn
+    flowers: pink to white five-petalled flowers, appearing in late winter before the leaves
+    fruit_visible: green felty-husked drupe that splits to show the stone; seed is the almond
+    bark: grey-brown, rough and fissured with age
+  timber:
+    heartwood: reddish brown
+    sapwood: null
+    grain: fairly straight to irregular
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard; fruitwood-like, takes a polish
+    rot_resistance: null
+    scent: null
+    fuel: burns well; pruning wood used as firewood
+    uses:
+    - small turned objects
+    - fuel
+  products:
+    food:
+    - sweet almond kernels
+    - almond milk and marzipan
+    - almond oil
+    sap_resin_latex:
+    - gum (almond gum) from trunk
+    bark: &id001 []
+    leaves: &id002 []
+    dyes: &id003 []
+    medicinal:
+    - bitter almond oil, sweet almond oil as emollient
+    toxicity: bitter almond (var. amara) kernels contain amygdalin that releases hydrogen cyanide when
+      crushed or chewed; dangerous to people and livestock in quantity
+  lore:
+    folklore:
+    - In Numbers 17 Aaron's staff budded and bore almonds, proving the Levites' priesthood
+    - 'Greek myth: Phyllis, turned into an almond tree, bloomed when Demophon returned'
+    cultures:
+    - Hebrew shaked, "the wakeful one", first tree to bloom in the Levant; Tu BiShvat
+    - Persian and Mediterranean confectionery; Silk Road trade nut
+    symbolism:
+    - hope and early spring; watchfulness in Jewish tradition
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: nut crop and oil'
+      liminality: 'low: cultivated orchard tree of settled land'
+    dimensions: []
+    hooks:
+    - 'first-session food: nuts and oil from an early orchard tree'
+    - bitter-almond poison as a crafted hazard
+  sources:
+  - https://en.wikipedia.org/wiki/Almond
+  - https://powo.science.kew.org/results?q=Prunus%20dulcis
+  - https://www.britannica.com/plant/almond
+- id: apple
+  names:
+  - apple
+  - orchard apple
+  scientific: Malus domestica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'crab-apple: crab apple is a small-fruited wild or ornamental tree'
+  - 'wild-apple: wild apple is the Tian Shan forest ancestor with small variable fruit'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  - fruit
+  habitat:
+    range: Cultivated worldwide; derived from the wild apple forests of Kazakhstan and Kyrgyzstan (Tian
+      Shan), with later gene flow from crab apples
+    ecosystem: orchard, hedgerow, abandoned farmland
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 2500
+    substrate: deep well-drained loam, neutral to slightly acid
+    niche: orchard and field-edge tree
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: short trunk, broad rounded to spreading crown
+    height_m:
+    - 3
+    - 12
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: 100
+    growth_rate: moderate
+    leaves: deciduous broadleaf, oval, toothed, dull green above and downy beneath
+    seasonal: yellow-brown or dropped green in autumn; heavy fruit set late summer
+    flowers: white to pink-flushed five-petalled blossoms in spring
+    fruit_visible: round pome 5-10 cm, from green to yellow to red depending on variety
+    bark: grey-brown, scaly and fissured with age
+  timber:
+    heartwood: light reddish brown
+    sapwood: pale pinkish
+    grain: fine, close; can be twisted
+    texture: fine, even
+    density_kg_m3: 830
+    janka_n: 7700
+    workability: dense and difficult to work; turns and carves well; used in small pieces
+    rot_resistance: not durable
+    scent: pleasant sweet scent when burned or cut
+    fuel: excellent, slow burning with sweet smoke
+    uses:
+    - tool handles
+    - carved items
+    - smoking and barbecue wood
+    - fuel
+  products:
+    food:
+    - fresh and dried apples
+    - cider and vinegar
+    - pectin
+    sap_resin_latex: &id004 []
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - apple fruit in traditional digestive remedies
+    toxicity: seeds contain amygdalin, which releases cyanide if many are chewed; trivial in practice
+  lore:
+    folklore:
+    - Golden apples of the Hesperides and Idun's youth-giving apples in Norse myth
+    - Avalon, 'island of apples', in Arthurian legend
+    - Judgement of Paris and the apple of discord
+    cultures:
+    - Wassailing of orchards in England
+    - Silk Road dispersal from Almaty (Kazakh Alma-Ata, "father of apples")
+    symbolism:
+    - knowledge, temptation and love in Western art, though the Genesis fruit is unnamed
+    notable_trees:
+    - Isaac Newton's apple tree at Woolsthorpe Manor
+  game_fit:
+    fields:
+      yield: 'high: fruit and cider'
+      alignment: 'high: domestic, orchard-tending'
+    dimensions:
+    - aether
+    hooks:
+    - food and cider crafting
+    - grafting as an early progression hook
+    - 'aether: golden-apple and Avalon lore'
+  sources:
+  - https://www.wood-database.com/apple/
+  - https://en.wikipedia.org/wiki/Apple
+  - https://powo.science.kew.org/results?q=Malus%20domestica
+- id: apricot
+  names:
+  - apricot
+  scientific: Prunus armeniaca
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ume: apricot is a summer fruit tree, ume is valued for winter blossom and pickled fruit'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - toxic
+  - cultural
+  habitat:
+    range: Armenia, Central Asia and northern China (long-debated origin); cultivated from Turkey and
+      Iran to Europe
+    ecosystem: dry hill orchards and foothill scrub
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 2500
+    substrate: deep well-drained loam; tolerates limestone and drought
+    niche: orchard and foothill tree
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small spreading tree with rounded crown
+    height_m:
+    - 5
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: 100
+    growth_rate: moderate
+    leaves: deciduous, broadly ovate with a pointed tip, finely toothed, glossy dark green
+    seasonal: golden-yellow autumn colour; blossom very early in spring
+    flowers: white to pale pink, almost sessile along twigs, before leaves
+    fruit_visible: round velvety orange-yellow drupe 3-6 cm with a smooth stone
+    bark: reddish-brown to dark grey, cracking into rough scaly plates
+  timber:
+    heartwood: orange-brown to reddish brown
+    sapwood: pale yellowish
+    grain: straight to irregular
+    texture: fine
+    density_kg_m3: 745
+    janka_n: 6200
+    workability: moderate to hard; carves and turns well
+    rot_resistance: not durable
+    scent: null
+    fuel: good fuel
+    uses:
+    - duduk (Armenian reed oboe) bodies
+    - carved bowls and instruments
+    - fuel
+  products:
+    food:
+    - fresh and sun-dried apricots
+    - kernel oil and sweet kernels
+    - apricot paste and leather
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - kernel oil; amygdalin ("laetrile") in disputed cancer folk remedy
+    toxicity: kernels of wild and bitter forms contain amygdalin that releases hydrogen cyanide; eating
+      many kernels has caused fatal poisoning
+  lore:
+    folklore:
+    - Called "egg of the sun" in Persian and Pakistani folk usage
+    - Chinese medical tradition places apricot groves (xinglin) as symbol of physicians
+    cultures:
+    - Armenia's national fruit; the duduk is traditionally carved from apricot wood
+    - Dried apricots as Silk Road and Hunza staple
+    symbolism:
+    - Armenian identity; in China, medicine and teaching (xing tan)
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: dried fruit and kernel oil'
+    dimensions: []
+    hooks:
+    - 'instrument crafting: duduk from apricot wood'
+    - dried fruit travel food
+  sources:
+  - https://www.wood-database.com/apricot/
+  - https://en.wikipedia.org/wiki/Apricot
+  - https://powo.science.kew.org/results?q=Prunus%20armeniaca
+- id: black-mulberry
+  names:
+  - black mulberry
+  scientific: Morus nigra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-mulberry: white mulberry is the silkworm tree'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  habitat:
+    range: Probably Iran and the Caucasus; cultivated since antiquity across West Asia and Europe
+    ecosystem: orchard and village tree
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 1800
+    substrate: deep fertile soil; tolerates drought once established
+    niche: village and garden tree
+    strata:
+    - understory
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: short gnarled trunk, dense broad spreading crown
+    height_m:
+    - 6
+    - 12
+    trunk_diameter_m:
+    - 0.4
+    - 1.0
+    lifespan_y: 250
+    growth_rate: slow
+    leaves: deciduous, broadly heart-shaped, rough and dark green above, downy beneath
+    seasonal: yellow in autumn; fruit stains drop to ground in early summer
+    flowers: small greenish catkins, unnoticed
+    fruit_visible: dark purple-black juicy compound berry 2-3 cm, stains hands and ground
+    bark: rough, orange-brown to grey, deeply fissured and burred with age
+  timber:
+    heartwood: orange-brown
+    sapwood: pale yellowish
+    grain: straight to wavy
+    texture: medium
+    density_kg_m3: 690
+    janka_n: 7470
+    workability: moderately hard; turns and carves, used mostly in small pieces (values are for Morus
+      spp.)
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good
+    uses:
+    - cooperage
+    - sports goods
+    - furniture
+    - fuel
+  products:
+    food:
+    - fresh berries
+    - syrup (doshab, pekmez)
+    - dried fruit
+    - jam
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves:
+    - leaves used as fodder; lesser silkworm feed than white mulberry
+    dyes: *id003
+    medicinal:
+    - fruit syrup for sore throat in traditional medicine
+    toxicity: unripe fruit and milky sap can cause stomach upset
+  lore:
+    folklore:
+    - 'Ovid: in the story of Pyramus and Thisbe the lovers'' blood turned the white berries of a mulberry
+      tree dark red'
+    cultures:
+    - Mulberry planted in Persian and Turkish village squares
+    - Pekmez and doshab syrups
+    symbolism:
+    - tragic love in Ovid and later Shakespeare
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: sweet fruit'
+      liminality: 'medium: lore of blood and tragedy'
+    dimensions:
+    - aether
+    hooks:
+    - dye from berry juice (purple stains)
+    - dark-berry food source for first session
+    - 'aether: blood-stained berries'
+  sources:
+  - https://en.wikipedia.org/wiki/Morus_nigra
+  - https://www.wood-database.com/mulberry/
+  - https://powo.science.kew.org/results?q=Morus%20nigra
+- id: carob
+  names:
+  - carob
+  - St John's bread
+  scientific: Ceratonia siliqua
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  habitat:
+    range: Mediterranean basin from Spain to Levant, probably native to Syria and Turkey; cultivated widely
+    ecosystem: dry Mediterranean woodland and maquis
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: rocky, calcareous or poor soils; drought-hardy
+    niche: sunny lower slopes
+    strata:
+    - understory
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: broad dense rounded crown, thick short trunk
+    height_m:
+    - 8
+    - 15
+    trunk_diameter_m:
+    - 0.5
+    - 1.2
+    lifespan_y: 500
+    growth_rate: slow
+    leaves: evergreen pinnate leaves with 4-10 round leathery dark green leaflets
+    seasonal: evergreen; pods ripen in late summer
+    flowers: small red-brown flowers in clusters on old wood (cauliflory), foul-smelling
+    fruit_visible: long flat brown leathery pods 10-30 cm, hanging in clusters
+    bark: grey-brown, rough, fissured with age
+  timber:
+    heartwood: reddish brown
+    sapwood: pale pinkish
+    grain: irregular, sometimes interlocked
+    texture: medium
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and heavy; difficult to work, turns well
+    rot_resistance: durable
+    scent: null
+    fuel: excellent firewood and charcoal
+    uses:
+    - fenceposts
+    - cabinet and turned items
+    - charcoal
+    - tool handles
+  products:
+    food:
+    - pod pulp (carob powder, syrup and chocolate substitute)
+    - locust bean gum from seeds as thickener
+    sap_resin_latex:
+    - locust bean gum (E410)
+    bark:
+    - bark tannin used in tanning
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - pod powder against diarrhoea in folk medicine
+    toxicity: null
+  lore:
+    folklore:
+    - Called St John's bread from the belief that John the Baptist ate its pods in the wilderness
+    - Seeds of uniform weight said to be the origin of the carat (Arabic qirat)
+    cultures:
+    - Cretan and Cypriot carob syrup
+    - Rabbinic story of Honi sleeping 70 years after planting a carob
+    symbolism:
+    - patience and longevity (Honi story)
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: pods keep well and feed animals'
+    dimensions: []
+    hooks:
+    - dry-country food and fodder
+    - seed weight as a measurement unit lore
+  sources:
+  - https://www.fs.usda.gov/nsl/Wpsm/Ceratonia.pdf
+  - https://en.wikipedia.org/wiki/Carob
+  - https://powo.science.kew.org/results?q=Ceratonia%20siliqua
+- id: cedar-of-lebanon
+  names:
+  - cedar of Lebanon
+  - Lebanon cedar
+  - Cyprus cedar
+  scientific: Cedrus libani
+  rank: group
+  stands_for:
+  - Cedrus brevifolia (Cyprus cedar)
+  distinct_from:
+  - 'deodar: deodar has drooping tips and Himalayan sacred lore'
+  - 'atlas-cedar: Atlas cedar is the North African cedar, often blue-grey in cultivation'
+  - 'nordmann-fir: fir has upright cones, cedar has tiered crowns'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - folklore
+  - product
+  habitat:
+    range: Mountains of Lebanon, Syria and southern Turkey (Taurus); relict groves in Lebanon such as
+      the Cedars of God
+    ecosystem: montane conifer forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 1000
+    - 2100
+    substrate: rocky limestone and well-drained soils
+    niche: upper montane forest, open-grown trees
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: massive trunk with horizontal tiered branches, flat-topped crown with age
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 1.0
+    - 2.5
+    lifespan_y: 2000
+    growth_rate: slow
+    leaves: evergreen needles 2-3.5 cm in clusters of 10-15, dark green to blue-green
+    seasonal: evergreen; barrel-shaped cones ripen over two years
+    flowers: male cones yellow-brown shed pollen in autumn
+    fruit_visible: upright barrel-shaped cones 8-12 cm, ripening brown and shattering on the tree
+    bark: dark grey-brown, deeply fissured into plates
+  timber:
+    heartwood: light brown, aromatic
+    sapwood: pale yellowish
+    grain: straight, with knots
+    texture: fine to medium
+    density_kg_m3: 520
+    janka_n: 3670
+    workability: easy to work; glues and finishes well
+    rot_resistance: durable
+    scent: strong fragrant cedar scent
+    fuel: burns with fragrant smoke
+    uses:
+    - temple and palace beams (Solomon, Egyptian and Phoenician ships)
+    - boats
+    - furniture and carving
+    - incense wood
+  products:
+    food: &id005 []
+    sap_resin_latex:
+    - resin and cedar oil used for embalming
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - cedar oil in ancient medicine and embalming
+    toxicity: null
+  lore:
+    folklore:
+    - Gilgamesh and Enkidu killed Humbaba, the guardian of the cedar forest
+    - Solomon imported cedar from Hiram of Tyre for the Temple (1 Kings 5)
+    cultures:
+    - Cedar on Lebanon's flag and national emblem
+    - Phoenician shipbuilding
+    - Maronite church Cedars of God, a World Heritage site
+    symbolism:
+    - Lebanon; strength, endurance, incorruptibility in the Psalms ("cedars of Lebanon")
+    notable_trees:
+    - Cedars of God (Horsh Arz el-Rab), Bsharri, with trees reported as over 1,000 years old
+  game_fit:
+    fields:
+      liminality: 'medium: sacred grove tree'
+      savagery: low
+      alignment: 'high: temple and sacred use'
+    dimensions:
+    - aether
+    hooks:
+    - aromatic durable timber for halls and ships
+    - cedar oil as preservative
+    - 'aether: sacred grove'
+  sources:
+  - https://www.wood-database.com/cedar-of-lebanon/
+  - https://en.wikipedia.org/wiki/Cedrus_libani
+  - https://powo.science.kew.org/results?q=Cedrus%20libani
+- id: christs-thorn
+  names:
+  - Christ's thorn jujube
+  - sidr
+  - lote tree
+  scientific: Ziziphus spina-christi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jujube: jujube is the cultivated Chinese fruit tree'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - fruit
+  - product
+  habitat:
+    range: Sahel, Arabia, Levant, Iran to northwest India; cultivated for fruit
+    ecosystem: desert wadi and dry savanna
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 0
+    - 1700
+    substrate: alluvial soils along wadis; deep-rooted, tolerates drought
+    niche: wadi and oasis margin tree
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: spreading evergreen tree with drooping branches and paired thorns
+    height_m:
+    - 5
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 0.8
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen simple oval leaves with three veins, glossy green above, whitish beneath
+    seasonal: evergreen; fruit ripens late winter
+    flowers: small greenish-yellow flowers in clusters at leaf axils; nectar for honey
+    fruit_visible: small round fruit (nabk) 1-2 cm, yellow to red-brown, edible and sweet
+    bark: grey-brown, rough, fissured
+  timber:
+    heartwood: reddish brown
+    sapwood: pale yellowish
+    grain: dense, irregular
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and heavy; used mainly in small pieces
+    rot_resistance: durable
+    scent: null
+    fuel: good firewood and charcoal
+    uses:
+    - fenceposts
+    - tool handles
+    - fuel
+  products:
+    food:
+    - nabk fruit eaten fresh or dried
+    - sidr honey
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves:
+    - crushed leaves (sidr) used as a washing powder and soap
+    dyes: *id003
+    medicinal:
+    - leaf paste and fruit used in folk medicine
+    toxicity: null
+  lore:
+    folklore:
+    - Tradition holds Christ's crown of thorns was made from this tree
+    - Qur'an names the Sidrat al-Muntaha, the Lote Tree of the Utmost Boundary, which Muhammad reached
+      on his Night Journey
+    cultures:
+    - Qatar's national tree
+    - Sidr honey of Yemen and Oman is among the world's priciest
+    - Sidr leaves used in Islamic ritual washing of the dead
+    symbolism:
+    - limit of knowledge in the Qur'an; sanctity
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: boundary tree of the Night Journey and crown of thorns'
+      yield: 'medium: fruit and honey'
+    dimensions:
+    - aether
+    hooks:
+    - thorns for traps or barriers
+    - leaf soap crafting
+    - 'aether: boundary-of-the-world tree'
+  sources:
+  - https://en.wikipedia.org/wiki/Ziziphus_spina-christi
+  - https://powo.science.kew.org/results?q=Ziziphus%20spina-christi
+  - https://apps.worldagroforestry.org/treedb/AFTPDFS/Ziziphus_spina-christi.PDF
+- id: cucumber-tree-socotra
+  names:
+  - Socotra cucumber tree
+  scientific: Dendrosicyos socotranus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Socotra (Yemen), endemic to the island's limestone and granite slopes
+    ecosystem: succulent shrubland and dry woodland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 0
+    - 700
+    substrate: rocky limestone and granite ground, sparse soil
+    niche: open rocky slopes
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: swollen bottle trunk tapering upward, few stout branches
+    height_m:
+    - 2
+    - 5
+    trunk_diameter_m:
+    - 0.3
+    - 0.9
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, hairy, lobed leaves like a cucumber vine
+    seasonal: drops leaves in the dry season, swollen trunk stores water
+    flowers: small yellow unisexual flowers
+    fruit_visible: small green to red ovoid fruit up to 4 cm
+    bark: grey-brown to pale pinkish, peeling thin papery layers
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Socotra's flora is part of a World Heritage site
+    symbolism:
+    - Socotra endemism
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: only tree in the cucumber family, bloated trunk'
+    dimensions:
+    - enigma
+    hooks:
+    - water-storing trunk as a desert survival hook
+    - 'enigma: strange swollen succulent tree'
+  sources:
+  - https://en.wikipedia.org/wiki/Dendrosicyos
+  - https://www.iucnredlist.org/search?query=Dendrosicyos%20socotranus
+  - https://powo.science.kew.org/results?q=Dendrosicyos%20socotranus
+- id: date-palm
+  names:
+  - date palm
+  scientific: Phoenix dactylifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'canary-date-palm: Canary palm is an ornamental with a thick trunk and no edible fruit'
+  - 'cretan-date-palm: Cretan palm is multi-stemmed and wild'
+  - 'indian-date-palm: sugar date palm is tapped for sap, not fruit'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - cultural
+  - product
+  habitat:
+    range: Probably Persian Gulf and Mesopotamia; cultivated across North Africa, Arabia and the Middle
+      East
+    ecosystem: oasis groves, desert wadis
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: sandy alluvium with groundwater; tolerates salt
+    niche: oasis and irrigated grove
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tall unbranched single trunk (or offset clump) with crown of feathery fronds
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.3
+    - 0.5
+    lifespan_y: 150
+    growth_rate: moderate
+    leaves: evergreen pinnate fronds 3-6 m, grey-green, with spines at base
+    seasonal: evergreen; fruit ripens late summer to autumn
+    flowers: small creamy flowers on separate male and female trees in spring
+    fruit_visible: dense hanging clusters of date fruits, from orange-yellow to dark brown
+    bark: trunk covered in persistent leaf bases (diamond scars)
+  timber:
+    heartwood: fibrous, no true heartwood
+    sapwood: null
+    grain: fibrous, vascular bundles
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: palm stem timber is weak and variable; used round or split
+    rot_resistance: not durable
+    scent: null
+    fuel: burns poorly but fronds and stones used as fuel
+    uses:
+    - beams and roofing from trunk
+    - fronds for thatching, baskets, mats and fences
+    - rope from fibre
+  products:
+    food:
+    - dates (fresh and dried)
+    - date syrup
+    - date seed coffee
+    sap_resin_latex:
+    - sap tapped for palm wine
+    bark: *id001
+    leaves:
+    - fronds for baskets, mats and thatch
+    dyes: *id003
+    medicinal:
+    - fruit in traditional medicine
+    toxicity: null
+  lore:
+    folklore:
+    - 'Qur''an: Maryam shaken from a date palm gave birth to Isa under its fruit'
+    - Egyptian Sun and Mesopotamian Tree of Life motif
+    cultures:
+    - Emblem of Saudi Arabia
+    - Palm Sunday, Sukkot lulav
+    - Date as Ramadan fast-breaking food
+    symbolism:
+    - life, victory and fertility; Jewish and Islamic symbol
+    notable_trees:
+    - Methuselah, a palm grown in 2005 from a 2,000-year-old seed found at Masada
+  game_fit:
+    fields:
+      yield: 'high: staple fruit and fibre'
+      alignment: 'high: settled oasis tree'
+    dimensions: []
+    hooks:
+    - oasis settlement anchor
+    - fibre rope and thatch crafting
+    - sap for wine
+  sources:
+  - https://en.wikipedia.org/wiki/Date_palm
+  - https://powo.science.kew.org/results?q=Phoenix%20dactylifera
+  - https://www.britannica.com/plant/date-palm
+- id: dragons-blood-tree
+  names:
+  - dragon's blood tree
+  - Socotra dragon tree
+  scientific: Dracaena cinnabari
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dragon-tree: Canary dragon tree has a looser, more open branching crown'
+  - 'arabian-dragon-tree: Arabian dragon tree is a sparse, few-branched tree of mainland cliffs'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - medicinal
+  - product
+  habitat:
+    range: Socotra (Yemen) limestone plateaus and granite highlands, endemic
+    ecosystem: mist-fed woodland and rocky plateau
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 300
+    - 1500
+    substrate: limestone and granite slopes; relies on mist
+    niche: open rocky plateau and cliffs
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: dense upturned umbrella crown on a thick trunk that forks repeatedly
+    height_m:
+    - 4
+    - 10
+    trunk_diameter_m:
+    - 0.4
+    - 1.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, stiff sword-like leaves 30-60 cm in tight rosettes, blue-green
+    seasonal: evergreen; condenses mist and drips water to roots
+    flowers: small greenish-white fragrant flowers in clusters at branch tips
+    fruit_visible: small orange-red berries
+    bark: grey-brown, smooth to rough, thick and rugged
+  timber:
+    heartwood: fibrous, no true heartwood
+    sapwood: soft fibrous
+    grain: null
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: soft and fibrous, little use as timber
+    rot_resistance: not durable
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: *id005
+    sap_resin_latex:
+    - red resin (dragon's blood), exuded from bark wounds
+    bark: *id001
+    leaves: *id002
+    dyes:
+    - red resin used as dye and varnish pigment (violin varnish, ancient paint)
+    medicinal:
+    - resin used for wounds, diarrhoea and as folk antiseptic
+    toxicity: null
+  lore:
+    folklore:
+    - The resin was said to be the blood of a dragon killed by an elephant (Pliny, Periplus)
+    cultures:
+    - Resin traded since Roman times through Socotra
+    - Socotra World Heritage site
+    symbolism:
+    - Socotra symbol and emblem of the island
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: umbrella crown and red resin'
+      liminality: medium
+      yield: 'medium: resin'
+    dimensions:
+    - enigma
+    hooks:
+    - red resin dye and varnish
+    - mist-harvest water tree
+    - 'enigma: alien umbrella tree'
+  sources:
+  - https://en.wikipedia.org/wiki/Dracaena_cinnabari
+  - https://powo.science.kew.org/results?q=Dracaena%20cinnabari
+  - https://www.iucnredlist.org/search?query=Dracaena%20cinnabari
+- id: euphrates-poplar
+  names:
+  - Euphrates poplar
+  - desert poplar
+  - huyang
+  scientific: Populus euphratica
+  rank: group
+  stands_for:
+  - Populus pruinosa (grey-leaved desert poplar)
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: Riverbanks and desert tugai from North Africa and the Middle East to China (Tarim) and Mongolia
+    ecosystem: riparian tugai forest in deserts
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - arid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 0
+    - 2400
+    substrate: saline alluvium with shallow groundwater
+    niche: river corridor desert forest
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: broad rounded crown, often gnarled and multi-stemmed in old age
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.4
+    - 1.5
+    lifespan_y: 300
+    growth_rate: fast
+    leaves: deciduous; juvenile leaves narrow willow-like, adult leaves broad toothed and rounded on same
+      tree, grey-green
+    seasonal: turns gold in autumn; trees stand dead for centuries in dry desert
+    flowers: catkins in spring on separate male and female trees
+    fruit_visible: small capsule releasing cottony seeds
+    bark: grey-brown, deeply furrowed, can be thick and corky
+  timber:
+    heartwood: light reddish brown
+    sapwood: pale yellow
+    grain: straight to twisted
+    texture: medium
+    density_kg_m3: 471
+    janka_n: null
+    workability: soft, easy to work, tends to warp (density from a Tarim tree-ring study; basis not stated)
+    rot_resistance: not durable
+    scent: null
+    fuel: poor fuel, burns quickly
+    uses:
+    - rafters and beams in oasis towns
+    - coffins and carts
+    - fuel
+  products:
+    food: *id005
+    sap_resin_latex:
+    - salt-like exudate (huyang jian) used as soda
+    bark: *id001
+    leaves:
+    - leaves and twigs as livestock browse
+    dyes: *id003
+    medicinal:
+    - huyang tears used in Chinese and Uyghur folk medicine
+    toxicity: null
+  lore:
+    folklore:
+    - '"Alive for 1,000 years, dead for 1,000 years, undecayed for another 1,000" is a Uyghur saying about
+      it'
+    cultures:
+    - Likely the willows of Psalm 137 ("by the rivers of Babylon")
+    - Uyghur and Tarim Basin ghost forests (Lop Nur)
+    symbolism:
+    - endurance in the desert
+    notable_trees:
+    - Ghost forests of the Taklamakan along the Tarim
+  game_fit:
+    fields:
+      liminality: 'high: dead-yet-standing ghost forests'
+      savagery: 'medium: desert margin'
+    dimensions: []
+    hooks:
+    - desert riparian shade and timber tree
+    - soda from exudate
+  sources:
+  - https://apps.worldagroforestry.org/treedb/AFTPDFS/Populus_euphratica.PDF
+  - https://en.wikipedia.org/wiki/Populus_euphratica
+  - https://powo.science.kew.org/results?q=Populus%20euphratica
+- id: fig
+  names:
+  - fig
+  - common fig
+  scientific: Ficus carica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sycamore-fig: sycamore fig is a larger African tree fruiting on its trunk'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - cultural
+  - folklore
+  habitat:
+    range: Native from Iran to the Mediterranean; one of the first domesticated fruit trees (about 11,000
+      years ago)
+    ecosystem: dry hillsides and rocky gorges; orchards
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 1700
+    substrate: rocky calcareous soils, tolerant of drought
+    niche: rocky slope and orchard
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: low spreading tree with smooth grey trunk and wide crown
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: 200
+    growth_rate: fast
+    leaves: deciduous, large palmate 3-5-lobed leaves, rough above and hairy beneath
+    seasonal: drops leaves in autumn; fruit ripens late summer
+    flowers: no visible flowers, hidden inside the fruit (syconium)
+    fruit_visible: pear-shaped green to purple-brown syconium
+    bark: smooth pale grey, wrinkled on old stems
+  timber:
+    heartwood: light brown
+    sapwood: pale
+    grain: fine, straight to irregular
+    texture: medium
+    density_kg_m3: null
+    janka_n: null
+    workability: soft and easy to work but rough; seldom used
+    rot_resistance: not durable
+    scent: null
+    fuel: fair
+    uses:
+    - small carvings
+    - charcoal
+    - fuel
+  products:
+    food:
+    - fresh and dried figs
+    - fig paste and jam
+    sap_resin_latex:
+    - milky latex that irritates skin; used as rennet and wart remedy
+    bark: *id001
+    leaves:
+    - wrap for food
+    dyes: *id003
+    medicinal:
+    - figs in laxatives and poultices
+    toxicity: milky sap irritates skin and is phototoxic (furanocoumarins), causing blistering in sunlight
+  lore:
+    folklore:
+    - Fig leaves covered Adam and Eve in Genesis
+    - Ruminal fig under which the she-wolf nursed Romulus and Remus
+    cultures:
+    - Staple of Mediterranean and Levantine agriculture
+    - Caprification with fig wasps
+    symbolism:
+    - peace and prosperity ("sit under one's own vine and fig tree", Micah 4:4)
+    notable_trees:
+    - Ficus Ruminalis of the Roman Forum (Lupercal)
+  game_fit:
+    fields:
+      yield: 'high: sweet fruit'
+      alignment: 'high: domesticated since earliest farming'
+    dimensions:
+    - aether
+    hooks:
+    - early domesticated crop
+    - fig-wasp pollination lore
+    - 'aether: Eden and Roman founding lore'
+  sources:
+  - https://en.wikipedia.org/wiki/Common_fig
+  - https://powo.science.kew.org/results?q=Ficus%20carica
+  - https://www.britannica.com/plant/fig-plant
+- id: frankincense
+  names:
+  - frankincense
+  - olibanum
+  scientific: Boswellia sacra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'indian-frankincense: Indian frankincense is a dry-forest tree of the Deccan with a paler resin'
+  - 'ethiopian-frankincense: Ethiopian frankincense has papery peeling bark and the Horn of Africa resin
+    trade'
+  - 'boswellia-socotrana: Socotra frankincense is a squat swollen-based cliff tree'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - folklore
+  - product
+  habitat:
+    range: Dhofar (Oman), Hadramawt and Mahra (Yemen), Somaliland and Socotra region; incense-trade coastlands
+    ecosystem: desert escarpment woodland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: rocky limestone slopes and cliff ledges
+    niche: sparse dry woodland and cliff tree
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: short twisted trunk with spreading crown, often growing from bare rock
+    height_m:
+    - 2
+    - 8
+    trunk_diameter_m:
+    - 0.15
+    - 0.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous pinnate leaves, small dark green leaflets, shed in dry season
+    seasonal: sheds leaves during the dry season; flowers at tree's bare branch tips
+    flowers: small pale yellow-green flowers in clusters at branch tips
+    fruit_visible: small three-valved capsule
+    bark: papery pale bark that peels in thin sheets, orange-brown beneath
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: *id005
+    sap_resin_latex:
+    - oleo-gum resin (frankincense, olibanum) tapped by bark incisions; Hojari grade from Oman
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - resin in traditional medicine and as incense
+    toxicity: null
+  lore:
+    folklore:
+    - One of the Magi's gifts to the infant Jesus (Matthew 2)
+    - Queen of Sheba and Solomon gift motif
+    cultures:
+    - Incense Route from Arabia to Mediterranean
+    - Land of Frankincense World Heritage site in Oman
+    - Burned in temples across Egypt, Greece, Rome and the Church
+    symbolism:
+    - worship, prayer and holiness
+    notable_trees:
+    - Wadi Dawkah frankincense grove (Oman)
+  game_fit:
+    fields:
+      liminality: 'high: incense and ritual'
+      yield: 'high: resin trade'
+    dimensions:
+    - aether
+    hooks:
+    - resin harvest by tapping
+    - incense crafting
+    - trade-route goods
+    - 'aether: incense and ritual'
+  sources:
+  - https://en.wikipedia.org/wiki/Boswellia_sacra
+  - https://whc.unesco.org/en/list/1010
+  - https://powo.science.kew.org/results?q=Boswellia%20sacra
+- id: henna
+  names:
+  - henna
+  scientific: Lawsonia inermis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - product
+  habitat:
+    range: Dry tropics and subtropics from North Africa through Arabia to India and northern Australia
+    ecosystem: dry scrubland and riverbank thickets
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: light to medium well-drained soils
+    niche: scrub and hedge plant
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: much-branched shrub or small tree, spiny twigs
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m:
+    - 0.05
+    - 0.15
+    lifespan_y: null
+    growth_rate: fast
+    leaves: semi-evergreen opposite leaves, small, oval, pale green
+    seasonal: sheds leaves in cold or dry season; flowers in warm season
+    flowers: dense clusters of small white, pink or cream flowers, very fragrant
+    fruit_visible: small round brown capsules
+    bark: pale grey-brown, smooth to slightly rough
+  timber:
+    heartwood: pale yellowish
+    sapwood: null
+    grain: fine
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard small stems; used for sticks
+    rot_resistance: not durable
+    scent: null
+    fuel: fuel
+    uses:
+    - tool handles
+    - hedges
+  products:
+    food: []
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves:
+    - dried ground leaves make henna paste
+    dyes:
+    - red-orange dye (lawsone) from leaves for skin, hair, nails, leather and wool
+    medicinal:
+    - leaves and bark in traditional skin and fever remedies
+    toxicity: null
+  lore:
+    folklore:
+    - Used in Middle Eastern and South Asian wedding rites and Eid decoration
+    cultures:
+    - Mehndi tradition from India to Morocco
+    - Yemen's henna night
+    - Hair dye since antiquity
+    symbolism:
+    - joy, beauty, protection from evil eye
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: celebration and ritual art'
+      yield: 'high: dye'
+    dimensions: []
+    hooks:
+    - red dye crafting from leaves
+    - fragrant flowers for perfumery
+  sources:
+  - https://en.wikipedia.org/wiki/Lawsonia_inermis
+  - https://powo.science.kew.org/results?q=Lawsonia%20inermis
+  - https://www.britannica.com/plant/henna
+- id: khejri
+  names:
+  - khejri
+  - ghaf
+  - Tree of Life of Bahrain
+  scientific: Prosopis cineraria
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mesquite: khejri is the Old World desert Prosopis of Thar and Arabian culture'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - striking
+  habitat:
+    range: Thar Desert (Rajasthan), Arabian Peninsula and Iran to Pakistan
+    ecosystem: desert scrub and arid savanna
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 0
+    - 900
+    substrate: sandy and alluvial soils, tolerates salinity and drought
+    niche: open desert tree with deep taproot
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: medium tree with open feathery crown, thorny
+    height_m:
+    - 5
+    - 12
+    trunk_diameter_m:
+    - 0.3
+    - 0.8
+    lifespan_y: 400
+    growth_rate: slow
+    leaves: evergreen to semi-deciduous, bipinnate with small grey-green leaflets
+    seasonal: sheds leaves briefly in hot dry season; new leaves in spring
+    flowers: creamy-yellow spikes (catkin-like racemes)
+    fruit_visible: long slender pods (sangri) 10-25 cm
+    bark: grey to dark brown, rough and fissured
+  timber:
+    heartwood: reddish brown
+    sapwood: pale yellow
+    grain: irregular, interlocked
+    texture: medium to coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and heavy; durable in service
+    rot_resistance: durable
+    scent: null
+    fuel: excellent fuel and charcoal
+    uses:
+    - agricultural tools
+    - posts
+    - charcoal
+    - fuel
+  products:
+    food:
+    - sangri pods eaten as a vegetable in Rajasthan
+    - bark ground in famine bread
+    sap_resin_latex: *id004
+    bark:
+    - bark used in famine food
+    leaves:
+    - leaves (loong) used as fodder for goats and camels
+    dyes: *id003
+    medicinal:
+    - bark and pods in folk medicine
+    toxicity: null
+  lore:
+    folklore:
+    - Bishnoi people say 363 villagers died in 1730 at Khejarli hugging trees to stop the Maharaja's felling
+    - Pandavas hid weapons in a shami (khejri) tree in the Mahabharata
+    cultures:
+    - UAE national tree (ghaf)
+    - Rajasthan state tree
+    - Dussehra worship of the shami tree in India
+    symbolism:
+    - life, sacrifice and conservation; "Tree of Life" in Bahrain
+    notable_trees:
+    - 'Tree of Life, Bahrain: a roughly 400-year-old Prosopis cineraria growing alone in desert'
+  game_fit:
+    fields:
+      liminality: 'medium: sacred and lone desert tree'
+      yield: 'high: pods, fodder, fuel'
+      alignment: 'high: protected sacred tree'
+    dimensions:
+    - aether
+    hooks:
+    - desert survival food and fodder
+    - sacred tree taboo against felling
+    - 'aether: sacred tree of sacrifice'
+  sources:
+  - https://en.wikipedia.org/wiki/Prosopis_cineraria
+  - https://en.wikipedia.org/wiki/Khejarli_massacre
+  - https://powo.science.kew.org/results?q=Prosopis%20cineraria
+- id: oleaster
+  names:
+  - oleaster
+  - Russian olive
+  - jida
+  scientific: Elaeagnus angustifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  habitat:
+    range: Central and West Asia to Iran, Turkey and southern Russia; widely planted and naturalised
+    ecosystem: riverbanks, dry steppe and orchard
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 0
+    - 2300
+    substrate: saline and alkaline soils, drought-tolerant
+    niche: riparian and steppe edge tree
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small thorny tree with silvery foliage and gnarled trunk
+    height_m:
+    - 5
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: 60
+    growth_rate: fast
+    leaves: deciduous narrow lanceolate leaves, silvery-grey with fine scales
+    seasonal: silver foliage in season; fruit persists into winter
+    flowers: small bell-shaped yellow flowers, very fragrant, in early summer
+    fruit_visible: small olive-like oval fruit 1-2 cm, yellow with silver scales, mealy
+    bark: dark brown, shreddy, fissured
+  timber:
+    heartwood: brown
+    sapwood: pale yellowish
+    grain: straight to wavy
+    texture: fine
+    density_kg_m3: 685
+    janka_n: 5530
+    workability: moderately hard; carves and turns (Janka estimated by the Wood Database)
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good fuel
+    uses:
+    - small carved items
+    - tool handles
+    - fuel
+  products:
+    food:
+    - dried floury fruit (senjed) eaten and ground to flour
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - senjed fruit in Persian traditional medicine for joint pain
+    toxicity: null
+  lore:
+    folklore:
+    - Senjed is one of the seven items of the Nowruz haft-sin table
+    cultures:
+    - Persian haft-sin Nowruz; Turkish iğde
+    - Planted along Silk Road caravan routes
+    symbolism:
+    - love and wisdom in the Nowruz table
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: Nowruz symbolism'
+      yield: 'medium: dry fruit'
+    dimensions: []
+    hooks:
+    - silver foliage as landmark
+    - dried flour fruit as travel food
+  sources:
+  - https://www.wood-database.com/russian-olive/
+  - https://en.wikipedia.org/wiki/Elaeagnus_angustifolia
+  - https://powo.science.kew.org/results?q=Elaeagnus%20angustifolia
+- id: persian-silk-tree
+  names:
+  - Persian silk tree
+  - mimosa
+  scientific: Albizia julibrissin
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'siris: siris has long pods and heavy timber'
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  habitat:
+    range: Iran (Caspian forests), Caucasus, Central Asia and east to China, Korea
+    ecosystem: forest edge and riverbank
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: moist to dry soils, adaptable
+    niche: forest edge and open woodland
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: flat-topped umbrella crown, spreading, short trunk
+    height_m:
+    - 5
+    - 12
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous bipinnate feathery leaves, leaflets fold at night
+    seasonal: autumn yellow; leaves fold in darkness and in rain
+    flowers: pink silky powder-puff flowers in summer, fragrant
+    fruit_visible: flat tan seed pods 10-20 cm that persist into winter
+    bark: smooth grey-brown, lenticelled, becoming mildly fissured
+  timber:
+    heartwood: brown
+    sapwood: pale yellow
+    grain: straight
+    texture: medium
+    density_kg_m3: null
+    janka_n: null
+    workability: moderately hard; limited use
+    rot_resistance: moderately durable
+    scent: null
+    fuel: fair
+    uses:
+    - general timber in East Asia
+    - fuel
+  products:
+    food: *id005
+    sap_resin_latex: *id004
+    bark:
+    - bark (hehuan pi) used in Chinese medicine
+    leaves:
+    - leaves used as fodder
+    dyes: *id003
+    medicinal:
+    - bark and flowers in Chinese medicine for mood and sleep
+    toxicity: null
+  lore:
+    folklore:
+    - In China the tree (hehuan, "joyful union") symbolises marital harmony; leaves close together at
+      night like lovers
+    cultures:
+    - Persian "shab-khosb" or night sleeper
+    - Ornamental in Persian and Japanese gardens (nemunoki)
+    symbolism:
+    - harmony, love and happiness in China
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: love and harmony symbolism'
+    dimensions: []
+    hooks:
+    - night-folding leaves as a visible time-of-day cue
+  sources:
+  - https://en.wikipedia.org/wiki/Albizia_julibrissin
+  - https://powo.science.kew.org/results?q=Albizia%20julibrissin
+  - https://www.britannica.com/plant/mimosa-tree
+- id: pistachio
+  names:
+  - pistachio
+  scientific: Pistacia vera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'terebinth: pistachio is the nut crop'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  habitat:
+    range: Arid foothills of Iran, Afghanistan and Central Asia (Kopet Dag, Turkmenistan, Tajikistan);
+      cultivated from Turkey to Syria and California
+    ecosystem: dry pistachio woodland
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 300
+    - 1700
+    substrate: dry stony and calcareous soils; very drought-tolerant
+    niche: sunny dry hill slope
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: bushy, slow-growing tree with broad crown and twisted trunk
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: 300
+    growth_rate: slow
+    leaves: deciduous pinnate leaves of 3-5 broad leathery leaflets, dark green
+    seasonal: yellow autumn colour; fruit ripens late summer
+    flowers: small greenish-brown flowers in clusters, wind-pollinated on separate male and female trees
+    fruit_visible: clusters of oval husked fruit, each with a cream shell and green kernel
+    bark: pale grey-brown, wrinkled to scaly
+  timber:
+    heartwood: yellow-brown with darker streaks
+    sapwood: pale yellowish
+    grain: fine, often figured
+    texture: fine
+    density_kg_m3: 865
+    janka_n: 8590
+    workability: hard; carves and turns well
+    rot_resistance: moderately durable
+    scent: faint resinous scent when cut
+    fuel: excellent, hot burning
+    uses:
+    - turned small items
+    - fuel
+  products:
+    food:
+    - pistachio nuts
+    - oil
+    - ice cream and sweets
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - nuts in traditional tonic
+    toxicity: cashew relative; can cause contact allergy in sensitive people
+  lore:
+    folklore:
+    - Genesis 43:11 lists botnim, usually read as pistachios, among Jacob's gifts
+    cultures:
+    - Iran, the largest traditional producer
+    - Silk Road trade nut
+    symbolism:
+    - luxury and hospitality
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: valuable nut crop'
+    dimensions: []
+    hooks:
+    - nut crop from arid slopes
+  sources:
+  - https://www.wood-database.com/pistachio/
+  - https://en.wikipedia.org/wiki/Pistachio
+  - https://powo.science.kew.org/results?q=Pistacia%20vera
+- id: pomegranate
+  names:
+  - pomegranate
+  scientific: Punica granatum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  - cultural
+  - flowers
+  - product
+  habitat:
+    range: Iran to northern India; cultivated since antiquity around the Mediterranean and Central Asia
+    ecosystem: dry scrub and orchard
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 2000
+    substrate: well-drained loam, tolerates drought and salinity
+    niche: orchard and dry hillside shrub-tree
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: much-branched thorny large shrub or small tree
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: 200
+    growth_rate: moderate
+    leaves: deciduous, narrow glossy bright green opposite leaves
+    seasonal: yellow in autumn; scarlet flowers from spring to summer
+    flowers: scarlet-red crinkled funnel flowers with fleshy calyx
+    fruit_visible: round leathery red-brown fruit 6-12 cm with crown-like calyx, packed with ruby seeds
+    bark: reddish-brown, smooth, becoming grey and flaking
+  timber:
+    heartwood: yellowish
+    sapwood: pale
+    grain: fine, even, hard
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard; used for small objects
+    rot_resistance: moderately durable
+    scent: null
+    fuel: fair
+    uses:
+    - walking sticks
+    - small tools
+  products:
+    food:
+    - arils eaten fresh, juice, grenadine, molasses (narsharab)
+    - dried seeds (anardana)
+    sap_resin_latex: *id004
+    bark:
+    - rind and bark used for tannin and dye
+    leaves: *id002
+    dyes:
+    - yellow and dark dyes from rind
+    medicinal:
+    - rind and juice in traditional medicine
+    toxicity: roots and stem bark contain alkaloids (pelletierine); toxic if consumed in quantity
+  lore:
+    folklore:
+    - Persephone ate pomegranate seeds in Hades and became bound to the underworld for part of each year
+    - Said to have 613 seeds, matching the Torah commandments
+    cultures:
+    - Persian Yalda Night fruit
+    - Armenian wedding and New Year symbol
+    - Islamic paradise fruit
+    symbolism:
+    - fertility, abundance and death/rebirth
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: underworld fruit'
+      yield: 'high: fruit and tannin'
+    dimensions:
+    - aether
+    hooks:
+    - rind tannin and dye
+    - seed fruit for first-session food
+    - 'aether: Persephone myth'
+  sources:
+  - https://en.wikipedia.org/wiki/Pomegranate
+  - https://powo.science.kew.org/results?q=Punica%20granatum
+  - https://www.britannica.com/plant/pomegranate
+- id: quince
+  names:
+  - quince
+  scientific: Cydonia oblonga
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  - cultural
+  habitat:
+    range: Caucasus, Iran and Turkestan; cultivated across the Mediterranean and Middle East
+    ecosystem: orchard and hedgerow
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1800
+    substrate: moist, well-drained loam
+    niche: garden and orchard tree
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: small bushy tree with crooked twisted trunk
+    height_m:
+    - 3
+    - 7
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: 50
+    growth_rate: moderate
+    leaves: deciduous, broadly oval, grey-green with white felt beneath
+    seasonal: yellow in autumn; fruit ripens autumn
+    flowers: large white to pale pink five-petalled flowers in spring
+    fruit_visible: large golden-yellow downy pome, pear- or apple-shaped, very fragrant
+    bark: dark grey-brown, flaking in thin plates
+  timber:
+    heartwood: reddish brown
+    sapwood: pale pink
+    grain: fine, close, can be figured
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard, dense, difficult to work; takes a polish
+    rot_resistance: not durable
+    scent: null
+    fuel: good
+    uses:
+    - small turned items
+  products:
+    food:
+    - cooked fruit as membrillo paste, jam and jelly
+    - quince liqueur
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves:
+    - leaves in infusions
+    dyes: *id003
+    medicinal:
+    - seed mucilage (quince seed gel) in cough and skin remedies
+    toxicity: seeds contain amygdalin, releasing cyanide if crushed in quantity
+  lore:
+    folklore:
+    - Likely the golden apple of the Hesperides and the apple of Paris
+    - Plutarch records Solon's decree that brides eat quince before the wedding
+    cultures:
+    - Kydonia (Crete) gave the genus its name
+    - Persian marmalade and Spanish membrillo
+    symbolism:
+    - love, fertility and marriage in ancient Greece
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'medium: love and wedding symbolism'
+      yield: medium
+    dimensions:
+    - aether
+    hooks:
+    - fragrant fruit and preserves
+    - grafting rootstock
+    - 'aether: Greek golden apple'
+  sources:
+  - https://en.wikipedia.org/wiki/Quince
+  - https://powo.science.kew.org/results?q=Cydonia%20oblonga
+  - https://www.britannica.com/plant/quince
+- id: saxaul
+  names:
+  - saxaul
+  - black saxaul
+  - Haloxylon aphyllum (syn.)
+  scientific: Haloxylon ammodendron
+  rank: group
+  stands_for:
+  - Haloxylon persicum (white saxaul)
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: 'Deserts of Central Asia: Kyzylkum, Karakum, Gobi, Taklamakan, to Iran and Mongolia'
+    ecosystem: sand and clay desert, saline flats
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - arid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: sandy dunes (white saxaul) or saline clay (black saxaul)
+    niche: desert scrub woodland
+    strata:
+    - shrub
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: gnarled leafless-looking shrub or small tree with crooked trunk and green jointed twigs
+    height_m:
+    - 2
+    - 9
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: 50
+    growth_rate: slow
+    leaves: 'leafless: scale-like leaves, photosynthesis done by grey-green jointed twigs'
+    seasonal: twigs shed in dry season; no autumn colour
+    flowers: tiny yellowish flowers, then winged fruits in autumn
+    fruit_visible: small fruits with papery pink to white wings
+    bark: light grey, soft and spongy, water-soaked
+  timber:
+    heartwood: yellowish to pale brown, very hard
+    sapwood: null
+    grain: twisted, dense
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: very hard and dense but brittle and twisted; mainly fuel
+    rot_resistance: not durable
+    scent: null
+    fuel: 'excellent: very dense, hot and long-lasting'
+    uses:
+    - firewood and charcoal
+    - fencing
+    - sand stabilisation
+  products:
+    food: []
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves:
+    - twigs eaten by camels and sheep
+    dyes: *id003
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Desert nomads' primary fuel; planted by Soviet and Chinese programmes against sand encroachment
+    symbolism:
+    - desert survival
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'medium: desert survival tree'
+      yield: 'high: hot fuel'
+    dimensions: []
+    hooks:
+    - hot-burning fuel for smelting and survival
+    - dune stabiliser
+  sources:
+  - https://en.wikipedia.org/wiki/Haloxylon_ammodendron
+  - https://en.wikipedia.org/wiki/Haloxylon
+  - https://powo.science.kew.org/results?q=Haloxylon%20ammodendron
+- id: sodom-apple
+  names:
+  - Sodom apple
+  - apple of Sodom
+  - calotrope
+  scientific: Calotropis procera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'crown-flower: crown flower has lilac flowers and Asian lore'
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - folklore
+  - striking
+  - product
+  habitat:
+    range: Africa, Arabia, Levant, Iran and Indian subcontinent; Dead Sea shore and Ein Gedi oasis
+    ecosystem: dry scrub and degraded arid land
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: sandy and disturbed soils
+    niche: sparse roadside and wadi scrub
+    strata:
+    - shrub
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tall shrub or small tree, soft-wooded, with milky-white sap
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, large oval grey-green leaves covered with waxy bloom
+    seasonal: evergreen
+    flowers: waxy lilac-white flowers with purple tips in clusters
+    fruit_visible: inflated green balloon-like fruit 5-10 cm that dries to papery tan
+    bark: pale grey, corky and furrowed
+  timber:
+    heartwood: pale and soft
+    sapwood: pale
+    grain: soft, coarse
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: very soft, fibrous; not used for timber
+    rot_resistance: not durable
+    scent: null
+    fuel: poor
+    uses:
+    - charcoal
+  products:
+    food: *id005
+    sap_resin_latex:
+    - milky latex (cardiac glycosides) used in folk medicine and arrow poison
+    bark: *id001
+    leaves:
+    - seed floss (akund) used to stuff pillows
+    dyes: *id003
+    medicinal:
+    - latex and root bark in folk remedies; dangerous
+    toxicity: milky latex contains cardenolides (calotropin); causes severe skin and eye irritation and
+      heart poisoning if eaten
+  lore:
+    folklore:
+    - Josephus describes the "apples of Sodom" near the Dead Sea as fair outside, ashes inside
+    cultures:
+    - Dead Sea "Sodom apple" legend
+    symbolism:
+    - deceptive beauty, ruin and corruption
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: toxic latex and ruin imagery'
+      liminality: 'high: accursed-land tree'
+      weirdness: medium
+    dimensions:
+    - aether
+    hooks:
+    - toxic latex for poisons
+    - seed floss for stuffing and tinder
+    - 'aether: accursed Sodom lore'
+  sources:
+  - https://en.wikipedia.org/wiki/Calotropis_procera
+  - https://powo.science.kew.org/results?q=Calotropis%20procera
+  - https://apps.worldagroforestry.org/treedb/AFTPDFS/Calotropis_procera.PDF
+- id: tamarisk
+  names:
+  - tamarisk
+  - athel
+  - Nile tamarisk
+  scientific: Tamarix aphylla
+  rank: group
+  stands_for:
+  - Tamarix nilotica
+  distinct_from:
+  - 'salt-cedar: salt cedar is a feathery shrub-tree of riversides'
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: Sahara, Arabia, Levant and Iran to Pakistan; widely introduced in Australia and the Americas
+    ecosystem: desert watercourse and saline flat
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 0
+    - 1200
+    substrate: saline sand, alluvium with groundwater
+    niche: oasis and wadi tree
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: evergreen tree with drooping branches, feathery grey-green foliage
+    height_m:
+    - 5
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 0.8
+    lifespan_y: null
+    growth_rate: fast
+    leaves: scale-like leaves on jointed grey-green twigs (leafless look), salt crystals on foliage
+    seasonal: evergreen
+    flowers: tiny pink-white flower spikes in spring
+    fruit_visible: small capsules with cottony seeds
+    bark: grey-brown, deeply furrowed, rough
+  timber:
+    heartwood: light brown to reddish
+    sapwood: pale
+    grain: straight to irregular
+    texture: medium
+    density_kg_m3: 730
+    janka_n: null
+    workability: moderately hard; used in small sizes (air-dry density from a published athel wood study)
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good fuel
+    uses:
+    - posts and beams in oasis architecture
+    - tool handles
+    - charcoal
+    - windbreaks
+  products:
+    food: *id005
+    sap_resin_latex:
+    - manna produced by scale insects feeding on twigs (Biblical manna candidate)
+    bark:
+    - bark and galls (tannin)
+    leaves: *id002
+    dyes:
+    - galls used in tanning and dyeing
+    medicinal:
+    - galls in astringent remedies
+    toxicity: null
+  lore:
+    folklore:
+    - Abraham planted a tamarisk at Beersheba (Genesis 21:33)
+    - Plutarch's Osiris coffin enclosed in a tree often translated tamarisk
+    cultures:
+    - Egyptian cult of Osiris
+    - Manna of Sinai tradition among Bedouin
+    symbolism:
+    - hospitality and sacred tree
+    - endurance in desert
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: sacred tree with coffin and manna lore'
+      savagery: 'medium: salt-tolerant desert'
+    dimensions:
+    - aether
+    hooks:
+    - salt-tolerant shade tree
+    - manna and gall crafting
+    - 'aether: Osiris coffin lore'
+  sources:
+  - https://research.fs.usda.gov/feis/species-reviews/tamaph
+  - https://en.wikipedia.org/wiki/Tamarix_aphylla
+  - https://powo.science.kew.org/results?q=Tamarix%20aphylla
+- id: terebinth
+  names:
+  - terebinth
+  - turpentine tree
+  - Palestine terebinth
+  - Pistacia palaestina (syn.)
+  scientific: Pistacia terebinthus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pistachio: pistachio is the nut crop'
+  - 'mastic: mastic is an evergreen shrubby tree tapped for chewing resin'
+  - 'persian-turpentine: Persian turpentine is a larger dome-crowned tree of the Zagros and North Africa'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - medicinal
+  - product
+  habitat:
+    range: Mediterranean basin from Spain to the Levant and Turkey; the Elah valley in Israel
+    ecosystem: dry maquis and open oak woodland
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: rocky limestone soils
+    niche: dry woodland and hillside
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: small to medium tree with spreading crown, dioecious
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: 500
+    growth_rate: slow
+    leaves: deciduous pinnate leaves with 3-9 leaflets, glossy dark green, resinous scent when crushed
+    seasonal: red-brown new leaves, yellow in autumn
+    flowers: small reddish-brown flower clusters before the leaves
+    fruit_visible: small round fruits turning red then brown, in clusters
+    bark: dark grey-brown, fissured with age
+  timber:
+    heartwood: olive-brown to yellowish
+    sapwood: pale yellowish
+    grain: fine, irregular
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and dense; used in small pieces
+    rot_resistance: moderately durable
+    scent: resinous when cut
+    fuel: good
+    uses:
+    - small turned items
+    - charcoal
+    - fuel
+  products:
+    food: []
+    sap_resin_latex:
+    - Chios turpentine resin (the original turpentine), tapped from trunk
+    bark:
+    - bark tannin
+    leaves: *id002
+    dyes:
+    - galls for dye
+    medicinal:
+    - turpentine resin in ancient medicine and varnishes
+    toxicity: resin and leaves can cause contact dermatitis in sensitive people
+  lore:
+    folklore:
+    - Terebinth (elah) was a Biblical tree of burial and covenant (Genesis 35:4; Judges 6:11)
+    - David fought Goliath in the Valley of Elah, "valley of the terebinth"
+    cultures:
+    - Ancient turpentine trade from Chios
+    symbolism:
+    - sacred shade tree and covenant site
+    notable_trees:
+    - Abraham's Oak at Mamre (Hebron), an old oak or terebinth
+  game_fit:
+    fields:
+      liminality: 'high: sacred tree of covenant and burial'
+      yield: 'medium: resin'
+    dimensions:
+    - aether
+    hooks:
+    - turpentine resin crafting (sealant, varnish, solvent)
+    - 'aether: Biblical sacred grove'
+  sources:
+  - https://en.wikipedia.org/wiki/Pistacia_terebinthus
+  - https://en.wikipedia.org/wiki/Valley_of_Elah
+  - https://powo.science.kew.org/results?q=Pistacia%20terebinthus
+- id: walnut
+  names:
+  - walnut
+  - Persian walnut
+  - English walnut
+  scientific: Juglans regia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-walnut: black walnut has darker timber and thick-shelled nuts'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - striking
+  - product
+  habitat:
+    range: 'Wild: Central Asia (Tian Shan, Kyrgyzstan), Iran and Caucasus; Balkans and Himalaya; cultivated
+      widely'
+    ecosystem: walnut-fruit forest and orchard
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 500
+    - 2200
+    substrate: deep, rich, moist well-drained soils
+    niche: mixed montane forest and open orchard
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: large tree with massive trunk and broad rounded crown
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m:
+    - 0.6
+    - 1.5
+    lifespan_y: 400
+    growth_rate: moderate
+    leaves: deciduous pinnate leaves, 5-9 broad leaflets, aromatic when crushed
+    seasonal: golden yellow in autumn; leaves late in spring
+    flowers: long green male catkins; small female flowers
+    fruit_visible: round green husked drupe (walnut) with wrinkled brain-like kernel
+    bark: smooth silvery-grey young, deeply furrowed with age
+  timber:
+    heartwood: light grey-brown to dark chocolate brown, with darker streaks
+    sapwood: creamy white
+    grain: straight to irregular; burls and curl figure
+    texture: medium
+    density_kg_m3: 640
+    janka_n: 5410
+    workability: works well with hand and machine tools; glues and finishes well
+    rot_resistance: moderately durable
+    scent: faint pleasant scent
+    fuel: good
+    uses:
+    - furniture and veneers (burl)
+    - gunstocks
+    - carving
+    - musical instruments
+  products:
+    food:
+    - walnut kernels
+    - walnut oil
+    - pickled green walnuts
+    sap_resin_latex: *id004
+    bark:
+    - husk and bark tannin and dye
+    leaves:
+    - leaf extracts in remedies
+    dyes:
+    - brown dye from green husks
+    medicinal:
+    - leaf and husk in folk medicine
+    toxicity: juglone in leaves and roots is allelopathic and can poison some plants; green husks stain
+      and irritate
+  lore:
+    folklore:
+    - Romans called it Jovis glans, "Jupiter's acorn"
+    - Walnuts thrown at newlyweds for fertility in Roman weddings
+    cultures:
+    - Arslanbob (Kyrgyzstan) walnut forests, among the largest wild walnut forests in the world
+    - Persian gardens and Silk Road timber
+    symbolism:
+    - wisdom (brain-like kernel), fertility
+    notable_trees:
+    - Arslanbob walnut forest, Jalal-Abad, Kyrgyzstan
+  game_fit:
+    fields:
+      yield: 'high: nuts and oil'
+      alignment: 'high: valued timber and fruit'
+    dimensions: []
+    hooks:
+    - burl veneer crafting
+    - walnut husk dye
+    - juglone allelopathy as a planting hook
+  sources:
+  - https://www.wood-database.com/english-walnut/
+  - https://en.wikipedia.org/wiki/Juglans_regia
+  - https://powo.science.kew.org/results?q=Juglans%20regia
+- id: wild-apple
+  names:
+  - wild apple
+  - Sievers apple
+  scientific: Malus sieversii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'apple: orchard apple is the cultivated descendant'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - striking
+  habitat:
+    range: Tian Shan mountains of Kazakhstan, Kyrgyzstan, Uzbekistan and Xinjiang
+    ecosystem: mountain fruit forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 600
+    - 1800
+    substrate: deep loess and loam soils on slopes
+    niche: montane forest understory and edge
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: small to medium tree with rounded crown
+    height_m:
+    - 5
+    - 12
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous broadleaf, oval, toothed, dark green
+    seasonal: autumn yellow; fruit ripens late summer
+    flowers: white to pink blossoms in spring
+    fruit_visible: round pome of widely variable size, colour and flavour, 2-8 cm
+    bark: grey-brown, scaly and fissured
+  timber:
+    heartwood: light reddish
+    sapwood: pale
+    grain: fine
+    texture: fine
+    density_kg_m3: 830
+    janka_n: 7700
+    workability: dense and hard; values are for Malus spp. (apple)
+    rot_resistance: not durable
+    scent: pleasant scent when burned
+    fuel: excellent
+    uses:
+    - tool handles
+    - fuel
+  products:
+    food:
+    - fresh and dried fruit
+    - jams and cider
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - Almaty (Alma-Ata) is often glossed "father of apples"
+    cultures:
+    - Vavilov identified the Tian Shan forests as the origin of the cultivated apple
+    symbolism:
+    - origin of the cultivated apple
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: fruit of every size and colour'
+      alignment: medium
+    dimensions:
+    - aether
+    hooks:
+    - wild genetic diversity as breeding hook
+    - forest foraging fruit
+    - 'aether: origin-of-fruit lore'
+  sources:
+  - https://en.wikipedia.org/wiki/Malus_sieversii
+  - https://www.iucnredlist.org/search?query=Malus%20sieversii
+  - https://www.wood-database.com/apple/
+- id: persian-turpentine
+  names:
+  - Persian turpentine tree
+  - baneh
+  - Atlantic pistachio
+  - Atlas pistachio
+  - betoum
+  scientific: Pistacia atlantica
+  rank: species
+  stands_for:
+  - Pistacia khinjuk (khinjuk)
+  distinct_from:
+  - 'terebinth: terebinth is a smaller tree of the Levant'
+  - 'pistachio: pistachio is the cultivated nut tree'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - fruit
+  - striking
+  habitat:
+    range: Zagros mountains of Iran and Iraq, Levant, Turkey, Crimea and North Africa (Atlas)
+    ecosystem: open steppe woodland
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 400
+    - 2500
+    substrate: rocky calcareous soils, deep rooting
+    niche: open steppe woodland
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: large dome-crowned tree with spreading branches, often broad as tall
+    height_m:
+    - 8
+    - 15
+    trunk_diameter_m:
+    - 0.8
+    - 2.5
+    lifespan_y: 1000
+    growth_rate: slow
+    leaves: deciduous pinnate leaves of 7-11 narrow leathery leaflets, aromatic
+    seasonal: yellow-orange to red autumn colour
+    flowers: small reddish flower clusters before leaves
+    fruit_visible: clusters of small oily fruit, turning red to blue-black
+    bark: grey-brown, deeply furrowed, often gnarled
+  timber:
+    heartwood: olive brown
+    sapwood: pale yellowish
+    grain: fine, irregular, sometimes figured
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and dense; used for small objects
+    rot_resistance: durable
+    scent: resinous scent when cut
+    fuel: excellent
+    uses:
+    - charcoal
+    - carved items
+    - fuel
+    - tool handles
+  products:
+    food:
+    - roasted fruit eaten and pressed for oil
+    - saqqez resin chewed as gum
+    sap_resin_latex:
+    - saqqez or baneh resin (Kurdish chewing gum), bark exudate
+    bark: *id001
+    leaves: *id002
+    dyes:
+    - galls used in dyeing and tanning
+    medicinal:
+    - resin and fruit in folk remedies
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Baneh (Kurdistan) is named after it
+    - Kurdish and Luri use of fruit and resin
+    - Atlas "betoum" is the North African steppe tree
+    symbolism:
+    - endurance and lone sacred tree in the Zagros
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'medium: fruit, resin, charcoal'
+      liminality: 'medium: lone sacred tree'
+      alignment: 'high: traditional use'
+    dimensions: []
+    hooks:
+    - chewing resin gum
+    - dome-crowned shade tree in open steppe
+  sources:
+  - https://en.wikipedia.org/wiki/Pistacia_atlantica
+  - https://powo.science.kew.org/results?q=Pistacia%20atlantica
+  - https://www.iucnredlist.org/search?query=Pistacia%20atlantica
+- id: salt-cedar
+  names:
+  - salt cedar
+  - saltcedar
+  scientific: Tamarix ramosissima
+  rank: species
+  stands_for:
+  - Tamarix chinensis
+  distinct_from:
+  - 'tamarisk: athel tamarisk is a tall evergreen with jointed twigs'
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  habitat:
+    range: Central Asia, Tarim Basin, Kazakhstan, Iran and Mongolia; invasive in the western USA
+    ecosystem: riverbank and salt desert
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - arid
+      note: 'temperature: temperate'
+    elevation_m:
+    - 0
+    - 2500
+    substrate: saline and alkaline soils, floodplains
+    niche: river-edge shrub-tree
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: dense feathery large shrub or small tree with arching branches
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m:
+    - 0.05
+    - 0.2
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous scale-like leaves on slender reddish twigs, blue-green, secreting salt
+    seasonal: yellowish autumn colour
+    flowers: dense pink feathery plumes in late spring and summer
+    fruit_visible: tiny capsules with tufts of seed hair
+    bark: dark reddish-brown, smooth to furrowed
+  timber:
+    heartwood: brown
+    sapwood: pale
+    grain: fine, irregular
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: small pieces only; hard but twisted
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good, burns hot
+    uses:
+    - wattle fences
+    - fuel
+    - stakes
+  products:
+    food: []
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves:
+    - browse and honey flow
+    dyes: *id003
+    medicinal:
+    - twigs and flowers in Chinese and Central Asian folk medicine
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Used for dune stabilisation along Tarim and Karakum routes
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'medium: invasive and salt-tolerant'
+      yield: low
+    dimensions: []
+    hooks:
+    - riverbank salt-thicket as a habitat feature
+  sources:
+  - https://en.wikipedia.org/wiki/Tamarix_ramosissima
+  - https://powo.science.kew.org/results?q=Tamarix%20ramosissima
+  - https://research.fs.usda.gov/feis/species-reviews/tamaph
+- id: socotra-desert-rose
+  names:
+  - Socotra desert rose
+  - bottle tree
+  scientific: Adenium obesum subsp. socotranum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'desert-rose: desert rose is a small shrubby plant'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  - toxic
+  habitat:
+    range: Socotra (Yemen); rocky cliffs and limestone slopes, endemic subspecies
+    ecosystem: dry rocky slopes and cliffs
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 0
+    - 800
+    substrate: limestone and granite cracks
+    niche: open cliff ledge tree
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: swollen bottle-shaped trunk with few thick branches
+    height_m:
+    - 2
+    - 5
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous glossy dark green leaves in tufts at branch tips
+    seasonal: loses leaves in the dry season; flowers when bare
+    flowers: pink funnel-shaped flowers with darker centres, in clusters
+    fruit_visible: paired narrow follicles
+    bark: pale grey, smooth
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: *id005
+    sap_resin_latex:
+    - toxic milky sap used in Adenium species as arrow and fish poison
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: []
+    toxicity: sap contains cardiac glycosides; poisonous to humans and livestock
+  lore:
+    folklore: []
+    cultures:
+    - Socotra World Heritage site
+    symbolism:
+    - Socotra endemism
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: giant swollen succulent tree'
+      savagery: 'medium: poison sap'
+    dimensions:
+    - enigma
+    hooks:
+    - arrow poison from sap
+    - water-storing trunk hook
+    - 'enigma: bloated bottle tree'
+  sources:
+  - https://en.wikipedia.org/wiki/Adenium_obesum
+  - https://en.wikipedia.org/wiki/Socotra
+  - https://powo.science.kew.org/results?q=Adenium%20obesum
+- id: arabian-ben-tree
+  names:
+  - Arabian ben tree
+  - ban tree
+  scientific: Moringa peregrina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'moringa: Indian moringa is the common food tree'
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  habitat:
+    range: Arabia, Sinai, Red Sea hills and Horn of Africa (Somalia, Ethiopia), also the Sudan coast
+    ecosystem: dry rocky wadis and desert hills
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: rocky gravelly soils, wadi beds
+    niche: wadi and rocky slope tree
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: slender small tree with sparse crown and swollen water-storing roots
+    height_m:
+    - 3
+    - 8
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous bipinnate, small narrow leaflets
+    seasonal: sheds leaves in dry season
+    flowers: white to pinkish flowers in sprays
+    fruit_visible: long slender three-valved pods 15-25 cm with winged seeds
+    bark: grey, smooth to slightly rough
+  timber:
+    heartwood: pale
+    sapwood: pale
+    grain: soft, fibrous
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: soft and light; little used
+    rot_resistance: not durable
+    scent: null
+    fuel: poor
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - ben oil pressed from seeds, used in perfumery and as fine lubricant
+    bark: []
+    leaves:
+    - leaves browsed by goats
+    dyes: *id003
+    medicinal:
+    - oil and roots in Bedouin remedies
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Ben oil (balanos) known to Pliny and Dioscorides
+    - Egyptian unguent trade
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'medium: oil'
+      alignment: medium
+    dimensions: []
+    hooks:
+    - pressed ben oil for perfume and fine lubrication
+  sources:
+  - https://en.wikipedia.org/wiki/Moringa_peregrina
+  - https://powo.science.kew.org/results?q=Moringa%20peregrina
+  - https://apps.worldagroforestry.org/treedb/AFTPDFS/Moringa_peregrina.PDF
+- id: sea-buckthorn
+  names:
+  - sea buckthorn
+  - seaberry
+  scientific: Hippophae rhamnoides
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - product
+  habitat:
+    range: Eurasia from Atlantic coasts to Himalaya, Tian Shan, Siberia and Mongolia
+    ecosystem: river terrace scrub and coastal dunes
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 5000
+    substrate: gravelly riverbank, sandy and saline soils; fixes nitrogen
+    niche: river-terrace thicket
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: thorny large shrub or small tree, suckering into thickets
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m:
+    - 0.05
+    - 0.2
+    lifespan_y: 50
+    growth_rate: fast
+    leaves: deciduous narrow silver-grey leaves with silver scales
+    seasonal: silver leaves; berries last into winter
+    flowers: small greenish flowers before the leaves
+    fruit_visible: dense clusters of orange berries along branches
+    bark: dark brown to black, rough, thorny
+  timber:
+    heartwood: yellow-brown
+    sapwood: pale
+    grain: fine
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard; used for small items
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good
+    uses:
+    - fuel
+    - stakes
+    - hedges
+  products:
+    food:
+    - berries in juice, jam and tea
+    - seed and pulp oil
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves:
+    - leaves as tea
+    dyes:
+    - yellow-orange dye from fruit and bark
+    medicinal:
+    - berry oil in Tibetan and Chinese medicine, skin and burn salves
+    toxicity: null
+  lore:
+    folklore:
+    - Greek tradition says horses fed on it grew glossy, giving Hippophae, "shining horse"
+    cultures:
+    - Berry oil in Chinese, Tibetan and Russian medicine
+    - Used for dune and slope stabilisation in China
+    symbolism:
+    - health and vitality
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: oil and vitamin-rich berries'
+      savagery: 'medium: thorns'
+    dimensions: []
+    hooks:
+    - thorny hedge and berry oil crafting
+    - nitrogen-fixing pioneer
+  sources:
+  - https://en.wikipedia.org/wiki/Hippophae_rhamnoides
+  - https://powo.science.kew.org/results?q=Hippophae%20rhamnoides
+  - https://www.britannica.com/plant/sea-buckthorn
+- id: persian-ironwood
+  names:
+  - Persian ironwood
+  scientific: Parrotia persica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  habitat:
+    range: Hyrcanian forests of Iran (Caspian) and Azerbaijan (Talysh), Caucasus
+    ecosystem: Hyrcanian temperate deciduous forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: moist well-drained loam, clay or acid soils
+    niche: lowland and foothill forest
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: multi-stemmed or single trunk tree with spreading crown
+    height_m:
+    - 8
+    - 20
+    trunk_diameter_m:
+    - 0.3
+    - 0.8
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous broadly oval, wavy-edged leaves like witch hazel, glossy dark green
+    seasonal: flame orange-red to purple-gold in autumn
+    flowers: red stamens on bare twigs in late winter, in tight clusters
+    fruit_visible: small woody capsule
+    bark: smooth, flaking into a mosaic of cinnamon, pink, green and pale yellow patches like plane trees
+  timber:
+    heartwood: rose to reddish brown
+    sapwood: pale
+    grain: straight to irregular, hard
+    texture: fine
+    density_kg_m3: 900
+    janka_n: null
+    workability: very hard and heavy; splits easily (density is the lower end of a 900-1050 range from
+      a Soviet encyclopedia, basis not stated)
+    rot_resistance: durable
+    scent: null
+    fuel: excellent, hot burning
+    uses:
+    - machine parts and tool handles
+    - veneer and decoration
+    - fuel
+  products:
+    food: *id005
+    sap_resin_latex: *id004
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Iran's Hyrcanian forests are a World Heritage site
+    - Planted as an ornamental tree in gardens worldwide
+    symbolism:
+    - Hyrcanian forest endemism
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'medium: winter red flowers and mosaic bark'
+      alignment: medium
+    dimensions: []
+    hooks:
+    - dense hard wood for tool parts
+    - autumn colour landmark
+  sources:
+  - https://en.wikipedia.org/wiki/Parrotia_persica
+  - https://encyclopedia2.thefreedictionary.com/Persian+Ironwood
+  - https://powo.science.kew.org/results?q=Parrotia%20persica

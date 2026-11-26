@@ -1,0 +1,2 @@
+{ "name": "dirt", "symmetry": "uniform",
+  "textures": { "+z": { "random": "dirt_set.png", "tiles": 8 } } }

@@ -1,0 +1,269 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 23 and seed 3832823833441407737 with 2 workers on 8 cores with 3641MB heap and 1024MB offheap memory [pid: 826196] (Linux 6.12.115-140.210.amzn2023.x86_64 amd64, Amazon.com Inc. 21.0.13 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file goal-model/model/GoalSource.tla
+Parsing file /tmp/Integers.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module GoalSource
+Starting... (2026-11-14 22:54:01)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-14 22:54:01.
+Error: Invariant A5 is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ cleanups = {}
+/\ c2bad = FALSE
+/\ addBad = {}
+/\ n = <<0, 0, 0, 0>>
+/\ cadd = <<{}>>
+/\ ct = <<FALSE>>
+/\ ph = <<"alloc", "alloc", "alloc", "alloc">>
+/\ fqc = <<{}>>
+/\ fqg = <<{}, {}, {}, {}>>
+/\ dl = <<{}, {}, {}, {}>>
+/\ tph = <<"idle", "idle", "idle", "idle">>
+/\ found = <<{}>>
+/\ fired = <<0, 0, 0, 0>>
+/\ rd = <<{}, {}, {}, {}>>
+/\ casc = {}
+/\ compWd = {}
+/\ wdone = <<{}>>
+/\ st = <<"Unreg", "Unreg", "Unreg", "Unreg">>
+/\ uaf = FALSE
+/\ regAbWd = {}
+/\ wret = <<{}>>
+/\ doneOut = <<"none", "none", "none", "none">>
+/\ returned = {}
+/\ wspan = <<{}>>
+/\ wd = <<FALSE, FALSE, FALSE, FALSE>>
+/\ freed = <<FALSE, FALSE, FALSE, FALSE>>
+/\ wcount = <<0, 0, 0, 0>>
+/\ sec = {}
+/\ wdw = <<{}, {}, {}, {}>>
+
+State 2: <ClientBegin line 165, col 5 to line 170, col 68 of module GoalSource>
+/\ cleanups = {}
+/\ c2bad = FALSE
+/\ addBad = {}
+/\ n = <<0, 0, 0, 0>>
+/\ cadd = <<{}>>
+/\ ct = <<TRUE>>
+/\ ph = <<"alloc", "alloc", "alloc", "alloc">>
+/\ fqc = <<{}>>
+/\ fqg = <<{}, {}, {}, {}>>
+/\ dl = <<{}, {}, {}, {}>>
+/\ tph = <<"idle", "idle", "idle", "idle">>
+/\ found = <<{}>>
+/\ fired = <<0, 0, 0, 0>>
+/\ rd = <<{}, {}, {}, {}>>
+/\ casc = {}
+/\ compWd = {}
+/\ wdone = <<{}>>
+/\ st = <<"Unreg", "Unreg", "Unreg", "Unreg">>
+/\ uaf = FALSE
+/\ regAbWd = {}
+/\ wret = <<{}>>
+/\ doneOut = <<"none", "none", "none", "none">>
+/\ returned = {}
+/\ wspan = <<{}>>
+/\ wd = <<FALSE, FALSE, FALSE, FALSE>>
+/\ freed = <<FALSE, FALSE, FALSE, FALSE>>
+/\ wcount = <<0, 0, 0, 0>>
+/\ sec = {}
+/\ wdw = <<{}, {}, {}, {}>>
+
+State 3: <Register line 226, col 5 to line 243, col 51 of module GoalSource>
+/\ cleanups = {}
+/\ c2bad = FALSE
+/\ addBad = {}
+/\ n = <<0, 0, 0, 0>>
+/\ cadd = <<{}>>
+/\ ct = <<TRUE>>
+/\ ph = <<"alloc", "alloc", "alloc", "alloc">>
+/\ fqc = <<{}>>
+/\ fqg = <<{}, {}, {}, {}>>
+/\ dl = <<{}, {}, {}, {}>>
+/\ tph = <<"idle", "idle", "idle", "idle">>
+/\ found = <<{}>>
+/\ fired = <<0, 0, 0, 0>>
+/\ rd = <<{}, {}, {}, {}>>
+/\ casc = {}
+/\ compWd = {}
+/\ wdone = <<{}>>
+/\ st = <<"Pending", "Unreg", "Unreg", "Unreg">>
+/\ uaf = FALSE
+/\ regAbWd = {}
+/\ wret = <<{}>>
+/\ doneOut = <<"none", "none", "none", "none">>
+/\ returned = {}
+/\ wspan = <<{}>>
+/\ wd = <<FALSE, FALSE, FALSE, FALSE>>
+/\ freed = <<FALSE, FALSE, FALSE, FALSE>>
+/\ wcount = <<0, 0, 0, 0>>
+/\ sec = {}
+/\ wdw = <<{}, {}, {}, {}>>
+
+State 4: <BeginWithdraw line 248, col 5 to line 254, col 68 of module GoalSource>
+/\ cleanups = {}
+/\ c2bad = FALSE
+/\ addBad = {}
+/\ n = <<0, 0, 0, 0>>
+/\ cadd = <<{}>>
+/\ ct = <<TRUE>>
+/\ ph = <<"wcalled", "alloc", "alloc", "alloc">>
+/\ fqc = <<{}>>
+/\ fqg = <<{}, {}, {}, {}>>
+/\ dl = <<{}, {}, {}, {}>>
+/\ tph = <<"idle", "idle", "idle", "idle">>
+/\ found = <<{}>>
+/\ fired = <<0, 0, 0, 0>>
+/\ rd = <<{}, {}, {}, {}>>
+/\ casc = {}
+/\ compWd = {}
+/\ wdone = <<{}>>
+/\ st = <<"Pending", "Unreg", "Unreg", "Unreg">>
+/\ uaf = FALSE
+/\ regAbWd = {}
+/\ wret = <<{}>>
+/\ doneOut = <<"none", "none", "none", "none">>
+/\ returned = {}
+/\ wspan = <<{1}>>
+/\ wd = <<FALSE, FALSE, FALSE, FALSE>>
+/\ freed = <<FALSE, FALSE, FALSE, FALSE>>
+/\ wcount = <<0, 0, 0, 0>>
+/\ sec = {}
+/\ wdw = <<{}, {}, {}, {}>>
+
+State 5: <Claim line 356, col 5 to line 357, col 24 of module GoalSource>
+/\ cleanups = {}
+/\ c2bad = FALSE
+/\ addBad = {}
+/\ n = <<0, 0, 0, 0>>
+/\ cadd = <<{}>>
+/\ ct = <<TRUE>>
+/\ ph = <<"wcalled", "alloc", "alloc", "alloc">>
+/\ fqc = <<{}>>
+/\ fqg = <<{}, {}, {}, {}>>
+/\ dl = <<{}, {}, {}, {}>>
+/\ tph = <<"claimed", "idle", "idle", "idle">>
+/\ found = <<{}>>
+/\ fired = <<0, 0, 0, 0>>
+/\ rd = <<{}, {}, {}, {}>>
+/\ casc = {}
+/\ compWd = {}
+/\ wdone = <<{}>>
+/\ st = <<"Running", "Unreg", "Unreg", "Unreg">>
+/\ uaf = FALSE
+/\ regAbWd = {}
+/\ wret = <<{}>>
+/\ doneOut = <<"none", "none", "none", "none">>
+/\ returned = {}
+/\ wspan = <<{1}>>
+/\ wd = <<FALSE, FALSE, FALSE, FALSE>>
+/\ freed = <<FALSE, FALSE, FALSE, FALSE>>
+/\ wcount = <<0, 0, 0, 0>>
+/\ sec = {}
+/\ wdw = <<{}, {}, {}, {}>>
+
+State 6: <WithdrawOne line 257, col 5 to line 274, col 82 of module GoalSource>
+/\ cleanups = {}
+/\ c2bad = FALSE
+/\ addBad = {}
+/\ n = <<0, 0, 0, 0>>
+/\ cadd = <<{}>>
+/\ ct = <<TRUE>>
+/\ ph = <<"wcalled", "alloc", "alloc", "alloc">>
+/\ fqc = <<{}>>
+/\ fqg = <<{}, {}, {}, {}>>
+/\ dl = <<{}, {}, {}, {}>>
+/\ tph = <<"claimed", "idle", "idle", "idle">>
+/\ found = <<{}>>
+/\ fired = <<0, 0, 0, 0>>
+/\ rd = <<{}, {}, {}, {}>>
+/\ casc = {}
+/\ compWd = {}
+/\ wdone = <<{1}>>
+/\ st = <<"Running", "Unreg", "Unreg", "Unreg">>
+/\ uaf = FALSE
+/\ regAbWd = {}
+/\ wret = <<{}>>
+/\ doneOut = <<"none", "none", "none", "none">>
+/\ returned = {}
+/\ wspan = <<{}>>
+/\ wd = <<TRUE, FALSE, FALSE, FALSE>>
+/\ freed = <<FALSE, FALSE, FALSE, FALSE>>
+/\ wcount = <<1, 0, 0, 0>>
+/\ sec = {}
+/\ wdw = <<{}, {}, {}, {}>>
+
+State 7: <TurnStart line 366, col 5 to line 370, col 75 of module GoalSource>
+/\ cleanups = {}
+/\ c2bad = FALSE
+/\ addBad = {}
+/\ n = <<0, 0, 0, 0>>
+/\ cadd = <<{}>>
+/\ ct = <<TRUE>>
+/\ ph = <<"wcalled", "alloc", "alloc", "alloc">>
+/\ fqc = <<{}>>
+/\ fqg = <<{}, {}, {}, {}>>
+/\ dl = <<{}, {}, {}, {}>>
+/\ tph = <<"body", "idle", "idle", "idle">>
+/\ found = <<{}>>
+/\ fired = <<0, 0, 0, 0>>
+/\ rd = <<{}, {}, {}, {}>>
+/\ casc = {}
+/\ compWd = {}
+/\ wdone = <<{1}>>
+/\ st = <<"Running", "Unreg", "Unreg", "Unreg">>
+/\ uaf = FALSE
+/\ regAbWd = {}
+/\ wret = <<{}>>
+/\ doneOut = <<"none", "none", "none", "none">>
+/\ returned = {}
+/\ wspan = <<{}>>
+/\ wd = <<TRUE, FALSE, FALSE, FALSE>>
+/\ freed = <<FALSE, FALSE, FALSE, FALSE>>
+/\ wcount = <<1, 0, 0, 0>>
+/\ sec = {}
+/\ wdw = <<{}, {}, {}, {}>>
+
+State 8: <TurnEnd line 401, col 5 to line 402, col 48 of module GoalSource>
+/\ cleanups = {}
+/\ c2bad = FALSE
+/\ addBad = {}
+/\ n = <<0, 0, 0, 0>>
+/\ cadd = <<{}>>
+/\ ct = <<TRUE>>
+/\ ph = <<"wcalled", "alloc", "alloc", "alloc">>
+/\ fqc = <<{}>>
+/\ fqg = <<{1}, {}, {}, {}>>
+/\ dl = <<{}, {}, {}, {}>>
+/\ tph = <<"post", "idle", "idle", "idle">>
+/\ found = <<{}>>
+/\ fired = <<0, 0, 0, 0>>
+/\ rd = <<{}, {}, {}, {}>>
+/\ casc = {}
+/\ compWd = {1}
+/\ wdone = <<{1}>>
+/\ st = <<"Completed", "Unreg", "Unreg", "Unreg">>
+/\ uaf = FALSE
+/\ regAbWd = {}
+/\ wret = <<{}>>
+/\ doneOut = <<"none", "none", "none", "none">>
+/\ returned = {}
+/\ wspan = <<{}>>
+/\ wd = <<TRUE, FALSE, FALSE, FALSE>>
+/\ freed = <<FALSE, FALSE, FALSE, FALSE>>
+/\ wcount = <<1, 0, 0, 0>>
+/\ sec = {}
+/\ wdw = <<{}, {}, {}, {}>>
+
+2743 states generated, 1088 distinct states found, 551 states left on queue.
+The depth of the complete state graph search is 9.
+The average outdegree of the complete state graph is 2 (minimum is 0, the maximum 8 and the 95th percentile is 6).
+Finished in 00s at (2026-11-14 22:54:02)

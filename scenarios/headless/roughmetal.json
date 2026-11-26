@@ -1,0 +1,6 @@
+{
+  "include": "../v0.1-scene.json",
+  "view": {
+    "buffer": "roughmetal"
+  }
+}

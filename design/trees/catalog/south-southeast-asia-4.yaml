@@ -1,0 +1,4025 @@
+# south-southeast-asia chunk 4: regions/south-southeast-asia.yaml entries 126-167
+- id: meranti
+  names:
+  - meranti
+  - lauan
+  - Philippine mahogany
+  - seraya
+  scientific: Rubroshorea and Richetia (red and yellow meranti, formerly Shorea)
+  rank: group
+  stands_for:
+  - Richetia faguetiana (Menara, formerly Shorea faguetiana)
+  - Rubroshorea leprosula
+  - Rubroshorea curtisii
+  - Parashorea (white seraya)
+  distinct_from:
+  - 'sal: meranti are the giant rainforest Shoreas'
+  - 'keruing: keruing is a resin-tapped Dipterocarpus with big winged fruit'
+  - 'bornean-camphor: Borneo camphor has camphor crystals and crown shyness'
+  - 'illipe: illipe is a riverside Shorea grown for its fat-rich nuts'
+  - 'damar: damar is a Shorea tapped for resin in gardens'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Borneo, Sumatra, the Malay Peninsula, southern Thailand, Java, the Philippines and the Moluccas
+    ecosystem: lowland and hill mixed dipterocarp rainforest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1400
+    substrate: deep, well-drained yellow or red soils; most species below 1000 m
+    niche: emergents and main canopy of aseasonal wet forest (rainfall over 1600 mm, fewer than 6 dry
+      months)
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall straight cylindrical bole, clear for 10-30 m (up to 45 m), prominent buttresses up to
+      3-6 m high; hemispherical or dome-shaped crown
+    height_m:
+    - 40
+    - 100
+    trunk_diameter_m:
+    - 0.7
+    - 2.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, simple, entire, glossy, often glaucous beneath, with ladder-like fine veins
+    seasonal: no autumn change; whole forests flower and fruit together in irregular mast years every
+      few years
+    flowers: small, fragrant, cream to pink, in panicles, during mast flowering
+    fruit_visible: nut with three long and two short wings, spinning down like shuttlecocks
+    bark: grey or brown, smooth to deeply V-fissured or flaky (red meranti) or scaly (yellow meranti);
+      inner bark red, pink or orange, oozing resin that turns opaque yellow
+  timber:
+    heartwood: light red to dark reddish or purplish brown (red meranti); yellowish brown (yellow meranti);
+      often with white resin streaks
+    sapwood: lighter, distinct
+    grain: interlocked or wavy, stripe figure on quartersawn faces
+    texture: coarse but even
+    density_kg_m3: 480
+    janka_n: 2460
+    workability: easy to work; interlocked grain tears on planing; slight silica blunting; glues and finishes
+      well
+    rot_resistance: non-durable to moderately durable; susceptible to insects
+    scent: null
+    fuel: null
+    uses:
+    - plywood (lauan)
+    - interior joinery
+    - furniture
+    - light construction
+    - boatbuilding
+    - concrete forms
+    - mouldings
+  products:
+    food: []
+    sap_resin_latex:
+    - 'damar batu: hard resin from the bole of red meranti, used for caulking boats and baskets, as glue,
+      and for torches'
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: wood dust occasionally irritates eyes, throat and skin
+  lore:
+    folklore: []
+    cultures:
+    - the timber that built the 20th-century Southeast Asian plywood trade
+    symbolism:
+    - Sabah calls itself the land beneath the wind; its storm-free forests let meranti grow to record
+      heights
+    notable_trees:
+    - 'Menara, a yellow meranti (Richetia faguetiana) in Danum Valley, Sabah: 97.58 m (100.8 m from the
+      lowest point of the trunk), measured by climbing in 2019; the tallest known tropical tree'
+  game_fit:
+    fields:
+      savagery: 'high: towering emergents of untouched lowland rainforest'
+      yield: 'high: abundant easy-working timber'
+    dimensions: []
+    hooks:
+    - 'crafting/timber: cheap easy-working plank and plywood class'
+    - 'crafting/resin: damar for caulking and torches'
+    - 'landmark: climbable 90-100 m emergents'
+  sources:
+  - https://www.wood-database.com/light-red-meranti/
+  - https://uses.plantnet-project.org/en/Shorea_(red_meranti)_(PROSEA)
+  - https://en.wikipedia.org/wiki/Menara_(tree)
+- id: merbau
+  names:
+  - merbau
+  - kwila
+  - ipil
+  scientific: Intsia bijuga
+  rank: group
+  stands_for:
+  - Intsia palembanica
+  distinct_from:
+  - 'bornean-ironwood: merbau is a red-brown durable timber, belian is darker and far denser'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: coasts from East Africa and Madagascar through India and Southeast Asia to northern Australia
+      and the western Pacific; most remaining stands in New Guinea
+    ecosystem: tropical coastal and beach forest, landward fringe of mangroves, lowland rainforest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 600
+    substrate: coastal sands and alluvium along tidal rivers; inland on well-drained soils
+    niche: beach forest and upper mangrove margins
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: evergreen tree with a short bole and buttresses up to 4 m tall and 2 m wide; spreading crown
+    height_m:
+    - 25
+    - 50
+    trunk_diameter_m:
+    - 0.6
+    - 1.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, pinnate with usually four broad, asymmetric oval leaflets
+    seasonal: no autumn change
+    flowers: many small flowers in terminal clusters; flowering December-May in Australia
+    fruit_visible: flat woody pods 10-28 cm long with up to 8 disc-shaped seeds
+    bark: null
+  timber:
+    heartwood: yellowish to orange-brown when cut, ageing to dark reddish brown; flecked with water-soluble
+      yellow mineral deposits
+    sapwood: pale, clearly demarcated, 5-8 cm wide
+    grain: straight to interlocked
+    texture: coarse
+    density_kg_m3: 815
+    janka_n: 7620
+    workability: hard; gums and dulls saw teeth; pre-bore for nails; takes a very fine polish
+    rot_resistance: very durable; resists rot and dry-wood borers, moderately resistant to termites
+    scent: distinctive smell when sawn, which can cause sneezing
+    fuel: small branches used as firewood
+    uses:
+    - flooring
+    - house posts and beams
+    - bridges
+    - railway sleepers
+    - boatbuilding
+    - canoes
+    - furniture
+    - kava (yaqona) bowls
+    - carvings
+    - walking sticks
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes:
+    - brown dye from an oily substance in the wood and bark
+    medicinal: []
+    toxicity: sawdust can cause mild skin irritation and runny nose
+  lore:
+    folklore: []
+    cultures:
+    - Fijian yaqona (kava) bowls were carved from vesi (merbau); used for canoes
+    - rafts and house building across Melanesia
+    symbolism:
+    - national tree of Malaysia
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: valuable durable timber, heavily logged'
+    dimensions: []
+    hooks:
+    - 'crafting/construction: rot-proof posts, sleepers and decking'
+    - 'crafting/dye: brown wood dye'
+  sources:
+  - https://www.wood-database.com/merbau/
+  - https://uses.plantnet-project.org/en/Intsia_(PROSEA)
+  - https://en.wikipedia.org/wiki/Intsia_bijuga
+- id: molave
+  names:
+  - molave
+  - tugas
+  scientific: Vitex parviflora
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  habitat:
+    range: Philippines, Indonesia (Sulawesi, Moluccas), Malaysia and Thailand; naturalized in Guam and
+      Hawaii
+    ecosystem: seasonal tropical forest, secondary and open primary forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m: null
+    substrate: limestone and well-drained soils
+    niche: open and secondary forest; depleted by logging and shifting cultivation
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: medium-sized to fairly large tree; bole often short and crooked, with buttresses
+    height_m:
+    - 15
+    - 38
+    trunk_diameter_m:
+    - 0.6
+    - 2.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, opposite, trifoliate leaflets
+    seasonal: briefly leafless in the dry season
+    flowers: small bluish flowers in lax terminal panicles
+    fruit_visible: small round drupes about 5 mm, bluish black when ripe
+    bark: null
+  timber:
+    heartwood: light yellow-brown to yellowish green, turning greenish brown when boiled
+    sapwood: null
+    grain: null
+    texture: fine
+    density_kg_m3: 770
+    janka_n: 6139
+    workability: null
+    rot_resistance: extremely durable; resists fungi, termites and marine borers
+    scent: null
+    fuel: used for fuel
+    uses:
+    - church and house posts
+    - Manila galleon framing
+    - bridges
+    - railway sleepers
+    - furniture
+    - carving
+  products:
+    food: []
+    sap_resin_latex:
+    - a yellow resin exudes when the wood is treated with lime
+    bark: []
+    leaves: []
+    dyes:
+    - yellow extract from wood shavings soaked in water
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - framing of the Manila galleons; posts of Philippine churches that have stood for centuries
+    symbolism:
+    - a Philippine byword for strength and durability
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/construction: near-indestructible posts and ship frames'
+  sources:
+  - https://www.tropicaltimber.info/specie/vitex-vitex-parviflora/
+  - https://uses.plantnet-project.org/en/Vitex_parviflora_(PROSEA)
+  - https://en.wikipedia.org/wiki/Vitex_parviflora
+- id: moringa
+  names:
+  - moringa
+  - drumstick tree
+  scientific: Moringa oleifera
+  rank: species
+  stands_for:
+  - Moringa concanensis
+  distinct_from:
+  - 'arabian-ben-tree: the Arabian desert moringa'
+  - 'phantom-tree: the swollen-trunked Namibian moringa'
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - fruit
+  - product
+  habitat:
+    range: native to the sub-Himalayan foothills of northern India; cultivated throughout the tropics
+    ecosystem: dry and seasonal tropical woodland, stream banks, villages
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m: null
+    substrate: well-drained sandy or loamy soil, neutral to slightly acid; roots rot in waterlogged ground
+    niche: fast pioneer of stream banks and savanna; village gardens and hedges
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: slender, often crooked tree with an open crown of drooping, brittle branches
+    height_m:
+    - 3
+    - 12
+    trunk_diameter_m:
+    - 0.1
+    - 0.46
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, feathery, two to three times pinnate with small oval leaflets
+    seasonal: sheds leaves in cool or very dry spells
+    flowers: fragrant yellowish-white flowers in drooping sprays 10-25 cm long, sometimes year-round
+    fruit_visible: hanging three-sided brown pods 20-45 cm long (drumsticks)
+    bark: whitish grey, thick and corky
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: 600
+    janka_n: null
+    workability: very soft, corky and light
+    rot_resistance: null
+    scent: null
+    fuel: burns smoke-free, acceptable cooking fuel, poor charcoal
+    uses:
+    - light construction only
+  products:
+    food:
+    - young pods (drumsticks) in curries and sambar
+    - leaves as a vegetable
+    - flowers
+    - roasted seeds
+    sap_resin_latex:
+    - gum from the stem
+    bark: []
+    leaves:
+    - nutritious leaf powder
+    dyes:
+    - blue dye from the wood
+    medicinal:
+    - leaves
+    - roots and seeds in Ayurvedic and folk medicine
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - crushed seeds are used to clarify muddy drinking water
+    - India is the largest producer of drumsticks, about 1.2 million tonnes a year
+    symbolism:
+    - '"miracle tree" of nutrition programmes'
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: food, oil and water-clearing seeds from one fast tree'
+    dimensions: []
+    hooks:
+    - 'first-session: fast-growing food tree with edible leaves and pods'
+    - 'crafting/purifier: crushed seeds settle muddy water'
+    - 'crafting/oil: ben oil pressed from the seeds'
+  sources:
+  - https://en.wikipedia.org/wiki/Moringa_oleifera
+  - https://uses.plantnet-project.org/en/Moringa_oleifera_(PROSEA)
+  - https://tropical.theferns.info/viewtropical.php?id=Moringa+oleifera
+- id: muli-bamboo
+  names:
+  - muli bamboo
+  - Mizo bamboo
+  - mautak
+  scientific: Melocanna baccifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bamboo: muli bamboo is the gregariously flowering bamboo with fleshy fruit'
+  - 'thorny-bamboo: thorny bamboo grows in dense spiny clumps'
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - striking
+  - fruit
+  habitat:
+    range: Mizoram, Tripura, Manipur and Assam in northeast India, Bangladesh (Chittagong Hill Tracts)
+      and western Myanmar (Chin State)
+    ecosystem: tropical moist hill forest and bamboo brakes, often after shifting cultivation
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: monsoon'
+    elevation_m: null
+    substrate: well-drained hill soils
+    niche: forms vast near-pure bamboo forests on hill slopes
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: running bamboo with long rhizomes; well-spaced straight culms in open clumps that spread into
+      forests
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.015
+    - 0.15
+    lifespan_y: 48
+    growth_rate: fast
+    leaves: evergreen, narrow bamboo leaves on many short branches
+    seasonal: in a flowering year the leaves wither and fall and culms turn yellow
+    flowers: bamboo spikelets borne all at once across whole regions
+    fruit_visible: fleshy pear-shaped fruits, sugary, produced in huge quantities (one clump yielded 457
+      kg)
+    bark: culm green when young with stiff silver hairs and a white band below nodes, straw-coloured when
+      old
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: thin-walled culms split easily for weaving
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - house walls and floors
+    - woven mats and baskets
+    - paper pulp
+  products:
+    food:
+    - young shoots
+    - fruits
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - Mizo tradition holds that the mautam flowering brings famine; the fruit feeds an explosion of black
+      rats that then devour the rice
+    cultures:
+    - the 1959 mautam famine and the Indian government's slow response led to the Mizo National Front
+      uprising of 1966
+    - recorded mautams in 1864, 1910-1912, 1958-1959 and 2007-2008, alternating with thingtam flowerings
+      of Bambusa tulda
+    symbolism:
+    - mautam means "death of the bamboo"
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: rat floods after mass flowering'
+    dimensions: []
+    hooks:
+    - 'event: region-wide flowering that triggers a vermin plague and food shortage'
+    - 'crafting/fibre: woven bamboo panels and baskets'
+  sources:
+  - https://en.wikipedia.org/wiki/Mautam
+  - https://uses.plantnet-project.org/en/Melocanna_baccifera_(PROSEA)
+  - https://en.wikipedia.org/wiki/Melocanna_baccifera
+- id: narra
+  names:
+  - narra
+  - amboyna
+  - angsana
+  - Malay padauk
+  scientific: Pterocarpus indicus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'padauk: narra is the Asian species known for amboyna burl'
+  - 'burma-padauk: Burma padauk is the Myanmar species with April golden flowers'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  - medicinal
+  habitat:
+    range: southern China and the Ryukyus through Indochina, the Malay Archipelago and the Philippines
+      to New Guinea and the western Pacific; extinct in Vietnam
+    ecosystem: lowland primary forest, often along tidal creeks and rivers, and seasonal forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 600
+    substrate: varied; riverbanks and rocky coasts
+    niche: riverside and coastal forest; planted as an avenue tree
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: large deciduous tree with a tall dome-shaped crown and long drooping branches; buttressed
+    height_m:
+    - 30
+    - 40
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, pinnate with glossy oval leaflets
+    seasonal: drops leaves briefly in the dry season, then flowers
+    flowers: masses of fragrant golden-yellow pea flowers in panicles 6-13 cm long, February-May
+    fruit_visible: flat round pods 4-6 cm across with a papery wing
+    bark: grey-brown, finely fissured, exuding red kino when cut
+  timber:
+    heartwood: golden yellow to brick red, ageing to brown; amboyna burl with tight curls and knots
+    sapwood: pale yellow, clearly demarcated
+    grain: interlocked, sometimes wavy; ribbon, mottled or curly figure
+    texture: medium to coarse
+    density_kg_m3: 655
+    janka_n: 5620
+    workability: easy by hand and machine; moderate blunting; turns, glues and finishes well
+    rot_resistance: very durable; termite resistant
+    scent: rose-like scent that lingers after working
+    fuel: usable but too valuable
+    uses:
+    - fine furniture
+    - cabinetry
+    - veneer
+    - carving
+    - cartwheels
+    - musical instruments
+    - amboyna burl inlay
+  products:
+    food:
+    - young leaves and flowers said to be eaten
+    sap_resin_latex:
+    - red kino resin from the bark
+    bark: []
+    leaves:
+    - leaf infusions used as shampoo
+    dyes:
+    - reddish wood dye
+    medicinal:
+    - 'lignum nephriticum: a 16th-18th century diuretic cup or infusion of the wood, which fluoresces
+      blue in water'
+    toxicity: wood dust is a skin and respiratory irritant
+  lore:
+    folklore: []
+    cultures:
+    - amboyna burl is named after Ambon in the Moluccas, where much of it was first obtained
+    symbolism:
+    - national tree of the Philippines
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: wood infusion glows blue under light'
+    dimensions: []
+    hooks:
+    - 'crafting/furniture: rose-scented red wood; rare burl variant for inlay'
+    - 'crafting/medicine: fluorescent wood-cup potion'
+  sources:
+  - https://www.wood-database.com/narra/
+  - https://uses.plantnet-project.org/en/Pterocarpus_indicus_(PROSEA)
+  - https://en.wikipedia.org/wiki/Pterocarpus_indicus
+- id: needlewood
+  names:
+  - needlewood
+  - chilauni
+  - puspa
+  scientific: Schima wallichii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  habitat:
+    range: Nepal and the eastern Himalaya, northeast India, southern China, Indochina, Thailand, Malaysia,
+      Indonesia and the Philippines
+    ecosystem: lowland to montane forest, secondary forest, scrub and grassland
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 2400
+    substrate: wide range; tolerates poor, burned and even brackish-flooded soils
+    niche: gregarious in disturbed and secondary forest; regenerates where light reaches the ground
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: evergreen tree with a dense crown and a cylindrical bole clear for up to 25 m; rarely buttressed
+    height_m:
+    - 10
+    - 47
+    trunk_diameter_m:
+    - 0.3
+    - 1.25
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, simple, elliptic, leathery, entire or toothed; young leaves reddish
+    seasonal: no autumn change
+    flowers: white flowers with many stamens, solitary at the twig tips
+    fruit_visible: small round woody capsules
+    bark: red-brown to dark grey, cracked into small thick angular blocks; bright red inner bark full
+      of fine needle-like irritating fibres
+  timber:
+    heartwood: pink-brown, red-brown or grey-brown
+    sapwood: pale grey, not clearly differentiated
+    grain: straight or interlocked, often irregular
+    texture: moderately fine, even
+    density_kg_m3: 720
+    janka_n: 5345
+    workability: null
+    rot_resistance: moderately durable; relatively resistant to dry-wood termites
+    scent: null
+    fuel: good firewood
+    uses:
+    - beams and columns under cover
+    - flooring
+    - joinery
+    - boat ribs and decks
+    - vehicle bodies
+    - agricultural implements
+    - railway sleepers when treated
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - tannin
+    - alkaloid used as a fish poison
+    leaves: []
+    dyes: []
+    medicinal:
+    - local medicinal uses
+    toxicity: fibres of the inner bark irritate the skin like glass wool
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'hazard: stripping bark without gloves gives an itching debuff'
+    - 'crafting/poison: bark for fishing'
+  sources:
+  - https://uses.plantnet-project.org/en/Schima_(PROSEA)
+  - https://www.tropicaltimber.info/specie/puspasimartolu-schima-wallichii/
+  - https://tropical.theferns.info/viewtropical.php?id=Schima+wallichii
+- id: neem
+  names:
+  - neem
+  - margosa
+  scientific: Azadirachta indica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - medicinal
+  - cultural
+  - product
+  habitat:
+    range: Indian subcontinent and drier parts of mainland Southeast Asia (Myanmar); naturalized and planted
+      throughout the tropics and subtropics
+    ecosystem: dry deciduous and mixed forest, savanna, villages and roadsides
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m: null
+    substrate: almost any soil, best on deep, well-drained sands; does not tolerate waterlogging
+    niche: village shade tree and roadside avenues; dry-country plantations
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: short straight bole and long spreading branches forming a dense oval or rounded crown up to
+      20-25 m wide
+    height_m:
+    - 15
+    - 20
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: 200
+    growth_rate: fast
+    leaves: evergreen, pinnate, 20-40 cm long with 20-30 toothed, curved, dark green leaflets; very bitter
+    seasonal: sheds many leaves in the dry winter months
+    flowers: small white fragrant flowers, 250-300 per drooping spray up to 25 cm long
+    fruit_visible: smooth olive-like drupes 14-28 mm, yellow when ripe, with bitter-sweet pulp
+    bark: null
+  timber:
+    heartwood: reddish when fresh, fading to reddish brown; resembles mahogany
+    sapwood: yellowish to greyish white, distinct
+    grain: interlocked
+    texture: rough; does not polish well
+    density_kg_m3: 670
+    janka_n: null
+    workability: null
+    rot_resistance: termite resistant; used for posts in the ground
+    scent: null
+    fuel: excellent firewood and charcoal
+    uses:
+    - house posts
+    - fencing
+    - wardrobes and bookcases (insect-repellent)
+    - packing cases
+    - carts
+    - furniture
+  products:
+    food:
+    - ripe fruit eaten fresh or as a drink
+    - bitter young leaves and flowers cooked as an appetiser
+    sap_resin_latex:
+    - sap from branches fermented into a drink
+    bark: []
+    leaves:
+    - dried leaves laid in books, linen and stored grain to repel insects
+    dyes: []
+    medicinal:
+    - twigs chewed as toothbrushes
+    - neem oil from the seeds for skin disease, lamps and soap
+    - leaves and bark as a bitter febrifuge and detoxicant in Ayurveda
+    - azadirachtin, an insect antifeedant and growth disruptor, from the seeds
+    toxicity: neem extracts are toxic to fish and some beneficial insects
+  lore:
+    folklore: []
+    cultures:
+    - called the "village pharmacy" of India, where every part of the tree is used
+    symbolism:
+    - state tree of Andhra Pradesh
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: protective, cleansing village tree'
+      yield: 'high: oil, insecticide, medicine and timber'
+    dimensions: []
+    hooks:
+    - 'crafting/medicine: bitter cure-all from leaves and bark'
+    - 'crafting/repellent: leaves protect stored food and books from pests'
+    - 'crafting/oil: seed oil for lamps and soap'
+  sources:
+  - https://www.tropicaltimber.info/specie/neem-azadirachta-indica/
+  - https://uses.plantnet-project.org/en/Azadirachta_indica_(PROSEA)
+  - https://tropical.theferns.info/viewtropical.php?id=Azadirachta+indica
+- id: nipa-palm
+  names:
+  - nipa palm
+  scientific: Nypa fruticans
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: coasts of the Indian and Pacific Oceans from Sri Lanka and Bangladesh through Southeast Asia
+      to New Guinea, the Solomon Islands and northern Australia
+    ecosystem: tidal estuaries and brackish mangrove swamps
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: soft brackish mud of slow tidal rivers
+    niche: forms pure stands along estuaries behind the seaward mangroves
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: stemless palm; the trunk creeps horizontally under the mud and only the leaves and flower stalks
+      rise above it
+    height_m:
+    - 4
+    - 9
+    trunk_diameter_m: null
+    lifespan_y: 50
+    growth_rate: fast
+    leaves: evergreen, upright feather-like fronds up to 9 m long
+    seasonal: no seasonal change
+    flowers: globular head of female flowers at the tip with catkin-like red or yellow male spikes below
+    fruit_visible: round head up to 25 cm across of tightly packed brown woody nuts, up to 30 kg, drooping
+      as it ripens; nuts float away on tides
+    bark: none; leaf bases persist in the mud
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - sap tapped from the fruit stalk for palm sugar (gula malacca)
+    - vinegar and alcohol
+    - young seeds eaten
+    sap_resin_latex:
+    - sweet sap from the cut flower stalk
+    bark: []
+    leaves:
+    - attap thatch and shingles, more durable than coconut thatch
+    - leaflets for baskets, mats and cigarette wrappers
+    - leaves contain up to 10% tannin
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - nipa huts (bahay kubo) in the Philippines are roofed with nipa thatch
+    - tapped for palm sugar and spirits across Southeast Asia for centuries
+    symbolism: []
+    notable_trees:
+    - fossil Nypa fruits and pollen from the Late Cretaceous onward show it once grew across the world,
+      including Egypt, Europe and the Americas
+  game_fit:
+    fields:
+      liminality: 'high: half-drowned palm of the tidal margin'
+    dimensions:
+    - aether
+    hooks:
+    - 'crafting/thatch: durable roofing panels'
+    - 'crafting/sugar: tapped sap for sugar, vinegar and spirits'
+  sources:
+  - https://uses.plantnet-project.org/en/Nypa_fruticans_(PROSEA)
+  - https://en.wikipedia.org/wiki/Nypa_fruticans
+- id: nutmeg
+  names:
+  - nutmeg
+  - mace
+  scientific: Myristica fragrans
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - toxic
+  - medicinal
+  - product
+  habitat:
+    range: native to the Banda Islands in the Moluccas, Indonesia; cultivated in Indonesia, Sri Lanka,
+      Kerala and Grenada
+    ecosystem: humid lowland tropical forest and spice gardens
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: rich volcanic soils; needs 2000-3500 mm rain with no real dry season
+    niche: planted under shade when young, later in groves
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: dense conical evergreen tree; separate male and female trees
+    height_m:
+    - 5
+    - 20
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, alternate, elliptical to lanceolate, 5-15 cm, dark green and aromatic when bruised
+    seasonal: no seasonal change; fruits through the year
+    flowers: small pale yellow waxy bell-shaped flowers
+    fruit_visible: smooth yellow pear-shaped fruit 6-9 cm that splits in two to show a brown seed wrapped
+      in a bright red lacy aril (mace)
+    bark: exudes sticky red sap when wounded
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - nutmeg (seed) and mace (dried aril) as spices
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - seed and essential oil in traditional medicine
+    toxicity: 'seed: toxic in large doses (myristicin), causing nausea and hallucinations'
+  lore:
+    folklore: []
+    cultures:
+    - the Dutch East India Company conquered the Banda Islands in the 17th century to control the world's
+      only source of nutmeg; on Banda, plantations on volcanic soil have stayed productive for centuries
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: two high-value spices from one fruit'
+    dimensions: []
+    hooks:
+    - 'crafting/spice: nutmeg and mace as a valuable trade good'
+    - 'hazard: overdose of seed gives a hallucination debuff'
+  sources:
+  - https://uses.plantnet-project.org/en/Myristica_fragrans_(PROSEA)
+  - https://en.wikipedia.org/wiki/Myristica_fragrans
+  - https://tropical.theferns.info/viewtropical.php?id=Myristica+fragrans
+- id: orchid-tree
+  names:
+  - orchid tree
+  - mountain ebony
+  - kovidara
+  - koiralo
+  scientific: Bauhinia variegata
+  rank: group
+  stands_for:
+  - Bauhinia purpurea
+  - Bauhinia racemosa (apta)
+  distinct_from:
+  - 'hong-kong-orchid-tree: the sterile hybrid of the Hong Kong flag'
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  habitat:
+    range: southern China, the Himalaya (Pakistan to Bhutan), India, Myanmar, Thailand and Indochina;
+      planted throughout the tropics and subtropics
+    ecosystem: dry deciduous and subtropical forest, foothills
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m: null
+    substrate: well-drained soils; flowers best on dry ground
+    niche: forest edges and open slopes; garden and street tree
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small to medium-sized tree with a spreading crown
+    height_m:
+    - 6
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, rounded, 15-20 cm, deeply cleft into two lobes like a camel's hoof or butterfly
+    seasonal: leafless in the dry season, when it flowers
+    flowers: fragrant orchid-like flowers 5-7 cm with five petals, bright pink or white
+    fruit_visible: flat pods 20-30 cm that twist into a corkscrew and burst with an audible clack
+    bark: null
+  timber:
+    heartwood: brown, with an attractive grain
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: one of the tree's main uses
+    uses:
+    - fuel
+    - small implements
+  products:
+    food:
+    - flower buds and flowers cooked or pickled (Nepalese koiralo achar)
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - apta (Bauhinia racemosa) leaves are exchanged as "gold" at Dussehra in Maharashtra
+    cultures:
+    - koiralo achar is served at the Ghode Jatra festival in Nepal
+    symbolism:
+    - sacred in Hinduism as kovidara, the tree on the Dharma Dhwaja flag
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: sacred flag tree and gift of "gold" leaves'
+    dimensions: []
+    hooks:
+    - 'landmark: pink spring bloom on bare branches'
+    - 'first-session: edible flower buds'
+  sources:
+  - https://en.wikipedia.org/wiki/Bauhinia_variegata
+  - https://uses.plantnet-project.org/en/Bauhinia_variegata_(PROSEA)
+  - https://tropical.theferns.info/viewtropical.php?id=Bauhinia+variegata
+- id: oriental-mangrove
+  names:
+  - oriental mangrove
+  - large-leafed orange mangrove
+  - kankra
+  scientific: Bruguiera gymnorhiza
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'red-mangrove: red mangroves stand on arching stilt roots'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  habitat:
+    range: tropical coasts from East and South Africa through South and Southeast Asia to northern Australia
+      and the western Pacific islands
+    ecosystem: mangrove swamps and estuaries
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 2
+    substrate: firm, well-aerated intertidal mud, best in river estuaries
+    niche: landward side of mangroves, often with Rhizophora; marks the transition to land forest
+    strata:
+    - canopy
+    - open
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: evergreen tree with a buttressed bole and knee-shaped breathing roots looping out of the mud
+    height_m:
+    - 7
+    - 36
+    trunk_diameter_m:
+    - 0.4
+    - 0.65
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, opposite, leathery, glossy elliptic, 8.5-22 cm, on reddish stalks
+    seasonal: no seasonal change
+    flowers: solitary nodding flowers 3-3.5 cm with cream petals soon browning and a red to reddish-brown
+      many-lobed calyx
+    fruit_visible: long cigar-shaped green propagules hanging from the persistent red calyx, dropping
+      to spear upright into the mud
+    bark: grey to almost black, roughly fissured, with large corky lenticels at the base
+  timber:
+    heartwood: red-brown
+    sapwood: pale brown, distinct
+    grain: usually interlocked
+    texture: fine and even
+    density_kg_m3: 980
+    janka_n: 7963
+    workability: hard and refractory
+    rot_resistance: moderately durable in the weather and in the ground
+    scent: null
+    fuel: very good fuel and charcoal, 18,950-20,200 kJ/kg
+    uses:
+    - house poles
+    - beams and rafters
+    - fishing stakes
+    - canoe parts
+    - spears
+    - tool handles
+    - digging sticks
+    - paddles
+  products:
+    food:
+    - propagules eaten after scraping, washing and cooking to remove tannin; a staple of the Sowek people
+      of Supiori, Papua
+    sap_resin_latex: []
+    bark:
+    - tannin
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark for burns in the Solomon Islands and for diarrhoea and fever in Indonesia
+    toxicity: bark is astringent and mildly toxic
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: grows between land and sea'
+    dimensions: []
+    hooks:
+    - 'crafting/charcoal: dense hot-burning mangrove charcoal'
+    - 'crafting/tannin: bark for leather and nets'
+  sources:
+  - https://uses.plantnet-project.org/en/Bruguiera_gymnorhiza_(PROSEA)
+  - https://www.tropicaltimber.info/specie/bakau-bruguiera-gymnorhiza/
+  - https://en.wikipedia.org/wiki/Bruguiera_gymnorhiza
+- id: oroxylum
+  names:
+  - midnight horror
+  - Indian trumpet tree
+  - tree of Damocles
+  - broken bones
+  scientific: Oroxylum indicum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  - folklore
+  habitat:
+    range: southern China, India, Nepal, Bhutan, Indochina, Malaysia, Indonesia and the Philippines
+    ecosystem: tropical moist and deciduous forest, secondary growth
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1000
+    substrate: wide range
+    niche: short-lived nomad of canopy gaps, thickets and secondary growth; never gregarious
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: sparsely branched tree with a few thick, pithy branches
+    height_m:
+    - 8
+    - 27
+    trunk_diameter_m:
+    - 0.1
+    - 0.4
+    lifespan_y: null
+    growth_rate: fast
+    leaves: huge, three to four times pinnate, 0.5-2 m long, crowded at the branch tips
+    seasonal: semi-deciduous; fallen leaf stalks pile under the tree
+    flowers: large fleshy flowers with a leathery brown to dirty-violet calyx on erect spikes up to 1.5
+      m; open at night, smell foul and are bat-pollinated
+    fruit_visible: long flat sword- or sickle-shaped pods hanging from the branches
+    bark: grey, with prominent leaf scars
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: soft
+    rot_resistance: null
+    scent: null
+    fuel: poor firewood
+    uses:
+    - fuel
+  products:
+    food:
+    - flowers, young shoots, leaves and pods eaten as a bitter side dish (Java, Mizoram; karongkandai
+      of the Bodos)
+    sap_resin_latex: []
+    bark:
+    - tannins and dyestuff
+    leaves: []
+    dyes: []
+    medicinal:
+    - root bark, leaves, heartwood and seeds in traditional Asian medicine
+    toxicity: null
+  lore:
+    folklore:
+    - the hanging pods look like swords suspended over the forest, hence "tree of Damocles"
+    cultures:
+    - used in marriage rituals by the Kirat, Sunuwar, Rai, Limbu, Yakha and Tamang peoples of Nepal and
+      by Thai and Lao people
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: foul-smelling night flowers and bone-like debris'
+      weirdness: 'high: sword-hung tree of the night'
+    dimensions:
+    - enigma
+    hooks:
+    - 'atmosphere: night-only bloom visited by bats'
+    - 'crafting/medicine: root bark remedy'
+  sources:
+  - https://uses.plantnet-project.org/en/Oroxylum_indicum_(PROSEA)
+  - https://en.wikipedia.org/wiki/Oroxylum_indicum
+- id: pala-indigo
+  names:
+  - pala indigo
+  - sweet indrajao
+  - dyer's oleander
+  scientific: Wrightia tinctoria
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - flowers
+  habitat:
+    range: India, Bangladesh, Myanmar and Southeast Asia to northern Australia
+    ecosystem: dry deciduous forest and scrub
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m: null
+    substrate: arid, gravelly or rocky soils to moist sites; dry sandy hillsides; tolerates high uranium
+      levels
+    niche: dry forest and hill slopes
+    strata:
+    - understory
+    - open
+    shade_tolerance: null
+    period: null
+  form:
+    habit: small deciduous tree or shrub
+    height_m:
+    - 3
+    - 18
+    trunk_diameter_m:
+    - 0.1
+    - 0.2
+    lifespan_y: null
+    growth_rate: null
+    leaves: deciduous, opposite, ovate, 10-20 cm
+    seasonal: flowers March-May in India
+    flowers: fragrant white five-petalled flowers like frangipani, turning cream-yellow with age
+    fruit_visible: pairs of long horn-like follicles joined at the tip, blackish green speckled with white
+    bark: smooth, yellowish brown, about 10 mm thick, oozing milky latex
+  timber:
+    heartwood: white, ivory-like
+    sapwood: not distinct
+    grain: null
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: carves well
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - carving
+    - toys
+    - small boxes
+    - implements
+  products:
+    food:
+    - flowers
+    - leaves
+    - fruits and seeds eaten
+    sap_resin_latex:
+    - milky latex
+    bark: []
+    leaves:
+    - fodder
+    - trampled into rice paddies as green manure
+    dyes:
+    - blue indigo-like dye from leaves, flowers, fruits and roots; 100-200 kg of leaves give 1 kg of dye
+    medicinal:
+    - used in traditional Indian medicine; no scientific evidence that it is effective or safe
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - William Roxburgh called the wood whiter and nearer to ivory than any he knew
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/dye: blue dye from leaves'
+    - 'crafting/carving: ivory-white wood for fine items'
+  sources:
+  - https://en.wikipedia.org/wiki/Wrightia_tinctoria
+  - https://uses.plantnet-project.org/en/Wrightia_tinctoria_(PROSEA)
+  - https://tropical.theferns.info/viewtropical.php?id=Wrightia+tinctoria
+- id: palash
+  names:
+  - palash
+  - flame of the forest
+  - dhak
+  - Bengal kino
+  scientific: Butea monosperma
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - product
+  habitat:
+    range: Pakistan, India, Nepal, Bangladesh and Sri Lanka through Myanmar and Indochina to Malaysia
+      and western Indonesia
+    ecosystem: dry deciduous forest and open grassland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: tolerates saline and badly drained soils where few trees survive
+    niche: scattered in grassland and mixed forest; planted on field bunds
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small, slow-growing tree with a crooked, twisted trunk
+    height_m:
+    - 5
+    - 15
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, trifoliate, leathery leaflets 10-27 cm
+    seasonal: bare in the dry season when the flowers appear (February-April); not every year
+    flowers: dense racemes of bright orange-red, velvety, parrot-beak flowers on leafless branches, like
+      flames
+    fruit_visible: flat pods 15-20 cm with one seed
+    bark: rough, grey-brown, fibrous, oozing red kino
+  timber:
+    heartwood: white to yellowish brown, often greyed by sap stain
+    sapwood: not distinct
+    grain: null
+    texture: null
+    density_kg_m3: 570
+    janka_n: null
+    workability: soft
+    rot_resistance: not durable, but durable under water
+    scent: null
+    fuel: moderate fuel; burnt for gunpowder charcoal
+    uses:
+    - well curbs
+    - water dippers
+    - ritual ladles and spoons for pouring ghee into sacred fires
+  products:
+    food: []
+    sap_resin_latex:
+    - Bengal kino (Butea gum), a crimson exudate that hardens like resin
+    bark: []
+    leaves: []
+    dyes:
+    - flowers give kesari, the traditional orange Holi colour, and butein, a yellow to orange-red dye
+      for silk
+    medicinal: []
+    toxicity: oil in the seeds and the glucoside butrin in the flowers are considered poisonous
+  lore:
+    folklore:
+    - a legend says the tree sprang from a falcon's feather
+    cultures:
+    - revered as sacred by Hindus; its wood is used for ritual vessels
+    - in Kipling's "Beyond the Pale" the dhak flower means desire, come, write or danger by context
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: sacred fire-ritual tree'
+    dimensions: []
+    hooks:
+    - 'crafting/dye: orange flower dye'
+    - 'crafting/resin: kino gum'
+    - 'crafting/gunpowder: charcoal from the wood'
+    - 'landmark: dry-season flame-orange bloom'
+  sources:
+  - https://en.wikipedia.org/wiki/Butea_monosperma
+  - https://uses.plantnet-project.org/en/Butea_monosperma_(PROSEA)
+  - https://tropical.theferns.info/viewtropical.php?id=Butea+monosperma
+- id: palmyra-palm
+  names:
+  - palmyra palm
+  - toddy palm
+  - black palm
+  scientific: Borassus flabellifer
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'african-palmyra: the African Borassus, with a swollen trunk'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  habitat:
+    range: India and Sri Lanka through Myanmar, Thailand, Cambodia and Malaysia to Indonesia (Java, Madura,
+      the Lesser Sundas) and New Guinea
+    ecosystem: dry seasonal tropical country, coastal plains and rice fields
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m: null
+    substrate: sandy soils; grows with 500-900 mm of rain
+    niche: drier areas where sugar palm and coconut cannot compete; planted on paddy bunds
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: robust solitary fan palm; trunk swollen and conical at the base, then straight, ringed with
+      leaf scars
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 0.4
+    - 1.0
+    lifespan_y: 150
+    growth_rate: slow
+    leaves: evergreen, 30-60 stiff fan-shaped leaves on woody stalks 60-120 cm with toothed margins
+    seasonal: flowers in the dry season
+    flowers: separate male and female trees; branched catkin-like inflorescences
+    fruit_visible: clusters of round fruit 15-20 cm, 1.5-2.5 kg, bluish when young and black-brown when
+      ripe
+    bark: none; grey-black trunk, rough and ringed, with leaf bases on young palms
+  timber:
+    heartwood: black fibres in a tan body, densest toward the outside; soft core
+    sapwood: none
+    grain: very straight, no growth rings
+    texture: medium to fine, uneven
+    density_kg_m3: 970
+    janka_n: 9000
+    workability: hard to work; brittle fibres splinter and pull out
+    rot_resistance: durable; resists termites and fungi, susceptible to some insects
+    scent: null
+    fuel: wood and leaves used as fuel and charcoal
+    uses:
+    - rafters and posts
+    - flooring
+    - walking sticks
+    - knife and tool handles
+    - turned objects
+  products:
+    food:
+    - sap tapped from inflorescences for toddy, palm sugar and jaggery
+    - jelly-like watery kernels of young fruit
+    - ripe fruit pulp
+    - starchy seedlings eaten boiled
+    sap_resin_latex:
+    - sweet sap
+    bark: []
+    leaves:
+    - thatch, baskets, fans and buckets
+    - leaves were the writing material of South and Southeast Asian palm-leaf manuscripts
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - tapping begins at 25-30 years and continues for up to 80 years; tappers climb the trunk daily
+    - palm-leaf manuscripts of South and Southeast Asia were written on its leaves
+    symbolism:
+    - national tree of Cambodia
+    - state tree of Tamil Nadu
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: sugar, drink, food, thatch and timber'
+    dimensions: []
+    hooks:
+    - 'crafting/writing: palm-leaf pages for books and maps'
+    - 'crafting/sugar: tapped sap for jaggery and toddy'
+    - 'crafting/handles: dense black-flecked palm wood'
+  sources:
+  - https://www.wood-database.com/black-palm/
+  - https://uses.plantnet-project.org/en/Borassus_flabellifer_(PROSEA)
+  - https://en.wikipedia.org/wiki/Borassus_flabellifer
+- id: parijat
+  names:
+  - parijat
+  - night jasmine
+  - tree of sorrow
+  - shiuli
+  - coral jasmine
+  scientific: Nyctanthes arbor-tristis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - flowers
+  - cultural
+  - product
+  habitat:
+    range: Pakistan, India, Nepal and Thailand to Indonesia; planted at temples across South and Southeast
+      Asia
+    ecosystem: dry deciduous forest and temple gardens
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m: null
+    substrate: null
+    niche: temple and garden shrub
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: null
+    period: null
+  form:
+    habit: large shrub or small tree with spreading branches
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: opposite, rough, sandpapery leaves
+    seasonal: blooms in autumn in Bengal; foliage droops as the night's flowers fall at dawn
+    flowers: very fragrant white flowers with five to eight lobes and an orange-red tube, opening at dusk
+      and falling at dawn
+    fruit_visible: flat brown heart-shaped two-lobed capsule about 2 cm
+    bark: flaky, grey
+  timber:
+    heartwood: brown
+    sapwood: null
+    grain: close-grained
+    texture: null
+    density_kg_m3: 880
+    janka_n: null
+    workability: moderately hard
+    rot_resistance: null
+    scent: null
+    fuel: sometimes used as firewood
+    uses:
+    - firewood
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - rough leaves used to polish wood and ivory
+    dyes:
+    - nyctanthin, an orange dye from the flower tubes, used for silk
+    medicinal:
+    - flowers and leaves in traditional medicine
+    toxicity: bark contains a glycoside and alkaloids suspected to be poisonous to animals and humans
+  lore:
+    folklore:
+    - one of the five trees that rose from the Churning of the Ocean (Samudra Manthana)
+    - Krishna brought the parijata from Indra's heaven for Satyabhama, but its flowers fall in the yard
+      of Rukmini
+    cultures:
+    - shiuli flowers are offered to the goddess Durga at Durga Puja
+    - garlands for worship
+    symbolism:
+    - state flower of West Bengal
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: blooms only between dusk and dawn'
+      alignment: 'high: heavenly tree of worship'
+    dimensions:
+    - aether
+    hooks:
+    - 'atmosphere: fallen white flowers carpet the ground each dawn'
+    - 'crafting/dye: orange flower dye'
+    - 'crafting/abrasive: leaves as fine sandpaper'
+  sources:
+  - https://en.wikipedia.org/wiki/Nyctanthes_arbor-tristis
+  - https://uses.plantnet-project.org/en/Nyctanthes_arbor-tristis_(PROSEA)
+- id: petai
+  names:
+  - petai
+  - stink bean
+  - sator
+  - bitter bean
+  scientific: Parkia speciosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dawadawa: petai is the Asian Parkia eaten as fresh beans'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  habitat:
+    range: southern Thailand, Malaysia, Indonesia, Indochina and the Philippines; cultivated in northeast
+      India (Manipur)
+    ecosystem: lowland primary and secondary rainforest; village gardens
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: null
+    niche: wild in lowland forest; cultivated best at 500-1000 m
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall tree with a spreading crown, sometimes buttressed
+    height_m:
+    - 15
+    - 40
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: null
+    leaves: evergreen, finely bipinnate, feathery, with 14-18 pairs of pinnae and tiny leaflets
+    seasonal: no autumn change
+    flowers: pear-shaped flowerheads 2-5 cm hanging on stalks 20-45 cm long like light bulbs; nectar attracts
+      bats
+    fruit_visible: clusters of 7-8 long, flat, twisted green pods hanging on the stalks
+    bark: smooth, reddish brown
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: 540
+    janka_n: 3746
+    workability: easy
+    rot_resistance: non-durable, about 1 year in the ground
+    scent: null
+    fuel: null
+    uses:
+    - light temporary construction
+    - boxes
+    - disposable chopsticks
+    - clogs
+    - fishnet floats
+    - plywood
+    - paper pulp
+  products:
+    food:
+    - almond-sized bright green seeds eaten raw, fried or in sambal, with a pungent sulfur smell stronger
+      than shiitake
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - sambal goreng petai in Java and Sumatra; eromba in Manipur
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'first-session: harvest hanging pods for food'
+    - 'crafting/floats: light wood for fishing floats'
+  sources:
+  - https://uses.plantnet-project.org/en/Parkia_speciosa_(PROSEA)
+  - https://www.tropicaltimber.info/specie/petai-parkia-speciosa/
+  - https://en.wikipedia.org/wiki/Parkia_speciosa
+- id: pili-nut
+  names:
+  - pili nut
+  - kenari
+  scientific: Canarium ovatum
+  rank: group
+  stands_for:
+  - Canarium luzonicum (elemi)
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  habitat:
+    range: Philippines, especially the Bicol region; C. luzonicum endemic to the Philippines
+    ecosystem: lowland tropical forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 400
+    substrate: light or heavy soils; prefers deep, fertile, well-drained soil
+    niche: wild stands on hills; planted as windbreak and avenue tree
+    strata:
+    - canopy
+    shade_tolerance: null
+    period: null
+  form:
+    habit: symmetrical evergreen tree with tiered branches; resists typhoons
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, pinnate, about 40 cm long with stiff leathery leaflets
+    seasonal: no seasonal change
+    flowers: small flowers in narrow clusters at the branch ends; separate male and female trees
+    fruit_visible: olive-like drupes with smooth shiny skin turning purplish black when ripe, greenish-yellow
+      pulp and a hard thick shell
+    bark: flaky brown, exuding white resin
+  timber:
+    heartwood: reddish to light brown (kedondong)
+    sapwood: lighter
+    grain: interlocked to wavy
+    texture: moderately fine
+    density_kg_m3: null
+    janka_n: null
+    workability: high blunting effect
+    rot_resistance: not durable
+    scent: resinous
+    fuel: resin-rich wood makes good firewood; nut shells an excellent cooking fuel
+    uses:
+    - general utility timber (kedondong)
+    - planking
+    - light construction
+  products:
+    food:
+    - buttery kernel about 70% fat, eaten roasted, in candies and pastries
+    - boiled fruit pulp
+    - young shoots in salads
+    - kernel oil comparable to olive oil
+    sap_resin_latex:
+    - Manila elemi, a soft fragrant resin from C. luzonicum (and C. ovatum), distilled for varnish, perfume
+      and medicinal ointments
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - elemi in ointments
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - pili candies and nuts are a specialty of Bicol
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: rich nuts and fragrant resin'
+    dimensions: []
+    hooks:
+    - 'crafting/resin: elemi for varnish and incense'
+    - 'crafting/food: high-energy nut'
+  sources:
+  - https://uses.plantnet-project.org/en/Canarium_ovatum_(PROSEA)
+  - https://uses.plantnet-project.org/en/Canarium_luzonicum_(PROSEA)
+  - https://en.wikipedia.org/wiki/Canarium_ovatum
+- id: pink-shower
+  names:
+  - pink shower
+  - Java cassia
+  - apple blossom tree
+  scientific: Cassia javanica
+  rank: group
+  stands_for:
+  - Cassia bakeriana
+  distinct_from:
+  - 'golden-shower: pink shower has pink flowers on upright sprays'
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  habitat:
+    range: Southeast Asia from Myanmar and Thailand to Malaysia, Indonesia and the Philippines; planted
+      throughout the tropics
+    ecosystem: seasonal tropical forest; streets and parks
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m: null
+    substrate: null
+    niche: deciduous forest; shade and ornamental tree
+    strata:
+    - canopy
+    - open
+    shade_tolerance: null
+    period: null
+  form:
+    habit: deciduous tree with a straight trunk; trunks of young trees armed with stumps of old branches
+    height_m:
+    - 10
+    - 40
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, pinnate with 5-15 pairs of oval leaflets
+    seasonal: leafless in the dry season, then flowers
+    flowers: dense clusters of pale pink to crimson flowers with yellow stamens that carpet the ground
+      pink
+    fruit_visible: long dark brown cylindrical pods
+    bark: null
+  timber:
+    heartwood: light yellow when cut, ageing to red or orange-brown
+    sapwood: 2-5 cm, not always sharply demarcated
+    grain: interlocked
+    texture: moderately fine
+    density_kg_m3: 850
+    janka_n: null
+    workability: null
+    rot_resistance: moderately durable outside, very durable indoors; poor resistance to termites
+    scent: null
+    fuel: small pieces used for fuel and charcoal
+    uses:
+    - general construction
+    - furniture
+    - cabinet making
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - honoured in the Balayong Festival of Puerto Princesa, Palawan, where it was introduced as a timber
+      tree
+    symbolism:
+    - provincial flower of Chainat Province
+    - Thailand
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'landmark: pink bloom carpeting the ground'
+  sources:
+  - https://uses.plantnet-project.org/en/Cassia_javanica_(PROSEA)
+  - https://www.tropicaltimber.info/specie/johar-cassia-javanica/
+  - https://en.wikipedia.org/wiki/Cassia_javanica
+- id: pomelo
+  names:
+  - pomelo
+  - grapefruit
+  - shaddock
+  scientific: Citrus maxima
+  rank: species
+  stands_for:
+  - Citrus × paradisi (grapefruit)
+  distinct_from:
+  - 'lemon: pomelo is the giant-fruited ancestor'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  habitat:
+    range: native to Southeast Asia (Malaysia); cultivated across tropical and subtropical Asia
+    ecosystem: lowland tropical orchards and home gardens
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: null
+    niche: cultivated
+    strata:
+    - open
+    shade_tolerance: null
+    period: null
+  form:
+    habit: small tree with a crooked trunk and low, irregular branches; seedling trees tall and slender
+      with long spines
+    height_m:
+    - 5
+    - 15
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: null
+    leaves: evergreen, leathery, ovate, 5-20 cm, on broadly winged stalks
+    seasonal: flowers two to four times a year in the tropics
+    flowers: fragrant yellowish-white flowers
+    fruit_visible: huge round or pear-shaped yellow-green fruit 10-30 cm with very thick peel, 11-18 segments
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - tool handles
+  products:
+    food:
+    - fruit eaten fresh, less acid than grapefruit
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - leaves, flowers, fruit and seeds in traditional medicine
+    toxicity: fruit can interfere with many prescription drugs, as grapefruit does
+  lore:
+    folklore: []
+    cultures:
+    - offered to ancestors at the Lunar New Year in China
+    - used in Songkran rituals in Thailand and as an offering at Chhath Puja
+    - flowers used for perfume in Vietnam
+    symbolism:
+    - prosperity at the Lunar New Year
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'first-session: big long-keeping fruit'
+  sources:
+  - https://en.wikipedia.org/wiki/Pomelo
+  - https://uses.plantnet-project.org/en/Citrus_maxima_(PROSEA)
+- id: pongam
+  names:
+  - pongam
+  - karanja
+  - Indian beech
+  - Millettia pinnata (syn.)
+  scientific: Pongamia pinnata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - toxic
+  habitat:
+    range: Indian subcontinent through Southeast Asia to northeastern Australia, Fiji and southern Japan
+    ecosystem: riverbanks, coasts and tropical lowland forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: sandy and rocky soils including oolitic limestone; roots tolerate salt water
+    niche: riverbanks and beach margins; planted as shade, windbreak and soil-reclamation pioneer
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: legume tree with a broad canopy as wide as it is tall, casting dense shade
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 0.8
+    lifespan_y: null
+    growth_rate: fast
+    leaves: pinnate, glossy; young leaves soft shiny burgundy, maturing dark green; briefly deciduous
+    seasonal: flushes of burgundy new leaves
+    flowers: small fragrant white, pink or purple pea flowers in clusters
+    fruit_visible: thick flat brown woody pods with one bean-like seed
+    bark: grey-brown, smooth or vertically fissured
+  timber:
+    heartwood: white to yellowish grey, no distinct heartwood
+    sapwood: not distinct
+    grain: beautifully grained
+    texture: medium to coarse
+    density_kg_m3: 650
+    janka_n: null
+    workability: easy to saw, turn and finish, but splits and warps in seasoning
+    rot_resistance: not durable; insect-prone
+    scent: null
+    fuel: common firewood, 19,000-20,000 kJ/kg
+    uses:
+    - firewood
+    - posts
+    - tool handles
+  products:
+    food: []
+    sap_resin_latex:
+    - black gum used for wounds from venomous fish
+    bark:
+    - twine and rope
+    leaves:
+    - stored with grain to repel insects
+    - green manure
+    dyes:
+    - wood ash used in dyeing
+    medicinal:
+    - karanja seed oil for skin diseases
+    toxicity: seeds are poisonous; pounded roasted seeds were used as fish poison
+  lore:
+    folklore: []
+    cultures:
+    - karanja seed oil was burned in village lamps; now studied as biodiesel
+    - Rumphius recorded Moluccan use of the bark against catfish venom
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: lamp oil from abundant seed'
+    dimensions: []
+    hooks:
+    - 'crafting/oil: lamp and fuel oil from seeds'
+    - 'crafting/poison: seeds as fish poison'
+  sources:
+  - https://uses.plantnet-project.org/en/Pongamia_pinnata_(PROSEA)
+  - https://en.wikipedia.org/wiki/Millettia_pinnata
+  - https://tropical.theferns.info/viewtropical.php?id=Pongamia+pinnata
+- id: portia-tree
+  names:
+  - portia tree
+  - Pacific rosewood
+  - milo
+  - Indian tulip tree
+  scientific: Thespesia populnea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'waru: portia has glossy leaves and seed capsules'
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  habitat:
+    range: tropical coasts of the Old World from East Africa through South and Southeast Asia to the Pacific
+      islands; possibly native in tropical America too
+    ecosystem: beach forest and rocky coasts
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 275
+    substrate: coastal sands, coral, limestone and basalt soils; neutral pH
+    niche: sandy and rocky shores and the inland edge of mangroves; seeds float in seawater for over a
+      year
+    strata:
+    - open
+    shade_tolerance: null
+    period: null
+  form:
+    habit: evergreen shrub or small tree with a short, crooked bole and a broad dense crown; bole may
+      hollow with age
+    height_m:
+    - 6
+    - 20
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, glossy, heart-shaped, poplar-like
+    seasonal: flowers and fruits all year
+    flowers: yellow cup-shaped hibiscus flowers that open about 10 a.m. and soon wither but stay on the
+      tree for several days
+    fruit_visible: round flattened woody capsules that stay on the tree
+    bark: pale grey, becoming rough and fissured; inner bark very fibrous and pink
+  timber:
+    heartwood: dark red-brown to chocolate, often with purple veining
+    sapwood: white to pale pink, 1-2 cm, sharply demarcated
+    grain: fine, often wavy; slight ribbon figure
+    texture: medium to fine
+    density_kg_m3: 770
+    janka_n: null
+    workability: easy to saw and turn green or dry; polishes well; oils slow varnish drying
+    rot_resistance: very durable, even in water and the ground
+    scent: rose-like when freshly cut
+    fuel: used as fuel
+    uses:
+    - bowls and plates
+    - carvings
+    - canoe paddles
+    - gunstocks
+    - to'ere slit drums
+    - boatbuilding
+  products:
+    food:
+    - young leaves, flowers and unripe fruit cooked as vegetables
+    sap_resin_latex: []
+    bark:
+    - bast fibre for cordage
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark, root, leaves, flowers and fruit in traditional medicine
+    toxicity: the root is toxic; quinones in the heartwood cause contact dermatitis
+  lore:
+    folklore: []
+    cultures:
+    - sacred in Polynesia, planted in marae and sacred groves and carved into religious images
+    - Tahitian to'ere drums are made of milo
+    - Pitcairn Islanders sail to Henderson Island to cut milo for carvings
+    - a Pacific canoe plant used for outrigger parts and cordage
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: sacred grove tree of Polynesian temples'
+    dimensions: []
+    hooks:
+    - 'crafting/carving: two-tone wood for bowls and drums'
+    - 'crafting/fibre: bark cordage'
+  sources:
+  - https://www.tropicaltimber.info/specie/milo-thespesia-populnea/
+  - https://uses.plantnet-project.org/en/Thespesia_(PROSEA)
+  - https://en.wikipedia.org/wiki/Thespesia_populnea
+- id: pride-of-burma
+  names:
+  - pride of Burma
+  - orchid tree of Burma
+  - thawka-gyi
+  scientific: Amherstia nobilis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - striking
+  habitat:
+    range: Myanmar (possibly also adjoining Thailand); cultivated in botanical gardens of the humid tropics
+    ecosystem: lowland monsoon teak forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: monsoon'
+    elevation_m: null
+    substrate: calcareous soil; moist, humus-rich
+    niche: extremely rare in the wild; known as a cultivated temple and garden tree
+    strata:
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: evergreen tree with a wide, spreading canopy
+    height_m:
+    - 10
+    - 18
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, pinnate
+    seasonal: no autumn change
+    flowers: crimson flowers hanging from metre-long pendant crimson stalks; the largest petal is fan-shaped
+      and wavy with a yellow triangle, two others tipped yellow
+    fruit_visible: woody scimitar-shaped pods 11-20 cm, rarely set
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - young leaves and flowers sometimes eaten
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - its flowers are offered at Buddhist pagodas in Myanmar
+    - named after Lady Amherst and her daughter Sarah
+    symbolism:
+    - often called the most beautiful flowering tree in the world
+    notable_trees:
+    - only a single wild specimen was ever recorded, in 1865
+  game_fit:
+    fields:
+      alignment: 'high: pagoda offering flower'
+    dimensions:
+    - enigma
+    hooks:
+    - 'collection: rare tree almost never found wild, a prize specimen'
+  sources:
+  - https://en.wikipedia.org/wiki/Amherstia_nobilis
+  - https://tropical.theferns.info/viewtropical.php?id=Amherstia+nobilis
+- id: purging-croton
+  names:
+  - purging croton
+  - ba dou
+  - jamalgota
+  scientific: Croton tiglium
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - medicinal
+  - product
+  habitat:
+    range: southern China, the Indian subcontinent, Indochina, Malaysia, Indonesia and the Philippines
+    ecosystem: sparse montane forest and limestone shrubland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: wide range, including limestone
+    niche: forest edges and shrubland; widely cultivated for its seeds
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: null
+    period: null
+  form:
+    habit: erect evergreen shrub or small tree
+    height_m:
+    - 3
+    - 7
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: evergreen, ovate, 7.5-17 cm, finely toothed, with two glands at the base
+    seasonal: no seasonal change
+    flowers: small, inconspicuous; separate male and female flowers
+    fruit_visible: bluntly three-angled capsule
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - used as an arrow poison
+    leaves: []
+    dyes: []
+    medicinal:
+    - croton oil (30-45% of the seed) as a drastic purgative and skin counter-irritant
+    - ba dou, one of the 50 fundamental herbs of Chinese medicine
+    - jamalgota in Ayurveda, detoxified by boiling in cow's milk
+    toxicity: 'seeds and croton oil: violent purgative that blisters skin; phorbol esters promote tumours;
+      seeds used to poison fish'
+  lore:
+    folklore: []
+    cultures:
+    - cultivated for its seed for more than 2000 years
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: one of the most violent plant poisons'
+    dimensions: []
+    hooks:
+    - 'crafting/poison: seed oil for arrows and fish poison'
+    - 'crafting/medicine: purgative cure with a heavy side effect'
+  sources:
+  - https://uses.plantnet-project.org/en/Croton_tiglium_(PROSEA)
+  - https://tropical.theferns.info/viewtropical.php?id=Croton+tiglium
+  - https://en.wikipedia.org/wiki/Croton_tiglium
+- id: putranjiva
+  names:
+  - putranjiva
+  - child-life tree
+  - lucky bean tree
+  - Drypetes roxburghii (syn.)
+  scientific: Putranjiva roxburghii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  habitat:
+    range: Indian subcontinent and Sri Lanka through Myanmar and Indochina to Malesia and New Guinea;
+      introduced in southeastern China
+    ecosystem: seasonally dry tropical forest, riverbanks and evergreen forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m: null
+    substrate: null
+    niche: river banks and shady valleys; planted as a street tree and hedge
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: evergreen tree with drooping branches; prunes into hedges
+    height_m:
+    - 8
+    - 12
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: evergreen
+    seasonal: no seasonal change
+    flowers: small, inconspicuous; usually separate male and female trees
+    fruit_visible: small drupes with a hard white stone
+    bark: null
+  timber:
+    heartwood: grey
+    sapwood: null
+    grain: close-grained
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: moderately hard; turns well
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - construction
+    - turnery
+    - tool handles
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - decoction of leaves and fruit for liver complaints, colds, fevers and rheumatism
+    toxicity: null
+  lore:
+    folklore:
+    - seed necklaces are put on children to ward off evil spirits and disease and to give long lives
+    cultures:
+    - Hindu women worship the tree when hoping to bear a child; the name means "life of a son"
+    - seed oil burned in lamps
+    symbolism:
+    - protection of children
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: protective charm for children'
+    dimensions: []
+    hooks:
+    - 'crafting/beads: hard seeds for protective charms and rosaries'
+  sources:
+  - https://en.wikipedia.org/wiki/Putranjiva_roxburghii
+  - https://tropical.theferns.info/viewtropical.php?id=Putranjiva+roxburghii
+- id: pyinkado
+  names:
+  - pyinkado
+  - Burmese ironwood
+  scientific: Xylia xylocarpa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: India, Myanmar, Thailand, Cambodia, Laos and Vietnam
+    ecosystem: dry evergreen, mixed deciduous and dry deciduous dipterocarp forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: monsoon'
+    elevation_m:
+    - 0
+    - 850
+    substrate: well-drained, sandy and rocky soils
+    niche: monsoon forest; used in Thai reforestation of degraded land
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: deciduous tree with a straight, sometimes fluted bole clear for up to 25 m and a dense crown
+    height_m:
+    - 25
+    - 40
+    trunk_diameter_m:
+    - 0.75
+    - 1.2
+    lifespan_y: null
+    growth_rate: null
+    leaves: deciduous, bipinnate with one pair of pinnae and 3-6 pairs of leaflets each
+    seasonal: leafless in the dry season; conspicuous when in flower
+    flowers: bright yellow fluffy ball-shaped flowerheads
+    fruit_visible: hard flat woody pods that split explosively, flinging seeds
+    bark: flaky, greyish to reddish or yellow-brown, with small lenticels; inner bark pink
+  timber:
+    heartwood: dark red, slightly streaked, gummy surface giving a speckled look
+    sapwood: thick, yellowish white
+    grain: interlocked or wavy
+    texture: moderately fine to medium, even
+    density_kg_m3: 1140
+    janka_n: 9797
+    workability: easy when green; becomes hard to work by hand when dry
+    rot_resistance: very durable; untreated sleepers lasted 12 years; resists termites
+    scent: null
+    fuel: prized for fuel and charcoal; woody pods burned for cooking
+    uses:
+    - railway sleepers
+    - bridges
+    - heavy construction
+    - house posts
+    - ship building
+    - cart building
+    - agricultural implements
+    - tool handles
+  products:
+    food:
+    - seeds eaten
+    sap_resin_latex: []
+    bark:
+    - tannin
+    leaves:
+    - used in Thailand to treat wounds of elephants
+    dyes: []
+    medicinal:
+    - medicinal plant in India
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - classed in Vietnam among the "ironwoods" and named for traditional cart making
+    - Myanmar produced about 20,000 t of logs a year in the early 1980s
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/construction: very heavy sleepers and bridge beams'
+    - 'crafting/charcoal: dense hot-burning wood'
+  sources:
+  - https://www.tropicaltimber.info/specie/pyinkado-xylia-xylocarpa/
+  - https://uses.plantnet-project.org/en/Xylia_(PROSEA)
+  - https://en.wikipedia.org/wiki/Xylia_xylocarpa
+- id: rainbow-eucalyptus
+  names:
+  - rainbow eucalyptus
+  - Mindanao gum
+  - deglupta
+  - kamarere
+  scientific: Eucalyptus deglupta
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'river-red-gum: rainbow eucalyptus has multicoloured bark'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: the Philippines (Mindanao), Indonesia and Papua New Guinea; planted throughout the tropics
+    ecosystem: lowland and lower montane rainforest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1800
+    substrate: alluvium, volcanic ash, pumice and gravel
+    niche: grows in pure stands on fresh volcanic and river deposits
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: null
+    period: null
+  form:
+    habit: tall straight tree with buttresses up to 4 m
+    height_m:
+    - 45
+    - 78
+    trunk_diameter_m:
+    - 1.2
+    - 2.4
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, opposite, lance-shaped, 7.5-15 cm
+    seasonal: bark peels continually; newly exposed strips are bright green, ageing through blue, purple,
+      orange and maroon
+    flowers: white and pale yellow stamen puffs
+    fruit_visible: tiny brown woody capsules 3-5 mm
+    bark: smooth, shedding in strips to show streaks of pale green, red, orange, grey and purplish brown
+  timber:
+    heartwood: light to medium red
+    sapwood: pale yellowish brown, not always distinct
+    grain: interlocked; ribbon stripe on quartersawn faces
+    texture: medium to coarse, even
+    density_kg_m3: 500
+    janka_n: 2880
+    workability: easy; tearout on quartersawn faces
+    rot_resistance: non-durable; poor insect resistance
+    scent: null
+    fuel: good charcoal from trees over 15 years old; usually too valuable to burn
+    uses:
+    - pulpwood for white paper
+    - veneer
+    - plywood
+    - furniture
+    - mouldings
+    - flooring
+    - boatbuilding
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - eucalyptus oil
+    dyes: []
+    medicinal: []
+    toxicity: 'eucalyptus oil: large doses taken internally have been fatal'
+  lore:
+    folklore: []
+    cultures:
+    - the dominant pulpwood plantation tree of the Philippines; planted as a street tree in Hawaii, California
+      and Florida
+    symbolism:
+    - the only eucalypt native to the Northern Hemisphere
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: bark streaked in unnatural colours'
+    dimensions:
+    - aether
+    hooks:
+    - 'landmark: rainbow-barked giants'
+    - 'crafting/paper: fast pulpwood'
+  sources:
+  - https://www.wood-database.com/deglupta/
+  - https://uses.plantnet-project.org/en/Eucalyptus_deglupta_(PROSEA)
+  - https://en.wikipedia.org/wiki/Eucalyptus_deglupta
+- id: rambai
+  names:
+  - rambai
+  - Burmese grape
+  scientific: Baccaurea motleyana
+  rank: group
+  stands_for:
+  - Baccaurea ramiflora (Burmese grape)
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  habitat:
+    range: Thailand, Peninsular Malaysia, Sumatra and Borneo; B. ramiflora from northeast India and southern
+      China to Indochina; cultivated in India and Bangladesh
+    ecosystem: lowland tropical forest and village orchards
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: null
+    niche: forest understory and home gardens
+    strata:
+    - understory
+    shade_tolerance: null
+    period: null
+  form:
+    habit: tree with a short trunk, sometimes small buttresses, and a low, round, dense crown
+    height_m:
+    - 9
+    - 25
+    trunk_diameter_m:
+    - 0.13
+    - 0.5
+    lifespan_y: null
+    growth_rate: null
+    leaves: evergreen, large, up to 33 cm, shiny green above and greenish-brown and hairy beneath
+    seasonal: no seasonal change
+    flowers: fragrant yellow flowers in long racemes; female racemes up to 75 cm; separate male and female
+      trees
+    fruit_visible: long strands of round fruits 2-5 cm with velvety pinkish, yellow or brown skin hanging
+      from the trunk and branches
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - low-quality timber
+  products:
+    food:
+    - translucent whitish pulp around 3-5 seeds, eaten fresh
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - local medicines
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'first-session: trunk-hung fruit reachable from the ground'
+  sources:
+  - https://en.wikipedia.org/wiki/Baccaurea_motleyana
+  - https://tropical.theferns.info/viewtropical.php?id=Baccaurea+motleyana
+- id: rambutan
+  names:
+  - rambutan
+  scientific: Nephelium lappaceum
+  rank: species
+  stands_for:
+  - Nephelium ramboutan-ake (pulasan)
+  distinct_from:
+  - 'lychee: lychee has a smooth bumpy shell'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  habitat:
+    range: native to western Malesia, centred on Indonesia; cultivated in Thailand, Malaysia, the Philippines,
+      Vietnam and the tropical Americas
+    ecosystem: humid lowland tropical forest and orchards
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 600
+    substrate: null
+    niche: lower and middle storey of primary and secondary forest, dry land to swamp; rainfall usually
+      over 2500 mm
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: evergreen tree, fairly large in the wild; grafted orchard trees small and spreading
+    height_m:
+    - 4
+    - 24
+    trunk_diameter_m: null
+    lifespan_y: 60
+    growth_rate: moderate
+    leaves: evergreen, pinnate with one to four pairs of leaflets
+    seasonal: no autumn change
+    flowers: small petal-less flowers in erect panicles; trees male or functionally female
+    fruit_visible: loose clusters of 10-20 round to oval fruits 3-6 cm, red or yellow, covered in soft
+      fleshy hairs
+    bark: null
+  timber:
+    heartwood: red to reddish white or brown
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: hard; splits during drying
+    rot_resistance: durable under cover, resists insects, prone to fungi
+    scent: null
+    fuel: null
+    uses:
+    - general construction
+  products:
+    food:
+    - translucent white sweet flesh
+    - seed edible after roasting but bitter and narcotic
+    - seed fat for soaps and candles
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - roots, bark and leaves in traditional medicine
+    toxicity: the rind contains a toxic saponin; the raw seed is narcotic
+  lore:
+    folklore: []
+    cultures:
+    - the name comes from Malay rambut, hair
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'first-session: hairy red fruit as a sweet forage'
+  sources:
+  - https://uses.plantnet-project.org/en/Nephelium_lappaceum_(PROSEA)
+  - https://en.wikipedia.org/wiki/Rambutan
+  - https://tropical.theferns.info/viewtropical.php?id=Nephelium+lappaceum
+- id: ramin
+  names:
+  - ramin
+  - melawis
+  scientific: Gonystylus bancanus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Borneo (Sarawak, Brunei, Kalimantan), Sumatra, Bangka, Peninsular Malaysia and Singapore
+    ecosystem: lowland peat-swamp forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 100
+    substrate: deep peat, alluvial clay of inland swamps, white sands; heath forest
+    niche: often the most abundant large tree of mixed peat-swamp forest, up to 20 large trees per hectare
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: straight cylindrical bole clear for up to 21 m, buttresses thick if present
+    height_m:
+    - 20
+    - 42
+    trunk_diameter_m:
+    - 0.5
+    - 1.2
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, alternate, leathery
+    seasonal: flowers at short, irregular intervals
+    flowers: null
+    fruit_visible: null
+    bark: smooth to shallowly fissured, dull grey to red-brown; inner bark with glistening fibres that
+      irritate the skin
+  timber:
+    heartwood: almost white to pale yellow, prone to blue stain
+    sapwood: not differentiated
+    grain: straight or slightly interlocked
+    texture: medium to fine, even
+    density_kg_m3: 655
+    janka_n: 5800
+    workability: good with hand and machine tools; splinters when cross-cut; turns and finishes well
+    rot_resistance: non-durable to perishable
+    scent: strongly unpleasant when green or wet
+    fuel: null
+    uses:
+    - mouldings
+    - dowels
+    - tool handles
+    - furniture
+    - veneer
+    - plywood
+    - flooring
+  products:
+    food: []
+    sap_resin_latex:
+    - fungus-infected heartwood holds an aromatic resin used locally as incense
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: inner bark fibres irritate the skin; pounded fruits are used as fish poison
+  lore:
+    folklore: []
+    cultures:
+    - logs were floated out of the swamps in rafts
+    symbolism:
+    - the whole genus has been on CITES Appendix II since overlogging; G. bancanus is Critically Endangered
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: trackless peat-swamp forest'
+    dimensions: []
+    hooks:
+    - 'crafting/timber: clean pale wood for dowels and handles'
+    - 'hazard: itchy bark fibres'
+  sources:
+  - https://www.wood-database.com/ramin/
+  - https://uses.plantnet-project.org/en/Gonystylus_(PROSEA)
+  - https://en.wikipedia.org/wiki/Gonystylus_bancanus
+- id: rasamala
+  names:
+  - rasamala
+  - Altingia excelsa (syn.)
+  scientific: Liquidambar excelsa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sweetgum: rasamala is the tropical montane relative'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  habitat:
+    range: southeastern Tibet and Yunnan, Bhutan, northeast India (Assam), Bangladesh and Myanmar through
+      Malaysia to Sumatra and Java
+    ecosystem: humid mixed hill and montane forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 550
+    - 1700
+    substrate: rich, well-drained volcanic soils
+    niche: often gregarious, the backbone of the forest where the driest month gets at least 100 mm of
+      rain
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: null
+    period: null
+  form:
+    habit: lofty evergreen tree; bole clear for 20-35 m, often slightly twisted or fluted at the base;
+      young trees conical, old crowns irregular and globular
+    height_m:
+    - 20
+    - 60
+    trunk_diameter_m:
+    - 0.8
+    - 1.85
+    lifespan_y: null
+    growth_rate: null
+    leaves: evergreen, simple, elliptical to ovate, 6-12 cm
+    seasonal: no autumn change
+    flowers: null
+    fruit_visible: null
+    bark: almost smooth with narrow fissures, later flaking in long thin light grey to yellowish or brownish-grey
+      flakes
+  timber:
+    heartwood: dark pinkish red to reddish brown
+    sapwood: yellowish or reddish brown, merging gradually
+    grain: straight to slightly interlocked
+    texture: fine and even
+    density_kg_m3: 755
+    janka_n: null
+    workability: null
+    rot_resistance: very durable, usable in ground contact
+    scent: null
+    fuel: null
+    uses:
+    - heavy construction
+    - flooring
+    - bridges
+    - ship and boat building
+    - vehicle bodies
+    - rafters
+    - veneer and plywood
+  products:
+    food:
+    - young shoots
+    sap_resin_latex:
+    - rasamala resin (storax), burned as incense and used as perfume
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - local medicinal uses
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - a major native source of storax in Indonesia
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/resin: incense storax'
+    - 'landmark: 60 m montane giants'
+  sources:
+  - https://uses.plantnet-project.org/en/Altingia_excelsa_(PROSEA)
+  - https://en.wikipedia.org/wiki/Altingia_excelsa
+  - https://tropical.theferns.info/viewtropical.php?id=Altingia+excelsa
+- id: red-sandalwood
+  names:
+  - red sandalwood
+  - red sanders
+  - zitan
+  - rakta chandana
+  scientific: Pterocarpus santalinus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'padauk: red sandalwood is a small Indian dye tree'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  - medicinal
+  habitat:
+    range: endemic to the southern Eastern Ghats of South India
+    ecosystem: dry deciduous forest on hills
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 150
+    - 1000
+    substrate: hilly, often rocky ground on moderate slopes, low ridges and spurs; shale subsoils
+    niche: light-demanding tree of dry hills; wavy-grained wood grows on shale at about 750 m
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small deciduous tree with a dense rounded crown and erect bole
+    height_m:
+    - 8
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 1.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous
+    seasonal: leafless in the dry season
+    flowers: short racemes of pea flowers
+    fruit_visible: pods 6-9 cm with one or two seeds
+    bark: null
+  timber:
+    heartwood: dark orange to deep claret red when cut, darkening to purple-black, often with darker streaks
+    sapwood: narrow, white, clearly demarcated
+    grain: straight to slightly interlocked; prized wavy figure
+    texture: medium, uniform, highly lustrous
+    density_kg_m3: 1010
+    janka_n: 13080
+    workability: null
+    rot_resistance: null
+    scent: distinct pleasing odour when worked
+    fuel: null
+    uses:
+    - Chinese zitan furniture
+    - carving and statues
+    - shamisen necks and bridges
+    - musical instruments
+    - agricultural implements
+  products:
+    food:
+    - powdered heartwood as a red food colouring in spice blends and sauces
+    sap_resin_latex: []
+    bark:
+    - tannin from wood and bark
+    leaves: []
+    dyes:
+    - santalin, a red dye from the heartwood, widely used before synthetic dyes
+    medicinal:
+    - heartwood powder as an anti-inflammatory and astringent; skin conditioner in cosmetics
+    - incense base
+    toxicity: wood dust can irritate eyes and cause vomiting
+  lore:
+    folklore: []
+    cultures:
+    - Qing emperors sat on zitan; a red sandalwood chair stands in the Hall of Supreme Harmony in Beijing's
+      Forbidden City
+    - smuggled from India to China at enormous prices; smugglers have taken up arms over it
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: fought-over contraband timber'
+      yield: 'high: extremely valuable wood and dye'
+    dimensions: []
+    hooks:
+    - 'crafting/dye: blood-red heartwood dye'
+    - 'crafting/furniture: heaviest, most prized red wood'
+  sources:
+  - https://www.wood-database.com/zitan/
+  - https://en.wikipedia.org/wiki/Pterocarpus_santalinus
+  - https://tropical.theferns.info/viewtropical.php?id=Pterocarpus+santalinus
+- id: red-silk-cotton
+  names:
+  - red silk cotton tree
+  - semal
+  - simal
+  - Malabar silk-cotton
+  - kekabu
+  scientific: Bombax ceiba
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kapok: red silk cotton has red flowers and a thorny trunk'
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: southern China and the Indian subcontinent through mainland Southeast Asia, Malaysia, Indonesia
+      and the Philippines to New Guinea and northern Australia
+    ecosystem: tropical deciduous forest, hot dry river valleys and savanna
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1400
+    substrate: well-drained soils, often near streams
+    niche: forest edges and disturbed forest; strong light demander that starts as a pioneer and matures
+      into an emergent
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: straight tall trunk with large buttresses up to 6 m and a flat crown; trunk and limbs covered
+      in conical spines when young
+    height_m:
+    - 20
+    - 60
+    trunk_diameter_m:
+    - 0.8
+    - 1.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, palmately compound with 5-9 leaflets
+    seasonal: leafless in late winter and spring when it flowers; leaves follow
+    flowers: large fleshy cup-shaped red flowers 7-11 cm wide, petals up to 12 cm, crowded on bare branches;
+      sweetly scented, visited by birds
+    fruit_visible: light green capsules about 13 cm, browning and splitting to release seeds in white
+      silky floss
+    bark: whitish to pale brownish grey, shallowly fissured, studded with spines
+  timber:
+    heartwood: straw-coloured, not distinct from sapwood; greyish with dark streaks
+    sapwood: white
+    grain: straight or slightly interlocked
+    texture: coarse
+    density_kg_m3: 350
+    janka_n: 1736
+    workability: very soft and light
+    rot_resistance: perishable; about 1 year in the ground
+    scent: null
+    fuel: null
+    uses:
+    - light utility wood
+    - cellulose
+  products:
+    food:
+    - flowers and flower buds cooked as a curry vegetable
+    - roasted seeds
+    - young roots
+    sap_resin_latex:
+    - gum from the bark used medicinally
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - flowers for skin troubles; gum as an astringent tonic
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the seed floss is used like kapok
+    - its red flowers are a sign of spring in India alongside the flame of the forest
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: spiny trunk'
+    dimensions: []
+    hooks:
+    - 'crafting/stuffing: silk floss for bedding and tinder'
+    - 'hazard: trunk spines hurt when climbing'
+    - 'landmark: red bloom on bare branches'
+  sources:
+  - https://uses.plantnet-project.org/en/Bombax_(PROSEA)
+  - https://www.tropicaltimber.info/specie/kekabu-bombax-ceiba/
+  - https://en.wikipedia.org/wiki/Bombax_ceiba
+- id: rengas
+  names:
+  - rengas
+  - Borneo rosewood
+  scientific: Gluta renghas
+  rank: group
+  stands_for:
+  - Gluta wallichii
+  distinct_from:
+  - 'thitsi: rengas is a timber tree, not tapped'
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  habitat:
+    range: Malaysia and Indonesia; the genus from India to New Guinea
+    ecosystem: tidal freshwater riverbanks, peat swamp and lowland rainforest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 800
+    substrate: riverine alluvium and peat
+    niche: gregarious along banks of the freshwater tidal reaches of rivers
+    strata:
+    - canopy
+    shade_tolerance: null
+    period: null
+  form:
+    habit: large tree with a cylindrical bole, buttresses up to 4 m when old, sometimes stilt roots; dense
+      dome-shaped crown with massive branches
+    height_m:
+    - 30
+    - 50
+    trunk_diameter_m:
+    - 0.6
+    - 1.15
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen
+    seasonal: separate limbs may flower and fruit at different times, so two generations of fruit hang
+      at once
+    flowers: null
+    fruit_visible: fruits take about 7 months to ripen and fall after about 11 months; dispersed by water
+    bark: fissured or scaly, orange-red to reddish brown or grey, often blotched with tar-like exudate;
+      inner bark sap dries black
+  timber:
+    heartwood: deep red with darker streaks (tiger rengas when striped); darkens on exposure
+    sapwood: pinkish brown to almost white, very wide
+    grain: straight or slightly irregular to interlocked
+    texture: fine to medium
+    density_kg_m3: 765
+    janka_n: 7650
+    workability: high silica severely dulls tools; otherwise easy; glues and finishes well
+    rot_resistance: moderately durable; not termite resistant
+    scent: may have a distinct odour
+    fuel: smoke from burning the wood severely irritates the eyes
+    uses:
+    - cabinetry
+    - furniture
+    - inlay
+    - turned objects
+    - canoes
+    - house building
+    - fancy articles
+  products:
+    food:
+    - roasted seeds
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: 'sap contains urushiol-type allergens: contact causes blisters and sores like poison ivy,
+      sometimes with fever; timber must be seasoned for years before handling, and lacquered pieces can
+      still affect sensitive people'
+  lore:
+    folklore: []
+    cultures:
+    - so irritating to foresters that the handsome timber fell out of use
+    - some rengas sap causes painful rashes in orangutans
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: blistering sap and toxic smoke'
+    dimensions: []
+    hooks:
+    - 'hazard: touching sap or burning the wood blisters skin and eyes'
+    - 'crafting/furniture: striped red wood once seasoned'
+  sources:
+  - https://www.wood-database.com/rengas/
+  - https://uses.plantnet-project.org/en/Gluta_(PROSEA)
+  - https://tropical.theferns.info/viewtropical.php?id=Gluta+renghas
+- id: rohida
+  names:
+  - rohida
+  - desert teak
+  - Marwar teak
+  scientific: Tecomella undulata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - medicinal
+  habitat:
+    range: eastern Oman and southwest Iran through Afghanistan and Pakistan to the Thar Desert of western
+      India
+    ecosystem: hot desert and arid scrub
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 0
+    - 1300
+    substrate: flat and undulating sandy land; thrives on stabilized dunes
+    niche: scattered tree of desert plains and dunes
+    strata:
+    - open
+    shade_tolerance: null
+    period: null
+  form:
+    habit: large shrub or small tree with a rounded, open crown on a clear bole up to 4.5 m
+    height_m:
+    - 2.5
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 0.8
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous to nearly evergreen
+    seasonal: null
+    flowers: showy orange trumpet-shaped flowers
+    fruit_visible: null
+    bark: null
+  timber:
+    heartwood: dark greyish brown, often mottled with white
+    sapwood: null
+    grain: close and fine
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: takes a beautiful polish
+    rot_resistance: durable
+    scent: null
+    fuel: excellent firewood and charcoal
+    uses:
+    - furniture
+    - construction timber
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark used in Ayurveda for liver disorders, skin disease and inflammation; part of several polyherbal
+      formulations
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the main timber tree of the desert regions of Shekhawati and Marwar, prized as equal to teak
+    symbolism:
+    - state flower of Rajasthan
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/furniture: fine hardwood in a treeless desert'
+    - 'landmark: orange bloom in the dunes'
+  sources:
+  - https://tropical.theferns.info/viewtropical.php?id=Tecomella+undulata
+  - https://en.wikipedia.org/wiki/Tecomella
+- id: rose-apple
+  names:
+  - rose apple
+  - jambu air mawar
+  - golap jaam
+  scientific: Syzygium jambos
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jamun: rose apple has rose-scented hollow pale fruit'
+  - 'wax-apple: rose apple fruit is round and dry'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - flowers
+  habitat:
+    range: Southeast Asia from northeast India, Nepal and southern China through Indochina to Malaysia
+      and Indonesia; widely introduced
+    ecosystem: moist tropical and subtropical forest, stream banks and villages
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 600
+    - 1400
+    substrate: moist soils, often along streams
+    niche: stream banks and open places around villages
+    strata:
+    - understory
+    - open
+    shade_tolerance: null
+    period: null
+  form:
+    habit: large evergreen shrub or small tree, branching low, with a dense spreading crown
+    height_m:
+    - 3
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: null
+    leaves: evergreen, lance-shaped, 10-20 cm, bright red when young, glossy dark green when mature
+    seasonal: red flushes of new leaves
+    flowers: white or greenish-white pompom flowers 5-8 cm across, mostly long stamens
+    fruit_visible: guava-like fruit with a hollow centre; loose seeds rattle when ripe
+    bark: dark brown, fairly smooth
+  timber:
+    heartwood: dark red or brown
+    sapwood: white
+    grain: straight, close
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: not durable in the ground; attacked by dry-wood termites
+    scent: null
+    fuel: excellent fuel and charcoal
+    uses:
+    - construction timber
+    - fuel
+  products:
+    food:
+    - crisp fruit with a strong rose-water scent and flavour, eaten raw or made into jam and jelly
+    sap_resin_latex: []
+    bark:
+    - 7% tannin for tanning and dyeing
+    leaves: []
+    dyes: []
+    medicinal:
+    - fruit regarded as a tonic for brain and liver in India; seeds for diarrhoea
+    toxicity: seeds and roots are reported poisonous; hydrocyanic acid in roots, stems and leaves
+  lore:
+    folklore: []
+    cultures:
+    - cultivated for about 2,500 years
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'first-session: rose-scented fruit; shake to hear if ripe'
+    - 'crafting/perfume: rose-scented fruit'
+  sources:
+  - https://en.wikipedia.org/wiki/Syzygium_jambos
+  - https://uses.plantnet-project.org/en/Syzygium_jambos_(PROSEA)
+  - https://tropical.theferns.info/viewtropical.php?id=Syzygium+jambos
+- id: rubber-fig
+  names:
+  - rubber fig
+  - India rubber tree
+  - rambung
+  scientific: Ficus elastica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'banyan: rubber fig has huge glossy leaves and is grown for latex'
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: northeast India, Bhutan, Nepal, Myanmar, Malaysia and Indonesia (Sumatra, Java)
+    ecosystem: tropical and subtropical hill forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1650
+    substrate: cliffs and limestone hills
+    niche: often starts as an epiphyte on another tree, then strangles it with aerial roots
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: null
+    period: null
+  form:
+    habit: large banyan-type fig with a stout trunk, buttresses and many aerial roots
+    height_m:
+    - 30
+    - 60
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, broad, thick, glossy ovals 10-35 cm, largest on young plants
+    seasonal: no seasonal change
+    flowers: hidden inside the figs; pollinated by a fig wasp
+    fruit_visible: small yellow-green oval figs about 1 cm, barely edible
+    bark: null
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: occasionally used as fuel
+    uses:
+    - boards
+    - posts
+    - boats
+  products:
+    food:
+    - young leaf tips eaten as salad in Java
+    sap_resin_latex:
+    - milky latex gives "India rubber" containing 4-20% resin that hardens with age; planted for rubber
+      in West Java before Hevea took over
+    bark:
+    - fibre once used for clothes and ropes
+    leaves: []
+    dyes: []
+    medicinal:
+    - decoction of aerial rootlets for wounds
+    toxicity: latex irritates eyes and skin and is toxic if eaten
+  lore:
+    folklore:
+    - Khasi myth tells of a living-root ladder, jingkieng ksiar, that once linked heaven and earth
+    cultures:
+    - Khasi and Jaintia peoples of Meghalaya train its aerial roots across rivers into living root bridges
+      over 15 years or more; they can last hundreds of years
+    symbolism: []
+    notable_trees:
+    - the "Double Decker" two-level living root bridge at Nongriat, Meghalaya, estimated at about 200
+      years old
+  game_fit:
+    fields:
+      weirdness: 'high: roots grown into bridges'
+    dimensions:
+    - aether
+    hooks:
+    - 'crafting/latex: early rubber and waterproofing'
+    - 'building: guide aerial roots into a living bridge over years'
+  sources:
+  - https://uses.plantnet-project.org/en/Ficus_elastica_(PROSEA)
+  - https://en.wikipedia.org/wiki/Living_root_bridge
+  - https://en.wikipedia.org/wiki/Ficus_elastica
+- id: rudraksha
+  names:
+  - rudraksha
+  - blue marble tree
+  - Elaeocarpus ganitrus (syn.)
+  - Elaeocarpus sphaericus (syn.)
+  scientific: Elaeocarpus angustifolius
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  habitat:
+    range: India through Southeast Asia and Indonesia to New Guinea, northern Australia and New Caledonia;
+      beads come mainly from Nepal, India and Indonesia
+    ecosystem: tropical and subtropical rainforest and secondary woodland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: null
+    niche: emergent in some forests and common in secondary woodland
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: null
+    period: null
+  form:
+    habit: large evergreen tree with a thin open canopy and thin buttresses spreading up to 6 m from the
+      trunk
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 0.2
+    - 2.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, with wavy-toothed margins
+    seasonal: crown often partly deciduous
+    flowers: creamy white bell flowers with finely fringed petal tips in racemes up to 10 cm
+    fruit_visible: bright blue round drupes 15-23 mm, holding a hard furrowed stone
+    bark: null
+  timber:
+    heartwood: light yellowish white to pink-brown
+    sapwood: up to 10 cm wide, not distinct
+    grain: straight to shallowly interlocked
+    texture: moderately fine to coarse
+    density_kg_m3: 520
+    janka_n: 2177
+    workability: soft, easy; good for bent work and carving
+    rot_resistance: not durable
+    scent: null
+    fuel: null
+    uses:
+    - planking
+    - boat planking
+    - racing oars
+    - crates
+    - veneer and plywood
+    - carving
+    - barrels
+  products:
+    food:
+    - fruit flesh edible
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - the stones are the tears of Rudra (Shiva), from rudra + aksha, "Rudra's eyes" or teardrops
+    - the number of furrows (mukhi, faces) on a bead is linked to particular deities
+    cultures:
+    - Shaiva Hindus and Buddhists wear malas of 108 beads plus one for chanting mantras such as Om Namah
+      Shivaya
+    - beads are sourced mainly from Nepal, India and Indonesia and valued like semi-precious stones
+    symbolism:
+    - devotion to Shiva
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: sacred prayer-bead tree'
+    dimensions: []
+    hooks:
+    - 'crafting/beads: blue fruit stones for prayer beads'
+  sources:
+  - https://en.wikipedia.org/wiki/Elaeocarpus_angustifolius
+  - https://www.tropicaltimber.info/specie/jenitriquandong-elaeocarpus-angustifolius/
+  - https://en.wikipedia.org/wiki/Rudraksha
+- id: sacred-fig
+  names:
+  - sacred fig
+  - Bodhi tree
+  - peepal
+  - ashvattha
+  scientific: Ficus religiosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'banyan: sacred fig is the heart-leaved Bodhi tree'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - well-known
+  habitat:
+    range: Indian subcontinent and Indochina; planted at temples throughout South and Southeast Asia
+    ecosystem: dry deciduous and moist tropical forest, villages and temples
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 10
+    - 1520
+    substrate: prefers deep alluvial sandy loam; also grows in rock crevices and walls
+    niche: often begins life as an epiphyte; planted at shrines and village squares
+    strata:
+    - canopy
+    - open
+    shade_tolerance: null
+    period: null
+  form:
+    habit: large spreading fig, sometimes with aerial roots, often starting in a wall or another tree
+    height_m:
+    - 20
+    - 30
+    trunk_diameter_m:
+    - 1.0
+    - 3.0
+    lifespan_y: 2300
+    growth_rate: fast
+    leaves: heart-shaped with a long tapering drip tip, 6-26 cm
+    seasonal: dry-season deciduous or semi-evergreen
+    flowers: hidden inside the figs; pollinated by a fig wasp
+    fruit_visible: small paired figs 1-1.5 cm, green ripening purple
+    bark: grey, fissured
+  timber:
+    heartwood: greyish white
+    sapwood: not distinct
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: very soft and light
+    rot_resistance: moderately durable under cover, durable under water
+    scent: null
+    fuel: used as fuel
+    uses:
+    - packing cases
+    - matches
+  products:
+    food: []
+    sap_resin_latex:
+    - latex used as birdlime
+    bark:
+    - tannin for tanning leather and dyeing cloth
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark for skin diseases in Uttar Pradesh
+    toxicity: null
+  lore:
+    folklore:
+    - the ashvattha, a sacred tree much mentioned in Hindu scripture
+    - the Buddha attained enlightenment under one at Bodh Gaya around the 5th century BCE
+    cultures:
+    - sacred in Hinduism, Buddhism, Jainism and Sikhism; ascetics meditate under it
+    - peepal leaf motifs appear on Indus seals of the third millennium BCE
+    - host tree of the lac insect
+    symbolism:
+    - enlightenment; state tree of Bihar
+    - Haryana and Odisha
+    notable_trees:
+    - Jaya Sri Maha Bodhi at Anuradhapura, Sri Lanka, grown from a branch of the original tree in 288
+      BCE; the oldest living human-planted tree with a known date
+    - the Bodhi tree at the Mahabodhi Temple, Bodh Gaya, replanted in 1881 from a cutting of the Sri Lankan
+      tree
+  game_fit:
+    fields:
+      alignment: 'high: tree of enlightenment'
+      liminality: 'high: meditation and pilgrimage tree'
+    dimensions:
+    - aether
+    hooks:
+    - 'landmark: ancient shrine tree in villages'
+    - 'progression: meditate under it for a calm or insight buff'
+    - 'crafting/lac: lac insects for shellac'
+  sources:
+  - https://en.wikipedia.org/wiki/Ficus_religiosa
+  - https://uses.plantnet-project.org/en/Ficus_religiosa_(PROSEA)
+  - https://en.wikipedia.org/wiki/Bodhi_Tree
+- id: sago-palm
+  names:
+  - sago palm
+  - true sago palm
+  scientific: Metroxylon sagu
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  habitat:
+    range: native to tropical Southeast Asia; the staple starch palm of New Guinea and the Moluccas
+    ecosystem: lowland swamp forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: swampy, waterlogged soils
+    niche: forms dense groves in swamps; sometimes an understory under a canopy of Campnosperma
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: null
+    period: null
+  form:
+    habit: clump-forming palm with several suckering stems; each stem flowers once at the end of its life
+      and dies, while the clump lives on
+    height_m:
+    - 7
+    - 25
+    trunk_diameter_m: null
+    lifespan_y: 23
+    growth_rate: fast
+    leaves: about 20 pinnate leaves up to 10 m long with 150-180 leaflets
+    seasonal: no seasonal change
+    flowers: huge upright terminal inflorescence 3-7.5 m tall and wide, branching three times
+    fruit_visible: round fruits about 5 cm covered in overlapping scales, green turning straw-coloured
+    bark: hard outer shell around a soft starchy pith
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: dried bark used as domestic fuel
+    uses:
+    - flooring and walls from the hard outer trunk
+  products:
+    food:
+    - sago starch washed from the pith of a stem felled just before flowering; one trunk can feed a person
+      for a year
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - thatch lasting up to five years
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - sago is the staple starch of New Guinea and the Moluccas
+    - growers in eastern Indonesia recognise many local sago types
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: a year of food in one trunk'
+    dimensions: []
+    hooks:
+    - 'crafting/food: fell and wash a trunk for a big starch stockpile'
+    - 'crafting/thatch: long-lasting leaf thatch'
+  sources:
+  - https://uses.plantnet-project.org/en/Metroxylon_sagu_(PROSEA)
+  - https://en.wikipedia.org/wiki/Metroxylon_sagu
+- id: sal
+  names:
+  - sal
+  - shala
+  - sakhua
+  scientific: Shorea robusta
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'meranti: meranti are the giant rainforest Shoreas'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - product
+  habitat:
+    range: India, Nepal, Bangladesh and southeastern Tibet, along the Himalayan foothills and across central
+      and eastern India
+    ecosystem: tropical moist and dry deciduous monsoon forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: monsoon'
+    elevation_m:
+    - 0
+    - 1400
+    substrate: well-drained soils; poorer soils give shorter trees
+    niche: often the main or only canopy tree over vast forests
+    strata:
+    - canopy
+    shade_tolerance: null
+    period: null
+  form:
+    habit: tall straight tree, bole clear for up to 25 m; crown elongated when young, rounded with age
+    height_m:
+    - 20
+    - 50
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: null
+    growth_rate: null
+    leaves: large simple oval leaves 12-25 cm
+    seasonal: brief mass flowering
+    flowers: small flowers in a brief mass flowering
+    fruit_visible: winged nuts
+    bark: null
+  timber:
+    heartwood: light when fresh, turning dark reddish brown on exposure
+    sapwood: thin, whitish
+    grain: strongly spiralled or interlocked with ribbon bands
+    texture: moderately coarse to coarse
+    density_kg_m3: 860
+    janka_n: null
+    workability: hard to saw, plane and turn because of resin; splits when nailed
+    rot_resistance: very durable; long resists termites and fungi
+    scent: resinous
+    fuel: important local fuel
+    uses:
+    - house posts and beams
+    - railway sleepers
+    - bridges
+    - hydraulic works
+    - ships and railway cars
+    - poles
+    - window frames
+    - floors
+  products:
+    food:
+    - seeds roasted or ground into flour as a famine food
+    sap_resin_latex:
+    - sal dammar resin, burned as incense and used medicinally
+    bark:
+    - tannin
+    leaves:
+    - leaves stitched into plates and cups, traded commercially
+    dyes: []
+    medicinal:
+    - resin for dysentery, boils and toothache; leaf poultices for swellings
+    toxicity: null
+  lore:
+    folklore:
+    - some Bengal communities worship Sarna Burhi, a goddess of sacred sal groves
+    - the yakshini grasping a flowering branch, a standard motif of Indian sculpture
+    cultures:
+    - in Buddhist tradition the Buddha was born and died under sal trees
+    - its brief flowering symbolises impermanence in Buddhism
+    - the cannonball tree is often planted and named as the sal at Buddhist sites outside India
+    symbolism:
+    - state tree of Chhattisgarh and Jharkhand
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: sacred grove tree'
+      yield: 'high: dominant monsoon-forest timber'
+    dimensions: []
+    hooks:
+    - 'crafting/construction: durable sleepers and beams'
+    - 'crafting/resin: dammar incense'
+    - 'crafting/leaf plates: stitched leaf tableware'
+  sources:
+  - https://www.tropicaltimber.info/specie/red-balau-balau-sal-shorea-robusta/
+  - https://en.wikipedia.org/wiki/Shorea_robusta
+  - https://tropical.theferns.info/viewtropical.php?id=Shorea+robusta

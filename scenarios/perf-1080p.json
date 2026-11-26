@@ -1,0 +1,5 @@
+{
+  "include": "v0.1-scene.json",
+  "window": {"size": [1920, 1080]},
+  "frames": 1500
+}

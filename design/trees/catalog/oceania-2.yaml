@@ -1,0 +1,3896 @@
+- id: marri
+  names:
+  - marri
+  - red gum
+  scientific: Corymbia calophylla
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jarrah: jarrah has red timber; marri has pale wood and huge gumnuts'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - medicinal
+  habitat:
+    range: southwestern Western Australia, from Geraldton to Albany
+    ecosystem: jarrah-marri forest and woodland, Swan Coastal Plain
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - seasonally-dry
+      note: 'moisture: Mediterranean, 500-1200 mm winter rain'
+    elevation_m:
+    - 0
+    - 500
+    substrate: sandy and lateritic soils, loams and clays; tolerates poor sites
+    niche: co-dominant canopy tree with jarrah; mallee form on poor ground
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: single trunk with a dense, rambling crown of thick limbs; mallee form on poor soil
+    height_m:
+    - 20
+    - 60
+    trunk_diameter_m:
+    - 0.8
+    - 2.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, broadly lanceolate, glossy dark green above and paler below
+    seasonal: evergreen; heavy flowering in summer even in the dry season
+    flowers: large clusters of cream-white flowers held above the foliage, summer to autumn
+    fruit_visible: large urn-shaped woody gumnuts 3-5 cm across ('honky nuts') in heavy clusters
+    bark: rough, tessellated grey-brown 'bloodwood' bark that weeps red kino from wounds
+  timber:
+    heartwood: pale pink-brown to honey, with dark gum veins
+    sapwood: paler, often broad
+    grain: interlocked to wavy
+    texture: medium
+    density_kg_m3: 850
+    janka_n: 7100
+    workability: moderate; gum veins and pockets make it tricky to dry and machine
+    rot_resistance: not durable in ground
+    scent: null
+    fuel: good firewood
+    uses:
+    - furniture
+    - flooring
+    - joinery
+    - turning
+    - wine barrels
+  products:
+    food:
+    - nectar and pollen for honey bees; large nuts eaten by black cockatoos (not by people)
+    sap_resin_latex:
+    - kino, a red astringent gum that runs from the trunk
+    bark:
+    - kino-rich bark
+    leaves: []
+    dyes:
+    - kino and bark give a tan to red-brown dye
+    medicinal:
+    - Noongar people used kino for diarrhoea, sore throats and as a wound wash
+    toxicity: null
+  lore:
+    folklore:
+    - Noongar name 'marri' is widely used for the tree; its blossoms mark the honey season
+    cultures:
+    - Noongar medicine and sugar-bag (blossom) gathering
+    symbolism:
+    - emblem of the south-west forests; food tree of the endangered Carnaby's and forest red-tailed black
+      cockatoos
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: nectar, kino and cockatoo-feeding nuts in one tree'
+    dimensions: []
+    hooks:
+    - 'crafting/astringents: kino for tanning and wound dressing'
+    - bloodwood tree bleeding red sap as an early visual tell for harvestable resin
+  sources:
+  - https://anpsa.org.au/plant_profiles/corymbia-calophylla/
+  - https://wa.gov.au/system/files/2020-09/FPC-species-information.pdf
+  - https://en.wikipedia.org/wiki/Corymbia_calophylla
+- id: blackwood
+  names:
+  - Australian blackwood
+  - Tasmanian blackwood
+  scientific: Acacia melanoxylon
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'golden-wattle: blackwood is a forest tree grown for timber'
+  - 'koa: koa is the Hawaiian relative'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: southeastern Australia (NSW to South Australia) and Tasmania; widely naturalised
+    ecosystem: wet sclerophyll forest, cool temperate rainforest margins, swamp forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1200
+    substrate: deep, moist loams along gullies and swamp edges
+    niche: understorey to canopy tree in wet forest; best form in Tasmanian rainforest and myrtle forest
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: single straight trunk, dense dark crown
+    height_m:
+    - 6
+    - 30
+    trunk_diameter_m:
+    - 0.5
+    - 1.2
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen; adult leaves are flat sickle-shaped phyllodes, dark green; seedlings bear feathery
+      bipinnate leaves
+    seasonal: evergreen; flowers late winter to spring
+    flowers: pale cream to yellow ball-like flower heads, July to December
+    fruit_visible: twisted, coiled brown pods with seeds on bright red-orange stalks
+    bark: dark grey-brown, deeply furrowed on old trunks
+  timber:
+    heartwood: golden to dark brown with darker streaks, lustrous
+    sapwood: pale yellow
+    grain: straight to wavy; fiddleback and curly figure prized
+    texture: medium, fine-ish
+    density_kg_m3: 640
+    janka_n: 5180
+    workability: easy to work; steam-bends well; takes a high polish
+    rot_resistance: moderately durable
+    scent: null
+    fuel: fair
+    uses:
+    - furniture
+    - guitar and ukulele tonewood
+    - veneer
+    - boat interiors
+    - turning
+  products:
+    food: []
+    sap_resin_latex:
+    - gum from wounds
+    bark:
+    - moderate tannin; used for tanning
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Aboriginal Tasmanians and mainland peoples used the hard wood for tools and spear shafts
+    symbolism:
+    - Tasmania's premier cabinet wood
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: prized figured tonewood'
+    dimensions: []
+    hooks:
+    - 'crafting/figured woods: fiddleback blackwood for instruments, a quality-tier timber'
+  sources:
+  - https://www.wood-database.com/australian-blackwood/
+  - https://en.wikipedia.org/wiki/Acacia_melanoxylon
+- id: black-wattle
+  names:
+  - black wattle
+  scientific: Acacia mearnsii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'golden-wattle: black wattle has feathery bipinnate leaves'
+  - 'silver-wattle: silver wattle has silvery foliage and is grown for flowers'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  habitat:
+    range: southeastern Australia and Tasmania; plantation and invasive in South Africa, Kenya, India,
+      Brazil and elsewhere
+    ecosystem: dry to wet sclerophyll forest and woodland, riparian margins
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: well-drained loams and clays; nitrogen fixing
+    niche: fast pioneer after fire or clearing
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single or multi-stemmed, spreading to erect small tree
+    height_m:
+    - 6
+    - 20
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, finely divided dark green bipinnate leaves with raised glands on the stalk
+    seasonal: evergreen; flowers late spring to summer
+    flowers: pale yellow to cream globular heads in large sprays
+    fruit_visible: flat dark brown pods, narrowed between the seeds
+    bark: smooth and dark when young, furrowed and almost black at the trunk base with age
+  timber:
+    heartwood: light brown
+    sapwood: paler, cream
+    grain: straight
+    texture: medium
+    density_kg_m3: 730
+    janka_n: 7590
+    workability: works well; mostly used as pulpwood and fuel
+    rot_resistance: not durable
+    scent: null
+    fuel: excellent firewood and charcoal
+    uses:
+    - woodchips and pulp
+    - charcoal
+    - fence posts
+    - mine props
+    - firewood
+  products:
+    food: []
+    sap_resin_latex:
+    - gum (a gum-arabic substitute)
+    bark:
+    - one of the richest vegetable tannin barks in the world (up to 35-40 percent tannin), used to tan
+      leather
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Wattle bark industry in Natal, South Africa, from the 1860s
+    symbolism:
+    - on the IUCN list of 100 of the world's worst invasive species
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: aggressive invader that smothers native flora'
+      yield: 'high: tannin bark'
+    dimensions: []
+    hooks:
+    - 'crafting/tanning: bark tannin turns hides into leather'
+    - charcoal for smelting
+  sources:
+  - https://www.wood-database.com/black-wattle/
+  - https://en.wikipedia.org/wiki/Acacia_mearnsii
+  - https://www.iucngisd.org/gisd/species.php?sc=18
+- id: silver-wattle
+  names:
+  - silver wattle
+  - mimosa
+  scientific: Acacia dealbata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-wattle: black wattle is the green tannin tree'
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - product
+  - cultural
+  habitat:
+    range: southeastern Australia and Tasmania; naturalised in southern Europe, South Africa and elsewhere
+    ecosystem: dry and wet sclerophyll forest, riparian zones, subalpine woodland margins
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: loams and clays; fire-adapted, nitrogen fixing
+    niche: fast pioneer forming thickets after fire and clearing
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: erect, bushy tree, often multi-stemmed and suckering
+    height_m:
+    - 5
+    - 30
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, silvery blue-grey feathery bipinnate leaves
+    seasonal: evergreen; winter to early spring bloom
+    flowers: dense sprays of pale to bright yellow fragrant ball flowers, July to September
+    fruit_visible: flat bluish-grey pods
+    bark: smooth grey-green when young, deeply furrowed and dark when old
+  timber:
+    heartwood: pale brown
+    sapwood: lighter, cream
+    grain: straight to slightly interlocked
+    texture: medium
+    density_kg_m3: 655
+    janka_n: null
+    workability: easy
+    rot_resistance: not durable
+    scent: null
+    fuel: moderate
+    uses:
+    - pulp
+    - light furniture
+    - firewood
+  products:
+    food: []
+    sap_resin_latex:
+    - gum used as an arabic-gum substitute
+    bark:
+    - tannin
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Cut 'mimosa' trade on the French Riviera since the 19th century; the Tanneron hills and Mandelieu
+      hold winter mimosa festivals
+    - Flowers distilled into absolute for perfumery in Grasse
+    symbolism:
+    - mimosa gives flowers on 8 March (International Women's Day) in Italy
+    - Australian wattle is the national floral emblem (golden wattle is the official species)
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: cheerful winter-blooming bloom marks frost-free sanctuaries'
+    dimensions: []
+    hooks:
+    - 'crafting/perfume: flower absolute'
+    - dyes and tannin from bark
+  sources:
+  - https://www.wood-database.com/silver-wattle/
+  - https://en.wikipedia.org/wiki/Acacia_dealbata
+- id: toromiro
+  names:
+  - toromiro
+  scientific: Sophora toromiro
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kowhai: kōwhai is the New Zealand Sophora'
+  tier: 2
+  status: extinct-in-wild
+  inclusion:
+  - cultural
+  - striking
+  habitat:
+    range: Rapa Nui (Easter Island), Chile; now only cultivated
+    ecosystem: formerly island scrub and woodland on volcanic slopes and crater rims
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'moisture: humid, oceanic'
+    elevation_m:
+    - 0
+    - 450
+    substrate: volcanic soils and rocky crater slopes
+    niche: small tree and shrub of the island's dry-forest understorey and crater rims
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: large shrub or small tree, multi-stemmed or with a short trunk
+    height_m:
+    - 2
+    - 5
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen to semi-deciduous, pinnate with many small leaflets
+    seasonal: flowers in spring
+    flowers: bright yellow pea-like flowers in clusters, like kowhai
+    fruit_visible: 4-winged, beaded pods, winged and narrowing between seeds
+    bark: brown, fissured
+  timber:
+    heartwood: red-brown, dense and hard
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: carved into small sacred figures; prized as the island's carving wood
+    rot_resistance: null
+    scent: null
+    fuel: burned as firewood, which hastened its loss
+    uses:
+    - carved figures (moai kavakava) and ceremonial objects
+    - fuel
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: Sophora seeds carry quinolizidine alkaloids such as cytisine, toxic to people if eaten
+  lore:
+    folklore:
+    - local tradition holds that the rongorongo tablets were carved from toromiro, but every native-wood
+      tablet tested so far proved to be Thespesia populnea (miro)
+    cultures:
+    - 'Rapa Nui carving: a sacred tree valued for its carving wood'
+    - the last wild tree, in Rano Kao crater, was cut down in 1960; seed collected from it by Thor Heyerdahl
+      germinated at the Göteborg Botanic Garden in 1959
+    symbolism:
+    - extinct-in-the-wild emblem of Rapa Nui's ecological collapse
+    notable_trees:
+    - last wild tree, Rano Kao crater (cut down 1960)
+    - Göteborg Botanic Garden trees grown from Heyerdahl's seed; the source of most European stock
+  game_fit:
+    fields:
+      liminality: 'high: last-of-its-kind survivor that lives only in cultivation'
+      weirdness: 'high: tied to the island''s lost forest'
+    dimensions:
+    - aether
+    hooks:
+    - 'progression/restoration: replant an extinct-in-the-wild tree to unlock carving'
+    - 'crafting/carving wood: rare dark wood for figurines'
+  sources:
+  - https://plantoromiro.org/wp-content/uploads/Conservation-of-the-toromiro-tree-Case-study-in-the-management-of-a-plant-extinct-in-the-wild-Maunder-M..pdf
+  - https://en.wikipedia.org/wiki/Sophora_toromiro
+- id: karri
+  names:
+  - karri
+  scientific: Eucalyptus diversicolor
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mountain-ash: mountain ash is the eastern giant'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: far southwestern Western Australia (Walpole to Margaret River)
+    ecosystem: tall open karri forest with karri-hazel and karri-oak understorey
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'moisture: humid, over 1000 mm rainfall'
+    elevation_m:
+    - 0
+    - 300
+    substrate: deep red loams of granite and gneiss
+    niche: giant emergent of the highest-rainfall forest in the south-west
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: massive straight bole with a high, open crown
+    height_m:
+    - 40
+    - 85
+    trunk_diameter_m:
+    - 1.0
+    - 3.0
+    lifespan_y: 300
+    growth_rate: fast
+    leaves: evergreen, glossy lance-shaped, dark green above and paler below
+    seasonal: evergreen; summer flowering, after fire in particular
+    flowers: creamy white blossoms in terminal clusters, summer
+    fruit_visible: barrel-shaped woody capsules
+    bark: smooth, cream to pale grey, mottled and peeling in patches; orange and tan in spring
+  timber:
+    heartwood: pale pink to reddish brown
+    sapwood: pale
+    grain: interlocked, sometimes wavy
+    texture: medium to coarse
+    density_kg_m3: 885
+    janka_n: 9030
+    workability: moderately hard to work; can be gummy; holds nails poorly
+    rot_resistance: durable to moderately durable
+    scent: null
+    fuel: good
+    uses:
+    - construction beams
+    - flooring
+    - furniture
+    - bridges and wharves
+    - railway sleepers
+  products:
+    food:
+    - honey from nectar
+    sap_resin_latex:
+    - kino
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - the Noongar name 'karri' also marks the forests of the south-west coast
+    cultures:
+    - 'Fire-lookout trees: pegged ladders spiralling up the Gloucester Tree (53 m, 1947), the Bicentennial
+      Tree and the Diamond Tree near Pemberton'
+    symbolism:
+    - one of the tallest flowering trees on earth
+    notable_trees:
+    - 'Gloucester Tree, Pemberton: fire lookout, climbable'
+    - 'Bicentennial Tree: 75 m lookout'
+    - 'The Tyrant, south of Pemberton: massive girth'
+  game_fit:
+    fields:
+      alignment: 'high: sheltering giants of an old, wet forest'
+    dimensions: []
+    hooks:
+    - 'progression/climbing: pegged spiral ladders up giant trees as a vantage mechanic'
+    - 'crafting/heavy beams: long, straight structural timber'
+  sources:
+  - https://www.wood-database.com/karri/
+  - https://en.wikipedia.org/wiki/Eucalyptus_diversicolor
+- id: gidgee
+  names:
+  - gidgee
+  - stinking wattle
+  scientific: Acacia cambagei
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mulga: gidgee grows on clay plains and stinks before rain'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: inland northern and central Australia (Queensland, NSW, Northern Territory)
+    ecosystem: gidgee woodland on cracking clay plains
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: 'temperature: hot'
+    elevation_m:
+    - 50
+    - 500
+    substrate: heavy grey and red clays, alluvial plains
+    niche: woodland tree of seasonally dry clay plains
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: spreading tree, often multi-stemmed, with a moderately dense crown
+    height_m:
+    - 4
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, narrow dull grey-green phyllodes
+    seasonal: evergreen; flowers in winter and spring
+    flowers: golden-yellow ball-shaped heads
+    fruit_visible: narrow, papery, flat pods
+    bark: dark grey, flaky and fissured
+  timber:
+    heartwood: dark reddish brown to near black
+    sapwood: pale
+    grain: interlocked
+    texture: fine, hard
+    density_kg_m3: 1150
+    janka_n: 18990
+    workability: very hard; blunts tools; polishes well
+    rot_resistance: very durable; termite resistant
+    scent: the wood has a noticeable unpleasant smell when freshly cut
+    fuel: very good, burns hot and long
+    uses:
+    - fence posts
+    - firewood
+    - tool handles
+    - boomerangs and clubs
+  products:
+    food: []
+    sap_resin_latex:
+    - gum
+    bark: []
+    leaves:
+    - browsed as emergency stock fodder
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - '''stinking wattle'': the whole tree gives off a sulphurous stench before or after rain, said to
+      forecast storms'
+    cultures:
+    - Aboriginal use of hard wood for weapons and digging tools
+    symbolism:
+    - outback landscapes of Queensland's gidgee country
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: foul-smelling tree that signals rain'
+    dimensions: []
+    hooks:
+    - 'crafting/hard woods: extremely dense, termite-proof posts'
+    - 'weather omen: the smell warns of coming rain'
+  sources:
+  - https://www.wood-database.com/gidgee/
+  - https://en.wikipedia.org/wiki/Acacia_cambagei
+- id: brigalow
+  names:
+  - brigalow
+  scientific: Acacia harpophylla
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mulga: brigalow has silvery sickle phyllodes and grows on cracking clays'
+  tier: 3
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  habitat:
+    range: inland Queensland and northern NSW (Brigalow Belt)
+    ecosystem: brigalow open forest on cracking clays, with softwood scrub
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'temperature: warm-temperate to subtropical; moisture: semi-arid to subhumid'
+    elevation_m:
+    - 100
+    - 600
+    substrate: heavy clay soils, often gilgai (self-mulching clays)
+    niche: dominant of the clay plain scrubs
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: slender tree that suckers from the roots, forming dense stands
+    height_m:
+    - 8
+    - 25
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, silvery grey-blue sickle-shaped phyllodes
+    seasonal: evergreen; flowers winter to spring
+    flowers: golden-yellow ball-shaped heads
+    fruit_visible: straight to slightly curved cylindrical pods
+    bark: hard, furrowed, almost black
+  timber:
+    heartwood: dark brown
+    sapwood: pale
+    grain: interlocked
+    texture: fine to medium
+    density_kg_m3: 950
+    janka_n: 10000
+    workability: hard, tough to work; smells of violets when cut
+    rot_resistance: durable
+    scent: violet-like when freshly cut
+    fuel: excellent, burns very hot
+    uses:
+    - fence posts
+    - tool handles
+    - firewood
+    - boomerangs
+  products:
+    food: []
+    sap_resin_latex:
+    - gum
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Aboriginal people used the hard wood for boomerangs and clubs
+    - Brigalow scrub was cleared on a huge scale for farming in the 20th century
+    symbolism:
+    - gives its name to the Brigalow Belt bioregion
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/hard woods: very dense fence posts and fuel'
+  sources:
+  - https://www.wood-database.com/brigalow/
+  - https://en.wikipedia.org/wiki/Acacia_harpophylla
+- id: hoop-pine
+  names:
+  - hoop pine
+  - klinki pine
+  scientific: Araucaria cunninghamii
+  rank: group
+  stands_for:
+  - Araucaria hunsteinii (klinki pine)
+  distinct_from:
+  - 'norfolk-island-pine: hoop pine has tufted foliage at branch ends'
+  - 'bunya-pine: bunya has huge edible cones'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: eastern Australia (NSW north coast to Cape York) and New Guinea highlands (klinki pine)
+    ecosystem: subtropical and dry rainforest, vine forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: volcanic and alluvial loams, also rocky sites
+    niche: emergent over rainforest canopy
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: straight, cylindrical trunk with whorled branches and a flat-topped crown of tufted foliage
+    height_m:
+    - 30
+    - 60
+    trunk_diameter_m:
+    - 0.6
+    - 1.5
+    lifespan_y: 450
+    growth_rate: moderate
+    leaves: evergreen, short, sharp scale-like to awl-shaped needles in tufts at branch ends
+    seasonal: evergreen
+    flowers: cones; male and female on separate or same trees
+    fruit_visible: globular cones breaking up on the tree
+    bark: red-brown to grey, peeling in horizontal 'hoops' and rings
+  timber:
+    heartwood: pale yellow to light brown
+    sapwood: not distinct
+    grain: straight
+    texture: fine and even
+    density_kg_m3: 500
+    janka_n: 3320
+    workability: very easy; stable; takes glue and finish well
+    rot_resistance: non-durable to perishable
+    scent: null
+    fuel: fair
+    uses:
+    - plywood and veneer
+    - furniture
+    - joinery
+    - flooring
+    - pulp
+  products:
+    food:
+    - seeds eaten by Aboriginal people after cooking
+    sap_resin_latex:
+    - resin
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Queensland plantation timber since the 1870s; much of the original hoop pine scrub was logged
+    symbolism:
+    - the klinki pine of Papua New Guinea holds the tall-conifer record in the tropics (about 89 m)
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/soft clean timber: pale, straight and easy to work for early building'
+  sources:
+  - https://www.wood-database.com/hoop-pine/
+  - https://en.wikipedia.org/wiki/Araucaria_cunninghamii
+- id: column-pine
+  names:
+  - Cook pine
+  - column pine
+  scientific: Araucaria columnaris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'norfolk-island-pine: column pine is narrow and leaning'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: 'New Caledonia: south and south-east coast of Grande Terre, Isle of Pines and Loyalty Islands
+      (partly Polynesian plantings); widely planted on warm coasts worldwide'
+    ecosystem: coastal sands and hills, coastal forest and maquis fringes
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - humid
+      note: 'temperature: tropical to subtropical'
+    elevation_m:
+    - 0
+    - 400
+    substrate: sandy coastal soils, ultramafic and limestone
+    niche: shoreline emergent over scrub
+    strata:
+    - emergent
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: narrow pillar with short horizontal to drooping branches; the whole tree leans toward the equator,
+      more so at higher latitudes
+    height_m:
+    - 30
+    - 60
+    trunk_diameter_m:
+    - 0.6
+    - 1.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, overlapping, scale-like, curved needles forming rope-like branchlets
+    seasonal: evergreen
+    flowers: cones
+    fruit_visible: large green seed cones, 10-15 cm
+    bark: grey, papery, peeling in thin strips
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - resin
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - Forster named it for Captain Cook, whose second voyage found it on the Isle of Pines in 1774
+    cultures:
+    - planted along tropical shores as a street and landmark tree
+    symbolism:
+    - a tropical-shore ornamental; its leaning is a navigation oddity
+    notable_trees:
+    - 'tallest known: about 60 m (lidar) in an abandoned plantation on Hawaii Island'
+    - 'Auckland Domain, New Zealand: 44 m tall, 1.46 m dbh'
+  game_fit:
+    fields:
+      weirdness: 'high: leans toward the equator everywhere it is planted'
+    dimensions: []
+    hooks:
+    - 'navigation: lean direction as a compass hint'
+  sources:
+  - https://www.conifers.org/ar/Araucaria_columnaris.php
+  - https://en.wikipedia.org/wiki/Araucaria_columnaris
+- id: tea-tree
+  names:
+  - tea tree
+  - narrow-leaved paperbark
+  scientific: Melaleuca alternifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'paperbark: tea tree is the small oil-crop Melaleuca'
+  - 'manuka: mānuka is the New Zealand Leptospermum also called tea tree'
+  tier: 1
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  - well-known
+  habitat:
+    range: north coast and adjacent ranges of NSW (north from the Grafton district) and south-east Queensland
+    ecosystem: swampy flats and creek margins, melaleuca swamp forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 300
+    substrate: waterlogged and seasonally flooded sandy and peaty soils
+    niche: dense swamp thickets
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: small bushy tree or tall shrub with papery bark
+    height_m:
+    - 3
+    - 7
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, narrow soft linear leaves, aromatic when crushed
+    seasonal: evergreen; spring flowering
+    flowers: white bottlebrush spikes 3-5 cm long, spring to early summer
+    fruit_visible: tiny woody capsules clustered along the stem
+    bark: whitish, papery and flaky, peeling in thin layers
+  timber:
+    heartwood: pale
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - essential oil (tea tree oil) from steam distilled leaves, rich in terpinen-4-ol
+    bark: []
+    leaves:
+    - crushed leaves inhaled, sprinkled on wounds under a poultice, or soaked into an infusion
+    dyes: []
+    medicinal:
+    - Indigenous Australians of eastern inland areas inhaled the oil of crushed leaves for coughs and
+      colds, and used leaf infusions for sore throats and skin ailments; the oil is now sold as a topical
+      antiseptic
+    toxicity: the oil is toxic if swallowed (serious effects including coma) and can irritate skin at
+      high concentration
+  lore:
+    folklore: []
+    cultures:
+    - Indigenous bush medicine of eastern Australia
+    - primary species for commercial tea tree oil
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: healing, antiseptic tree'
+    dimensions: []
+    hooks:
+    - 'crafting/antiseptic: distilled oil for wound care'
+    - first-session healing herb
+  sources:
+  - https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?page=nswfl&lvl=sp&name=Melaleuca~alternifolia
+  - https://en.wikipedia.org/wiki/Melaleuca_alternifolia
+- id: coolabah
+  names:
+  - coolabah
+  - coolibah
+  scientific: Eucalyptus coolabah
+  rank: group
+  stands_for:
+  - Eucalyptus microtheca
+  distinct_from:
+  - 'river-red-gum: coolabah is smaller, crooked and rough at the base'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - well-known
+  habitat:
+    range: inland and northern Australia, along creeks and floodplains
+    ecosystem: floodplain woodland around temporary rivers and swamps
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      - semi-arid
+      note: 'temperature: hot; moisture: arid to semi-arid; floods'
+    elevation_m:
+    - 0
+    - 600
+    substrate: clay and alluvial plains, flooded periodically
+    niche: riverine tree of the Channel Country, Darling and Cooper systems
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: short, often crooked trunk with a dense spreading crown
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.4
+    - 1.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, narrow lance-shaped, dull to glossy grey-green
+    seasonal: evergreen; flowers summer
+    flowers: cream-white, in clusters
+    fruit_visible: small barrel-shaped capsules
+    bark: rough, grey, fibrous to flaky on trunk and larger limbs, smooth whitish above
+  timber:
+    heartwood: deep red-brown
+    sapwood: pale
+    grain: interlocked
+    texture: medium
+    density_kg_m3: 1130
+    janka_n: 16590
+    workability: very hard; blunts tools
+    rot_resistance: durable
+    scent: null
+    fuel: excellent
+    uses:
+    - fence posts
+    - railway sleepers
+    - firewood
+  products:
+    food:
+    - honey
+    sap_resin_latex:
+    - kino
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - Where the swagman camped by a billabong in the ballad 'Waltzing Matilda' (Banjo Paterson, 1895),
+      under the shade of a coolibah tree
+    cultures:
+    - Burke and Wills Dig Tree at Cooper Creek (Nappa Merrie), Queensland, is a coolabah carved in 1861
+    symbolism:
+    - the shade tree of the outback ballad and bush life
+    notable_trees:
+    - Dig Tree, Cooper Creek
+  game_fit:
+    fields:
+      alignment: 'high: shade and water in dry country'
+    dimensions: []
+    hooks:
+    - 'landmark tree: named camp and a carved message point'
+  sources:
+  - https://www.wood-database.com/coolibah/
+  - https://en.wikipedia.org/wiki/Eucalyptus_coolabah
+- id: desert-oak
+  names:
+  - desert oak
+  scientific: Allocasuarina decaisneana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'she-oak: desert oak is a slow sand-dune tree with a columnar juvenile form'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: central Australia (Uluru, Kata Tjuta and the Great Sandy and Tanami deserts)
+    ecosystem: red sand plains and dune fields with spinifex
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: 'temperature: hot'
+    elevation_m:
+    - 300
+    - 800
+    substrate: deep red sands and sand dunes
+    niche: tall tree emerging from spinifex sandplains
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: young trees are narrow and conical like Christmas trees for decades, then spread into a large,
+      rounded crown
+    height_m:
+    - 8
+    - 16
+    trunk_diameter_m:
+    - 0.3
+    - 0.8
+    lifespan_y: 1000
+    growth_rate: slow
+    leaves: evergreen, reduced to tiny scale teeth on long, drooping, needle-like green branchlets
+    seasonal: evergreen
+    flowers: inconspicuous reddish male spikes and small female heads on separate trees
+    fruit_visible: woody, cone-like fruiting clusters
+    bark: thick, deeply furrowed, cork-like bark that shields the tree from fire
+  timber:
+    heartwood: deep red to dark brown
+    sapwood: pale
+    grain: interlocked, with prominent rays
+    texture: medium
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and resinous
+    rot_resistance: durable
+    scent: null
+    fuel: 'excellent: the dense, resinous wood makes firesticks that do not easily go out'
+    uses:
+    - firesticks and firewood
+    - weapons and other implements
+  products:
+    food:
+    - seeds extracted from the woody cones and roasted
+    - cones exude a sweet white fluid in warm months that is drunk
+    - water drained or sucked from the roots
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Aṉangu of Uluṟu roast the seeds, drink the sweet cone fluid and use the wood for firesticks; children
+      make necklaces from the leaves
+    symbolism:
+    - tree of the Uluru-Kata Tjuta landscape
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'progression/growth: decades as a thin pole before spreading offers a slow-growth timer'
+  sources:
+  - https://uluru.gov.au/discover/nature/plants/desert-oak/
+  - https://en.wikipedia.org/wiki/Allocasuarina_decaisneana
+- id: scribbly-gum
+  names:
+  - scribbly gum
+  scientific: Eucalyptus haemastoma
+  rank: group
+  stands_for:
+  - Eucalyptus racemosa
+  - Eucalyptus rossii
+  distinct_from:
+  - 'snow-gum: scribbly gum is the lowland sandstone species'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Sydney region of NSW, from Lake Macquarie to Royal National Park; related scribbly gums inland
+      and south
+    ecosystem: dry sclerophyll forest and woodland on sandstone
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: null
+    elevation_m:
+    - 0
+    - 400
+    substrate: infertile sandstone and sandy soils
+    niche: mid-sized gum of heathy forest
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk, spreading crown, with a lignotuber
+    height_m:
+    - 8
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, narrow lance-shaped, glossy
+    seasonal: evergreen; flowers late winter to spring
+    flowers: cream-white
+    fruit_visible: small conical to hemispherical capsules, 5-9 mm
+    bark: smooth, bright yellow when freshly shed in summer, ageing to white or silvery grey, scored with
+      dark insect scribbles; sheds in short ribbons
+  timber:
+    heartwood: light brown
+    sapwood: null
+    grain: interlocked
+    texture: medium to coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: firewood
+    uses:
+    - firewood
+  products:
+    food:
+    - nectar for honey
+    sap_resin_latex:
+    - kino
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism:
+    - the scribbles are tunnels of larvae of Ogmograptis moths (for this species probably O. racemosa),
+      mined between old and new bark
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: bark appears hand-scribbled'
+    dimensions: []
+    hooks:
+    - scribble bark as a texture variety; hint at hidden grubs
+  sources:
+  - https://apps.lucidcentral.org/euclid/text/entities/eucalyptus_haemastoma.htm
+  - https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?page=nswfl&lvl=sp&name=Eucalyptus~haemastoma
+  - https://en.wikipedia.org/wiki/Eucalyptus_haemastoma
+- id: soft-tree-fern
+  names:
+  - soft tree fern
+  - man fern
+  scientific: Dicksonia antarctica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tree-fern: soft tree fern has a thick fibrous trunk'
+  - 'mamaku: mamaku is a taller scaly Cyathea'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  habitat:
+    range: south-east Queensland (Bunya Mountains) through coastal NSW and Victoria to Tasmania; probably
+      extinct in the wild in South Australia
+    ecosystem: wet sclerophyll forest, cool temperate rainforest and fern gullies
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: 'moisture: humid, high rainfall'
+    elevation_m:
+    - 0
+    - 1000
+    substrate: deep moist humus-rich soils in sheltered gullies
+    niche: shade-loving understorey below eucalypts and myrtle beech
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: thick fibrous trunk topped by a crown of fronds; old trunks carry many epiphytic ferns and
+      mosses
+    height_m:
+    - 2
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 2.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, spreading tripinnate fronds 1-4 m long, dark glossy green above and paler below,
+      with tufts of red-brown hairs at the stalk bases
+    seasonal: evergreen
+    flowers: null
+    fruit_visible: null
+    bark: 'not true bark: dark red-brown hairs near the crown, coarse brown fibrous roots toward the base'
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - trunks used for fencing and as a substrate for growing orchids
+  products:
+    food:
+    - pith and young croziers eaten by Indigenous Australians
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Indigenous Australians ate the pith and croziers
+    - trunk survives bushfire and the crown regrows
+    symbolism:
+    - icon of Tasmanian and Victorian fern gullies
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/fibre: matted root fibre'
+  sources:
+  - https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?page=nswfl&lvl=sp&name=Dicksonia~antarctica
+  - https://en.wikipedia.org/wiki/Dicksonia_antarctica
+- id: mamaku
+  names:
+  - mamaku
+  - black tree fern
+  - Cyathea medullaris
+  scientific: Sphaeropteris medullaris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tree-fern: mamaku is taller with black stalks'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - cultural
+  habitat:
+    range: New Zealand (Three Kings, North, South and Stewart Islands; scarce in the dry east of the South
+      Island) and the Chatham Islands; also Pacific islands from Fiji to Pitcairn
+    ecosystem: lowland and montane forest, forest margins and regenerating scrub
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 800
+    substrate: moist, fertile soils; fire-disturbed and slip sites
+    niche: pioneer understorey tree fern on forest margins and gaps
+    strata:
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: slender black trunk topped with a crown of huge fronds
+    height_m:
+    - 4
+    - 20
+    trunk_diameter_m:
+    - 0.1
+    - 0.2
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, very large three-pinnate fronds up to 5 m, on thick, harsh, black-scaled stalks
+    seasonal: evergreen
+    flowers: null
+    fruit_visible: null
+    bark: black trunk covered in hexagonal leaf-stalk scars
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - trunks used for fences and posts
+  products:
+    food:
+    - starchy pith (and young fronds) cooked and eaten by Maori, called 'mamaku' or 'korau'
+    sap_resin_latex:
+    - mucilaginous sap
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - sap applied to wounds
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Maori cooked the pith of the trunk in earth ovens; fronds used to make whare walls
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/food: cooked starch from trunk pith'
+  sources:
+  - https://www.nzpcn.org.nz/flora/species/cyathea-medullaris/
+  - https://en.wikipedia.org/wiki/Sphaeropteris_medullaris
+- id: moreton-bay-fig
+  names:
+  - Moreton Bay fig
+  - Port Jackson fig
+  scientific: Ficus macrophylla
+  rank: group
+  stands_for:
+  - Ficus rubiginosa (Port Jackson fig)
+  distinct_from:
+  - 'banyan: Moreton Bay fig has huge buttresses rather than a forest of prop roots'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  habitat:
+    range: eastern Australia, from the Wide Bay–Burnett region of Queensland to the Shoalhaven River in
+      NSW; f. columnaris on Lord Howe Island; planted worldwide
+    ecosystem: subtropical rainforest and riparian forest; also a park tree
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 600
+    substrate: moist loamy soils, rocky outcrops
+    niche: hemi-epiphytic strangler that becomes a free-standing emergent
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: massive, buttressed, spreading tree; starts as an epiphytic strangler and grows hanging aerial
+      roots
+    height_m:
+    - 15
+    - 60
+    trunk_diameter_m:
+    - 1.5
+    - 2.4
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, large (10-25 cm), leathery, glossy dark green above with a rusty underside
+    seasonal: evergreen
+    flowers: hidden inside the fig
+    fruit_visible: round figs 2-2.5 cm across, green or orange turning purple with paler spots, paired
+      or single, ripe year-round
+    bark: rough grey-brown, darkening with age, with massive sweeping buttresses
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: wavy
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - soft, light timber used for packing cases
+  products:
+    food:
+    - fruit edible but bland, eaten by Aboriginal people and many birds and bats
+    sap_resin_latex:
+    - milky sap bleeds from cut leaves and branches
+    bark:
+    - fibres used by Aboriginal people for fishing nets
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Aboriginal people used the fibres for fishing nets and ate the fruit
+    - Joseph Maiden promoted it as a street tree around 1900
+    symbolism:
+    - heritage park tree of Sydney, Melbourne and Brisbane botanic gardens
+    notable_trees:
+    - 'Mount Keira, near Wollongong: 58 m tall'
+    - 'Santa Barbara''s Moreton Bay Fig Tree, planted 1876: 53 m across'
+    - '"Tree of Knowledge", Randwick, Sydney: about 150 years old, cut down in 2016'
+  game_fit:
+    fields:
+      alignment: 'high: shade, fruit, and shelter for birds and bats'
+    dimensions: []
+    hooks:
+    - 'strangler growth: begins in a host tree''s crown and later stands alone'
+  sources:
+  - https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?page=nswfl&lvl=sp&name=Ficus~macrophylla
+  - https://anpsa.org.au/plant_profiles/ficus-macrophylla/
+  - https://en.wikipedia.org/wiki/Ficus_macrophylla
+- id: quandong
+  names:
+  - quandong
+  - desert peach
+  scientific: Santalum acuminatum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sandalwood: quandong is grown for fruit, not scented wood'
+  - 'australian-sandalwood: Australian sandalwood is the scented oil tree'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  habitat:
+    range: southern and central arid Australia (WA to NSW, Victoria's Mallee)
+    ecosystem: mallee, mulga and semi-arid woodland, sand plains
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      - tropical
+      moisture:
+      - arid
+      - semi-arid
+      note: 'temperature: warm-temperate to hot; moisture: arid to semi-arid'
+    elevation_m:
+    - 0
+    - 700
+    substrate: sandy and calcareous soils; root-parasitic on host trees such as acacias
+    niche: small hemiparasitic tree of arid shrubland
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: rounded, spreading small tree or tall shrub that parasitises the roots of neighbours
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, leathery, lance-shaped and often sickle-curved, pale to olive or yellowish green,
+      sparse and drooping
+    seasonal: evergreen
+    flowers: small white to cream flowers with a red disc, in panicles, through much of the year
+    fruit_visible: bright shining red (rarely yellow) round fruit 1.5-2.5 cm, sweetish flesh around a
+      hard, wrinkled stone
+    bark: dark grey, rough
+  timber:
+    heartwood: pale yellowish
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: faintly fragrant
+    fuel: null
+    uses:
+    - nuts used for necklaces, shirt buttons and as Chinese checkers marbles
+  products:
+    food:
+    - fruit eaten fresh, stewed for pies, made into jam and juice, or dried and stored up to 8 years
+    - kernel eaten raw or roasted
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - crushed kernel paste applied to sore gums and gum boils
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Indigenous Australians dried and stored the fruit in good years
+    - quandong pie, jams and chutneys are bush-food staples
+    symbolism:
+    - Australia's 'desert peach'
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: fruit and oily kernel'
+    dimensions: []
+    hooks:
+    - 'crafting/beads: stones as ornamental beads'
+    - 'parasitic roots: plant near a host tree to grow'
+  sources:
+  - https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?page=nswfl&lvl=sp&name=Santalum~acuminatum
+  - https://anpsa.org.au/plant_profiles/santalum-acuminatum/
+  - https://en.wikipedia.org/wiki/Santalum_acuminatum
+- id: australian-sandalwood
+  names:
+  - Australian sandalwood
+  - waang
+  scientific: Santalum spicatum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sandalwood: Australian sandalwood is the arid-zone species'
+  - 'quandong: quandong is the fruit species'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - medicinal
+  habitat:
+    range: semi-arid Western Australia and southwestern South Australia
+    ecosystem: mulga, mallee and eucalypt woodland, rangeland
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      - tropical
+      moisture:
+      - arid
+      - semi-arid
+      note: 'temperature: warm-temperate to hot; moisture: arid to semi-arid'
+    elevation_m:
+    - 0
+    - 600
+    substrate: red sands and loams; root-parasitic on acacias
+    niche: small hemiparasitic tree below mulga canopy
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: irregular, much-branched, bushy small tree
+    height_m:
+    - 3
+    - 7
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: 200
+    growth_rate: slow
+    leaves: evergreen, grey-green, stiff narrow oblong to lance-shaped
+    seasonal: evergreen
+    flowers: small cream to yellowish, in spikes
+    fruit_visible: round nutlike fruit, 1-2 cm, with a stony shell around an oily kernel
+    bark: dark grey-brown, rough, fissured
+  timber:
+    heartwood: yellow to pale brown, aromatic
+    sapwood: white
+    grain: straight to interlocked
+    texture: fine
+    density_kg_m3: 900
+    janka_n: null
+    workability: good for turning, carving and finishing
+    rot_resistance: durable heartwood
+    scent: sweet, woody, long-lasting fragrance
+    fuel: burns with a fragrant smoke
+    uses:
+    - incense and joss sticks
+    - carving
+    - oil distillation
+  products:
+    food:
+    - edible nuts, rich in oil, used as bush food
+    sap_resin_latex:
+    - fragrant essential oil distilled from heartwood
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - traditional Martu use of nuts and oils; the oil is used in perfumery
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Exported from Western Australia for incense since the 1840s, largely to Asia
+    - Noongar 'waang' and Martu 'dutjahn' are sacred to Aboriginal people
+    symbolism:
+    - incense and prayer trade
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: incense, ritual'
+      yield: 'high: aromatic oil heartwood'
+    dimensions:
+    - aether
+    hooks:
+    - 'crafting/incense: fragrant wood for ritual and trade'
+    - 'progression: slow-growing parasite must be grown beside host trees'
+  sources:
+  - https://wa.gov.au/system/files/2020-09/FPC-species-information.pdf
+  - https://en.wikipedia.org/wiki/Santalum_spicatum
+- id: iliahi
+  names:
+  - ʻiliahi
+  - Hawaiian sandalwood
+  scientific: Santalum paniculatum
+  rank: group
+  stands_for:
+  - Santalum ellipticum
+  - Santalum freycinetianum
+  distinct_from:
+  - 'sandalwood: ʻiliahi is the Hawaiian group'
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  habitat:
+    range: Hawaiian Islands (endemic species group)
+    ecosystem: dry and mesic forest and shrubland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'moisture: dry to mesic'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: volcanic soils and lava; root-parasitic on native hosts
+    niche: small hemiparasitic tree under dry forest canopy
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: shrub to small tree, with rounded crown, parasitic on roots
+    height_m:
+    - 2
+    - 20
+    trunk_diameter_m:
+    - 0.1
+    - 0.7
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, opposite, thick, leathery, glossy green to grey-green
+    seasonal: evergreen
+    flowers: small fragrant cream, yellow, orange or red, in clusters
+    fruit_visible: small round purple-black fruit
+    bark: dark brown to grey, rough
+  timber:
+    heartwood: yellow-brown, heavy, hard and fragrant
+    sapwood: pale brown
+    grain: null
+    texture: very fine
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: sweet, sandalwood fragrance
+    fuel: null
+    uses:
+    - incense
+    - scented kapa (bark cloth) and ornaments
+  products:
+    food: []
+    sap_resin_latex:
+    - aromatic oil
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - 'Sandalwood trade, 1790s-1830s: Hawaii''s forests were stripped to sell to China, called ''Tan Heung
+      Shan'' (Sandalwood Mountains)'
+    - Hawaiians scented kapa cloth with iliahi
+    symbolism:
+    - the first large export industry in Hawaii
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - crafting/incense
+    - 'trade/progression: sandalwood as a trade good that depletes the forest'
+  sources:
+  - https://www.ctahr.hawaii.edu/gsp/doc/Forestry/Little_Skolmen_CFT/CFT_Santalum_ellipticum.pdf
+  - https://en.wikipedia.org/wiki/Santalum_paniculatum
+- id: wiliwili
+  names:
+  - wiliwili
+  scientific: Erythrina sandwicensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'coral-tree: wiliwili is the Hawaiian dryland species'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - striking
+  habitat:
+    range: Hawaiian Islands (also formerly Kahoolawe and Niihau)
+    ecosystem: dry lowland forest and shrubland on lava
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: 'moisture: dry'
+    elevation_m:
+    - 150
+    - 600
+    substrate: lava, dry rocky soils
+    niche: dryland deciduous tree
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: short, gnarled trunk, wide spreading crown
+    height_m:
+    - 4.5
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 0.9
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous in summer; three-leaflet leaves, pale green
+    seasonal: drops its leaves in late summer and early autumn (August-October), flowers while bare, and
+      leafs out again from spring to mid-summer
+    flowers: dense clusters of orange (also yellow, salmon, green or white) pea flowers, early spring
+      to July
+    fruit_visible: flat pods about 10 cm long holding 1-4 shiny orange-red seeds
+    bark: smooth, light to reddish brown, thin and slightly fissured with age, with scattered short spines
+  timber:
+    heartwood: pale yellow-brown
+    sapwood: pale
+    grain: straight
+    texture: coarse; very lightweight and buoyant when dry
+    density_kg_m3: null
+    janka_n: null
+    workability: easy to carve; soaks up water when green
+    rot_resistance: not durable
+    scent: null
+    fuel: null
+    uses:
+    - surfboards
+    - outrigger floats (ama) for canoes
+    - fishnet floats
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes:
+    - ash from the burned wood gave a dye
+    medicinal:
+    - flowers brewed as tonic for illnesses
+    toxicity: seeds probably poisonous; related Erythrina seeds carry curare-like alkaloids
+  lore:
+    folklore: []
+    cultures:
+    - seeds strung into lei; Captain Cook was given wiliwili-seed lei in 1778
+    - royalty rode wiliwili olo boards
+    symbolism:
+    - rare dry forest symbol under threat from the gall wasp
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/very light woods: floats, boards, canoes'
+    - 'seasonal tree: loses leaves in summer drought'
+  sources:
+  - https://www.ctahr.hawaii.edu/gsp/doc/Forestry/Little_Skolmen_CFT/CFT_Erythrina_sandwicensis.pdf
+  - https://dev-dlnr.hawaii.gov/forestry/plants/wiliwili/
+  - https://en.wikipedia.org/wiki/Erythrina_sandwicensis
+- id: macrozamia
+  names:
+  - burrawang
+  - zamia palm
+  scientific: Macrozamia communis
+  rank: genus
+  stands_for:
+  - Macrozamia riedlei
+  - Macrozamia moorei
+  - Lepidozamia peroffskyana
+  distinct_from:
+  - 'cycad: Macrozamia is the Australian cycad'
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - cultural
+  - product
+  habitat:
+    range: eastern and southwestern Australia (NSW, Queensland, WA)
+    ecosystem: dry sclerophyll forest, coastal heath, woodland
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: null
+    elevation_m:
+    - 0
+    - 800
+    substrate: sandy and sandstone soils, coastal dunes; symbiotic cyanobacteria in coralloid roots
+    niche: palm-like ground-layer plant in open woodland
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: short stout trunk with a crown of stiff, upright pinnate fronds
+    height_m:
+    - 0.5
+    - 7
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: 120
+    growth_rate: slow
+    leaves: evergreen, glossy dark green, stiff, pinnate fronds up to 2 m
+    seasonal: evergreen; coning after fire
+    flowers: large cones in the centre of the crown, male and female on separate plants
+    fruit_visible: female cones up to 45 cm break apart to release scarlet seeds 3-5 cm long
+    bark: trunk covered with old leaf bases
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - seeds pounded and soaked for a week to leach toxins, then made into cakes roasted on embers
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: seeds and plant contain cycasin and neurotoxin BMAA; raw seeds poison humans and stock
+  lore:
+    folklore: []
+    cultures:
+    - Cadigal people leached the seeds for a week, changing the water daily, before cooking
+    - raw seeds have killed people and livestock
+    symbolism:
+    - living-fossil lineage that dates to dinosaur times
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: raw seeds poison'
+    dimensions: []
+    hooks:
+    - 'crafting/food processing: leach toxic seeds into flour'
+    - poison hazard for first-session foraging
+  sources:
+  - https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?page=nswfl&lvl=sp&name=Macrozamia~communis
+  - https://anpsa.org.au/plant_profiles/macrozamia-communis/
+  - https://en.wikipedia.org/wiki/Macrozamia_communis
+- id: myrtle-beech
+  names:
+  - myrtle beech
+  - silver beech
+  - Antarctic beech
+  - Lophozonia cunninghamii
+  scientific: Nothofagus cunninghamii
+  rank: group
+  stands_for:
+  - Nothofagus menziesii (silver beech)
+  - Nothofagus moorei (Antarctic beech)
+  distinct_from:
+  - 'lenga: lenga is the deciduous Patagonian beech'
+  - 'red-beech: red beech is the NZ Fuscospora'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Tasmania, Victoria, NSW and Queensland uplands; silver beech in New Zealand
+    ecosystem: cool temperate rainforest, mossy forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: 'moisture: humid, very high rainfall'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: deep, moist, acidic soils
+    niche: dominant canopy of Gondwanan rainforest
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: straight trunk, spreading crown; stunted shrub in alpine fringe
+    height_m:
+    - 1
+    - 55
+    trunk_diameter_m:
+    - 0.5
+    - 2.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, small, glossy dark green, with toothed edges
+    seasonal: evergreen; new growth flushes bronze-red
+    flowers: inconspicuous, tiny
+    fruit_visible: tiny winged nuts
+    bark: grey to dark brown, rough and scaly, with a thick mossy cover
+  timber:
+    heartwood: pinkish to red-brown
+    sapwood: pale
+    grain: straight
+    texture: fine
+    density_kg_m3: 625
+    janka_n: 5840
+    workability: easy to work, stable
+    rot_resistance: non-durable to perishable
+    scent: null
+    fuel: fair
+    uses:
+    - furniture
+    - veneer
+    - turning
+    - flooring
+  products:
+    food:
+    - edible fungi grow on it (beech orange, Cyttaria)
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Tasmanian 'myrtle' timber is the state's best-known furniture wood; Gondwanan relics shown by Nothofagus
+      fossils in Antarctica
+    symbolism:
+    - Gondwana connection
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions:
+    - aether
+    hooks:
+    - 'mossy ancient forest: old-growth biome marker'
+    - crafting/furniture wood
+  sources:
+  - https://www.wood-database.com/tasmanian-myrtle/
+  - https://en.wikipedia.org/wiki/Nothofagus_cunninghamii
+- id: red-beech
+  names:
+  - red beech
+  - hard beech
+  - Fuscospora fusca
+  scientific: Nothofagus fusca
+  rank: group
+  stands_for:
+  - Nothofagus truncata (hard beech)
+  distinct_from:
+  - 'black-beech: black beech has sooty trunks'
+  - 'myrtle-beech: myrtle beech is the Lophozonia group'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: 'New Zealand: North Island from about 37° S southward (not Mt Taranaki) and South Island'
+    ecosystem: montane and lowland beech forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: fertile, well-drained soils on terraces and slopes
+    niche: dominant canopy of lowland and montane beech forest
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: straight trunk, large buttresses, broad crown
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 1.0
+    - 3.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, 2-4 cm, thin, coarsely and sharply toothed, bright green
+    seasonal: new leaves red-flushed; reddening in winter
+    flowers: inconspicuous, in spring
+    fruit_visible: small three-sided nuts
+    bark: smooth and whitish when young; grey and deeply furrowed on old trees, which often have buttresses
+  timber:
+    heartwood: light brown to red-brown, sometimes cherry red
+    sapwood: paler
+    grain: straight
+    texture: even, close
+    density_kg_m3: 630
+    janka_n: null
+    workability: notoriously slow and difficult to dry; once dry, stable and very easy to machine, turn
+      and finish
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good
+    uses:
+    - mining timbers and railway sleepers
+    - bridge and deck timbers
+    - fence posts
+    - furniture
+    - turning (burr wood prized)
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - called 'tawhai raunui' by Maori
+    cultures:
+    - Maori and settler timber trade
+    symbolism:
+    - the dominant beech of New Zealand's southern forests
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - crafting/timber
+  sources:
+  - https://www.nzpcn.org.nz/flora/species/fuscospora-fusca/
+  - https://www.naw.org.nz/timber/red-beech
+  - https://en.wikipedia.org/wiki/Nothofagus_fusca
+- id: ironbark
+  names:
+  - red ironbark
+  - mugga
+  scientific: Eucalyptus sideroxylon
+  rank: group
+  stands_for:
+  - Eucalyptus crebra
+  - Eucalyptus paniculata
+  distinct_from:
+  - 'stringybark: stringybark has soft fibrous bark'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  habitat:
+    range: eastern Australia (Queensland to Victoria, inland slopes)
+    ecosystem: dry sclerophyll woodland and grassy forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'moisture: semi-arid to subhumid'
+    elevation_m:
+    - 100
+    - 700
+    substrate: poor, shallow and rocky soils, granite and sandstone
+    niche: canopy tree of dry open forests
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk and spreading crown; forms a lignotuber
+    height_m:
+    - 10
+    - 35
+    trunk_diameter_m:
+    - 0.5
+    - 1.2
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, glaucous blue-grey juvenile leaves, narrow green adult leaves
+    seasonal: evergreen; flowers winter, heavy honey flow
+    flowers: deep pink to red, white or cream blossoms in winter
+    fruit_visible: small urn-shaped capsules
+    bark: thick, black-brown, deeply furrowed and ridged, hard and tight
+  timber:
+    heartwood: deep red to dark brown
+    sapwood: pale yellow
+    grain: interlocked, slightly wavy
+    texture: medium to coarse
+    density_kg_m3: 1100
+    janka_n: 11900
+    workability: very hard to work; blunts tools; difficult to nail
+    rot_resistance: very durable; termite and marine borer resistant
+    scent: null
+    fuel: excellent, burns very hot
+    uses:
+    - bridge timbers
+    - railway sleepers
+    - wharf piles
+    - heavy structures
+    - fence posts
+    - charcoal
+  products:
+    food:
+    - honey from nectar
+    sap_resin_latex:
+    - kino
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Colonial bridges, wharves and railway sleepers were built of ironbark
+    symbolism:
+    - the Australian hardwood hallmark
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: super-hard, rot-proof timber'
+    dimensions: []
+    hooks:
+    - 'crafting/very hard timber: tough tool and bridge material'
+    - charcoal for smelting
+  sources:
+  - https://www.gpems.com.au/Brochures%20in%20pdf/Timber/Hurford%20red-ironbark-species-guide.pdf
+  - https://en.wikipedia.org/wiki/Eucalyptus_sideroxylon
+- id: king-billy-pine
+  names:
+  - King Billy pine
+  - pencil pine
+  scientific: Athrotaxis selaginoides
+  rank: group
+  stands_for:
+  - Athrotaxis cupressoides (pencil pine)
+  distinct_from:
+  - 'huon-pine: Huon pine is a lowland riverside podocarp'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: western and central Tasmania highlands (Athrotaxis selaginoides); pencil pine A. cupressoides
+      on high plateaus
+    ecosystem: cool temperate rainforest and subalpine woodland
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      moisture:
+      - wet
+      note: 'temperature: cool-temperate to subalpine; moisture: very humid, over 1500 mm rain'
+    elevation_m:
+    - 600
+    - 1250
+    substrate: acidic peaty soils on dolerite, quartzite and sandstone
+    niche: emergent over myrtle beech rainforest; pencil pine on exposed plateaus
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall conical conifer with a straight trunk and dense foliage; pencil pine is narrow and shrubby
+      at altitude
+    height_m:
+    - 20
+    - 38
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: 940
+    growth_rate: slow
+    leaves: evergreen, scale-like, overlapping, bright green and dense on branchlets
+    seasonal: evergreen
+    flowers: small cones
+    fruit_visible: small round cones, 1-2 cm
+    bark: orange-red, soft and spongy, slightly furrowed, peeling in long strips
+  timber:
+    heartwood: pink to reddish brown
+    sapwood: yellow
+    grain: straight
+    texture: fine, with close prominent growth rings
+    density_kg_m3: null
+    janka_n: null
+    workability: very light and soft; splits easily; seasons readily; planes and bends well but bruises
+      easily
+    rot_resistance: very durable
+    scent: mild
+    fuel: null
+    uses:
+    - boat building
+    - joinery
+    - shingles
+    - sounding boards in musical instruments
+    - vats
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Fires since European settlement have destroyed stands because the trees do not regrow after fire
+    symbolism:
+    - Gondwanan relic, with fossils from the Jurassic and Cretaceous in Patagonia and Antarctica
+    notable_trees:
+    - tree-ring records show trees at least 940 years old (Cradle Mountain-Lake St Clair National Park)
+  game_fit:
+    fields:
+      liminality: 'high: millennium-old relic of Gondwana, fire-sensitive'
+    dimensions:
+    - aether
+    hooks:
+    - 'old-growth: millennium-old trees as lore anchors'
+  sources:
+  - https://www.conifers.org/cu/Athrotaxis_selaginoides.php
+  - https://en.wikipedia.org/wiki/Athrotaxis_selaginoides
+- id: celery-top-pine
+  names:
+  - celery-top pine
+  scientific: Phyllocladus aspleniifolius
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'huon-pine: celery-top has leaf-like cladodes'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Tasmania (endemic), from sea level to the treeline
+    ecosystem: cool temperate rainforest and wet eucalypt forest understory
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1200
+    substrate: acidic well-drained sandy and loamy soils
+    niche: slow-growing understorey and canopy conifer of wet forests
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: conical to rounded conifer with whorled branches and a single trunk
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.3
+    - 0.5
+    lifespan_y: 650
+    growth_rate: slow
+    leaves: evergreen; real leaves are tiny scales; the 'foliage' is flat green leaf-like cladodes with
+      a toothed, celery-like edge
+    seasonal: evergreen
+    flowers: small cones
+    fruit_visible: small fleshy seed cones
+    bark: dark brown with large lenticels, becoming scaly and furrowed; red or pink inner bark
+  timber:
+    heartwood: pale yellow to pale brown, darkening to gold with age
+    sapwood: narrow, not readily distinguished
+    grain: usually straight, with conspicuous close growth rings
+    texture: fine, even
+    density_kg_m3: 645
+    janka_n: 4500
+    workability: easy to work; strong and tough; knotty in timber from small trees
+    rot_resistance: durable in and above ground
+    scent: null
+    fuel: null
+    uses:
+    - boat building
+    - vats, including for acid storage
+    - joinery and flooring
+    - furniture
+    - turnery and carving
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Prized by Tasmanian boat builders and furniture makers
+    symbolism:
+    - Phyllocladus is a Gondwanan genus with relatives in New Zealand and New Guinea; a classic case of
+      timber mining, as trees take centuries to mature
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/boat timber: durable and workable'
+  sources:
+  - https://www.conifers.org/po/Phyllocladus_aspleniifolius.php
+  - https://www.woodsolutions.com.au/wood-species/softwood/pine-celery-top
+  - https://en.wikipedia.org/wiki/Phyllocladus_aspleniifolius
+- id: kahikatea
+  names:
+  - kahikatea
+  - white pine
+  scientific: Dacrycarpus dacrydioides
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'rimu: kahikatea is taller, grows in swamps and has pale wood'
+  - 'totara: tōtara has red wood'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  habitat:
+    range: New Zealand, from Northland to Stewart Island
+    ecosystem: swamp forest, alluvial flats and lowland podocarp forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'moisture: humid, waterlogged'
+    elevation_m:
+    - 0
+    - 600
+    substrate: poorly drained alluvial and peaty soils
+    niche: tall emergent of swamp and floodplain forest
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: narrow conical in youth, becoming a straight tall trunk with a rounded, dense crown
+    height_m:
+    - 40
+    - 65
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: 716
+    growth_rate: moderate
+    leaves: evergreen; juvenile leaves feathery and soft, adult leaves tiny scales in cypress-like sprays
+    seasonal: evergreen
+    flowers: small cones
+    fruit_visible: a bright red fleshy cup (receptacle) bearing a single black seed
+    bark: dark grey, finely knobbly, flaking in large oval scales
+  timber:
+    heartwood: pale to bright yellow
+    sapwood: creamy white
+    grain: straight
+    texture: fine, even
+    density_kg_m3: 460
+    janka_n: null
+    workability: soft and dents easily; close-grained; borer-prone without treatment
+    rot_resistance: non-durable
+    scent: odourless, tasteless
+    fuel: null
+    uses:
+    - butter and cheese boxes (odourless, taint-free)
+    - Māori carving and canoes
+    - joinery, pallets
+  products:
+    food:
+    - red fruit receptacles, sweet, eaten by Maori and by birds
+    - seeds
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - Māori used a leaf decoction for urinary complaints
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Lowland kahikatea swamp forests were mostly felled for butter boxes in the 20th century
+    - Māori used the wood for weapons and canoes, heartwood soot for tattooing, bark for torches and the
+      gum for chewing
+    symbolism:
+    - New Zealand's tallest tree
+    notable_trees:
+    - 'Pirongia Forest Reserve: 62.7 m, New Zealand''s tallest measured native tree'
+    - 'Paengaroa Scenic Reserve, near Taihape: about 716 years old'
+  game_fit:
+    fields:
+      liminality: 'high: swamp forest giant'
+    dimensions: []
+    hooks:
+    - 'foraging: edible red fruit'
+    - swamp biome emergent tree
+  sources:
+  - https://www.conifers.org/po/Dacrycarpus_dacrydioides.php
+  - https://teara.govt.nz/en/conifers/page-3
+  - https://www.naw.org.nz/timber/kahikatea
+- id: puriri
+  names:
+  - pūriri
+  scientific: Vitex lucens
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - folklore
+  - medicinal
+  habitat:
+    range: 'northern New Zealand: Three Kings Islands and North Island from Te Paki to Taranaki and northern
+      Hawke''s Bay; scarce south of Ōpōtiki and Kawhia'
+    ecosystem: warm lowland coastal and broadleaf forest
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to subtropical'
+    elevation_m:
+    - 0
+    - 800
+    substrate: fertile volcanic and alluvial soils
+    niche: lowland broadleaf forest canopy and understory
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: broad, spreading crown on a thick, often gnarled and buttressed trunk
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.8
+    - 1.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, opposite, glossy dark green compound leaves of 3-5 wrinkled leaflets radiating
+      from the stalk tip
+    seasonal: evergreen; flowers May to October and fruits through most of the year
+    flowers: tubular two-lipped flowers 2.5-3.5 cm, rose-pink (fluorescent pink to dark red, rarely white)
+    fruit_visible: glossy bright red drupes 2-2.6 cm across
+    bark: thin, grey-brown to light brown, flaking in small shards
+  timber:
+    heartwood: greenish dark brown, sometimes nearly black or yellow-streaked
+    sapwood: yellowish
+    grain: interlocked
+    texture: medium
+    density_kg_m3: 900
+    janka_n: null
+    workability: cross-grained and hard to carve; with sharp tools cuts and polishes well; much timber
+      is riddled with pūriri moth tunnels
+    rot_resistance: extremely durable, ground-durable 50 years or more
+    scent: null
+    fuel: null
+    uses:
+    - fence posts, railway sleepers, shipbuilding and house blocks
+    - Māori garden tools, weapons and hīnaki eel traps (the wood sinks)
+    - furniture, inlay veneer and turning
+  products:
+    food:
+    - fruit eaten by kererū and other native birds
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - boiled leaf infusions in medicine; leaves worn as coronets at tangi
+    dyes: []
+    medicinal:
+    - Māori bathed sprains and backache with infusions of boiled leaves and used them for ulcers and sore
+      throats
+    toxicity: null
+  lore:
+    folklore:
+    - pūriri trees and groves were often tapu through use as burial sites; leaf infusions washed the bodies
+      of the dead
+    - buckshot was said to ricochet off pūriri palisades
+    cultures:
+    - Maori burial and medicine use
+    - Giant pūriri moth (Aenetus virescens) caterpillars bore tunnels into trunks
+    symbolism:
+    - northern New Zealand's most durable native hardwood
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: burial tree and tapu wood'
+    dimensions:
+    - aether
+    hooks:
+    - crafting/very durable timber for posts
+    - hollow trunks as hiding and burial sites
+  sources:
+  - https://www.nzpcn.org.nz/flora/species/vitex-lucens/
+  - https://www.naw.org.nz/timber/Puriri
+  - https://en.wikipedia.org/wiki/Vitex_lucens
+- id: nikau
+  names:
+  - nīkau
+  scientific: Rhopalostylis sapida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kentia-palm: kentia is the Lord Howe palm'
+  - 'cabbage-tree: cabbage tree is a Cordyline, not a palm'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: New Zealand (North Island to northern South Island) and the Chatham Islands
+    ecosystem: coastal and lowland forest, gullies and cliffs
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 600
+    substrate: moist, fertile soils; coastal bluffs
+    niche: understory palm below the broadleaf canopy
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: single slender ringed trunk with a smooth, bulging green crownshaft and an erect crown of fronds;
+      takes 40-50 years to form a trunk
+    height_m:
+    - 3
+    - 15
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: 200
+    growth_rate: slow
+    leaves: evergreen, erect pinnate fronds up to 3 m with closely set leaflets up to 1 m
+    seasonal: evergreen
+    flowers: lilac to pink flowers on many-branched spikes below the crownshaft
+    fruit_visible: oblong red fruits about 1 cm in heavy clusters
+    bark: smooth grey-green trunk, ringed with leaf scars
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - fronds as thatch and basketry
+    - trunks as posts and fences
+  products:
+    food:
+    - heart (growing tip, a 'cabbage') eaten raw or cooked; fruit eaten by birds
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - fronds used to thatch whare and as baskets and wrappers for food
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - Maori cooked the heart; the red berries feed the kereru
+    cultures:
+    - thatching of shelters, baskets, and food-wrapping
+    symbolism:
+    - southernmost native palm in the world (about 44 degrees S)
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/thatch: fronds for roofing'
+    - 'foraging: palm heart'
+  sources:
+  - https://www.nzpcn.org.nz/flora/species/rhopalostylis-sapida/
+  - https://www.visitzealandia.com/learn/nature-and-wildlife/plants/n%C4%ABkau/
+  - https://en.wikipedia.org/wiki/Rhopalostylis_sapida
+- id: lilly-pilly
+  names:
+  - lilly pilly
+  - riberry
+  scientific: Syzygium smithii
+  rank: group
+  stands_for:
+  - Syzygium luehmannii (riberry)
+  distinct_from:
+  - 'jamun: lilly pilly has pink-to-white tart fruit'
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  habitat:
+    range: eastern Australia, from north-east Queensland to Victoria, coast to ranges
+    ecosystem: rainforest, often along creeks and gullies
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - humid
+      note: 'temperature: subtropical to warm-temperate'
+    elevation_m:
+    - 0
+    - 800
+    substrate: moist loam and sand, near creeks
+    niche: understory and mid-canopy of rainforest margins
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: dense, much-branched evergreen tree or tall shrub, popular hedging
+    height_m:
+    - 3
+    - 20
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, glossy, small, with new growth in pink-red
+    seasonal: evergreen; red new growth in spring and summer
+    flowers: fluffy cream-white clusters, November to February
+    fruit_visible: clusters of round white, pink or purple fruit 0.8-2 cm
+    bark: smooth to slightly flaky, cracking lengthwise on older stems
+  timber:
+    heartwood: pale brown
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: 700
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - occasionally milled as "lillipilli satinash", a structural timber
+    - hedging
+  products:
+    food:
+    - fruit edible but not very palatable; used in jams
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Aboriginal bush-food fruit
+    - common hedging in Australian gardens
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'foraging: edible berries for first-session food'
+  sources:
+  - https://apps.lucidcentral.org/rainforest/text/entities/syzygium_smithii.htm
+  - https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?page=nswfl&lvl=sp&name=Acmena~smithii
+  - https://en.wikipedia.org/wiki/Syzygium_smithii
+- id: black-beech
+  names:
+  - black beech
+  - mountain beech
+  - Fuscospora solandri
+  scientific: Nothofagus solandri
+  rank: group
+  stands_for:
+  - Nothofagus cliffortioides (mountain beech)
+  distinct_from:
+  - 'red-beech: black beech is small-leaved with sooty trunks'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: 'New Zealand: South Island and North Island (very rare north of the Central Volcanic Plateau
+      and East Cape)'
+    ecosystem: montane and dry-side beech forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 1400
+    substrate: infertile, free-draining soils of drier slopes
+    niche: dominant canopy on drier eastern slopes
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: straight trunk with stout, spreading, tiered ("pagoda") branches
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, small (10-15 mm), leathery, oblong with entire, slightly incurved edges; dark green
+      above, grey-white felted below
+    seasonal: evergreen
+    flowers: tiny, inconspicuous
+    fruit_visible: tiny winged nuts
+    bark: rough, furrowed, charcoal black, coated in sooty mould that grows on honeydew
+  timber:
+    heartwood: pinkish to yellowish when fresh, often with darker patches
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - fence posts
+    - firewood
+    - turning
+  products:
+    food:
+    - honeydew (sugary excretion of scale insects) is gathered by bees and honeyeaters
+    sap_resin_latex:
+    - honeydew
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Honeydew honey is harvested from beech forests of the South Island
+    symbolism:
+    - the sooty trunk is a visual signature of honeydew forests
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'foraging: honeydew as sweet food'
+  sources:
+  - https://www.nzpcn.org.nz/flora/species/fuscospora-solandri/
+  - https://en.wikipedia.org/wiki/Nothofagus_solandri
+- id: lemon-myrtle
+  names:
+  - lemon myrtle
+  scientific: Backhousia citriodora
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lemon-scented-gum: lemon-scented gum is a tall eucalypt'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  habitat:
+    range: 'Queensland: scattered in the north-east, and central to south-eastern Queensland'
+    ecosystem: rainforest and vine forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 20
+    - 800
+    substrate: deep, moist, fertile loams
+    niche: understory and mid-canopy tree of rainforest
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: small tree with dense foliage
+    height_m:
+    - 5
+    - 25
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, opposite, elliptic, 4-15 cm, dark green and smooth above, strongly lemon-scented
+      when crushed
+    seasonal: evergreen
+    flowers: masses of small creamy-white flowers in clusters at branch ends, summer to autumn
+    fruit_visible: small dry brown capsules
+    bark: rough, becoming dark and fissured
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: strong lemon scent from leaves
+    fuel: null
+    uses: []
+  products:
+    food:
+    - dried or fresh leaves as a lemon-flavoured bush spice in teas, cooking and baking
+    sap_resin_latex:
+    - essential oil, up to 90 percent citral
+    bark: []
+    leaves:
+    - leaf oil, rich in citral
+    dyes: []
+    medicinal:
+    - antimicrobial leaf oil
+    toxicity: essential oil can irritate skin at high concentration
+  lore:
+    folklore: []
+    cultures:
+    - called lemon ironwood in older forestry literature
+    - 'two chemical forms: citral-rich (grown for food) and citronellal-rich'
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: spice and oil'
+    dimensions: []
+    hooks:
+    - 'crafting/spice: citral-rich leaves'
+    - perfume and cleaning oils
+  sources:
+  - https://apps.lucidcentral.org/rainforest/text/entities/backhousia_citriodora.htm
+  - https://anpsa.org.au/plant_profiles/backhousia-citriodora/
+  - https://en.wikipedia.org/wiki/Backhousia_citriodora
+- id: kakadu-plum
+  names:
+  - Kakadu plum
+  - gubinge
+  scientific: Terminalia ferdinandiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tropical-almond: Kakadu plum is a small-fruited savanna Terminalia'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - medicinal
+  habitat:
+    range: 'northern Australia: Top End of the Northern Territory and the Kimberley, Western Australia'
+    ecosystem: tropical savanna woodland, open eucalypt woodland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: monsoonal, wet-dry'
+    elevation_m:
+    - 0
+    - 400
+    substrate: sandy and lateritic soils
+    niche: small understory tree of savanna woodland
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small, open tree with a spreading crown
+    height_m:
+    - 4
+    - 14
+    trunk_diameter_m:
+    - 0.1
+    - 0.4
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: semi-deciduous, large oval pale green leaves clustered at the branch ends
+    seasonal: leaf loss in the dry season
+    flowers: small, perfumed, creamy-white flowers on spikes
+    fruit_visible: almond-sized yellow-green fruit about 2 cm long with a short beak and one large seed
+    bark: creamy-grey, flaky
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - fruit has the highest vitamin C of any fruit (over 17% of dry weight); eaten fresh or in jam
+    sap_resin_latex: []
+    bark:
+    - bark used in bush medicine for skin disorders and infections
+    leaves: []
+    dyes: []
+    medicinal:
+    - Aboriginal people use the fruit as food and medicine and the bark for skin disorders and infections
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - called billy goat plum in the NT, gubinge around Broome and MiMarrarl at Wadeye; now a growing Aboriginal-run
+      enterprise
+    symbolism:
+    - bush food superfruit
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: vitamin-C fruit'
+    dimensions: []
+    hooks:
+    - 'first-session healing food: prevents scurvy-like debuff'
+  sources:
+  - https://www.cdu.edu.au/riel/research/kakadu-plum-commercialisation
+  - https://en.wikipedia.org/wiki/Terminalia_ferdinandiana
+- id: davidson-plum
+  names:
+  - Davidson's plum
+  scientific: Davidsonia pruriens
+  rank: group
+  stands_for:
+  - Davidsonia jerseyana
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  habitat:
+    range: north-east Queensland rainforest, Cardwell to Cooktown (D. pruriens); D. jerseyana in NSW from
+      the Brunswick River to the Tweed Valley
+    ecosystem: well-developed tropical and subtropical rainforest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 800
+    substrate: moist, fertile volcanic loams
+    niche: slender understory pioneer in rainforest gaps
+    strata:
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: slender, sparsely branched small tree
+    height_m:
+    - 3
+    - 12
+    trunk_diameter_m:
+    - 0.05
+    - 0.3
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, huge pinnate leaves up to 80 cm with toothed leaflets, covered in irritant hairs;
+      new growth bright pink
+    seasonal: evergreen
+    flowers: small reddish-brown flowers in pendulous clusters on the trunk and branches
+    fruit_visible: blue-black to purple plums 3-5 cm with sour red flesh, borne on the trunk
+    bark: smooth, grey-brown
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - sour plums for jam, sauces and drinks; bush food
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: hydrogen cyanide has been reported from the species, and eating the fruit has caused vomiting
+      and stomach pain
+  lore:
+    folklore: []
+    cultures:
+    - Eaten by Aboriginal peoples of northern NSW and Queensland rainforests
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'foraging: fruit grows on the trunk, easy to harvest'
+  sources:
+  - https://apps.lucidcentral.org/rainforest/text/entities/davidsonia_pruriens.htm
+  - https://anpsa.org.au/plant_profiles/davidsonia-pruriens/
+  - https://en.wikipedia.org/wiki/Davidsonia_pruriens
+- id: finger-lime
+  names:
+  - finger lime
+  - desert lime
+  scientific: Citrus australasica
+  rank: group
+  stands_for:
+  - Citrus glauca (desert lime)
+  distinct_from:
+  - 'lemon: finger lime has caviar-like pulp vesicles'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  habitat:
+    range: dry and subtropical rainforest of south-east Queensland and north-east NSW (north from Ballina)
+      (C. australasica); C. glauca desert lime inland
+    ecosystem: subtropical rainforest margins and dry rainforest; desert lime in arid woodland
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      - semi-arid
+      - humid
+      note: 'moisture: humid; desert lime semi-arid'
+    elevation_m:
+    - 0
+    - 600
+    substrate: volcanic and alluvial loams
+    niche: thorny understory shrub-tree in rainforest
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: thorny, slender, multi-stemmed shrub or small tree
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m:
+    - 0.05
+    - 0.2
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, small (1-5 cm) aromatic leaves, often notched at the tip, on thorny stems
+    seasonal: evergreen
+    flowers: small white or pale pink flowers
+    fruit_visible: finger-shaped fruit mostly 4-8 cm (up to 12 cm), green, yellow, black, purple or red,
+      filled with caviar-like juice vesicles
+    bark: grey-brown, with straight spines up to 2.5 cm at the leaf axils
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - pulp vesicles ('citrus caviar') used in cooking and drinks; rind and juice
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Aboriginal peoples of Bundjalung country ate the fruit; now a gourmet crop
+    symbolism:
+    - Australian bush-food citrus; wild relatives of modern citrus
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: fruit pulp'
+    dimensions: []
+    hooks:
+    - 'foraging: fruit with beads of juice; thorns guard the plant'
+  sources:
+  - https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?page=nswfl&lvl=sp&name=Citrus~australasica
+  - https://anpsa.org.au/plant_profiles/citrus-australasica/
+  - https://en.wikipedia.org/wiki/Citrus_australasica
+- id: firewheel-tree
+  names:
+  - firewheel tree
+  scientific: Stenocarpus sinuatus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'illawarra-flame-tree: flame tree flowers are bells on a bare crown'
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  habitat:
+    range: eastern Australia, from north-east Queensland to north-east NSW (north from the Nambucca River)
+    ecosystem: subtropical rainforest and its margins
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1200
+    substrate: moist loams, volcanic and sandstone soils
+    niche: understory and canopy of rainforest margins
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: narrow, upright to pyramidal tree with a dense crown
+    height_m:
+    - 6
+    - 35
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, glossy dark green, leathery; entire and oblong or deeply lobed, up to 45 cm
+    seasonal: evergreen; flowers in autumn
+    flowers: umbels of 12-20 red to orange tubular flowers radiating like the spokes of a wheel
+    fruit_visible: boat-shaped woody follicles 5-10 cm
+    bark: grey to brown, wrinkled, sometimes corky
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: silky-oak figure from large rays
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - nectar for honeyeaters and honey
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Popular street tree in Queensland and NSW
+    symbolism:
+    - a wheel of red flowers on the tree
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: bright, cheerful bloom'
+    dimensions: []
+    hooks:
+    - decorative flower for dyes and decoration
+  sources:
+  - https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?page=nswfl&lvl=sp&name=Stenocarpus~sinuatus
+  - https://apps.lucidcentral.org/rainforest/text/entities/stenocarpus_sinuatus.htm
+  - https://en.wikipedia.org/wiki/Stenocarpus_sinuatus
+- id: red-flowering-gum
+  names:
+  - red-flowering gum
+  scientific: Corymbia ficifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'marri: marri has white flowers and a large spreading habit'
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - well-known
+  habitat:
+    range: 'south-west Western Australia: a small subcoastal range east of Mt Frankland and Walpole, near
+      Albany and in the Stirling Range; widely planted'
+    ecosystem: coastal heath and woodland on granite
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - seasonally-dry
+      - humid
+      note: 'moisture: humid, Mediterranean'
+    elevation_m:
+    - 0
+    - 300
+    substrate: granite sands and loams, near the coast
+    niche: small tree of coastal woodland on granite
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small, often straggly tree with a rounded, dense crown; grows from a lignotuber
+    height_m:
+    - 4
+    - 10
+    trunk_diameter_m:
+    - 0.3
+    - 0.8
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, stiff, dark glossy green above and paler below, broad lance-shaped
+    seasonal: evergreen; summer flowering
+    flowers: huge heads of scarlet, pink or orange blossom (white in some cultivated seedlings), mostly
+      summer to autumn
+    fruit_visible: large woody urn-shaped gumnuts 2-4 cm with winged seeds
+    bark: rough and fibrous to the small branches, furrowed or tessellated on larger trees, brown to grey-brown
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - nectar for honey
+    sap_resin_latex:
+    - kino
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - A favourite street and park tree across Australia, California, New Zealand and South Africa
+    symbolism:
+    - the showiest of the eucalypts
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: showy bloom'
+    dimensions: []
+    hooks:
+    - flower dye and decoration
+    - pollinator magnet
+  sources:
+  - https://apps.lucidcentral.org/euclid/text/entities/corymbia_ficifolia.htm
+  - https://anpsa.org.au/plant_profiles/corymbia-ficifolia/
+  - https://en.wikipedia.org/wiki/Corymbia_ficifolia
+- id: sydney-red-gum
+  names:
+  - Sydney red gum
+  - smooth-barked apple
+  scientific: Angophora costata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ghost-gum: Sydney red gum has salmon-pink bark and contorted limbs'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  habitat:
+    range: eastern Australia, coastal NSW (Sydney region) to southeast Queensland
+    ecosystem: dry sclerophyll forest on sandstone and shale
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 600
+    substrate: sandstone and shallow sandy soils
+    niche: canopy and emergent tree of sandstone ridges
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: crooked, contorted trunk and limbs with a spreading crown
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.6
+    - 1.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, glossy green, lance-shaped, opposite leaves
+    seasonal: evergreen; bark sheds in summer
+    flowers: large clusters of white to cream blossoms in summer, no operculum
+    fruit_visible: ribbed, cup-shaped capsules
+    bark: smooth, pink-orange to salmon, shed in patches each summer, then turning grey
+  timber:
+    heartwood: pale brown
+    sapwood: null
+    grain: interlocked, often with gum veins
+    texture: coarse
+    density_kg_m3: 990
+    janka_n: 10000
+    workability: hard; gum veins
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good
+    uses:
+    - firewood
+    - fence posts
+    - poles
+  products:
+    food:
+    - nectar for honey
+    sap_resin_latex:
+    - red kino
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Aboriginal peoples used the kino medicinally
+    symbolism:
+    - Sydney sandstone landscape icon; Angophora means 'vessel carrying' for the fruit
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - bark colour changes through the year, a visible seasonal cue
+  sources:
+  - https://www.wood-database.com/smooth-barked-apple/
+  - https://en.wikipedia.org/wiki/Angophora_costata
+- id: stringybark
+  names:
+  - messmate stringybark
+  - stringybark
+  scientific: Eucalyptus obliqua
+  rank: group
+  stands_for:
+  - Eucalyptus baxteri
+  - Eucalyptus macrorhyncha
+  distinct_from:
+  - 'ironbark: ironbark has hard furrowed bark'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - striking
+  habitat:
+    range: southeastern Australia (Tasmania, Victoria, NSW, South Australia)
+    ecosystem: wet and dry sclerophyll forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'temperature: cool-temperate to warm-temperate; moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 1000
+    substrate: poor to moderately fertile sandy and clay loams
+    niche: forest canopy
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall straight trunk with an open, rounded crown
+    height_m:
+    - 15
+    - 90
+    trunk_diameter_m:
+    - 0.8
+    - 2.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, long, glossy, lance-shaped, asymmetric (oblique) bases
+    seasonal: evergreen; flowers late spring to summer
+    flowers: white to cream, in clusters of 7-15
+    fruit_visible: small woody cup-shaped capsules
+    bark: thick, brown, fibrous, soft and stringy, extending onto the branches
+  timber:
+    heartwood: pale brown to pinkish
+    sapwood: pale
+    grain: straight to slightly interlocked
+    texture: coarse
+    density_kg_m3: 750
+    janka_n: 6750
+    workability: moderately easy; prone to gum veins and splitting
+    rot_resistance: not durable in ground
+    scent: null
+    fuel: good
+    uses:
+    - building frames
+    - flooring
+    - furniture
+    - pulp
+    - fence posts
+  products:
+    food:
+    - nectar for honey
+    sap_resin_latex:
+    - kino
+    bark:
+    - thick sheets of bark peeled for roofing and huts; fibre for rope, string and torches
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Aboriginal peoples stripped the bark to make shelters, canoes and containers
+    - First Fleet settlers used the bark for hut roofs
+    symbolism:
+    - Eucalyptus obliqua was the first eucalypt to be formally described (1789, from Bruny Island, Tasmania)
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/bark: sheet bark for roofing and canoes'
+    - 'fire hazard: the stringy bark carries fire into the crown'
+  sources:
+  - https://www.wood-database.com/messmate/
+  - https://en.wikipedia.org/wiki/Eucalyptus_obliqua
+- id: salmon-gum
+  names:
+  - salmon gum
+  - gimlet
+  scientific: Eucalyptus salmonophloia
+  rank: group
+  stands_for:
+  - Eucalyptus salubris (gimlet)
+  distinct_from:
+  - 'karri: salmon gum is a dry-woodland tree'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: southwestern Western Australia, the wheatbelt and Goldfields
+    ecosystem: eucalypt woodland on clay and loam plains
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      - tropical
+      moisture:
+      - semi-arid
+      note: 'temperature: warm-temperate to hot; moisture: semi-arid, about 250-400 mm rain'
+    elevation_m:
+    - 200
+    - 500
+    substrate: alkaline red loams, clays and sandy clays
+    niche: canopy of salmon gum woodlands
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: straight trunk, rounded to spreading crown
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m:
+    - 0.5
+    - 1.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, narrow lance-shaped, glossy green
+    seasonal: evergreen; flowers autumn to winter
+    flowers: white to cream
+    fruit_visible: small urn-shaped capsules
+    bark: smooth, shiny salmon-pink to orange when fresh, ageing to pale grey; gimlet's trunk is fluted
+      and twisted with bronze to copper bark
+  timber:
+    heartwood: reddish-brown
+    sapwood: pale
+    grain: interlocked
+    texture: medium
+    density_kg_m3: 1040
+    janka_n: null
+    workability: hard; used for turning
+    rot_resistance: durable
+    scent: null
+    fuel: excellent, a prized firewood
+    uses:
+    - fence posts
+    - firewood
+    - turnery
+    - mining timbers and gold-field fuel
+  products:
+    food:
+    - nectar for honey
+    sap_resin_latex:
+    - kino
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Salmon gums were cut for fuel for the Goldfields in the 1890s, fed the Kalgoorlie mines, and many
+      were cleared for wheatbelt farming
+    symbolism:
+    - salmon gums are called 'grandfather trees' of the wheatbelt; Salmon Gums, a WA town, is named after
+      the tree
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - 'crafting/fuel: very hot firewood for smelting'
+    - skin-coloured bark as a visual marker
+  sources:
+  - https://wa.gov.au/system/files/2020-09/FPC-species-information.pdf
+  - https://apps.lucidcentral.org/euclid/pdf/entities/eucalyptus_salmonophloia.pdf
+  - https://en.wikipedia.org/wiki/Eucalyptus_salmonophloia
+- id: mallee
+  names:
+  - mallee
+  - blue mallee
+  scientific: Eucalyptus polybractea
+  rank: group
+  stands_for:
+  - Eucalyptus socialis
+  - Eucalyptus gracilis
+  - Eucalyptus dumosa
+  distinct_from:
+  - 'blue-gum: mallees are multi-stemmed shrubby eucalypts'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - well-known
+  habitat:
+    range: southern Australia semi-arid belt (South Australia, Victoria, NSW, Western Australia)
+    ecosystem: mallee scrub and woodland
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      - tropical
+      moisture:
+      - semi-arid
+      note: 'temperature: warm-temperate to hot; moisture: semi-arid, 250-500 mm rain'
+    elevation_m:
+    - 0
+    - 500
+    substrate: red and sandy soils, calcareous sands, clay loams
+    niche: shrub-like stands that regrow from a lignotuber after fire
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: many thin stems from a big underground lignotuber, forming a shrubby tree
+    height_m:
+    - 2
+    - 10
+    trunk_diameter_m:
+    - 0.05
+    - 0.2
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, grey-blue to bright green, narrow, oil-rich
+    seasonal: evergreen; resprouts after fire
+    flowers: white to cream, summer to autumn
+    fruit_visible: small barrel-shaped to urn-shaped capsules
+    bark: smooth grey to rough on the lower stems, shed in strips
+  timber:
+    heartwood: deep red-brown
+    sapwood: pale
+    grain: interlocked
+    texture: fine
+    density_kg_m3: 1050
+    janka_n: 11060
+    workability: very hard; stems are small; Janka figure is estimated for brown mallee
+    rot_resistance: durable
+    scent: null
+    fuel: excellent firewood and charcoal
+    uses:
+    - firewood
+    - charcoal
+    - fence posts
+    - burls for turning
+  products:
+    food:
+    - honey
+    - water from roots
+    sap_resin_latex:
+    - kino
+    bark: []
+    leaves:
+    - eucalyptus oil from blue mallee (E. polybractea) leaves, rich in cineole, since the 1850s
+    dyes: []
+    medicinal:
+    - eucalyptus oil is used as a decongestant and antiseptic
+    toxicity: essential oil is toxic if swallowed
+  lore:
+    folklore: []
+    cultures:
+    - Aboriginal people drank water from mallee roots; the roots hold water
+    symbolism:
+    - '''the mallee'' is both a landscape and an Australian expression for remote country'
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: oil and fuel'
+    dimensions: []
+    hooks:
+    - 'crafting/essential oil: distil leaves'
+    - 'survival: tap roots for water'
+    - fire-resprout growth
+  sources:
+  - https://www.wood-database.com/brown-mallee/
+  - https://en.wikipedia.org/wiki/Eucalyptus_polybractea

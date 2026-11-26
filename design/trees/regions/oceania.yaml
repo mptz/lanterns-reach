@@ -1,0 +1,2331 @@
+# Tree candidates: oceania. Fields per design/trees.md.
+# Total: 126; tiers: 1: 28, 2: 61, 3: 37
+# Inclusion: well-known 29, folklore 7, cultural 64, striking 80, flowers 28, fruit 26, medicinal 18, toxic 8, product 45
+# Genera with 5+ entries: Eucalyptus 14, Acacia 8, Corymbia 5
+
+- id: banksia
+  names:
+  - banksia
+  - coast banksia
+  - saw banksia
+  scientific: Banksia serrata
+  rank: group
+  stands_for:
+  - Banksia integrifolia
+  - Banksia grandis
+  - Banksia marginata
+  distinct_from:
+  - 'silky-oak: Grevillea is the tall timber protead with toothbrush flowers'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - striking
+  - well-known
+  region: oceania
+  why: Cone-like flower spikes and gnarled seed cones; the 'big bad Banksia men' of May Gibbs' stories.
+- id: blue-gum
+  names:
+  - Tasmanian blue gum
+  - Sydney blue gum
+  - manna gum
+  - ribbon gum
+  scientific: Eucalyptus globulus
+  rank: group
+  stands_for:
+  - Eucalyptus saligna (Sydney blue gum)
+  - Eucalyptus viminalis (manna gum)
+  distinct_from:
+  - 'river-red-gum: blue gum is the oil and plantation gum'
+  - 'mallee: mallee oil comes from multi-stemmed shrub eucalypts'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - medicinal
+  - product
+  - striking
+  region: oceania
+  why: Source of eucalyptus oil and the most widely planted eucalypt, with blue-grey juvenile leaves and
+    bark shed in long ribbons; Tasmania's floral emblem. Manna gum's sweet manna was gathered by Aboriginal
+    people.
+- id: boab
+  names:
+  - boab
+  - bottle tree
+  scientific: Adansonia gregorii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'african-baobab: the Australian boab is smaller and bottle-shaped'
+  - 'bottle-tree: Queensland bottle tree is an unrelated Brachychiton'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  - product
+  region: oceania
+  why: Bottle-shaped Kimberley baobab whose nuts Aboriginal people carve and whose bark gives string;
+    the Derby Prison Boab legend.
+- id: bottle-tree
+  names:
+  - Queensland bottle tree
+  - narrow-leaved bottle tree
+  scientific: Brachychiton rupestris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'illawarra-flame-tree: flame tree is grown for red flowers'
+  - 'kurrajong: kurrajong has a normal trunk and gives fibre and seeds'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Swollen water-storing bottle trunk of the Queensland brigalow scrub.
+- id: bottlebrush
+  names:
+  - bottlebrush
+  - crimson bottlebrush
+  - Callistemon citrinus
+  scientific: Melaleuca citrina
+  rank: group
+  stands_for:
+  - Melaleuca viminalis (weeping bottlebrush, Callistemon viminalis)
+  - Melaleuca linearis
+  distinct_from:
+  - 'paperbark: bottlebrushes are grown for red brush flowers'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - well-known
+  region: oceania
+  why: Red bottlebrush flower spikes, among the most planted Australian ornamentals.
+- id: breadfruit
+  names:
+  - breadfruit
+  - ʻulu
+  scientific: Artocarpus altilis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jackfruit: breadfruit is the Pacific starch fruit'
+  - 'highland-breadfruit: highland breadfruit is a New Guinea fig'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: oceania
+  why: Starchy Pacific staple whose latex caulked canoes; HMS Bounty's breadfruit voyage ended in mutiny.
+- id: bunya-pine
+  names:
+  - bunya pine
+  scientific: Araucaria bidwillii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'monkey-puzzle: bunya pine bears giant cones in eastern Australia'
+  - 'hoop-pine: hoop pine is the plantation timber araucaria'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - striking
+  region: oceania
+  why: Football-sized cones whose nuts drew thousands to Aboriginal bunya festivals.
+- id: cabbage-tree
+  names:
+  - cabbage tree
+  - tī kōuka
+  scientific: Cordyline australis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'livistona-palm: cabbage-tree palm is an Australian fan palm'
+  - 'nikau: nīkau is New Zealand''s palm'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  - product
+  region: oceania
+  why: Tree-like monocot with sword-leaf tufts; Māori cooked its roots for sugar and twisted its leaves
+    into cordage.
+- id: candlenut
+  names:
+  - candlenut
+  - kukui
+  scientific: Aleurites moluccanus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - toxic
+  - product
+  region: oceania
+  why: Oily nuts burned as candles and pressed for oil; Hawaii's state tree; raw nuts are toxic.
+- id: ghost-gum
+  names:
+  - ghost gum
+  scientific: Corymbia aparrerinja
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lemon-scented-gum: lemon-scented gum is the coastal oil gum'
+  - 'spotted-gum: spotted gum has dimpled grey-patched bark'
+  - 'marri: marri has rough bark and huge gumnuts'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - well-known
+  region: oceania
+  why: Brilliant white trunks of central Australia painted by Albert Namatjira.
+- id: golden-wattle
+  names:
+  - golden wattle
+  scientific: Acacia pycnantha
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mulga: mulga is the arid-zone wattle'
+  - 'koa: koa is the Hawaiian canoe tree'
+  - 'blackwood: blackwood is the figured timber wattle'
+  - 'black-wattle: black wattle is the feathery-leaved tannin tree'
+  - 'silver-wattle: silver wattle is the florists'' mimosa'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - striking
+  - well-known
+  - product
+  region: oceania
+  why: Australia's national floral emblem with masses of yellow puffballs; its bark was once stripped
+    for tannin.
+- id: grass-tree
+  names:
+  - grass tree
+  - balga
+  - yacca
+  scientific: Xanthorrhoea australis
+  rank: genus
+  stands_for:
+  - Xanthorrhoea preissii
+  - Xanthorrhoea glauca
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: oceania
+  why: Tree-like monocot with a fire-blackened trunk and spear-like flower spike; its resin was Aboriginal
+    glue and later a varnish.
+- id: huon-pine
+  names:
+  - Huon pine
+  scientific: Lagarostrobos franklinii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'king-billy-pine: King Billy pine is a scale-leaved Athrotaxis'
+  - 'celery-top-pine: celery-top has leaf-like cladodes'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: oceania
+  why: Tasmanian conifer living over 2,000 years with oily, rot-proof scented wood prized for boats.
+- id: illawarra-flame-tree
+  names:
+  - Illawarra flame tree
+  scientific: Brachychiton acerifolius
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bottle-tree: flame tree is grown for red flowers'
+  - 'firewheel-tree: firewheel has wheel-shaped flower clusters'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  region: oceania
+  why: Leafless crown turns entirely scarlet in early summer.
+- id: jarrah
+  names:
+  - jarrah
+  scientific: Eucalyptus marginata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'river-red-gum: jarrah is the red-timbered gum of Western Australia'
+  - 'marri: marri grows beside jarrah but has pale timber and huge gumnuts'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: oceania
+  why: Deep red, durable Western Australian timber that paved London streets.
+- id: karaka
+  names:
+  - karaka
+  scientific: Corynocarpus laevigatus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - cultural
+  - fruit
+  region: oceania
+  why: Kernels are deadly raw but were a Māori staple after processing.
+- id: kauri
+  names:
+  - kauri
+  - Queensland kauri
+  - dakua
+  scientific: Agathis australis
+  rank: genus
+  stands_for:
+  - Agathis robusta (Queensland kauri)
+  - Agathis macrophylla (Pacific kauri, dakua)
+  distinct_from:
+  - 'kahikatea: kahikatea is the tall swamp podocarp'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - well-known
+  - product
+  region: oceania
+  why: New Zealand giant (Tāne Mahuta) sacred to Māori, with kauri gum dug from swamps for varnish.
+- id: koa
+  names:
+  - koa
+  scientific: Acacia koa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'golden-wattle: koa is the Hawaiian canoe tree'
+  - 'blackwood: blackwood is the Australian figured wattle timber'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: oceania
+  why: Hawaiian canoe timber with curly figure, used for ukuleles.
+- id: kowhai
+  names:
+  - kōwhai
+  - māmane
+  scientific: Sophora microphylla
+  rank: group
+  stands_for:
+  - Sophora tetraptera
+  - Sophora chrysophylla (māmane)
+  distinct_from:
+  - 'toromiro: toromiro is the Rapa Nui Sophora'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - toxic
+  - product
+  region: oceania
+  why: Golden flowers that are New Zealand's unofficial national flower and gave Māori a yellow dye; toxic
+    seeds; māmane feeds Hawaii's palila.
+- id: macadamia
+  names:
+  - macadamia
+  - Queensland nut
+  scientific: Macadamia integrifolia
+  rank: genus
+  stands_for:
+  - Macadamia tetraphylla
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - well-known
+  region: oceania
+  why: Rainforest tree with the hardest-shelled commercial nut, an Aboriginal bush food.
+- id: moreton-bay-chestnut
+  names:
+  - Moreton Bay chestnut
+  - black bean
+  scientific: Castanospermum australe
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  - medicinal
+  region: oceania
+  why: Toxic chestnut-like seeds eaten by Aboriginal people only after leaching; source of the alkaloid
+    castanospermine.
+- id: mountain-ash
+  names:
+  - mountain ash
+  - swamp gum
+  scientific: Eucalyptus regnans
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'river-red-gum: mountain ash is a straight giant of wet forest'
+  - 'karri: karri is the Western Australian giant'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: oceania
+  why: Tallest flowering plant (Centurion, about 100 m) in the wet forests of Victoria and Tasmania.
+- id: mulga
+  names:
+  - mulga
+  scientific: Acacia aneura
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'golden-wattle: mulga is the arid-zone wattle'
+  - 'gidgee: gidgee is the stinking wattle of clay plains'
+  - 'brigalow: brigalow is the silvery wattle of Queensland scrub'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - well-known
+  region: oceania
+  why: Arid woodland wattle whose dense wood made Aboriginal boomerangs and spears; 'the mulga' means
+    the outback.
+- id: noni
+  names:
+  - noni
+  - Indian mulberry
+  scientific: Morinda citrifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - fruit
+  - product
+  region: oceania
+  why: Pungent fruit used in Polynesian medicine; roots and bark gave red and yellow tapa dyes.
+- id: norfolk-island-pine
+  names:
+  - Norfolk Island pine
+  scientific: Araucaria heterophylla
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'monkey-puzzle: Norfolk Island pine has a symmetrical tiered crown'
+  - 'hoop-pine: hoop pine has tufted foliage and is a plantation timber'
+  - 'column-pine: column pine is narrow and leans toward the equator'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  - cultural
+  region: oceania
+  why: Perfectly symmetrical tiered crown; Norfolk Island's flag tree and a worldwide pot plant.
+- id: ohia-lehua
+  names:
+  - ʻōhiʻa lehua
+  scientific: Metrosideros polymorpha
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pohutukawa: ʻōhiʻa is the Hawaiian volcano tree'
+  - 'northern-rata: rātā starts life as an epiphyte'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - flowers
+  region: oceania
+  why: First tree on new lava, sacred to Pele, with red lehua blossoms.
+- id: pandanus
+  names:
+  - pandanus
+  - screw pine
+  - hala
+  scientific: Pandanus tectorius
+  rank: genus
+  stands_for:
+  - Pandanus utilis
+  - Pandanus amaryllifolius
+  distinct_from:
+  - 'karuka: karuka is the tall New Guinea nut pandanus'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  - product
+  region: oceania
+  why: Tree-like monocot with stilt roots and spiral leaves woven into mats and sails.
+- id: paperbark
+  names:
+  - paperbark
+  - broad-leaved paperbark
+  - niaouli
+  scientific: Melaleuca quinquenervia
+  rank: group
+  stands_for:
+  - Melaleuca leucadendra
+  distinct_from:
+  - 'bottlebrush: bottlebrushes are grown for red brush flowers'
+  - 'tea-tree: tea tree is the small oil-crop Melaleuca'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - medicinal
+  - striking
+  - cultural
+  - product
+  region: oceania
+  why: Layers of papery bark used by Aboriginal people for shelters and wrapping food; leaves give niaouli
+    oil.
+- id: pohutukawa
+  names:
+  - pōhutukawa
+  - New Zealand Christmas tree
+  scientific: Metrosideros excelsa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ohia-lehua: ʻōhiʻa is the Hawaiian volcano tree'
+  - 'northern-rata: rātā is the strangling forest Metrosideros'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - folklore
+  - well-known
+  region: oceania
+  why: Crimson flowers at Christmas; the Cape Reinga tree where Māori spirits depart.
+- id: rimu
+  names:
+  - rimu
+  - red pine
+  scientific: Dacrydium cupressinum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kahikatea: kahikatea is a taller swamp podocarp with pale wood'
+  - 'matai: mataī has hammer-marked bark and no weeping habit'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - well-known
+  region: oceania
+  why: Weeping NZ podocarp with ornate timber and berries eaten by kākāpō.
+- id: river-red-gum
+  names:
+  - river red gum
+  scientific: Eucalyptus camaldulensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mountain-ash: mountain ash is a straight giant of wet forest'
+  - 'blue-gum: blue gum is the oil and plantation gum'
+  - 'snow-gum: snow gum is the twisted alpine gum'
+  - 'jarrah: jarrah is the red-timbered gum of Western Australia'
+  - 'rainbow-eucalyptus: rainbow eucalyptus has multicoloured bark'
+  - 'coolabah: coolabah is the smaller, rough-based gum of floodplains'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  region: oceania
+  why: Massive riverbank gum of inland Australia whose bark was cut for canoes and coolamons, leaving
+    scarred trunks.
+- id: she-oak
+  names:
+  - she-oak
+  - casuarina
+  - beach she-oak
+  - forest oak
+  scientific: Casuarina equisetifolia
+  rank: group
+  stands_for:
+  - Allocasuarina torulosa
+  - Casuarina cunninghamiana
+  distinct_from:
+  - 'desert-oak: desert oak is the shaggy central-Australian sand-dune tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: oceania
+  why: Needle-like jointed twigs that sigh in the wind; very hard 'beefwood' for Pacific war clubs.
+- id: silky-oak
+  names:
+  - silky oak
+  scientific: Grevillea robusta
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'banksia: banksias are smaller proteads with cone flowers'
+  - 'rewarewa: rewarewa is the NZ protead with red flowers'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: oceania
+  why: Golden toothbrush flowers and lacewood-figured timber.
+- id: snow-gum
+  names:
+  - snow gum
+  scientific: Eucalyptus pauciflora
+  rank: group
+  stands_for:
+  - Eucalyptus niphophila
+  distinct_from:
+  - 'river-red-gum: snow gum is the twisted alpine gum'
+  - 'scribbly-gum: scribbly gum is the lowland gum with insect scribbles'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Twisted, streaked multicoloured trunks at the Australian alpine treeline.
+- id: stinging-tree
+  names:
+  - giant stinging tree
+  - gympie-gympie
+  scientific: Dendrocnide excelsa
+  rank: group
+  stands_for:
+  - Dendrocnide moroides (gympie-gympie)
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  region: oceania
+  why: Silica hairs inject a neurotoxin that causes pain lasting weeks or months.
+- id: tamanu
+  names:
+  - tamanu
+  - kamani
+  - beach calophyllum
+  scientific: Calophyllum inophyllum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: oceania
+  why: Sacred tree of Polynesian marae with a healing seed oil.
+- id: totara
+  names:
+  - tōtara
+  scientific: Podocarpus totara
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'yellowwood: African yellowwoods are the southern African podocarps'
+  - 'matai: mataī is the black pine with fruit-bearing short shoots'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: oceania
+  why: Durable red wood for Māori waka (war canoes) and carvings; its stringy bark roofed huts and bound
+    splints.
+- id: tree-fern
+  names:
+  - silver fern
+  - ponga
+  - Cyathea dealbata
+  - Alsophila tricolor
+  scientific: Alsophila dealbata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'psaronius: Psaronius is the extinct Paleozoic tree fern'
+  - 'soft-tree-fern: soft tree fern has a thick fibrous trunk'
+  - 'mamaku: mamaku is the tall black tree fern'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - well-known
+  region: oceania
+  why: Tree fern whose silver frond underside is New Zealand's emblem; Māori laid fronds to mark trails
+    by moonlight.
+- id: wollemi-pine
+  names:
+  - Wollemi pine
+  scientific: Wollemia nobilis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: oceania
+  why: Discovered alive in 1994 in a single gorge, known only as a fossil before; bubbly bark.
+- id: kurrajong
+  names:
+  - kurrajong
+  scientific: Brachychiton populneus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bottle-tree: bottle tree has the swollen trunk'
+  split_from: bottle-tree
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: oceania
+  why: Drought fodder tree whose seeds were roasted as food and whose inner bark made fishing-net fibre.
+- id: lemon-scented-gum
+  names:
+  - lemon-scented gum
+  scientific: Corymbia citriodora
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ghost-gum: ghost gum is the inland white gum'
+  split_from: ghost-gum
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - medicinal
+  region: oceania
+  why: Tall powdery-white trunk with lemon-scented leaves distilled for citronellal oil and insect repellent.
+- id: spotted-gum
+  names:
+  - spotted gum
+  scientific: Corymbia maculata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ghost-gum: spotted gum sheds in patches, leaving dimples'
+  split_from: ghost-gum
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Bark sheds in patches to leave a dappled grey, cream and pink trunk; tough timber for tool handles.
+- id: marri
+  names:
+  - marri
+  - red gum
+  scientific: Corymbia calophylla
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jarrah: jarrah has red timber; marri has pale wood and huge gumnuts'
+  split_from: ghost-gum
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - medicinal
+  region: oceania
+  why: Western Australian bloodwood with large urn-shaped 'honky nuts' and red kino gum used by Noongar
+    people as medicine.
+- id: blackwood
+  names:
+  - Australian blackwood
+  - Tasmanian blackwood
+  scientific: Acacia melanoxylon
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'golden-wattle: blackwood is a forest tree grown for timber'
+  - 'koa: koa is the Hawaiian relative'
+  split_from: golden-wattle
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Tall forest wattle with lustrous golden-brown, often fiddleback-figured timber for furniture and
+    guitars.
+- id: black-wattle
+  names:
+  - black wattle
+  scientific: Acacia mearnsii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'golden-wattle: black wattle has feathery bipinnate leaves'
+  - 'silver-wattle: silver wattle has silvery foliage and is grown for flowers'
+  split_from: golden-wattle
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  region: oceania
+  why: Feathery-leaved wattle planted worldwide for tannin bark, and one of the world's worst invasive
+    trees.
+- id: silver-wattle
+  names:
+  - silver wattle
+  - mimosa
+  scientific: Acacia dealbata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-wattle: black wattle is the green tannin tree'
+  split_from: golden-wattle
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - product
+  - cultural
+  region: oceania
+  why: Silver-grey wattle sold as florists' mimosa, fêted in Mediterranean mimosa festivals and distilled
+    for perfume.
+- id: toromiro
+  names:
+  - toromiro
+  scientific: Sophora toromiro
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kowhai: kōwhai is the New Zealand Sophora'
+  split_from: kowhai
+  tier: 2
+  status: extinct-in-wild
+  inclusion:
+  - cultural
+  - striking
+  region: oceania
+  why: Rapa Nui's carving wood; the last wild tree died in 1960, and the species survives from seeds Thor
+    Heyerdahl collected from it in 1956.
+- id: karri
+  names:
+  - karri
+  scientific: Eucalyptus diversicolor
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mountain-ash: mountain ash is the eastern giant'
+  split_from: mountain-ash
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: oceania
+  why: Smooth-barked Western Australian giant up to about 90 m, climbed by pegged spikes as fire lookouts
+    (Gloucester Tree).
+- id: gidgee
+  names:
+  - gidgee
+  - stinking wattle
+  scientific: Acacia cambagei
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mulga: gidgee grows on clay plains and stinks before rain'
+  split_from: mulga
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Outback wattle whose foliage smells foul in humid weather, with dense dark wood for fence posts
+    and fires.
+- id: brigalow
+  names:
+  - brigalow
+  scientific: Acacia harpophylla
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mulga: brigalow has silvery sickle phyllodes and grows on cracking clays'
+  split_from: mulga
+  tier: 3
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  region: oceania
+  why: Silvery wattle that gave its name to Queensland's Brigalow Belt, mostly cleared for farms.
+- id: hoop-pine
+  names:
+  - hoop pine
+  - klinki pine
+  scientific: Araucaria cunninghamii
+  rank: group
+  stands_for:
+  - Araucaria hunsteinii (klinki pine)
+  distinct_from:
+  - 'norfolk-island-pine: hoop pine has tufted foliage at branch ends'
+  - 'bunya-pine: bunya has huge edible cones'
+  split_from: norfolk-island-pine
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Rainforest emergent named for bark peeling in horizontal hoops; a major plantation timber.
+- id: column-pine
+  names:
+  - Cook pine
+  - column pine
+  scientific: Araucaria columnaris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'norfolk-island-pine: column pine is narrow and leaning'
+  split_from: norfolk-island-pine
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Narrow New Caledonian pillar that leans toward the equator wherever it is planted.
+- id: tea-tree
+  names:
+  - tea tree
+  - narrow-leaved paperbark
+  scientific: Melaleuca alternifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'paperbark: tea tree is the small oil-crop Melaleuca'
+  - 'manuka: mānuka is the New Zealand Leptospermum also called tea tree'
+  split_from: paperbark
+  tier: 1
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  - well-known
+  region: oceania
+  why: Source of antiseptic tea tree oil, first used by the Bundjalung people.
+- id: coolabah
+  names:
+  - coolabah
+  - coolibah
+  scientific: Eucalyptus coolabah
+  rank: group
+  stands_for:
+  - Eucalyptus microtheca
+  distinct_from:
+  - 'river-red-gum: coolabah is smaller, crooked and rough at the base'
+  split_from: river-red-gum
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - well-known
+  region: oceania
+  why: Floodplain gum of 'Waltzing Matilda' and the Burke and Wills Dig Tree.
+- id: desert-oak
+  names:
+  - desert oak
+  scientific: Allocasuarina decaisneana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'she-oak: desert oak is a slow sand-dune tree with a columnar juvenile form'
+  split_from: she-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: oceania
+  why: Shaggy-crowned dune tree around Uluru that grows as a thin pole for decades before spreading.
+- id: scribbly-gum
+  names:
+  - scribbly gum
+  scientific: Eucalyptus haemastoma
+  rank: group
+  stands_for:
+  - Eucalyptus racemosa
+  - Eucalyptus rossii
+  distinct_from:
+  - 'snow-gum: scribbly gum is the lowland sandstone species'
+  split_from: snow-gum
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Smooth white trunks covered in zigzag scribbles left by moth larvae.
+- id: soft-tree-fern
+  names:
+  - soft tree fern
+  - man fern
+  scientific: Dicksonia antarctica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tree-fern: soft tree fern has a thick fibrous trunk'
+  - 'mamaku: mamaku is a taller scaly Cyathea'
+  split_from: tree-fern
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: oceania
+  why: Thick-trunked tree fern of Tasmanian gullies, exported as whole trunks for gardens.
+- id: mamaku
+  names:
+  - mamaku
+  - black tree fern
+  - Cyathea medullaris
+  scientific: Sphaeropteris medullaris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tree-fern: mamaku is taller with black stalks'
+  split_from: tree-fern
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - cultural
+  region: oceania
+  why: Tallest New Zealand tree fern, up to 20 m, whose starchy pith Māori cooked.
+- id: moreton-bay-fig
+  names:
+  - Moreton Bay fig
+  - Port Jackson fig
+  scientific: Ficus macrophylla
+  rank: group
+  stands_for:
+  - Ficus rubiginosa (Port Jackson fig)
+  distinct_from:
+  - 'banyan: Moreton Bay fig has huge buttresses rather than a forest of prop roots'
+  split_from: banyan
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: oceania
+  why: Huge buttressed strangler fig of eastern Australian parks and rainforests.
+- id: quandong
+  names:
+  - quandong
+  - desert peach
+  scientific: Santalum acuminatum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sandalwood: quandong is grown for fruit, not scented wood'
+  - 'australian-sandalwood: Australian sandalwood is the scented oil tree'
+  split_from: sandalwood
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: oceania
+  why: Root-parasitic desert tree with tart red fruit, a prized Aboriginal bush food; kernels used as
+    beads and ointment.
+- id: australian-sandalwood
+  names:
+  - Australian sandalwood
+  - waang
+  scientific: Santalum spicatum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sandalwood: Australian sandalwood is the arid-zone species'
+  - 'quandong: quandong is the fruit species'
+  split_from: sandalwood
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - medicinal
+  region: oceania
+  why: Western Australian scented wood exported for incense since the 1840s and now an oil crop.
+- id: iliahi
+  names:
+  - ʻiliahi
+  - Hawaiian sandalwood
+  scientific: Santalum paniculatum
+  rank: group
+  stands_for:
+  - Santalum ellipticum
+  - Santalum freycinetianum
+  distinct_from:
+  - 'sandalwood: ʻiliahi is the Hawaiian group'
+  split_from: sandalwood
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: oceania
+  why: Stripped from Hawaiian forests in the early-1800s trade that made Chinese call Hawaii the Sandalwood
+    Mountains.
+- id: wiliwili
+  names:
+  - wiliwili
+  scientific: Erythrina sandwicensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'coral-tree: wiliwili is the Hawaiian dryland species'
+  split_from: coral-tree
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - striking
+  region: oceania
+  why: Leafless summer-flowering dryland tree with light wood for surfboards and outrigger floats and
+    red seeds for leis.
+- id: macrozamia
+  names:
+  - burrawang
+  - zamia palm
+  scientific: Macrozamia communis
+  rank: genus
+  stands_for:
+  - Macrozamia riedlei
+  - Macrozamia moorei
+  - Lepidozamia peroffskyana
+  distinct_from:
+  - 'cycad: Macrozamia is the Australian cycad'
+  split_from: cycad
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - cultural
+  - product
+  region: oceania
+  why: Australian cycad whose toxic starchy seeds Aboriginal people leached into food; poisoned early
+    explorers.
+- id: myrtle-beech
+  names:
+  - myrtle beech
+  - silver beech
+  - Antarctic beech
+  - Lophozonia cunninghamii
+  scientific: Nothofagus cunninghamii
+  rank: group
+  stands_for:
+  - Nothofagus menziesii (silver beech)
+  - Nothofagus moorei (Antarctic beech)
+  distinct_from:
+  - 'lenga: lenga is the deciduous Patagonian beech'
+  - 'red-beech: red beech is the NZ Fuscospora'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Small-leaved evergreen beech of Tasmanian and Gondwanan rainforest, a living relic of Antarctic
+    forests.
+- id: red-beech
+  names:
+  - red beech
+  - hard beech
+  - Fuscospora fusca
+  scientific: Nothofagus fusca
+  rank: group
+  stands_for:
+  - Nothofagus truncata (hard beech)
+  distinct_from:
+  - 'black-beech: black beech has sooty trunks'
+  - 'myrtle-beech: myrtle beech is the Lophozonia group'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Tallest New Zealand beech, with toothed leaves that redden in winter and red-brown timber.
+- id: ironbark
+  names:
+  - red ironbark
+  - mugga
+  scientific: Eucalyptus sideroxylon
+  rank: group
+  stands_for:
+  - Eucalyptus crebra
+  - Eucalyptus paniculata
+  distinct_from:
+  - 'stringybark: stringybark has soft fibrous bark'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: oceania
+  why: Deeply furrowed black bark and among the hardest of Australian timbers, used for bridges and railway
+    sleepers.
+- id: king-billy-pine
+  names:
+  - King Billy pine
+  - pencil pine
+  scientific: Athrotaxis selaginoides
+  rank: group
+  stands_for:
+  - Athrotaxis cupressoides (pencil pine)
+  distinct_from:
+  - 'huon-pine: Huon pine is a lowland riverside podocarp'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Tasmanian highland conifers living over 1,000 years; Athrotaxis survives only in Tasmania but has
+    fossils back to the Jurassic.
+- id: celery-top-pine
+  names:
+  - celery-top pine
+  scientific: Phyllocladus aspleniifolius
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'huon-pine: celery-top has leaf-like cladodes'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Conifer that bears flat celery-like cladodes instead of needles.
+- id: kahikatea
+  names:
+  - kahikatea
+  - white pine
+  scientific: Dacrycarpus dacrydioides
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'rimu: kahikatea is taller, grows in swamps and has pale wood'
+  - 'totara: tōtara has red wood'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  region: oceania
+  why: New Zealand's tallest tree, at about 60 m in swamp forests, with sweet red fruit Māori gathered.
+- id: puriri
+  names:
+  - pūriri
+  scientific: Vitex lucens
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - folklore
+  - medicinal
+  region: oceania
+  why: Pink-flowered tree of Māori burial sites and medicine, bored by the giant pūriri moth caterpillar.
+- id: nikau
+  names:
+  - nīkau
+  scientific: Rhopalostylis sapida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kentia-palm: kentia is the Lord Howe palm'
+  - 'cabbage-tree: cabbage tree is a Cordyline, not a palm'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: oceania
+  why: World's southernmost palm, with a bulging crownshaft; Māori thatched with its fronds.
+- id: lilly-pilly
+  names:
+  - lilly pilly
+  - riberry
+  scientific: Syzygium smithii
+  rank: group
+  stands_for:
+  - Syzygium luehmannii (riberry)
+  distinct_from:
+  - 'jamun: lilly pilly has pink-to-white tart fruit'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: oceania
+  why: Rainforest hedge tree with clusters of tart pink berries used as bush food.
+- id: black-beech
+  names:
+  - black beech
+  - mountain beech
+  - Fuscospora solandri
+  scientific: Nothofagus solandri
+  rank: group
+  stands_for:
+  - Nothofagus cliffortioides (mountain beech)
+  distinct_from:
+  - 'red-beech: black beech is small-leaved with sooty trunks'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Trunks blackened by sooty mould on scale-insect honeydew, which feeds kākā and honeydew-honey bees.
+- id: lemon-myrtle
+  names:
+  - lemon myrtle
+  scientific: Backhousia citriodora
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lemon-scented-gum: lemon-scented gum is a tall eucalypt'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: oceania
+  why: Rainforest tree whose leaves, richer in citral than lemons, are a bush-food spice and essential
+    oil.
+- id: kakadu-plum
+  names:
+  - Kakadu plum
+  - gubinge
+  scientific: Terminalia ferdinandiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tropical-almond: Kakadu plum is a small-fruited savanna Terminalia'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - medicinal
+  region: oceania
+  why: Savanna tree whose small green fruit has the highest vitamin C content known, a staple Aboriginal
+    food and medicine.
+- id: davidson-plum
+  names:
+  - Davidson's plum
+  scientific: Davidsonia pruriens
+  rank: group
+  stands_for:
+  - Davidsonia jerseyana
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: oceania
+  why: Slender rainforest tree bearing sour purple plums straight off its trunk, among itchy hairy leaves.
+- id: finger-lime
+  names:
+  - finger lime
+  - desert lime
+  scientific: Citrus australasica
+  rank: group
+  stands_for:
+  - Citrus glauca (desert lime)
+  distinct_from:
+  - 'lemon: finger lime has caviar-like pulp vesicles'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: oceania
+  why: Thorny understorey citrus whose finger-shaped fruit is packed with caviar-like beads.
+- id: firewheel-tree
+  names:
+  - firewheel tree
+  scientific: Stenocarpus sinuatus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'illawarra-flame-tree: flame tree flowers are bells on a bare crown'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  region: oceania
+  why: Red-and-orange flowers arranged like the spokes of a wheel.
+- id: red-flowering-gum
+  names:
+  - red-flowering gum
+  scientific: Corymbia ficifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'marri: marri has white flowers and a large spreading habit'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - well-known
+  region: oceania
+  why: Small Western Australian gum covered in scarlet, pink or orange blossom, planted worldwide.
+- id: sydney-red-gum
+  names:
+  - Sydney red gum
+  - smooth-barked apple
+  scientific: Angophora costata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ghost-gum: Sydney red gum has salmon-pink bark and contorted limbs'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: oceania
+  why: Gnarled sandstone tree whose bark sheds each spring to reveal salmon-pink trunks.
+- id: stringybark
+  names:
+  - messmate stringybark
+  - stringybark
+  scientific: Eucalyptus obliqua
+  rank: group
+  stands_for:
+  - Eucalyptus baxteri
+  - Eucalyptus macrorhyncha
+  distinct_from:
+  - 'ironbark: ironbark has hard furrowed bark'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - striking
+  region: oceania
+  why: Thick fibrous bark peeled in sheets for bark huts and canoes; the first eucalypt ever described.
+- id: salmon-gum
+  names:
+  - salmon gum
+  - gimlet
+  scientific: Eucalyptus salmonophloia
+  rank: group
+  stands_for:
+  - Eucalyptus salubris (gimlet)
+  distinct_from:
+  - 'karri: salmon gum is a dry-woodland tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Shiny salmon-pink trunks of the Western Australian wheatbelt woodlands; gimlet's are twisted and
+    bronze.
+- id: mallee
+  names:
+  - mallee
+  - blue mallee
+  scientific: Eucalyptus polybractea
+  rank: group
+  stands_for:
+  - Eucalyptus socialis
+  - Eucalyptus gracilis
+  - Eucalyptus dumosa
+  distinct_from:
+  - 'blue-gum: mallees are multi-stemmed shrubby eucalypts'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - well-known
+  region: oceania
+  why: Many thin stems from a buried lignotuber, forming the mallee scrub; blue mallee is the main source
+    of Australian eucalyptus oil.
+- id: tingle-tree
+  names:
+  - red tingle
+  - tingle tree
+  scientific: Eucalyptus jacksonii
+  rank: group
+  stands_for:
+  - Eucalyptus brevistylis
+  - Eucalyptus guilfoylei
+  distinct_from:
+  - 'karri: tingle has buttressed, fire-hollowed bases'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Huge-girthed giants of the Valley of the Giants whose fire-hollowed bases you can stand inside.
+- id: white-cypress-pine
+  names:
+  - white cypress-pine
+  - native pine
+  scientific: Callitris glaucophylla
+  rank: group
+  stands_for:
+  - Callitris columellaris
+  - Callitris endlicheri
+  distinct_from:
+  - 'italian-cypress: Callitris is the Australian cypress-pine'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: oceania
+  why: Termite-proof inland conifer used for floors and posts, with a sandarac-like resin used as Aboriginal
+    glue.
+- id: leatherwood
+  names:
+  - leatherwood
+  scientific: Eucryphia lucida
+  rank: group
+  stands_for:
+  - Eucryphia milliganii
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: oceania
+  why: Tasmanian rainforest tree with white summer flowers whose nectar gives famous leatherwood honey.
+- id: southern-sassafras
+  names:
+  - southern sassafras
+  - blackheart sassafras
+  scientific: Atherosperma moschatum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sassafras: the American sassafras is a laurel'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: oceania
+  why: Nutmeg-scented bark brewed as bush tea and distilled for oil; dark-streaked 'blackheart' timber.
+- id: umbrella-tree
+  names:
+  - umbrella tree
+  - octopus tree
+  - Schefflera actinophylla
+  scientific: Heptapleurum actinophyllum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'octopus-tree: the Madagascar octopus tree is a spiny Alluaudia'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - well-known
+  region: oceania
+  why: Radiating umbrella-like leaves and tentacle-shaped red flower spikes; a common houseplant and invasive.
+- id: blue-quandong
+  names:
+  - blue quandong
+  - blue fig
+  scientific: Elaeocarpus angustifolius
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'quandong: blue quandong is an unrelated rainforest tree'
+  - 'rudraksha: rudraksha is the Asian prayer-bead Elaeocarpus'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: oceania
+  why: Buttressed rainforest tree with bright blue fruit eaten by cassowaries; seeds strung as rudraksha-like
+    beads.
+- id: idiot-fruit
+  names:
+  - idiot fruit
+  - ribbonwood
+  scientific: Idiospermum australiense
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  region: oceania
+  why: Primitive flowering tree of the Daintree, rediscovered when its toxic seeds poisoned cattle.
+- id: cooktown-ironwood
+  names:
+  - Cooktown ironwood
+  scientific: Erythrophleum chlorostachys
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ironbark: ironbark is a eucalypt'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - medicinal
+  region: oceania
+  why: Savanna tree with very dense termite-proof wood, leaves poisonous to stock, and Aboriginal medicinal
+    smoke uses.
+- id: livistona-palm
+  names:
+  - cabbage-tree palm
+  - red cabbage palm
+  scientific: Livistona australis
+  rank: group
+  stands_for:
+  - Livistona mariae (red cabbage palm)
+  distinct_from:
+  - 'cabbage-tree: cabbage tree is a Cordyline'
+  - 'kentia-palm: kentia is a feather palm'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - cultural
+  region: oceania
+  why: Tall fan palm whose leaves made colonial cabbage-tree hats; a relict population survives in central
+    Australia's Palm Valley.
+- id: wa-christmas-tree
+  names:
+  - Western Australian Christmas tree
+  - moodjar
+  scientific: Nuytsia floribunda
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - flowers
+  - striking
+  - cultural
+  region: oceania
+  why: World's largest root-parasitic tree, blazing orange at Christmas; Noongar people hold that spirits
+    of the dead rest in it.
+- id: native-cherry
+  names:
+  - native cherry
+  - cherry ballart
+  scientific: Exocarpos cupressiformis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'quandong: both are sandalwood-family root parasites; native cherry has cypress-like foliage'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: oceania
+  why: Cypress-like root parasite whose seed sits outside a swollen red edible stalk.
+- id: turpentine
+  names:
+  - turpentine
+  - blue gum turpentine
+  scientific: Syncarpia glomulifera
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Resinous timber that resists marine borers, exported for wharf piles around the world.
+- id: manuka
+  names:
+  - mānuka
+  - tea tree
+  - kānuka
+  scientific: Leptospermum scoparium
+  rank: group
+  stands_for:
+  - Kunzea ericoides (kānuka)
+  distinct_from:
+  - 'tea-tree: Australian tea tree is a Melaleuca'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - medicinal
+  - product
+  - cultural
+  region: oceania
+  why: Small-leaved scrub tree of mānuka honey and an antibacterial oil; Captain Cook brewed 'tea' from
+    its leaves.
+- id: matai
+  names:
+  - mataī
+  - black pine
+  - miro
+  scientific: Prumnopitys taxifolia
+  rank: group
+  stands_for:
+  - Pectinopitys ferruginea (miro)
+  distinct_from:
+  - 'rimu: mataī has hammer-marked bark'
+  - 'totara: tōtara has stringy bark'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: oceania
+  why: Podocarp whose bark flakes to leave hammer-marked patterns, with blue-black fruit eaten by birds
+    and people.
+- id: northern-rata
+  names:
+  - northern rātā
+  - southern rātā
+  scientific: Metrosideros robusta
+  rank: group
+  stands_for:
+  - Metrosideros umbellata (southern rātā)
+  distinct_from:
+  - 'pohutukawa: northern rātā starts as an epiphyte and strangles its host'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - folklore
+  region: oceania
+  why: Begins life high on another tree and grows down to engulf it; red summer flowers; the Rātā legend's
+    namesake tree.
+- id: rewarewa
+  names:
+  - rewarewa
+  - New Zealand honeysuckle
+  scientific: Knightia excelsa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'silky-oak: rewarewa is the narrow NZ protead'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: oceania
+  why: Narrow columnar protead with velvety red flowers and speckled lacewood timber.
+- id: titoki
+  names:
+  - tītoki
+  scientific: Alectryon excelsus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  - medicinal
+  region: oceania
+  why: Black seeds set in a red fleshy cup, pressed by Māori for a scented hair and medicinal oil.
+- id: kawakawa
+  names:
+  - kawakawa
+  - Māori pepper tree
+  scientific: Piper excelsum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'horopito: horopito is the hot-leaved pepper tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - cultural
+  region: oceania
+  why: Small heart-leaved kava relative central to rongoā Māori medicine and worn as wreaths in mourning.
+- id: horopito
+  names:
+  - horopito
+  - pepper tree
+  scientific: Pseudowintera colorata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kawakawa: kawakawa is a Piper'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - striking
+  region: oceania
+  why: Red-blotched leaves with a fiery peppery taste, used as a spice and a Māori remedy.
+- id: lancewood
+  names:
+  - lancewood
+  - horoeka
+  scientific: Pseudopanax crassifolius
+  rank: group
+  stands_for:
+  - Pseudopanax ferox (fierce lancewood)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Juveniles are bare poles with long down-pointing leathery leaves, thought to deter moa, then change
+    form entirely as adults.
+- id: tree-fuchsia
+  names:
+  - tree fuchsia
+  - kōtukutuku
+  scientific: Fuchsia excorticata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  - flowers
+  region: oceania
+  why: World's largest fuchsia, with orange peeling bark, blue pollen and edible berries.
+- id: houhere
+  names:
+  - houhere
+  - lacebark
+  - ribbonwood
+  scientific: Hoheria populnea
+  rank: group
+  stands_for:
+  - Hoheria sexstylosa
+  - Hoheria lyallii
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - flowers
+  region: oceania
+  why: Inner bark separates into lace-like layers once used for hat trims and cordage; masses of white
+    flowers.
+- id: loulu-palm
+  names:
+  - loulu
+  scientific: Pritchardia
+  rank: genus
+  stands_for:
+  - Pritchardia martii
+  - Pritchardia remota
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: oceania
+  why: Hawaii's only native palms, fan palms whose leaves thatched and made fans.
+- id: kou
+  names:
+  - kou
+  - sea trumpet
+  scientific: Cordia subcordata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bocote: bocote is the figured Central American Cordia'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  region: oceania
+  why: Canoe-plant shore tree with orange flowers for leis and soft wood for Hawaiian food bowls.
+- id: brighamia
+  names:
+  - ʻōlulu
+  - cabbage on a stick
+  scientific: Brighamia insignis
+  rank: group
+  stands_for:
+  - Brighamia rockii
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: oceania
+  why: Succulent-stemmed Hawaiian cliff lobelia with a rosette on top, kept alive by hand-pollination
+    after its moth pollinator vanished; no wild plant has been seen since 2014.
+- id: tahitian-chestnut
+  names:
+  - Tahitian chestnut
+  - ifi
+  - mape
+  scientific: Inocarpus fagifer
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sweet-chestnut: unrelated Pacific legume with a single large nut'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - striking
+  region: oceania
+  why: Fluted-trunk Pacific legume whose boiled or roasted kidney-shaped nuts are a staple.
+- id: galip-nut
+  names:
+  - galip nut
+  - ngali nut
+  - canarium
+  scientific: Canarium indicum
+  rank: group
+  stands_for:
+  - Canarium harveyi
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  - cultural
+  region: oceania
+  why: Melanesian nut tree with rich almond-like kernels; its resin caulks canoes and fuels torches.
+- id: malay-apple
+  names:
+  - Malay apple
+  - ʻōhiʻa ʻai
+  scientific: Syzygium malaccense
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jamun: Malay apple has crimson pear-shaped fruit'
+  - 'lilly-pilly: lilly pilly fruit are small berries'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - flowers
+  - cultural
+  region: oceania
+  why: Polynesian canoe plant with pom-pom magenta flowers and crisp red fruit; its wood carved Hawaiian
+    temple images.
+- id: kentia-palm
+  names:
+  - kentia palm
+  - thatch palm
+  scientific: Howea forsteriana
+  rank: group
+  stands_for:
+  - Howea belmoreana (curly palm)
+  distinct_from:
+  - 'nikau: nīkau has a bulging crownshaft'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  region: oceania
+  why: Lord Howe Island's palm, the world's most popular indoor palm, whose seed trade is the island's
+    livelihood.
+- id: karuka
+  names:
+  - karuka
+  - marita
+  scientific: Pandanus julianettii
+  rank: group
+  stands_for:
+  - Pandanus conoideus (marita)
+  distinct_from:
+  - 'pandanus: karuka is the tall highland nut pandanus'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: oceania
+  why: New Guinea highland pandanus with huge nut-filled heads; marita's red fruit is pressed into an
+    oily sauce.
+- id: massoia
+  names:
+  - massoia
+  scientific: Cryptocarya massoy
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: oceania
+  why: New Guinea laurel whose coconut-scented bark, long traded to Java, gives massoia lactone for flavours.
+- id: highland-breadfruit
+  names:
+  - highland breadfruit
+  - dinner-plate fig
+  scientific: Ficus dammaropsis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'breadfruit: highland breadfruit is a fig'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: oceania
+  why: New Guinea fig with enormous pleated leaves and edible fig-heads.
+- id: birdcatcher-tree
+  names:
+  - birdcatcher tree
+  - pāpala kēpau
+  scientific: Pisonia grandis
+  rank: group
+  stands_for:
+  - Pisonia umbellifera
+  - Pisonia brunoniana (pāpala kēpau)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: oceania
+  why: Sticky seeds can entangle and kill seabirds; Hawaiian bird catchers used the gum as birdlime.
+- id: pua-kenikeni
+  names:
+  - pua kenikeni
+  scientific: Fagraea berteroana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: oceania
+  why: Fragrant lei flowers that open white and age to orange; its name means 'ten-cent flower'.
+- id: rapa-nui-palm
+  names:
+  - Rapa Nui palm
+  - Easter Island palm
+  scientific: Paschalococos disperta
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'chilean-wine-palm: living relative it probably resembled'
+  split_from: null
+  tier: 2
+  status: extinct
+  inclusion:
+  - striking
+  - cultural
+  region: oceania
+  why: Palm that once forested Easter Island, known from fossil nuts and root casts; gone by about 1650,
+    and its loss is central to debates over the island's collapse.
+- id: kokio
+  names:
+  - Cooke's kokiʻo
+  - Hawaiian tree cotton
+  scientific: Kokia cookei
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extinct-in-wild
+  inclusion:
+  - flowers
+  - striking
+  region: oceania
+  why: Molokaʻi dryland tree with large red hibiscus-like flowers; the last wild tree was gone by about
+    1918, the last rooted plant burned in 1978, and it survives only as grafts on other Kokia.
+- id: heilala
+  names:
+  - heilala
+  scientific: Garcinia sessilis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  region: oceania
+  why: 'Tonga''s national flower: small tree whose fragrant red blossoms make the highest-ranked leis,
+    reserved for royalty, and name Tonga''s Heilala Festival.'
+- id: tiare
+  names:
+  - tiare
+  - tiare Tahiti
+  - Tahitian gardenia
+  scientific: Gardenia taitensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - product
+  region: oceania
+  why: Shrubby tree with fragrant white star flowers, emblem of Tahiti and the Cook Islands; the flowers
+    steeped in coconut oil make monoï.
+- id: waratah
+  names:
+  - waratah
+  - Gippsland waratah
+  - Tasmanian waratah
+  scientific: Telopea speciosissima
+  rank: group
+  stands_for:
+  - Telopea oreades (Gippsland waratah)
+  - Telopea truncata (Tasmanian waratah)
+  distinct_from:
+  - 'banksia: waratah has a single huge crimson flower head'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - folklore
+  - well-known
+  region: oceania
+  why: New South Wales' floral emblem with dome-shaped crimson flower heads; Dharug story holds the flowers
+    were stained red by a wounded wonga pigeon. Gippsland waratah grows into a tree.
+- id: ti
+  names:
+  - ti
+  - kī
+  - ti plant
+  - good-luck plant
+  scientific: Cordyline fruticosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cabbage-tree: ti has broad, often red leaves on slender canes'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - striking
+  - product
+  region: oceania
+  why: Cane-stemmed Polynesian canoe plant with broad green or red leaves, planted around homes and temples
+    for protection; leaves wrap food and make hula skirts, and baked roots give sugar.
+- id: darwin-woollybutt
+  names:
+  - Darwin woollybutt
+  - Darwin stringybark
+  scientific: Eucalyptus miniata
+  rank: group
+  stands_for:
+  - Eucalyptus tetrodonta (Darwin stringybark)
+  distinct_from:
+  - 'river-red-gum: woollybutt is the savanna gum with orange flowers and a woolly-barked base'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - product
+  region: oceania
+  why: Dominant gums of the northern Australian savanna; woollybutt has big orange flowers, and termite-hollowed
+    trunks of both are cut to make the didgeridoo (yidaki).
+- id: tawa
+  names:
+  - tawa
+  scientific: Beilschmiedia tawa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: oceania
+  why: Dominant canopy tree of North Island lowland forest with purple plum-like fruit; Māori steamed
+    the kernels for food and kererū spread its seeds.

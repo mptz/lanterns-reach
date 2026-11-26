@@ -1,0 +1,28 @@
+{
+  "include": "../v0.1-scene.json",
+  "camera": {
+    "pos": [
+      12.5,
+      7.6,
+      16.6
+    ],
+    "look": [
+      12.5,
+      10.0,
+      16.5
+    ]
+  },
+  "view": {
+    "preview": true
+  },
+  "events": [
+    {
+      "frame": 3,
+      "key": "f"
+    },
+    {
+      "frame": 5,
+      "key": "2"
+    }
+  ]
+}

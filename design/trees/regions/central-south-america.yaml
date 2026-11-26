@@ -1,0 +1,4289 @@
+# Tree candidates: central-south-america. Fields per design/trees.md.
+# Total: 244; tiers: 1: 50, 2: 105, 3: 89
+# Inclusion: well-known 15, folklore 11, cultural 110, striking 121, flowers 39, fruit 76, medicinal 39, toxic 24, product 88
+# Genera with 5+ entries: Dalbergia 5
+
+- id: acai
+  names:
+  - açaí palm
+  scientific: Euterpe oleracea
+  rank: genus
+  stands_for:
+  - Euterpe precatoria
+  - Euterpe edulis (juçara)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Clumping Amazon palm whose purple berries are a staple food and global superfood.
+- id: acerola
+  names:
+  - acerola
+  - Barbados cherry
+  scientific: Malpighia emarginata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Small Caribbean tree with bright red cherries among the richest fruits in vitamin C.
+- id: ahuejote
+  names:
+  - ahuejote
+  - Mexican willow
+  - sauce criollo
+  scientific: Salix bonplandiana
+  rank: group
+  stands_for:
+  - Salix humboldtiana (sauce criollo)
+  distinct_from:
+  - 'weeping-willow: ahuejote is slim and upright, not weeping'
+  - 'white-willow: white willow is the European willow'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: central-south-america
+  why: Slim upright willows planted along the chinampas of Xochimilco, whose roots hold the island gardens
+    together; sauce criollo is the native willow of South American rivers.
+- id: alerce
+  names:
+  - alerce
+  - Patagonian cypress
+  scientific: Fitzroya cupressoides
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'patagonian-cypress: ciprés de la cordillera is a smaller dry-forest cypress with scale leaves in
+    flat sprays'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: central-south-america
+  why: Patagonian giant over 3,600 years old with durable red wood used for shingles.
+- id: algarrobo
+  names:
+  - algarrobo
+  - huarango
+  - tamarugo
+  - Prosopis alba
+  scientific: Neltuma alba
+  rank: group
+  stands_for:
+  - Neltuma chilensis
+  - Neltuma nigra
+  - Neltuma pallida (huarango)
+  - Neltuma caldenia (caldén)
+  - Strombocarpa tamarugo (tamarugo)
+  distinct_from:
+  - 'mesquite: mesquite is the North American desert relative'
+  split_from: mesquite
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - striking
+  region: central-south-america
+  why: The Chaco calls it simply "el árbol"; its pods make patay flour and aloja beer, and ancient huarangos
+    shaped Nazca.
+- id: allspice
+  names:
+  - allspice
+  - pimento
+  scientific: Pimenta dioica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bay-rum-tree: bay rum tree is grown for leaf oil, not berries'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: central-south-america
+  why: Jamaican spice berry and the jerk-smoking wood.
+- id: amate
+  names:
+  - amate
+  - jonote
+  scientific: Ficus cotinifolia
+  rank: group
+  stands_for:
+  - Ficus insipida (oje)
+  - Trema micrantha
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: central-south-america
+  why: Bark beaten into amate paper for Aztec codices, still made by the Otomí of San Pablito.
+- id: andean-alder
+  names:
+  - Andean alder
+  - aliso
+  scientific: Alnus acuminata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'alder: aliso is the montane American alder'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: central-south-america
+  why: Andean village tree for poles and hedges.
+- id: andean-walnut
+  names:
+  - Andean walnut
+  - nogal
+  - cedro negro
+  scientific: Juglans neotropica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'walnut: Andean walnut is a cloud-forest dye tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - fruit
+  region: central-south-america
+  why: Andean walnut with brown dye for wool and dark timber.
+- id: andiroba
+  names:
+  - andiroba
+  - crabwood
+  scientific: Carapa guianensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: central-south-america
+  why: Its bitter seed oil is the Amazon's insect repellent and anti-inflammatory; mahogany-like timber.
+- id: annatto
+  names:
+  - annatto
+  - achiote
+  scientific: Bixa orellana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: central-south-america
+  why: Spiny red pods with seeds used as a red food colouring and body paint.
+- id: annona
+  names:
+  - sugar apple
+  - sweetsop
+  - custard apple
+  - atemoya
+  scientific: Annona squamosa
+  rank: genus
+  stands_for:
+  - Annona reticulata (custard apple)
+  - Annona squamosa × cherimola (atemoya)
+  - Annona diversifolia (ilama)
+  - Annona mucosa (biribá)
+  distinct_from:
+  - 'soursop: soursop has a large spiny green fruit with tart white flesh'
+  - 'cherimoya: cherimoya is a cool highland Andean tree with scaled green fruit'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - toxic
+  region: central-south-america
+  why: Custard-fleshed fruits Mark Twain called the most delicious known; seeds are toxic.
+- id: argentine-cardon
+  names:
+  - cardón
+  - cardón grande
+  - Argentine saguaro
+  - Trichocereus terscheckii
+  scientific: Leucostele terscheckii
+  rank: group
+  stands_for:
+  - Leucostele atacamensis (cardón of the puna)
+  distinct_from:
+  - 'saguaro: saguaro is the Sonoran giant cactus'
+  - 'cardon: cardón of Baja is a different genus'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: central-south-america
+  why: Branched columns to 12 m on Andean slopes; its lattice-like dead wood makes the doors, ceilings
+    and church furniture of the Quebrada de Humahuaca.
+- id: autograph-tree
+  names:
+  - autograph tree
+  - pitch apple
+  scientific: Clusia rosea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: central-south-america
+  why: Strangler whose stiff leaves keep words scratched into them; Caribs used its resin to caulk boats.
+- id: avocado
+  names:
+  - avocado
+  scientific: Persea americana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  region: central-south-america
+  why: Oily fruit domesticated in Mesoamerica, with large seeds thought to have been dispersed by extinct
+    megafauna.
+- id: ayacahuite
+  names:
+  - ayacahuite
+  - Mexican white pine
+  scientific: Pinus ayacahuite
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'eastern-white-pine: ayacahuite has much longer resinous cones'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Mexican and Central American white pine with soft drooping needles and resin-dripping cones up
+    to about 40 cm long.
+- id: babassu
+  names:
+  - babassu
+  - cohune palm
+  scientific: Attalea speciosa
+  rank: group
+  stands_for:
+  - Attalea cohune (cohune palm)
+  distinct_from:
+  - 'piassava: piassava is a fibre palm'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - fruit
+  region: central-south-america
+  why: Oil palm of Maranhão whose nuts the quebradeiras de coco crack by hand with axes for their livelihood.
+- id: bacuri
+  names:
+  - bacuri
+  scientific: Platonia insignis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: central-south-america
+  why: Thick yellow-rinded fruit of Pará with fragrant white pulp; its resin and seed fat are used locally.
+- id: balche
+  names:
+  - balché
+  scientific: Lonchocarpus longistylus
+  rank: species
+  stands_for:
+  - Lonchocarpus violaceus
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: central-south-america
+  why: Bark fermented with honey into balché, the ritual mead of the Maya.
+- id: balsa
+  names:
+  - balsa
+  scientific: Ochroma pyramidale
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: central-south-america
+  why: Lightest commercial timber, used for models and Heyerdahl's Kon-Tiki raft.
+- id: balsam-of-peru
+  names:
+  - Peru balsam
+  - Tolu balsam
+  scientific: Myroxylon balsamum
+  rank: species
+  stands_for:
+  - Myroxylon balsamum var. pereirae
+  - Myroxylon balsamum var. balsamum (balsam of Tolu)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - cultural
+  - product
+  region: central-south-america
+  why: Fragrant balsam used in medicine, perfume and Catholic chrism oil.
+- id: baru
+  names:
+  - baru
+  - cumbaru
+  scientific: Dipteryx alata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tonka-bean: tonka is a rainforest giant with toxic coumarin seeds'
+  split_from: tonka-bean
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Cerrado tree whose roasted nuts are a rising Brazilian food.
+- id: bay-rum-tree
+  names:
+  - bay rum tree
+  - West Indian bay
+  scientific: Pimenta racemosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'allspice: allspice is the berry-spice tree'
+  split_from: allspice
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: central-south-america
+  why: Caribbean leaf oil distilled with rum into bay rum aftershave.
+- id: bearded-fig
+  names:
+  - bearded fig
+  - Shortleaf fig
+  scientific: Ficus citrifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'banyan: bearded fig is a smaller Caribbean strangler'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: central-south-america
+  why: Fig hung with aerial roots like beards that gave Barbados its name.
+- id: belly-palm
+  names:
+  - Cuban belly palm
+  - barrigona
+  scientific: Colpothrinax wrightii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Palm with a bulging pot-belly trunk once hollowed for canoes and water vessels.
+- id: big-leaf-oak
+  names:
+  - big-leaf oak
+  - encino roble
+  scientific: Quercus urbanii
+  rank: group
+  stands_for:
+  - Quercus tarahumara
+  - Quercus resinosa
+  - Quercus magnoliifolia
+  distinct_from:
+  - 'encino: encino has small thick cupped leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Oaks of western Mexico's dry slopes with stiff, rounded leaves the size of a dinner plate.
+- id: black-mangrove
+  names:
+  - black mangrove
+  scientific: Avicennia germinans
+  rank: group
+  stands_for:
+  - Avicennia schaueriana
+  distinct_from:
+  - 'white-mangrove: white mangrove has no pneumatophores and has rounded, notched leaves'
+  - 'buttonwood: buttonwood has button-like cone fruit on dry back-mangrove ground'
+  - 'grey-mangrove: grey mangrove is the Old World Avicennia of the Indian Ocean and Red Sea'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: central-south-america
+  why: Excretes salt from its leaves and breathes through fields of pencil-like pneumatophores.
+- id: black-sapote
+  names:
+  - black sapote
+  - chocolate pudding fruit
+  scientific: Diospyros nigra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'persimmon: persimmon flesh stays orange'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Persimmon relative whose ripe flesh turns black and soft like chocolate pudding.
+- id: bloodwood
+  names:
+  - bloodwood
+  - satiné
+  scientific: Brosimum rubescens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'snakewood: snakewood is speckled'
+  split_from: snakewood
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Dense wood of a uniform blood red, used for inlay and bows.
+- id: blue-mahoe
+  names:
+  - blue mahoe
+  - majagua
+  scientific: Talipariti elatum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: central-south-america
+  why: Jamaica's national tree, with blue-green streaked wood, hibiscus flowers and lace-like bark fibre.
+- id: bocote
+  names:
+  - bocote
+  scientific: Cordia gerascanthus
+  rank: group
+  stands_for:
+  - Cordia alliodora (laurel, salmwood)
+  - Cordia trichotoma (louro-pardo)
+  distinct_from:
+  - 'ziricote: ziricote is near-black with spider-web landscape grain'
+  - 'geiger-tree: geiger tree is a small coastal ornamental with orange flowers'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Bold black-and-gold figure, and ziricote's spider-web grain.
+- id: boldo
+  names:
+  - boldo
+  scientific: Peumus boldus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: central-south-america
+  why: Chilean shrub tree whose leaves make a digestive tea sold across Latin America.
+- id: brazil-nut
+  names:
+  - Brazil nut
+  scientific: Bertholletia excelsa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sapucaia: sapucaia pods open with a lid and drop their nuts'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  - product
+  region: central-south-america
+  why: Emergent Amazon giant whose cannonball pods hold the nuts and are opened only by agoutis.
+- id: brazilian-pepper
+  names:
+  - Brazilian pepper
+  - aroeira
+  - pink peppercorn
+  scientific: Schinus terebinthifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'peruvian-pepper: Peruvian pepper weeps and has fine leaflets'
+  split_from: peruvian-pepper
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - fruit
+  - toxic
+  region: central-south-america
+  why: Main source of pink peppercorns, a cashew relative whose sap irritates skin, and a notorious invader
+    of Florida.
+- id: brazilian-rosewood
+  names:
+  - Brazilian rosewood
+  - jacarandá
+  scientific: Dalbergia nigra
+  rank: group
+  stands_for:
+  - Dalbergia spruceana (Amazon rosewood)
+  distinct_from:
+  - 'cocobolo: cocobolo is orange-red and oily'
+  - 'african-blackwood: African blackwood is nearly black'
+  - 'indian-rosewood: Indian rosewood is the plantation-grown purple-brown species'
+  - 'tulipwood: tulipwood is pink and cream striped'
+  - 'kingwood: kingwood is violet-black'
+  - 'honduras-rosewood: Honduras rosewood is pinkish-brown and rings when struck'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: central-south-america
+  why: Dark streaked guitar and furniture wood so prized it is on CITES Appendix I.
+- id: brazilwood
+  names:
+  - brazilwood
+  - pernambuco
+  scientific: Paubrasilia echinata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: central-south-america
+  why: Red-dye wood that gave Brazil its name and remains the best wood for violin bows.
+- id: brownea
+  names:
+  - rose of the mountain
+  - rosa de montaña
+  scientific: Brownea grandiceps
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  region: central-south-america
+  why: Hanging pompons of scarlet flowers and limp new leaves like handkerchiefs.
+- id: brugmansia
+  names:
+  - angel's trumpet
+  - floripondio
+  scientific: Brugmansia
+  rank: genus
+  stands_for:
+  - Brugmansia arborea
+  - Brugmansia suaveolens
+  - Brugmansia sanguinea
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extinct-in-wild
+  inclusion:
+  - toxic
+  - flowers
+  - cultural
+  region: central-south-america
+  why: Huge hanging trumpet flowers and tropane alkaloids used by Andean shamans; all species are extinct
+    in the wild and survive only in cultivation.
+- id: butia
+  names:
+  - butiá
+  - jelly palm
+  - yatay
+  scientific: Butia odorata
+  rank: group
+  stands_for:
+  - Butia capitata
+  - Butia yatay (yatay)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Grey-blue arching palm of Uruguay and Rio Grande do Sul whose sticky orange fruit flavours cachaça
+    and jelly.
+- id: buttonwood
+  names:
+  - buttonwood
+  - button mangrove
+  scientific: Conocarpus erectus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-mangrove: buttonwood has no pneumatophores'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: central-south-america
+  why: Back-mangrove tree with button-like fruits, burned for prized charcoal.
+- id: cacao
+  names:
+  - cacao
+  - cocoa tree
+  scientific: Theobroma cacao
+  rank: genus
+  stands_for:
+  - Theobroma bicolor (pataxte, mocambo)
+  distinct_from:
+  - 'cupuacu: cupuaçu has large fuzzy brown pods eaten for pulp'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - fruit
+  - product
+  region: central-south-america
+  why: Pods borne on the trunk give chocolate; the Maya and Aztecs used cacao as drink of the gods and
+    currency.
+- id: calabash-tree
+  names:
+  - calabash tree
+  scientific: Crescentia cujete
+  rank: species
+  stands_for:
+  - Crescentia alata (Mexican calabash)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - fruit
+  region: central-south-america
+  why: Gourd-like fruits on the trunk become bowls, maracas and vessels.
+- id: camu-camu
+  names:
+  - camu-camu
+  scientific: Myrciaria dubia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Amazon floodplain tree standing in water for months, with sour purple berries very high in vitamin
+    C.
+- id: candle-tree
+  names:
+  - candle tree
+  - cuajilote
+  scientific: Parmentiera cereifera
+  rank: species
+  stands_for:
+  - Parmentiera aculeata (cuajilote)
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: central-south-america
+  why: Waxy yellow candle-shaped fruits hang from the trunk.
+- id: canelo
+  names:
+  - canelo
+  - foye
+  - winter's bark
+  scientific: Drimys winteri
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - folklore
+  region: central-south-america
+  why: Sacred tree of the Mapuche, beside the machi's altar; its peppery bark cured Drake's scurvy-stricken
+    crew.
+- id: cannonball-tree
+  names:
+  - cannonball tree
+  - nagalinga
+  scientific: Couroupita guianensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  - cultural
+  region: central-south-america
+  why: Fragrant flowers and cannonball fruit on the trunk; planted at Shiva temples in India for the naga-hood
+    shape of its flowers.
+- id: capirona
+  names:
+  - capirona
+  - pau-mulato
+  scientific: Calycophyllum spruceanum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: central-south-america
+  why: Amazon floodplain tree that sheds its bark yearly to show a glossy green-bronze trunk.
+- id: carnauba
+  names:
+  - carnauba palm
+  scientific: Copernicia prunifera
+  rank: species
+  stands_for:
+  - Copernicia alba (carandá)
+  distinct_from:
+  - 'petticoat-palm: Cuban petticoat palm keeps a skirt of dead leaves and has no wax crop'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: central-south-america
+  why: Brazilian 'tree of life' whose leaves yield carnauba wax for polish and candy coatings.
+- id: cashew
+  names:
+  - cashew
+  scientific: Anacardium occidentale
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - toxic
+  - product
+  region: central-south-america
+  why: The nut hangs below a fleshy cashew apple, and its shell holds a caustic urushiol-like oil.
+- id: cazahuate
+  names:
+  - cazahuate
+  - tree morning glory
+  scientific: Ipomoea arborescens
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - medicinal
+  region: central-south-america
+  why: A morning glory grown into a tree, whose white flowers cover dry Mexican hills in winter.
+- id: cecropia
+  names:
+  - cecropia
+  - trumpet tree
+  scientific: Cecropia peltata
+  rank: genus
+  stands_for:
+  - Cecropia obtusifolia
+  - Cecropia pachystachya
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Pioneer with hollow stems housing Azteca ants that defend it, and silvery umbrella leaves eaten
+    by sloths.
+- id: cerejeira
+  names:
+  - cerejeira
+  - amburana
+  - roble criollo
+  scientific: Amburana cearensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: central-south-america
+  why: Vanilla-scented wood used for barrels to age cachaça; its coumarin-rich bark and seeds are a Caatinga
+    cold remedy.
+- id: chaco-palo-santo
+  names:
+  - palo santo (Chaco)
+  - guaiac wood
+  - Gonopterodendron sarmientoi
+  scientific: Bulnesia sarmientoi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'palo-santo: Bursera palo santo is a different, soft-wooded tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: central-south-america
+  why: Green-hearted heavy wood distilled into guaiac wood oil for perfumery.
+- id: chaconia
+  names:
+  - chaconia
+  - wild poinsettia
+  scientific: Warszewiczia coccinea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: central-south-america
+  why: Trinidad and Tobago's national flower, a small rainforest tree with long sprays of scarlet bracts.
+- id: chanar
+  names:
+  - chañar
+  scientific: Geoffroea decorticans
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: central-south-america
+  why: Green trunk under peeling bark; fruits boiled into arrope syrup.
+- id: chechem
+  names:
+  - chechem
+  - black poisonwood
+  - poisonwood
+  scientific: Metopium brownei
+  rank: species
+  stands_for:
+  - Metopium toxiferum (poisonwood)
+  distinct_from:
+  - 'manchineel: chechem has an urushiol sap, not a poisoned fruit'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  - folklore
+  region: central-south-america
+  why: Yucatán tree whose sap burns like poison ivy; Maya lore says the gumbo-limbo, its antidote, grows
+    beside it. Figured brown wood.
+- id: cherimoya
+  names:
+  - cherimoya
+  - chirimoya
+  scientific: Annona cherimola
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'annona: sugar apple is a lowland tropical tree'
+  split_from: annona
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - toxic
+  region: central-south-america
+  why: Andean highland fruit with scale-patterned skin that Mark Twain called the most delicious fruit
+    known.
+- id: chilean-firebush
+  names:
+  - notro
+  - Chilean firebush
+  scientific: Embothrium coccineum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  region: central-south-america
+  why: Brilliant scarlet tubular flowers in Patagonian forest edges.
+- id: chilean-hazel
+  names:
+  - avellano chileno
+  - Chilean hazel
+  scientific: Gevuina avellana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Protea relative whose red nuts turn black and are roasted.
+- id: chilean-myrtle
+  names:
+  - Chilean myrtle
+  - arrayán
+  scientific: Luma apiculata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: central-south-america
+  why: Silky cinnamon-orange bark in the arrayán forests of Patagonia; edible berries.
+- id: chilean-wine-palm
+  names:
+  - Chilean wine palm
+  scientific: Jubaea chilensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  - product
+  region: central-south-america
+  why: Palm with the thickest trunk, once felled for its sugary sap boiled into palm honey; coquitos nuts.
+- id: chuchuhuasi
+  names:
+  - chuchuhuasi
+  scientific: Maytenus macrocarpa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: central-south-america
+  why: Amazonian bark steeped in rum as a tonic for rheumatism, sold in Iquitos bars.
+- id: cinchona
+  names:
+  - cinchona
+  - quinine tree
+  - Jesuit's bark
+  scientific: Cinchona officinalis
+  rank: genus
+  stands_for:
+  - Cinchona pubescens
+  - Cinchona calisaya
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - medicinal
+  - cultural
+  - product
+  region: central-south-america
+  why: Bark yielding quinine, the first effective malaria treatment; Peru's national tree, shown on its
+    coat of arms.
+- id: cloud-forest-oak
+  names:
+  - cloud-forest oak
+  - roble
+  - roble blanco
+  - Quercus copeyensis
+  - Colombian oak
+  scientific: Quercus bumelioides
+  rank: group
+  stands_for:
+  - Quercus costaricensis
+  - Quercus seemannii
+  - Quercus humboldtii (Colombian oak)
+  distinct_from:
+  - 'encino: encino is the smaller Mexican highland oak'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: central-south-america
+  why: Mossy oaks to 50 m that dominate the Talamanca cloud forests and were burned for charcoal; the
+    Colombian oak is the only oak native to South America.
+- id: coca
+  names:
+  - coca
+  scientific: Erythroxylum coca
+  rank: species
+  stands_for:
+  - Erythroxylum novogranatense
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  - toxic
+  region: central-south-america
+  why: Sacred Andean leaf chewed against altitude and offered to Pachamama; source of cocaine. A shrub
+    or small tree.
+- id: cocobolo
+  names:
+  - cocobolo
+  scientific: Dalbergia retusa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'brazilian-rosewood: cocobolo is orange-red and oily'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - toxic
+  region: central-south-america
+  why: Oily orange-red wood streaked black; its dust is a strong sensitizer.
+- id: coihue
+  names:
+  - coihue
+  scientific: Nothofagus dombeyi
+  rank: species
+  stands_for:
+  - Nothofagus betuloides (guindo)
+  distinct_from:
+  - 'lenga: lenga is deciduous'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Evergreen beech of the Valdivian rainforest, reaching 45 m.
+- id: colihue
+  names:
+  - colihue
+  - coligüe
+  scientific: Chusquea culeou
+  rank: group
+  stands_for:
+  - Chusquea quila (quila)
+  distinct_from:
+  - 'guadua: guadua is a hollow giant tropical bamboo'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: central-south-america
+  why: Solid-stemmed Patagonian bamboo of the Mapuche trutruca horn and lances; its rare mass flowering
+    sets off ratadas, plagues of rats.
+- id: colorin
+  names:
+  - colorín
+  - pichoco
+  scientific: Erythrina americana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'coral-tree: ceibo has large open crimson flowers'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - fruit
+  - toxic
+  region: central-south-america
+  why: Mexican coral tree whose red flowers are eaten with eggs while its red seeds are poisonous.
+- id: copaiba
+  names:
+  - copaiba
+  scientific: Copaifera officinalis
+  rank: genus
+  stands_for:
+  - Copaifera langsdorffii
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: central-south-america
+  why: Tapped for an oleoresin used in Amazon folk medicine and varnish.
+- id: copal
+  names:
+  - copal
+  - copal tree
+  scientific: Bursera bipinnata
+  rank: group
+  stands_for:
+  - Bursera copallifera
+  - Protium copal
+  - Protium heptaphyllum (breu branco)
+  distinct_from:
+  - 'palo-santo: palo santo is burned as wood, not resin'
+  split_from: palo-santo
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - folklore
+  region: central-south-america
+  why: Resin burned as the incense of Mesoamerican temples, the Maya pom, still used at Day of the Dead
+    altars.
+- id: coral-shower
+  names:
+  - coral shower
+  - carao
+  - stinking toe
+  scientific: Cassia grandis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'golden-shower: carao flowers pink'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - fruit
+  - medicinal
+  region: central-south-america
+  why: Pink blossoms, then metre-long pods of foul-smelling sweet syrup taken as a blood tonic.
+- id: coral-tree
+  names:
+  - coral tree
+  - ceibo
+  scientific: Erythrina crista-galli
+  rank: group
+  stands_for:
+  - Erythrina falcata (pisonay)
+  distinct_from:
+  - 'mountain-immortelle: immortelle is a tall shade tree with orange flowers over cacao'
+  - 'colorin: colorín has spikes of edible red flowers'
+  - 'coast-coral-tree: the African coral trees have their own entry'
+  - 'wiliwili: wiliwili is the Hawaiian coral tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - toxic
+  region: central-south-america
+  why: Scarlet flower clusters; the ceibo is the national flower of Argentina and Uruguay, and the seeds
+    of many species are toxic.
+- id: cork-palm
+  names:
+  - Cuban cork palm
+  - palma corcho
+  scientific: Microcycas calocoma
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cycad: cork palm is a tall single-trunked Cuban endemic'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - toxic
+  region: central-south-america
+  why: Critically rare Cuban cycad with a corky trunk to 10 m; toxic like all cycads.
+- id: cow-tree
+  names:
+  - cow tree
+  - palo de vaca
+  scientific: Brosimum utile
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ramon: ramón is a Maya nut tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  - product
+  region: central-south-america
+  why: Humboldt drank the sweet milky latex that Venezuelan farmers tapped from its trunk like milk.
+- id: coyol-palm
+  names:
+  - coyol palm
+  - macaúba
+  scientific: Acrocomia aculeata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Spiny palm felled and tapped for vino de coyol in Central America; its fruit gives oil.
+- id: cuachalalate
+  names:
+  - cuachalalate
+  scientific: Amphipterygium adstringens
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: central-south-america
+  why: Mexican bark sold in every market for ulcers and wounds.
+- id: cuban-mahogany
+  names:
+  - Cuban mahogany
+  - West Indian mahogany
+  - caoba
+  scientific: Swietenia mahagoni
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mahogany: big-leaf mahogany is larger-leaved and lighter'
+  split_from: mahogany
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  region: central-south-america
+  why: The original 18th-century mahogany of Chippendale furniture, national tree of the Dominican Republic.
+- id: cuipo
+  names:
+  - cuipo
+  scientific: Cavanillesia platanifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Emergent with a smooth swollen trunk full of water and a crown like a parasol.
+- id: cupuacu
+  names:
+  - cupuaçu
+  scientific: Theobroma grandiflorum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cacao: cacao has ribbed pods on the trunk'
+  split_from: cacao
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: central-south-america
+  why: Cacao relative with big fuzzy brown pods; its pulp is a favourite Amazon flavour and its seeds
+    give cupulate fat.
+- id: devils-hand-tree
+  names:
+  - devil's hand tree
+  - monkey's hand tree
+  scientific: Chiranthodendron pentadactylon
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - medicinal
+  - striking
+  region: central-south-america
+  why: Red flowers shaped like a clawed hand, used by the Aztecs as a heart remedy.
+- id: dinizia
+  names:
+  - angelim-vermelho
+  scientific: Dinizia excelsa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Tallest tree known in the Amazon, measured at about 88 m in 2019.
+- id: divi-divi
+  names:
+  - divi-divi
+  - watapana
+  scientific: Libidibia coriaria
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'leopard-tree: pau-ferro has a mottled trunk'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: central-south-america
+  why: Bent by the trade winds into a crown that points downwind, the emblem of Aruba and Curaçao; its
+    curled pods were exported for tannin.
+- id: encino
+  names:
+  - encino
+  - netleaf oak
+  - Mexican oak
+  - encino colorado
+  scientific: Quercus rugosa
+  rank: group
+  stands_for:
+  - Quercus crassifolia
+  - Quercus laurina
+  - Quercus castanea
+  - Quercus crassipes
+  - Quercus obtusata
+  - Quercus sideroxyla (encino colorado)
+  distinct_from:
+  - 'white-oak: encino is the evergreen-leaved highland oak of Mexico'
+  - 'big-leaf-oak: big-leaf oaks have round leaves as big as plates'
+  - 'cloud-forest-oak: the Central American cloud-forest oaks are 50 m giants'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  region: central-south-america
+  why: Dominant oak of Mexico's pine–oak forests, in the country with the most oak species (about 160);
+    thick cupped leaves, and the charcoal and firewood of highland Mexico.
+- id: feijoa
+  names:
+  - feijoa
+  - pineapple guava
+  scientific: Acca sellowiana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - flowers
+  region: central-south-america
+  why: Small grey-leaved tree of southern Brazil and Uruguay with edible red-stamened flowers and aromatic
+    green fruit.
+- id: frailejon
+  names:
+  - frailejón
+  scientific: Espeletia grandiflora
+  rank: group
+  stands_for:
+  - Espeletia hartwegiana
+  - Espeletia pycnocarpa
+  distinct_from:
+  - 'dendrosenecio: giant groundsels are the African counterparts'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: central-south-america
+  why: Woolly-leaved giant rosettes on trunks of dead leaves that crowd the páramo and gather the cloud
+    water that supplies Bogotá.
+- id: frangipani
+  names:
+  - frangipani
+  - plumeria
+  scientific: Plumeria rubra
+  rank: genus
+  stands_for:
+  - Plumeria alba
+  - Plumeria obtusa
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - folklore
+  region: central-south-america
+  why: Fragrant flowers the Aztecs called cacaloxochitl; as sacuanjoche it is Nicaragua's national flower,
+    and it is planted at Buddhist temples, strung into Hawaiian leis and, in Malay lore, haunted by the
+    pontianak.
+- id: fustic
+  names:
+  - fustic
+  - old fustic
+  - dyer's mulberry
+  scientific: Maclura tinctoria
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'osage-orange: fustic has small edible fruit, not hedge-apples'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  region: central-south-america
+  why: Yellow heartwood that dyed the khaki of First World War uniforms.
+- id: garambullo
+  names:
+  - garambullo
+  - blue candle
+  scientific: Myrtillocactus geometrizans
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: central-south-america
+  why: Blue-grey candelabra tree cactus of central Mexico whose small purple berries are eaten fresh or
+    dried.
+- id: geiger-tree
+  names:
+  - geiger tree
+  - siricote
+  scientific: Cordia sebestena
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bocote: bocote is a timber tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  region: central-south-america
+  why: Small coastal tree with clusters of orange flowers.
+- id: genipap
+  names:
+  - genipap
+  - jenipapo
+  - huito
+  scientific: Genipa americana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - fruit
+  region: central-south-america
+  why: Unripe fruit juice turns blue-black on skin, the body paint of many Amazonian peoples.
+- id: giant-acorn-oak
+  names:
+  - giant-acorn oak
+  scientific: Quercus insignis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'encino: encino has small acorns'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: central-south-america
+  why: Rare oak from Veracruz to Panama whose acorns, up to about 6 cm, are among the largest of any oak.
+- id: giant-yucca
+  names:
+  - giant yucca
+  - izote
+  scientific: Yucca gigantea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'joshua-tree: izote is a humid-tropics yucca with soft leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - flowers
+  region: central-south-america
+  why: Tree yucca whose flower, the flor de izote, is El Salvador's national flower and eaten with eggs.
+- id: greenheart
+  names:
+  - greenheart
+  scientific: Chlorocardium rodiei
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lignum-vitae: lignum vitae is smaller and resinous'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  - cultural
+  region: central-south-america
+  why: Guyanese marine timber for lock gates and fly rods; its bark gave bebeerine, a fever remedy.
+- id: guadua
+  names:
+  - guadua
+  scientific: Guadua angustifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bamboo: Asian timber bamboos lack thorns'
+  split_from: bamboo
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: central-south-america
+  why: Giant thorny bamboo, the "vegetable steel" of Colombian coffee-region architecture.
+- id: guaitecas-cypress
+  names:
+  - Guaitecas cypress
+  - ciprés de las Guaitecas
+  scientific: Pilgerodendron uviferum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: The southernmost conifer in the world, in Patagonian bogs.
+- id: guaje
+  names:
+  - guaje
+  - white leadtree
+  scientific: Leucaena leucocephala
+  rank: group
+  stands_for:
+  - Leucaena esculenta
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  region: central-south-america
+  why: Pod tree whose seeds are eaten raw in Mexico; Oaxaca takes its name from it.
+- id: guamuchil
+  names:
+  - guamúchil
+  - Manila tamarind
+  scientific: Pithecellobium dulce
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Thorny tree with twisted pods of sweet white pulp eaten as street snacks.
+- id: guanacaste
+  names:
+  - guanacaste
+  - elephant ear tree
+  scientific: Enterolobium cyclocarpum
+  rank: species
+  stands_for:
+  - Enterolobium contortisiliquum (timbó)
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: central-south-america
+  why: National tree of Costa Rica with a wide crown and ear-shaped pods.
+- id: guapuruvu
+  names:
+  - guapuruvu
+  - Brazilian fern tree
+  scientific: Schizolobium parahyba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  region: central-south-america
+  why: One of the fastest trees of the Atlantic Forest, with fern-like leaves a metre long and a yellow
+    crown in spring.
+- id: guava
+  names:
+  - guava
+  scientific: Psidium guajava
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'strawberry-guava: strawberry guava is a smaller red-fruited invasive shrub-tree'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Familiar tropical fruit with smooth mottled bark.
+- id: guayusa
+  names:
+  - guayusa
+  scientific: Ilex guayusa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'yerba-mate: yerba mate is a southern drink shared from a gourd'
+  split_from: yerba-mate
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - medicinal
+  region: central-south-america
+  why: Amazonian holly whose caffeinated leaves the Kichwa brew before dawn to share dreams.
+- id: gumbo-limbo
+  names:
+  - gumbo-limbo
+  - tourist tree
+  scientific: Bursera simaruba
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'palo-santo: gumbo-limbo is a Caribbean tree grown for its peeling red bark'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  - product
+  region: central-south-america
+  why: Peeling red bark gives the joke name 'tourist tree'; its resin and bark are Caribbean folk medicine.
+- id: hartweg-pine
+  names:
+  - Hartweg pine
+  - pino de las alturas
+  scientific: Pinus hartwegii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'scots-pine: Hartweg pine is a tropical-mountain treeline pine'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: The highest-growing pine, forming the treeline near 4,000 m on Mexican volcanoes.
+- id: honduras-rosewood
+  names:
+  - Honduras rosewood
+  scientific: Dalbergia stevensonii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'brazilian-rosewood: Brazilian rosewood is darker and figured'
+  split_from: brazilian-rosewood
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: central-south-america
+  why: Resonant pinkish-brown Belizean wood used for marimba bars.
+- id: huayruro
+  names:
+  - huayruro
+  scientific: Ormosia coccinea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - toxic
+  region: central-south-america
+  why: Amazon tree whose toxic scarlet-and-black seeds are strung as good-luck charms across Peru.
+- id: huizache
+  names:
+  - huizache
+  - sweet acacia
+  - cassie
+  scientific: Vachellia farnesiana
+  rank: species
+  stands_for:
+  - Vachellia caven (espinillo)
+  distinct_from:
+  - 'umbrella-thorn: huizache is a scrubby American thorn with scented flowers'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - product
+  - well-known
+  region: central-south-america
+  why: Thorny Mexican scrub tree whose fragrant yellow puffballs give cassie perfume.
+- id: ice-cream-bean
+  names:
+  - ice-cream bean
+  - inga
+  scientific: Inga edulis
+  rank: genus
+  stands_for:
+  - Inga feuilleei
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Long pods with sweet cottony pulp tasting of vanilla.
+- id: imbuia
+  names:
+  - imbuia
+  - Brazilian walnut
+  scientific: Ocotea porosa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Aromatic figured dark wood of the Araucaria forests.
+- id: intimpa
+  names:
+  - intimpa
+  - romerillo
+  scientific: Podocarpus glomeratus
+  rank: group
+  stands_for:
+  - Retrophyllum rospigliosii (romerillo)
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: central-south-america
+  why: Andean podocarp whose Quechua name means 'tree of the sun', a timber of high-valley forests near
+    Cusco.
+- id: ipe
+  names:
+  - ipê
+  - lapacho
+  - pink ipê
+  - pau d'arco
+  scientific: Handroanthus impetiginosus
+  rank: genus
+  stands_for:
+  - Handroanthus heptaphyllus
+  distinct_from:
+  - 'yellow-ipe: yellow ipê flowers gold and is the Brazilian and Venezuelan symbol'
+  - 'pink-poui: pink poui is a lighter-wooded Tabebuia of Central America'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - medicinal
+  region: central-south-america
+  why: Leafless trees covered in pink trumpets, Paraguay's national tree, very dense decking timber, and
+    pau d'arco bark tea.
+- id: ishpingo
+  names:
+  - ishpingo
+  - American cinnamon
+  scientific: Ocotea quixos
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cinnamon: ishpingo spice is the dried flower calyx, not bark'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: central-south-america
+  why: Cinnamon-scented flower cups that flavour Ecuador's Day of the Dead colada morada; sought by Spanish
+    conquistadors as the "land of cinnamon".
+- id: jabuticaba
+  names:
+  - jabuticaba
+  scientific: Plinia cauliflora
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: central-south-america
+  why: Grape-like fruit grows directly from the trunk.
+- id: jacaranda
+  names:
+  - jacaranda
+  scientific: Jacaranda mimosifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - well-known
+  region: central-south-america
+  why: Lavender-blue flowers on bare branches turning Pretoria and Buenos Aires purple.
+- id: jatoba
+  names:
+  - jatobá
+  - courbaril
+  - West Indian locust
+  scientific: Hymenaea courbaril
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - product
+  - fruit
+  - striking
+  region: central-south-america
+  why: Its resin is South American copal and, in an extinct relative, Dominican amber; hard red "Brazilian
+    cherry" wood; floury pods.
+- id: jequitiba
+  names:
+  - jequitibá-rosa
+  scientific: Cariniana legalis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: central-south-america
+  why: Atlantic Forest giant to 50 m; the Patriarca of Santa Rita do Passa Quatro is thought to be over
+    3,000 years old.
+- id: jocote
+  names:
+  - jocote
+  - red mombin
+  - hog plum
+  - cajá
+  scientific: Spondias purpurea
+  rank: group
+  stands_for:
+  - Spondias mombin (yellow mombin)
+  distinct_from:
+  - 'umbu: umbu is a caatinga tree with water-storing roots'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Plum-like fruits on leafless branches, grown as living fence posts from cuttings.
+- id: juan-fernandez-sandalwood
+  names:
+  - Juan Fernández sandalwood
+  - Chile sandalwood
+  scientific: Santalum fernandezianum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sandalwood: Indian sandalwood is the living spice-island species'
+  split_from: null
+  tier: 3
+  status: extinct
+  inclusion:
+  - product
+  - cultural
+  region: central-south-america
+  why: Fragrant sandalwood of the Juan Fernández Islands, cut for export until Skottsberg saw the last
+    tree in 1908; extinct by about 1916.
+- id: juazeiro
+  names:
+  - juazeiro
+  scientific: Sarcomphalus joazeiro
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  region: central-south-america
+  why: Evergreen of the caatinga with soapy bark, a symbol of the sertão.
+- id: kapok
+  names:
+  - kapok
+  - ceiba
+  - silk-cotton tree
+  scientific: Ceiba pentandra
+  rank: species
+  stands_for:
+  - Ceiba aesculifolia (pochote)
+  - Ceiba trichistandra (lupuna)
+  distinct_from:
+  - 'silk-floss-tree: silk floss tree has a bottle trunk and large pink flowers'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - striking
+  - product
+  region: central-south-america
+  why: Sacred Maya world tree (yaxche) connecting underworld and heavens, national tree of Guatemala and
+    Puerto Rico, emergent above rainforests with huge buttresses and fluffy kapok fibre.
+- id: kingwood
+  names:
+  - kingwood
+  - violetta
+  scientific: Dalbergia cearensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'brazilian-rosewood: Brazilian rosewood is dark brown'
+  split_from: brazilian-rosewood
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Violet-black striped wood used in Louis XIV veneers.
+- id: kiswar
+  names:
+  - kiswar
+  - quishuar
+  scientific: Buddleja coriacea
+  rank: group
+  stands_for:
+  - Buddleja incana
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: central-south-america
+  why: High-Andean tree sacred to the Inca, its wood used for ceremonial carving.
+- id: lacebark
+  names:
+  - lacebark
+  scientific: Lagetta lagetto
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: central-south-america
+  why: Inner bark stretches into a fine lace once worn by Jamaican ladies and made into whips by the enslaved.
+- id: lenga
+  names:
+  - lenga
+  - ñire
+  scientific: Nothofagus pumilio
+  rank: species
+  stands_for:
+  - Nothofagus antarctica (ñire)
+  distinct_from:
+  - 'coihue: coihue is evergreen'
+  - 'rauli: raulí is the large lowland timber beech'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Deciduous beech of the Patagonian treeline that turns red in autumn; with ñire it forms the southernmost
+    forests on Earth, on Tierra del Fuego.
+- id: leopard-tree
+  names:
+  - leopard tree
+  - pau-ferro
+  - jucá
+  scientific: Libidibia ferrea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  region: central-south-america
+  why: Mottled white and grey bark like a leopard's coat; pods are a Brazilian folk remedy.
+- id: leopardwood
+  names:
+  - leopardwood
+  scientific: Roupala montana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Quartersawn wood shows leopard-like spots.
+- id: lignum-vitae
+  names:
+  - lignum vitae
+  - guayacán
+  scientific: Guaiacum officinale
+  rank: genus
+  stands_for:
+  - Guaiacum sanctum
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  - cultural
+  - product
+  region: central-south-america
+  why: One of the densest woods, self-lubricating for ship propeller bearings, and a 16th-century syphilis
+    remedy; national tree of the Bahamas and Jamaica's national flower.
+- id: linaloe
+  names:
+  - linaloe
+  - Mexican lavender tree
+  scientific: Bursera linanoe
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'copal: copal is tapped for resin'
+  split_from: palo-santo
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: central-south-america
+  why: Fragrant wood of the lacquered boxes of Olinalá, Guerrero, and a linalool oil.
+- id: litre
+  names:
+  - litre
+  scientific: Lithraea caustica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - folklore
+  region: central-south-america
+  why: Chilean matorral tree whose touch, or for the sensitive its shade, raises a poison-ivy-like rash;
+    folk custom greets it politely to be spared.
+- id: lixeira
+  names:
+  - lixeira
+  - sandpaper tree
+  - chaparro
+  scientific: Curatella americana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: central-south-america
+  why: Gnarled savanna tree of the cerrado and llanos with corky bark and leaves rough enough to sand
+    wood and scour pots.
+- id: logwood
+  names:
+  - logwood
+  scientific: Haematoxylum campechianum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: central-south-america
+  why: Dye wood fought over by Baymen pirates; source of haematoxylin, the standard microscopy stain.
+- id: lucuma
+  names:
+  - lúcuma
+  - canistel
+  scientific: Pouteria lucuma
+  rank: species
+  stands_for:
+  - Pouteria campechiana (canistel)
+  distinct_from:
+  - 'mamey-sapote: mamey is a lowland fruit with moist salmon flesh'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Dry maple-caramel fruit of the Andes, Peru's favourite ice-cream flavour, shown on Moche pottery.
+- id: macawood
+  names:
+  - macawood
+  - hormigo
+  scientific: Platymiscium
+  rank: genus
+  stands_for:
+  - Platymiscium pinnatum
+  - Platymiscium dimorphandrum
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: central-south-america
+  why: Red-orange wood with dark stripes, used for marimba keys in Guatemala.
+- id: madre-de-cacao
+  names:
+  - madre de cacao
+  - gliricidia
+  - quickstick
+  scientific: Gliricidia sepium
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - toxic
+  region: central-south-america
+  why: Pink-flowering shade tree for cacao and living fence; its leaves and seeds poison rats.
+- id: madrono
+  names:
+  - madroño
+  - lemonwood
+  - degame
+  scientific: Calycophyllum candidissimum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'capirona: capirona is a tall Amazon floodplain tree with a glossy peeling trunk'
+  split_from: capirona
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - striking
+  region: central-south-america
+  why: Nicaragua's national tree, a dry-forest tree whose crown turns white with flowers and bracts around
+    Christmas; its springy wood, lemonwood, made bows and fishing rods.
+- id: mahogany
+  names:
+  - mahogany
+  - big-leaf mahogany
+  - Honduras mahogany
+  scientific: Swietenia macrophylla
+  rank: genus
+  stands_for:
+  - Swietenia humilis (Pacific coast mahogany)
+  distinct_from:
+  - 'cuban-mahogany: Cuban mahogany is the small-leaved, denser West Indian original'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  region: central-south-america
+  why: The commercial mahogany of the 20th century and Belize's national tree, now protected under CITES.
+- id: maiten
+  names:
+  - maitén
+  scientific: Maytenus boaria
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Weeping evergreen of Chilean plains, browsed by cattle.
+- id: malabar-chestnut
+  names:
+  - Malabar chestnut
+  - money tree
+  - provision tree
+  scientific: Pachira aquatica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'shaving-brush-tree: shaving brush tree is a dry-forest tree with smaller flowers'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Swamp tree with shaving-brush flowers and edible nuts, sold with braided trunks as the "money tree".
+- id: mamey-sapote
+  names:
+  - mamey sapote
+  - mamey
+  scientific: Pouteria sapota
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sapodilla: sapodilla is small with brown malty flesh'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Rough brown football of a fruit with salmon-red flesh, beloved in Cuba and Mexico.
+- id: mammee-apple
+  names:
+  - mammee apple
+  - mamey de Santo Domingo
+  scientific: Mammea americana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mamey-sapote: mamey sapote has salmon flesh in a rough brown skin'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: central-south-america
+  why: Caribbean tree with round russet fruit of apricot-like flesh; its flowers are distilled into eau
+    de créole.
+- id: mamoncillo
+  names:
+  - mamoncillo
+  - genip
+  - quenepa
+  scientific: Melicoccus bijugatus
+  rank: species
+  stands_for:
+  - Talisia oliviformis (guaya)
+  distinct_from:
+  - 'lychee: genip has a smooth green shell'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Green-shelled lychee-like fruit sold by the bunch in Caribbean streets.
+- id: manchineel
+  names:
+  - manchineel
+  - beach apple
+  scientific: Hippomane mancinella
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - toxic
+  - folklore
+  region: central-south-america
+  why: 'Perhaps the most dangerous tree: its sap blisters, smoke blinds, and apples poisoned Spanish sailors;
+    arrow poison of the Caribs, and legend says such an arrow killed Ponce de León.'
+- id: mandacaru
+  names:
+  - mandacaru
+  scientific: Cereus jamacaru
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - fruit
+  region: central-south-america
+  why: Tree cactus of the caatinga; its flowering is read as a sign of coming rain in sertão songs.
+- id: mangaba
+  names:
+  - mangaba
+  scientific: Hancornia speciosa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: central-south-america
+  why: Cerrado fruit and latex tree.
+- id: maqui
+  names:
+  - maqui
+  scientific: Aristotelia chilensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Small Chilean tree with deep purple berries.
+- id: massaranduba
+  names:
+  - massaranduba
+  - balatá
+  - bulletwood
+  scientific: Manilkara bidentata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sapodilla: sapodilla is a fruit tree tapped for chicle'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: central-south-america
+  why: Balatá latex once made golf-ball covers and belts; very dense red wood.
+- id: mexican-cypress
+  names:
+  - Mexican cypress
+  - cedar of Goa
+  - cedro blanco
+  scientific: Cupressus lusitanica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'montezuma-cypress: ahuehuete is a deciduous riverside giant'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: central-south-america
+  why: Highland cypress of Mexico and Guatemala planted around churches and as windbreaks.
+- id: mexican-weeping-pine
+  names:
+  - Mexican weeping pine
+  - patula pine
+  scientific: Pinus patula
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ocote-pine: ocote has stiff needles'
+  - 'hartweg-pine: Hartweg pine is the treeline pine'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Highland Mexican pine with long drooping needles, now planted widely.
+- id: monkey-puzzle
+  names:
+  - monkey puzzle
+  - pehuén
+  scientific: Araucaria araucana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'norfolk-island-pine: Norfolk Island pine has a symmetrical tiered crown'
+  - 'bunya-pine: bunya pine bears giant cones in eastern Australia'
+  - 'parana-pine: Paraná pine has a flat candelabra crown in subtropical Brazil'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  region: central-south-america
+  why: Reptilian scale-leaved Andean conifer whose seeds (piñones) are sacred staple food of the Pehuenche
+    Mapuche.
+- id: montezuma-cypress
+  names:
+  - Montezuma cypress
+  - ahuehuete
+  - Tule tree
+  - Taxodium mucronatum
+  scientific: Taxodium distichum var. mexicanum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bald-cypress: bald cypress is the swamp tree of the US South'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - well-known
+  region: central-south-america
+  why: National tree of Mexico; the Árbol del Tule has the stoutest trunk of any tree, Aztec rulers planted
+    ahuehuetes at Chapultepec, and Cortés is said to have wept under one on the Noche Triste.
+- id: mora
+  names:
+  - mora
+  scientific: Mora excelsa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Buttressed giant forming near-pure forests in the Guianas and Trinidad.
+- id: moriche-palm
+  names:
+  - moriche palm
+  - buriti
+  scientific: Mauritia flexuosa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  region: central-south-america
+  why: Swamp palm the Warao call the tree of life, giving food, fibre and grubs.
+- id: mountain-immortelle
+  names:
+  - mountain immortelle
+  - bucaré
+  scientific: Erythrina poeppigiana
+  rank: group
+  stands_for:
+  - Erythrina fusca
+  distinct_from:
+  - 'coral-tree: ceibo is small with crimson flowers'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: central-south-america
+  why: Tall shade tree whose orange crowns mark the cacao estates of Trinidad and Venezuela.
+- id: nance
+  names:
+  - nance
+  - nanche
+  - murici
+  scientific: Byrsonima crassifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: central-south-america
+  why: Small yellow cherries pickled or soaked in liquor across Central America; bark used for tanning.
+- id: nopal
+  names:
+  - nopal
+  - prickly pear
+  scientific: Opuntia ficus-indica
+  rank: group
+  stands_for:
+  - Opuntia echios (Galápagos tree prickly pear)
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  - folklore
+  region: central-south-america
+  why: Tree-sized prickly pear with an eagle on Mexico's flag; tunas, edible pads, and the cochineal dye
+    bug it hosts.
+- id: ocote-pine
+  names:
+  - ocote pine
+  - Caribbean pine
+  scientific: Pinus oocarpa
+  rank: group
+  stands_for:
+  - Pinus caribaea (Caribbean pine)
+  - Pinus montezumae (Montezuma pine)
+  - Pinus occidentalis (Hispaniolan pine)
+  distinct_from:
+  - 'scots-pine: ocote is a tropical resin pine'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: central-south-america
+  why: National tree of Honduras whose resin-soaked ocote splinters light every hearth fire.
+- id: oiticica
+  names:
+  - oiticica
+  - Licania rigida
+  scientific: Microdesmia rigida
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: central-south-america
+  why: Riverside tree of the Caatinga whose seed oil was a quick-drying oil for paints and varnish.
+- id: old-man-cactus
+  names:
+  - old man cactus
+  - cabeza de viejo
+  scientific: Cephalocereus senilis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Columns to about 12 m shaggy with long white hairs, on the limestone slopes of Hidalgo.
+- id: ombu
+  names:
+  - ombú
+  scientific: Phytolacca dioica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - toxic
+  region: central-south-america
+  why: Giant tree-like herb of the pampas with an enormous trunk base; the gaucho's lone shade tree; toxic
+    sap.
+- id: organo
+  names:
+  - órgano
+  - Mexican fence post cactus
+  scientific: Pachycereus marginatus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'organ-pipe-cactus: organ pipe branches from the base in the Sonoran desert'
+  - 'cardon: cardón is the massive branched Baja cactus'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: central-south-america
+  why: Unbranched ribbed columns planted in rows as living fences around houses and fields in central
+    Mexico.
+- id: palo-dulce
+  names:
+  - palo dulce
+  - kidneywood
+  scientific: Eysenhardtia polystachya
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  region: central-south-america
+  why: Its wood infused in water glows blue, the lignum nephriticum that started the study of fluorescence.
+- id: palo-santo
+  names:
+  - palo santo
+  scientific: Bursera graveolens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'gumbo-limbo: gumbo-limbo is a Caribbean tree grown for its peeling red bark'
+  - 'copal: copal is the Mesoamerican temple incense'
+  - 'linaloe: linaloe is the Mexican oil and lacquer-box wood'
+  - 'chaco-palo-santo: Chaco palo santo is an unrelated green-hearted guaiac wood'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: central-south-america
+  why: Fragrant 'holy wood' burned in Andean rituals, kin to the copal incense of Mesoamerican temples.
+- id: panama-rubber-tree
+  names:
+  - Panama rubber tree
+  - árbol del hule
+  scientific: Castilla elastica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'rubber-tree: Hevea is the Amazon plantation rubber'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: central-south-america
+  why: Latex mixed with morning-glory juice made the rubber balls of the Mesoamerican ballgame; the Olmecs
+    were named for it.
+- id: panama-tree
+  names:
+  - Panama tree
+  - panamá
+  scientific: Sterculia apetala
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  region: central-south-america
+  why: Panama's national tree and possible source of the country's name.
+- id: papaya
+  names:
+  - papaya
+  scientific: Carica papaya
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  - medicinal
+  - product
+  region: central-south-america
+  why: Fast-growing unbranched tree-like herb with fruit clustered under the leaves; papain enzyme.
+- id: parana-pine
+  names:
+  - Paraná pine
+  - Brazilian pine
+  - pinheiro-do-paraná
+  scientific: Araucaria angustifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'monkey-puzzle: monkey puzzle has spiky scale leaves to the ground'
+  split_from: monkey-puzzle
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  region: central-south-america
+  why: Flat-topped candelabra conifer of southern Brazil whose pinhão seeds are roasted at winter festas
+    juninas.
+- id: patagonian-cypress
+  names:
+  - ciprés de la cordillera
+  scientific: Austrocedrus chilensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'alerce: alerce is a red-barked rainforest giant'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Fragrant scale-leaved conifer at the steppe edge of the Andes.
+- id: pataua
+  names:
+  - patauá
+  - ungurahui
+  scientific: Oenocarpus bataua
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: central-south-america
+  why: Amazon palm whose purple fruit give a milky drink and an olive-like oil.
+- id: peach-palm
+  names:
+  - peach palm
+  - pejibaye
+  scientific: Bactris gasipaes
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Spiny-trunked palm domesticated for its starchy fruit and palm hearts.
+- id: pequi
+  names:
+  - pequi
+  - souari nut
+  scientific: Caryocar brasiliense
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: central-south-america
+  why: Cerrado fruit whose pulp flavours Goiás rice, with a spine-filled stone that punishes careless
+    biting; seed and pulp oil.
+- id: pereskia
+  names:
+  - rose cactus
+  - leaf cactus
+  - ora-pro-nóbis
+  scientific: Pereskia grandifolia
+  rank: genus
+  stands_for:
+  - Leuenbergeria bleo
+  - Pereskia aculeata (ora-pro-nóbis)
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: central-south-america
+  why: A cactus with ordinary leaves and pink rose-like flowers, like the cacti before they lost their
+    leaves; the leaves of ora-pro-nóbis are eaten in Minas Gerais.
+- id: peroba
+  names:
+  - peroba-rosa
+  scientific: Aspidosperma polyneuron
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Atlantic Forest timber of São Paulo's old houses.
+- id: peruvian-pepper
+  names:
+  - Peruvian pepper tree
+  - pink peppercorn
+  scientific: Schinus molle
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'brazilian-pepper: Brazilian pepper is a non-weeping invasive with holly-like leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - medicinal
+  - product
+  region: central-south-america
+  why: Weeping evergreen whose pink berries are a spice and were brewed by the Inca into chicha.
+- id: petticoat-palm
+  names:
+  - Cuban petticoat palm
+  scientific: Copernicia macroglossa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Fan leaves without stalks spiral up the trunk, and dead ones hang as a skirt.
+- id: peumo
+  names:
+  - peumo
+  scientific: Cryptocarya alba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Aromatic evergreen of central Chile's matorral whose red fruits are eaten after boiling.
+- id: physic-nut
+  names:
+  - physic nut
+  - jatropha
+  scientific: Jatropha curcas
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - product
+  - medicinal
+  region: central-south-america
+  why: Toxic purgative seeds and an oil promoted as biodiesel.
+- id: piassava
+  names:
+  - piassava
+  scientific: Attalea funifera
+  rank: species
+  stands_for:
+  - Leopoldinia piassaba (Pará piassava)
+  distinct_from:
+  - 'babassu: babassu is an oil palm'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: central-south-america
+  why: Bahian palm whose stiff leaf-base fibres make brooms and street brushes.
+- id: pink-poui
+  names:
+  - pink poui
+  - roble de sabana
+  - maquilishuat
+  - apamate
+  scientific: Tabebuia rosea
+  rank: species
+  stands_for:
+  - Tabebuia heterophylla (pink cedar)
+  distinct_from:
+  - 'ipe: ipê has far denser timber and darker pink flowers'
+  split_from: ipe
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: central-south-america
+  why: Pink-flowering trumpet tree, the national tree of El Salvador.
+- id: pitanga
+  names:
+  - pitanga
+  - Surinam cherry
+  scientific: Eugenia uniflora
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  region: central-south-america
+  why: Ribbed red-to-black cherries from Brazilian backyards, with aromatic leaves strewn on floors and
+    brewed as tea.
+- id: poinsettia
+  names:
+  - poinsettia
+  - nochebuena
+  - cuetlaxóchitl
+  scientific: Euphorbia pulcherrima
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - flowers
+  - cultural
+  region: central-south-america
+  why: Wild in Mexico's dry forests a shrub or small tree to 4 m with scarlet bracts; the Aztec cuetlaxóchitl,
+    now the Christmas flower worldwide.
+- id: polylepis
+  names:
+  - queñua
+  - polylepis
+  scientific: Polylepis
+  rank: genus
+  stands_for:
+  - Polylepis tarapacana
+  - Polylepis racemosa
+  - Polylepis incana
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Highest-growing trees in the world (to about 5,000 m in the Andes) with many layers of red papery
+    bark.
+- id: ponytail-palm
+  names:
+  - ponytail palm
+  - elephant-foot tree
+  scientific: Beaucarnea recurvata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Swollen bottle base topped with tufts of long strap leaves; not a palm.
+- id: primavera
+  names:
+  - primavera
+  - white mahogany
+  scientific: Roseodendron donnell-smithii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: central-south-america
+  why: Covered in yellow flowers in the dry season, with pale satiny timber.
+- id: purpleheart
+  names:
+  - purpleheart
+  - amaranth
+  scientific: Peltogyne
+  rank: genus
+  stands_for:
+  - Peltogyne venosa
+  - Peltogyne paniculata
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Heartwood turns vivid purple on exposure to air.
+- id: puya
+  names:
+  - queen of the Andes
+  - titanka
+  scientific: Puya raimondii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  region: central-south-america
+  why: Giant bromeliad of the high Andes that, after decades, raises a flower spike up to about 10 m with
+    thousands of flowers and then dies.
+- id: quaresmeira
+  names:
+  - quaresmeira
+  - glory tree
+  - manacá-da-serra
+  scientific: Pleroma granulosum
+  rank: group
+  stands_for:
+  - Pleroma mutabile (manacá-da-serra)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  region: central-south-america
+  why: Atlantic Forest trees that turn purple around Lent; manacá flowers open white and age through pink
+    to purple.
+- id: quassia
+  names:
+  - quassia
+  - bitterwood
+  scientific: Quassia amara
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  - flowers
+  region: central-south-america
+  why: Among the bitterest substances known, used in tonic bitters and as insecticide; red flowers.
+- id: quebracho
+  names:
+  - quebracho
+  - axe-breaker
+  scientific: Schinopsis lorentzii
+  rank: genus
+  stands_for:
+  - Schinopsis balansae
+  distinct_from:
+  - 'white-quebracho: white quebracho is an unrelated medicinal-bark tree'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: central-south-america
+  why: '''Axe-breaker'' of the Gran Chaco and Argentina''s national tree, a dense wood whose tannin dominated
+    world leather tanning.'
+- id: queen-palm
+  names:
+  - queen palm
+  - jerivá
+  - pindó
+  scientific: Syagrus romanzoffiana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - folklore
+  region: central-south-america
+  why: Feathery street palm of the Southern Cone with orange fruit; in Guaraní myth the pindó is the first
+    tree of creation.
+- id: quillay
+  names:
+  - quillay
+  - soapbark
+  scientific: Quillaja saponaria
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - cultural
+  region: central-south-america
+  why: 'Bark full of saponins: soap for Mapuche hair-washing and the source of a modern vaccine adjuvant.'
+- id: rain-tree
+  names:
+  - rain tree
+  - monkeypod
+  - saman
+  scientific: Samanea saman
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: central-south-america
+  why: Enormous umbrella crown whose leaves fold before rain; its giant at Hitachi advertisements is famous.
+- id: ramon
+  names:
+  - ramón
+  - breadnut
+  - Maya nut
+  scientific: Brosimum alicastrum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'snakewood: snakewood is a timber tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Maya food tree whose nuts are ground into flour and whose foliage feeds livestock; common around
+    ruins.
+- id: rauli
+  names:
+  - raulí
+  - roble pellín
+  - Nothofagus alpina
+  scientific: Lophozonia alpina
+  rank: group
+  stands_for:
+  - Lophozonia obliqua (roble pellín)
+  distinct_from:
+  - 'coihue: coihue is evergreen'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Large lowland beeches with reddish timber.
+- id: red-mangrove
+  names:
+  - red mangrove
+  scientific: Rhizophora mangle
+  rank: group
+  stands_for:
+  - Rhizophora racemosa
+  - Rhizophora mucronata
+  - Rhizophora apiculata
+  - Rhizophora stylosa
+  distinct_from:
+  - 'black-mangrove: black mangrove breathes through pencil pneumatophores, not stilt roots'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: central-south-america
+  why: Arching stilt roots in salt water and pencil-shaped seedlings that sprout on the tree; the mangrove
+    of Caribbean and Atlantic American coasts.
+- id: rosewood-oil-tree
+  names:
+  - pau-rosa
+  - Brazilian rosewood oil tree
+  - Aniba rosaeodora
+  scientific: Aniba rosodora
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'brazilian-rosewood: pau-rosa is a laurel grown for oil, not timber'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  region: central-south-america
+  why: Its linalool-rich oil once scented classic French perfumes, cutting it close to extinction.
+- id: rosita-de-cacao
+  names:
+  - rosita de cacao
+  - flor de cacao
+  scientific: Quararibea funebris
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  region: central-south-america
+  why: Oaxacan tree whose dried fragrant flowers flavour tejate, the maize-and-cacao drink.
+- id: royal-palm
+  names:
+  - royal palm
+  - Cuban royal palm
+  scientific: Roystonea regia
+  rank: genus
+  stands_for:
+  - Roystonea oleracea
+  - Roystonea borinquena
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  region: central-south-america
+  why: Smooth grey columnar palm, national tree of Cuba and on the arms and flag of Haiti.
+- id: rubber-tree
+  names:
+  - rubber tree
+  - Pará rubber
+  scientific: Hevea brasiliensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'panama-rubber-tree: Castilla is the Mesoamerican rubber of the ballgame'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  region: central-south-america
+  why: Latex tapped for natural rubber, at the heart of the Amazon rubber boom.
+- id: sacred-fir
+  names:
+  - sacred fir
+  - oyamel
+  scientific: Abies religiosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'silver-fir: oyamel is the Mexican highland fir of the monarch roosts'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: central-south-america
+  why: Mexican highland fir where monarch butterflies overwinter by the million; its boughs decorate churches.
+- id: san-pedro-cactus
+  names:
+  - San Pedro cactus
+  - huachuma
+  - Trichocereus pachanoi
+  scientific: Echinopsis pachanoi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'saguaro: San Pedro is a mountain cactus that branches from the base'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - toxic
+  - medicinal
+  region: central-south-america
+  why: Branched Andean column cactus with mescaline, used in healing ceremonies for 3,000 years (Chavín).
+- id: sandbox-tree
+  names:
+  - sandbox tree
+  - hura
+  - monkey's dinner bell
+  scientific: Hura crepitans
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  region: central-south-america
+  why: Spiny trunk, toxic sap, and pumpkin-shaped pods that explode, flinging seeds up to 45 m.
+- id: sangre-de-drago
+  names:
+  - sangre de drago
+  - dragon's blood
+  scientific: Croton lechleri
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - striking
+  - product
+  region: central-south-america
+  why: Bark bleeds blood-red latex used for wound healing in the Amazon.
+- id: sapodilla
+  names:
+  - sapodilla
+  - chicozapote
+  scientific: Manilkara zapota
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mamey-sapote: mamey has a large rough brown fruit with salmon flesh'
+  - 'massaranduba: massaranduba is the rainforest balatá timber tree'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: central-south-america
+  why: Sweet malty fruit, and chicle latex that was the original base of chewing gum.
+- id: sapucaia
+  names:
+  - sapucaia
+  - monkey pot
+  scientific: Lecythis pisonis
+  rank: group
+  stands_for:
+  - Lecythis zabucajo
+  distinct_from:
+  - 'brazil-nut: Brazil nut pods stay closed'
+  - 'cannonball-tree: cannonball fruit grows on the trunk'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  - flowers
+  region: central-south-america
+  why: Woody pots whose lids drop off to release nuts; pink flushes of new leaves.
+- id: scalesia
+  names:
+  - scalesia
+  - Galápagos tree daisy
+  scientific: Scalesia pedunculata
+  rank: genus
+  stands_for:
+  - Scalesia affinis
+  - Scalesia cordata
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Daisies that evolved into cloud-forest trees on the Galápagos, an example of island evolution.
+- id: sea-grape
+  names:
+  - sea grape
+  - uva de playa
+  scientific: Coccoloba uvifera
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: central-south-america
+  why: Beach tree with round leathery leaves turning red and grape-like clusters of fruit.
+- id: shaving-brush-tree
+  names:
+  - shaving brush tree
+  - clavellina
+  scientific: Pseudobombax ellipticum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: central-south-america
+  why: Bare branches burst into pink or white flowers of long stamens, like shaving brushes.
+- id: silk-floss-tree
+  names:
+  - silk floss tree
+  - palo borracho
+  scientific: Ceiba speciosa
+  rank: genus
+  stands_for:
+  - Ceiba insignis
+  - Ceiba chodatii (yuchán)
+  - Ceiba glaziovii (barriguda)
+  distinct_from:
+  - 'kapok: silk floss tree has a bottle trunk and large pink flowers'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  region: central-south-america
+  why: Bottle-shaped trunk studded with thick spines and large pink flowers.
+- id: silver-thatch-palm
+  names:
+  - silver thatch palm
+  - silver palm
+  scientific: Coccothrinax proctorii
+  rank: group
+  stands_for:
+  - Coccothrinax argentata (Florida silver palm)
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - striking
+  region: central-south-america
+  why: National tree of the Cayman Islands, its silver-backed fronds once twisted into thatch rope, the
+    islands' chief export.
+- id: snakewood
+  names:
+  - snakewood
+  - letterwood
+  scientific: Brosimum guianense
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bloodwood: bloodwood is plain blood-red'
+  - 'ramon: ramón is a Maya food tree'
+  - 'cow-tree: cow tree is tapped for drinkable latex'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Rarest and among the densest woods, with a snake-skin speckled figure.
+- id: sorva
+  names:
+  - sorva
+  - leche caspi
+  scientific: Couma macrocarpa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - fruit
+  region: central-south-america
+  why: Amazon tree tapped for a drinkable latex used in chewing gum, with sweet round fruit.
+- id: soursop
+  names:
+  - soursop
+  - guanábana
+  - graviola
+  scientific: Annona muricata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'annona: sugar apple has a knobbly small fruit'
+  split_from: annona
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - toxic
+  region: central-south-america
+  why: Big spiny green fruit with tart white flesh, used for juice across the tropics; its seeds and leaves
+    are neurotoxic.
+- id: spanish-cedar
+  names:
+  - Spanish cedar
+  - cedro
+  scientific: Cedrela odorata
+  rank: genus
+  stands_for:
+  - Cedrela fissilis
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: central-south-america
+  why: Aromatic insect-repelling wood used for cigar boxes and humidors.
+- id: star-apple
+  names:
+  - star apple
+  - caimito
+  scientific: Chrysophyllum cainito
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: central-south-america
+  why: Purple fruit with a star in cross-section and leaves gold-velvet underneath.
+- id: strawberry-guava
+  names:
+  - strawberry guava
+  - cattley guava
+  - araçá
+  scientific: Psidium cattleyanum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'guava: guava is a larger tree with big yellow fruit'
+  split_from: guava
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Small red-fruited guava of the Atlantic Forest, one of the worst invasive trees on Pacific islands.
+- id: swamp-bloodwood
+  names:
+  - swamp bloodwood
+  - dragonsblood tree
+  - sangrillo
+  scientific: Pterocarpus officinalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'padauk: sangrillo is a swamp tree prized for sap, not timber'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  region: central-south-america
+  why: Caribbean swamp tree with snaking plank buttresses that bleeds red sap.
+- id: tabonuco
+  names:
+  - tabonuco
+  scientific: Dacryodes excelsa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: central-south-america
+  why: Puerto Rican rainforest tree whose resin the Taíno burned for torches and caulked canoes with.
+- id: tagua
+  names:
+  - tagua
+  - ivory nut palm
+  - vegetable ivory
+  scientific: Phytelephas aequatorialis
+  rank: group
+  stands_for:
+  - Phytelephas macrocarpa (yarina)
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - product
+  - striking
+  - cultural
+  region: central-south-america
+  why: Seeds harden into vegetable ivory, carved into buttons, dice and figurines; Ecuador's button trade
+    once rivalled its cacao.
+- id: tala
+  names:
+  - tala
+  - Celtis tala
+  scientific: Celtis ehrenbergiana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: central-south-america
+  why: Spiny hackberry whose woods, the talares, were the pampas' main native forest, cut for posts and
+    firewood.
+- id: tamarillo
+  names:
+  - tamarillo
+  - tree tomato
+  scientific: Solanum betaceum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: central-south-america
+  why: Small Andean tree with egg-shaped red fruits.
+- id: tara
+  names:
+  - tara
+  scientific: Tara spinosa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  region: central-south-america
+  why: Andean pods give tannin and inks, and seeds give tara gum.
+- id: tea-mangrove
+  names:
+  - tea mangrove
+  - mangle piñuela
+  scientific: Pelliciera rhizophorae
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'red-mangrove: red mangrove stands on stilt roots'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  region: central-south-america
+  why: Rare buttressed mangrove of the Pacific coast from Nicaragua to Ecuador with large pink-white flowers,
+    last of a lineage that once ringed the tropics.
+- id: tejocote
+  names:
+  - tejocote
+  - Mexican hawthorn
+  scientific: Crataegus mexicana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'hawthorn: Mexican hawthorn has large golden fruit'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Golden haws simmered in Christmas ponche and strung on piñatas.
+- id: tigerwood
+  names:
+  - tigerwood
+  - gonçalo alves
+  - urunday
+  scientific: Astronium graveolens
+  rank: group
+  stands_for:
+  - Astronium fraxinifolium
+  - Astronium balansae (urunday)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Tan wood with dark tiger stripes.
+- id: tipa
+  names:
+  - tipa
+  - rosewood
+  scientific: Tipuana tipu
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - well-known
+  region: central-south-america
+  why: Buenos Aires street tree with yellow flowers; spittlebugs make it "rain".
+- id: tonka-bean
+  names:
+  - tonka bean
+  scientific: Dipteryx odorata
+  rank: species
+  stands_for:
+  - Dipteryx oleifera (almendro)
+  - Dipteryx micrantha (shihuahuaco)
+  distinct_from:
+  - 'baru: baru is a small cerrado nut tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - fruit
+  - striking
+  - product
+  region: central-south-america
+  why: Seeds rich in vanilla-scented coumarin, banned as food in the US.
+- id: tucuma
+  names:
+  - tucumã
+  - tucum
+  - chambira
+  scientific: Astrocaryum aculeatum
+  rank: group
+  stands_for:
+  - Astrocaryum vulgare (tucumã-do-pará)
+  - Astrocaryum chambira (chambira)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  - cultural
+  region: central-south-america
+  why: Spine-ringed palms with oily orange fruit and strong leaf fibre for hammocks; black tucum rings
+    are a symbol of solidarity with the poor.
+- id: tulipwood
+  names:
+  - tulipwood
+  - pau rosa
+  scientific: Dalbergia decipularis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'brazilian-rosewood: Brazilian rosewood is dark brown'
+  split_from: brazilian-rosewood
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: central-south-america
+  why: Pink and cream striped wood of Bahia used for French marquetry.
+- id: ulmo
+  names:
+  - ulmo
+  scientific: Eucryphia cordifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - product
+  region: central-south-america
+  why: Summer blanket of white flowers that gives Chile's famous ulmo honey.
+- id: umbu
+  names:
+  - umbu
+  scientific: Spondias tuberosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jocote: jocote lacks water-storing roots'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: central-south-america
+  why: Sacred tree of the sertão (Euclides da Cunha) whose roots store water.
+- id: virola
+  names:
+  - virola
+  - epená
+  scientific: Virola theiodora
+  rank: group
+  stands_for:
+  - Virola surinamensis (ucuuba)
+  distinct_from:
+  - 'nutmeg: virola is grown for resin and fat, not spice'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - toxic
+  - product
+  region: central-south-america
+  why: Nutmeg relative whose red bark resin is the epená snuff of Yanomami shamans; its seeds give ucuuba
+    fat.
+- id: walking-palm
+  names:
+  - walking palm
+  - paxiúba
+  scientific: Socratea exorrhiza
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  region: central-south-america
+  why: Palm on a cone of stilt roots, said by guides (though disputed) to walk towards light.
+- id: wax-palm
+  names:
+  - Quindío wax palm
+  scientific: Ceroxylon quindiuense
+  rank: genus
+  stands_for:
+  - Ceroxylon alpinum
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: central-south-america
+  why: Tallest palm (to 60 m) and Colombia's national tree, with waxy trunks in the cloud-forest valley
+    of Cocora.
+- id: white-mangrove
+  names:
+  - white mangrove
+  scientific: Laguncularia racemosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-mangrove: black mangrove has pencil pneumatophores'
+  split_from: black-mangrove
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: central-south-america
+  why: Landward mangrove with salt glands at the leaf base and tannin-rich bark.
+- id: white-quebracho
+  names:
+  - white quebracho
+  - quebracho blanco
+  scientific: Aspidosperma quebracho-blanco
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'quebracho: red quebracho is a tannin tree in a different family'
+  split_from: quebracho
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: central-south-america
+  why: Chaco tree whose bark alkaloids (quebrachine, a yohimbine) were an asthma remedy.
+- id: white-sapote
+  names:
+  - white sapote
+  - zapote blanco
+  scientific: Casimiroa edulis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  region: central-south-america
+  why: Custardy Mexican fruit whose Nahuatl name means "sleep sapote"; seeds and leaves are sedative.
+- id: whitewood
+  names:
+  - whitewood
+  - bullet tree
+  - black olive
+  - Bucida buceras
+  scientific: Terminalia buceras
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tropical-almond: tropical almond has big leaves that redden'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: central-south-america
+  why: Antigua and Barbuda's national tree, with zigzag spiny twigs, a layered crown and very hard wood.
+- id: yellow-elder
+  names:
+  - yellow elder
+  - tronadora
+  - yellow bells
+  scientific: Tecoma stans
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - medicinal
+  - cultural
+  region: central-south-america
+  why: Small tree of yellow trumpets, the Bahamas' national flower and a Mexican diabetes tea.
+- id: yellow-ipe
+  names:
+  - yellow ipê
+  - araguaney
+  - guayacán
+  scientific: Handroanthus chrysanthus
+  rank: group
+  stands_for:
+  - Handroanthus serratifolius
+  - Handroanthus albus
+  - Handroanthus guayacan
+  - Tabebuia aurea (silver trumpet tree)
+  distinct_from:
+  - 'ipe: pink ipê flowers pink'
+  split_from: ipe
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - striking
+  region: central-south-america
+  why: Leafless crowns of gold trumpets; Venezuela's national tree and Brazil's symbolic flower.
+- id: yellow-oleander
+  names:
+  - yellow oleander
+  - lucky nut
+  scientific: Cascabela thevetia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'oleander: oleander has pink flowers in clusters'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - flowers
+  region: central-south-america
+  why: Yellow trumpet flowers and seeds so full of heart poison that they are a common means of suicide.
+- id: yerba-mate
+  names:
+  - yerba mate
+  scientific: Ilex paraguariensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'holly: yerba mate is a spineless caffeine crop'
+  - 'guayusa: guayusa is an Amazonian caffeine leaf of night rituals'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: central-south-america
+  why: Leaves brewed as mate, the shared drink of the Guaraní, Argentina, Uruguay and southern Brazil.
+- id: yoloxochitl
+  names:
+  - yoloxóchitl
+  - flor de corazón
+  scientific: Magnolia mexicana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'southern-magnolia: southern magnolia is the North American magnolia'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - medicinal
+  - cultural
+  region: central-south-america
+  why: Mexican cloud-forest magnolia whose fragrant 'heart flower' the Aztecs used as a heart remedy;
+    its petals are still sold in markets.
+- id: yopo
+  names:
+  - yopo
+  - cebil
+  - vilca
+  scientific: Anadenanthera peregrina
+  rank: group
+  stands_for:
+  - Anadenanthera colubrina (vilca, cebil)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - toxic
+  - medicinal
+  region: central-south-america
+  why: Seeds ground into the hallucinogenic snuff of Orinoco shamans; vilca snuff trays date back 4,000
+    years in the Andes.
+- id: ziricote
+  names:
+  - ziricote
+  scientific: Cordia dodecandra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bocote: bocote is gold with black stripes'
+  split_from: bocote
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: central-south-america
+  why: Near-black wood with spider-web landscape grain; its yellow fruit is eaten in Yucatán and its rough
+    leaves sand gourds.

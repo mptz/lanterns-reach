@@ -1,0 +1,2 @@
+{ "name": "stone", "symmetry": "uniform",
+  "textures": { "+z": { "random": "stone_set.png", "tiles": 8 } } }

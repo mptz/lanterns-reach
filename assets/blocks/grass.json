@@ -1,0 +1,2 @@
+{ "name": "grass", "symmetry": "uniform",
+  "textures": { "+z": { "random": "grass_set.png", "tiles": 8 } } }

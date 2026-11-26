@@ -1,0 +1,8 @@
+{
+  "include": "../v0.1-scene.json",
+  "view": {
+    "overlays": [
+      "targeting"
+    ]
+  }
+}

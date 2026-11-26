@@ -1,0 +1,10 @@
+{
+  "include": "../v0.1-scene.json",
+  "view": {
+    "buffer": "lit",
+    "overlays": [
+      "lighting",
+      "stats"
+    ]
+  }
+}

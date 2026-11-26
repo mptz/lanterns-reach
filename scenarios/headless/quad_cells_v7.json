@@ -1,0 +1,19 @@
+{
+  "include": "../v0.1-scene.json",
+  "frames": 30,
+  "camera": {
+    "pos": [
+      4.0,
+      -2.5,
+      19.5
+    ],
+    "look": [
+      4.0,
+      4.5,
+      15.5
+    ]
+  },
+  "view": {
+    "buffer": "variant"
+  }
+}

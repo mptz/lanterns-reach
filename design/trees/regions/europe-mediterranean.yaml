@@ -1,0 +1,2194 @@
+# Tree candidates: europe-mediterranean. Fields per design/trees.md.
+# Total: 110; tiers: 1: 31, 2: 43, 3: 36
+# Inclusion: well-known 34, folklore 38, cultural 68, striking 49, flowers 19, fruit 29, medicinal 20, toxic 13, product 41
+# Genera with 5+ entries: Pinus 9, Prunus 8, Quercus 8
+
+- id: alder
+  names:
+  - alder
+  - black alder
+  - common alder
+  - grey alder
+  scientific: Alnus glutinosa
+  rank: group
+  stands_for:
+  - Alnus incana
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - product
+  region: europe-mediterranean
+  why: Wood turns orange-red when cut and lasts underwater (Venice and Amsterdam stand on alder piles);
+    the Erlking of German lore.
+- id: alder-buckthorn
+  names:
+  - alder buckthorn
+  - purging buckthorn
+  scientific: Frangula alnus
+  rank: group
+  stands_for:
+  - Rhamnus cathartica (purging buckthorn)
+  distinct_from:
+  - 'cascara: alder buckthorn is the European purgative tree, cascara the American'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - toxic
+  region: europe-mediterranean
+  why: Small tree whose charcoal was the finest for black powder fuses; aged bark is a laxative and fresh
+    bark is toxic.
+- id: aleppo-pine
+  names:
+  - Aleppo pine
+  - Jerusalem pine
+  scientific: Pinus halepensis
+  rank: group
+  stands_for: []
+  distinct_from:
+  - 'scots-pine: Aleppo pine is the pale-barked drought pine of Mediterranean coasts'
+  - 'turkish-pine: Turkish pine has stouter cones held on short stalks and darker bark'
+  split_from: scots-pine
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - product
+  - cultural
+  region: europe-mediterranean
+  why: Pale grey-barked, crooked drought pine of Mediterranean coasts and the dominant tree of North African
+    and Iberian pinewoods; its resin flavours Greek retsina.
+- id: argan
+  names:
+  - argan
+  scientific: Argania spinosa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - striking
+  - product
+  region: europe-mediterranean
+  why: Thorny Moroccan tree famously climbed by goats; Amazigh women press argan oil from its nuts.
+- id: ash
+  names:
+  - ash
+  - European ash
+  - narrow-leaved ash
+  scientific: Fraxinus excelsior
+  rank: group
+  stands_for:
+  - Fraxinus pennsylvanica (green ash)
+  - Fraxinus angustifolia
+  distinct_from:
+  - 'manna-ash: manna ash has showy flower plumes and yields manna sugar'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  region: europe-mediterranean
+  why: Yggdrasil is usually read as an ash; its tough springy wood made Achilles' spear, tool handles
+    and Irish hurleys; now ravaged by ash dieback.
+- id: atlas-cedar
+  names:
+  - Atlas cedar
+  - blue Atlas cedar
+  scientific: Cedrus atlantica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cedar-of-lebanon: Atlas cedar has upswept branches and blue-grey forms, and a Maghreb range'
+  split_from: cedar-of-lebanon
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - product
+  - cultural
+  region: europe-mediterranean
+  why: Cedar of the Moroccan and Algerian Atlas, home of Barbary macaques, source of cedarwood oil and
+    the blue-grey ornamental cedar of parks.
+- id: azarole
+  names:
+  - azarole
+  - Mediterranean medlar
+  - Levant hawthorn
+  scientific: Crataegus azarolus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'hawthorn: azarole is a larger-fruited Mediterranean fruit hawthorn; hawthorn has small red haws'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  region: europe-mediterranean
+  why: Mediterranean hawthorn grown for small yellow or red apple-like fruit, eaten fresh or as jam.
+- id: barbusano
+  names:
+  - barbusano
+  - Canary ebony
+  scientific: Apollonias barbujana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bay-laurel: barbusano has dark ebony-like heartwood'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: europe-mediterranean
+  why: Laurisilva tree whose very hard dark wood was called Canary ebony and used for furniture and church
+    fittings.
+- id: bay-laurel
+  names:
+  - bay laurel
+  - sweet bay
+  scientific: Laurus nobilis
+  rank: species
+  stands_for:
+  - Laurus azorica (Azores laurel)
+  - Laurus novocanariensis (Canary laurel)
+  distinct_from:
+  - 'til: til is a larger laurisilva tree with stinking wood'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - medicinal
+  - product
+  region: europe-mediterranean
+  why: Daphne's tree in Apollo's myth, the laurel wreath of victors and poets, and the bay leaf.
+- id: birch
+  names:
+  - birch
+  - silver birch
+  - downy birch
+  - mountain birch
+  scientific: Betula pendula
+  rank: group
+  stands_for:
+  - Betula pubescens (downy birch, incl. Lapland mountain birch)
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  - medicinal
+  - striking
+  - product
+  region: europe-mediterranean
+  why: White-barked tree of renewal in Slavic, Baltic and Celtic lore and the national tree of Finland
+    and Russia; Novgorod's birch-bark letters, birch tar, spring sap and Karelian curly figure.
+- id: bird-cherry
+  names:
+  - bird cherry
+  - cheryomukha
+  - hagberry
+  scientific: Prunus padus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'wild-cherry: bird cherry has long white flower spikes and bitter black fruit'
+  split_from: wild-cherry
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - folklore
+  - toxic
+  region: europe-mediterranean
+  why: Long drooping spikes of almond-scented white flowers; in Russian folklore its bloom brings a cold
+    snap; bark and seeds are cyanogenic.
+- id: black-pine
+  names:
+  - black pine
+  - Austrian pine
+  - Corsican pine
+  - laricio
+  scientific: Pinus nigra
+  rank: group
+  stands_for:
+  - Pinus nigra subsp. laricio (Corsican pine)
+  - Pinus nigra subsp. pallasiana (Crimean pine)
+  distinct_from:
+  - 'scots-pine: black pine has near-black bark and long dark needles'
+  split_from: scots-pine
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - cultural
+  region: europe-mediterranean
+  why: Near-black plated bark and long dark needles; Corsican laricio pines are tall straight mast timber
+    and resin trees.
+- id: black-poplar
+  names:
+  - black poplar
+  scientific: Populus nigra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-poplar: white poplar has white bark and silver-backed leaves'
+  - 'lombardy-poplar: Lombardy poplar is a narrow columnar clone'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - striking
+  region: europe-mediterranean
+  why: Huge burred floodplain poplar with leaning trunk and red catkins; Phaethon's sisters became poplars.
+- id: blackthorn
+  names:
+  - blackthorn
+  - sloe
+  scientific: Prunus spinosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'plum: plum is a cultivated thornless fruit tree'
+  - 'wild-cherry: blackthorn is a thorny hedge tree with sloes'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - folklore
+  - fruit
+  - cultural
+  region: europe-mediterranean
+  why: Thorny hedge tree flowering on bare black branches, with sloes for sloe gin, shillelagh wood and
+    a dark reputation in Celtic lore.
+- id: bosnian-pine
+  names:
+  - Bosnian pine
+  - Heldreich's pine
+  scientific: Pinus heldreichii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'scots-pine: Bosnian pine has grey snakeskin bark and lives at high limestone crags'
+  split_from: scots-pine
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: europe-mediterranean
+  why: Balkan mountain pine with snakeskin bark; 'Italus' in Pollino is among Europe's oldest dated trees,
+    over 1,200 years.
+- id: box
+  names:
+  - box
+  - boxwood
+  scientific: Buxus sempervirens
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - toxic
+  - cultural
+  region: europe-mediterranean
+  why: Dense yellow wood for engraving blocks and chess pieces, formal topiary, and toxic leaves.
+- id: canary-date-palm
+  names:
+  - Canary Island date palm
+  scientific: Phoenix canariensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'date-palm: Canary palm has a single stout trunk and inedible dates; date palm has slender trunk and
+    sweet fruit'
+  split_from: date-palm
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  region: europe-mediterranean
+  why: Massive pineapple-trunked palm, natural symbol of the Canaries; La Gomera taps its sap (guarapo)
+    for palm honey and weaves its leaves.
+- id: canary-pine
+  names:
+  - Canary Island pine
+  - pino canario
+  scientific: Pinus canariensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'scots-pine: Canary pine has long drooping triple needles and resprouts after fire'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: europe-mediterranean
+  why: Pine of the Canary volcanoes with long drooping triple needles that resprouts from its trunk after
+    fire; resinous 'tea' heartwood roofs old churches.
+- id: canary-spurge
+  names:
+  - Canary Island spurge
+  - cardón
+  scientific: Euphorbia canariensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tree-euphorbia: candelabra tree has a single trunk and tiered crown; cardón is a dense mound of upright
+    columns'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - toxic
+  - cultural
+  region: europe-mediterranean
+  why: Cactus-like succulent forming mounds of hundreds of upright four-angled columns on Canary lava
+    slopes, the natural symbol of Gran Canaria, with caustic latex once used to stun fish.
+- id: chaste-tree
+  names:
+  - chaste tree
+  - monk's pepper
+  scientific: Vitex agnus-castus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - flowers
+  - folklore
+  - product
+  region: europe-mediterranean
+  why: Lilac flower spikes; its peppery seeds were thought to dampen desire in monks and are a modern
+    herbal remedy; a shrub or small tree.
+- id: cherry-laurel
+  names:
+  - cherry laurel
+  - Portugal laurel
+  scientific: Prunus laurocerasus
+  rank: group
+  stands_for:
+  - Prunus lusitanica (Portugal laurel)
+  distinct_from:
+  - 'bay-laurel: cherry laurel is toxic, true laurel is the culinary bay'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - medicinal
+  region: europe-mediterranean
+  why: Glossy evergreen hedge tree whose crushed leaves release cyanide; distilled 'laurel water' was
+    an old sedative and poison.
+- id: cherry-plum
+  names:
+  - cherry plum
+  - myrobalan plum
+  - purple-leaf plum
+  - myrobalan
+  - alycha
+  scientific: Prunus cerasifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'plum: cherry plum blooms first and has small round fruit; plum is Prunus domestica'
+  split_from: plum
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - fruit
+  - cultural
+  region: europe-mediterranean
+  why: First Prunus to blossom, with small round yellow or red fruit cooked into Georgian tkemali sauce,
+    and purple-leaved 'Pissardii' street trees.
+- id: common-juniper
+  names:
+  - common juniper
+  scientific: Juniperus communis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'eastern-redcedar: tree junipers are tall single-trunked trees'
+  - 'prickly-juniper: prickly juniper is a Mediterranean tree juniper yielding cade oil'
+  - 'phoenician-juniper: Phoenician juniper has scale leaves and wind-sculpted coastal forms'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - medicinal
+  - product
+  region: europe-mediterranean
+  why: Berries flavour gin and the smoke purifies in Scottish and Alpine lore; widest-ranging conifer.
+- id: cork-oak
+  names:
+  - cork oak
+  scientific: Quercus suber
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'holm-oak: holm oak bark is not corky'
+  - 'english-oak: cork oak is evergreen with harvested cork bark'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  region: europe-mediterranean
+  why: Thick spongy bark is stripped every nine years for cork, leaving bright red-brown trunks; national
+    tree of Portugal, home of the Whistler Tree, the most productive cork oak.
+- id: cornelian-cherry
+  names:
+  - cornelian cherry
+  scientific: Cornus mas
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'flowering-dogwood: flowering dogwood has large showy bracts'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - flowers
+  - folklore
+  region: europe-mediterranean
+  why: Yellow late-winter flowers, sour red fruit and dense wood for Greek spears; Romulus' spear took
+    root as a cornel.
+- id: crab-apple
+  names:
+  - crab apple
+  - wild apple
+  scientific: Malus sylvestris
+  rank: group
+  stands_for:
+  - Malus baccata
+  - Malus coronaria
+  - Malus fusca (Pacific crabapple)
+  - ornamental Malus
+  distinct_from:
+  - 'apple: crab apple is a small-fruited wild or ornamental tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - flowers
+  - fruit
+  region: europe-mediterranean
+  why: Wild hedge apple with sour fruit and showy blossom, at the heart of wassailing and Celtic Otherworld
+    lore.
+- id: cretan-date-palm
+  names:
+  - Cretan date palm
+  - Theophrastus's palm
+  scientific: Phoenix theophrasti
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'date-palm: Cretan palm is clumping with dry inedible dates'
+  - 'canary-date-palm: Cretan palm is slender and clumping'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: europe-mediterranean
+  why: Europe's only native date palm, multi-stemmed, forming the palm beach at Vai on Crete.
+- id: cretan-zelkova
+  names:
+  - Cretan zelkova
+  - ambelitsia
+  scientific: Zelkova abelicea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'zelkova: Cretan zelkova is a shrubby Cretan relict, not an Asian temple timber'
+  split_from: zelkova
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: europe-mediterranean
+  why: Goat-browsed relict of Cretan mountains whose straight shoots are the traditional shepherd's crooks
+    and walking sticks.
+- id: cyprus-golden-oak
+  names:
+  - golden oak
+  - Cyprus oak
+  - latzia
+  scientific: Quercus alnifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: golden oak is an evergreen Cypriot shrub-oak with golden-felted leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: europe-mediterranean
+  why: National tree of Cyprus, an evergreen Troodos oak whose leaves are golden-felted beneath.
+- id: downy-oak
+  names:
+  - downy oak
+  - pubescent oak
+  - truffle oak
+  scientific: Quercus pubescens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: downy oak is the small hairy-leaved truffle oak of the warm south'
+  split_from: english-oak
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: europe-mediterranean
+  why: Small crooked oak of warm limestone hills with hairy leaves held through winter; the main host
+    of the Périgord black truffle.
+- id: dragon-tree
+  names:
+  - dragon tree
+  - Canary Islands dragon tree
+  scientific: Dracaena draco
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dragons-blood-tree: Socotra''s dragon''s blood tree has a dense upturned umbrella crown'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  - cultural
+  - product
+  region: europe-mediterranean
+  why: Tree-like monocot with red resin; the Drago Milenario of Tenerife and a sacred tree of the Guanches.
+- id: dwarf-fan-palm
+  names:
+  - dwarf fan palm
+  - Mediterranean fan palm
+  - palmito
+  scientific: Chamaerops humilis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: europe-mediterranean
+  why: Clumping fan palm of the western Mediterranean, the region's other native palm, whose leaf fibre
+    was combed into 'crin végétal' stuffing and woven into baskets.
+- id: elder
+  names:
+  - elder
+  - elderberry
+  scientific: Sambucus nigra
+  rank: genus
+  stands_for:
+  - Sambucus canadensis
+  - Sambucus cerulea
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - folklore
+  - medicinal
+  - toxic
+  - fruit
+  - product
+  region: europe-mediterranean
+  why: The Elder Mother of Danish lore, elderflower and elderberry; raw parts are toxic.
+- id: elm
+  names:
+  - elm
+  - field elm
+  - English elm
+  - smooth-leaved elm
+  scientific: Ulmus minor
+  rank: group
+  stands_for:
+  - Ulmus minor var. vulgaris (English elm)
+  - Ulmus laevis (European white elm)
+  distinct_from:
+  - 'wych-elm: wych elm has huge rough leaves and does not sucker'
+  - 'american-elm: American elm is the vase-shaped avenue elm of North America'
+  - 'zelkova: zelkova is an Asian genus with its own temple-timber lore'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  - medicinal
+  region: europe-mediterranean
+  why: Towering suckering hedgerow elm of Constable's landscapes, killed across Europe by Dutch elm disease;
+    linked with death and elves in folklore, its water-resistant wood made coffins and water pipes.
+- id: english-oak
+  names:
+  - English oak
+  - pedunculate oak
+  - sessile oak
+  - Hungarian oak
+  scientific: Quercus robur
+  rank: group
+  stands_for:
+  - Quercus petraea (sessile oak)
+  - Quercus frainetto (Hungarian oak)
+  distinct_from:
+  - 'white-oak: North American white oaks are a separate timber and range'
+  - 'cork-oak: cork oak is evergreen with harvested cork bark'
+  - 'holm-oak: holm oak is evergreen with holly-like leaves'
+  - 'downy-oak: downy oak is the small hairy-leaved truffle oak of the warm south'
+  - 'valonia-oak: valonia oak has huge shaggy acorn cups harvested for tannin'
+  - 'cyprus-golden-oak: golden oak is an evergreen Cypriot shrub-oak with golden-felted leaves'
+  - 'turkey-oak: Turkey oak has narrow deep-cut leaves and mossy ''whiskered'' acorn cups'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  - product
+  region: europe-mediterranean
+  why: Sacred to Zeus, Perun, Thor and the druids and the archetypal European timber and acorn tree; national
+    tree of England, Germany, Poland and the Baltic states, and sessile oak of Wales and Ireland; lore
+    of the Major Oak, the Royal Oak and Guernica's Gernikako Arbola.
+- id: etna-broom
+  names:
+  - Mount Etna broom
+  scientific: Genista aetnensis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: europe-mediterranean
+  why: Leafless green-twigged small tree of Etna's lava fields, smothered in scented yellow flowers in
+    summer.
+- id: european-aspen
+  names:
+  - European aspen
+  - trembling poplar
+  scientific: Populus tremula
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'aspen: European aspen has its own Celtic and Christian lore, and no Pando'
+  split_from: aspen
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  region: europe-mediterranean
+  why: Trembling-leaved poplar said to quake because Christ's cross was made of it; Celtic shield wood
+    and Scandinavian matchwood.
+- id: european-beech
+  names:
+  - European beech
+  - common beech
+  - copper beech
+  scientific: Fagus sylvatica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'american-beech: American beech is the North American species'
+  - 'oriental-beech: oriental beech is the Caucasian and Anatolian species'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  region: europe-mediterranean
+  why: Smooth grey bark long carved with inscriptions (the word 'book' traces to beech), deep shade, beechnut
+    mast and copper-leaved forms; Denmark's national tree.
+- id: faya
+  names:
+  - faya
+  - firetree
+  scientific: Morella faya
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  region: europe-mediterranean
+  why: Laurisilva tree with edible berries that gave Faial island its name; invasive in Hawaii.
+- id: field-maple
+  names:
+  - field maple
+  - hedge maple
+  - Montpellier maple
+  scientific: Acer campestre
+  rank: group
+  stands_for:
+  - Acer monspessulanum (Montpellier maple)
+  - Acer opalus (Italian maple)
+  distinct_from:
+  - 'sycamore-maple: field maple is a small hedge maple with corky twigs'
+  split_from: sycamore-maple
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: europe-mediterranean
+  why: Small rounded hedgerow maple with corky twigs; its wood made harps and fine turnery, and Romans
+    trained vines on it.
+- id: goat-willow
+  names:
+  - goat willow
+  - pussy willow
+  - sallow
+  scientific: Salix caprea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-willow: goat willow has broad leaves and big silver pussy-willow catkins'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - flowers
+  region: europe-mediterranean
+  why: Big silver catkins carried as 'palms' on Palm (Willow) Sunday across Catholic and Orthodox eastern
+    Europe.
+- id: greek-strawberry-tree
+  names:
+  - Greek strawberry tree
+  - eastern strawberry tree
+  scientific: Arbutus andrachne
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'strawberry-tree: Greek strawberry tree has smooth red peeling bark; Mediterranean species has rough
+    bark and darker fruit'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: europe-mediterranean
+  why: Smooth red-orange bark that peels to green in summer, on rocky slopes of the eastern Mediterranean.
+- id: guelder-rose
+  names:
+  - guelder rose
+  - kalyna
+  - kalina
+  - water elder
+  scientific: Viburnum opulus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - flowers
+  - fruit
+  - medicinal
+  region: europe-mediterranean
+  why: Small tree of wet woods with white lacecap flowers and glossy scarlet berries; as kalyna it is
+    Ukraine's national plant, in songs and embroidery, and kalina berries are a Slavic winter remedy.
+- id: hawthorn
+  names:
+  - hawthorn
+  - may
+  - whitethorn
+  scientific: Crataegus monogyna
+  rank: group
+  stands_for:
+  - Crataegus laevigata (Midland hawthorn)
+  - Crataegus douglasii
+  - other North American hawthorns
+  distinct_from:
+  - 'azarole: azarole is a larger-fruited Mediterranean fruit hawthorn'
+  - 'chinese-hawthorn: Chinese hawthorn has large shanzha fruit'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - flowers
+  - medicinal
+  region: europe-mediterranean
+  why: Irish fairy tree that must not be cut, May blossom of Beltane and the Glastonbury Thorn; haws are
+    an old heart remedy.
+- id: hazel
+  names:
+  - hazel
+  - filbert
+  scientific: Corylus avellana
+  rank: group
+  stands_for:
+  - Corylus americana
+  - Corylus maxima
+  distinct_from:
+  - 'turkish-hazel: Turkish hazel is a tall single-trunked tree, not a multi-stemmed shrub'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - fruit
+  region: europe-mediterranean
+  why: Hazelnuts, the Salmon of Wisdom, and dowsing rods.
+- id: holly
+  names:
+  - holly
+  - English holly
+  - common holly
+  scientific: Ilex aquifolium
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'yerba-mate: yerba mate is a spineless caffeine crop'
+  - 'american-holly: American holly is the North American species'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  - toxic
+  - product
+  region: europe-mediterranean
+  why: Spiny evergreen with toxic red berries, the Holly King of midwinter lore and Christmas greenery,
+    with the whitest of woods.
+- id: holm-oak
+  names:
+  - holm oak
+  - holly oak
+  - encina
+  scientific: Quercus ilex
+  rank: group
+  stands_for:
+  - Quercus rotundifolia (dehesa oak)
+  distinct_from:
+  - 'english-oak: holm oak is evergreen with holly-like leaves'
+  - 'cork-oak: holm oak bark is not corky'
+  - 'kermes-oak: kermes oak is a prickly scrub oak hosting the kermes dye insect'
+  - 'palestine-oak: Palestine oak is the Levantine scrub oak of Abraham''s Oak at Mamre'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  region: europe-mediterranean
+  why: Evergreen oak of the Iberian dehesa whose sweet acorns fatten the pigs for jamón ibérico, and the
+    encina of Spanish villages.
+- id: hop-hornbeam
+  names:
+  - hop-hornbeam
+  - European hop-hornbeam
+  scientific: Ostrya carpinifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'hornbeam: hop-hornbeam has hop-like fruit clusters and shaggy bark'
+  - 'eastern-hophornbeam: eastern hophornbeam is the North American species'
+  split_from: hornbeam
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: europe-mediterranean
+  why: Hornbeam relative of southern Europe with hop-like papery fruit clusters, shaggy strip bark and
+    very hard wood.
+- id: hornbeam
+  names:
+  - hornbeam
+  - common hornbeam
+  scientific: Carpinus betulus
+  rank: group
+  stands_for:
+  - Carpinus caroliniana (American hornbeam)
+  distinct_from:
+  - 'hop-hornbeam: hop-hornbeam has hop-like fruit clusters and shaggy bark'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: europe-mediterranean
+  why: Fluted muscle-like trunk and the hardest common European wood, used for cogs and chopping blocks.
+- id: horse-chestnut
+  names:
+  - horse chestnut
+  - conker tree
+  scientific: Aesculus hippocastanum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sweet-chestnut: horse chestnut has palmate leaves and toxic conkers'
+  - 'ohio-buckeye: buckeyes are the North American relatives'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - flowers
+  - toxic
+  - medicinal
+  - product
+  region: europe-mediterranean
+  why: Candelabra flower spikes and toxic glossy conkers of the children's game; seed extract is a vein
+    remedy.
+- id: italian-cypress
+  names:
+  - Italian cypress
+  - Mediterranean cypress
+  - pencil pine
+  scientific: Cupressus sempervirens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'saharan-cypress: Saharan cypress is a broad relict desert tree, not a column'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  - striking
+  region: europe-mediterranean
+  why: Flame-shaped column of Mediterranean cemeteries and a mourning tree since antiquity (Cyparissus'
+    myth); the Cypress of Abarkuh in Iran, among the oldest living trees, is one.
+- id: judas-tree
+  names:
+  - Judas tree
+  - love tree
+  scientific: Cercis siliquastrum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'eastern-redbud: eastern redbud is the North American species'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - flowers
+  region: europe-mediterranean
+  why: Magenta flowers burst from bare trunks; legend says Judas hanged himself on it.
+- id: kermes-oak
+  names:
+  - kermes oak
+  scientific: Quercus coccifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'holm-oak: kermes oak is a prickly scrub oak hosting the kermes dye insect'
+  split_from: holm-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: europe-mediterranean
+  why: Prickly evergreen scrub oak of the garrigue whose scale insects gave kermes, the crimson dye named
+    in 'crimson' and 'carmine'.
+- id: laburnum
+  names:
+  - laburnum
+  - golden chain
+  scientific: Laburnum anagyroides
+  rank: species
+  stands_for:
+  - Laburnum alpinum
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - toxic
+  region: europe-mediterranean
+  why: Cascading golden flower chains; seeds are highly poisonous.
+- id: larch
+  names:
+  - larch
+  - European larch
+  - Siberian larch
+  scientific: Larix decidua
+  rank: group
+  stands_for:
+  - Larix sibirica
+  distinct_from:
+  - 'tamarack: tamarack is the North American larch'
+  - 'dahurian-larch: Dahurian larch forms the far-eastern Siberian larch forests'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  - cultural
+  - product
+  region: europe-mediterranean
+  why: Deciduous conifer turning gold in autumn, with rot-resistant resinous wood for boats, shingles
+    and Venetian piles; a spirit tree for Siberian peoples.
+- id: lily-of-the-valley-tree
+  names:
+  - lily-of-the-valley tree
+  - folhado
+  scientific: Clethra arborea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  region: europe-mediterranean
+  why: Madeiran laurisilva tree with drooping sprays of fragrant white bell flowers.
+- id: linden
+  names:
+  - lime
+  - linden
+  - small-leaved lime
+  - large-leaved lime
+  - common lime
+  scientific: Tilia cordata
+  rank: group
+  stands_for:
+  - Tilia platyphyllos (large-leaved lime)
+  - Tilia × europaea (common lime)
+  distinct_from:
+  - 'american-basswood: basswood is the North American species'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  - medicinal
+  - product
+  region: europe-mediterranean
+  why: Sacred village and law tree of Slavic and Germanic peoples and national tree of the Czech Republic,
+    Slovakia, Slovenia and Latvia, with fragrant flowers for tea, bast fibre and soft fine wood for carving.
+- id: lombardy-poplar
+  names:
+  - Lombardy poplar
+  scientific: Populus nigra 'Italica'
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-poplar: Lombardy poplar is a narrow columnar clone; black poplar is broad crowned'
+  split_from: black-poplar
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - cultural
+  region: europe-mediterranean
+  why: A single male clone of black poplar with a narrow columnar form, planted in lines along roads and
+    canals across Europe.
+- id: mahaleb-cherry
+  names:
+  - mahaleb cherry
+  - St Lucie cherry
+  scientific: Prunus mahaleb
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'wild-cherry: mahaleb is a small cherry grown for its spice kernels; wild cherry is a timber tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - flowers
+  region: europe-mediterranean
+  why: Small cherry whose seed kernels are the spice mahlab in Greek, Turkish and Levantine breads; its
+    scented wood made St Lucie pipes.
+- id: manna-ash
+  names:
+  - manna ash
+  - flowering ash
+  scientific: Fraxinus ornus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ash: manna ash has showy flower plumes and yields manna sugar'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - medicinal
+  - cultural
+  - product
+  region: europe-mediterranean
+  why: Creamy flower plumes, and a sweet manna exudate tapped in Sicily for mannitol.
+- id: maritime-pine
+  names:
+  - maritime pine
+  - cluster pine
+  - pin des Landes
+  scientific: Pinus pinaster
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'scots-pine: maritime pine has long needles, big cones and is tapped for resin'
+  split_from: scots-pine
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  region: europe-mediterranean
+  why: Deeply plated red-brown bark and big glossy cones; the planted Landes forest was tapped for resin
+    and turpentine by gemmeurs.
+- id: mastic
+  names:
+  - mastic tree
+  - lentisk
+  - mastic
+  scientific: Pistacia lentiscus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'terebinth: mastic is evergreen and is tapped for mastic resin; terebinth is deciduous and larger'
+  split_from: terebinth
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - cultural
+  region: europe-mediterranean
+  why: Evergreen Mediterranean pistachio whose bark, cut on Chios, weeps mastic tears used as the original
+    chewing gum and in Greek liqueur.
+- id: mediterranean-hackberry
+  names:
+  - Mediterranean hackberry
+  - nettle tree
+  - lotus tree
+  scientific: Celtis australis
+  rank: group
+  stands_for:
+  - Celtis occidentalis (common hackberry)
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - fruit
+  region: europe-mediterranean
+  why: Its sweet berries are one candidate for the lotus of the Lotus-eaters, and its flexible wood made
+    whip handles.
+- id: medlar
+  names:
+  - medlar
+  scientific: Mespilus germanica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  - cultural
+  region: europe-mediterranean
+  why: Odd crowned brown fruit eaten only after bletting, a stock bawdy joke in Chaucer and Shakespeare.
+- id: mocan
+  names:
+  - mocán
+  scientific: Visnea mocanera
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: europe-mediterranean
+  why: Laurel-forest tree of the Canaries and Madeira whose sweet black 'yoya' berries the Guanches ate
+    and boiled into chacerquén syrup.
+- id: mountain-pine
+  names:
+  - mountain pine
+  - dwarf mountain pine
+  - mugo pine
+  scientific: Pinus mugo
+  rank: group
+  stands_for:
+  - Pinus uncinata (mountain pine, tree form)
+  distinct_from:
+  - 'scots-pine: mountain pine is a sprawling krummholz shrub-pine'
+  split_from: scots-pine
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  - product
+  region: europe-mediterranean
+  why: Sprawling multi-stemmed krummholz of Alpine and Carpathian treelines, distilled for mugo pine oil
+    used in balms.
+- id: myrtle
+  names:
+  - myrtle
+  scientific: Myrtus communis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - medicinal
+  - product
+  region: europe-mediterranean
+  why: Aromatic evergreen sacred to Aphrodite, carried in royal bridal bouquets and steeped into Sardinian
+    mirto; usually a shrub, a small tree when old.
+- id: norway-maple
+  names:
+  - Norway maple
+  scientific: Acer platanoides
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sycamore-maple: Norway maple has pointed lobes, milky sap and yellow spring flowers'
+  split_from: sycamore-maple
+  tier: 3
+  status: extant
+  inclusion:
+  - well-known
+  - flowers
+  region: europe-mediterranean
+  why: Common street maple with sharp-pointed lobes, milky sap, lime-yellow flowers before the leaves
+    and purple 'Crimson King' forms.
+- id: norway-spruce
+  names:
+  - Norway spruce
+  - European spruce
+  - Siberian spruce
+  scientific: Picea abies
+  rank: group
+  stands_for:
+  - Picea obovata (Siberian spruce)
+  distinct_from:
+  - 'sitka-spruce: Sitka is a giant coastal rainforest spruce'
+  - 'serbian-spruce: Serbian spruce is a narrow spire with silver-backed needles'
+  - 'white-spruce: white and black spruce are the North American boreal spruces'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  region: europe-mediterranean
+  why: Classic Christmas tree, Norway's national tree and the violin-top tonewood of Stradivari; Old Tjikko
+    in Sweden has clonal roots over 9,500 years old.
+- id: oleander
+  names:
+  - oleander
+  scientific: Nerium oleander
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - flowers
+  region: europe-mediterranean
+  why: Showy pink and white flowers on a small tree whose every part is lethally cardiotoxic.
+- id: olive
+  names:
+  - olive
+  - wild olive
+  scientific: Olea europaea
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - fruit
+  - striking
+  - product
+  region: europe-mediterranean
+  why: Sacred to Athena, a peace symbol and the oil of the Mediterranean, Greece's emblem tree, with gnarled
+    trunks lasting millennia and figured wood.
+- id: oriental-plane
+  names:
+  - oriental plane
+  - chinar
+  scientific: Platanus orientalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'plane-tree: oriental plane has deeply cut leaves and ancient Greek and Persian lore; London plane
+    is a hybrid of the Eurasian and American planes'
+  - 'sycamore-maple: unrelated, shares the name sycamore'
+  split_from: plane-tree
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - striking
+  region: europe-mediterranean
+  why: 'Huge deep-lobed plane of Greek and Persian lore: Hippocrates taught under one on Kos, Xerxes adorned
+    one with gold, and Kashmir''s chinars descend from it.'
+- id: pear
+  names:
+  - pear
+  - European pear
+  - wild pear
+  scientific: Pyrus communis
+  rank: group
+  stands_for:
+  - Pyrus pyraster
+  distinct_from:
+  - 'asian-pear: Asian pear has round crisp fruit'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  region: europe-mediterranean
+  why: Orchard fruit with fine dense pinkish wood once used for rulers and woodcut blocks.
+- id: phoenician-juniper
+  names:
+  - Phoenician juniper
+  - sabina
+  scientific: Juniperus phoenicea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'common-juniper: Phoenician juniper has scale leaves and wind-sculpted coastal forms'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: europe-mediterranean
+  why: Scale-leaved juniper of coastal dunes and cliffs; El Hierro's wind-flattened sabinas grow almost
+    horizontal.
+- id: plane-tree
+  names:
+  - plane tree
+  - London plane
+  scientific: Platanus × acerifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'oriental-plane: oriental plane has deeply cut leaves and ancient Greek and Persian lore'
+  - 'american-sycamore: American sycamore is the North American parent'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  region: europe-mediterranean
+  why: Hybrid of the oriental and American planes whose camouflage-mottled peeling bark and pollution
+    tolerance made it the great city street tree of London and Paris.
+- id: plum
+  names:
+  - plum
+  - damson
+  - greengage
+  scientific: Prunus domestica
+  rank: group
+  stands_for:
+  - Prunus insititia (damson)
+  distinct_from:
+  - 'blackthorn: plum is a cultivated thornless fruit tree'
+  - 'cherry-plum: cherry plum blooms first and has small round fruit'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  region: europe-mediterranean
+  why: Familiar orchard stone fruit, dried as prunes.
+- id: prickly-juniper
+  names:
+  - prickly juniper
+  - cade
+  - Canary juniper
+  scientific: Juniperus oxycedrus
+  rank: group
+  stands_for:
+  - Juniperus cedrus (Canary juniper)
+  - Juniperus brevifolia (Azores juniper)
+  - Juniperus macrocarpa
+  distinct_from:
+  - 'common-juniper: prickly juniper is a Mediterranean tree juniper yielding cade oil'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - cultural
+  region: europe-mediterranean
+  why: Mediterranean tree juniper with red-brown berries whose wood is dry-distilled into cade oil for
+    skin remedies, soap and veterinary use.
+- id: rowan
+  names:
+  - rowan
+  - mountain ash
+  scientific: Sorbus aucuparia
+  rank: group
+  stands_for:
+  - Sorbus americana
+  - Sorbus commixta (Japanese rowan)
+  distinct_from:
+  - 'service-tree: service tree has larger edible pear-like fruit'
+  - 'whitebeam: whitebeam has simple leaves with white undersides'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  - fruit
+  region: europe-mediterranean
+  why: Protective tree against witches in Celtic and Norse lore (Iceland's rowan grew from the bodies
+    of two lovers), with scarlet berry clusters made into jelly.
+- id: saharan-cypress
+  names:
+  - Saharan cypress
+  - tarout
+  scientific: Cupressus dupreziana
+  rank: species
+  stands_for:
+  - Cupressus atlantica (Moroccan cypress)
+  distinct_from:
+  - 'italian-cypress: Saharan cypress is a broad relict desert tree, not a column'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: europe-mediterranean
+  why: About 230 relict trees in the Tassili n'Ajjer, some over 2,000 years old, known to Tuareg as tarout.
+- id: scots-pine
+  names:
+  - Scots pine
+  - Scotch pine
+  - redwood (timber)
+  scientific: Pinus sylvestris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'eastern-white-pine: white pines have five needles and soft wood'
+  - 'longleaf-pine: longleaf has a grass stage and very long needles'
+  - 'japanese-black-pine: Japanese black pine is the trained garden pine of East Asia'
+  - 'stone-pine: hard pines lack the umbrella crown and large edible nuts'
+  - 'maritime-pine: maritime pine has long needles, big cones and is tapped for resin'
+  - 'aleppo-pine: Aleppo pine is the pale-barked drought pine of Mediterranean coasts'
+  - 'black-pine: black pine has near-black bark and long dark needles'
+  - 'mountain-pine: mountain pine is a sprawling krummholz shrub-pine'
+  - 'canary-pine: Canary pine has long drooping triple needles and resprouts after fire'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  region: europe-mediterranean
+  why: Orange-barked pine of the boreal forest and the Caledonian pinewoods, Scotland's national tree,
+    and source of resin, Stockholm tar, turpentine and Europe's most-used pine timber.
+- id: serbian-spruce
+  names:
+  - Serbian spruce
+  - Pančić spruce
+  scientific: Picea omorika
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'norway-spruce: Serbian spruce is a narrow spire with silver-backed needles'
+  split_from: norway-spruce
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: europe-mediterranean
+  why: Ice-age relict of the Drina gorges, a pencil-narrow spire with drooping branches and silver-backed
+    needles.
+- id: service-tree
+  names:
+  - service tree
+  - sorb
+  - true service tree
+  - Sorbus domestica (syn.)
+  scientific: Cormus domestica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'rowan: service tree has larger edible pear-like fruit'
+  - 'wild-service-tree: wild service has maple-like leaves and brown ''chequers'''
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - fruit
+  region: europe-mediterranean
+  why: Pinnate-leaved tree whose pear-shaped fruit has been eaten bletted since Roman times.
+- id: silver-fir
+  names:
+  - silver fir
+  - Greek fir
+  scientific: Abies alba
+  rank: group
+  stands_for:
+  - Abies cephalonica
+  distinct_from:
+  - 'balsam-fir: balsam fir yields Canada balsam'
+  - 'sacred-fir: oyamel is the Mexican highland fir of the monarch roosts'
+  - 'spanish-fir: pinsapo has short stiff radial needles like a bottlebrush'
+  - 'nordmann-fir: Nordmann fir is the dense dark modern Christmas tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  region: europe-mediterranean
+  why: Tall upright-coned fir of European mountains and the original German Christmas tree.
+- id: smoke-tree
+  names:
+  - smoke tree
+  - smoke bush
+  - Venetian sumac
+  - Eurasian smoketree
+  scientific: Cotinus coggygria
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - flowers
+  region: europe-mediterranean
+  why: Hazy pink plumes of flower stalks; its wood gave the yellow dye young fustic and its leaves tannin.
+- id: sour-cherry
+  names:
+  - sour cherry
+  - morello
+  - marasca
+  - vişne
+  scientific: Prunus cerasus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'wild-cherry: sour cherry is a small suckering tree with tart fruit'
+  split_from: wild-cherry
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: europe-mediterranean
+  why: Small suckering cherry with tart fruit for maraschino from Zadar's marasca, Balkan and Turkish
+    vişne preserves and Belgian kriek.
+- id: spanish-fir
+  names:
+  - Spanish fir
+  - pinsapo
+  - Sicilian fir
+  scientific: Abies pinsapo
+  rank: group
+  stands_for:
+  - Abies numidica (Algerian fir)
+  - Abies nebrodensis (Sicilian fir)
+  - Abies marocana
+  distinct_from:
+  - 'silver-fir: pinsapo has short stiff radial needles like a bottlebrush'
+  split_from: silver-fir
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: europe-mediterranean
+  why: Relict fir of Andalusian and Moroccan limestone peaks with stiff radial bottlebrush needles; Sicilian
+    fir survives as about 30 trees.
+- id: spanish-juniper
+  names:
+  - Spanish juniper
+  - sabina albar
+  scientific: Juniperus thurifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'eastern-redcedar: Spanish juniper forms ancient open woods on the Iberian meseta'
+  split_from: eastern-redcedar
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: europe-mediterranean
+  why: Massive ancient tree junipers of the Iberian plateau, forming open sabinar woods with incense-scented
+    wood.
+- id: spindle
+  names:
+  - spindle
+  - European spindle
+  scientific: Euonymus europaeus
+  rank: species
+  stands_for:
+  - Euonymus atropurpureus (eastern wahoo)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  region: europe-mediterranean
+  why: Shocking pink capsules with orange seeds, toxic, and hard wood once used for spindles.
+- id: stone-pine
+  names:
+  - stone pine
+  - umbrella pine
+  scientific: Pinus pinea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'swiss-stone-pine: Swiss stone pine is a treeline tree'
+  - 'scots-pine: hard pines lack the umbrella crown and large edible nuts'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - striking
+  region: europe-mediterranean
+  why: Flat umbrella crown of Roman landscapes and the main European source of pine nuts.
+- id: strawberry-tree
+  names:
+  - strawberry tree
+  - arbutus
+  scientific: Arbutus unedo
+  rank: species
+  stands_for:
+  - Arbutus canariensis (Canary strawberry tree)
+  distinct_from:
+  - 'pacific-madrone: madrone is a large tree with peeling cinnamon bark'
+  - 'greek-strawberry-tree: Greek strawberry tree has smooth red peeling bark'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - striking
+  region: europe-mediterranean
+  why: Red warty fruit and white flowers at the same time, distilled into Portuguese medronho; on Madrid's
+    coat of arms with a bear.
+- id: styrax
+  names:
+  - storax
+  - snowbell
+  scientific: Styrax officinalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'anatolian-sweetgum: liquid storax comes from sweetgum, solid storax from Styrax; different storax
+    source'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - product
+  - folklore
+  region: europe-mediterranean
+  why: Small Mediterranean tree with white bell flowers whose aromatic resin was burned as the storax
+    incense of antiquity.
+- id: sumac
+  names:
+  - Sicilian sumac
+  - tanner's sumac
+  - sumac
+  scientific: Rhus coriaria
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: europe-mediterranean
+  why: Small tree whose sour red berries are the spice sumac and whose leaves tanned Morocco leather.
+- id: sweet-chestnut
+  names:
+  - sweet chestnut
+  - Spanish chestnut
+  - European chestnut
+  scientific: Castanea sativa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'horse-chestnut: horse chestnut has palmate leaves and toxic conkers'
+  - 'american-chestnut: American chestnut is the North American species lost to blight'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - cultural
+  - product
+  region: europe-mediterranean
+  why: Chestnut flour was a mountain staple in Corsica, the Cévennes and the Apennines, and the Hundred-Horse
+    Chestnut on Etna is among the largest trees in Europe.
+- id: swiss-stone-pine
+  names:
+  - Swiss stone pine
+  - arolla pine
+  - Siberian pine
+  scientific: Pinus cembra
+  rank: group
+  stands_for:
+  - Pinus sibirica
+  distinct_from:
+  - 'stone-pine: Swiss stone pine is a treeline tree'
+  - 'whitebark-pine: whitebark pine is the North American relative'
+  - 'korean-pine: Korean pine is the East Asian nut pine'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: europe-mediterranean
+  why: Five-needle treeline pines whose wingless nuts are spread by nutcrackers; Siberian pine nuts are
+    a Russian forest food and its scented wood panels Alpine Stuben.
+- id: sycamore-maple
+  names:
+  - sycamore
+  - sycamore maple
+  scientific: Acer pseudoplatanus
+  rank: species
+  stands_for:
+  - Acer cappadocicum
+  distinct_from:
+  - 'sugar-maple: sugar maple is the syrup and hard-maple tree'
+  - 'japanese-maple: Japanese maple is small with fine-cut leaves'
+  - 'norway-maple: Norway maple has pointed lobes, milky sap and yellow spring flowers'
+  - 'field-maple: field maple is a small hedge maple with corky twigs'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  region: europe-mediterranean
+  why: Big European maple with winged seeds and rippled figured wood for violin backs; the Tolpuddle Martyrs
+    met under one.
+- id: thuya
+  names:
+  - thuya
+  - sandarac tree
+  - Barbary thuja
+  - għargħar
+  scientific: Tetraclinis articulata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: europe-mediterranean
+  why: Burl of this North African conifer was the 'citrus wood' for which Romans paid fortunes; sandarac
+    varnish resin; national tree of Malta.
+- id: til
+  names:
+  - til
+  - stinkwood
+  - Canary stinkwood
+  scientific: Ocotea foetens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bay-laurel: til is a larger laurisilva tree with stinking wood'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - striking
+  region: europe-mediterranean
+  why: Laurisilva tree with foul-smelling wood; the sacred Garoé of the Bimbache on El Hierro, a til felled
+    by a storm in 1610, 'rained' fog water for the island.
+- id: tree-heath
+  names:
+  - tree heath
+  - briar
+  scientific: Erica arborea
+  rank: species
+  stands_for:
+  - Erica trimera
+  - Erica excelsa
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: europe-mediterranean
+  why: Tree-sized heather whose root burl becomes briar pipes; forms heather forests on East African mountains.
+- id: turkey-oak
+  names:
+  - Turkey oak
+  - cerris oak
+  scientific: Quercus cerris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: Turkey oak has narrow deep-cut leaves and mossy ''whiskered'' acorn cups'
+  split_from: english-oak
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: europe-mediterranean
+  why: Fast south-east European oak with whiskered buds, narrow sharply lobed leaves and acorn cups shaggy
+    with curled scales.
+- id: turkish-hazel
+  names:
+  - Turkish hazel
+  - Turkish filbert
+  scientific: Corylus colurna
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'hazel: Turkish hazel is a tall single-trunked tree, not a multi-stemmed shrub'
+  split_from: hazel
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: europe-mediterranean
+  why: Tall single-trunked conical hazel with corky bark and frilly husked nuts, unlike the multi-stemmed
+    coppice hazel.
+- id: valonia-oak
+  names:
+  - valonia oak
+  - Vallonea oak
+  - Tabor oak
+  scientific: Quercus ithaburensis subsp. macrolepis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: valonia oak has huge shaggy acorn cups harvested for tannin'
+  - 'persian-oak: Zagros oak is a mountain species'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  - cultural
+  region: europe-mediterranean
+  why: Huge shaggy acorn cups were a leading tannin export of Greece and Anatolia; the Kea oak forest
+    is its stronghold.
+- id: vinhatico
+  names:
+  - vinhático
+  - Madeira mahogany
+  scientific: Persea indica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'avocado: vinhático is a laurisilva timber tree with inedible fruit'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: europe-mediterranean
+  why: Laurel-forest avocado relative of Madeira and the Canaries whose reddish timber was cut as 'Madeira
+    mahogany' for furniture.
+- id: white-poplar
+  names:
+  - white poplar
+  - abele
+  - grey poplar
+  scientific: Populus alba
+  rank: group
+  stands_for:
+  - Populus × canescens (grey poplar)
+  distinct_from:
+  - 'black-poplar: white poplar has white bark and silver-backed leaves'
+  split_from: black-poplar
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  region: europe-mediterranean
+  why: White diamond-pitted bark and leaves silver-white beneath; Heracles crowned himself with white
+    poplar returning from Hades.
+- id: white-willow
+  names:
+  - white willow
+  - crack willow
+  - cricket-bat willow
+  scientific: Salix alba
+  rank: group
+  stands_for:
+  - Salix fragilis
+  - Salix alba var. caerulea
+  distinct_from:
+  - 'weeping-willow: weeping willow has a pendulous form'
+  - 'goat-willow: goat willow has broad leaves and big silver pussy-willow catkins'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - medicinal
+  - folklore
+  - product
+  region: europe-mediterranean
+  why: Salicin in its bark led to aspirin; cricket bats and withies; tree of Hecate and the moon.
+- id: whitebeam
+  names:
+  - whitebeam
+  - Swedish whitebeam
+  - Sorbus aria (syn.)
+  scientific: Aria edulis
+  rank: group
+  stands_for:
+  - Scandosorbus intermedia (Swedish whitebeam, syn. Sorbus intermedia)
+  - Arran whitebeams
+  distinct_from:
+  - 'rowan: whitebeam has simple leaves with white undersides'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: europe-mediterranean
+  why: Leaves flash white underneath in the wind; Britain and Ireland hold many endemic apomictic whitebeams.
+- id: wild-cherry
+  names:
+  - wild cherry
+  - sweet cherry
+  - gean
+  - mazzard
+  scientific: Prunus avium
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-cherry: Japanese cherries are grown for blossom, not fruit or timber'
+  - 'blackthorn: blackthorn is a thorny hedge tree with sloes'
+  - 'sour-cherry: sour cherry is a small suckering tree with tart fruit'
+  - 'bird-cherry: bird cherry has long white flower spikes and bitter black fruit'
+  - 'mahaleb-cherry: mahaleb is a small cherry grown for its spice kernels'
+  - 'black-cherry: black cherry is the North American timber cherry'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - toxic
+  region: europe-mediterranean
+  why: Cherries and fine reddish cabinet timber; leaves and pits contain cyanogenic glycosides.
+- id: wild-jujube
+  names:
+  - wild jujube
+  - lotus jujube
+  - sedra
+  - nbeg
+  scientific: Ziziphus lotus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jujube: jujube is the cultivated Chinese fruit tree'
+  - 'christs-thorn: Christ''s thorn is a tall Levantine and Saharan tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - fruit
+  - cultural
+  region: europe-mediterranean
+  why: Thorny zigzag-branched shrub-tree of North African steppe and south-east Spain; its small sweet
+    fruit is the favoured candidate for the lotus of Homer's Lotus-eaters.
+- id: wild-service-tree
+  names:
+  - wild service tree
+  - chequers tree
+  - Sorbus torminalis (syn.)
+  scientific: Torminalis torminalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'service-tree: wild service has maple-like leaves and brown ''chequers'''
+  split_from: service-tree
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - fruit
+  region: europe-mediterranean
+  why: Maple-like leaves with red autumn colour and brown bletted 'chequers' berries that flavoured ale,
+    perhaps naming Chequers pubs.
+- id: wych-elm
+  names:
+  - wych elm
+  - Scots elm
+  scientific: Ulmus glabra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'elm: wych elm has huge rough leaves and does not sucker'
+  split_from: elm
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  region: europe-mediterranean
+  why: Upland elm with huge rough leaves and no suckers; its pliant wood made longbows and it was hung
+    against witches in Scotland.
+- id: yew
+  names:
+  - yew
+  - English yew
+  - common yew
+  scientific: Taxus baccata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pacific-yew: Pacific yew is the North American species'
+  - 'japanese-yew: Japanese yew is the East Asian species'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - toxic
+  - medicinal
+  - striking
+  region: europe-mediterranean
+  why: Highly toxic, extremely long-lived churchyard tree (Fortingall Yew), wood of the English longbow,
+    and source of the cancer drug paclitaxel.

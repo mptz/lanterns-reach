@@ -1,0 +1,1182 @@
+# Tree candidates: middle-east-central-asia. Fields per design/trees.md.
+# Total: 63; tiers: 1: 13, 2: 31, 3: 19
+# Inclusion: well-known 10, folklore 18, cultural 32, striking 34, flowers 10, fruit 22, medicinal 8, toxic 6, product 33
+# Genera with 5+ entries: none
+
+- id: almond
+  names:
+  - almond
+  scientific: Prunus dulcis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'peach: peach is grown for its flesh, almond for its seed'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - toxic
+  - flowers
+  - cultural
+  - product
+  region: middle-east-central-asia
+  why: Early pink-white blossom and the almond nut; bitter almonds yield cyanide; Aaron's rod budded almonds.
+- id: apple
+  names:
+  - apple
+  - orchard apple
+  scientific: Malus domestica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'crab-apple: crab apple is a small-fruited wild or ornamental tree'
+  - 'wild-apple: wild apple is the Tian Shan forest ancestor with small variable fruit'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  - fruit
+  region: middle-east-central-asia
+  why: Fruit of Avalon, Idun and the Hesperides, descended from the wild apple forests of the Tian Shan.
+- id: apricot
+  names:
+  - apricot
+  scientific: Prunus armeniaca
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ume: apricot is a summer fruit tree, ume is valued for winter blossom and pickled fruit'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - toxic
+  - cultural
+  region: middle-east-central-asia
+  why: Golden stone fruit of Armenia and Central Asia, dried along the Silk Road; Armenia's national fruit,
+    and its wood is carved into the duduk; kernels are toxic in quantity.
+- id: black-mulberry
+  names:
+  - black mulberry
+  scientific: Morus nigra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-mulberry: white mulberry is the silkworm tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  region: middle-east-central-asia
+  why: Dark juicy fruit stained red by the blood of Pyramus and Thisbe in Ovid.
+- id: carob
+  names:
+  - carob
+  - St John's bread
+  scientific: Ceratonia siliqua
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: middle-east-central-asia
+  why: Sweet pods used as a chocolate substitute; its seeds gave the carat its name.
+- id: cedar-of-lebanon
+  names:
+  - cedar of Lebanon
+  - Lebanon cedar
+  - Cyprus cedar
+  scientific: Cedrus libani
+  rank: group
+  stands_for:
+  - Cedrus brevifolia (Cyprus cedar)
+  distinct_from:
+  - 'deodar: deodar has drooping tips and Himalayan sacred lore'
+  - 'atlas-cedar: Atlas cedar is the North African cedar, often blue-grey in cultivation'
+  - 'nordmann-fir: fir has upright cones, cedar has tiered crowns'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - folklore
+  - product
+  region: middle-east-central-asia
+  why: Gilgamesh's cedar forest, timber of Solomon's Temple and the national emblem on Lebanon's flag,
+    with tiered flat crowns; also forms forests in Turkey's Taurus.
+- id: christs-thorn
+  names:
+  - Christ's thorn jujube
+  - sidr
+  - lote tree
+  scientific: Ziziphus spina-christi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jujube: jujube is the cultivated Chinese fruit tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - fruit
+  - product
+  region: middle-east-central-asia
+  why: The Sidrat al-Muntaha (Lote Tree of the Utmost Boundary) of the Qur'an and Qatar's national tree,
+    said to have supplied the crown of thorns; sidr honey and leaf powder used for washing.
+- id: cucumber-tree-socotra
+  names:
+  - Socotra cucumber tree
+  scientific: Dendrosicyos socotranus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: middle-east-central-asia
+  why: The only tree in the cucumber family, a swollen-trunked Socotra endemic.
+- id: date-palm
+  names:
+  - date palm
+  scientific: Phoenix dactylifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'canary-date-palm: Canary palm is an ornamental with a thick trunk and no edible fruit'
+  - 'cretan-date-palm: Cretan palm is multi-stemmed and wild'
+  - 'indian-date-palm: sugar date palm is tapped for sap, not fruit'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - cultural
+  - product
+  region: middle-east-central-asia
+  why: Staple oasis fruit since Mesopotamia, on the emblem of Saudi Arabia and a symbol in Islam and Judaism.
+- id: dragons-blood-tree
+  names:
+  - dragon's blood tree
+  - Socotra dragon tree
+  scientific: Dracaena cinnabari
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dragon-tree: Canary dragon tree has a looser, more open branching crown'
+  - 'arabian-dragon-tree: Arabian dragon tree is a sparse, few-branched tree of mainland cliffs'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - medicinal
+  - product
+  region: middle-east-central-asia
+  why: Dense upturned umbrella crown on Socotra; its red resin was traded as dragon's blood for dye and
+    medicine.
+- id: euphrates-poplar
+  names:
+  - Euphrates poplar
+  - desert poplar
+  - huyang
+  scientific: Populus euphratica
+  rank: group
+  stands_for:
+  - Populus pruinosa (grey-leaved desert poplar)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: middle-east-central-asia
+  why: Desert poplar of riverine tugai forests from the Euphrates to the Tarim, with willow-like and toothed
+    leaves on one tree, golden in autumn; likely the 'willows' of Babylon in Psalm 137.
+- id: fig
+  names:
+  - fig
+  - common fig
+  scientific: Ficus carica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sycamore-fig: sycamore fig is a larger African tree fruiting on its trunk'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - cultural
+  - folklore
+  region: middle-east-central-asia
+  why: One of the first domesticated fruits, the fig leaves of Eden and the Ruminal fig of Romulus and
+    Remus.
+- id: frankincense
+  names:
+  - frankincense
+  - olibanum
+  scientific: Boswellia sacra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'indian-frankincense: Indian frankincense is a dry-forest tree of the Deccan with a paler resin'
+  - 'ethiopian-frankincense: Ethiopian frankincense has papery peeling bark and the Horn of Africa resin
+    trade'
+  - 'boswellia-socotrana: Socotra frankincense is a squat swollen-based cliff tree'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - folklore
+  - product
+  region: middle-east-central-asia
+  why: Gnarled desert tree of Dhofar, Hadramawt and Somaliland whose resin was the incense of temples
+    and a gift of the Magi; Oman's Land of Frankincense is a World Heritage site.
+- id: henna
+  names:
+  - henna
+  scientific: Lawsonia inermis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - product
+  region: middle-east-central-asia
+  why: Leaves give henna dye for skin and hair art across North Africa, the Middle East and South Asia.
+- id: khejri
+  names:
+  - khejri
+  - ghaf
+  - Tree of Life of Bahrain
+  scientific: Prosopis cineraria
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mesquite: khejri is the Old World desert Prosopis of Thar and Arabian culture'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - striking
+  region: middle-east-central-asia
+  why: Sacred desert tree for which 363 Bishnoi died in 1730 to stop felling; UAE national tree and Bahrain's
+    lone Tree of Life.
+- id: oleaster
+  names:
+  - oleaster
+  - Russian olive
+  - jida
+  scientific: Elaeagnus angustifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: middle-east-central-asia
+  why: Silver-leaved tree with fragrant flowers and floury fruit (senjed), a Persian Nowruz haft-sin item.
+- id: persian-silk-tree
+  names:
+  - Persian silk tree
+  - mimosa
+  scientific: Albizia julibrissin
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'siris: siris has long pods and heavy timber'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  region: middle-east-central-asia
+  why: Native from the Caspian forests of Iran to China, with pink silky powder-puff flowers and leaves
+    that fold at night (Persian shab-khosb, "night sleeper").
+- id: pistachio
+  names:
+  - pistachio
+  scientific: Pistacia vera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'terebinth: pistachio is the nut crop'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  region: middle-east-central-asia
+  why: Pistachio nuts from the desert foothills of Persia and Central Asia.
+- id: pomegranate
+  names:
+  - pomegranate
+  scientific: Punica granatum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  - cultural
+  - flowers
+  - product
+  region: middle-east-central-asia
+  why: Jewel-seeded fruit of Persephone's myth and a fertility emblem from Persia to China, with scarlet
+    flowers.
+- id: quince
+  names:
+  - quince
+  scientific: Cydonia oblonga
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  - cultural
+  region: middle-east-central-asia
+  why: Hard fragrant golden fruit cooked into membrillo, often identified as the golden apple of Greek
+    myth.
+- id: saxaul
+  names:
+  - saxaul
+  - black saxaul
+  - Haloxylon aphyllum (syn.)
+  scientific: Haloxylon ammodendron
+  rank: group
+  stands_for:
+  - Haloxylon persicum (white saxaul)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: middle-east-central-asia
+  why: Leafless gnarled desert tree of the Kyzylkum, Karakum and Gobi, with very dense firewood and dune-fixing
+    roots; black saxaul grows on clay and salt flats, white saxaul on sand.
+- id: sodom-apple
+  names:
+  - Sodom apple
+  - apple of Sodom
+  - calotrope
+  scientific: Calotropis procera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'crown-flower: crown flower has lilac flowers and Asian lore'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - folklore
+  - striking
+  - product
+  region: middle-east-central-asia
+  why: Toxic-latexed shrubby tree whose hollow fruits crumble like the Dead Sea 'apples of Sodom'.
+- id: tamarisk
+  names:
+  - tamarisk
+  - athel
+  - Nile tamarisk
+  scientific: Tamarix aphylla
+  rank: group
+  stands_for:
+  - Tamarix nilotica
+  distinct_from:
+  - 'salt-cedar: salt cedar is a feathery shrub-tree of riversides'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - striking
+  - product
+  region: middle-east-central-asia
+  why: Salt-excreting desert tree; Abraham planted one at Beersheba, in Plutarch Osiris's coffin is enclosed
+    in a tree often translated as tamarisk, and its insect-made manna may be the Biblical manna.
+- id: terebinth
+  names:
+  - terebinth
+  - turpentine tree
+  - Palestine terebinth
+  - Pistacia palaestina (syn.)
+  scientific: Pistacia terebinthus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pistachio: pistachio is the nut crop'
+  - 'mastic: mastic is an evergreen shrubby tree tapped for chewing resin'
+  - 'persian-turpentine: Persian turpentine is a larger dome-crowned tree of the Zagros and North Africa'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - medicinal
+  - product
+  region: middle-east-central-asia
+  why: Deciduous Biblical tree (elah) of the Valley of Elah, whose resin was Chian turpentine, the original
+    turpentine.
+- id: walnut
+  names:
+  - walnut
+  - Persian walnut
+  - English walnut
+  scientific: Juglans regia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-walnut: black walnut has darker timber and thick-shelled nuts'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - striking
+  - product
+  region: middle-east-central-asia
+  why: Walnut kernels and burl veneer, called Jupiter's acorn by the Romans; wild walnut-fruit forests
+    at Arslanbob in Kyrgyzstan are the largest in the world.
+- id: wild-apple
+  names:
+  - wild apple
+  - Sievers apple
+  scientific: Malus sieversii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'apple: orchard apple is the cultivated descendant'
+  split_from: apple
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - striking
+  region: middle-east-central-asia
+  why: Ancestor of the cultivated apple, forming whole fruit forests in the Tian Shan of Kazakhstan, with
+    fruit of every size and colour.
+- id: persian-turpentine
+  names:
+  - Persian turpentine tree
+  - baneh
+  - Atlantic pistachio
+  - Atlas pistachio
+  - betoum
+  scientific: Pistacia atlantica
+  rank: species
+  stands_for:
+  - Pistacia khinjuk (khinjuk)
+  distinct_from:
+  - 'terebinth: terebinth is a smaller tree of the Levant'
+  - 'pistachio: pistachio is the cultivated nut tree'
+  split_from: terebinth
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - fruit
+  - striking
+  region: middle-east-central-asia
+  why: Large long-lived dome-crowned tree of the Zagros and the North African steppe; its resin (saqqez)
+    is a Kurdish chewing gum and its oily fruit is roasted and eaten.
+- id: salt-cedar
+  names:
+  - salt cedar
+  - saltcedar
+  scientific: Tamarix ramosissima
+  rank: species
+  stands_for:
+  - Tamarix chinensis
+  distinct_from:
+  - 'tamarisk: athel tamarisk is a tall evergreen with jointed twigs'
+  split_from: tamarisk
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: middle-east-central-asia
+  why: Feathery pink-flowered riverside tamarisk of Central Asia and the Tarim.
+- id: socotra-desert-rose
+  names:
+  - Socotra desert rose
+  - bottle tree
+  scientific: Adenium obesum subsp. socotranum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'desert-rose: desert rose is a small shrubby plant'
+  split_from: desert-rose
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  - toxic
+  region: middle-east-central-asia
+  why: Giant swollen-trunked tree with pink flowers on Socotra cliffs; toxic sap.
+- id: arabian-ben-tree
+  names:
+  - Arabian ben tree
+  - ban tree
+  scientific: Moringa peregrina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'moringa: Indian moringa is the common food tree'
+  split_from: moringa
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: middle-east-central-asia
+  why: Slender desert tree of Arabia and Sinai with seeds pressed for ben oil, used in perfumery.
+- id: sea-buckthorn
+  names:
+  - sea buckthorn
+  - seaberry
+  scientific: Hippophae rhamnoides
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - product
+  region: middle-east-central-asia
+  why: Silver-leaved thorny tree of Tian Shan river terraces with orange berries pressed for oil.
+- id: persian-ironwood
+  names:
+  - Persian ironwood
+  scientific: Parrotia persica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  region: middle-east-central-asia
+  why: Mottled plane-like bark, red-flowered in winter and flame-coloured in autumn; Hyrcanian forest.
+- id: persian-oak
+  names:
+  - Persian oak
+  - Zagros oak
+  - baloot
+  scientific: Quercus brantii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: Zagros oak is a drought-tolerant sparse woodland tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - fruit
+  region: middle-east-central-asia
+  why: Dominant tree of the Zagros oak woodland; acorns ground for bread flour, and sweet honeydew scraped
+    from its leaves as Kurdish oak manna.
+- id: gall-oak
+  names:
+  - gall oak
+  - Aleppo oak
+  - dyer's oak
+  scientific: Quercus infectoria
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: gall oak is a small semi-evergreen shrubby oak bearing hard round galls'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: middle-east-central-asia
+  why: Wasp galls were the tannin source for iron-gall ink and dye.
+- id: palestine-oak
+  names:
+  - Palestine oak
+  - Levant oak
+  - Abraham's oak
+  - Quercus calliprinos (syn.)
+  scientific: Quercus coccifera (Levantine tree form)
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kermes-oak: the same species as a low prickly scrub; the Levantine form grows into a single-trunked
+    tree'
+  - 'holm-oak: holm oak has leaves with grey undersides'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  region: middle-east-central-asia
+  why: Holly-leaved evergreen oak of the Levant that grows into a broad tree; Abraham's Oak at Mamre near
+    Hebron is traditionally one.
+- id: nordmann-fir
+  names:
+  - Nordmann fir
+  - Caucasian fir
+  scientific: Abies nordmanniana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'silver-fir: Nordmann fir is denser and darker, with glossy needles'
+  - 'cilician-fir: Cilician fir is the southern fir of the Taurus and Lebanon'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - well-known
+  - cultural
+  region: middle-east-central-asia
+  why: Dense, dark-needled fir of Caucasian and Pontic mountains, Europe's most popular Christmas tree.
+- id: cilician-fir
+  names:
+  - Cilician fir
+  - Lebanon fir
+  scientific: Abies cilicica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'nordmann-fir: Nordmann fir is the Caucasian fir'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: middle-east-central-asia
+  why: Fir of the Taurus and Lebanon forests with timber in ancient Phoenician shipbuilding.
+- id: oriental-spruce
+  names:
+  - oriental spruce
+  - Caucasian spruce
+  scientific: Picea orientalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'norway-spruce: Norway spruce has long cones and drooping branches'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: middle-east-central-asia
+  why: Short-needled Caucasian spruce with small cones, a major Georgian timber tree.
+- id: tian-shan-spruce
+  names:
+  - Tian Shan spruce
+  - Schrenk spruce
+  scientific: Picea schrenkiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'norway-spruce: slender, columnar crown of arid Central Asian mountains'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: middle-east-central-asia
+  why: Narrow, spire-shaped spruce forming belts on Tian Shan slopes.
+- id: caucasian-wingnut
+  names:
+  - Caucasian wingnut
+  scientific: Pterocarya fraxinifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'walnut: wingnut has winged nutlets in long chains'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: middle-east-central-asia
+  why: Spreading riverside tree with hanging chains of winged nutlets in Hyrcanian and Caucasian forests.
+- id: caucasian-elm
+  names:
+  - Caucasian elm
+  - Caucasian zelkova
+  scientific: Zelkova carpinifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'elm: Zelkova, not Ulmus; fluted trunk and small fruits'
+  - 'zelkova: Japanese zelkova has smoother bark'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: middle-east-central-asia
+  why: Fluted, buttressed trunk and rounded crown, a relict of Tertiary forests.
+- id: oriental-beech
+  names:
+  - oriental beech
+  scientific: Fagus orientalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'european-beech: oriental beech has larger leaves'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: middle-east-central-asia
+  why: Large-leaved beech dominating the humid Caspian (Hyrcanian) and Caucasian slopes.
+- id: archa-juniper
+  names:
+  - archa
+  - Greek juniper
+  - Turkestan juniper
+  - Juniperus seravschanica (syn.)
+  - Juniperus polycarpos (syn.)
+  scientific: Juniperus excelsa
+  rank: group
+  stands_for:
+  - Juniperus semiglobosa
+  - Juniperus turkestanica
+  distinct_from:
+  - 'common-juniper: common juniper is a low shrub'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - medicinal
+  region: middle-east-central-asia
+  why: Long-lived juniper of Central Asian mountains, burned as purifying incense across Kyrgyz and Tajik
+    traditions.
+- id: syrian-juniper
+  names:
+  - Syrian juniper
+  - prickly juniper
+  scientific: Juniperus drupacea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'archa-juniper: has huge edible cones'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: middle-east-central-asia
+  why: Bright-green spiny juniper with plum-sized sweet cones.
+- id: turkish-pine
+  names:
+  - Turkish pine
+  - Turkish red pine
+  - Calabrian pine
+  - Eldar pine
+  - Pitsunda pine
+  scientific: Pinus brutia
+  rank: group
+  stands_for:
+  - Pinus brutia var. eldarica (Eldar or Afghan pine)
+  - Pinus brutia var. pityusa (Pitsunda pine)
+  distinct_from:
+  - 'aleppo-pine: Aleppo pine has paler bark and cones bent back on stalks'
+  - 'scots-pine: Scots pine is northern and orange-barked'
+  - 'stone-pine: stone pine has an umbrella crown'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - well-known
+  region: middle-east-central-asia
+  why: Lowland pine of eastern Mediterranean and Black Sea coasts, a resin and pulp tree whose scale-insect
+    honeydew gives Turkish pine honey.
+- id: chilgoza-pine
+  names:
+  - chilgoza pine
+  - Gerard pine
+  scientific: Pinus gerardiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'stone-pine: stone pine is Mediterranean'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  - striking
+  region: middle-east-central-asia
+  why: Bark flaking like a plane, seeds called chilgoza are a prized trade nut of Afghanistan and Kinnaur.
+- id: date-plum
+  names:
+  - date plum
+  - lotus persimmon
+  scientific: Diospyros lotus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'persimmon: persimmon is a larger fruited east Asian tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  region: middle-east-central-asia
+  why: Small tart fruit of Persia and the Caucasus; possibly the Homeric lotus.
+- id: shittim-acacia
+  names:
+  - seyal
+  - red acacia
+  - talh
+  scientific: Vachellia seyal
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: umbrella thorn is flat-topped; seyal has powdery red or greenish bark'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - product
+  region: middle-east-central-asia
+  why: Thorny acacia of the Sahel, Sinai and Arabia with powdery red or greenish bark, source of talha
+    gum and a candidate for the shittim wood of the Ark.
+- id: balm-of-gilead
+  names:
+  - balm of Gilead
+  - balsam of Mecca
+  scientific: Commiphora gileadensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'myrrh: myrrh is a thorny Horn of Africa tree with a bitter resin'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - folklore
+  - medicinal
+  region: middle-east-central-asia
+  why: Aromatic balsam tree of Arabia; source of the legendary Gilead balm.
+- id: boswellia-socotrana
+  names:
+  - Socotra frankincense
+  scientific: Boswellia socotrana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'frankincense: Socotra frankincense is a squat swollen-based cliff tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: middle-east-central-asia
+  why: Cliff-clinging Socotran frankincense with a swollen base.
+- id: socotra-fig
+  names:
+  - Socotra giant succulent fig
+  - giant dorstenia
+  scientific: Dorstenia gigas
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'fig: fig is Ficus carica'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: middle-east-central-asia
+  why: Fat-trunked succulent endemic to Socotra, a bottle-shaped relative of figs.
+- id: socotra-pomegranate
+  names:
+  - Socotra pomegranate
+  scientific: Punica protopunica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pomegranate: pomegranate is a cultivated fruit tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  - flowers
+  region: middle-east-central-asia
+  why: Wild pomegranate relative, endemic to Socotra, with pink flowers.
+- id: socotra-euphorbia
+  names:
+  - Socotra euphorbia
+  scientific: Euphorbia arbuscula
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tree-euphorbia: African tree euphorbias are candelabra-like'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - toxic
+  region: middle-east-central-asia
+  why: Umbrella-crowned succulent tree-euphorbia of Socotran hills.
+- id: arabian-dragon-tree
+  names:
+  - Arabian dragon tree
+  scientific: Dracaena serrulata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dragons-blood-tree: dragon''s blood tree is Socotran'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: middle-east-central-asia
+  why: Dragon tree of Yemen and Oman highlands with a red resin.
+- id: mazari-palm
+  names:
+  - Mazari palm
+  - dwarf fan palm
+  scientific: Nannorrhops ritchieana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'date-palm: date palm is the feather-leaved fruit tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: middle-east-central-asia
+  why: Clumping fan palm of Afghan and Baluchi deserts; leaves used for mats and ropes.
+- id: anatolian-sweetgum
+  names:
+  - Anatolian sweetgum
+  - Turkish sweetgum
+  - oriental sweetgum
+  scientific: Liquidambar orientalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sweetgum: American sweetgum is larger with star leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  - cultural
+  - medicinal
+  region: middle-east-central-asia
+  why: Relict Aegean tree of southwest Turkey, wounded in Muğla for storax balsam.
+- id: pontic-rhododendron
+  names:
+  - pontic rhododendron
+  - mad honey rhododendron
+  scientific: Rhododendron ponticum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tree-rhododendron: tree rhododendron is Himalayan'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - folklore
+  - flowers
+  region: middle-east-central-asia
+  why: Mad honey from its nectar poisoned Xenophon's soldiers; dense purple-flowered thickets of the Black
+    Sea forests, invasive in Britain.
+- id: caspian-locust
+  names:
+  - Caspian locust
+  - Caspian honey locust
+  scientific: Gleditsia caspica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'honey-locust: American honey locust'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: middle-east-central-asia
+  why: Thorn-trunked Hyrcanian tree with huge branched spines.
+- id: grey-mangrove
+  names:
+  - grey mangrove
+  - white mangrove
+  scientific: Avicennia marina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-mangrove: American mangrove'
+  - 'red-mangrove: stilt-rooted'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: middle-east-central-asia
+  why: Salt-excreting mangrove of the Gulf and Red Sea with pencil-like breathing roots; leaves fed to
+    camels.
+- id: wild-almond-zagros
+  names:
+  - mountain almond
+  - bitter wild almond
+  scientific: Prunus scoparia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'almond: almond is the cultivated nut tree'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - flowers
+  region: middle-east-central-asia
+  why: Broom-like wild almond of the Zagros with nearly leafless green twigs; it exudes Persian (Shirazi)
+    gum and its bitter seeds are pressed for oil.
+- id: chestnut-leaved-oak
+  names:
+  - chestnut-leaved oak
+  - Caucasian oak
+  - Hyrcanian oak
+  scientific: Quercus castaneifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: chestnut-leaved oak has long narrow toothed chestnut-like leaves'
+  - 'persian-oak: Persian oak is a small tree of dry Zagros woodland'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: middle-east-central-asia
+  why: Giant oak of the Hyrcanian and Caucasian forests, with chestnut-like toothed leaves; old trees
+    exceed 40 m and its timber is the main Caspian oak.
+- id: paliurus
+  names:
+  - Christ's thorn
+  - Jerusalem thorn
+  - garland thorn
+  scientific: Paliurus spina-christi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'christs-thorn: sidr is a larger tree with edible fruit; Paliurus has dry disc-winged fruit'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - striking
+  region: middle-east-central-asia
+  why: Zigzag thorny shrub-tree with paired hooked and straight spines and flat disc-winged fruits, a
+    traditional candidate for the crown of thorns.
+- id: dhofar-terminalia
+  names:
+  - Dhofar anogeissus
+  - Anogeissus dhofarica (syn.)
+  scientific: Terminalia dhofarica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: middle-east-central-asia
+  why: Dominant tree of the Dhofar monsoon cloud forest of southern Oman and Yemen, leafing out in the
+    khareef fog season.

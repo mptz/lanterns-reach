@@ -1,0 +1,5 @@
+{ "name": "furnace", "symmetry": "oriented",
+  "textures": { "+z": "furnace_top.png", "-z": "furnace_bottom.png",
+                "-y": "furnace_front.png", "+y": "furnace_back.png",
+                "+x": "furnace_right.png", "-x": "furnace_left.png" },
+  "roughness": 0.7 }

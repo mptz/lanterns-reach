@@ -1,0 +1,2869 @@
+- id: persian-oak
+  names:
+  - Persian oak
+  - Zagros oak
+  - baloot
+  scientific: Quercus brantii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: Zagros oak is a drought-tolerant sparse woodland tree'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - fruit
+  habitat:
+    range: Zagros Mountains of western Iran, northern Iraq (Kurdistan) and southeastern Turkey
+    ecosystem: semi-arid open oak woodland (Zagros forest steppe)
+    climate:
+      temperature:
+      - cold
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: 'temperature: warm-temperate with cold winters'
+    elevation_m:
+    - 700
+    - 2700
+    substrate: shallow rocky calcareous soils on limestone slopes
+    niche: dominant tree of open mountain oak woodland, often coppiced and grazed beneath
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk or coppiced multi-stem; broad rounded crown, often stunted by browsing and lopping
+    height_m:
+    - 5
+    - 20
+    trunk_diameter_m:
+    - 0.3
+    - 1.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, oblong-lanceolate, coarsely toothed with bristle-tipped teeth, dark green above
+      and grey-felted beneath
+    seasonal: leaves turn brown and often hang on into winter
+    flowers: inconspicuous yellow-green catkins in spring
+    fruit_visible: large elongated acorns, 3-5 cm, in cups with long recurved shaggy scales
+    bark: grey to dark brown, deeply fissured into rough plates
+  timber:
+    heartwood: light to medium brown
+    sapwood: paler, yellowish
+    grain: ring-porous, straight to irregular
+    texture: coarse
+    density_kg_m3: 820
+    janka_n: null
+    workability: hard and heavy; mostly used as round wood and fuel
+    rot_resistance: moderately durable
+    scent: null
+    fuel: dense firewood and the main source of charcoal in the Zagros, a cause of woodland decline
+    uses:
+    - charcoal
+    - firewood
+    - roof beams and posts for village houses
+    - tool handles
+  products:
+    food:
+    - acorns leached and ground into flour for bread (Kurdish and Lur tradition)
+    - gazo oak manna (honeydew scraped from leaves and boiled into sweets)
+    sap_resin_latex:
+    - sweet honeydew manna from aphids and scale insects on leaves
+    bark:
+    - tannin for leather
+    leaves:
+    - lopped leafy branches stored as winter fodder for goats and sheep
+    dyes:
+    - galls and acorn cups give tannin for brown and black dyes
+    medicinal:
+    - acorn and cup decoctions as astringent in Iranian folk medicine
+    toxicity: raw acorns are high in tannins, bitter and irritant to people and livestock until leached
+  lore:
+    folklore: []
+    cultures:
+    - Kurdish and Lur pastoralists of the Zagros depended on it for acorn bread
+    - fodder and fuel; the oak manna is gathered and sold as a Kurdish sweet
+    symbolism:
+    - emblem of the Zagros forests
+    - now in steep decline from drought
+    - oak charcoal cutting and dieback
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: acorn flour, manna, fodder and charcoal from one tree'
+    dimensions: []
+    hooks:
+    - acorn flour after leaching as an early food
+    - oak manna as a rare sweet forage
+    - dense charcoal
+  sources:
+  - https://literatur.thuenen.de/digbib_extern/dn062672.pdf
+  - https://powo.science.kew.org/results?q=Quercus%20brantii
+  - https://www.iucnredlist.org/search?query=Quercus%20brantii
+- id: gall-oak
+  names:
+  - gall oak
+  - Aleppo oak
+  - dyer's oak
+  scientific: Quercus infectoria
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: gall oak is a small semi-evergreen shrubby oak bearing hard round galls'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - medicinal
+  habitat:
+    range: Aegean islands and Turkey through Cyprus, Syria, Lebanon, Israel, Iraq and western Iran
+    ecosystem: Mediterranean maquis and dry oak woodland
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'moisture: semi-arid to subhumid'
+    elevation_m:
+    - 0
+    - 1800
+    substrate: dry rocky limestone soils
+    niche: scrub and open woodland on hillsides
+    strata:
+    - shrub
+    - understory
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: large shrub or small tree, often multi-stemmed
+    height_m:
+    - 2
+    - 8
+    trunk_diameter_m:
+    - 0.1
+    - 0.4
+    lifespan_y: null
+    growth_rate: slow
+    leaves: semi-evergreen, oblong, shallowly toothed, glossy green above and paler beneath
+    seasonal: leaves partly retained through winter
+    flowers: inconspicuous yellowish catkins in spring
+    fruit_visible: long narrow acorns; hard round grey-brown galls 1.5-2.5 cm, knobbly, on the twigs (from
+      the wasp Andricus gallaetinctoriae)
+    bark: grey, rough, finely fissured
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: firewood and charcoal
+    uses:
+    - firewood
+    - charcoal
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - tannin
+    leaves: []
+    dyes:
+    - Aleppo galls (50-70% tannin) with iron salts give iron-gall ink and black dye; also used to tan
+      leather and mordant textiles
+    medicinal:
+    - galls (majuphal) as a strong astringent in Unani
+    - Ayurvedic and Malay medicine for wounds
+    - diarrhoea and mouth sores
+    toxicity: galls are highly astringent; large doses irritate the gut
+  lore:
+    folklore: []
+    cultures:
+    - Aleppo galls were the standard tannin for iron-gall ink
+    - used for most European and Middle Eastern manuscripts from late antiquity to the 19th century; traded
+      through Aleppo
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions:
+    - enigma
+    hooks:
+    - galls plus iron salts make ink for maps and books
+    - galls as a tanning and mordant ingredient
+  sources:
+  - https://powo.science.kew.org/results?q=Quercus%20infectoria
+  - https://irongallink.org/igi_indexc752.html
+  - https://www.britannica.com/technology/ink
+- id: palestine-oak
+  names:
+  - Palestine oak
+  - Levant oak
+  - Abraham's oak
+  - Quercus calliprinos (syn.)
+  scientific: Quercus coccifera (Levantine tree form)
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kermes-oak: the same species as a low prickly scrub; the Levantine form grows into a single-trunked
+    tree'
+  - 'holm-oak: holm oak has leaves with grey undersides'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  habitat:
+    range: Levant (Israel, Palestine, Lebanon, western Syria, Jordan) to southern Turkey and Cyprus
+    ecosystem: Mediterranean maquis and evergreen oak woodland
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: terra rossa on limestone and dolomite
+    niche: dominant of Levantine maquis; grows into large trees where protected near shrines and villages
+    strata:
+    - canopy
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: dense evergreen shrub when cut and browsed; protected trees single-trunked with broad dome
+      crowns
+    height_m:
+    - 2
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 2.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, small, stiff, holly-like with spiny teeth, glossy dark green on both sides
+    seasonal: no autumn change
+    flowers: inconspicuous catkins in spring
+    fruit_visible: acorns in cups with stiff spreading spiny scales, ripening in the second year
+    bark: grey-brown, finely cracked into small plates
+  timber:
+    heartwood: reddish-brown
+    sapwood: pale
+    grain: dense, often irregular
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: very hard; mostly round wood
+    rot_resistance: null
+    scent: null
+    fuel: hot-burning firewood and charcoal, the traditional Levantine charcoal wood
+    uses:
+    - charcoal
+    - firewood
+    - tool handles
+  products:
+    food:
+    - acorns eaten after roasting or leaching in famine times
+    sap_resin_latex: []
+    bark:
+    - tannin for leather
+    leaves:
+    - browse for goats
+    dyes:
+    - kermes scale insects (Kermes) on the shrub form gave a crimson dye
+    medicinal: []
+    toxicity: raw acorns are tannin-rich and irritant until leached
+  lore:
+    folklore:
+    - Abraham's Oak (Oak of Mamre) near Hebron is held to mark where Abraham received three angels (Genesis
+      18); a prophecy says it will die before the Antichrist comes
+    cultures:
+    - single old oaks are kept around Muslim and Druze shrines (maqams) in the Levant
+    - protected from cutting as sacred trees
+    symbolism:
+    - hospitality and the patriarchs
+    notable_trees:
+    - Abraham's Oak at the Russian Orthodox monastery in Hebron
+    - declining and propped since the 19th century; its trunk died about 1996 and a shoot survives
+  game_fit:
+    fields:
+      liminality: 'high: lone sacred oaks at shrines, the Oak of Mamre where angels visited'
+      alignment: 'high: shrine trees protected as holy'
+    dimensions:
+    - aether
+    hooks:
+    - lone shrine oak as a landmark that must not be cut
+    - hard-burning charcoal
+  sources:
+  - https://powo.science.kew.org/results?q=Quercus%20coccifera
+  - https://www.britannica.com/place/Hebron
+  - https://www.mdpi.com/search?q=Quercus%20calliprinos
+- id: nordmann-fir
+  names:
+  - Nordmann fir
+  - Caucasian fir
+  scientific: Abies nordmanniana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'silver-fir: Nordmann fir is denser and darker, with glossy needles'
+  - 'cilician-fir: Cilician fir is the southern fir of the Taurus and Lebanon'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - well-known
+  - cultural
+  habitat:
+    range: western Caucasus (Georgia, Russia, Armenia) and the Pontic mountains of northeastern Turkey;
+      subsp. equi-trojani on Kaz Dağı
+    ecosystem: humid montane conifer and beech-fir forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 900
+    - 2200
+    substrate: deep moist soils; tolerates limestone
+    niche: montane forest with oriental spruce and oriental beech
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: single straight trunk, narrow dense conical crown with tiered branches to the ground
+    height_m:
+    - 40
+    - 60
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen flat needles 2-3.5 cm, glossy dark green above with two white bands beneath, dense
+      and forward-pointing
+    seasonal: none
+    flowers: reddish male cones in spring
+    fruit_visible: upright cylindrical cones 10-20 cm, green ripening dark brown, with protruding bracts,
+      shattering on the branch
+    bark: grey, smooth with resin blisters when young, becoming fissured
+  timber:
+    heartwood: creamy white to pale yellow-brown, not distinct
+    sapwood: not distinct
+    grain: straight
+    texture: medium, even
+    density_kg_m3: 385
+    janka_n: 2510
+    workability: easy to work; soft
+    rot_resistance: not durable
+    scent: null
+    fuel: burns fast, crackles and spits
+    uses:
+    - construction timber
+    - pulp
+    - boxes and crates
+    - Christmas trees
+  products:
+    food: []
+    sap_resin_latex:
+    - resin blisters on young bark
+    bark: []
+    leaves:
+    - fresh foliage for wreaths and garlands
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the leading Christmas tree of Europe because it keeps its needles indoors; seed is collected from
+      the Ambrolauri forests of Georgia by local climbers
+    symbolism:
+    - Christmas
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - needle-holding boughs for festive decoration
+    - light construction timber
+  sources:
+  - https://www.wood-database.com/nordmann-fir/
+  - https://scielo.conicyt.cl/pdf/maderas/v20n3/0718-221X-maderas-31101.pdf
+  - https://www.iucnredlist.org/search?query=Abies%20nordmanniana
+- id: cilician-fir
+  names:
+  - Cilician fir
+  - Lebanon fir
+  scientific: Abies cilicica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'nordmann-fir: Nordmann fir is the Caucasian fir'
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  habitat:
+    range: Taurus and Anti-Taurus mountains of southern Turkey, northwestern Syria and northern Lebanon
+    ecosystem: Mediterranean montane conifer forest with Lebanon cedar and black pine
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - subhumid
+      note: 'temperature: cool-temperate montane with dry summers'
+    elevation_m:
+    - 1000
+    - 2100
+    substrate: limestone
+    niche: north-facing montane slopes, often mixed with cedar
+    strata:
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: single straight trunk, narrow conical crown
+    height_m:
+    - 20
+    - 30
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen flat needles 2-3.5 cm, bright green above with white bands beneath, parted on the
+      shoot
+    seasonal: none
+    flowers: small cones in spring
+    fruit_visible: upright cylindrical cones 15-30 cm, green to red-brown, shattering on the branch
+    bark: grey, smooth, later cracking into scales
+  timber:
+    heartwood: pale, not distinct
+    sapwood: not distinct
+    grain: straight
+    texture: medium
+    density_kg_m3: null
+    janka_n: null
+    workability: easy
+    rot_resistance: not durable
+    scent: null
+    fuel: null
+    uses:
+    - beams and planks
+    - ship timbers in antiquity
+  products:
+    food: []
+    sap_resin_latex:
+    - resin
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the fir and cedar forests of Lebanon supplied Phoenician
+    - Egyptian and Assyrian builders and shipwrights
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - long straight spars for ships
+  sources:
+  - https://www.iucnredlist.org/search?query=Abies%20cilicica
+  - https://powo.science.kew.org/results?q=Abies%20cilicica
+- id: oriental-spruce
+  names:
+  - oriental spruce
+  - Caucasian spruce
+  scientific: Picea orientalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'norway-spruce: Norway spruce has long cones and drooping branches'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  habitat:
+    range: Caucasus (Georgia, Russia, Armenia, Azerbaijan) and the Pontic mountains of northeastern Turkey
+    ecosystem: humid montane conifer forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 1000
+    - 2100
+    substrate: moist acid to neutral soils
+    niche: montane forest with Nordmann fir and oriental beech
+    strata:
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: single trunk, dense narrow conical crown, branches to the ground
+    height_m:
+    - 30
+    - 45
+    trunk_diameter_m:
+    - 1.0
+    - 1.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, very short needles 6-10 mm, blunt, glossy dark green, pressed close to the shoot
+    seasonal: bright red male cones in spring stand out against the dark foliage
+    flowers: red male cones and purple-red young female cones in spring
+    fruit_visible: slender hanging cones 5-9 cm, purple ripening brown
+    bark: pinkish-brown to grey-brown, thin and flaking in small scales
+  timber:
+    heartwood: whitish to pale yellow, not distinct
+    sapwood: not distinct
+    grain: straight
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: easy to work
+    rot_resistance: not durable
+    scent: null
+    fuel: burns fast and sparks
+    uses:
+    - construction timber
+    - pulp
+    - resonance wood for instruments
+    - boxes
+  products:
+    food: []
+    sap_resin_latex:
+    - spruce resin
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - a principal timber tree of Georgian and northeastern Turkish forestry
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - resonant spruce for instruments
+  sources:
+  - https://www.euforgen.org/species/picea-orientalis
+  - https://conifersociety.org/conifers/picea-orientalis/
+  - https://www.iucnredlist.org/search?query=Picea%20orientalis
+- id: tian-shan-spruce
+  names:
+  - Tian Shan spruce
+  - Schrenk spruce
+  scientific: Picea schrenkiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'norway-spruce: slender, columnar crown of arid Central Asian mountains'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: Tian Shan and Dzungarian Alatau of Kazakhstan, Kyrgyzstan and Xinjiang (China)
+    ecosystem: montane spruce forest belts amid steppe
+    climate:
+      temperature:
+      - cold
+      moisture:
+      - semi-arid
+      note: 'temperature: cold continental'
+    elevation_m:
+    - 1200
+    - 3500
+    substrate: mountain forest soils on north-facing slopes
+    niche: pure stands on shaded north slopes, steppe on the facing slopes
+    strata:
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: single straight trunk, very narrow spire-like columnar crown with short drooping branches
+    height_m:
+    - 30
+    - 50
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen four-angled needles 2-3.5 cm, dark grey-green
+    seasonal: none
+    flowers: small cones in spring
+    fruit_visible: hanging cylindrical cones 7-12 cm, purplish ripening brown
+    bark: grey-brown, scaly
+  timber:
+    heartwood: pale yellowish-white
+    sapwood: not distinct
+    grain: straight
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: easy
+    rot_resistance: not durable
+    scent: null
+    fuel: null
+    uses:
+    - construction timber
+    - yurt poles and lattice in places
+    - pulp
+  products:
+    food: []
+    sap_resin_latex:
+    - resin
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the dark spruce belts are the classic scenery of Kyrgyz and Kazakh summer pastures (jailoo)
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - spire-shaped silhouette marking north slopes in steppe mountains
+  sources:
+  - https://www.iucnredlist.org/search?query=Picea%20schrenkiana
+  - https://link.springer.com/article/10.1007/s11707-015-0507-6
+  - https://powo.science.kew.org/results?q=Picea%20schrenkiana
+- id: caucasian-wingnut
+  names:
+  - Caucasian wingnut
+  scientific: Pterocarya fraxinifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'walnut: wingnut has winged nutlets in long chains'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  habitat:
+    range: Caucasus, northern Iran (Hyrcanian forest), eastern Turkey
+    ecosystem: riparian lowland forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      - wet
+      note: 'moisture: humid to wet'
+    elevation_m:
+    - 0
+    - 1000
+    substrate: moist to waterlogged alluvium
+    niche: river banks, floodplains and swampy lowlands
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: short thick trunk, often multi-stemmed and suckering, wide spreading crown
+    height_m:
+    - 20
+    - 30
+    trunk_diameter_m:
+    - 0.6
+    - 1.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, pinnate, 20-40 cm, with 10-25 toothed leaflets, glossy green
+    seasonal: yellow in autumn
+    flowers: long greenish catkins in spring
+    fruit_visible: hanging chains 20-45 cm of small nutlets each with two semicircular green wings
+    bark: grey-black, deeply furrowed
+  timber:
+    heartwood: light, whitish to pale brown
+    sapwood: not distinct
+    grain: straight
+    texture: medium
+    density_kg_m3: null
+    janka_n: null
+    workability: soft and weak; easy to work
+    rot_resistance: not durable
+    scent: null
+    fuel: poor
+    uses:
+    - matches
+    - veneer
+    - light furniture
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - inner bark fibre woven into hats
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - bast fibre for weaving
+    - long fruit chains as visual marker of wet riverbanks
+  sources:
+  - https://www.euforgen.org/species/pterocarya-fraxinifolia
+  - https://www.treesandshrubsonline.org/articles/pterocarya/pterocarya-fraxinifolia/
+  - https://landscapeplants.oregonstate.edu/plants/pterocarya-fraxinifolia
+- id: caucasian-elm
+  names:
+  - Caucasian elm
+  - Caucasian zelkova
+  - azad
+  scientific: Zelkova carpinifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'elm: Zelkova, not Ulmus; fluted trunk and small fruits'
+  - 'zelkova: Japanese zelkova has smoother bark'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: Hyrcanian forest of northern Iran and Azerbaijan, Colchic forest of Georgia, northeastern Turkey
+    ecosystem: humid lowland broadleaf forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 900
+    substrate: deep moist soils
+    niche: mixed lowland forest with oak, hornbeam and ironwood
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: short broad fluted trunk dividing low into many near-vertical stems, dense egg-shaped to vase
+      crown
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: 850
+    growth_rate: slow
+    leaves: deciduous, oval, 4-10 cm, bluntly toothed with 7-12 teeth a side, rough dark green
+    seasonal: yellow to orange-brown in autumn
+    flowers: inconspicuous greenish, early spring
+    fruit_visible: small round drupes about 5 mm, barely visible
+    bark: smooth grey-green to grey-brown, flaking to show orange-brown patches like a plane
+  timber:
+    heartwood: reddish-brown
+    sapwood: yellowish
+    grain: interlocked
+    texture: medium
+    density_kg_m3: null
+    janka_n: null
+    workability: heavy, hard and difficult to split
+    rot_resistance: durable
+    scent: null
+    fuel: null
+    uses:
+    - construction beams
+    - bridges
+    - carts and wheels in Iran and the Caucasus
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the genus name comes from Georgian dzelkva
+    - stone pillar
+    - for its hard wood; Persian azad means 'free'
+    symbolism:
+    - relict of the Tertiary forests that once covered Eurasia
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'low: Tertiary relict, a survivor of older Earth-normal forests'
+    dimensions: []
+    hooks:
+    - hard 'stone pillar' timber for load-bearing beams
+  sources:
+  - https://www.iranicaonline.org/articles/azad-zelkova/
+  - https://ulmen-handbuch.de/handbuch/zelkova/z_carpinifolia.html
+  - https://www.iucnredlist.org/search?query=Zelkova%20carpinifolia
+- id: oriental-beech
+  names:
+  - oriental beech
+  scientific: Fagus orientalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'european-beech: oriental beech has larger leaves'
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - striking
+  habitat:
+    range: Balkans (Bulgaria, Greece) through Turkey and the Caucasus to the Hyrcanian forest of northern
+      Iran
+    ecosystem: humid temperate broadleaf forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 2100
+    substrate: deep moist loams
+    niche: dominant of mid-elevation Caspian and Black Sea forests, often in pure stands
+    strata:
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: single tall clean trunk, broad domed crown
+    height_m:
+    - 30
+    - 45
+    trunk_diameter_m:
+    - 0.8
+    - 2.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, obovate, 7-15 cm, wavy-edged with 7-12 vein pairs, glossy green
+    seasonal: copper to orange-brown in autumn
+    flowers: inconspicuous catkins with new leaves
+    fruit_visible: spiny husks splitting into four, holding triangular beechnuts
+    bark: smooth silver-grey
+  timber:
+    heartwood: pale cream to pinkish-brown, often with a darker red false heart
+    sapwood: not distinct
+    grain: straight
+    texture: fine, even
+    density_kg_m3: 690
+    janka_n: null
+    workability: works, steams and bends well; good for turning
+    rot_resistance: perishable
+    scent: null
+    fuel: excellent firewood, burns hot and long
+    uses:
+    - furniture (the main furniture wood of Iran and Turkey)
+    - bentwood chairs
+    - flooring
+    - plywood
+    - railway sleepers after treatment
+    - tool handles
+  products:
+    food:
+    - beechnuts edible in small amounts
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: raw beechnuts in quantity cause stomach upset
+  lore:
+    folklore: []
+    cultures:
+    - the Hyrcanian beech forests of Iran are part of a UNESCO World Heritage site (2019)
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - steam-bent furniture
+    - high-heat firewood
+  sources:
+  - https://scielo.conicyt.cl/pdf/maderas/v20n3/0718-221X-maderas-31101.pdf
+  - https://whc.unesco.org/en/list/1584/
+  - https://powo.science.kew.org/results?q=Fagus%20orientalis
+- id: archa-juniper
+  names:
+  - archa
+  - Greek juniper
+  - Turkestan juniper
+  - Juniperus seravschanica (syn.)
+  - Juniperus polycarpos (syn.)
+  scientific: Juniperus excelsa
+  rank: group
+  stands_for:
+  - Juniperus semiglobosa
+  - Juniperus turkestanica
+  distinct_from:
+  - 'common-juniper: common juniper is a low shrub'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - medicinal
+  habitat:
+    range: Balkans, Crimea and Turkey through the Caucasus, Iran, Oman's Jebel Akhdar and Afghanistan
+      to the Pamir, Tian Shan and western Himalaya
+    ecosystem: open montane juniper woodland (archa forest)
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: 'temperature: cold-temperate continental'
+    elevation_m:
+    - 500
+    - 4000
+    substrate: dry rocky slopes, limestone and scree
+    niche: open dry mountain slopes above the oak and pistachio belt, up to the treeline
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk, conical when young becoming broad and irregular; gnarled and stunted at the treeline
+    height_m:
+    - 6
+    - 20
+    trunk_diameter_m:
+    - 0.5
+    - 2.0
+    lifespan_y: 1437
+    growth_rate: slow
+    leaves: evergreen, scale-like, grey-green to blue-green, juvenile needle leaves on seedlings
+    seasonal: none
+    flowers: tiny cones in spring
+    fruit_visible: berry-like cones 6-12 mm, blue-black with a pale waxy bloom
+    bark: reddish-brown weathering grey, peeling in long fibrous strips
+  timber:
+    heartwood: reddish-brown, aromatic
+    sapwood: pale yellow
+    grain: straight to twisted in old trees
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: easy, splits readily
+    rot_resistance: very durable
+    scent: cedar-like, resinous
+    fuel: fragrant smoke; burned as incense
+    uses:
+    - house beams and posts
+    - fence posts
+    - pencils
+    - firewood
+  products:
+    food: []
+    sap_resin_latex:
+    - resin
+    bark:
+    - fibrous bark for roofing and tinder
+    leaves:
+    - branches burned as purifying smoke
+    dyes: []
+    medicinal:
+    - cones and leaves in folk medicine for colds and rheumatism; smoke as a fumigant
+    toxicity: cones and oil are irritant in quantity; avoided in pregnancy
+  lore:
+    folklore:
+    - in Kyrgyz
+    - Kazakh and Tajik tradition archa smoke drives off evil spirits and illness; a sprig is waved around
+      newborns
+    - the sick and new homes (alastoo)
+    cultures:
+    - burned at Nowruz and in Zoroastrian and Tajik rites; the juniper woodlands of the Pamir and Alay
+      are a major firewood source
+    - now overcut
+    symbolism:
+    - purity and protection
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: purifying smoke against spirits, ancient trees over 1,400 years old'
+      alignment: 'high: protective, cleansing incense'
+    dimensions:
+    - aether
+    hooks:
+    - smudge bundles for warding
+    - durable posts
+    - treeline landmark trees
+  sources:
+  - https://rmtrr.org/oldlist.htm
+  - https://conifersociety.org/conifers/juniperus-excelsa/
+  - https://www.iucnredlist.org/search?query=Juniperus%20excelsa
+- id: syrian-juniper
+  names:
+  - Syrian juniper
+  - prickly juniper
+  scientific: Juniperus drupacea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'archa-juniper: has huge edible cones'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  habitat:
+    range: southern Turkey (Taurus), northwestern Syria, Lebanon; southern Peloponnese of Greece
+    ecosystem: Mediterranean montane conifer forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - subhumid
+      note: 'temperature: cool-temperate montane'
+    elevation_m:
+    - 500
+    - 1800
+    substrate: limestone
+    niche: scattered in fir, cedar and black pine forest
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: dioecious tree with a narrow columnar to conical crown
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen needles 1.5-2.5 cm, stiff, sharp, bright green with two white bands, in whorls of
+      three
+    seasonal: none
+    flowers: small cones in spring
+    fruit_visible: berry-like cones 2-2.5 cm, the largest of any juniper, blue-brown with a bloom, holding
+      a single fused stone
+    bark: orange-brown, peeling in long strips
+  timber:
+    heartwood: reddish-brown
+    sapwood: pale
+    grain: straight
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: durable
+    scent: aromatic
+    fuel: null
+    uses:
+    - local construction
+    - posts
+  products:
+    food:
+    - sweet cones eaten and boiled into a thick syrup or molasses (andız pekmezi) in southern Turkey
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - the cone syrup is taken for coughs and colds in Turkey
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - andız pekmezi
+    - juniper-cone molasses
+    - is a traditional food of the Taurus villages
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - cone molasses as a sweet cough remedy
+  sources:
+  - https://powo.science.kew.org/results?q=Juniperus%20drupacea
+  - https://www.iucnredlist.org/search?query=Juniperus%20drupacea
+- id: turkish-pine
+  names:
+  - Turkish pine
+  - Turkish red pine
+  - Calabrian pine
+  - Eldar pine
+  - Pitsunda pine
+  scientific: Pinus brutia
+  rank: group
+  stands_for:
+  - Pinus brutia var. eldarica (Eldar or Afghan pine)
+  - Pinus brutia var. pityusa (Pitsunda pine)
+  distinct_from:
+  - 'aleppo-pine: Aleppo pine has paler bark and cones bent back on stalks'
+  - 'scots-pine: Scots pine is northern and orange-barked'
+  - 'stone-pine: stone pine has an umbrella crown'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - well-known
+  habitat:
+    range: eastern Mediterranean (Turkey, Cyprus, Crete, Aegean islands, Syria, Lebanon, Iraq); Black
+      Sea coast of Georgia and Crimea (var. pityusa); Eldar steppe of Azerbaijan (var. eldarica)
+    ecosystem: Mediterranean lowland and coastal pine forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'moisture: semi-arid to subhumid'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: limestone, marl and sandstone; tolerates poor soils
+    niche: the main lowland forest tree of southern and western Turkey, regenerating after fire
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk, conical when young becoming broad and open, often irregular
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen needles in pairs, 10-18 cm, dark green
+    seasonal: none
+    flowers: yellow pollen cones in spring
+    fruit_visible: stout cones 6-11 cm, short-stalked and pointing forward, red-brown, persisting for
+      years
+    bark: red-brown at the base in deep plates, orange higher up
+  timber:
+    heartwood: yellowish to reddish-brown, resinous
+    sapwood: pale yellowish-white
+    grain: straight
+    texture: medium
+    density_kg_m3: 530
+    janka_n: null
+    workability: easy; resin can gum tools
+    rot_resistance: moderately durable
+    scent: resinous
+    fuel: burns hot and smoky with much resin
+    uses:
+    - construction timber
+    - poles
+    - pulp and particleboard
+    - boatbuilding
+    - furniture
+  products:
+    food:
+    - pine honey (çam balı)
+    - made by bees from the honeydew of the scale insect Marchalina hellenica on this pine; Turkey and
+      Greece produce most of the world's supply
+    sap_resin_latex:
+    - tapped for turpentine and rosin
+    bark:
+    - tannin
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Marmaris and Muğla beekeepers move hives into the pine forests for honeydew honey
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - rosin and turpentine
+    - honeydew honey from the forest
+    - fire-adapted regrowth after burning
+  sources:
+  - https://www.euforgen.org/species/pinus-brutia
+  - https://bioresources.cnr.ncsu.edu/resources/effects-of-heat-treatment-on-calabrian-pine-pinus-brutia-ten-wood/
+  - https://www.iucnredlist.org/search?query=Pinus%20brutia
+- id: chilgoza-pine
+  names:
+  - chilgoza pine
+  - Gerard pine
+  scientific: Pinus gerardiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'stone-pine: stone pine is Mediterranean'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  - striking
+  habitat:
+    range: eastern Afghanistan, northern Pakistan (Waziristan, Chitral, Gilgit) and India (Kinnaur, Pangi,
+      Kishtwar)
+    ecosystem: dry temperate inner-Himalayan conifer woodland
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: 'temperature: cold-temperate'
+    elevation_m:
+    - 1800
+    - 3350
+    substrate: dry rocky slopes
+    niche: open stands with holm-type oaks and deodar in rain-shadow valleys
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk often forked low, broad open rounded crown with long upswept branches
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen needles in threes, 6-10 cm, grey-green
+    seasonal: none
+    flowers: small cones in spring
+    fruit_visible: heavy oval cones 10-23 cm, resinous, opening to release large wingless seeds
+    bark: thin, flaking in irregular patches like a plane, mottled silver, grey-green, pink and brown,
+      whiter with age
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: resinous
+    fuel: resinous fuelwood
+    uses:
+    - local fuel
+    - minor construction
+  products:
+    food:
+    - chilgoza nuts
+    - long brown-shelled pine nuts eaten roasted
+    - a prized winter snack and cash crop of Afghanistan
+    - Pakistan and Kinnaur
+    sap_resin_latex:
+    - resin
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - seeds in Unani medicine as a tonic
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - harvest rights to chilgoza trees are inherited among villages of Kinnaur and Waziristan; the nut
+      trade is a major income in eastern Afghanistan
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: valuable nut crop in otherwise poor dry valleys'
+    dimensions: []
+    hooks:
+    - high-value trade nut
+    - mottled camouflage bark
+  sources:
+  - https://www.cabidigitallibrary.org/doi/10.1079/cabicompendium.41610
+  - https://conifersociety.org/conifers/pinus-gerardiana/
+  - https://www.iucnredlist.org/search?query=Pinus%20gerardiana
+- id: date-plum
+  names:
+  - date plum
+  - lotus persimmon
+  scientific: Diospyros lotus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'persimmon: persimmon is a larger fruited east Asian tree'
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  habitat:
+    range: Caucasus, northern Iran, Turkey and Central Asia to the Himalaya, China and Korea
+    ecosystem: humid lowland and riparian broadleaf forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 2000
+    substrate: moist fertile soils
+    niche: forest edges, riverbanks and around villages
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: single trunk, rounded crown
+    height_m:
+    - 8
+    - 20
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, elliptic, 6-15 cm, glossy dark green
+    seasonal: yellow in autumn; fruit hangs on bare branches
+    flowers: small urn-shaped greenish to reddish flowers in early summer
+    fruit_visible: round berries 1-2 cm, yellow ripening blue-black with a waxy bloom
+    bark: dark grey, cracked into small square blocks
+  timber:
+    heartwood: dark brown to blackish streaked
+    sapwood: wide, pale
+    grain: fine
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard; turns well
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - turnery
+    - small carvings
+  products:
+    food:
+    - fruit astringent until bletted or frost-softened
+    - then sweet like dates and prunes; dried for winter in the Caucasus and Iran
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - fruit as astringent and laxative in folk medicine
+    toxicity: unripe fruit is very astringent from tannins
+  lore:
+    folklore:
+    - sometimes proposed as the lotus of the Odyssey
+    - whose fruit made Odysseus's men forget home; the name Diospyros means 'fruit of Zeus'
+    cultures: []
+    symbolism:
+    - forgetfulness
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: candidate lotus fruit that makes travellers forget'
+    dimensions:
+    - enigma
+    hooks:
+    - fruit edible only after frost or bletting
+    - rootstock for persimmon
+  sources:
+  - https://powo.science.kew.org/results?q=Diospyros%20lotus
+  - https://www.britannica.com/plant/date-plum
+- id: shittim-acacia
+  names:
+  - seyal
+  - red acacia
+  - talh
+  scientific: Vachellia seyal
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: umbrella thorn is flat-topped; seyal has powdery red or greenish bark'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - product
+  habitat:
+    range: Sahel and East Africa from Senegal to Somalia, Egypt, Sinai and western Arabia
+    ecosystem: savanna woodland and seasonally flooded clay plains
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: 'temperature: hot tropical'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: heavy clay (black cotton) soils and wadi beds
+    niche: open thorn woodland on seasonally wet clays and along wadis
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk, flat or rounded open crown
+    height_m:
+    - 3
+    - 12
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, bipinnate, feathery, small leaflets
+    seasonal: drops leaves in the dry season
+    flowers: bright yellow fragrant ball-shaped flower heads before or with the leaves
+    fruit_visible: curved narrow brown pods
+    bark: powdery, rubbing off red-orange (var. seyal) or greenish-white (var. fistula); straight paired
+      white spines, often swollen into ant-galls in var. fistula
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: 660
+    janka_n: 5110
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: good firewood and charcoal; smoke used for fumigation
+    uses:
+    - firewood
+    - charcoal
+    - posts
+    - tool handles
+  products:
+    food:
+    - gum talha eaten as a chew
+    sap_resin_latex:
+    - gum talha
+    - a lower grade of gum arabic
+    bark:
+    - tannin; fibre
+    leaves:
+    - browse for camels and goats
+    dyes: []
+    medicinal:
+    - gum and bark in folk medicine; wood smoke used by Sudanese women in the dukhan smoke bath
+    toxicity: null
+  lore:
+    folklore:
+    - a candidate for the shittim wood of which the Ark of the Covenant and the Tabernacle were made (Exodus
+      25)
+    cultures:
+    - talh smoke baths (dukhan) for perfuming the skin in Sudan
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: candidate wood of the Ark of the Covenant'
+    dimensions: []
+    hooks:
+    - gum as glue and binder
+    - dense charcoal
+  sources:
+  - https://www.wood-database.com/shittim/
+  - https://www.feedipedia.org/node/344
+  - https://powo.science.kew.org/results?q=Vachellia%20seyal
+- id: balm-of-gilead
+  names:
+  - balm of Gilead
+  - balsam of Mecca
+  scientific: Commiphora gileadensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'myrrh: myrrh is a thorny Horn of Africa tree with a bitter resin'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - folklore
+  - medicinal
+  habitat:
+    range: southwestern Arabia (Saudi Arabia, Yemen, Oman) and the Horn of Africa; anciently cultivated
+      at Ein Gedi and Jericho
+    ecosystem: dry rocky thornbush
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - arid
+      note: 'temperature: hot subtropical'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: rocky slopes and wadis
+    niche: scattered shrubs on dry hillsides
+    strata:
+    - shrub
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: spineless shrub or small tree with spreading, often drooping branches
+    height_m:
+    - 2
+    - 5
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, small, trifoliate, grey-green
+    seasonal: leafless much of the year
+    flowers: tiny red flowers
+    fruit_visible: small red ovoid drupes
+    bark: smooth grey-brown, peeling in papery flakes; aromatic when cut
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: sweet balsamic
+    fuel: null
+    uses:
+    - aromatic twigs as tooth sticks
+  products:
+    food: []
+    sap_resin_latex:
+    - opobalsamum
+    - a fragrant oleoresin from cut bark
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - the balm was prized in antiquity for wounds
+    - eye ailments and as an antidote
+    toxicity: null
+  lore:
+    folklore:
+    - the 'balm in Gilead' of Jeremiah 8:22; said in Josephus to have been a gift from the Queen of Sheba
+      to Solomon
+    cultures:
+    - Judean balsam groves at Ein Gedi and Jericho were a royal monopoly worth their weight in silver
+      under the Romans; the Ein Gedi community's secret is recorded in a synagogue inscription
+    symbolism:
+    - healing
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: proverbial healing balm'
+    dimensions: []
+    hooks:
+    - rare healing salve
+    - trade-good resin
+  sources:
+  - https://powo.science.kew.org/results?q=Commiphora%20gileadensis
+  - https://www.britannica.com/plant/balm-of-Gilead
+- id: boswellia-socotrana
+  names:
+  - Socotra frankincense
+  scientific: Boswellia socotrana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'frankincense: Socotra frankincense is a squat swollen-based cliff tree'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  habitat:
+    range: endemic to Socotra (Yemen)
+    ecosystem: succulent shrubland and dry deciduous woodland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: 'temperature: hot tropical'
+    elevation_m:
+    - 0
+    - 800
+    substrate: limestone plateaus and cliffs
+    niche: rocky limestone slopes and escarpments
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small tree with a short thick swollen trunk and few stout branches
+    height_m:
+    - 3
+    - 8
+    trunk_diameter_m:
+    - 0.3
+    - 1.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, pinnate, leaflets crisped or wavy, clustered at branch tips
+    seasonal: leafless in the dry season
+    flowers: small white to pinkish flowers in clusters
+    fruit_visible: small angular capsules
+    bark: pale grey-green, peeling in thin papery sheets
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - frankincense resin
+    - tapped locally
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - resin in local medicine
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Socotra was an incense island of the ancient trade
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: one of Socotra''s alien-looking endemics'
+    dimensions: []
+    hooks:
+    - incense resin
+  sources:
+  - https://www.iucnredlist.org/search?query=Boswellia%20socotrana
+  - https://powo.science.kew.org/results?q=Boswellia%20socotrana
+- id: socotra-fig
+  names:
+  - Socotra giant succulent fig
+  - giant dorstenia
+  scientific: Dorstenia gigas
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'fig: fig is Ficus carica'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: endemic to Socotra (Yemen), mainly the Hajhir mountains
+    ecosystem: succulent cliff vegetation
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: 'temperature: hot tropical; moisture: arid with mist'
+    elevation_m:
+    - 300
+    - 1400
+    substrate: granite and limestone cliffs and crevices
+    niche: sheer rock faces and boulders
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: pachycaul, a fat swollen bottle-like trunk with a few short thick branches; can hang from cliffs
+    height_m:
+    - 1
+    - 4
+    trunk_diameter_m:
+    - 0.3
+    - 1.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, oblong, clustered at the branch tips
+    seasonal: leafless in the dry season
+    flowers: tiny flowers on flat green disc-shaped receptacles (pseudanthia)
+    fruit_visible: seeds ejected from the flat receptacle
+    bark: smooth pale grey to silvery, swollen and fleshy
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - white latex
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: bottle-trunked cliff dweller of Socotra'
+    dimensions: []
+    hooks: []
+  sources:
+  - https://www.iucnredlist.org/search?query=Dorstenia%20gigas
+  - https://powo.science.kew.org/results?q=Dorstenia%20gigas
+- id: socotra-pomegranate
+  names:
+  - Socotra pomegranate
+  scientific: Punica protopunica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pomegranate: pomegranate is a cultivated fruit tree'
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  - flowers
+  habitat:
+    range: endemic to Socotra (Yemen)
+    ecosystem: dry deciduous woodland and shrubland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      - semi-arid
+      note: 'temperature: hot tropical; moisture: arid to semi-arid'
+    elevation_m:
+    - 250
+    - 1000
+    substrate: limestone and granite slopes
+    niche: woodland on hillsides of the central plateau
+    strata:
+    - open
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small tree or large shrub
+    height_m:
+    - 2.5
+    - 4.5
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, small, oblong, glossy
+    seasonal: null
+    flowers: pink to red, smaller than cultivated pomegranate
+    fruit_visible: small greenish-brown pomegranates about 2-3 cm, not red
+    bark: grey
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - small sour fruit
+    - rarely eaten
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism:
+    - the only wild relative of the pomegranate
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - wild ancestor of a cultivated fruit
+  sources:
+  - https://www.iucnredlist.org/search?query=Punica%20protopunica
+  - https://powo.science.kew.org/results?q=Punica%20protopunica
+- id: socotra-euphorbia
+  names:
+  - Socotra euphorbia
+  scientific: Euphorbia arbuscula
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tree-euphorbia: African tree euphorbias are candelabra-like'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - toxic
+  habitat:
+    range: endemic to Socotra and nearby islands (Yemen)
+    ecosystem: succulent shrubland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: 'temperature: hot tropical'
+    elevation_m:
+    - 0
+    - 1000
+    substrate: limestone plateaus and rocky plains
+    niche: open succulent shrubland, often dominant on plateaus
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: succulent tree with a stout trunk and a dense umbrella crown of slender pencil-like green branches
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: small, short-lived, at branch tips; photosynthesis mainly by the green stems
+    seasonal: null
+    flowers: small yellowish cyathia
+    fruit_visible: small three-lobed capsules
+    bark: grey, smooth on the trunk
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - caustic white latex
+    bark: []
+    leaves:
+    - branches fed to livestock in drought
+    dyes: []
+    medicinal: []
+    toxicity: milky latex burns skin and eyes and is purgative, as in other Euphorbia
+  lore:
+    folklore: []
+    cultures:
+    - Socotri herders cut the branches as emergency drought fodder
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: umbrella of green pencils on Socotra''s plateaus'
+      savagery: 'high: caustic latex'
+    dimensions: []
+    hooks:
+    - caustic latex as a poison or irritant ingredient
+  sources:
+  - https://powo.science.kew.org/results?q=Euphorbia%20arbuscula
+  - https://www.iucnredlist.org/search?query=Euphorbia%20arbuscula
+- id: arabian-dragon-tree
+  names:
+  - Arabian dragon tree
+  scientific: Dracaena serrulata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dragons-blood-tree: dragon''s blood tree is Socotran'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  habitat:
+    range: mountains of southwestern Saudi Arabia, Yemen and Dhofar (Oman)
+    ecosystem: dry montane escarpment woodland
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - semi-arid
+      note: 'temperature: warm subtropical'
+    elevation_m:
+    - 1000
+    - 2200
+    substrate: rocky cliffs and steep slopes
+    niche: escarpments and cliffs
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tree-like monocot with a stout trunk branching into a few arms, each ending in a tuft of leaves
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, sword-shaped, stiff, grey-green with finely toothed edges
+    seasonal: none
+    flowers: small whitish flowers in large branched clusters
+    fruit_visible: orange-red berries
+    bark: grey, smooth to ringed
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - red resin (dragon's blood)
+    bark: []
+    leaves:
+    - leaves split for rope and mats
+    dyes:
+    - red resin as dye and varnish
+    medicinal:
+    - resin in local medicine
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: dragon-tree silhouette on Arabian cliffs'
+    dimensions: []
+    hooks:
+    - red resin as dye and varnish
+    - leaf cordage
+  sources:
+  - https://www.iucnredlist.org/search?query=Dracaena%20serrulata
+  - https://powo.science.kew.org/results?q=Dracaena%20serrulata
+- id: mazari-palm
+  names:
+  - Mazari palm
+  - dwarf fan palm
+  scientific: Nannorrhops ritchieana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'date-palm: date palm is the feather-leaved fruit tree'
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - striking
+  habitat:
+    range: southeastern Arabia (Oman, UAE), southern Iran, Afghanistan and Pakistan (Baluchistan)
+    ecosystem: arid hills and desert valleys
+    climate:
+      temperature:
+      - cold
+      - tropical
+      moisture:
+      - arid
+      note: 'temperature: hot with cold winters'
+    elevation_m:
+    - 0
+    - 1700
+    substrate: dry gravel, rocky slopes and wadis
+    niche: clumps on dry hillsides and wadi beds
+    strata:
+    - shrub
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: clumping palm with branching, often creeping stems; each stem dies after flowering once
+    height_m:
+    - 1
+    - 6
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen stiff fan leaves, blue-grey to grey-green
+    seasonal: none
+    flowers: large terminal branched clusters of small white flowers, after which the stem dies
+    fruit_visible: small round brown fruits
+    bark: stems covered in old leaf bases and fibres
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: leaves and stems burned as fuel
+    uses: []
+  products:
+    food:
+    - young buds and fruit eaten
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - woven into mats
+    - baskets
+    - sandals
+    - rope and fans; leaf fibre as tinder
+    dyes: []
+    medicinal:
+    - leaves in folk medicine for diarrhoea
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - mazari leaf crafts (mats
+    - sandals
+    - baskets) are a cottage industry of Baluchistan and the Pashtun hills
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - leaf weaving for mats
+    - baskets and rope in deserts
+    - cold-hardy palm
+  sources:
+  - https://powo.science.kew.org/results?q=Nannorrhops%20ritchieana
+  - https://www.palmpedia.net/wiki/Nannorrhops_ritchieana
+- id: anatolian-sweetgum
+  names:
+  - Anatolian sweetgum
+  - Turkish sweetgum
+  - oriental sweetgum
+  - sığla
+  scientific: Liquidambar orientalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sweetgum: American sweetgum is larger with star leaves'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  - cultural
+  - medicinal
+  habitat:
+    range: southwestern Turkey (Muğla, Köyceğiz, Marmaris, Fethiye, Antalya) and Rhodes
+    ecosystem: floodplain and riparian forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - wet
+      note: 'temperature: warm-temperate Mediterranean; moisture: wet soils in a dry climate'
+    elevation_m:
+    - 0
+    - 800
+    substrate: alluvial soils with high groundwater
+    niche: pure stands on floodplains and stream valleys
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk, rounded to conical crown
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, palmately five-lobed, smaller and more deeply lobed than American sweetgum, glossy
+      green
+    seasonal: yellow, orange and red in autumn
+    flowers: inconspicuous greenish globular heads in spring
+    fruit_visible: spiky woody seed balls 2-3 cm on long stalks
+    bark: grey-brown, fissured; wounds exude sticky balsam
+  timber:
+    heartwood: reddish-brown
+    sapwood: paler
+    grain: interlocked
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: heartwood moderately resistant to decay fungi in lab tests
+    scent: balsamic
+    fuel: null
+    uses:
+    - furniture and joinery
+    - locally
+  products:
+    food: []
+    sap_resin_latex:
+    - Levant storax (sığla yağı)
+    - a balsam collected by wounding and boiling the bark
+    bark:
+    - bark boiled and pressed for storax
+    leaves: []
+    dyes: []
+    medicinal:
+    - storax as an antiseptic for wounds and skin disease
+    - an expectorant
+    - and in compound benzoin tincture
+    toxicity: storax can cause skin allergy
+  lore:
+    folklore: []
+    cultures:
+    - storax has been tapped around Köyceğiz since antiquity and shipped as an incense and perfume fixative;
+      still a small trade from Muğla
+    symbolism:
+    - called the 'weeping pharmacy of Anatolia' in Turkish writing
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - balsam for perfume
+    - incense and antiseptic salve
+  sources:
+  - https://research.fs.usda.gov/download/treesearch/42213.pdf
+  - https://www.fondazioneslowfood.com/en/ark-of-taste-slow-food/sigla-tree/
+  - https://www.iucnredlist.org/search?query=Liquidambar%20orientalis
+- id: pontic-rhododendron
+  names:
+  - pontic rhododendron
+  - mad honey rhododendron
+  scientific: Rhododendron ponticum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tree-rhododendron: tree rhododendron is Himalayan'
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - folklore
+  - flowers
+  habitat:
+    range: Black Sea coasts of Turkey and Georgia, the Caucasus, Bulgaria (Strandzha); relict stands in
+      southern Spain and Portugal; invasive in Britain and Ireland
+    ecosystem: humid temperate forest understory
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: cool to warm-temperate'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: acid soils
+    niche: dense thickets beneath beech, chestnut and conifer forest
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: large evergreen multi-stemmed shrub forming thickets, layering to spread
+    height_m:
+    - 2
+    - 8
+    trunk_diameter_m:
+    - 0.05
+    - 0.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, leathery, elliptic, 6-18 cm, dark glossy green
+    seasonal: none
+    flowers: large trusses of bell-shaped purple to mauve flowers, May to June
+    fruit_visible: dry brown capsules
+    bark: grey-brown, thin, flaking
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - firewood
+    - small turned items
+  products:
+    food:
+    - deli bal or mad honey from its nectar is sold in small amounts in the eastern Black Sea region as
+      a folk remedy
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - mad honey taken in tiny doses as a folk remedy for stomach complaints and hypertension
+    toxicity: all parts and the honey contain grayanotoxins, causing dizziness, vomiting, slow heart and
+      low blood pressure in people; leaves poison livestock
+  lore:
+    folklore:
+    - Xenophon's Ten Thousand were felled by mad honey near Trabzon in 401 BC; in 67 BC Pompey's soldiers
+      were ambushed after eating honey left by the Heptakometes
+    cultures:
+    - Laz and Hemşin beekeepers of the eastern Black Sea produce deli bal
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: poisonous thickets that choke the understory'
+      weirdness: 'high: honey that intoxicates'
+    dimensions: []
+    hooks:
+    - mad honey as a hallucinogen or poison
+    - impassable thickets as natural barriers
+  sources:
+  - https://www.cabidigitallibrary.org/doi/10.1079/cabicompendium.47384
+  - https://pubmed.ncbi.nlm.nih.gov/?term=grayanotoxin+mad+honey
+  - https://www.britannica.com/plant/rhododendron
+- id: caspian-locust
+  names:
+  - Caspian locust
+  - Caspian honey locust
+  scientific: Gleditsia caspica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'honey-locust: American honey locust'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Hyrcanian forest of northern Iran and southern Azerbaijan (Talysh)
+    ecosystem: humid lowland broadleaf forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 500
+    substrate: moist alluvial soils
+    niche: lowland and riverside forest
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk, spreading crown
+    height_m:
+    - 10
+    - 15
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, pinnate or bipinnate, fine leaflets
+    seasonal: yellow in autumn
+    flowers: small greenish flowers in racemes
+    fruit_visible: long flat twisted dark brown pods
+    bark: dark grey, bristling with very large branched spines up to 20 cm on trunk and branches
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: trunk armoured with huge branched thorns'
+    dimensions: []
+    hooks:
+    - thorns as caltrops or arrow points
+    - a hazard to climb
+  sources:
+  - https://www.treesandshrubsonline.org/articles/gleditsia/gleditsia-caspica/
+  - https://www.iucnredlist.org/search?query=Gleditsia%20caspica
+- id: grey-mangrove
+  names:
+  - grey mangrove
+  - qurm
+  scientific: Avicennia marina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-mangrove: American mangrove'
+  - 'red-mangrove: stilt-rooted'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: Indo-West Pacific from East Africa, the Red Sea and the Persian Gulf to Australia and New Zealand
+    ecosystem: mangrove and tidal mudflat
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - arid
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      - humid
+      note: 'temperature: subtropical to tropical; moisture: arid to humid'
+    elevation_m:
+    - 0
+    - 5
+    substrate: tidal mud and sand, highly saline
+    niche: the hardiest mangrove, often the only one on arid Gulf and Red Sea coasts
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: shrub or small tree with spreading crown, ringed by pencil-like breathing roots (pneumatophores)
+      in the mud
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m:
+    - 0.1
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, elliptic, glossy green above, grey-white felted beneath, often crusted with excreted
+      salt crystals
+    seasonal: none
+    flowers: small orange-yellow fragrant flowers
+    fruit_visible: flattened green heart-shaped fruits that sprout on the tree
+    bark: smooth pale grey-green, flaking in patches
+  timber:
+    heartwood: dark yellow-brown to dark brown, oily-looking
+    sapwood: wide, yellow-grey
+    grain: irregular, interlocked
+    texture: coarse, uneven
+    density_kg_m3: null
+    janka_n: null
+    workability: saws well but hard to work for its interlocked grain; nail holes must be prebored
+    rot_resistance: very susceptible to termites and marine borers
+    scent: null
+    fuel: firewood and charcoal
+    uses:
+    - poles
+    - posts
+    - firewood
+    - charcoal
+    - boat ribs
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - tannin
+    leaves:
+    - browse and fodder for camels on Gulf and Red Sea coasts
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the Khor Kalba and Abu Dhabi mangroves are protected landmarks of the UAE; leaves cut as camel fodder
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - salt crystals on the leaves
+    - camel fodder
+    - shoreline stabiliser
+  sources:
+  - http://dendro.cnre.vt.edu/DENDROLOGY/woodtech/avicennia.pdf
+  - https://www.iucnredlist.org/search?query=Avicennia%20marina
+  - https://powo.science.kew.org/results?q=Avicennia%20marina
+- id: wild-almond-zagros
+  names:
+  - mountain almond
+  - bitter wild almond
+  - Persian wild almond
+  scientific: Prunus scoparia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'almond: almond is the cultivated nut tree'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - flowers
+  habitat:
+    range: Iran (Zagros and central mountains), Afghanistan, southern Turkmenistan
+    ecosystem: dry montane scrub and open woodland
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - arid
+      - semi-arid
+      note: 'temperature: warm-temperate continental; moisture: arid to semi-arid'
+    elevation_m:
+    - 800
+    - 2500
+    substrate: rocky calcareous slopes
+    niche: dry rocky hillsides with pistachio and oak
+    strata:
+    - shrub
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: broom-like shrub or small tree with many erect slender green twigs
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, small, narrow, short-lived; the green twigs do most of the photosynthesis
+    seasonal: leafless and broom-like most of the year
+    flowers: pale pink to white almond blossom in early spring
+    fruit_visible: small hairy almond fruits with bitter kernels
+    bark: grey-green on twigs, grey-brown on stems
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: firewood
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - Persian (Shirazi or angum) gum
+    - a tragacanth-like gum exuded from the bark and used as a thickener
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - kernel oil in folk medicine
+    toxicity: bitter kernels contain amygdalin, which releases cyanide; poisonous raw
+  lore:
+    folklore: []
+    cultures:
+    - Persian gum (shirazi gum) is gathered in Fars and sold as a food and cosmetic thickener
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - gum as binder
+    - bitter kernels as a cyanide poison
+    - rootstock for almonds
+  sources:
+  - https://powo.science.kew.org/results?q=Prunus%20scoparia
+  - https://pubmed.ncbi.nlm.nih.gov/?term=Prunus+scoparia+gum
+- id: chestnut-leaved-oak
+  names:
+  - chestnut-leaved oak
+  - Caucasian oak
+  - Hyrcanian oak
+  - Caspian oak
+  scientific: Quercus castaneifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: chestnut-leaved oak has long narrow toothed chestnut-like leaves'
+  - 'persian-oak: Persian oak is a small tree of dry Zagros woodland'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  habitat:
+    range: Hyrcanian forest of northern Iran and southern Azerbaijan, and the Caucasus
+    ecosystem: humid lowland and lower montane broadleaf forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 2000
+    substrate: deep moist fertile soils
+    niche: dominant of the lowland Caspian forest with hornbeam, Persian ironwood and zelkova
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: single massive trunk, broad high crown
+    height_m:
+    - 25
+    - 45
+    trunk_diameter_m:
+    - 1.0
+    - 3.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, oblong-lanceolate, 8-18 cm, with regular triangular bristle-tipped teeth like a
+      sweet chestnut, dark glossy green above and grey-downy beneath
+    seasonal: brown to yellow-brown in autumn
+    flowers: inconspicuous catkins in spring
+    fruit_visible: acorns in cups with long narrow reflexed scales, ripening in the second year
+    bark: dark grey, deeply furrowed
+  timber:
+    heartwood: light brown to yellow-brown
+    sapwood: paler
+    grain: straight, ring-porous
+    texture: coarse
+    density_kg_m3: 630
+    janka_n: null
+    workability: works fairly well; heavy
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good firewood and charcoal
+    uses:
+    - construction
+    - flooring
+    - furniture
+    - barrel staves
+    - railway sleepers
+    - veneer
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - tannin for leather
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: raw acorns are tannin-rich
+  lore:
+    folklore: []
+    cultures:
+    - the chief oak timber of Iran's Caspian provinces
+    symbolism: []
+    notable_trees:
+    - giant old chestnut-leaved oaks of the Hyrcanian forest reach over 40 m
+  game_fit:
+    fields:
+      savagery: 'high: giant trees of the dense Hyrcanian wildwood'
+    dimensions: []
+    hooks:
+    - large clear oak timber for beams and barrels
+  sources:
+  - https://sciresol.s3.us-east-2.amazonaws.com/IJST/Articles/2011/Issue-11/Article13.pdf
+  - https://www.treesandshrubsonline.org/articles/quercus/quercus-castaneifolia/
+  - https://whc.unesco.org/en/list/1584/
+- id: paliurus
+  names:
+  - Christ's thorn
+  - Jerusalem thorn
+  - garland thorn
+  scientific: Paliurus spina-christi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'christs-thorn: sidr is a larger tree with edible fruit; Paliurus has dry disc-winged fruit'
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - striking
+  habitat:
+    range: southern Europe from Spain to the Balkans, Turkey, the Caucasus, Iran and Central Asia to northern
+      China
+    ecosystem: dry scrub, maquis and hedgerows
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'moisture: semi-arid to subhumid'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: dry stony soils, limestone
+    niche: thickets on dry hillsides, abandoned fields and hedges
+    strata:
+    - shrub
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous thorny shrub or small tree with zigzag branches
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m:
+    - 0.05
+    - 0.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, oval, 2-4 cm, glossy, with three main veins, in two rows on the zigzag twigs
+    seasonal: yellow in autumn
+    flowers: small yellow-green flowers in clusters, summer
+    fruit_visible: flat round woody fruits 2-3 cm with a circular wavy wing, like little hats, green turning
+      brown
+    bark: grey-brown; each node with a pair of spines, one straight and one hooked
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: firewood
+    uses:
+    - stock-proof hedges
+    - firewood
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - fruit and leaves in folk medicine as diuretic
+    toxicity: null
+  lore:
+    folklore:
+    - a traditional candidate for the crown of thorns at the Crucifixion
+    cultures:
+    - planted as an impenetrable hedge around fields and folds in the Balkans and Anatolia
+    symbolism:
+    - the Passion
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: hooked thorn thickets'
+    dimensions: []
+    hooks:
+    - thorn hedges as early livestock fencing
+  sources:
+  - https://powo.science.kew.org/results?q=Paliurus%20spina-christi
+  - https://www.cabidigitallibrary.org/search?q=Paliurus%20spina-christi
+- id: dhofar-terminalia
+  names:
+  - Dhofar anogeissus
+  - Anogeissus dhofarica (syn.)
+  scientific: Terminalia dhofarica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Dhofar escarpment of southern Oman and adjacent eastern Yemen (Hawf)
+    ecosystem: monsoon (khareef) fog-fed deciduous cloud forest
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - arid
+      - seasonally-dry
+      note: 'temperature: warm subtropical; moisture: seasonal fog in an arid region'
+    elevation_m:
+    - 100
+    - 1000
+    substrate: limestone escarpment soils
+    niche: dominant tree of the fog-belt woodland on seaward slopes
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: small tree with a short trunk and dense spreading crown, often multi-stemmed
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, small, elliptic
+    seasonal: leafs out green with the summer khareef fog and drops leaves in the dry season
+    flowers: small yellowish flowers in round heads
+    fruit_visible: small winged fruits in cone-like clusters
+    bark: grey, smooth to flaky
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: firewood
+    uses:
+    - house and animal-pen construction
+    - firewood
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - cattle and camel browse
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the khareef woodland is the grazing ground of Jebbali cattle herders
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: forest that greens only in the summer fog'
+    dimensions: []
+    hooks:
+    - seasonal fog forest that greens in the hot season
+  sources:
+  - https://powo.science.kew.org/results?q=Anogeissus%20dhofarica
+  - https://www.iucnredlist.org/search?query=Anogeissus%20dhofarica

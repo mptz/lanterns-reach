@@ -1,0 +1,2 @@
+{ "name": "log", "symmetry": "column",
+  "textures": { "+z": "../../../assets/blocks/log_end.png", "+x": "../../../assets/blocks/log_end.png" } }

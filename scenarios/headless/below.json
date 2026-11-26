@@ -1,0 +1,13 @@
+{
+  "include": "../v0.1-scene.json",
+  "camera": {
+    "pos": [
+      16.0,
+      -10.0,
+      -6.0
+    ]
+  },
+  "view": {
+    "buffer": "lit"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "include": "../v0.1-scene.json",
+  "camera": {
+    "pos": [
+      12.5,
+      3.0,
+      18.0
+    ],
+    "look": [
+      12.5,
+      6.5,
+      16.0
+    ]
+  },
+  "view": {
+    "overlays": [
+      "orientation",
+      "targeting"
+    ]
+  },
+  "events": [
+    {
+      "frame": 5,
+      "key": "6"
+    },
+    {
+      "frame": 10,
+      "click": "right"
+    }
+  ]
+}

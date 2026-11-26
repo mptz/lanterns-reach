@@ -1,0 +1,18 @@
+GoalSource_Siblings | No error has been found | 303847932 states generated, 45930663 distinct states found | depth 52 | 2136s | peak 4340 MB
+GoalSource_Diamond | No error has been found | 82344047 states generated, 12568814 distinct states found | depth 53 | 563s | peak 4311 MB
+GoalSource_V1b_NoCascadeCompleted_NoClaimWd | Error: Successor state is not completely specified by action Claim of the next-state relation. The following variable is not assigned: c2bad. | 10755 states generated, 3599 distinct states found | depth 11 | 2s | peak 0 MB
+GoalSource_V2_NoRegWdCheck | No error has been found | 25646401 states generated, 4057126 distinct states found | depth 52 | 171s | peak 4148 MB
+GoalSource_V2b_NoRegWd_NoClaimWd | No error has been found | 25677046 states generated, 4057126 distinct states found | depth 52 | 136s | peak 4149 MB
+GoalSource_V3_EdgesAtClaim_Batch | Error: Invariant B3 is violated. | 2514 states generated, 1008 distinct states found | depth 8 | 2s | peak 0 MB
+GoalSource_V3b_EdgesAtClaim_Batch_NoB3 | No error has been found | 25646401 states generated, 4057126 distinct states found | depth 52 | 150s | peak 4208 MB
+GoalSource_V3c_EdgesAtClaim_Batch_NoClaimWd | No error has been found | 25677046 states generated, 4057126 distinct states found | depth 52 | 149s | peak 4164 MB
+GoalSource_V4_NoClaimWdCheck | No error has been found | 25677046 states generated, 4057126 distinct states found | depth 52 | 173s | peak 4158 MB
+GoalSource_V5_PublishDespiteWd | Error: Invariant A5 is violated. | 2743 states generated, 1088 distinct states found | depth 9 | 2s | peak 0 MB
+GoalSource_V6_EarlyCleanup | Error: Invariant CleanupAddsWithdrawn is violated. | 207 states generated, 126 distinct states found | depth 6 | 2s | peak 0 MB
+GoalSource_V6b_EarlyCleanup_NoAssert | Error: Invariant C3 is violated. | 7519 states generated, 2816 distinct states found | depth 10 | 2s | peak 0 MB
+GoalSource_ProbeCompletedWithdrawnCascade | Error: Invariant ProbeCompletedWithdrawnCascade is violated. | 5219 states generated, 1917 distinct states found | depth 9 | 2s | peak 0 MB
+GoalSource_CrossC5 | No error has been found | 86492958 states generated, 14242266 distinct states found | depth 48 | 567s | peak 4334 MB
+GoalSource_ChainSpan2 | No error has been found | 30135678 states generated, 4719058 distinct states found | depth 49 | 201s | peak 4204 MB
+GoalSource_ChainFind | No error has been found | 109721737 states generated, 16702040 distinct states found | depth 58 | 734s | peak 4336 MB
+GoalSource_ChainC5 | No error has been found | 131877575 states generated, 20261627 distinct states found | depth 52 | 912s | peak 4330 MB
+GoalSource_CrossLive | Error: Temporal properties were violated. | 185556 states generated, 44126 distinct states found | depth State 17: | 66s | peak 1295 MB

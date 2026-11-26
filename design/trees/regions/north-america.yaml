@@ -1,0 +1,2660 @@
+# Tree candidates: north-america. Fields per design/trees.md.
+# Total: 146; tiers: 1: 45, 2: 77, 3: 24
+# Inclusion: well-known 35, folklore 8, cultural 77, striking 86, flowers 17, fruit 40, medicinal 20, toxic 12, product 85
+# Genera with 5+ entries: Pinus 17, Quercus 10, Picea 6, Acer 5
+
+- id: aspen
+  names:
+  - aspen
+  - quaking aspen
+  - trembling aspen
+  - bigtooth aspen
+  scientific: Populus tremuloides
+  rank: group
+  stands_for:
+  - Populus grandidentata (bigtooth aspen)
+  distinct_from:
+  - 'cottonwood: lowland riparian poplar'
+  - 'balsam-poplar: resinous buds'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  - well-known
+  - product
+  region: north-america
+  why: Leaves tremble on flat stalks; Pando in Utah, the state tree, is one clone of about 47,000 stems.
+    Bigtooth aspen of the east is a coarse-toothed near twin.
+- id: bald-cypress
+  names:
+  - bald cypress
+  scientific: Taxodium distichum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pond-cypress: smaller, scale-leaved pond form'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  - product
+  region: north-america
+  why: Deciduous swamp conifer with buttressed trunk and knees rising from the water, draped in Spanish
+    moss; Louisiana state tree.
+- id: balsam-fir
+  names:
+  - balsam fir
+  - Fraser fir
+  scientific: Abies balsamea
+  rank: group
+  stands_for:
+  - Abies fraseri (Fraser fir)
+  distinct_from:
+  - 'subalpine-fir: spire-shaped western mountain fir'
+  - 'white-fir: western silvery fir'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - medicinal
+  - product
+  region: north-america
+  why: Fragrant Christmas tree whose resin blisters give Canada balsam, the classic microscope-slide mountant;
+    New Brunswick's tree. Fraser fir is its southern Appalachian relict twin.
+- id: black-locust
+  names:
+  - black locust
+  - false acacia
+  scientific: Robinia pseudoacacia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - flowers
+  - striking
+  - product
+  region: north-america
+  why: Fragrant white flower racemes, toxic bark and seeds, and extremely rot-resistant fence-post wood.
+- id: black-tupelo
+  names:
+  - black tupelo
+  - blackgum
+  scientific: Nyssa sylvatica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'water-tupelo: swamp tupelo, tupelo honey'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: north-america
+  why: Brilliant scarlet autumn on an upland tree that can live over 650 years.
+- id: black-walnut
+  names:
+  - black walnut
+  - Arizona walnut
+  - California black walnut
+  scientific: Juglans nigra
+  rank: group
+  stands_for:
+  - Juglans californica (California black walnut)
+  - Juglans major (Arizona walnut)
+  distinct_from:
+  - 'butternut: pale wood, oily nut'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - toxic
+  - fruit
+  - product
+  region: north-america
+  why: Prized dark chocolate-brown timber, hard-shelled nuts, and juglone that poisons nearby plants.
+- id: blue-spruce
+  names:
+  - Colorado blue spruce
+  - blue spruce
+  scientific: Picea pungens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'engelmann-spruce: Rocky Mountain timber spruce'
+  - 'white-spruce: boreal spruce'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: north-america
+  why: Silver-blue needles make it the most strikingly coloured spruce; Colorado state tree.
+- id: boojum
+  names:
+  - boojum
+  - cirio
+  scientific: Fouquieria columnaris
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Upside-down-carrot trunk up to 20 m in Baja California, named after Lewis Carroll's boojum.
+- id: bristlecone-pine
+  names:
+  - Great Basin bristlecone pine
+  - foxtail pine
+  - Rocky Mountain bristlecone pine
+  scientific: Pinus longaeva
+  rank: group
+  stands_for:
+  - Pinus aristata (Rocky Mountain bristlecone pine)
+  - Pinus balfouriana (foxtail pine)
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: north-america
+  why: Twisted strip-barked trees of the White Mountains over 4,800 years old (Methuselah), among the
+    oldest non-clonal organisms; a Nevada state tree.
+- id: cabbage-palmetto
+  names:
+  - cabbage palmetto
+  - sabal palm
+  scientific: Sabal palmetto
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dwarf-palmetto: trunkless understory palm'
+  - 'saw-palmetto: creeping medicinal palm'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  region: north-america
+  why: Palm on South Carolina's flag whose fibrous trunks absorbed cannonballs at Fort Moultrie; heart
+    of palm food; state tree of Florida and South Carolina.
+- id: california-fan-palm
+  names:
+  - California fan palm
+  - desert fan palm
+  scientific: Washingtonia filifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mexican-fan-palm: tall slender Baja relative'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: north-america
+  why: Only palm native to the western US, stout and shaggy-skirted in desert oases.
+- id: cascara
+  names:
+  - cascara
+  - cascara buckthorn
+  - Rhamnus purshiana (synonym)
+  scientific: Frangula purshiana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: north-america
+  why: Bark harvested as a laxative remedy, once a major Pacific Northwest trade.
+- id: catalpa
+  names:
+  - catalpa
+  - cigar tree
+  - northern catalpa
+  - southern catalpa
+  - Indian bean tree
+  scientific: Catalpa speciosa
+  rank: group
+  stands_for:
+  - Catalpa bignonioides (southern catalpa)
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - product
+  region: north-america
+  why: Orchid-like white flower panicles and long cigar-like pods; catalpa-worm caterpillars are prized
+    fishing bait.
+- id: coast-redwood
+  names:
+  - coast redwood
+  scientific: Sequoia sempervirens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'giant-sequoia: Sierra Nevada giant'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - product
+  region: north-america
+  why: Tallest living tree (Hyperion, about 116 m) of the fog-belt coast, with red rot-resistant wood
+    and figured burls; California state tree with giant sequoia.
+- id: cottonwood
+  names:
+  - cottonwood
+  - Fremont cottonwood
+  - eastern cottonwood
+  - plains cottonwood
+  scientific: Populus deltoides
+  rank: group
+  stands_for:
+  - Populus fremontii (Fremont cottonwood)
+  - Populus deltoides subsp. monilifera (plains cottonwood)
+  distinct_from:
+  - 'balsam-poplar: boreal and Pacific, resinous buds'
+  - 'aspen: smaller upland poplar'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: north-america
+  why: River shade tree with seed fluff; Plains peoples raise it as the Sun Dance pole and the Hopi carve
+    katsina figures from Fremont cottonwood root. State tree of Kansas, Nebraska and Wyoming.
+- id: desert-ironwood
+  names:
+  - desert ironwood
+  scientific: Olneya tesota
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: north-america
+  why: Very dense wood that sinks, carved by the Seri people; a nurse tree of the Sonoran Desert.
+- id: douglas-fir
+  names:
+  - Douglas fir
+  scientific: Pseudotsuga menziesii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bigcone-douglas-fir: heavy-coned southern California relative'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - product
+  region: north-america
+  why: Giant of the Pacific Northwest and a leading structural timber, with mouse-tail cone bracts; Oregon
+    state tree.
+- id: eastern-hemlock
+  names:
+  - eastern hemlock
+  scientific: Tsuga canadensis
+  rank: group
+  stands_for:
+  - Tsuga caroliniana (Carolina hemlock)
+  distinct_from:
+  - 'western-hemlock: Pacific giant'
+  - 'mountain-hemlock: subalpine blue-green hemlock'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  region: north-america
+  why: Dark shade-tolerant conifer of old-growth ravines; bark tanned leather, and Ojibwe and Haudenosaunee
+    used its tea against scurvy. Pennsylvania state tree.
+- id: eastern-redcedar
+  names:
+  - eastern redcedar
+  - Rocky Mountain juniper
+  scientific: Juniperus virginiana
+  rank: group
+  stands_for:
+  - Juniperus scopulorum (Rocky Mountain juniper)
+  distinct_from:
+  - 'utah-juniper: arid-zone shreddy juniper'
+  - 'alligator-juniper: chequered bark'
+  - 'ashe-juniper: Texas hill country cedar'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: north-america
+  why: Aromatic red heartwood of pencils and cedar chests; Plains peoples burn its smoke in ceremony.
+- id: eastern-white-pine
+  names:
+  - eastern white pine
+  - western white pine
+  scientific: Pinus strobus
+  rank: group
+  stands_for:
+  - Pinus monticola (western white pine)
+  distinct_from:
+  - 'sugar-pine: largest pine and cones'
+  - 'whitebark-pine: high-elevation nut pine'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  region: north-america
+  why: Haudenosaunee Tree of Peace and the Royal Navy's mast tree; state tree of Maine and Michigan and
+    Ontario's tree, while its western twin is Idaho's.
+- id: flowering-dogwood
+  names:
+  - flowering dogwood
+  scientific: Cornus florida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pacific-dogwood: giant-bract western dogwood'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - folklore
+  - cultural
+  - product
+  region: north-america
+  why: Four-bracted white blossoms of the eastern understory, tied to a Christian crucifixion legend;
+    state tree of Missouri and Virginia; hard wood made textile shuttles.
+- id: giant-sequoia
+  names:
+  - giant sequoia
+  - Sierra redwood
+  scientific: Sequoiadendron giganteum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'coast-redwood: giant sequoia is the stouter Sierra Nevada tree'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  region: north-america
+  why: Most massive single-stem tree (General Sherman), with fire-resistant spongy bark and lifespans
+    over 3,000 years; California state tree with coast redwood.
+- id: honey-locust
+  names:
+  - honey locust
+  scientific: Gleditsia triacanthos
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: north-america
+  why: Huge branched thorns on the trunk and long sweet pods.
+- id: joshua-tree
+  names:
+  - Joshua tree
+  scientific: Yucca brevifolia
+  rank: group
+  stands_for:
+  - Yucca jaegeriana
+  - Yucca filifera
+  distinct_from:
+  - 'soaptree-yucca: tall grassy desert yucca'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: north-america
+  why: Shaggy branched tree-like yucca of the Mojave, said to be named by Mormon settlers after Joshua's
+    raised arms.
+- id: kentucky-coffeetree
+  names:
+  - Kentucky coffeetree
+  scientific: Gymnocladus dioicus
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  region: north-america
+  why: Toxic seeds once roasted as a coffee substitute; thought to have been spread by extinct megafauna;
+    Kentucky state tree until 1994.
+- id: live-oak
+  names:
+  - southern live oak
+  scientific: Quercus virginiana
+  rank: group
+  stands_for:
+  - Quercus fusiformis (plateau live oak)
+  distinct_from:
+  - 'coast-live-oak: Californian'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  region: north-america
+  why: Massive low evergreen limbs draped in Spanish moss; its timber framed USS Constitution ('Old Ironsides'),
+    the Angel Oak is one, and it is Georgia's state tree.
+- id: longleaf-pine
+  names:
+  - longleaf pine
+  scientific: Pinus palustris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'loblolly-pine: shorter needles, no grass stage'
+  - 'pitch-pine: sandy barrens fire pine'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: north-america
+  why: Fire-adapted savanna pine with a grass-like seedling stage and foot-long needles, base of the naval-stores
+    turpentine industry; Alabama and North Carolina state tree.
+- id: mesquite
+  names:
+  - mesquite
+  - honey mesquite
+  - velvet mesquite
+  - Prosopis glandulosa (syn.)
+  scientific: Neltuma glandulosa
+  rank: group
+  stands_for:
+  - Prosopis juliflora
+  - Prosopis velutina (velvet mesquite)
+  distinct_from:
+  - 'screwbean-mesquite: spiral pods'
+  - 'algarrobo: South American Prosopis'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - well-known
+  - product
+  region: north-america
+  why: Sweet pods ground into flour by desert peoples, and the classic barbecue smoking wood.
+- id: osage-orange
+  names:
+  - Osage orange
+  - hedge apple
+  - bois d'arc
+  scientific: Maclura pomifera
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  - product
+  region: north-america
+  why: Brain-like green fruit and dense yellow wood prized by the Osage and others for bows.
+- id: pacific-madrone
+  names:
+  - Pacific madrone
+  - arbutus
+  scientific: Arbutus menziesii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'texas-madrone: Chihuahuan pale-barked relative'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: north-america
+  why: Peeling cinnamon-red bark over smooth green-gold wood on a large coastal tree.
+- id: palo-verde
+  names:
+  - palo verde
+  - blue palo verde
+  scientific: Parkinsonia florida
+  rank: group
+  stands_for:
+  - Parkinsonia aculeata
+  - Parkinsonia microphylla (foothill palo verde)
+  distinct_from:
+  - 'desert-ironwood: shares Sonoran washes, dark wood'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  - product
+  region: north-america
+  why: Desert tree with green photosynthetic bark that drops its leaves and blooms solid yellow; Arizona
+    state tree.
+- id: pawpaw
+  names:
+  - pawpaw
+  scientific: Asimina triloba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  region: north-america
+  why: Largest native North American fruit, custard-flavoured and tropical-tasting.
+- id: pecan
+  names:
+  - pecan
+  scientific: Carya illinoinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'shagbark-hickory: pecan is a tall riverbottom nut crop with smooth bark'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: north-america
+  why: Native nut tree of the Mississippi valley and the state tree of Texas.
+- id: pinyon-pine
+  names:
+  - pinyon
+  - piñon
+  scientific: Pinus edulis
+  rank: group
+  stands_for:
+  - Pinus cembroides (Mexican pinyon)
+  - Pinus quadrifolia (Parry pinyon)
+  distinct_from:
+  - 'single-leaf-pinyon: one-needle Great Basin pinyon'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  region: north-america
+  why: Small desert pine whose nuts were a staple and trade good for Great Basin and Southwestern peoples;
+    New Mexico state tree.
+- id: red-oak
+  names:
+  - northern red oak
+  - red oak
+  - eastern black oak
+  - pin oak
+  - scarlet oak
+  scientific: Quercus rubra
+  rank: group
+  stands_for:
+  - Quercus palustris (pin oak)
+  - Quercus coccinea (scarlet oak)
+  - Quercus velutina (eastern black oak)
+  - Quercus phellos (willow oak)
+  - Quercus marilandica (blackjack oak)
+  - Quercus falcata (southern red oak)
+  distinct_from:
+  - 'white-oak: rounded lobes, sweet acorns, tight barrel wood'
+  - 'california-black-oak: western red oak'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - product
+  region: north-america
+  why: Bristle-tipped leaves turn deep red in autumn and its porous wood is the commonest American flooring
+    oak; New Jersey state tree and Prince Edward Island's tree. Oak is the US national tree.
+- id: saguaro
+  names:
+  - saguaro
+  scientific: Carnegiea gigantea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cardon: Baja giant cactus'
+  - 'organ-pipe-cactus: multi-stemmed fruit cactus'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  - product
+  region: north-america
+  why: Tree-sized columnar cactus of the Sonoran Desert whose fruit harvest begins the Tohono O'odham
+    new year.
+- id: sassafras
+  names:
+  - sassafras
+  scientific: Sassafras albidum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - medicinal
+  - toxic
+  - cultural
+  - striking
+  - product
+  region: north-america
+  why: Mitten-shaped leaves; root bark flavoured root beer and filé powder but its safrole is carcinogenic.
+- id: serviceberry
+  names:
+  - serviceberry
+  - saskatoon
+  - juneberry
+  scientific: Amelanchier alnifolia
+  rank: group
+  stands_for:
+  - Amelanchier arborea (downy serviceberry)
+  - Amelanchier canadensis
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - flowers
+  region: north-america
+  why: Saskatoon berries were a key pemmican ingredient for Plains and Cree peoples; early white blossom.
+- id: shagbark-hickory
+  names:
+  - hickory
+  - shagbark hickory
+  scientific: Carya ovata
+  rank: group
+  stands_for:
+  - Carya laciniosa (shellbark hickory)
+  - Carya tomentosa (mockernut hickory)
+  - Carya glabra (pignut hickory)
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - fruit
+  region: north-america
+  why: Shaggy strip bark, tough shock-resistant wood for axe handles and smoking meat, and hickory nuts.
+- id: sitka-spruce
+  names:
+  - Sitka spruce
+  scientific: Picea sitchensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-spruce: boreal'
+  - 'engelmann-spruce: interior'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: north-america
+  why: Largest spruce, of the coastal fog forest and Alaska's state tree; its light strong wood framed
+    early aircraft and is a top guitar and piano soundboard tonewood.
+- id: southern-magnolia
+  names:
+  - southern magnolia
+  - bull bay
+  scientific: Magnolia grandiflora
+  rank: group
+  stands_for:
+  - Magnolia virginiana (sweetbay magnolia)
+  - Magnolia acuminata (cucumber tree)
+  distinct_from:
+  - 'bigleaf-magnolia: leaf giant'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - well-known
+  - product
+  region: north-america
+  why: Huge white fragrant flowers on a glossy evergreen, emblem of the American South and Mississippi's
+    state tree.
+- id: sugar-maple
+  names:
+  - sugar maple
+  - hard maple
+  - rock maple
+  scientific: Acer saccharum
+  rank: group
+  stands_for:
+  - Acer nigrum (black maple)
+  distinct_from:
+  - 'red-maple: swamp maple, red autumn'
+  - 'silver-maple: floodplain maple'
+  - 'bigleaf-maple: Pacific maple with huge leaves'
+  - 'boxelder: compound-leaved weedy maple'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  region: north-america
+  why: Maple syrup, blazing autumn colour, bird's-eye and curly figured wood; maple is Canada's national
+    tree, and sugar maple is state tree of New York, Vermont, West Virginia and Wisconsin.
+- id: sweetgum
+  names:
+  - sweetgum
+  - American storax
+  scientific: Liquidambar styraciflua
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  - product
+  region: north-america
+  why: Star-shaped leaves with multicolour autumn, spiky gumball fruits and storax resin.
+- id: tulip-tree
+  names:
+  - tulip tree
+  - tulip poplar
+  - yellow poplar
+  scientific: Liriodendron tulipifera
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - cultural
+  region: north-america
+  why: Tulip-shaped flowers and square-cut leaves on one of the tallest eastern hardwoods; Native dugout
+    canoes; state tree of Indiana, Kentucky and Tennessee.
+- id: western-redcedar
+  names:
+  - western redcedar
+  - giant arborvitae
+  scientific: Thuja plicata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'northern-white-cedar: eastern arborvitae'
+  - 'alaska-yellow-cedar: Pacific yellow cedar'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: north-america
+  why: Tree of life to Northwest Coast peoples, carved into totem poles, canoes and longhouses, with bark
+    woven into clothing; British Columbia's tree.
+- id: white-oak
+  names:
+  - white oak
+  - eastern white oak
+  - post oak
+  - swamp white oak
+  scientific: Quercus alba
+  rank: group
+  stands_for:
+  - Quercus bicolor (swamp white oak)
+  - Quercus stellata (post oak)
+  - Quercus gambelii (Gambel oak)
+  distinct_from:
+  - 'red-oak: pointed bristle-tipped lobes'
+  - 'bur-oak: fringed acorn cups'
+  - 'chestnut-oak: unlobed wavy leaves, ridged bark'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - fruit
+  region: north-america
+  why: Its liquid-tight wood makes bourbon and wine barrels and its sweet acorns were a staple for many
+    Native peoples; the Charter Oak and Wye Oak were white oaks; state tree of Connecticut, Illinois and
+    Maryland.
+- id: witch-hazel
+  names:
+  - witch hazel
+  scientific: Hamamelis virginiana
+  rank: group
+  stands_for:
+  - Hamamelis vernalis
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - folklore
+  - flowers
+  - product
+  region: north-america
+  why: Thread-like autumn flowers, astringent extract, and forked twigs for water dowsing.
+- id: balsam-poplar
+  names:
+  - balsam poplar
+  - balm of Gilead
+  - tacamahac
+  - black cottonwood
+  scientific: Populus balsamifera
+  rank: group
+  stands_for:
+  - Populus trichocarpa (black cottonwood)
+  distinct_from:
+  - 'cottonwood: eastern and desert-river cottonwood'
+  - 'aspen: no resinous buds'
+  split_from: cottonwood
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - medicinal
+  - product
+  region: north-america
+  why: Boreal poplar whose sticky resinous buds yield the balm of Gilead salve; black cottonwood, its
+    Pacific form, is the tallest North American hardwood.
+- id: pond-cypress
+  names:
+  - pond cypress
+  scientific: Taxodium distichum var. imbricarium
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bald-cypress: floodplain tree with flat needles'
+  split_from: bald-cypress
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Smaller swamp cypress with scale-like leaves, in nutrient-poor ponds.
+- id: subalpine-fir
+  names:
+  - subalpine fir
+  - alpine fir
+  scientific: Abies lasiocarpa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'balsam-fir: boreal broad-crowned'
+  split_from: balsam-fir
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: north-america
+  why: Narrow spire-shaped fir of Rocky Mountain treeline forests; Yukon's tree.
+- id: butternut
+  names:
+  - butternut
+  - white walnut
+  scientific: Juglans cinerea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-walnut: dark wood, rounder nut'
+  split_from: black-walnut
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - product
+  - cultural
+  region: north-america
+  why: Pale-wooded walnut with oily nuts and a brown husk dye that coloured Confederate "butternut" uniforms;
+    now hit by canker.
+- id: engelmann-spruce
+  names:
+  - Engelmann spruce
+  scientific: Picea engelmannii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'blue-spruce: silvery foliage'
+  - 'white-spruce: boreal lowland'
+  split_from: blue-spruce
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - product
+  region: north-america
+  why: Dominant spruce of Rocky Mountain subalpine forest, prized for resonant tonewood.
+- id: dwarf-palmetto
+  names:
+  - dwarf palmetto
+  scientific: Sabal minor
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cabbage-palmetto: tall, trunked'
+  split_from: cabbage-palmetto
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: north-america
+  why: Trunkless palm of southeastern swamps; leaves woven for thatch and hats.
+- id: mexican-fan-palm
+  names:
+  - Mexican fan palm
+  - skyduster
+  scientific: Washingtonia robusta
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'california-fan-palm: stouter, native in oases'
+  split_from: california-fan-palm
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Taller, slimmer Baja and Sonoran fan palm whose skinny trunks line Los Angeles boulevards.
+- id: bigcone-douglas-fir
+  names:
+  - bigcone Douglas-fir
+  scientific: Pseudotsuga macrocarpa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'douglas-fir: smaller cones'
+  split_from: douglas-fir
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Southern California canyon conifer with big heavy cones.
+- id: western-hemlock
+  names:
+  - western hemlock
+  scientific: Tsuga heterophylla
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'eastern-hemlock: smaller, eastern'
+  - 'mountain-hemlock: subalpine'
+  split_from: eastern-hemlock
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  region: north-america
+  why: Pacific coast shade-tolerant giant with a drooping leader; Washington's state tree.
+- id: mountain-hemlock
+  names:
+  - mountain hemlock
+  scientific: Tsuga mertensiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'western-hemlock: low elevation, drooping'
+  split_from: eastern-hemlock
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Blue-green, tufted subalpine hemlock of snowy ranges.
+- id: utah-juniper
+  names:
+  - Utah juniper
+  - western juniper
+  scientific: Juniperus osteosperma
+  rank: group
+  stands_for:
+  - Juniperus occidentalis (western juniper)
+  distinct_from:
+  - 'eastern-redcedar: different bark, wetter range'
+  - 'alligator-juniper: chequered bark'
+  split_from: eastern-redcedar
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: north-america
+  why: Shreddy-barked juniper of the Great Basin pinyon-juniper woodland; bark used for cradle padding
+    and fuel; Oregon high-desert trees over 1,000 years old.
+- id: alligator-juniper
+  names:
+  - alligator juniper
+  scientific: Juniperus deppeana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'utah-juniper: shreddy bark'
+  split_from: eastern-redcedar
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Southwestern juniper whose bark breaks into square alligator-skin checks.
+- id: ashe-juniper
+  names:
+  - Ashe juniper
+  - Texas mountain cedar
+  scientific: Juniperus ashei
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'eastern-redcedar: shared cedar-oil uses'
+  split_from: eastern-redcedar
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: north-america
+  why: Texas Hill Country "mountain cedar" whose winter pollen causes cedar fever; cut by "cedar choppers"
+    for fence posts and oil.
+- id: sugar-pine
+  names:
+  - sugar pine
+  scientific: Pinus lambertiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'eastern-white-pine: smaller cones'
+  split_from: eastern-white-pine
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  - product
+  region: north-america
+  why: Tallest pine, with cones up to half a metre and a sweet resin; John Muir called it the king of
+    the conifers.
+- id: pacific-dogwood
+  names:
+  - Pacific dogwood
+  - western flowering dogwood
+  scientific: Cornus nuttallii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'flowering-dogwood: eastern, smaller bracts'
+  split_from: flowering-dogwood
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: north-america
+  why: Giant white-bracted dogwood; the flower of British Columbia.
+- id: soaptree-yucca
+  names:
+  - soaptree yucca
+  scientific: Yucca elata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'joshua-tree: branched, Mojave'
+  split_from: joshua-tree
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: north-america
+  why: Tall desert yucca with root soap and leaf fibre.
+- id: coast-live-oak
+  names:
+  - coast live oak
+  - encina
+  - canyon live oak
+  scientific: Quercus agrifolia
+  rank: group
+  stands_for:
+  - Quercus chrysolepis (canyon live oak)
+  distinct_from:
+  - 'live-oak: southern live oak, eastern'
+  split_from: live-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: north-america
+  why: Spreading evergreen oak with holly-like cupped leaves; Chumash and Tongva acorn staple; canyon
+    live oak, its rocky-slope relative, gave hard "maul oak" wood.
+- id: loblolly-pine
+  names:
+  - loblolly pine
+  - slash pine
+  - shortleaf pine
+  - southern yellow pine
+  scientific: Pinus taeda
+  rank: group
+  stands_for:
+  - Pinus elliottii (slash pine)
+  - Pinus echinata (shortleaf pine)
+  distinct_from:
+  - 'longleaf-pine: grass stage, foot-long needles'
+  split_from: longleaf-pine
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - product
+  region: north-america
+  why: Fast-growing southeastern plantation pine for pulp and timber; slash pine was tapped for turpentine
+    and shortleaf has the widest range; Arkansas state tree ("pine").
+- id: screwbean-mesquite
+  names:
+  - screwbean mesquite
+  scientific: Prosopis pubescens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mesquite: straight pods'
+  split_from: mesquite
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: north-america
+  why: Mesquite with tight spiral pods eaten by desert peoples.
+- id: texas-madrone
+  names:
+  - Texas madrone
+  - naked Indian
+  scientific: Arbutus xalapensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pacific-madrone: coastal'
+  split_from: pacific-madrone
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Smooth pale peeling bark of the Texas hills and the Chihuahuan mountains.
+- id: single-leaf-pinyon
+  names:
+  - single-leaf pinyon
+  scientific: Pinus monophylla
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pinyon-pine: paired needles'
+  split_from: pinyon-pine
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: north-america
+  why: Great Basin pinyon with a single cylindrical needle; Paiute and Shoshone pine nuts; Nevada state
+    tree.
+- id: california-black-oak
+  names:
+  - California black oak
+  scientific: Quercus kelloggii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'red-oak: eastern'
+  split_from: red-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - striking
+  region: north-america
+  why: Acorn staple of Native Californians; an oak that turns gold in autumn.
+- id: cardon
+  names:
+  - cardón
+  scientific: Pachycereus pringlei
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'saguaro: Arizona species, fewer stems'
+  split_from: saguaro
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  - cultural
+  region: north-america
+  why: Baja cactus, the world's tallest, and a food of the Seri.
+- id: red-maple
+  names:
+  - red maple
+  - swamp maple
+  scientific: Acer rubrum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sugar-maple: sweeter sap, orange colour'
+  split_from: sugar-maple
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - cultural
+  region: north-america
+  why: Maple with red twigs, flowers and brilliant autumn leaves; Rhode Island's state tree.
+- id: silver-maple
+  names:
+  - silver maple
+  scientific: Acer saccharinum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'red-maple: smaller, redder'
+  split_from: sugar-maple
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: north-america
+  why: Fast riverine maple with silver-backed leaves and early-spring sap.
+- id: bigleaf-maple
+  names:
+  - bigleaf maple
+  scientific: Acer macrophyllum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sugar-maple: eastern, smaller leaves'
+  split_from: sugar-maple
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: north-america
+  why: Pacific maple with the biggest maple leaves, paddles and moss-draped limbs.
+- id: northern-white-cedar
+  names:
+  - northern white-cedar
+  - eastern arborvitae
+  scientific: Thuja occidentalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'western-redcedar: larger Pacific'
+  split_from: western-redcedar
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  region: north-america
+  why: Boreal swamp cedar, the annedda whose vitamin C tea saved Cartier's crew in 1536; Ojibwe Grandmother
+    Cedar.
+- id: chokecherry
+  names:
+  - chokecherry
+  scientific: Prunus virginiana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - toxic
+  - cultural
+  region: north-america
+  why: Fruit pounded with its pits into pemmican, North Dakota's state fruit; seeds and leaves contain
+    cyanide.
+- id: tanoak
+  names:
+  - tanoak
+  scientific: Notholithocarpus densiflorus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-oak: true oak'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - fruit
+  region: north-america
+  why: Acorn staple of the Yurok and Hupa, with a once-vital tanning bark.
+- id: incense-cedar
+  names:
+  - incense cedar
+  scientific: Calocedrus decurrens
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  - cultural
+  region: north-america
+  why: Fragrant scale-leaved conifer, the classic pencil wood.
+- id: monterey-cypress
+  names:
+  - Monterey cypress
+  scientific: Cupressus macrocarpa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: north-america
+  why: Wind-sculpted coastal cypress native to two groves; the Lone Cypress of Pebble Beach is one.
+- id: torrey-pine
+  names:
+  - Torrey pine
+  scientific: Pinus torreyana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: north-america
+  why: Rarest US pine, two small coastal stands.
+- id: coulter-pine
+  names:
+  - Coulter pine
+  - bigcone pine
+  scientific: Pinus coulteri
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: north-america
+  why: Cones among the heaviest in the world, a hazard to hikers.
+- id: california-bay
+  names:
+  - California bay laurel
+  - Oregon myrtle
+  - headache tree
+  - myrtlewood
+  scientific: Umbellularia californica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  - cultural
+  region: north-america
+  why: Aromatic laurel whose leaves cause headaches; nuts roasted by Native peoples.
+- id: sourwood
+  names:
+  - sourwood
+  scientific: Oxydendrum arboreum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - product
+  - fruit
+  region: north-america
+  why: Appalachian tree with lily-of-the-valley flowers, famed honey and red autumn.
+- id: desert-willow
+  names:
+  - desert willow
+  scientific: Chilopsis linearis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - medicinal
+  region: north-america
+  why: Not a willow; trumpet flowers on dry washes, used in medicine.
+- id: ocotillo
+  names:
+  - ocotillo
+  scientific: Fouquieria splendens
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  region: north-america
+  why: Spiny whip-stemmed desert plant with red flower tips; cut canes root into living fences.
+- id: ponderosa-pine
+  names:
+  - ponderosa pine
+  - western yellow pine
+  - Jeffrey pine
+  scientific: Pinus ponderosa
+  rank: group
+  stands_for:
+  - Pinus jeffreyi (Jeffrey pine)
+  - Pinus arizonica (Arizona pine)
+  distinct_from:
+  - 'lodgepole-pine: slender, two needles'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - product
+  - cultural
+  region: north-america
+  why: Vanilla-scented, orange-plated bark; the defining western pine and Montana's state tree. Jeffrey
+    pine, its higher Sierran twin, smells of butterscotch.
+- id: lodgepole-pine
+  names:
+  - lodgepole pine
+  scientific: Pinus contorta
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ponderosa-pine: larger, fire-resistant'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  region: north-america
+  why: Fire-seeded straight pine, used for tipi and lodge poles by Plains peoples; Alberta's tree.
+- id: monterey-pine
+  names:
+  - Monterey pine
+  - radiata pine
+  scientific: Pinus radiata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ponderosa-pine: inland'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - product
+  region: north-america
+  why: Rare in the wild on the Monterey coast, now the world's plantation pine.
+- id: gray-pine
+  names:
+  - gray pine
+  - foothill pine
+  scientific: Pinus sabiniana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ponderosa-pine: darker, denser'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: north-america
+  why: Thin grey-green foothill pine with big heavy cones and edible seeds.
+- id: whitebark-pine
+  names:
+  - whitebark pine
+  - limber pine
+  scientific: Pinus albicaulis
+  rank: group
+  stands_for:
+  - Pinus flexilis (limber pine)
+  distinct_from:
+  - 'eastern-white-pine: lowland white pine'
+  split_from: eastern-white-pine
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  - cultural
+  region: north-america
+  why: High pine seeded by Clark's nutcrackers, a keystone food for grizzlies and Native peoples; limber
+    pine, its lower twin, has bendable twigs.
+- id: pitch-pine
+  names:
+  - pitch pine
+  scientific: Pinus rigida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'longleaf-pine: southern savanna'
+  split_from: longleaf-pine
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: north-america
+  why: Resprouting pine of the New Jersey Pine Barrens and sand plains, with tufts of needles on the trunk;
+    yielded pitch and tar.
+- id: jack-pine
+  names:
+  - jack pine
+  scientific: Pinus banksiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'red-pine: longer needles'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: north-america
+  why: Boreal pine with fire-sealed cones, nest tree for the Kirtland's warbler, and subject of Tom Thomson's
+    painting The Jack Pine.
+- id: red-pine
+  names:
+  - red pine
+  - Norway pine
+  scientific: Pinus resinosa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jack-pine: shorter, twisted'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: north-america
+  why: Minnesota state tree, straight-boled with orange-red scaly bark.
+- id: white-spruce
+  names:
+  - white spruce
+  scientific: Picea glauca
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-spruce: wetter, smaller'
+  - 'engelmann-spruce: southwestern'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  region: north-america
+  why: Manitoba's tree, and South Dakota's as Black Hills spruce; boreal conifer of spruce gum and spruce-root
+    lashing.
+- id: black-spruce
+  names:
+  - black spruce
+  scientific: Picea mariana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-spruce: drier sites'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - striking
+  region: north-america
+  why: Bog-edge boreal spruce of Newfoundland and Labrador's tree; once brewed into spruce beer.
+- id: noble-fir
+  names:
+  - noble fir
+  scientific: Abies procera
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - product
+  region: north-america
+  why: Silver-blue Cascade fir with large cones, a Christmas-tree staple.
+- id: tamarack
+  names:
+  - tamarack
+  - eastern larch
+  scientific: Larix laricina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'western-larch: bigger, western'
+  - 'larch: European larch'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: north-america
+  why: Deciduous conifer that turns gold in boreal bogs; roots used for sewing canoes; Northwest Territories
+    tree since 1999.
+- id: western-larch
+  names:
+  - western larch
+  scientific: Larix occidentalis
+  rank: group
+  stands_for:
+  - Larix lyallii (subalpine larch)
+  distinct_from:
+  - 'tamarack: boreal bog larch'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: north-america
+  why: Tallest larch, yellow in autumn, fire-resistant bark.
+- id: alaska-yellow-cedar
+  names:
+  - Alaska yellow cedar
+  - Nootka cypress
+  - Callitropsis nootkatensis (synonym)
+  - yellow cypress
+  scientific: Cupressus nootkatensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'western-redcedar: reddish wood'
+  split_from: western-redcedar
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - medicinal
+  region: north-america
+  why: Weeping blue-green conifer with rot-proof yellow wood used by the Haida.
+- id: port-orford-cedar
+  names:
+  - Port Orford cedar
+  - Lawson cypress
+  scientific: Chamaecyparis lawsoniana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'incense-cedar: different foliage and uses'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: north-america
+  why: Pale aromatic timber prized in Japan; threatened by root rot.
+- id: pacific-yew
+  names:
+  - Pacific yew
+  scientific: Taxus brevifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'yew: European yew'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - toxic
+  - medicinal
+  - product
+  - cultural
+  region: north-america
+  why: Source of the anticancer drug taxol, and bow wood of Northwest Coast peoples; toxic foliage.
+- id: florida-torreya
+  names:
+  - Florida torreya
+  - stinking cedar
+  scientific: Torreya taxifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'torreya: Asian nutmeg yew'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - toxic
+  - striking
+  region: north-america
+  why: Critically endangered Florida conifer, claimed in local lore as the gopher wood of Noah's ark.
+- id: california-nutmeg
+  names:
+  - California nutmeg
+  scientific: Torreya californica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'florida-torreya: Florida'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  region: north-america
+  why: Nutmeg-like seeds of a California yew relative.
+- id: american-elm
+  names:
+  - American elm
+  scientific: Ulmus americana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'elm: European elms'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - cultural
+  region: north-america
+  why: Vase-shaped elm of eastern streets, devastated by Dutch elm disease; state tree of Massachusetts
+    and North Dakota.
+- id: slippery-elm
+  names:
+  - slippery elm
+  scientific: Ulmus rubra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'american-elm: smoother, vase-shaped'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: north-america
+  why: Mucilaginous inner bark used in lozenges and teas.
+- id: american-beech
+  names:
+  - American beech
+  scientific: Fagus grandifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'european-beech: Old World'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - fruit
+  region: north-america
+  why: Smooth grey bark that holds carved initials; beechnuts.
+- id: yellow-birch
+  names:
+  - yellow birch
+  scientific: Betula alleghaniensis
+  rank: group
+  stands_for:
+  - Betula lenta (sweet birch)
+  distinct_from:
+  - 'paper-birch: white bark'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: north-america
+  why: Quebec's tree; silver-gold peeling bark and wintergreen-scented twigs; sweet birch's oil was distilled
+    for wintergreen and birch beer.
+- id: paper-birch
+  names:
+  - paper birch
+  - canoe birch
+  scientific: Betula papyrifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'birch: European birches'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  region: north-america
+  why: White peeling bark for birch-bark canoes, scrolls and baskets; Saskatchewan's tree and New Hampshire's.
+- id: american-basswood
+  names:
+  - American basswood
+  - linden
+  scientific: Tilia americana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'linden: European'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - flowers
+  - cultural
+  region: north-america
+  why: Fibrous inner bark for rope and mats, prized linden honey and soft carving wood; Haudenosaunee
+    carve their wooden masks from living basswood.
+- id: white-ash
+  names:
+  - white ash
+  scientific: Fraxinus americana
+  rank: group
+  stands_for:
+  - Fraxinus pennsylvanica (green ash)
+  distinct_from:
+  - 'ash: European ash'
+  - 'black-ash: swamp ash'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  region: north-america
+  why: Baseball bat wood, killed by emerald ash borer.
+- id: black-ash
+  names:
+  - black ash
+  - brown ash
+  scientific: Fraxinus nigra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-ash: upland'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: north-america
+  why: Swamp ash whose pounded layers become Haudenosaunee and Wabanaki baskets.
+- id: eastern-hophornbeam
+  names:
+  - eastern hophornbeam
+  - ironwood
+  scientific: Ostrya virginiana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Very hard wood and hop-like fruit clusters.
+- id: american-chestnut
+  names:
+  - American chestnut
+  scientific: Castanea dentata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sweet-chestnut: European'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - fruit
+  - product
+  region: north-america
+  why: Once a dominant eastern tree; chestnut blight from 1904 made it functionally extinct, surviving
+    as root sprouts.
+- id: red-alder
+  names:
+  - red alder
+  scientific: Alnus rubra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'alder: European'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - striking
+  region: north-america
+  why: Pacific alder; smokewood for salmon, dye and nitrogen fixing.
+- id: american-sycamore
+  names:
+  - American sycamore
+  - buttonwood
+  scientific: Platanus occidentalis
+  rank: group
+  stands_for:
+  - Platanus wrightii (Arizona sycamore)
+  - Platanus racemosa (California sycamore)
+  distinct_from:
+  - 'plane-tree: Old World'
+  - 'sycamore-maple: European maple'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - cultural
+  region: north-america
+  why: Mottled white upper bark; widest-trunked hardwood in the east.
+- id: ohio-buckeye
+  names:
+  - Ohio buckeye
+  scientific: Aesculus glabra
+  rank: group
+  stands_for:
+  - Aesculus flava (yellow buckeye)
+  distinct_from:
+  - 'horse-chestnut: Old World'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - folklore
+  - cultural
+  region: north-america
+  why: State tree of Ohio; polished nut carried for luck, toxic.
+- id: california-buckeye
+  names:
+  - California buckeye
+  scientific: Aesculus californica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ohio-buckeye: eastern'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - flowers
+  - cultural
+  region: north-america
+  why: Summer-dormant, with white flower candles; toxic nuts leached or used to stun fish.
+- id: american-persimmon
+  names:
+  - American persimmon
+  scientific: Diospyros virginiana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'persimmon: Asian'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - folklore
+  - product
+  region: north-america
+  why: Astringent fruit sweet only when frost-ripe; seeds are split to forecast winter, and its wood made
+    golf-club "woods".
+- id: black-cherry
+  names:
+  - black cherry
+  scientific: Prunus serotina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'wild-cherry: European'
+  - 'chokecherry: shrubbier'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - toxic
+  - product
+  region: north-america
+  why: Fine cabinet wood; fruit flavours; cyanogenic wilted leaves.
+- id: eastern-redbud
+  names:
+  - eastern redbud
+  scientific: Cercis canadensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'judas-tree: Mediterranean'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - fruit
+  - cultural
+  region: north-america
+  why: Pink spring flowers on bare wood; Oklahoma state tree.
+- id: black-willow
+  names:
+  - black willow
+  scientific: Salix nigra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-willow: European'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  region: north-america
+  why: Largest North American willow, with salicin-rich bark.
+- id: franklin-tree
+  names:
+  - Franklin tree
+  scientific: Franklinia alatamaha
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'camellia: Asian relative'
+  split_from: null
+  tier: 2
+  status: extinct-in-wild
+  inclusion:
+  - flowers
+  - folklore
+  - striking
+  region: north-america
+  why: Discovered by John and William Bartram on Georgia's Altamaha River in 1765, last seen in the wild
+    in 1803 (extinct in the wild); all living trees descend from Bartram's seed.
+- id: american-holly
+  names:
+  - American holly
+  scientific: Ilex opaca
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'holly: European'
+  - 'yaupon: caffeinated holly'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - striking
+  region: north-america
+  why: Christmas holly; state tree of Delaware.
+- id: yaupon
+  names:
+  - yaupon holly
+  scientific: Ilex vomitoria
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'american-holly: no caffeine'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - medicinal
+  region: north-america
+  why: North America's main native caffeinated plant, brewed into the ceremonial black drink of Southeastern
+    peoples.
+- id: texas-mountain-laurel
+  names:
+  - Texas mountain laurel
+  - mescalbean
+  - Sophora secundiflora (synonym)
+  scientific: Dermatophyllum secundiflorum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - toxic
+  - cultural
+  region: north-america
+  why: Grape-scented violet flowers; toxic red seeds used in ceremony.
+- id: staghorn-sumac
+  names:
+  - staghorn sumac
+  scientific: Rhus typhina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'poison-sumac: toxic swamp sumac'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - cultural
+  region: north-america
+  why: Velvety antlers and red autumn; fruit for sumac-ade; tannin.
+- id: poison-sumac
+  names:
+  - poison sumac
+  scientific: Toxicodendron vernix
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lacquer-tree: Asian relative'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  region: north-america
+  why: Swamp tree with irritant urushiol sap.
+- id: saw-palmetto
+  names:
+  - saw palmetto
+  scientific: Serenoa repens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cabbage-palmetto: tall trunked'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - fruit
+  region: north-america
+  why: Creeping Florida palm with medicinal berries.
+- id: bigleaf-magnolia
+  names:
+  - bigleaf magnolia
+  scientific: Magnolia macrophylla
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'southern-magnolia: evergreen'
+  split_from: southern-magnolia
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Largest simple leaf of any North American tree.
+- id: boxelder
+  names:
+  - boxelder
+  - ash-leaved maple
+  scientific: Acer negundo
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sugar-maple: simple lobed leaves'
+  split_from: sugar-maple
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: north-america
+  why: Compound-leaved maple; sap sugar.
+- id: water-tupelo
+  names:
+  - water tupelo
+  - Ogeechee tupelo
+  - white tupelo
+  - Ogeechee lime
+  scientific: Nyssa aquatica
+  rank: group
+  stands_for:
+  - Nyssa ogeche (Ogeechee tupelo)
+  distinct_from:
+  - 'black-tupelo: upland, scarlet autumn'
+  split_from: black-tupelo
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - fruit
+  region: north-america
+  why: Swollen-based tree of cypress-tupelo swamps; Ogeechee tupelo of the Apalachicola gives most tupelo
+    honey and the tart "Ogeechee lime".
+- id: organ-pipe-cactus
+  names:
+  - organ pipe cactus
+  scientific: Stenocereus thurberi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'saguaro: single trunk'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  - cultural
+  region: north-america
+  why: Many-armed Sonoran cactus; sweet pitaya fruit.
+- id: elephant-tree
+  names:
+  - elephant tree
+  scientific: Bursera microphylla
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'copalquin: Baja elephant tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - medicinal
+  region: north-america
+  why: Sonoran desert tree with fat trunk and incense-like resin.
+- id: copalquin
+  names:
+  - copalquín
+  - Baja elephant tree
+  scientific: Pachycormus discolor
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'elephant-tree: different family'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Contorted, white-skinned Baja desert tree.
+- id: mexican-blue-palm
+  names:
+  - Mexican blue palm
+  scientific: Brahea armata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'california-fan-palm: green'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Silver-blue fan palm of Baja canyons.
+- id: bur-oak
+  names:
+  - bur oak
+  scientific: Quercus macrocarpa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-oak: group'
+  split_from: white-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - fruit
+  region: north-america
+  why: Prairie oak savanna tree with fringed acorn cups and corky twigs, thick-barked against grass fires;
+    often named as Iowa's state oak.
+- id: valley-oak
+  names:
+  - valley oak
+  scientific: Quercus lobata
+  rank: group
+  stands_for:
+  - Quercus douglasii (blue oak)
+  distinct_from:
+  - 'oregon-white-oak: smaller, gnarled northern oak'
+  split_from: white-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  region: north-america
+  why: Largest North American oak, with weeping branch tips in California valleys; blue oak of the foothills
+    has blue-grey leaves.
+- id: oregon-white-oak
+  names:
+  - Oregon white oak
+  - Garry oak
+  scientific: Quercus garryana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'valley-oak: California'
+  split_from: white-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: north-america
+  why: Gnarled oak of the Pacific Northwest prairies that Coast Salish peoples burned to tend camas; British
+    Columbia's only native oak.
+- id: chestnut-oak
+  names:
+  - chestnut oak
+  - rock oak
+  - Quercus prinus (synonym)
+  scientific: Quercus montana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  region: north-america
+  why: Ridge oak with wavy chestnut-like leaves and thick ridged bark that was the main tanbark of Appalachian
+    tanneries.
+- id: red-spruce
+  names:
+  - red spruce
+  - Adirondack spruce
+  scientific: Picea rubens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'black-spruce: smaller boreal bog spruce'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: north-america
+  why: Nova Scotia's tree; Adirondack spruce is a top guitar-top tonewood, and its resin was the first
+    commercial chewing gum, State of Maine Spruce Gum.
+- id: toyon
+  names:
+  - toyon
+  - Christmas berry
+  - California holly
+  scientific: Heteromeles arbutifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - fruit
+  region: north-america
+  why: Chaparral small tree with masses of winter red berries, cooked by Native Californians; Hollywood
+    is said to be named for it.
+- id: white-fir
+  names:
+  - white fir
+  - concolor fir
+  - grand fir
+  - red fir
+  scientific: Abies concolor
+  rank: group
+  stands_for:
+  - Abies grandis (grand fir)
+  - Abies magnifica (red fir)
+  distinct_from:
+  - 'noble-fir: Cascade fir with bract-covered cones'
+  - 'balsam-fir: boreal'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: north-america
+  why: Silvery-needled fir of Sierra Nevada and Rocky Mountain mixed-conifer forest; Sierra red fir forms
+    its own red-barked belt above it.
+- id: arizona-cypress
+  names:
+  - Arizona cypress
+  scientific: Cupressus arizonica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'monterey-cypress: coastal California'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: north-america
+  why: Blue-grey cypress with red flaking bark in the sky-island canyons of Arizona and northern Mexico.
+- id: emory-oak
+  names:
+  - Emory oak
+  - bellota
+  scientific: Quercus emoryi
+  rank: group
+  stands_for:
+  - Quercus arizonica (Arizona white oak)
+  - Quercus oblongifolia (Mexican blue oak)
+  distinct_from:
+  - 'coast-live-oak: Californian evergreen oak'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  region: north-america
+  why: Evergreen oak of the Madrean sky islands whose sweet acorns (bellotas) Western Apache families
+    still gather.
+- id: toothache-tree
+  names:
+  - toothache tree
+  - Hercules' club
+  - prickly ash
+  scientific: Zanthoxylum clava-herculis
+  rank: group
+  stands_for:
+  - Zanthoxylum americanum (northern prickly ash)
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - striking
+  region: north-america
+  why: Trunk studded with corky spine-tipped knobs; chewing the bark numbs the mouth, a folk toothache
+    cure.
+- id: red-mulberry
+  names:
+  - red mulberry
+  scientific: Morus rubra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-mulberry: Asian silkworm mulberry'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: north-america
+  why: Native eastern mulberry with blackberry-like fruit, threatened by hybridising with Asian white
+    mulberry.
+- id: atlantic-white-cedar
+  names:
+  - Atlantic white cedar
+  - swamp cedar
+  scientific: Chamaecyparis thyoides
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'northern-white-cedar: boreal arborvitae'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: north-america
+  why: Spire-shaped conifer of coastal cedar swamps whose rot-proof wood was mined from bogs for shingles.

@@ -1,0 +1,3555 @@
+# europe-mediterranean chunk 3: regions/europe-mediterranean.yaml entries 74-109
+- id: plane-tree
+  names:
+  - plane tree
+  - London plane
+  scientific: Platanus × acerifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'oriental-plane: oriental plane has deeply cut leaves and ancient Greek and Persian lore'
+  - 'american-sycamore: American sycamore is the North American parent'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  habitat:
+    range: hybrid of garden origin (17th century, probably Spain or England); planted in cities across
+      temperate Europe, Asia and North America
+    ecosystem: urban streets, parks, riverbanks
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      - humid
+      note: 'temperature: temperate; moisture: humid to semi-arid'
+    elevation_m:
+    - 0
+    - 800
+    substrate: tolerates compacted, polluted, paved and alkaline soils; best on deep moist loam
+    niche: planted street and park tree; thrives where smoke and dust kill other trees
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single massive trunk, wide spreading crown of heavy limbs
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: 400
+    growth_rate: fast
+    leaves: deciduous broadleaf, palmately lobed with 3-5 pointed lobes, bright green, 12-25 cm
+    seasonal: yellow-brown dull autumn colour; leaves shed late
+    flowers: inconspicuous round clusters on hanging stalks, spring
+    fruit_visible: spiky balls about 3 cm, usually 2 per stalk, hanging through winter and breaking into
+      fluffy seeds
+    bark: smooth, flaking in irregular patches that expose cream, olive and grey layers like camouflage;
+      later ridged at the base
+  timber:
+    heartwood: reddish brown, often only in streaks
+    sapwood: white to light pinkish tan, makes up most of the log
+    grain: straight; quartersawn faces show a freckled ray flecking ("lacewood")
+    texture: fine, even
+    density_kg_m3: 560
+    janka_n: 4180
+    workability: works easily; turns, glues and finishes well
+    rot_resistance: non-durable to perishable
+    scent: null
+    fuel: ordinary hardwood firewood
+    uses:
+    - veneer
+    - plywood
+    - interior trim
+    - crates
+    - flooring
+    - furniture
+    - carving
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - fine hairs on young leaves and fruits irritate eyes and airways
+    dyes: []
+    medicinal: []
+    toxicity: plane leaf and fruit hairs (trichomes) irritate eyes, skin and lungs in spring
+  lore:
+    folklore:
+    - planes of the oriental parent were sacred to Greek and Persian rulers; the hybrid inherits the street-tree
+      prestige
+    cultures:
+    - standard street and square tree of London, Paris, Rome, Madrid and Melbourne; Victorian London planted
+      them because they shed polluted bark
+    symbolism:
+    - emblem of urban Europe; the Paris boulevards and avenues are lined with them
+    notable_trees:
+    - Ancient planes of Berkeley Square, London (planted 1789)
+  game_fit:
+    fields:
+      savagery: 'low: tame, planted, shade-giving town tree'
+      alignment: 'high: civilised, avenue-planted tree suiting settlements'
+    dimensions: []
+    hooks:
+    - settlement avenue tree; flaking-bark visual; irritating seed hairs as a minor hazard
+  sources:
+  - https://www.wood-database.com/london-plane/
+  - https://en.wikipedia.org/wiki/Platanus_%C3%97_acerifolia
+  - https://powo.science.kew.org/results?q=Platanus%20acerifolia
+- id: plum
+  names:
+  - plum
+  - damson
+  - greengage
+  scientific: Prunus domestica
+  rank: group
+  stands_for:
+  - Prunus insititia (damson)
+  distinct_from:
+  - 'blackthorn: blackthorn is a thorny native hedgerow shrub with sloes'
+  - 'cherry-plum: cherry-plum is a distinct early-flowering wild plum'
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  habitat:
+    range: origin uncertain, probably a Caucasus-Anatolia hybrid; cultivated and naturalised across temperate
+      Europe and western Asia since antiquity
+    ecosystem: orchards, hedgerows, woodland edge
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'temperature: cool-temperate to warm-temperate; moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: deep, fertile, well-drained loam
+    niche: orchard and hedgerow fruit tree
+    strata:
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small tree with rounded crown, sometimes suckering
+    height_m:
+    - 4
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous broadleaf, oval, finely toothed, dull dark green
+    seasonal: yellow in autumn; heavy fruit crop in late summer
+    flowers: white, 5 petals, in clusters, early spring before or with the leaves
+    fruit_visible: fleshy drupes 3-7 cm, purple, blue-black, red, yellow or green with a waxy bloom (damson
+      smaller and oval, greengage round and green)
+    bark: grey-brown, rough, fissured into small scaly plates
+  timber:
+    heartwood: orange-brown to reddish brown
+    sapwood: pale yellow
+    grain: straight to irregular
+    texture: fine
+    density_kg_m3: 795
+    janka_n: 6900
+    workability: easy where straight and clear; turns and carves well
+    rot_resistance: null
+    scent: null
+    fuel: good, dense firewood
+    uses:
+    - turned objects
+    - inlay
+    - small furniture
+    - musical instruments
+    - smoking wood
+  products:
+    food:
+    - fresh plums
+    - prunes (dried plums)
+    - jam
+    - slivovitz plum brandy
+    - damson cheese
+    sap_resin_latex:
+    - gum from the trunk (cherry-type gum) was used as an adhesive
+    bark: []
+    leaves: []
+    dyes:
+    - damson skins give a purple-blue dye
+    medicinal:
+    - prunes as a laxative
+    toxicity: kernels contain amygdalin (cyanogenic glycoside); do not chew in quantity
+  lore:
+    folklore:
+    - plum blossom links to spring and renewal in Europe; damson picking is a late-summer ritual in English
+      counties
+    cultures:
+    - slivovitz is a national drink of Serbia and the Balkans; Shropshire Prune damsons were a Welsh border
+      crop
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: reliable annual fruit crop'
+    dimensions: []
+    hooks:
+    - orchard fruit; dried prunes as a preserved food; dense small-craft wood
+  sources:
+  - https://www.wood-database.com/plum/
+  - https://en.wikipedia.org/wiki/Prunus_domestica
+  - https://powo.science.kew.org/results?q=Prunus%20domestica
+- id: prickly-juniper
+  names:
+  - prickly juniper
+  - cade
+  - Canary juniper
+  scientific: Juniperus oxycedrus
+  rank: group
+  stands_for:
+  - Juniperus cedrus (Canary juniper)
+  - Juniperus brevifolia (Azores juniper)
+  - Juniperus macrocarpa
+  distinct_from:
+  - 'common-juniper: common juniper is a low shrub with blue-black berries'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - cultural
+  habitat:
+    range: Mediterranean basin, Canary Islands (J. cedrus), Azores (J. brevifolia), east to the Caucasus
+      and Iran
+    ecosystem: Mediterranean scrub, open woodland and dry mountain slopes
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'moisture: semi-arid to subhumid'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: dry, stony, often calcareous or siliceous soils
+    niche: pioneer of rocky dry slopes in matorral and pine-oak woodland
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: shrub to small, often multi-stemmed, bushy tree with dense crown
+    height_m:
+    - 3
+    - 12
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen needles in whorls of three, 10-20 mm, sharp and prickly, with two white stomatal
+      bands above
+    seasonal: evergreen; berries ripen over two years
+    flowers: tiny cones on separate male and female trees, late winter
+    fruit_visible: berry-like cones 6-15 mm, glossy red-brown when ripe, larger in J. macrocarpa
+    bark: red-brown, fibrous, shredding in long strips
+  timber:
+    heartwood: reddish brown
+    sapwood: pale yellowish
+    grain: straight, often knotty
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard to work in the small sizes produced
+    rot_resistance: durable
+    scent: aromatic, tarry
+    fuel: burns hot and aromatic; wood is the raw material for cade oil
+    uses:
+    - fence posts
+    - small carvings
+    - fuel
+    - cade oil distillation
+  products:
+    food:
+    - berries used as a spice and to flavour spirits in the Mediterranean
+    sap_resin_latex:
+    - cade oil (juniper tar), dry-distilled from the wood, used in veterinary, soap and skin preparations
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - cade oil for eczema, psoriasis and scalp disease; also a traditional pest repellent for livestock
+    toxicity: cade oil is irritant and can be toxic to the skin and kidneys if misused
+  lore:
+    folklore:
+    - juniper smoke and cade oil were used to cleanse and protect livestock and homes in Mediterranean
+      folk practice
+    cultures:
+    - cade oil is documented in Roman and medieval medicine and sold in pharmacies into the 20th century
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'low: scrubby tree but a distinct product (tar oil)'
+    dimensions: []
+    hooks:
+    - dry distillation of wood into tar/oil as a crafting process (resins and tars class); aromatic fuel
+  sources:
+  - https://en.wikipedia.org/wiki/Juniperus_oxycedrus
+  - https://powo.science.kew.org/results?q=Juniperus%20oxycedrus
+  - https://www.euforgen.org/species/juniperus-oxycedrus
+- id: rowan
+  names:
+  - rowan
+  - mountain ash
+  scientific: Sorbus aucuparia
+  rank: group
+  stands_for:
+  - Sorbus americana
+  - Sorbus commixta (Japanese rowan)
+  distinct_from:
+  - 'service-tree: service tree has larger pear-shaped fruit and a true-service pinnate leaf'
+  - 'whitebeam: whitebeam has simple undivided leaves with white undersides'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - cultural
+  - fruit
+  habitat:
+    range: Europe from Iceland and Scandinavia to the Mediterranean mountains, and western Asia; the stands_for
+      taxa are North American and East Asian
+    ecosystem: upland woodland, moorland edge, rocky slopes, birch and pine forest
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      moisture:
+      - humid
+      note: 'temperature: cold-temperate to cool-temperate'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: acidic to neutral, thin or rocky soils; tolerates poor ground
+    niche: pioneer on cliffs, scree and woodland edges; reaches the treeline
+    strata:
+    - understory
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: small slender tree with open rounded crown
+    height_m:
+    - 5
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: 200
+    growth_rate: moderate
+    leaves: deciduous, pinnate with 11-15 toothed leaflets, dark green above and paler below
+    seasonal: red, orange and yellow in autumn
+    flowers: flat clusters of small creamy-white flowers, late spring
+    fruit_visible: dense bunches of round scarlet-orange berries (pomes) 5-8 mm, ripening late summer
+      and eaten by birds
+    bark: smooth silvery grey, with horizontal lenticels, rougher with age
+  timber:
+    heartwood: light reddish brown
+    sapwood: pale cream
+    grain: straight to slightly wavy
+    texture: fine
+    density_kg_m3: 770
+    janka_n: 7520
+    workability: fairly hard to work, turns and takes a polish; Janka value is an estimate from specific
+      gravity
+    rot_resistance: not durable
+    scent: null
+    fuel: good firewood and charcoal
+    uses:
+    - tool handles
+    - turnery
+    - walking sticks
+    - bobbins
+    - small carvings
+    - crooks
+  products:
+    food:
+    - berries made into jelly (rowan jelly) served with game, and infused in liqueurs; must be cooked,
+      not eaten raw in quantity
+    sap_resin_latex: []
+    bark:
+    - bark used for tanning and dyeing
+    leaves: []
+    dyes:
+    - bark and berries produced dyes
+    medicinal:
+    - berries high in vitamin C, used against scurvy and sore throats
+    toxicity: raw berries contain parasorbic acid, which causes stomach upset; cooking or drying converts
+      it to harmless sorbic acid
+  lore:
+    folklore:
+    - Celtic and Norse protective tree against witches and enchantment; twigs tied with red thread above
+      doorways
+    - in Norse myth the rowan saved Thor by bending over a river, the 'salvation of Thor'
+    - Icelandic lore says rowan grew from the bodies of two lovers
+    cultures:
+    - Scottish Highlanders planted it beside houses; rowan crosses protected dairy and cattle
+    symbolism:
+    - protection, healing and the boundary between worlds
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: protective boundary tree against witches and the fey'
+      alignment: 'high: wards against malign magic'
+      weirdness: 'low: bright cheerful berries, ordinary mountain tree'
+    dimensions:
+    - aether
+    hooks:
+    - wards and charms from twigs; berry jelly; staves and sticks
+  sources:
+  - https://www.wood-database.com/rowan/
+  - https://en.wikipedia.org/wiki/Sorbus_aucuparia
+  - https://powo.science.kew.org/results?q=Sorbus%20aucuparia
+- id: saharan-cypress
+  names:
+  - Saharan cypress
+  - tarout
+  scientific: Cupressus dupreziana
+  rank: species
+  stands_for:
+  - Cupressus atlantica (Moroccan cypress)
+  distinct_from:
+  - 'italian-cypress: Italian cypress is a columnar, cultivated Mediterranean tree'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: Tassili n'Ajjer plateau in the central Algerian Sahara (about 230 surviving trees); the absorbed
+      Moroccan cypress is a High Atlas relict
+    ecosystem: desert plateau watercourses and gullies
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: 'temperature: hot desert'
+    elevation_m:
+    - 1700
+    - 2200
+    substrate: sandstone gullies, sandy wadi beds
+    niche: relict of a wetter Sahara, surviving where water collects in gullies
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: conical to irregular broad crown, often thin and open, with a stout trunk
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: 2000
+    growth_rate: slow
+    leaves: evergreen scale leaves, grey-green and tightly pressed to the twigs
+    seasonal: evergreen
+    flowers: tiny cones, not showy
+    fruit_visible: round woody cones 2-3 cm, grey-brown with peltate scales; reproduction is poor and
+      often only by seed in rare wet years
+    bark: grey to red-brown, fibrous, peeling in strips
+  timber:
+    heartwood: reddish yellow
+    sapwood: pale
+    grain: straight
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: durable
+    scent: aromatic
+    fuel: aromatic fuel; trees are protected from cutting
+    uses:
+    - local building
+    - carpentry
+    - firewood
+  products:
+    food: []
+    sap_resin_latex:
+    - aromatic resin
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - known to the Tuareg as tarout and protected by local custom
+    cultures:
+    - Tuareg people; trees stand beside Tassili rock art that shows a once-green Sahara
+    symbolism:
+    - relic of a wetter Sahara; some trees thought over 2,000 years old
+    notable_trees:
+    - the oldest Tassili trees, estimated at more than 2,000 years old
+  game_fit:
+    fields:
+      liminality: 'high: ancient lone relic in an empty desert'
+      weirdness: 'high: survives where almost nothing else does'
+    dimensions: []
+    hooks:
+    - landmark desert tree; guarded rare resource
+  sources:
+  - https://en.wikipedia.org/wiki/Cupressus_dupreziana
+  - https://www.iucnredlist.org/search?query=Cupressus%20dupreziana
+  - https://powo.science.kew.org/results?q=Cupressus%20dupreziana
+- id: scots-pine
+  names:
+  - Scots pine
+  - Scotch pine
+  - redwood (timber)
+  scientific: Pinus sylvestris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'eastern-white-pine: five-needled American pine'
+  - 'longleaf-pine: southeastern American pine'
+  - 'japanese-black-pine: Japanese coastal pine'
+  - 'stone-pine: umbrella-crowned Mediterranean pine'
+  - 'maritime-pine: Atlantic and Mediterranean coastal pine'
+  - 'aleppo-pine: Mediterranean lowland pine'
+  - 'black-pine: Austrian and Corsican pines'
+  - 'mountain-pine: shrubby Alpine pine'
+  - 'canary-pine: Canary Islands pine'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  habitat:
+    range: Europe from Scotland and Spain to eastern Siberia, north to Lapland and south to the Mediterranean
+      mountains
+    ecosystem: boreal forest, Caledonian pinewood, mountain pine forest
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'temperature: cold-temperate to cool-temperate; moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 2400
+    substrate: poor sandy, rocky and peaty soils; tolerates drought and frost
+    niche: pioneer on poor soils; forms vast boreal stands, often fire-maintained
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: straight tall trunk when crowded; flat-topped, irregular crown with bare lower trunk in age
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: 700
+    growth_rate: moderate
+    leaves: evergreen needles in pairs, twisted, blue-green, 4-7 cm
+    seasonal: evergreen
+    flowers: small yellow male cones and red female cones in late spring
+    fruit_visible: ovoid woody cones 3-7 cm, green then brown, ripening in the second year
+    bark: upper trunk and branches thin, flaking and bright orange-red; lower trunk thick, grey-brown
+      and plated
+  timber:
+    heartwood: light reddish brown
+    sapwood: pale yellow to nearly white
+    grain: straight
+    texture: medium, even
+    density_kg_m3: 550
+    janka_n: 2420
+    workability: easy with hand and machine tools; glues and finishes well
+    rot_resistance: moderately durable to non-durable; treats well with preservatives
+    scent: mild resinous odour
+    fuel: resinous, burns hot; pine knots used as torches
+    uses:
+    - construction lumber
+    - ship masts
+    - utility poles
+    - posts
+    - flooring
+    - pulpwood
+    - crates
+  products:
+    food: []
+    sap_resin_latex:
+    - resin
+    - turpentine
+    - rosin
+    - Stockholm tar
+    - pitch
+    bark: []
+    leaves:
+    - needles used for pine-needle tea in folk medicine
+    dyes: []
+    medicinal:
+    - pine tar and needles as traditional remedies for coughs and skin complaints
+    toxicity: null
+  lore:
+    folklore:
+    - pine woods were sacred to Slavic and Baltic peoples; the evergreen was brought into winter solstice
+      houses
+    cultures:
+    - Stockholm tar waterproofed wooden ships and roofs across the Baltic; Scots pine masts were the standard
+      of the Royal Navy
+    symbolism:
+    - national tree of Scotland; symbol of the Caledonian Forest
+    notable_trees:
+    - Old pines of Glen Affric and Abernethy Forest, Scotland
+  game_fit:
+    fields:
+      savagery: 'medium: cold, resinous, wolf and wild wood'
+      yield: 'high: timber, tar and turpentine'
+    dimensions: []
+    hooks:
+    - tar and pitch as sealants for boats and torches; mast and plank timber; easy early building wood
+  sources:
+  - https://www.wood-database.com/scots-pine/
+  - https://www.euforgen.org/species/pinus-sylvestris
+  - https://en.wikipedia.org/wiki/Pinus_sylvestris
+- id: serbian-spruce
+  names:
+  - Serbian spruce
+  - Pančić spruce
+  scientific: Picea omorika
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'norway-spruce: Norway spruce is a broad pyramidal tree with drooping branchlets and no silver underside'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Drina River gorges in western Serbia and eastern Bosnia and Herzegovina; total natural range
+      only about 60 ha
+    ecosystem: steep limestone and serpentine gorge slopes, mixed spruce, fir and beech forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 800
+    - 1600
+    substrate: limestone, dolomite and ultramafic soils
+    niche: ice-age relict on cliffs and gorge sides; spreads widely in cultivation
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: extremely slender, pencil-narrow spire with short drooping, upturned branch tips
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.3
+    - 0.8
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen flat needles 1-2 cm, dark glossy green above and two broad white stomatal bands
+      beneath, giving a silver flash
+    seasonal: evergreen
+    flowers: small crimson-purple female cones in spring
+    fruit_visible: ovoid cones 3-6 cm, violet-purple when young, maturing to dark brown
+    bark: thin, orange-brown to grey-brown, scaly
+  timber:
+    heartwood: pale yellowish white to light reddish brown
+    sapwood: not clearly distinct
+    grain: straight
+    texture: fine to medium
+    density_kg_m3: 525
+    janka_n: null
+    workability: comparable to Norway spruce; easy
+    rot_resistance: not durable
+    scent: null
+    fuel: ordinary softwood fuel
+    uses:
+    - construction
+    - joinery
+    - pulpwood
+  products:
+    food: []
+    sap_resin_latex:
+    - resin
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - discovered by botanist Josif Pančić in 1875 on Mount Tara; celebrated as a Serbian natural treasure
+    symbolism:
+    - Serbian relic species; Tara National Park emblem
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: tiny relict range, pencil-thin spire'
+    dimensions: []
+    hooks:
+    - rare mountain relict; narrow evergreen silhouette for gorges
+  sources:
+  - https://en.wikipedia.org/wiki/Picea_omorika
+  - https://www.mdpi.com/1999-4907/15/2/255
+  - https://www.euforgen.org/species/picea-omorika
+- id: service-tree
+  names:
+  - service tree
+  - sorb
+  - true service tree
+  - Sorbus domestica (syn.)
+  scientific: Cormus domestica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'rowan: rowan has smaller round berries and a mountain range'
+  - 'wild-service-tree: wild service tree has maple-like lobed leaves'
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - fruit
+  habitat:
+    range: southern and central Europe, North Africa and western Asia; rare in Britain (a few wild trees
+      in Wyre Forest)
+    ecosystem: warm open woodland, sunny hillsides, hedgerows and old orchards
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: null
+    elevation_m:
+    - 0
+    - 1200
+    substrate: calcareous and well-drained, warm soils
+    niche: scattered tree of oak and mixed deciduous woodland edges
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk, broad rounded crown, long-lived
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.4
+    - 1.0
+    lifespan_y: 500
+    growth_rate: slow
+    leaves: deciduous, pinnate with 11-21 serrated leaflets, rowan-like but downy beneath
+    seasonal: orange-red autumn colour
+    flowers: creamy-white flat clusters, late spring
+    fruit_visible: pear- or apple-shaped pomes 2-3 cm, green-yellow flushed red-brown
+    bark: dark brown, deeply fissured into scaly plates, like pear
+  timber:
+    heartwood: reddish brown
+    sapwood: yellowish
+    grain: fine, straight
+    texture: very fine and dense
+    density_kg_m3: 770
+    janka_n: 7520
+    workability: dense and hard but turns and carves well; Janka is an estimate from specific gravity
+      of the Sorbus group
+    rot_resistance: null
+    scent: null
+    fuel: good firewood
+    uses:
+    - wine press screws
+    - tool handles
+    - planes
+    - musical instrument parts
+    - turnery
+  products:
+    food:
+    - fruit eaten after bletting, used in jams and fermented into drinks in Germany and Austria
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - fruit as a traditional astringent against diarrhoea
+    toxicity: null
+  lore:
+    folklore:
+    - Pliny and Roman writers praised the sorb; the Romans spread it through Europe
+    cultures:
+    - fruit is used in the Frankfurt apple-wine tradition and in Alpine fruit spirits
+    symbolism: []
+    notable_trees:
+    - Britain's Whittington Service Tree is a famous wild individual
+  game_fit:
+    fields:
+      yield: 'low: sparse fruit but dense useful wood'
+    dimensions: []
+    hooks:
+    - bletted fruit as a fermentation ingredient; tool and screw wood
+  sources:
+  - https://www.wood-database.com/rowan/
+  - https://en.wikipedia.org/wiki/Cormus_domestica
+  - https://powo.science.kew.org/results?q=Sorbus%20domestica
+- id: silver-fir
+  names:
+  - silver fir
+  - Greek fir
+  scientific: Abies alba
+  rank: group
+  stands_for:
+  - Abies cephalonica
+  distinct_from:
+  - 'balsam-fir: North American counterpart with blister resin'
+  - 'sacred-fir: Mexican oyamel fir'
+  - 'spanish-fir: relict fir with radial stiff needles'
+  - 'nordmann-fir: Caucasian Christmas-tree fir'
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - product
+  habitat:
+    range: mountains of central and southern Europe (Alps, Carpathians, Pyrenees, Balkans); A. cephalonica
+      on Greek mountains
+    ecosystem: montane mixed forest with beech and spruce
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 300
+    - 1900
+    substrate: deep, fresh, base-rich soils
+    niche: shade-bearing mountain giant, often dominant in old-growth fir-beech forest
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: tall straight columnar trunk, tiered whorled branches, flat-topped in old age
+    height_m:
+    - 30
+    - 50
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: 500
+    growth_rate: moderate
+    leaves: evergreen flat needles 1.5-3 cm, notched tip, dark glossy green above and two white bands
+      beneath
+    seasonal: evergreen
+    flowers: small cones in spring; cones upright
+    fruit_visible: upright cylindrical cones 10-16 cm, green to brown, breaking apart on the tree to shed
+      seed and scales
+    bark: smooth silvery grey with resin blisters when young, breaking into square plates in age
+  timber:
+    heartwood: white to reddish brown
+    sapwood: pale, not distinct
+    grain: straight
+    texture: uniform, medium-coarse
+    density_kg_m3: 415
+    janka_n: 1420
+    workability: easy; glues, stains and finishes well
+    rot_resistance: non-durable to perishable
+    scent: null
+    fuel: moderate softwood fuel
+    uses:
+    - construction lumber
+    - pulpwood
+    - plywood
+    - roof structures
+    - resonance wood for musical instruments
+  products:
+    food: []
+    sap_resin_latex:
+    - Strasbourg turpentine from bark blisters
+    - used in varnish
+    - medicine and microscopy
+    bark: []
+    leaves:
+    - needles used for fir needle oil
+    dyes: []
+    medicinal:
+    - fir resin and needle oil in traditional respiratory remedies
+    toxicity: null
+  lore:
+    folklore:
+    - fir trees feature in Alpine and Black Forest folklore as dwellings of forest spirits
+    cultures:
+    - Strasbourg turpentine from silver fir resin was a medieval apothecary staple
+    symbolism:
+    - the original German Christmas tree before spruce and Nordmann fir took over
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: lit evergreen of midwinter festivals'
+    dimensions: []
+    hooks:
+    - light straight timber; Strasbourg turpentine resin; festival evergreen
+  sources:
+  - https://www.wood-database.com/european-silver-fir/
+  - https://www.euforgen.org/species/abies-alba
+  - https://en.wikipedia.org/wiki/Abies_alba
+- id: smoke-tree
+  names:
+  - smoke tree
+  - smoke bush
+  - Venetian sumac
+  - Eurasian smoketree
+  scientific: Cotinus coggygria
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - flowers
+  habitat:
+    range: southern Europe from Spain to the Balkans, Turkey, the Caucasus, Central Asia and the Himalayas
+      to northern China
+    ecosystem: dry rocky scrub, open oak woodland and limestone slopes
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'moisture: semi-arid to subhumid'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: dry, stony, limy soils
+    niche: sun-loving shrub-tree of dry hillsides
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: large multi-stemmed shrub or small tree with rounded crown
+    height_m:
+    - 3
+    - 8
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous broadleaf, round to oval, entire, blue-green, 3-8 cm
+    seasonal: brilliant yellow, orange and red in autumn; purple-leaved garden forms exist
+    flowers: tiny yellowish flowers in large panicles; after flowering the sterile flower stalks lengthen
+      into feathery pink-purple hairs that look like smoke
+    fruit_visible: small dry drupes, mostly hidden by the hairy plumes
+    bark: greyish brown, thin, flaking, with yellow inner wood
+  timber:
+    heartwood: bright yellow to orange, bitter-smelling
+    sapwood: pale
+    grain: fine, hard
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: small sizes only; turns well
+    rot_resistance: null
+    scent: null
+    fuel: ordinary fuel
+    uses:
+    - small turnery
+    - inlay
+    - dyewood
+    - tannin extract
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - tannin-rich bark and leaves used for leather tanning
+    leaves:
+    - leaves used for tanning
+    dyes:
+    - 'young fustic: yellow-orange dye from the heartwood, used on wool and leather'
+    medicinal:
+    - leaf extracts in Balkan and Turkish folk medicine
+    toxicity: sap can cause contact dermatitis in sensitive people
+  lore:
+    folklore: []
+    cultures:
+    - young fustic dye was traded in Europe from the Middle Ages; the plant is also a staple of cottage
+      gardens
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'medium: looks like it is wreathed in smoke or mist'
+    dimensions: []
+    hooks:
+    - young fustic yellow dye; leather tannin; ornamental scrub
+  sources:
+  - https://en.wikipedia.org/wiki/Cotinus_coggygria
+  - https://powo.science.kew.org/results?q=Cotinus%20coggygria
+- id: sour-cherry
+  names:
+  - sour cherry
+  - morello
+  - marasca
+  - vişne
+  scientific: Prunus cerasus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'wild-cherry: sweet cherry, a tall forest tree with sweet fruit'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  habitat:
+    range: southeast Europe and southwest Asia; an ancient hybrid of ground cherry and sweet cherry, cultivated
+      and naturalised across Europe, western Asia and North America
+    ecosystem: orchards, hedgerows and woodland edge
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: well-drained loam
+    niche: suckering orchard and hedge tree, often forming thickets
+    strata:
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small bushy tree, often suckering, with spreading or weeping branches
+    height_m:
+    - 4
+    - 8
+    trunk_diameter_m:
+    - 0.15
+    - 0.3
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous broadleaf, oval, finely toothed, glossy dark green
+    seasonal: yellow and orange in autumn
+    flowers: white, 5 petals, clustered, spring
+    fruit_visible: round drupes 1.5-2.5 cm, bright to dark red, tart
+    bark: reddish-brown to grey, peeling in horizontal bands with prominent lenticels
+  timber:
+    heartwood: reddish brown
+    sapwood: pale
+    grain: straight
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: fruitwood for smoking and firewood
+    uses:
+    - small turnery
+    - smoking wood
+    - pipe stems
+  products:
+    food:
+    - fruit for maraschino liqueur from Zadar marasca, Balkan and Turkish vişne preserves and juice, Belgian
+      kriek lambic beer, cherry pie and brandy
+    sap_resin_latex:
+    - gum from trunk wounds
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - tart cherry juice used in folk medicine for gout and sleep
+    toxicity: kernels and leaves contain cyanogenic glycosides
+  lore:
+    folklore: []
+    cultures:
+    - Zadar marasca cherries were distilled into maraschino from the 16th century; Belgian kriek is lambic
+      beer fermented on sour cherries
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'medium: reliable fruit for drink and preserves'
+    dimensions: []
+    hooks:
+    - fruit for fermentation and liqueurs; bright red fruit marker
+  sources:
+  - https://en.wikipedia.org/wiki/Prunus_cerasus
+  - https://powo.science.kew.org/results?q=Prunus%20cerasus
+- id: spanish-fir
+  names:
+  - Spanish fir
+  - pinsapo
+  - Sicilian fir
+  scientific: Abies pinsapo
+  rank: group
+  stands_for:
+  - Abies numidica (Algerian fir)
+  - Abies nebrodensis (Sicilian fir)
+  - Abies marocana
+  distinct_from:
+  - 'silver-fir: silver fir has flat two-ranked needles and a wide mountain range'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: Sierra de las Nieves and neighbouring Andalusian limestone peaks (Spain), Rif mountains (Morocco);
+      relatives on Babors (Algeria) and Madonie (Sicily, about 30 trees)
+    ecosystem: relict Mediterranean fir forest on north-facing limestone slopes
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: 'moisture: humid with summer fog'
+    elevation_m:
+    - 1000
+    - 1900
+    substrate: limestone and dolomite
+    niche: tertiary relict kept alive by mountain mist
+    strata:
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: conical, dense dark crown with horizontal whorled branches
+    height_m:
+    - 20
+    - 30
+    trunk_diameter_m:
+    - 0.6
+    - 1.2
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen stiff short needles 1-2 cm arranged radially all round the twig like a bottlebrush,
+      dark green with blue-white bands
+    seasonal: evergreen
+    flowers: small cones in spring; upright cones
+    fruit_visible: upright cylindrical cones 10-20 cm, purplish brown, breaking up on the tree
+    bark: grey, smooth when young, fissured into plates with age
+  timber:
+    heartwood: pale yellowish brown
+    sapwood: not distinct
+    grain: straight
+    texture: medium
+    density_kg_m3: 465
+    janka_n: 2620
+    workability: easy; Janka figure is an estimate from specific gravity
+    rot_resistance: not durable
+    scent: null
+    fuel: ordinary softwood fuel
+    uses:
+    - construction
+    - local carpentry
+  products:
+    food: []
+    sap_resin_latex:
+    - resin
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - pinsapo is the emblem of the Sierra de las Nieves Biosphere Reserve in Andalusia
+    symbolism:
+    - Sicilian fir is among the rarest conifers in the world, about 30 mature trees
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: bottlebrush needles and a relict range kept alive by fog'
+    dimensions: []
+    hooks:
+    - rare fog-forest relict
+  sources:
+  - https://www.wood-database.com/spanish-fir/
+  - https://en.wikipedia.org/wiki/Abies_pinsapo
+  - https://www.iucnredlist.org/species/42299/10684610
+- id: spanish-juniper
+  names:
+  - Spanish juniper
+  - sabina albar
+  scientific: Juniperus thurifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'eastern-redcedar: North American red-cedar juniper'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: western Mediterranean mountains from southern France (Alps, Corsica) across eastern and central
+      Spain to the Atlas of Morocco and northern Algeria
+    ecosystem: open juniper woodland (sabinar) on high continental plateaus
+    climate:
+      temperature:
+      - cold
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: 'temperature: cold-temperate'
+    elevation_m:
+    - 500
+    - 2900
+    substrate: limestone and poor stony soils
+    niche: tolerates extreme cold and summer drought; forms park-like stands on plateaus
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: stout trunk, broad conical crown that flattens with age, spreading branches
+    height_m:
+    - 8
+    - 20
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen scale leaves, dull green, tight on the twigs; juvenile needle leaves on seedlings
+    seasonal: evergreen
+    flowers: small cones on separate male and female trees, winter
+    fruit_visible: round berry-like cones 8-12 mm, dark purple-blue with a waxy bloom
+    bark: dark brown, fibrous, shredding in long narrow strips
+  timber:
+    heartwood: reddish brown, aromatic
+    sapwood: pale
+    grain: straight to twisted
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: easy to work but small and knotty
+    rot_resistance: very durable
+    scent: incense-like, aromatic
+    fuel: aromatic fuel
+    uses:
+    - roof beams
+    - fence posts
+    - sabinar log huts
+    - carving
+    - incense
+  products:
+    food: []
+    sap_resin_latex:
+    - resin burned as incense (thurifera means incense-bearing)
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - berry and resin extracts in traditional medicine
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Spanish villages cut sabina beams for roofs; the Spanish sabinar of Soria and Teruel is a protected
+      landscape
+    symbolism:
+    - incense tree of Iberia
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'medium: ancient, incense-scented, shrine-like woods'
+    dimensions: []
+    hooks:
+    - incense from resin; very durable roof beams
+  sources:
+  - https://www.euforgen.org/species/juniperus-thurifera
+  - https://en.wikipedia.org/wiki/Juniperus_thurifera
+- id: spindle
+  names:
+  - spindle
+  - European spindle
+  scientific: Euonymus europaeus
+  rank: species
+  stands_for:
+  - Euonymus atropurpureus (eastern wahoo)
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - striking
+  habitat:
+    range: Europe, Anatolia and the Caucasus; the absorbed eastern wahoo is eastern North American
+    ecosystem: hedgerow, woodland edge, scrub on limy soils
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: base-rich and calcareous soils
+    niche: understorey shrub and small tree in old hedges and open woodland
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: deciduous shrub or small tree, multi-stemmed, with four-angled green twigs
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m:
+    - 0.05
+    - 0.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, opposite, oval, finely toothed, dull green
+    seasonal: pink to crimson autumn colour, when the fruit opens
+    flowers: small inconspicuous yellow-green, 4 petals, late spring
+    fruit_visible: four-lobed bright pink capsules that split to show orange seeds hanging on threads,
+      autumn
+    bark: smooth green when young, becoming grey-brown with shallow fissures
+  timber:
+    heartwood: pale yellow-white
+    sapwood: not distinct
+    grain: fine, close
+    texture: very fine and hard
+    density_kg_m3: null
+    janka_n: null
+    workability: hard, cuts to a sharp point without splintering
+    rot_resistance: null
+    scent: null
+    fuel: made into fine charcoal for artists
+    uses:
+    - spindles for spinning wool
+    - skewers
+    - toothpicks
+    - knitting needles
+    - pegs
+    - artists' charcoal
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes:
+    - seeds and capsules once gave a yellow or green dye
+    medicinal:
+    - historical use as a purgative and insecticide for head lice
+    toxicity: 'all parts, especially fruit and seeds, are toxic to humans and livestock (cardiac glycosides,
+      alkaloids): vomiting, diarrhoea and in severe cases liver and kidney damage'
+  lore:
+    folklore:
+    - named for Euonyme, mother of the Furies in Greek mythology; also called 'death-berry' in parts of
+      Britain
+    cultures:
+    - spindle wood was the standard for hand spinning before the spinning wheel
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'medium: pretty but poisonous'
+      liminality: 'medium: hedge tree of Furies and death-berry lore'
+    dimensions: []
+    hooks:
+    - poison source; fine charcoal for drawing; spindle and needle wood
+  sources:
+  - https://en.wikipedia.org/wiki/Euonymus_europaeus
+  - https://forest.jrc.ec.europa.eu/media/atlas/Euonymus_europaeus.pdf
+  - https://bsbi.org/in-your-area/local-botany/co-fermanagh/fermanagh-species-accounts/euonymus-europaeus-l
+- id: stone-pine
+  names:
+  - stone pine
+  - umbrella pine
+  scientific: Pinus pinea
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'swiss-stone-pine: five-needled alpine stone pine'
+  - 'scots-pine: orange-barked pine of northern Europe'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - striking
+  habitat:
+    range: Mediterranean coasts of Iberia, Italy, Greece, Turkey and the Levant; widely planted since
+      Roman times, so native range is debated
+    ecosystem: coastal sand dune pine woods, Mediterranean pine forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'moisture: semi-arid to subhumid'
+    elevation_m:
+    - 0
+    - 1000
+    substrate: sandy, well-drained, siliceous soils; tolerates salt spray
+    niche: coastal dune stabiliser; park tree
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: bushy globe when young, umbrella canopy on a thick trunk in mid-age, broad flat crown in age
+    height_m:
+    - 12
+    - 25
+    trunk_diameter_m:
+    - 0.6
+    - 1.2
+    lifespan_y: 250
+    growth_rate: moderate
+    leaves: evergreen needles in pairs, 10-20 cm, stiff, bright green; juveniles have blue-green single
+      needles
+    seasonal: evergreen
+    flowers: small yellow male cones in spring; female cones take three years to mature
+    fruit_visible: large broad ovoid cones 8-15 cm, glossy red-brown, holding hard-shelled nuts
+    bark: thick, orange-red to grey, deeply fissured into broad scaly plates
+  timber:
+    heartwood: light reddish brown
+    sapwood: pale yellow
+    grain: straight
+    texture: medium
+    density_kg_m3: null
+    janka_n: null
+    workability: easy
+    rot_resistance: not durable
+    scent: resinous
+    fuel: cones and wood burn well; cone shells used as fuel
+    uses:
+    - boat building
+    - packaging
+    - carpentry
+    - firewood
+  products:
+    food:
+    - pine nuts (pinoli) eaten raw and used in pesto, marzipan sweets and Catalan and Italian pastry
+    sap_resin_latex:
+    - resin
+    - pitch
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: some pine nuts can cause a temporary bitter taste disorder (pine mouth) in sensitive people
+  lore:
+    folklore: []
+    cultures:
+    - pine nuts were eaten from prehistoric times; the tree defines the Roman landscape of the Via Appia
+      and Ostia
+    symbolism:
+    - emblem of the Roman skyline, immortalised by Respighi's 'Pines of Rome'
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: edible nuts from a distinctive tree'
+    dimensions: []
+    hooks:
+    - pine-nut food crop; shade tree for roads and estates
+  sources:
+  - https://en.wikipedia.org/wiki/Pinus_pinea
+  - https://www.euforgen.org/species/pinus-pinea
+  - https://trees.stanford.edu/ENCYC/PINpinea.htm
+- id: strawberry-tree
+  names:
+  - strawberry tree
+  - arbutus
+  scientific: Arbutus unedo
+  rank: species
+  stands_for:
+  - Arbutus canariensis (Canary strawberry tree)
+  distinct_from:
+  - 'pacific-madrone: Pacific American relative with larger leaves'
+  - 'greek-strawberry-tree: Arbutus andrachne, smooth cinnamon bark'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - striking
+  habitat:
+    range: Mediterranean basin and Atlantic Europe north to Ireland (Killarney), the Canary Islands for
+      the absorbed relative
+    ecosystem: Mediterranean maquis and evergreen oak forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: null
+    elevation_m:
+    - 0
+    - 1200
+    substrate: acidic to neutral dry soils; fire-resilient resprouter
+    niche: dense maquis understorey that resprouts after fire
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: evergreen large shrub or small tree, rounded crown, often multi-stemmed
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, leathery, oblong, toothed, dark glossy green
+    seasonal: flowers and ripening fruit share the tree in autumn
+    flowers: clusters of small drooping white to pink urn-shaped bells, autumn
+    fruit_visible: round 2 cm berries, warty, ripening from yellow to scarlet over a year, so ripe and
+      unripe fruit hang together with flowers
+    bark: rough, red-brown, shredding in thin strips
+  timber:
+    heartwood: reddish brown
+    sapwood: paler
+    grain: fine, often irregular
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard, tends to twist and warp on drying
+    rot_resistance: null
+    scent: null
+    fuel: excellent firewood and charcoal
+    uses:
+    - charcoal
+    - turnery
+    - pipe bowls
+    - small carvings
+    - firewood
+  products:
+    food:
+    - mealy sweet berries eaten fresh or made into jam, liqueur and Portuguese medronho brandy
+    sap_resin_latex: []
+    bark:
+    - bark and leaves are tannin-rich and used in tanning
+    leaves:
+    - leaves used in tea as a mild diuretic
+    dyes: []
+    medicinal:
+    - leaf tea as astringent and urinary antiseptic in folk medicine
+    toxicity: berries are mildly intoxicating in quantity when fermented
+  lore:
+    folklore:
+    - Pliny wrote that the name unedo comes from 'unum edo', I eat one
+    cultures:
+    - Portuguese medronho spirit distilled in the Algarve; Italian tricolour tree in the Risorgimento
+      because of its white flowers, red fruit and green leaves
+    symbolism:
+    - Madrid's coat of arms depicts a bear eating from a madroño (strawberry tree); Killarney's arbutus
+      is an Irish relict
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'medium: fruit, brandy, charcoal'
+    dimensions: []
+    hooks:
+    - fermented fruit liqueur; dense charcoal; fire-resprouting understorey
+  sources:
+  - https://en.wikipedia.org/wiki/Arbutus_unedo
+  - https://powo.science.kew.org/results?q=Arbutus%20unedo
+- id: styrax
+  names:
+  - storax
+  - snowbell
+  scientific: Styrax officinalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'anatolian-sweetgum: Liquidambar orientalis, source of the later liquid storax'
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - product
+  - folklore
+  habitat:
+    range: eastern Mediterranean from Italy and the Balkans through Greece, Turkey and the Levant; isolated
+      in Spain and France
+    ecosystem: dry Mediterranean scrub and woodland edges
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'moisture: subhumid to semi-arid'
+    elevation_m:
+    - 0
+    - 1200
+    substrate: dry rocky, calcareous soils
+    niche: shrub-tree of maquis and hill scrub
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: deciduous shrub or small tree with rounded, open crown
+    height_m:
+    - 2
+    - 7
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, oval, felty white beneath, 3-8 cm
+    seasonal: drops leaves in late autumn
+    flowers: pendulous clusters of fragrant white bell flowers with yellow stamens, spring
+    fruit_visible: round grey-felted drupes about 1 cm with one seed
+    bark: grey-brown, smooth then fissured
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: ordinary fuel
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - storax resin (styrax) tapped from the trunk, burned as incense and used in perfumery, fixatives
+      and medicine
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - resin used as an expectorant and antiseptic since antiquity
+    toxicity: null
+  lore:
+    folklore:
+    - storax is the incense named in Pliny, Dioscorides and the Greek temples
+    cultures:
+    - storax was an incense of Egypt, Greece and Rome, and a medieval apothecary resin
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: incense used in temple rites'
+    dimensions:
+    - aether
+    hooks:
+    - incense resin for ritual and perfumery
+  sources:
+  - https://en.wikipedia.org/wiki/Styrax_officinalis
+  - https://powo.science.kew.org/results?q=Styrax%20officinalis
+- id: sumac
+  names:
+  - Sicilian sumac
+  - tanner's sumac
+  - sumac
+  scientific: Rhus coriaria
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  habitat:
+    range: Mediterranean basin, Anatolia, Iran and the Caucasus; cultivated in Sicily, Turkey and the
+      Levant
+    ecosystem: dry rocky scrub and open hillsides
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: dry, stony, poor soils
+    niche: sun-loving pioneer shrub-tree of dry slopes
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous shrub or small tree with spreading, open crown and velvety twigs
+    height_m:
+    - 2
+    - 5
+    trunk_diameter_m:
+    - 0.1
+    - 0.25
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, pinnate with 9-15 hairy toothed leaflets
+    seasonal: red and purple in autumn
+    flowers: dense greenish-white panicles in summer
+    fruit_visible: dense upright clusters of small hairy red-brown drupes, ripening in autumn
+    bark: grey to brown, rough
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: ordinary fuel
+    uses: []
+  products:
+    food:
+    - dried ground sour berries are the spice sumac, a staple in Levantine, Turkish and Persian cooking
+      (za'atar, fattoush, kebab)
+    sap_resin_latex: []
+    bark:
+    - bark used for tanning
+    leaves:
+    - dried leaves are rich in tannin and were used to tan Morocco leather and as a mordant
+    dyes:
+    - tannin-rich leaves and fruits yield black and brown dyes
+    medicinal:
+    - fruit used as an astringent and for digestive complaints in traditional medicine
+    toxicity: relatives (poison sumac) cause dermatitis; R. coriaria is generally safe, but contact allergy
+      occurs in a few
+  lore:
+    folklore: []
+    cultures:
+    - sumac berries were the sour seasoning of Rome before lemons arrived; Sicily exported sumac leaves
+      for tanning for centuries
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'medium: spice and tannin from one shrub'
+    dimensions: []
+    hooks:
+    - sour spice from berries; tannin for leather tanning
+  sources:
+  - https://en.wikipedia.org/wiki/Rhus_coriaria
+  - https://powo.science.kew.org/results?q=Rhus%20coriaria
+- id: sweet-chestnut
+  names:
+  - sweet chestnut
+  - Spanish chestnut
+  - European chestnut
+  scientific: Castanea sativa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'horse-chestnut: unrelated, with inedible conkers'
+  - 'american-chestnut: North American chestnut killed by blight'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - cultural
+  - product
+  habitat:
+    range: southern Europe and Anatolia, widely planted and naturalised north to Britain (Roman introduction)
+    ecosystem: warm-temperate deciduous forest, chestnut groves (castagneti)
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: deep, acidic to neutral, well-drained soils; dislikes chalk
+    niche: forest canopy and managed orchard or coppice
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: massive broad domed crown on a thick, often spirally fluted trunk
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 1.0
+    - 2.5
+    lifespan_y: 500
+    growth_rate: fast
+    leaves: deciduous broadleaf, long lance-shaped with coarse sharp teeth, glossy dark green, up to 25
+      cm
+    seasonal: golden-yellow then brown in autumn
+    flowers: long yellow-cream catkins in midsummer, strongly scented
+    fruit_visible: glossy brown nuts, 2-3 together, in a green spiny husk (burr) that splits in autumn
+    bark: grey-brown, deeply ridged in twisting spirals
+  timber:
+    heartwood: light to medium brown, darkening to reddish brown
+    sapwood: narrow, pale white to light brown
+    grain: straight to spiral or interlocked
+    texture: coarse, uneven
+    density_kg_m3: 590
+    janka_n: 3010
+    workability: easy to work but splits readily when nailed; turns mediocre
+    rot_resistance: durable to very durable
+    scent: null
+    fuel: coppice fuel; burns with sparks
+    uses:
+    - furniture
+    - veneer
+    - carvings
+    - fencing
+    - vineyard stakes
+    - barrels
+    - roof beams
+    - cleft paling
+  products:
+    food:
+    - nuts roasted, boiled or ground into chestnut flour (a mountain staple in Corsica, the Cévennes and
+      the Apennines), marrons glacés, flour for polenta and cakes
+    sap_resin_latex: []
+    bark:
+    - tannin from wood and bark
+    leaves: []
+    dyes: []
+    medicinal:
+    - leaf infusions for coughs in folk medicine
+    toxicity: null
+  lore:
+    folklore:
+    - arbre à pain (bread tree) of Corsica and the Cévennes
+    cultures:
+    - chestnut flour fed mountain communities; roast chestnuts are a street food in Italy, Spain and Portugal
+    symbolism:
+    - the Hundred-Horse Chestnut on Etna, one of the largest and oldest trees in Europe
+    notable_trees:
+    - Hundred-Horse Chestnut (Castagno dei Cento Cavalli), Mount Etna, Sicily, age estimates 2,000 to
+      4,000 years
+  game_fit:
+    fields:
+      yield: 'high: nut staple plus durable timber and tannin'
+    dimensions: []
+    hooks:
+    - chestnut flour staple; rot-resistant posts and stakes; tannin for tanning
+  sources:
+  - https://www.wood-database.com/sweet-chestnut/
+  - https://www.euforgen.org/species/castanea-sativa
+  - https://en.wikipedia.org/wiki/Castanea_sativa
+- id: swiss-stone-pine
+  names:
+  - Swiss stone pine
+  - arolla pine
+  - Siberian pine
+  scientific: Pinus cembra
+  rank: group
+  stands_for:
+  - Pinus sibirica
+  distinct_from:
+  - 'stone-pine: umbrella-crowned Mediterranean pine with large nuts'
+  - 'whitebark-pine: North American treeline pine'
+  - 'korean-pine: East Asian pine nut tree'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  habitat:
+    range: Alps and Carpathians (P. cembra); Ural Mountains, Siberia, Mongolia and northeast Russia (P.
+      sibirica)
+    ecosystem: subalpine larch-stone pine forest and Siberian taiga
+    climate:
+      temperature:
+      - cold
+      moisture:
+      - humid
+      note: 'temperature: subalpine to boreal'
+    elevation_m:
+    - 1200
+    - 2850
+    substrate: acidic or limy rocky soils, cold and well drained
+    niche: treeline tree whose seeds are carried and cached by nutcrackers
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: narrow conical in youth, becoming open and flat-topped, often gnarled at the treeline
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: 1000
+    growth_rate: slow
+    leaves: evergreen needles in bundles of five, 5-12 cm, dark green with blue-white lines
+    seasonal: evergreen
+    flowers: small cones; female cones take three seasons to ripen
+    fruit_visible: egg-shaped purple cones 5-8 cm that never open on the tree; nuts released only when
+      cones rot or are broken by birds
+    bark: thin, grey-brown, smooth then fissured in plates
+  timber:
+    heartwood: pale yellow to reddish brown
+    sapwood: nearly white
+    grain: straight
+    texture: fine, soft and easily carved
+    density_kg_m3: null
+    janka_n: null
+    workability: very easy; excellent for carving
+    rot_resistance: moderately durable
+    scent: sweet resinous scent that persists
+    fuel: ordinary softwood fuel
+    uses:
+    - Alpine room panelling
+    - carving
+    - furniture
+    - bedding chests
+    - pencils
+    - musical instruments
+  products:
+    food:
+    - wingless nuts (cedar nuts) eaten raw or pressed for oil; Siberian pine nuts are a Russian forest
+      food
+    sap_resin_latex:
+    - resin (Carpathian balsam)
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - pine-needle and resin remedies in Alpine and Siberian folk medicine
+    toxicity: null
+  lore:
+    folklore:
+    - wood scent was said to keep moths away and give peaceful sleep
+    cultures:
+    - Alpine carving and panelled Stuben (parlours) of the Tyrol; Russian cedar-nut gathering in Siberia
+    symbolism:
+    - King of the Alps
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'medium: nuts, oil, carving wood'
+    dimensions: []
+    hooks:
+    - treeline nut tree; scented carving wood; bird-cached seed ecology
+  sources:
+  - https://en.wikipedia.org/wiki/Pinus_cembra
+  - https://www.euforgen.org/species/pinus-cembra
+  - https://ies-ows.jrc.ec.europa.eu/efdac/download/Atlas/pdf/Pinus_cembra.pdf
+- id: sycamore-maple
+  names:
+  - sycamore
+  - sycamore maple
+  scientific: Acer pseudoplatanus
+  rank: species
+  stands_for:
+  - Acer cappadocicum
+  distinct_from:
+  - 'sugar-maple: North American maple with orange-red colour and syrup'
+  - 'japanese-maple: small Japanese ornamental maple'
+  - 'norway-maple: Norway maple has sharp-lobed leaves and milky sap'
+  - 'field-maple: small hedgerow maple'
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  habitat:
+    range: central, eastern and southern Europe, the Caucasus; widely naturalised in Britain and beyond
+    ecosystem: montane mixed deciduous forest and woodland edge
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1800
+    substrate: moist, fertile, base-rich soils; tolerates wind and sea spray
+    niche: vigorous gap colonist and shade-casting canopy tree
+    strata:
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: large rounded crown, heavy limbs, tall straight trunk
+    height_m:
+    - 25
+    - 35
+    trunk_diameter_m:
+    - 0.8
+    - 1.5
+    lifespan_y: 400
+    growth_rate: fast
+    leaves: deciduous broadleaf, large palmate, five coarse lobes, dark green above and paler below
+    seasonal: dull yellow-brown in autumn
+    flowers: hanging greenish-yellow panicles, spring, rich in nectar
+    fruit_visible: paired winged seeds (samaras) in a V shape, spinning like helicopters
+    bark: grey-pink, smooth when young, then flaking in orange-brown scales like a plane tree
+  timber:
+    heartwood: not distinct
+    sapwood: white to cream
+    grain: straight; figured as rippled (fiddleback) or quilted
+    texture: fine, even
+    density_kg_m3: 615
+    janka_n: 4680
+    workability: fairly easy; turns, glues and finishes well
+    rot_resistance: non-durable to perishable
+    scent: null
+    fuel: good firewood
+    uses:
+    - violin backs
+    - necks and ribs
+    - furniture
+    - flooring
+    - veneer
+    - kitchenware
+    - turned bowls
+  products:
+    food:
+    - sap can be tapped for syrup and wine, as with other maples
+    sap_resin_latex:
+    - sweet sap
+    bark: []
+    leaves:
+    - leaves historically used as wrappers and fodder
+    dyes: []
+    medicinal: []
+    toxicity: seeds and sprouts of sycamore maple contain hypoglycin A, which causes atypical myopathy
+      in grazing horses
+  lore:
+    folklore:
+    - sycamore was a meeting tree in British villages
+    cultures:
+    - the Tolpuddle Martyrs met beneath one in Dorset in 1834 to form an early trade union
+    symbolism: []
+    notable_trees:
+    - Tolpuddle Martyrs' Tree, Dorset; the Trora Sycamore (Switzerland) is a big ancient maple at Trun
+  game_fit:
+    fields:
+      alignment: 'medium: community meeting and gathering tree'
+    dimensions: []
+    hooks:
+    - figured pale wood for fine instruments; spinning seeds for gliders and toys
+  sources:
+  - https://www.wood-database.com/sycamore-maple/
+  - https://www.euforgen.org/species/acer-pseudoplatanus
+  - https://en.wikipedia.org/wiki/Acer_pseudoplatanus
+- id: thuya
+  names:
+  - thuya
+  - sandarac tree
+  - Barbary thuja
+  - għargħar
+  scientific: Tetraclinis articulata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: North Africa (Morocco, Algeria, Tunisia), Malta and southeast Spain (Cartagena)
+    ecosystem: dry Mediterranean scrub and open conifer woodland
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 1700
+    substrate: limestone and sandy soils
+    niche: fire-resprouting conifer of dry Atlas foothills
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small tree or shrub, bushy and often resprouting from burls after fire
+    height_m:
+    - 5
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 0.8
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, jointed flattened branchlets with tiny scale leaves in whorls of four
+    seasonal: evergreen
+    flowers: tiny cones, not showy
+    fruit_visible: small woody four-scaled cones, about 1 cm, bluish-green then brown
+    bark: grey-brown, fibrous, shredding; resin tears on cuts
+  timber:
+    heartwood: reddish brown, with distinctive burl figure
+    sapwood: pale
+    grain: tight swirling and eyed burl grain
+    texture: fine
+    density_kg_m3: 680
+    janka_n: 5140
+    workability: burls are difficult to dry and work; take a high polish
+    rot_resistance: durable, resists borers
+    scent: fragrant, spicy and cedary
+    fuel: aromatic fuel
+    uses:
+    - burl furniture
+    - boxes
+    - inlay
+    - veneer
+    - Moroccan marquetry in Essaouira
+  products:
+    food: []
+    sap_resin_latex:
+    - sandarac resin
+    - a pale yellow gum used in varnishes
+    - incense
+    - pounce for ink
+    - and historical lacquer
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - sandarac used in traditional medicine and dentistry
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Roman 'citrus wood' tables of burl were a status luxury; Essaouira craftsmen carve thuya burl today
+    symbolism:
+    - national tree of Malta (għargħar), declared in 1933
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'medium: high-value burl and resin'
+    dimensions: []
+    hooks:
+    - burl wood as luxury material; sandarac resin for varnish and incense
+  sources:
+  - https://www.wood-database.com/thuya/
+  - https://en.wikipedia.org/wiki/Tetraclinis
+  - https://powo.science.kew.org/results?q=Tetraclinis%20articulata
+- id: til
+  names:
+  - til
+  - stinkwood
+  - Canary stinkwood
+  scientific: Ocotea foetens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bay-laurel: Mediterranean laurel of culinary and classical lore'
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - striking
+  habitat:
+    range: laurisilva (laurel cloud forest) of Madeira, the Canary Islands and formerly the Azores
+    ecosystem: laurel cloud forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'moisture: humid with trade-wind fog'
+    elevation_m:
+    - 300
+    - 1300
+    substrate: volcanic soils; stream and ravine bottoms
+    niche: tall canopy tree of fog-fed laurel forest
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall tree, sometimes multi-stemmed, broad dense dark crown
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, oblong-lanceolate, glossy dark green, 5-12 cm, with glands at the base
+    seasonal: evergreen
+    flowers: small yellowish-green flowers in axillary clusters
+    fruit_visible: small black berry-like drupes in a red cup
+    bark: dark, rough, with prominent lenticels
+  timber:
+    heartwood: dark brown, fine
+    sapwood: paler
+    grain: fine
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: very high-quality but gives off a foul smell when freshly cut
+    rot_resistance: null
+    scent: foul when green, which gives the tree its name (foetens)
+    fuel: ordinary fuel
+    uses:
+    - furniture
+    - doors
+    - ship timber
+    - carpentry in the islands
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - 'the sacred Garoé of El Hierro: a til said to ''rain'' collected fog water, used by the Bimbache
+      (Bimbaches) as their only water supply until a storm felled it in 1610'
+    cultures:
+    - Bimbache, indigenous people of El Hierro
+    symbolism:
+    - emblem of the Canarian laurisilva, a forest type protected as the Garajonay National Park World
+      Heritage Site on La Gomera
+    notable_trees:
+    - El Árbol Garoé (til of El Hierro, felled by storm 1610); a replacement til was planted in 1949
+  game_fit:
+    fields:
+      liminality: 'high: fog-catching sacred tree, water from mist'
+      weirdness: 'high: foul-smelling wood, trees that ''rain'''
+    dimensions:
+    - aether
+    hooks:
+    - fog-collecting tree as a water source; fine furniture wood with a smell that fades
+  sources:
+  - https://en.wikipedia.org/wiki/Ocotea_foetens
+  - https://www.macaronesian.org/en/show/til-ocotea-foetens
+- id: tree-heath
+  names:
+  - tree heath
+  - briar
+  scientific: Erica arborea
+  rank: species
+  stands_for:
+  - Erica trimera
+  - Erica excelsa
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: Mediterranean basin, Macaronesia, Ethiopia and East African mountains (the absorbed E. trimera
+      and E. excelsa)
+    ecosystem: maquis scrub, heath forest on tropical mountains
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      - tropical
+      moisture:
+      - subhumid
+      - humid
+      note: 'temperature: warm-temperate to montane tropical; moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 3600
+    substrate: acidic siliceous soils
+    niche: fire-adapted scrub and mist-bathed mountain heath forest
+    strata:
+    - shrub
+    - understory
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: large evergreen shrub or small tree with a thick woody burl (lignotuber) at the base
+    height_m:
+    - 2
+    - 8
+    trunk_diameter_m:
+    - 0.1
+    - 0.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: needle-like evergreen leaves in whorls of three or four, dark green
+    seasonal: evergreen; blooms late winter to spring
+    flowers: dense masses of small white fragrant bells, late winter to spring
+    fruit_visible: tiny dry capsules
+    bark: grey-brown, shredding
+  timber:
+    heartwood: red-brown to yellow, dense and hard (burl)
+    sapwood: not distinct
+    grain: interwoven, burl grain
+    texture: very fine
+    density_kg_m3: 910
+    janka_n: 9300
+    workability: briar burl is hard and heat-resistant; excellent for tobacco pipe bowls
+    rot_resistance: null
+    scent: null
+    fuel: very good charcoal and firewood
+    uses:
+    - tobacco pipes
+    - knife handles
+    - charcoal
+    - brooms from twigs
+  products:
+    food:
+    - flowers are an important bee forage plant; heather honey
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - flower tea as a diuretic in folk medicine
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - briar pipes were developed around Saint-Claude, France, after the 1850s from the root burl (bruyère,
+      heath)
+    symbolism:
+    - briar is the name of the classic tobacco pipe material
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'medium: burl and charcoal'
+    dimensions: []
+    hooks:
+    - heat-proof burl for pipes and handles; charcoal; fog heath forests on mountains
+  sources:
+  - https://www.wood-database.com/briar/
+  - https://en.wikipedia.org/wiki/Erica_arborea
+  - https://powo.science.kew.org/results?q=Erica%20arborea
+- id: turkey-oak
+  names:
+  - Turkey oak
+  - cerris oak
+  scientific: Quercus cerris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: English oak has rounded-lobed leaves and a smooth acorn cup'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: southeast and south-central Europe and Asia Minor; naturalised in Britain and elsewhere
+    ecosystem: warm-temperate deciduous oak forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: deep, well-drained, neutral to acidic soils; avoids shallow limestone
+    niche: fast-growing canopy oak; thrives on poor soils
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tall, rounded crown on a straight trunk
+    height_m:
+    - 25
+    - 35
+    trunk_diameter_m:
+    - 0.8
+    - 1.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, narrow, sharply lobed, rough above, grey-hairy below
+    seasonal: dull yellow-brown autumn colour; leaves often hang on in winter
+    flowers: yellow-green catkins in spring
+    fruit_visible: acorns 2-3 cm in cups covered with long curled, shaggy scales; ripen in the second
+      year
+    bark: dark grey, deeply furrowed, with orange cracks showing between ridges
+  timber:
+    heartwood: light to medium reddish brown
+    sapwood: paler
+    grain: coarse, medium-large pores
+    texture: coarse
+    density_kg_m3: 720
+    janka_n: 5340
+    workability: works much like other oaks; prone to warping and splitting; Janka is an estimate from
+      specific gravity
+    rot_resistance: moderately durable to durable
+    scent: null
+    fuel: excellent firewood, hot-burning
+    uses:
+    - firewood
+    - railway sleepers
+    - flooring
+    - crates
+    - pallets
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: acorns contain tannins, poisonous to livestock in large amounts
+  lore:
+    folklore: []
+    cultures:
+    - acorn cups used in tanning in southeast Europe
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'medium: reliable fuel and cheap timber'
+    dimensions: []
+    hooks:
+    - fast firewood oak; shaggy-cupped acorn
+  sources:
+  - https://www.wood-database.com/turkey-oak/
+  - https://www.euforgen.org/species/quercus-cerris
+  - https://en.wikipedia.org/wiki/Quercus_cerris
+- id: turkish-hazel
+  names:
+  - Turkish hazel
+  - Turkish filbert
+  scientific: Corylus colurna
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'hazel: multi-stemmed coppice hazel'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  habitat:
+    range: southeast Europe (Balkans), Anatolia, the Caucasus, northern Iran and the Himalayas
+    ecosystem: mixed deciduous mountain forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'temperature: cool-temperate to warm-temperate'
+    elevation_m:
+    - 0
+    - 1800
+    substrate: well-drained, fertile soils; tolerates drought and pollution
+    niche: canopy tree in mixed deciduous forest
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: single straight trunk, regular pyramidal to conical crown
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, broad, rounded, coarsely double-toothed, dark green
+    seasonal: yellow in autumn
+    flowers: long yellow catkins in late winter
+    fruit_visible: nuts in clusters, each in a frilly deeply cut, shaggy husk, ripening in autumn
+    bark: light grey-brown, corky, flaking in rough plates, ornamental
+  timber:
+    heartwood: pinkish brown
+    sapwood: paler
+    grain: straight, fine
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: easy to work; stable
+    rot_resistance: not durable
+    scent: null
+    fuel: ordinary fuel
+    uses:
+    - furniture
+    - veneer
+    - turnery
+    - flooring
+  products:
+    food:
+    - small thick-shelled hazelnuts, edible and sold locally
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - planted as an ornamental in Ottoman and European gardens and as a street tree in Vienna and other
+      cities
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'low: small nuts'
+    dimensions: []
+    hooks:
+    - single-trunk nut tree for avenue planting; frilly husks as decoration
+  sources:
+  - https://en.wikipedia.org/wiki/Corylus_colurna
+  - https://www.researchgate.net/publication/289100105_Variation_of_wood_density_in_Turkish_hazel_Corylus_colurna_L_grown_in_the_Czech_Republic
+- id: valonia-oak
+  names:
+  - valonia oak
+  - Vallonea oak
+  - Tabor oak
+  scientific: Quercus ithaburensis subsp. macrolepis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: English oak has smooth small acorn cups'
+  - 'persian-oak: Persian oak is a Zagros mountain oak'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  - cultural
+  habitat:
+    range: southern Italy, the Balkans, Greece (Kea, Evia, Peloponnese), western Turkey, Cyprus and the
+      Levant
+    ecosystem: open oak parkland and deciduous forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - subhumid
+      note: null
+    elevation_m:
+    - 0
+    - 1200
+    substrate: deep loam and clay; tolerant of dry summers
+    niche: parkland and forest oak, often grazed (silvopasture)
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: broad rounded crown on a thick trunk; majestic old specimens
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.8
+    - 2.0
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: semi-deciduous to deciduous, oblong with 7-10 pairs of triangular teeth, dull green, grey
+      felty beneath
+    seasonal: leaves yellow-brown and often hang on until spring
+    flowers: yellow-green catkins in spring
+    fruit_visible: very large acorns up to 4 cm, in huge flat shaggy cups up to 5-6 cm across with long
+      curved scales
+    bark: light grey, deeply fissured
+  timber:
+    heartwood: brown
+    sapwood: pale
+    grain: coarse
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and heavy; difficult
+    rot_resistance: durable
+    scent: null
+    fuel: excellent firewood and charcoal
+    uses:
+    - ship timbers
+    - construction
+    - charcoal
+    - firewood
+  products:
+    food:
+    - acorns eaten by livestock (pigs) and, in famine, ground by people
+    sap_resin_latex: []
+    bark:
+    - tannin-rich bark
+    leaves: []
+    dyes:
+    - valonia (the huge cups) yields tannin of 20-40% for black dyes
+    medicinal: []
+    toxicity: acorn tannins are toxic to livestock in excess
+  lore:
+    folklore: []
+    cultures:
+    - valonia cups were a leading tannin export of Greece and Anatolia to European tanneries in the 19th
+      century
+    symbolism:
+    - Kea (Tzia) valonia oak forest is the species' stronghold in Greece
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: tannin cups and acorns'
+    dimensions: []
+    hooks:
+    - tannin source for leather and black dyes; massive acorns for swine
+  sources:
+  - https://research.fs.usda.gov/download/treesearch/68570.pdf
+  - https://en.wikipedia.org/wiki/Quercus_ithaburensis_subsp._macrolepis
+  - https://www.agforward.eu/documents/leaflets/07_Rediscovering_valonia_oak_acorns.pdf
+- id: vinhatico
+  names:
+  - vinhático
+  - Madeira mahogany
+  scientific: Persea indica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'avocado: cultivated fruit relative'
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  habitat:
+    range: laurisilva of Madeira, the Canary Islands and the Azores
+    ecosystem: laurel cloud forest
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - humid
+      note: 'moisture: humid with fog'
+    elevation_m:
+    - 300
+    - 1300
+    substrate: volcanic soils in ravines and humid slopes
+    niche: canopy tree of Macaronesian laurel forest
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: large evergreen tree with a dense rounded crown
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 1.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, large, oval, leathery, glossy dark green, with a rusty tomentum beneath when young
+    seasonal: evergreen
+    flowers: small yellowish flowers in clusters
+    fruit_visible: small oval black berries, 1-2 cm, in a red cup, bird-dispersed
+    bark: dark grey-brown, furrowed
+  timber:
+    heartwood: reddish brown to deep pink, resembling mahogany
+    sapwood: paler
+    grain: straight
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: easy; takes a fine polish
+    rot_resistance: null
+    scent: null
+    fuel: ordinary fuel
+    uses:
+    - furniture
+    - cabinetmaking
+    - carving
+    - Madeira wine-cask furnishings
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - its wood was marketed as 'Madeira mahogany' and shipped to Portugal and Britain for furniture
+    symbolism:
+    - a Tertiary relict of the Laurasian laurel flora
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'medium: living fossil of an older world'
+    dimensions: []
+    hooks:
+    - red furniture wood from a fog forest
+  sources:
+  - https://en.wikipedia.org/wiki/Persea_indica
+  - http://avocadosource.com/temp/OLD%20WAC%20II/WAC2_p191.htm
+- id: white-poplar
+  names:
+  - white poplar
+  - abele
+  - grey poplar
+  scientific: Populus alba
+  rank: group
+  stands_for:
+  - Populus × canescens (grey poplar)
+  distinct_from:
+  - 'black-poplar: black poplar has dark furrowed bark and a diamond leaf'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  habitat:
+    range: central and southern Europe, North Africa and western and central Asia; naturalised elsewhere
+    ecosystem: riverine woodland and floodplain forest
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - subhumid
+      - wet
+      note: 'temperature: warm-temperate to cool-temperate; moisture: subhumid with wet soils'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: moist alluvial soils, tolerates salt and drought
+    niche: pioneer on river terraces; spreads by root suckers
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: broad open crown, suckers freely into thickets
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m:
+    - 0.6
+    - 1.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous, rounded to palmately lobed, dark green above and densely silver-white felted beneath,
+      flickering in wind
+    seasonal: yellow in autumn, white undersides flash in wind
+    flowers: grey-brown catkins in early spring on separate trees
+    fruit_visible: cottony seed fluff in early summer
+    bark: smooth greenish-white to creamy grey with dark diamond-shaped lenticels, becoming dark and furrowed
+      at the base
+  timber:
+    heartwood: pale, little different from sapwood
+    sapwood: pale cream
+    grain: straight to interlocked
+    texture: fine, soft
+    density_kg_m3: 440
+    janka_n: 1820
+    workability: easy; fuzzy when machined
+    rot_resistance: perishable
+    scent: null
+    fuel: poor fuel
+    uses:
+    - panels for painting
+    - crates
+    - matches
+    - pulp
+    - light furniture
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - bark has salicin and was used like willow bark
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark and buds in folk medicine as a febrifuge
+    toxicity: null
+  lore:
+    folklore:
+    - Heracles crowned himself with white poplar on returning from the underworld; the leaves' dark side
+      faced the dead, the white side the living
+    cultures:
+    - Renaissance painters such as Leonardo used white poplar panels (e.g. the Mona Lisa)
+    symbolism:
+    - sacred to Heracles; poplar tree of Hades
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: tree of Heracles'' return from Hades, two-faced leaves'
+    dimensions:
+    - aether
+    hooks:
+    - silver-flashing leaves as a landmark; panel wood for painting
+  sources:
+  - https://www.wood-database.com/white-poplar/
+  - https://en.wikipedia.org/wiki/Populus_alba
+- id: white-willow
+  names:
+  - white willow
+  - crack willow
+  - cricket-bat willow
+  scientific: Salix alba
+  rank: group
+  stands_for:
+  - Salix fragilis
+  - Salix alba var. caerulea
+  distinct_from:
+  - 'weeping-willow: pendulous branches, Chinese origin'
+  - 'goat-willow: small pussy-willow shrub-tree'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - medicinal
+  - folklore
+  - product
+  habitat:
+    range: Europe, western and central Asia and North Africa; widely planted and naturalised
+    ecosystem: riverbanks, floodplains, wet meadows
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - wet
+      note: 'temperature: temperate'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: wet, periodically flooded alluvial soils
+    niche: riparian pioneer rooting from broken twigs
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: broad open crown, leaning trunk, often pollarded
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.6
+    - 1.5
+    lifespan_y: 100
+    growth_rate: fast
+    leaves: deciduous, narrow lanceolate, silky-hairy and silver-white beneath, giving a pale shimmer
+    seasonal: yellow in late autumn
+    flowers: catkins in spring with the leaves
+    fruit_visible: cottony seed fluff in early summer
+    bark: grey-brown, deeply fissured with age; twigs yellow-green or olive
+  timber:
+    heartwood: tan to pinkish brown
+    sapwood: yellowish white
+    grain: straight
+    texture: fine to medium, uniform
+    density_kg_m3: 400
+    janka_n: 2530
+    workability: fuzzy surfaces; hard to dry without defects; glues and finishes well
+    rot_resistance: non-durable to perishable
+    scent: null
+    fuel: poor fuel, charcoal for artists and gunpowder
+    uses:
+    - cricket bats
+    - baskets
+    - crates
+    - carving
+    - willow charcoal
+    - gunpowder charcoal
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - bark source of salicin, from which aspirin was developed
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark tea for fever and pain; salicin led to aspirin
+    toxicity: null
+  lore:
+    folklore:
+    - willow is the tree of Hecate, Circe and the moon; Greek myth links willow groves to Persephone's
+      underworld
+    cultures:
+    - withies (osier rods) woven into baskets and hurdles; cricket bats made from cultivated Salix alba
+      var. caerulea
+    symbolism:
+    - grief, healing and lunar magic
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: Hecate''s moon and underworld tree of riverbanks'
+      yield: 'medium: bark medicine, withies, bat wood'
+    dimensions:
+    - aether
+    hooks:
+    - bark painkiller (aspirin precursor); withies for baskets; willow charcoal for drawing
+  sources:
+  - https://www.wood-database.com/white-willow/
+  - https://en.wikipedia.org/wiki/Salix_alba
+  - https://powo.science.kew.org/results?q=Salix%20alba
+- id: whitebeam
+  names:
+  - whitebeam
+  - Swedish whitebeam
+  - Sorbus aria (syn.)
+  scientific: Aria edulis
+  rank: group
+  stands_for:
+  - Scandosorbus intermedia (Swedish whitebeam, syn. Sorbus intermedia)
+  - Arran whitebeams
+  distinct_from:
+  - 'rowan: rowan has pinnate leaves and red berries'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  habitat:
+    range: central and southern Europe, Britain and Ireland (many endemic apomictic microspecies), North
+      Africa; Swedish whitebeam in Scandinavia
+    ecosystem: limestone woodland, scrub and cliffs
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 1800
+    substrate: calcareous and well-drained soils
+    niche: understorey of chalk and limestone woods; clings to cliffs
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: dense rounded to oval crown
+    height_m:
+    - 8
+    - 20
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, simple oval, toothed, dark green above and chalky white felted beneath, flashing
+      silver in wind
+    seasonal: gold-bronze autumn colour; red berries in autumn
+    flowers: white clusters in late spring
+    fruit_visible: orange to crimson round pomes about 1 cm, dotted
+    bark: smooth grey, becoming slightly fissured
+  timber:
+    heartwood: light brown
+    sapwood: pale
+    grain: fine, dense
+    texture: very fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard, turns well
+    rot_resistance: null
+    scent: null
+    fuel: good fuel
+    uses:
+    - tool handles
+    - cogs
+    - furniture
+    - turnery
+    - engraving blocks
+  products:
+    food:
+    - fruit edible when bletted, used in jelly and drinks
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - the Old English hwitebeam means white tree
+    cultures:
+    - whitebeam wood was used for cogs and tool handles in Britain
+    symbolism: []
+    notable_trees:
+    - Arran whitebeams (Sorbus arranensis and S. pseudofennica) are among the rarest trees in the world,
+      found only on the Isle of Arran
+  game_fit:
+    fields:
+      weirdness: 'medium: silver-backed leaves and microspecies islands'
+    dimensions: []
+    hooks:
+    - silver-flash leaves; hard wood for cogs and handles
+  sources:
+  - https://en.wikipedia.org/wiki/Sorbus_aria
+  - https://powo.science.kew.org/results?q=Aria%20edulis
+- id: wild-cherry
+  names:
+  - wild cherry
+  - sweet cherry
+  - gean
+  - mazzard
+  scientific: Prunus avium
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-cherry: flowering ornamental cherry'
+  - 'blackthorn: thorny sloe hedge shrub'
+  - 'sour-cherry: tart fruit, suckering orchard tree'
+  - 'bird-cherry: racemed small cherry'
+  - 'mahaleb-cherry: Mediterranean scented cherry'
+  - 'black-cherry: North American timber cherry'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - toxic
+  habitat:
+    range: Europe, western Asia and North Africa; widely naturalised
+    ecosystem: mixed deciduous woodland, woodland edge, hedgerows
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1700
+    substrate: deep, fertile, well-drained soils
+    niche: gap-colonising canopy tree, bird-sown
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: straight trunk and conical to round crown
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.4
+    - 0.8
+    lifespan_y: 100
+    growth_rate: fast
+    leaves: deciduous broadleaf, long oval, sharply double-toothed, drooping, with red glands on the stalk
+    seasonal: red, orange and yellow in autumn
+    flowers: masses of white 5-petalled blossom in early spring
+    fruit_visible: round red to dark red-black drupes 1-2 cm, sweet, in pairs on long stalks
+    bark: glossy reddish-brown to purple-grey, peeling in horizontal bands with prominent lenticels
+  timber:
+    heartwood: light reddish brown, darkening on exposure
+    sapwood: pale yellowish
+    grain: straight
+    texture: fine, even
+    density_kg_m3: 600
+    janka_n: 5120
+    workability: easy; machines, turns and finishes well
+    rot_resistance: moderately durable to non-durable
+    scent: null
+    fuel: fruitwood, good for smoking
+    uses:
+    - furniture
+    - cabinets
+    - veneer
+    - musical instruments
+    - turnery
+    - smoking wood
+  products:
+    food:
+    - sweet cherries eaten fresh and made into kirsch, jam and preserves
+    sap_resin_latex:
+    - gum (cherry gum) used as an adhesive and in medicine
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - stalks used as a diuretic tea in folk medicine
+    toxicity: kernels, leaves and wilted foliage contain cyanogenic glycosides (amygdalin); poisonous
+      to livestock
+  lore:
+    folklore: []
+    cultures:
+    - wild cherry is the ancestor of nearly all cultivated sweet cherries; gean blossom is a spring marker
+      in Britain
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'medium: fruit and cabinet timber'
+    dimensions: []
+    hooks:
+    - fine cabinet wood that darkens with age; cherry brandy; peeling bark
+  sources:
+  - https://www.wood-database.com/sweet-cherry/
+  - https://www.euforgen.org/species/prunus-avium
+  - https://en.wikipedia.org/wiki/Prunus_avium
+- id: wild-jujube
+  names:
+  - wild jujube
+  - lotus jujube
+  - sedra
+  - nbeg
+  scientific: Ziziphus lotus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'jujube: cultivated Chinese date'
+  - 'christs-thorn: Ziziphus spina-christi of the Levant'
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - fruit
+  - cultural
+  habitat:
+    range: North Africa (Morocco to Libya), Sicily, Malta, southeast Spain (Almería) and the Levant
+    ecosystem: arid steppe, semi-desert scrub, wadis
+    climate:
+      temperature:
+      - warm-temperate
+      moisture:
+      - arid
+      - semi-arid
+      note: 'temperature: warm; moisture: arid to semi-arid'
+    elevation_m:
+    - 0
+    - 1000
+    substrate: sandy and gravelly soils; deep root reaches groundwater
+    niche: forms large thorny mounds that shelter other plants
+    strata:
+    - shrub
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: thorny shrub to small tree, dense zigzag branching, often mounded
+    height_m:
+    - 1
+    - 5
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, small oval, glossy green, with paired thorns
+    seasonal: leaves drop in dry season
+    flowers: tiny pale yellow-green, summer
+    fruit_visible: round yellow-red drupes about 1-1.5 cm, sweet and mealy
+    bark: grey-brown, rough; zigzag stems
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: thorny scrub fuel
+    uses:
+    - fencing
+    - firewood
+    - thorny hedges
+  products:
+    food:
+    - fruit (sidra) eaten fresh and dried, ground to a flour or fermented into drink in North Africa
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - leaves and fruit in North African folk medicine for coughs and diabetes
+    toxicity: null
+  lore:
+    folklore:
+    - strong candidate for the lotus of Homer's Odyssey, whose fruit made visitors forget their homes
+    cultures:
+    - lotus-eaters of Djerba; Qur'anic Sidrat al-Muntaha is a related jujube tree
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: forgetfulness-fruit of the Lotus-Eaters'
+      liminality: 'high: Odyssey lotus, tree at the edge of memory'
+    dimensions:
+    - aether
+    hooks:
+    - fruit that dulls the will to leave; thorny natural barrier
+  sources:
+  - https://en.wikipedia.org/wiki/Ziziphus_lotus
+  - https://powo.science.kew.org/results?q=Ziziphus%20lotus
+- id: wild-service-tree
+  names:
+  - wild service tree
+  - chequers tree
+  - Sorbus torminalis (syn.)
+  scientific: Torminalis torminalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'service-tree: pinnate-leaved Sorbus domestica'
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - fruit
+  habitat:
+    range: Europe from England and Spain to the Caucasus and North Africa
+    ecosystem: ancient oak and mixed woodland on clay and limestone
+    climate:
+      temperature:
+      - cool-temperate
+      - warm-temperate
+      moisture:
+      - subhumid
+      - humid
+      note: 'temperature: warm-temperate to cool-temperate; moisture: subhumid to humid'
+    elevation_m:
+    - 0
+    - 1200
+    substrate: heavy clay and calcareous soils
+    niche: ancient-woodland indicator, shade-tolerant understory tree
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: straight slender trunk with a narrow-domed crown
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.3
+    - 0.8
+    lifespan_y: 300
+    growth_rate: slow
+    leaves: deciduous, maple-like with 3-5 pairs of pointed lobes, glossy dark green
+    seasonal: red, bronze and yellow autumn colour
+    flowers: white clusters in late spring
+    fruit_visible: oval brown, speckled berries 1-1.5 cm (chequers), edible when bletted
+    bark: grey-brown, cracked into small square scaly plates (chequerwork)
+  timber:
+    heartwood: reddish brown
+    sapwood: pale
+    grain: fine
+    texture: very fine and hard
+    density_kg_m3: 770
+    janka_n: 7520
+    workability: dense, takes a polish well; Janka is an estimate for Sorbus wood
+    rot_resistance: null
+    scent: null
+    fuel: good firewood
+    uses:
+    - drawing instruments
+    - rulers
+    - pianos and organ parts
+    - cogs
+    - carving
+  products:
+    food:
+    - '''chequers'' berries flavoured ale and were eaten bletted; fruit also in jams and Alpine spirits'
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - berries used against dysentery and colic (torminalis means colic-curing)
+    toxicity: null
+  lore:
+    folklore:
+    - the berries are called chequers from the chequered look of the bark and fruit
+    cultures:
+    - the pub name The Chequers is thought by some to refer to the tree, though the chequerboard sign
+      of moneylenders is the usual explanation
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'low: sparse wild fruit'
+    dimensions: []
+    hooks:
+    - old-woodland indicator tree; fruit for ale; very fine hardwood
+  sources:
+  - https://www.wood-database.com/rowan/
+  - https://en.wikipedia.org/wiki/Sorbus_torminalis
+- id: wych-elm
+  names:
+  - wych elm
+  - Scots elm
+  scientific: Ulmus glabra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'elm: English and field elms of lowland hedges, which sucker'
+  tier: 3
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  habitat:
+    range: Europe from Scotland and Norway to the Caucasus; upland regions of the Mediterranean
+    ecosystem: moist upland and ravine woodland
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1600
+    substrate: moist, base-rich soils; ravines and screes
+    niche: upland ravine canopy tree of ash-wych elm woods
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: wide spreading crown, often forking low, does not sucker
+    height_m:
+    - 20
+    - 40
+    trunk_diameter_m:
+    - 0.6
+    - 1.5
+    lifespan_y: 400
+    growth_rate: fast
+    leaves: deciduous, large and rough, doubly toothed, asymmetric at the base, up to 18 cm
+    seasonal: yellow in autumn
+    flowers: dense red-purple clusters in early spring before the leaves
+    fruit_visible: papery round winged seeds (samaras) with a central seed, in green clusters in late
+      spring
+    bark: grey-brown, smooth when young, becoming furrowed into long ridges
+  timber:
+    heartwood: warm brown
+    sapwood: paler
+    grain: straight to wavy
+    texture: coarse
+    density_kg_m3: 605
+    janka_n: 4400
+    workability: fairly easy; interlocked grain
+    rot_resistance: non-durable; living trees are susceptible to Dutch elm disease
+    scent: null
+    fuel: hard to split; slow-burning
+    uses:
+    - bows (longbows)
+    - furniture
+    - coffin boards
+    - wheel hubs
+    - boat keels
+    - flooring
+  products:
+    food:
+    - samaras and leaves eaten in times of need
+    sap_resin_latex: []
+    bark:
+    - inner bark fibre for cordage and tannin
+    leaves:
+    - leaves used as fodder
+    dyes: []
+    medicinal:
+    - bark decoctions as astringent in folk medicine
+    toxicity: null
+  lore:
+    folklore:
+    - hung against witches in Scotland; its pliant wood made longbows when yew was scarce
+    cultures:
+    - 'Scottish and Norse tradition: the first woman, Embla, was made from an elm in Norse myth'
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'medium: witch-ward in highland lore'
+      savagery: 'medium: wild upland ravine tree'
+    dimensions: []
+    hooks:
+    - bow wood alternative to yew; coffin boards; ward against witches
+  sources:
+  - https://www.wood-database.com/wych-elm/
+  - https://en.wikipedia.org/wiki/Ulmus_glabra
+  - https://www.euforgen.org/species/ulmus-glabra
+- id: yew
+  names:
+  - yew
+  - English yew
+  - common yew
+  scientific: Taxus baccata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pacific-yew: Pacific yew, original paclitaxel source'
+  - 'japanese-yew: Japanese yew, pyramidal ornamental'
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - folklore
+  - toxic
+  - medicinal
+  - striking
+  habitat:
+    range: Europe, North Africa, southwest Asia
+    ecosystem: shady limestone woods, beech and oak forest, churchyards
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 2000
+    substrate: well-drained, base-rich soils, especially chalk and limestone
+    niche: slow-growing deep-shade understory conifer
+    strata:
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: dense dark broad crown, often multi-stemmed and hollow with age; trunks fuse into gnarled fluted
+      columns
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 1.0
+    - 5.0
+    lifespan_y: 2000
+    growth_rate: slow
+    leaves: evergreen flat needles 1-4 cm, dark glossy green above and paler beneath, in two ranks
+    seasonal: evergreen; red arils ripen in autumn
+    flowers: tiny cones on separate male and female trees, early spring
+    fruit_visible: single seed encased in a soft scarlet, sweet aril (a cup, not a cone)
+    bark: thin, reddish-brown to purplish, flaking in scaly strips, fluted trunk
+  timber:
+    heartwood: orange-brown, sometimes purplish
+    sapwood: thin pale yellow band
+    grain: straight
+    texture: fine, uniform
+    density_kg_m3: 675
+    janka_n: 6760
+    workability: easy to work except knots; glues, finishes and turns well
+    rot_resistance: durable to very durable
+    scent: null
+    fuel: excellent, slow and hot burning
+    uses:
+    - longbows
+    - veneer
+    - cabinetry
+    - lute-making
+    - turnery
+    - fence posts
+  products:
+    food:
+    - the red aril is sweet and edible, but the seed inside is deadly
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - taxanes from yew (paclitaxel from Pacific yew, baccatin III from needles of English yew) are the
+      precursors of cancer chemotherapy drugs
+    toxicity: all parts except the aril contain taxine alkaloids; fatal to humans and livestock by cardiac
+      arrest
+  lore:
+    folklore:
+    - churchyard tree, symbol of death and immortality; planted on graves in Britain
+    - Celtic and Druid sacred tree; Pliny and Julius Caesar wrote of yew poison
+    cultures:
+    - wood of the English longbow, medieval archery's main weapon; yew was imported in huge quantities
+      from the continent
+    symbolism:
+    - death, rebirth and eternal life
+    notable_trees:
+    - Fortingall Yew, Perthshire, Scotland, estimated 2,000 to 5,000 years old
+    - Llangernyw Yew, Wales, estimated 4,000 years
+  game_fit:
+    fields:
+      liminality: 'high: graveyard tree, toxic, very long-lived'
+      savagery: 'medium: poison and war bows'
+      alignment: 'medium: death and rebirth'
+    dimensions:
+    - aether
+    hooks:
+    - bow staves; poison; slow-growing sacred tree; medicine unlocked by progression
+  sources:
+  - https://www.wood-database.com/yew/
+  - https://www.euforgen.org/species/taxus-baccata
+  - https://en.wikipedia.org/wiki/Taxus_baccata

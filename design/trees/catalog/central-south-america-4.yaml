@@ -1,0 +1,4501 @@
+- id: mexican-weeping-pine
+  names:
+  - Mexican weeping pine
+  - patula pine
+  scientific: Pinus patula
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ocote-pine: ocote has stiff needles'
+  - 'hartweg-pine: Hartweg pine is the treeline pine'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Mexican highlands (Sierra Madre Oriental/Sur, Oaxaca); widely planted in East Africa, southern
+      Africa, Andes
+    ecosystem: montane pine and pine-oak forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 1500
+    - 3000
+    substrate: acidic volcanic or loam soils
+    niche: mid-elevation pine forest, pioneer after fire
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single straight trunk, conical to open rounded crown with drooping foliage
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: 100
+    growth_rate: fast
+    leaves: pendulous needles in fascicles of 3 (sometimes 4-5), 15-30 cm, light green and limp, evergreen
+    seasonal: evergreen, no change
+    flowers: small cones, male cones clustered at shoot tips
+    fruit_visible: slender curved cones 6-10 cm in whorls, persisting closed for years
+    bark: grey-brown to reddish, fissured into rough plates
+  timber:
+    heartwood: pale yellow-brown
+    sapwood: whitish-yellow
+    grain: straight
+    texture: moderately fine
+    density_kg_m3: 575
+    janka_n: 2450
+    workability: easy to work; takes nails and glue well
+    rot_resistance: not durable
+    scent: resinous
+    fuel: moderate, resinous
+    uses:
+    - construction lumber
+    - pulpwood
+    - poles
+    - plantation softwood
+  products:
+    food: &id005 []
+    sap_resin_latex:
+    - pine resin (tapped)
+    bark: &id001 []
+    leaves: &id002 []
+    dyes: &id003 []
+    medicinal: &id004 []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - highland Mexican forestry
+    symbolism: []
+    notable_trees: &id007 []
+  game_fit:
+    fields:
+      savagery: 'low: soft, drooping, harmless forest tree'
+    dimensions: &id008 []
+    hooks:
+    - 'crafting/material-classes: fast softwood for early building and torches'
+  sources:
+  - https://en.wikipedia.org/wiki/Pinus_patula
+  - https://powo.science.kew.org/results?q=Pinus%20patula
+  - https://www.wood-database.com/patula-pine/
+  - https://forestry.com/trees/patula-pine-tree/
+- id: monkey-puzzle
+  names:
+  - monkey puzzle
+  - pehuén
+  scientific: Araucaria araucana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'norfolk-island-pine: Norfolk Island pine has a symmetrical tiered crown'
+  - 'bunya-pine: bunya pine bears giant cones in eastern Australia'
+  - 'parana-pine: Paraná pine has a flat candelabra crown in subtropical Brazil'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  habitat:
+    range: Andes and coastal range of south-central Chile and adjacent Argentina (Araucanía, Neuquén)
+    ecosystem: temperate Andean Araucaria forest, often with Nothofagus
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 600
+    - 1800
+    substrate: volcanic soils, often well-drained slopes and lava fields
+    niche: upland forest, emergent over Nothofagus
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: straight columnar trunk with whorled horizontal branches; young tree conical, old tree flat-topped
+      umbrella crown
+    height_m:
+    - 30
+    - 50
+    trunk_diameter_m:
+    - 1.0
+    - 2.5
+    lifespan_y: 1300
+    growth_rate: slow
+    leaves: stiff triangular overlapping leathery leaves 3-5 cm, sharp-tipped, dark green, persisting
+      on branches for 10-15 years and covering them like reptile scales
+    seasonal: evergreen, no change
+    flowers: dioecious; globose male cones ~10 cm, female cones round
+    fruit_visible: huge globose cones 12-20 cm holding ~200 large edible seeds (piñones)
+    bark: thick grey, deeply wrinkled, elephant-like on old trunks; resinous
+  timber:
+    heartwood: pale yellowish brown
+    sapwood: pale
+    grain: straight
+    texture: fine, even
+    density_kg_m3: 535
+    janka_n: 1780
+    workability: works easily; turns well
+    rot_resistance: moderately durable
+    scent: null
+    fuel: moderate
+    uses:
+    - construction
+    - joinery
+    - ship masts
+    - furniture
+  products:
+    food:
+    - piñones, boiled or roasted seeds, ground into flour, fermented as chicha (mudai)
+    sap_resin_latex:
+    - resin
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore:
+    - Pehuenche (people of the pehuén) hold the tree sacred and say it is the origin of their people
+    cultures:
+    - Pehuenche Mapuche piñón harvest and winter camps (invernada)
+    - Victorian British gardens (name from 1840s)
+    symbolism:
+    - national tree of Chile
+    - natural monument of Chile
+    notable_trees:
+    - ancient trees in Conguillío and Nahuelbuta national parks, some 1,000+ years old
+  game_fit:
+    fields:
+      weirdness: 'high: reptilian living-fossil conifer lineage'
+      yield: 'high: seeds are a staple food'
+    dimensions:
+    - aether
+    hooks:
+    - 'crafting/material-classes: pine nuts as a storable food; spiny leaves as defense'
+  sources:
+  - https://en.wikipedia.org/wiki/Araucaria_araucana
+  - https://www.kew.org/plants/monkey-puzzle
+  - https://powo.science.kew.org/results?q=Araucaria%20araucana
+  - https://www.wood-database.com/monkey-puzzle/
+- id: montezuma-cypress
+  names:
+  - Montezuma cypress
+  - ahuehuete
+  - Tule tree
+  - Taxodium mucronatum
+  scientific: Taxodium mucronatum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bald-cypress: bald cypress is the swamp tree of the US South'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - well-known
+  habitat:
+    range: Mexico (national tree), Guatemala, southern Texas along the Rio Grande
+    ecosystem: riparian and spring-fed floodplain forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 2500
+    substrate: moist alluvial soils along streams and springs, tolerates seasonal flooding
+    niche: riverbank giant, often solitary
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: massive buttressed, fluted trunk with spreading crown, drooping branchlets
+    height_m:
+    - 20
+    - 45
+    trunk_diameter_m:
+    - 1.5
+    - 11.6
+    lifespan_y: 2000
+    growth_rate: moderate
+    leaves: flat feathery needles 1-1.5 cm in two ranks on branchlets, bright green, nearly evergreen
+      in warm climates
+    seasonal: semi-evergreen; needles turn rusty and drop briefly in dry season
+    flowers: small, monoecious; male catkins in drooping panicles
+    fruit_visible: small round cones 1-2 cm, scaly
+    bark: fibrous, grey-brown to reddish, peeling in long strips
+  timber:
+    heartwood: light yellowish brown to reddish
+    sapwood: whitish
+    grain: straight
+    texture: fine to moderately coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: easy to work
+    rot_resistance: durable
+    scent: null
+    fuel: moderate
+    uses:
+    - construction
+    - canoes
+    - fence posts
+  products:
+    food: *id005
+    sap_resin_latex: &id006 []
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - bark and leaf used in Mexican folk medicine for wounds, ulcers and as astringent
+    toxicity: null
+  lore:
+    folklore:
+    - Cortés said to have wept under an ahuehuete at Popotla on the Noche Triste (1520)
+    - Aztec rulers planted ahuehuetes at Chapultepec; name from Nahuatl for old man of the water
+    cultures:
+    - Aztec and Mexica gardens
+    - 'Mexican civic life: ahuehuetes in plazas'
+    symbolism:
+    - national tree of Mexico
+    notable_trees:
+    - 'Árbol del Tule, Santa María del Tule, Oaxaca: stoutest trunk of any tree, ~11.6 m diameter, 2,000+
+      years old'
+    - Árbol de la Noche Triste, Mexico City
+  game_fit:
+    fields:
+      alignment: 'high: planted by rulers and sacred, a civic tree'
+      liminality: 'high: water-edge elder tree, long-lived'
+    dimensions:
+    - aether
+    hooks:
+    - 'landmark tree: huge trunk for set pieces; rot-resistant wood'
+  sources:
+  - https://en.wikipedia.org/wiki/Taxodium_mucronatum
+  - https://en.wikipedia.org/wiki/%C3%81rbol_del_Tule
+  - https://powo.science.kew.org/results?q=Taxodium%20mucronatum
+- id: mora
+  names:
+  - mora
+  scientific: Mora excelsa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Guianas, Trinidad, Venezuela (Orinoco)
+    ecosystem: lowland evergreen and swamp rainforest, near-pure stands
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m:
+    - 0
+    - 300
+    substrate: seasonally flooded clay and alluvial soils
+    niche: swamp and riverine giant, forms mora forests
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: tall buttressed trunk, dense rounded crown
+    height_m:
+    - 30
+    - 45
+    trunk_diameter_m:
+    - 1.0
+    - 1.8
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: pinnate leaves with 2-4 pairs of big leathery leaflets, dark glossy green
+    seasonal: evergreen
+    flowers: small white to pink flowers in terminal panicles
+    fruit_visible: large flat woody pod with one huge seed
+    bark: dark brown, fissured, flaky
+  timber:
+    heartwood: reddish brown to dark red-brown
+    sapwood: pale yellow
+    grain: interlocked, wavy
+    texture: coarse
+    density_kg_m3: 1015
+    janka_n: 10230
+    workability: difficult; blunts tools
+    rot_resistance: durable
+    scent: null
+    fuel: excellent
+    uses:
+    - marine and heavy construction
+    - railway sleepers
+    - flooring
+    - piles
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      savagery: 'low: swamp forest dominant'
+    dimensions: *id008
+    hooks:
+    - dense durable wood for piles and bridges
+  sources:
+  - https://en.wikipedia.org/wiki/Mora_excelsa
+  - https://powo.science.kew.org/results?q=Mora%20excelsa
+  - https://www.wood-database.com/mora/
+- id: moriche-palm
+  names:
+  - moriche palm
+  - buriti
+  scientific: Mauritia flexuosa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  habitat:
+    range: Orinoco and Amazon basins, Guianas, Trinidad, Cerrado palm swamps (veredas)
+    ecosystem: palm swamps (aguajales, buritizais)
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: waterlogged peaty soils, seasonally flooded
+    niche: swamp palm in open stands
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: solitary tall unbranched trunk crowned with huge fan leaves
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.3
+    - 0.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: giant costapalmate fan leaves 4-5 m across, bright green
+    seasonal: evergreen
+    flowers: dioecious, large branched inflorescences among leaves
+    fruit_visible: clusters of scaly reddish-brown oval fruits 5-7 cm with orange-yellow oily pulp
+    bark: smooth grey, ringed by leaf scars
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: soft fibrous; not a true timber
+    rot_resistance: null
+    scent: null
+    fuel: poor
+    uses:
+    - house poles
+    - rafters
+    - handicraft
+  products:
+    food:
+    - fruit pulp eaten and made into drink, ice cream, jam
+    - palm heart
+    - starchy sago from trunk (Warao)
+    - edible beetle grubs from felled trunks
+    sap_resin_latex:
+    - sweet sap fermented to wine
+    bark: *id001
+    leaves:
+    - leaf fibre (buriti, ite fibre) for hammocks, rope, baskets, roofing
+    dyes: *id003
+    medicinal:
+    - fruit oil rich in beta-carotene used topically
+    toxicity: null
+  lore:
+    folklore:
+    - Warao call it the tree of life (arbol de la vida) and say their ancestors lived off its starch
+    cultures:
+    - Warao of the Orinoco Delta
+    - Amazonian peoples
+    symbolism:
+    - tree of life
+    notable_trees: *id007
+  game_fit:
+    fields:
+      liminality: 'high: swamp edge, source of life'
+      yield: 'high: food, fibre and shelter'
+    dimensions: *id008
+    hooks:
+    - fibre and sago for early crafting and food; hammocks
+  sources:
+  - https://en.wikipedia.org/wiki/Mauritia_flexuosa
+  - https://powo.science.kew.org/results?q=Mauritia%20flexuosa
+- id: mountain-immortelle
+  names:
+  - mountain immortelle
+  - bucaré
+  scientific: Erythrina poeppigiana
+  rank: group
+  stands_for:
+  - Erythrina fusca
+  distinct_from:
+  - 'coral-tree: ceibo is small with crimson flowers'
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  habitat:
+    range: Central America and northern Andes (native to Colombia, Peru, Ecuador); planted across tropics
+    ecosystem: moist montane forest, plantation shade
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 500
+    - 2000
+    substrate: moist well-drained soils
+    niche: shade tree over coffee and cacao
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: broad spreading flat-topped crown, thorny young stems
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.5
+    - 1.2
+    lifespan_y: 60
+    growth_rate: fast
+    leaves: trifoliate leaves with large rhombic leaflets, deciduous in dry season
+    seasonal: briefly leafless in dry season when flowers appear
+    flowers: bright orange-red pea-shaped flowers in dense racemes up to 15 cm
+    fruit_visible: long flat brown pods
+    bark: pale grey to brown, smooth, with conical thorns when young
+  timber:
+    heartwood: pale yellow-white
+    sapwood: white
+    grain: straight
+    texture: coarse
+    density_kg_m3: 250
+    janka_n: null
+    workability: very soft, easy
+    rot_resistance: not durable
+    scent: null
+    fuel: poor
+    uses:
+    - packing crates
+    - pulp
+    - matchwood
+    - fuelwood
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves:
+    - leaf fodder and green manure (nitrogen-fixing)
+    dyes: *id003
+    medicinal:
+    - bark and leaves used as sedatives and for toothache in folk medicine
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - cacao and coffee estates of Trinidad, Venezuela, Costa Rica (bucaré, madre de cacao)
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: shade tree for cultivation'
+      alignment: 'high: planted by farmers'
+    dimensions: *id008
+    hooks:
+    - nitrogen-fixing shade tree boosts crop yield
+  sources:
+  - https://en.wikipedia.org/wiki/Erythrina_poeppigiana
+  - https://powo.science.kew.org/results?q=Erythrina%20poeppigiana
+- id: nance
+  names:
+  - nance
+  - nanche
+  - murici
+  scientific: Byrsonima crassifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  habitat:
+    range: Mexico through Central America to northern South America and Brazil; West Indies
+    ecosystem: dry forest, savanna, pine-oak woodland edge
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1500
+    substrate: poor, sandy or acid soils
+    niche: savanna and fire-prone scrub, secondary growth
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small bushy tree with crooked trunk and rounded crown
+    height_m:
+    - 3
+    - 8
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: null
+    growth_rate: slow
+    leaves: simple opposite oblong leaves 5-15 cm, leathery, dark green above, rusty-hairy below
+    seasonal: evergreen
+    flowers: yellow petals turning orange-red in short terminal racemes
+    fruit_visible: round yellow fruit 1-2 cm with thin skin and cheesy-smelling pulp
+    bark: dark brown, rough, scaly
+  timber:
+    heartwood: pale brown
+    sapwood: light
+    grain: irregular
+    texture: medium
+    density_kg_m3: 740
+    janka_n: null
+    workability: moderate
+    rot_resistance: low
+    scent: null
+    fuel: good
+    uses:
+    - fuelwood
+    - tool handles
+  products:
+    food:
+    - fresh fruit, pickled or soaked in aguardiente, ice cream and drink (nanche)
+    sap_resin_latex: *id006
+    bark:
+    - tannin for tanning leather
+    leaves: *id002
+    dyes:
+    - red-brown dye from bark
+    medicinal:
+    - bark decoction for diarrhoea, dysentery and fever
+    toxicity: null
+  lore:
+    folklore: &id009 []
+    cultures:
+    - Mexican and Central American markets and pickled-fruit tradition
+    symbolism: &id010 []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: fruit and tannin'
+    dimensions: *id008
+    hooks:
+    - tannin from bark for leather crafting
+  sources:
+  - https://en.wikipedia.org/wiki/Byrsonima_crassifolia
+  - https://powo.science.kew.org/results?q=Byrsonima%20crassifolia
+  - https://www.fpl.fs.usda.gov/documnts/TechSheets/Chudnoff/TropAmerican/pdf_files/Byrsonima.pdf
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Byrsonima_crassifolia.PDF
+- id: nopal
+  names:
+  - nopal
+  - prickly pear
+  scientific: Opuntia ficus-indica
+  rank: group
+  stands_for:
+  - Opuntia echios (Galápagos tree prickly pear)
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  - folklore
+  habitat:
+    range: Native to Mexico; cultivated and naturalised in Mediterranean, South Africa, Australia
+    ecosystem: arid and semi-arid scrub, cultivated nopaleras
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 0
+    - 3000
+    substrate: well-drained stony or sandy soils
+    niche: dryland succulent thicket and cultivated hedges
+    strata:
+    - shrub
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tree-like cactus with a woody trunk and flat, paddle-shaped jointed pads (cladodes)
+    height_m:
+    - 3
+    - 5
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: null
+    growth_rate: fast
+    leaves: pads green, thick, with scattered spines or glochids; true leaves tiny and shed early
+    seasonal: evergreen pads
+    flowers: large yellow to orange flowers on pad margins in spring
+    fruit_visible: egg-shaped fleshy red, orange or yellow tunas, sweet, covered in glochids
+    bark: woody trunk grey-brown, rough
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - fences
+    - fuelwood
+  products:
+    food:
+    - tunas (fruit)
+    - nopales (pads) as vegetable
+    - syrup (melcocha)
+    sap_resin_latex:
+    - mucilage used as lime-wash binder and water clarifier
+    bark: *id001
+    leaves: *id002
+    dyes:
+    - cochineal red from Dactylopius coccus scale insects farmed on pads (carmine)
+    medicinal:
+    - pads used for diabetes, burns and wounds (folk)
+    toxicity: null
+  lore:
+    folklore:
+    - 'Mexica legend: Tenochtitlan founded where an eagle perched on a nopal, devouring a serpent'
+    cultures:
+    - Aztec cochineal tribute
+    - Mexican cuisine
+    symbolism:
+    - emblem on the flag of Mexico
+    notable_trees:
+    - Galápagos tree prickly pear (Opuntia echios), with tree-like trunks to 12 m
+  game_fit:
+    fields:
+      yield: 'high: food, dye, living fences'
+      savagery: 'high: spines and glochids'
+    dimensions: *id008
+    hooks:
+    - cochineal dye from pads; edible pads as an early food; spiny fence
+  sources:
+  - https://en.wikipedia.org/wiki/Opuntia_ficus-indica
+  - https://powo.science.kew.org/results?q=Opuntia%20ficus-indica
+- id: ocote-pine
+  names:
+  - ocote pine
+  - Caribbean pine
+  scientific: Pinus oocarpa
+  rank: group
+  stands_for:
+  - Pinus caribaea (Caribbean pine)
+  - Pinus montezumae (Montezuma pine)
+  - Pinus occidentalis (Hispaniolan pine)
+  distinct_from:
+  - 'scots-pine: ocote is a tropical resin pine'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  habitat:
+    range: Southern Mexico, Central America (Honduras national tree); Caribbean pine on Caribbean coast
+      and Cuba
+    ecosystem: tropical and subtropical pine savanna and pine-oak forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 2000
+    substrate: poor acidic sandy soils
+    niche: fire-adapted pine savanna and upland pine woods
+    strata:
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: straight trunk with open irregular crown
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: stiff needles in fascicles of 3-5, 15-30 cm, yellow-green
+    seasonal: evergreen, no change
+    flowers: pollen cones in clusters, inconspicuous
+    fruit_visible: ovoid woody cones 5-10 cm, clustered
+    bark: thick, reddish-brown to grey, deeply fissured, scaly
+  timber:
+    heartwood: yellow to orange-brown
+    sapwood: pale yellow
+    grain: straight
+    texture: moderately coarse
+    density_kg_m3: 550
+    janka_n: 4048
+    workability: easy to work, resinous
+    rot_resistance: moderately durable
+    scent: resinous
+    fuel: hot, long-burning
+    uses:
+    - construction
+    - pulp
+    - resin tapping
+    - ocote kindling
+  products:
+    food: *id005
+    sap_resin_latex:
+    - resin, turpentine and rosin
+    - pitch-pine splinters (ocote) rich in resin used as torches and firelighters
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: *id009
+    cultures:
+    - 'Honduran hearths and markets: ocote to start fires'
+    - Maya torches (ocote)
+    symbolism:
+    - national tree of Honduras (Caribbean pine)
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: resin and firelighters'
+      savagery: 'low: fire-adapted open pine woods'
+    dimensions: *id008
+    hooks:
+    - ocote splinters for torches and firelighting; resin for pitch and waterproofing
+  sources:
+  - https://en.wikipedia.org/wiki/Pinus_oocarpa
+  - https://en.wikipedia.org/wiki/Pinus_caribaea
+  - https://powo.science.kew.org/results?q=Pinus%20oocarpa
+  - https://www.fpl.fs.usda.gov/documnts/TechSheets/Chudnoff/TropAmerican/htmlDocs_tropamerican/pinusoocarpa.html
+- id: oiticica
+  names:
+  - oiticica
+  - Licania rigida
+  scientific: Microdesmia rigida
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  habitat:
+    range: Northeast Brazil (Caatinga, Ceará, Rio Grande do Norte, Paraíba); riverbanks
+    ecosystem: caatinga dry forest, gallery forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 600
+    substrate: alluvial soils along seasonal rivers
+    niche: riparian evergreen in thorn scrub
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: evergreen tree with dense rounded crown that stays green in drought
+    height_m:
+    - 10
+    - 15
+    trunk_diameter_m:
+    - 0.4
+    - 0.8
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: simple oval leathery leaves, dark green, glossy above
+    seasonal: evergreen, stays green in dry season
+    flowers: small whitish flowers in panicles
+    fruit_visible: fleshy drupe 5-7 cm with large oil-rich kernel
+    bark: grey, scaly
+  timber:
+    heartwood: pale brown
+    sapwood: pale
+    grain: straight
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard, dense, blunts tools
+    rot_resistance: durable
+    scent: null
+    fuel: good
+    uses:
+    - fuelwood
+    - charcoal
+    - posts
+  products:
+    food: *id005
+    sap_resin_latex:
+    - 'oiticica oil: quick-drying oil from seeds, used in paints, varnishes and inks'
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: *id009
+    cultures:
+    - Sertão communities for shade and oil
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: oil'
+    dimensions: *id008
+    hooks:
+    - drying oil for paint and waterproof finishes
+  sources:
+  - https://en.wikipedia.org/wiki/Microdesmia_rigida
+  - https://powo.science.kew.org/results?q=Microdesmia%20rigida
+- id: old-man-cactus
+  names:
+  - old man cactus
+  - cabeza de viejo
+  scientific: Cephalocereus senilis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Hidalgo and Veracruz, Mexico (limestone slopes of the Barranca de Metztitlán)
+    ecosystem: arid scrub, limestone cliffs
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 1000
+    - 2300
+    substrate: limestone outcrops, rocky slopes
+    niche: cliff and slope columnar cactus
+    strata:
+    - open
+    - shrub
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: solitary or sparsely branched ribbed column covered in long white hair
+    height_m:
+    - 5
+    - 12
+    trunk_diameter_m:
+    - 0.2
+    - 0.4
+    lifespan_y: null
+    growth_rate: slow
+    leaves: no leaves; green ribbed stem veiled in long white hairs (up to 12 cm) hiding yellow spines
+    seasonal: evergreen stem
+    flowers: nocturnal pink flowers from the crown of old plants, 5-9 cm
+    fruit_visible: red fruit with black seeds
+    bark: green-grey ribbed stem
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - ornamental only
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore:
+    - name cabeza de viejo (old man's head) for its white hair
+    cultures:
+    - cultivated as Mexican garden curiosity
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      weirdness: 'high: strange hairy elder column'
+    dimensions: *id008
+    hooks:
+    - white hair fibre for stuffing and pale thread
+  sources:
+  - https://en.wikipedia.org/wiki/Cephalocereus_senilis
+  - https://powo.science.kew.org/results?q=Cephalocereus%20senilis
+- id: ombu
+  names:
+  - ombú
+  scientific: Phytolacca dioica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - toxic
+  habitat:
+    range: Pampas of Argentina, Uruguay, southern Brazil, Paraguay
+    ecosystem: pampas grassland and riverine gallery forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 500
+    substrate: rich alluvial loam
+    niche: lone trees on open grassland
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: giant herbaceous plant with very thick swollen buttress-rooted trunk and wide umbrella crown
+    height_m:
+    - 10
+    - 15
+    trunk_diameter_m:
+    - 1.5
+    - 2.5
+    lifespan_y: 200
+    growth_rate: fast
+    leaves: large simple elliptic leaves, bright green, soft
+    seasonal: evergreen to semi-deciduous
+    flowers: small greenish-white flowers in long racemes
+    fruit_visible: dark purple-black berries in pendant clusters
+    bark: soft grey-brown, spongy and fibrous; trunk is watery, not true wood
+  timber:
+    heartwood: none (no true wood)
+    sapwood: none
+    grain: spongy
+    texture: soft
+    density_kg_m3: null
+    janka_n: null
+    workability: soft, useless as timber
+    rot_resistance: none
+    scent: null
+    fuel: not used (watery)
+    uses:
+    - shade
+    - landmark
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - leaf and bark folk uses (purgative, antirheumatic)
+    toxicity: sap, leaves and fruit contain toxic saponins and phytolaccatoxin, causing vomiting and diarrhoea
+      in livestock and humans
+  lore:
+    folklore:
+    - gaucho refuge and meeting place in the Pampas; Guaraní legends
+    cultures:
+    - gaucho culture, Argentine and Uruguayan poetry and painting
+    symbolism:
+    - symbol of the pampas
+    notable_trees: *id007
+  game_fit:
+    fields:
+      liminality: 'high: toxic lone tree marking meeting points'
+      savagery: 'medium: toxic sap'
+    dimensions: *id008
+    hooks:
+    - toxic sap for poison crafting; shade landmark
+  sources:
+  - https://en.wikipedia.org/wiki/Phytolacca_dioica
+  - https://powo.science.kew.org/results?q=Phytolacca%20dioica
+  - https://montevideo.gub.uy/phytolacca-dioica-ombu
+- id: organo
+  names:
+  - órgano
+  - Mexican fence post cactus
+  scientific: Pachycereus marginatus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'organ-pipe-cactus: organ pipe branches from the base in the Sonoran desert'
+  - 'cardon: cardón is the massive branched Baja cactus'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  habitat:
+    range: Central Mexico (Oaxaca, Puebla, Hidalgo, Guanajuato, Querétaro)
+    ecosystem: semi-arid scrub; planted as living fence
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 800
+    - 2500
+    substrate: rocky slopes and dry hillsides
+    niche: columnar cactus in thorn scrub and hedgerows
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: unbranched, ribbed erect column, planted in rows
+    height_m:
+    - 3
+    - 7
+    trunk_diameter_m:
+    - 0.1
+    - 0.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: no leaves; green stem with 5-6 ribs with small closely spaced spines
+    seasonal: evergreen stem
+    flowers: pinkish-red funnel flowers
+    fruit_visible: ovoid fruit covered in yellow spines, edible pulp
+    bark: green, smooth, ribbed stem
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - living fences
+    - posts
+  products:
+    food:
+    - fruit pulp eaten
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - fruit and stem in folk medicine
+    toxicity: null
+  lore:
+    folklore: *id009
+    cultures:
+    - central Mexican rural living fences around houses and fields
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      savagery: 'medium: spiny barrier'
+    dimensions: *id008
+    hooks:
+    - living fence block; fruit food
+  sources:
+  - https://en.wikipedia.org/wiki/Marginatocereus_marginatus
+  - https://powo.science.kew.org/results?q=Pachycereus%20marginatus
+- id: palo-dulce
+  names:
+  - palo dulce
+  - kidneywood
+  scientific: Eysenhardtia polystachya
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  habitat:
+    range: Mexico (central and northern) to southwestern USA; arid highlands
+    ecosystem: semi-arid scrub, thorn forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 800
+    - 2500
+    substrate: rocky calcareous or volcanic soils
+    niche: scrub tree on dry slopes
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: shrub or small tree with open rounded crown
+    height_m:
+    - 2
+    - 6
+    trunk_diameter_m:
+    - 0.1
+    - 0.25
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: pinnate leaves with many small elliptic leaflets, gland-dotted and aromatic
+    seasonal: semi-deciduous in drought
+    flowers: dense spikes of small white fragrant flowers, attracting bees
+    fruit_visible: small pods 1 cm
+    bark: smooth grey-brown to dark, cracked
+  timber:
+    heartwood: yellowish to dark brown
+    sapwood: pale
+    grain: straight
+    texture: fine
+    density_kg_m3: 890
+    janka_n: null
+    workability: hard, dense
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good
+    uses:
+    - tool handles
+    - walking sticks
+    - fuelwood
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes:
+    - yellow dye
+    medicinal:
+    - wood infusion (taray) used for kidney complaints; fluoresces blue (lignum nephriticum)
+    - bark and root against kidney stones
+    toxicity: null
+  lore:
+    folklore:
+    - Aztec cups of the wood made water glow blue; Hernández and Monardes (16th c.) described lignum nephriticum;
+      Kircher and Boyle studied it, an early observation of fluorescence
+    cultures:
+    - Aztec and Mexican folk medicine
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      weirdness: 'high: wood turns water fluorescent blue'
+      liminality: 'medium: medicinal, glowing infusion'
+    dimensions:
+    - aether
+    hooks:
+    - 'wood infusion glows blue: enchant/potion ingredient'
+  sources:
+  - https://en.wikipedia.org/wiki/Eysenhardtia_polystachya
+  - https://en.wikipedia.org/wiki/Lignum_nephriticum
+  - https://powo.science.kew.org/results?q=Eysenhardtia%20polystachya
+  - https://www.delta-intkey.com/wood/fr/www/mimeyspo.htm
+- id: palo-santo
+  names:
+  - palo santo
+  scientific: Bursera graveolens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'gumbo-limbo: gumbo-limbo is a Caribbean tree grown for its peeling red bark'
+  - 'copal: copal is the Mesoamerican temple incense'
+  - 'linaloe: linaloe is the Mexican oil and lacquer-box wood'
+  - 'chaco-palo-santo: Chaco palo santo is an unrelated green-hearted guaiac wood'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  habitat:
+    range: Pacific coast of Ecuador, Peru, Colombia, Venezuela, Galápagos
+    ecosystem: tropical dry forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: dry sandy or rocky soils
+    niche: dry-forest tree, leafless in dry season
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small to medium tree with open crown, pale peeling bark
+    height_m:
+    - 4
+    - 18
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: compound leaves with 7-11 leaflets, aromatic, deciduous
+    seasonal: leafless in dry season
+    flowers: small white to greenish flowers in panicles
+    fruit_visible: small round capsules 1 cm
+    bark: grey, smooth and peeling in papery sheets
+  timber:
+    heartwood: yellowish brown
+    sapwood: pale
+    grain: straight
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: easy to carve
+    rot_resistance: durable (resin-impregnated dead heartwood)
+    scent: strong sweet pine-citrus scent
+    fuel: good
+    uses:
+    - carving
+    - incense sticks
+    - fence posts
+  products:
+    food: *id005
+    sap_resin_latex:
+    - aromatic resin
+    - essential oil (limonene, menthofuran) distilled from heartwood
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - smoke and oil used by shamans for cleansing and as insect repellent
+    toxicity: null
+  lore:
+    folklore:
+    - holy wood burned to cleanse spaces and ward off evil spirits
+    cultures:
+    - Andean shamans and curanderos, Ecuadorian coastal communities
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      liminality: 'high: sacred smoke, spirit cleansing'
+      alignment: 'high: ritual use'
+    dimensions:
+    - aether
+    hooks:
+    - incense for rituals; essential oil crafting
+  sources:
+  - https://en.wikipedia.org/wiki/Bursera_graveolens
+  - https://powo.science.kew.org/results?q=Bursera%20graveolens
+- id: panama-rubber-tree
+  names:
+  - Panama rubber tree
+  - árbol del hule
+  scientific: Castilla elastica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'rubber-tree: Hevea is the Amazon plantation rubber'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  habitat:
+    range: Mexico to northern South America (lowland Mesoamerica); introduced in Africa and Asia
+    ecosystem: lowland moist tropical forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: rich alluvial soils
+    niche: canopy tree of moist forest
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall straight trunk with spreading crown, buttressed
+    height_m:
+    - 20
+    - 30
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: large simple oblong leaves up to 40 cm, rough-hairy, drooping
+    seasonal: semi-deciduous
+    flowers: unisexual flowers hidden within receptacles
+    fruit_visible: orange-red fleshy fig-like fruit in clusters
+    bark: smooth grey-brown, with fine rings
+  timber:
+    heartwood: light yellowish
+    sapwood: white
+    grain: straight
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: easy
+    rot_resistance: not durable
+    scent: null
+    fuel: poor
+    uses:
+    - canoes
+    - box wood
+  products:
+    food: *id005
+    sap_resin_latex:
+    - white latex (caucho) tapped for rubber; mixed with Ipomoea alba (morning glory) juice to make elastic
+      Mesoamerican rubber balls
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: *id009
+    cultures:
+    - Olmec, Maya and Aztec ballgame rubber balls, figurines and sandals
+    - colonial caucho trade
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: rubber latex'
+      alignment: 'high: central to Mesoamerican ritual ballgame'
+    dimensions: *id008
+    hooks:
+    - 'latex tapping for rubber: waterproofing, balls, adhesives'
+  sources:
+  - https://en.wikipedia.org/wiki/Castilla_elastica
+  - https://powo.science.kew.org/results?q=Castilla%20elastica
+- id: panama-tree
+  names:
+  - Panama tree
+  - panamá
+  scientific: Sterculia apetala
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  habitat:
+    range: Mexico to northern South America; Panama (national tree)
+    ecosystem: tropical moist and dry forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1000
+    substrate: well-drained loams
+    niche: emergent giant of seasonal forest
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall straight trunk, buttressed, wide spreading crown
+    height_m:
+    - 25
+    - 40
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: large simple palmately lobed leaves up to 40 cm, deciduous in dry season
+    seasonal: leafless in dry season; red follicles then open
+    flowers: reddish flowers without petals, in panicles
+    fruit_visible: big woody red follicles that open to show black seeds on red lining
+    bark: smooth grey, trunk very straight
+  timber:
+    heartwood: pale yellowish
+    sapwood: pale
+    grain: straight
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: easy
+    rot_resistance: not durable
+    scent: null
+    fuel: fair
+    uses:
+    - canoes
+    - crates
+    - plywood
+    - pulp
+  products:
+    food:
+    - seeds eaten roasted
+    sap_resin_latex:
+    - gum from trunk
+    bark:
+    - fibre from bark for rope
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore:
+    - possible origin of the name Panama (panamá tree)
+    cultures: &id011 []
+    symbolism:
+    - national tree of Panama
+    notable_trees: *id007
+  game_fit:
+    fields:
+      alignment: 'high: national tree, landmark'
+    dimensions: *id008
+    hooks:
+    - edible seeds, bark fibre
+  sources:
+  - https://en.wikipedia.org/wiki/Sterculia_apetala
+  - https://powo.science.kew.org/results?q=Sterculia%20apetala
+- id: papaya
+  names:
+  - papaya
+  scientific: Carica papaya
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - striking
+  - medicinal
+  - product
+  habitat:
+    range: Native to southern Mexico and Central America; cultivated worldwide in tropics
+    ecosystem: tropical lowland, disturbed ground
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: fertile well-drained soils; cannot stand waterlogging or frost
+    niche: gap and clearing plant, secondary growth
+    strata:
+    - understory
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: unbranched herbaceous tree with soft hollow trunk topped by a rosette of leaves
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m:
+    - 0.1
+    - 0.3
+    lifespan_y: 20
+    growth_rate: fast
+    leaves: large palmately lobed leaves 50-70 cm on long hollow petioles
+    seasonal: evergreen
+    flowers: fragrant yellow-cream, male and female on different plants or hermaphrodite
+    fruit_visible: large oblong melon-like fruit 15-45 cm, green turning orange-yellow, clustered under
+      the leaves
+    bark: grey-green, leaf-scarred, soft and fibrous
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - not timber
+  products:
+    food:
+    - ripe fruit
+    - green fruit cooked as vegetable
+    - seeds as pepper substitute
+    sap_resin_latex:
+    - latex containing papain, used to tenderise meat
+    bark: *id001
+    leaves:
+    - leaves used to wrap and tenderise meat
+    dyes: *id003
+    medicinal:
+    - papain digestive enzyme
+    - seeds anthelmintic
+    toxicity: raw latex is an irritant; unripe fruit and seeds can harm pregnancy
+  lore:
+    folklore: *id009
+    cultures:
+    - Maya and Aztec food
+    - tropical home gardens
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: fruit and papain'
+    dimensions: *id008
+    hooks:
+    - papain enzyme crafting; fast-growing food tree for the first session
+  sources:
+  - https://en.wikipedia.org/wiki/Papaya
+  - https://powo.science.kew.org/results?q=Carica%20papaya
+- id: parana-pine
+  names:
+  - Paraná pine
+  - Brazilian pine
+  - pinheiro-do-paraná
+  scientific: Araucaria angustifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'monkey-puzzle: monkey puzzle has spiky scale leaves to the ground'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - fruit
+  habitat:
+    range: Southern Brazil (Paraná, Santa Catarina, Rio Grande do Sul, São Paulo, Minas Gerais), Misiones
+      in Argentina, Paraguay
+    ecosystem: Araucaria moist forest (mixed ombrophilous forest)
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 500
+    - 1800
+    substrate: deep, well-drained, acidic soils
+    niche: emergent over the Atlantic mixed forest, grassland-forest mosaic
+    strata:
+    - emergent
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: straight unbranched trunk with candelabra crown of upturned branches at the top, flat-topped
+      when old
+    height_m:
+    - 25
+    - 50
+    trunk_diameter_m:
+    - 1.0
+    - 2.5
+    lifespan_y: 500
+    growth_rate: moderate
+    leaves: stiff, lance-shaped, sharply pointed leaves 3-6 cm, dark green, crowded on branchlets
+    seasonal: evergreen
+    flowers: dioecious; cylindrical male cones 10-20 cm
+    fruit_visible: globose cones 20 cm with large seeds (pinhões) 5-8 cm that fall in autumn
+    bark: thick, dark reddish-brown to grey, resinous, peeling in thin plates
+  timber:
+    heartwood: pale yellow-brown
+    sapwood: whitish
+    grain: straight
+    texture: fine, uniform
+    density_kg_m3: 545
+    janka_n: 3610
+    workability: works very easily; peels and carves cleanly
+    rot_resistance: not durable
+    scent: null
+    fuel: moderate
+    uses:
+    - joinery
+    - furniture
+    - plywood
+    - pulp
+    - construction
+  products:
+    food:
+    - pinhão seeds, boiled or roasted; festas juninas, quentão
+    sap_resin_latex:
+    - resin
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore:
+    - pinhão gathering tied to the Kaingang and Xokleng peoples
+    cultures:
+    - Kaingang and Xokleng harvest
+    - southern Brazilian winter festivals (festas juninas)
+    symbolism:
+    - symbol of Paraná state
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: edible seeds and timber'
+      weirdness: 'medium: ancient candelabra conifer'
+    dimensions: *id008
+    hooks:
+    - pine-nut food; fast-lumber conifer
+  sources:
+  - https://en.wikipedia.org/wiki/Araucaria_angustifolia
+  - https://powo.science.kew.org/results?q=Araucaria%20angustifolia
+  - https://www.wood-database.com/parana-pine/
+- id: patagonian-cypress
+  names:
+  - ciprés de la cordillera
+  scientific: Austrocedrus chilensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'alerce: alerce is a red-barked rainforest giant'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Andes of Chile and Argentina (about 32-44°S), east of the main range
+    ecosystem: dry Andean forest-steppe ecotone
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 300
+    - 1900
+    substrate: rocky well-drained slopes
+    niche: forest edge against the Patagonian steppe
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: conical to columnar tree with flattened scale-leaved sprays
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.4
+    - 1.0
+    lifespan_y: 1000
+    growth_rate: slow
+    leaves: tiny scale leaves in decussate pairs, two larger and two smaller, dark green above and white-striped
+      below
+    seasonal: evergreen
+    flowers: tiny, cones terminal on branchlets
+    fruit_visible: small woody cones 1 cm, four scales
+    bark: grey-brown, fibrous, furrowed, stringy
+  timber:
+    heartwood: pale yellowish to pinkish brown
+    sapwood: whitish
+    grain: straight
+    texture: fine, even
+    density_kg_m3: null
+    janka_n: null
+    workability: easy
+    rot_resistance: durable
+    scent: aromatic, cedar-like
+    fuel: moderate
+    uses:
+    - carpentry
+    - posts
+    - furniture
+  products:
+    food: *id005
+    sap_resin_latex:
+    - aromatic resin
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Mapuche and Patagonian settlers; use for posts
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      liminality: 'medium: tree line against steppe'
+    dimensions: *id008
+    hooks:
+    - rot-resistant aromatic wood for chests and posts
+  sources:
+  - https://en.wikipedia.org/wiki/Austrocedrus
+  - https://powo.science.kew.org/results?q=Austrocedrus%20chilensis
+- id: pataua
+  names:
+  - patauá
+  - ungurahui
+  scientific: Oenocarpus bataua
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  habitat:
+    range: Amazon basin, Guianas, Orinoco, Andean foothills of Colombia, Ecuador, Peru, Bolivia
+    ecosystem: lowland and foothill rainforest, swamp edges
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: well-drained to seasonally flooded soils
+    niche: canopy palm
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: solitary tall unbranched palm with crown of arching pinnate leaves
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.2
+    - 0.3
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: pinnate leaves 6-10 m long with a white or silvery underside, leaflets irregularly arranged
+      and dark green above
+    seasonal: evergreen
+    flowers: pendulous branched inflorescences under the crown
+    fruit_visible: clusters of oval deep purple-black fruit 2-3 cm with oily pulp
+    bark: grey, smooth, ringed; base with stilt-like roots
+  timber:
+    heartwood: black, hard outer trunk wall
+    sapwood: pale fibrous core
+    grain: coarse fibrous
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: moderate
+    scent: null
+    fuel: null
+    uses:
+    - spear points, bows (hard outer trunk)
+    - house posts
+    - flooring slats
+  products:
+    food:
+    - purple fruit pulp soaked in warm water into a milky drink (patauá/ungurahui)
+    - oil like olive oil, from pulp
+    - palm heart
+    sap_resin_latex: []
+    bark: *id001
+    leaves:
+    - thatch
+    - fibre for baskets and blowgun quivers
+    dyes: *id003
+    medicinal:
+    - oil for hair, cough and respiratory illness (Amazon folk use)
+    toxicity: null
+  lore:
+    folklore: *id009
+    cultures:
+    - Amazonian indigenous peoples for food, oil and weapons
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: food and oil'
+    dimensions: *id008
+    hooks:
+    - palm oil crafting; hard palm wood for spears
+  sources:
+  - https://en.wikipedia.org/wiki/Oenocarpus_bataua
+  - https://powo.science.kew.org/results?q=Oenocarpus%20bataua
+- id: peach-palm
+  names:
+  - peach palm
+  - pejibaye
+  scientific: Bactris gasipaes
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  habitat:
+    range: Domesticated in southwestern Amazonia; cultivated from Honduras to Bolivia and Brazil
+    ecosystem: tropical rainforest, home gardens
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: well-drained soils
+    niche: garden palm, secondary forest
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: clumped multi-stemmed palm with trunks covered in rings of black spines
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.15
+    - 0.25
+    lifespan_y: 75
+    growth_rate: fast
+    leaves: pinnate leaves 2-3 m, many drooping leaflets, spiny leaf bases
+    seasonal: evergreen
+    flowers: creamy yellow flowers in a spathe among the leaves
+    fruit_visible: heavy clusters of 50-100 smooth orange, red or yellow fruit 4-6 cm
+    bark: black needle-sharp spines in rings on a grey-green trunk
+  timber:
+    heartwood: dark brown, very hard outer
+    sapwood: pale
+    grain: coarse fibrous
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: high
+    scent: hard, takes polish
+    fuel: null
+    uses:
+    - bows
+    - spear shafts
+    - parquet
+    - handles
+    - thatch
+  products:
+    food:
+    - boiled starchy fruit with oily pulp
+    - palm heart (palmito)
+    - flour
+    - chicha (fermented drink)
+    sap_resin_latex: []
+    bark: *id001
+    leaves:
+    - thatch
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: *id009
+    cultures:
+    - Domesticated by Amazonian peoples; staple of Tukano, Tikuna and others; harvest ceremonies
+    - Costa Rican pejibaye
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: starchy fruit and hearts'
+      savagery: 'medium: spiny trunk'
+    dimensions: *id008
+    hooks:
+    - storable starch fruit; spiny palm wood for bows
+  sources:
+  - https://en.wikipedia.org/wiki/Bactris_gasipaes
+  - https://powo.science.kew.org/results?q=Bactris%20gasipaes
+- id: pequi
+  names:
+  - pequi
+  - souari nut
+  scientific: Caryocar brasiliense
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  habitat:
+    range: Cerrado of central Brazil (Goiás, Minas Gerais, Tocantins, Mato Grosso), Bolivia, Paraguay
+    ecosystem: cerrado savanna woodland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 200
+    - 1300
+    substrate: poor acidic well-drained soils
+    niche: savanna tree, resprouts after fire
+    strata:
+    - open
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: short twisted trunk with broad spreading crown
+    height_m:
+    - 4
+    - 10
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: null
+    growth_rate: slow
+    leaves: trifoliate leaves of thick leathery leaflets, grey-hairy
+    seasonal: semi-deciduous, flowering in dry season
+    flowers: large cream and yellow flowers with a brush of yellow-white stamens, nocturnal and bat-visited
+    fruit_visible: round green fruit 10-15 cm with yellow, oily, strongly scented pulp over a spiny stone
+    bark: dark brown, thick, corky, fire-resistant
+  timber:
+    heartwood: pale yellow-brown
+    sapwood: pale
+    grain: interlocked
+    texture: medium
+    density_kg_m3: 880
+    janka_n: null
+    workability: moderate
+    rot_resistance: good
+    scent: null
+    fuel: good
+    uses:
+    - posts
+    - boat building
+    - fuelwood
+  products:
+    food:
+    - pulp boiled in rice and chicken (arroz com pequi)
+    - pulp and kernel oil
+    - kernels (amêndoa) roasted
+    - liqueur
+    sap_resin_latex: []
+    bark: *id001
+    leaves: *id002
+    dyes:
+    - yellow dye from bark and fruit
+    medicinal:
+    - oil used for respiratory complaints and wounds
+    toxicity: thorns in the stone can wound lips and tongue when bitten
+  lore:
+    folklore:
+    - it is said one must not bite the stone, as the thorns trap careless eaters
+    cultures:
+    - Goiás and Minas Gerais cooking; Xavante and Kayapó use
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: oil and food'
+      savagery: 'medium: spiny stones'
+    dimensions: *id008
+    hooks:
+    - oil and strong-flavoured food crop; fire-resistant bark
+  sources:
+  - https://en.wikipedia.org/wiki/Caryocar_brasiliense
+  - https://powo.science.kew.org/results?q=Caryocar%20brasiliense
+  - https://www.fpl.fs.usda.gov/documnts/TechSheets/Chudnoff/TropAmerican/pdf_files/caryoc1new.pdf
+- id: pereskia
+  names:
+  - rose cactus
+  - leaf cactus
+  - ora-pro-nóbis
+  scientific: Pereskia grandifolia
+  rank: genus
+  stands_for:
+  - Leuenbergeria bleo
+  - Pereskia aculeata (ora-pro-nóbis)
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  habitat:
+    range: Mexico and Caribbean (Leuenbergeria bleo), eastern and southern Brazil, Paraguay, Argentina
+      (Pereskia aculeata, grandifolia)
+    ecosystem: dry forest, restinga and Cerrado thickets
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1200
+    substrate: sandy or rocky soils
+    niche: thicket shrub, climber
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: shrubby or tree-like cactus with woody stems and ordinary leaves, sometimes climbing
+    height_m:
+    - 2
+    - 8
+    trunk_diameter_m:
+    - 0.05
+    - 0.15
+    lifespan_y: null
+    growth_rate: fast
+    leaves: simple fleshy, leathery, broad flat leaves 5-15 cm, glossy green
+    seasonal: evergreen to semi-deciduous
+    flowers: rose-like pink or pink-white flowers 4-7 cm in clusters
+    fruit_visible: small round yellow or orange fruit with black seeds
+    bark: grey-brown, with paired curved spines
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - living hedges
+  products:
+    food:
+    - leaves of ora-pro-nóbis (P. aculeata) cooked with meat and eaten in Minas Gerais, rich in protein
+    - fruit
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves:
+    - edible leaves
+    dyes: *id003
+    medicinal:
+    - leaf poultices and teas (folk)
+    toxicity: null
+  lore:
+    folklore:
+    - name ora-pro-nóbis (pray for us) from a priest's story of picking leaves from a parish hedge
+    cultures:
+    - Minas Gerais cooking
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      savagery: 'medium: spiny'
+      yield: 'medium: edible leaves'
+    dimensions: *id008
+    hooks:
+    - edible leaves
+  sources:
+  - https://en.wikipedia.org/wiki/Pereskia
+  - https://en.wikipedia.org/wiki/Pereskia_aculeata
+  - https://powo.science.kew.org/results?q=Pereskia%20grandifolia
+- id: peroba
+  names:
+  - peroba-rosa
+  scientific: Aspidosperma polyneuron
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Atlantic Forest of Brazil (São Paulo, Minas Gerais, Paraná), Paraguay, Argentina (Misiones)
+    ecosystem: Atlantic Forest, semi-deciduous rainforest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: deep fertile soils
+    niche: canopy giant of seasonal forest
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: straight columnar trunk with rounded crown
+    height_m:
+    - 25
+    - 40
+    trunk_diameter_m:
+    - 0.8
+    - 1.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: simple oblong leathery leaves, glossy dark green
+    seasonal: evergreen to semi-deciduous
+    flowers: small white flowers in clusters
+    fruit_visible: woody follicle with winged seeds
+    bark: deep fissured greyish, corky, with thick ridges
+  timber:
+    heartwood: pinkish to yellowish brown, darkening with age
+    sapwood: pale yellowish
+    grain: straight to slightly interlocked
+    texture: fine and even
+    density_kg_m3: 775
+    janka_n: 7700
+    workability: easy, takes a fine finish
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good
+    uses:
+    - fine furniture
+    - interior joinery
+    - flooring
+    - doors and frames
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - São Paulo coffee-era houses; furniture of the plateau
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: fine timber'
+    dimensions: *id008
+    hooks:
+    - premium pink timber for furniture
+  sources:
+  - https://en.wikipedia.org/wiki/Aspidosperma_polyneuron
+  - https://powo.science.kew.org/results?q=Aspidosperma%20polyneuron
+  - https://www.wood-database.com/peroba-rosa/
+- id: peruvian-pepper
+  names:
+  - Peruvian pepper tree
+  - pink peppercorn
+  scientific: Schinus molle
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'brazilian-pepper: Brazilian pepper is a non-weeping invasive with holly-like leaves'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - medicinal
+  - product
+  habitat:
+    range: Andes of Peru, Bolivia, Chile, Ecuador, southern Brazil and Argentina; widely planted worldwide
+    ecosystem: dry Andean valleys, arid scrub
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 3500
+    substrate: dry rocky or sandy soils
+    niche: scattered tree in arid valleys, street tree
+    strata:
+    - open
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: weeping evergreen with gnarled trunk and drooping feathery branches
+    height_m:
+    - 8
+    - 15
+    trunk_diameter_m:
+    - 0.4
+    - 0.8
+    lifespan_y: 150
+    growth_rate: fast
+    leaves: compound drooping leaves with 20-40 narrow leaflets, aromatic when crushed
+    seasonal: evergreen
+    flowers: small yellowish-white flowers in drooping panicles
+    fruit_visible: rose-pink peppercorns in hanging bunches
+    bark: grey-brown, rough, deeply fissured, resinous
+  timber:
+    heartwood: pale brown
+    sapwood: pale
+    grain: irregular
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: moderate
+    rot_resistance: good
+    scent: null
+    fuel: good
+    uses:
+    - fuelwood
+    - posts
+    - carving
+  products:
+    food:
+    - pink peppercorns as spice (peppery sweet)
+    - chicha de molle (fermented drink brewed by the Inca)
+    - syrup and vinegar
+    sap_resin_latex:
+    - aromatic resin and gum
+    bark: *id001
+    leaves:
+    - leaves used as insect-repellent
+    dyes:
+    - yellow-green dye from leaves
+    medicinal:
+    - leaf and berry used as antiseptic, for toothache and rheumatism
+    toxicity: large amounts of berries irritate children and pets; resin can cause contact dermatitis
+  lore:
+    folklore: []
+    cultures:
+    - Inca chicha de molle and medicine
+    - Spanish colonial streets and plazas
+    symbolism:
+    - tree called molle, the tree of life by some Andean peoples
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: spice'
+      alignment: 'medium: plazas and gardens'
+    dimensions: *id008
+    hooks:
+    - pink pepper spice and antiseptic leaf; weeping silhouette
+  sources:
+  - https://en.wikipedia.org/wiki/Schinus_molle
+  - https://powo.science.kew.org/results?q=Schinus%20molle
+- id: petticoat-palm
+  names:
+  - Cuban petticoat palm
+  scientific: Copernicia macroglossa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Eastern Cuba (and Hispaniola relatives); cultivated
+    ecosystem: dry coastal savanna and limestone scrub
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 300
+    substrate: limestone and serpentine soils
+    niche: savanna palm
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: solitary stout palm with persistent dead leaves forming a skirt
+    height_m:
+    - 8
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 0.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: stiff costapalmate fan leaves, grey-green to blue-green, waxy
+    seasonal: evergreen
+    flowers: branched inflorescence beyond the leaves
+    fruit_visible: round black fruit
+    bark: trunk hidden under thatch of dead leaves; hard dark ringed stem
+  timber:
+    heartwood: dark, very hard outer wall
+    sapwood: pale fibrous core
+    grain: coarse fibrous
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: good
+    scent: null
+    fuel: null
+    uses:
+    - posts
+    - thatch
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves:
+    - thatch from the leaves
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: *id009
+    cultures: []
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      weirdness: 'medium: skirted trunk'
+    dimensions: *id008
+    hooks:
+    - thatch for roofs
+  sources:
+  - https://en.wikipedia.org/wiki/Copernicia_macroglossa
+  - https://powo.science.kew.org/results?q=Copernicia%20macroglossa
+- id: peumo
+  names:
+  - peumo
+  scientific: Cryptocarya alba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  habitat:
+    range: Central Chile (matorral and Valdivian forest), from Coquimbo to Araucanía
+    ecosystem: Mediterranean sclerophyll forest and matorral
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: moist ravines, fertile loam
+    niche: canopy of valley forests and ravines
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: dense rounded evergreen with straight trunk
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.4
+    - 1.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: leathery oval leaves 4-10 cm, glossy dark green above, bluish-white below, aromatic when crushed
+    seasonal: evergreen
+    flowers: small white-green fragrant flowers in panicles
+    fruit_visible: oval red drupes 1.5 cm, edible after boiling
+    bark: smooth dark brown to grey, rough with age
+  timber:
+    heartwood: pale yellowish brown
+    sapwood: pale
+    grain: straight
+    texture: fine
+    density_kg_m3: 700
+    janka_n: null
+    workability: moderate
+    rot_resistance: moderately durable
+    scent: aromatic
+    fuel: good
+    uses:
+    - tool handles
+    - charcoal
+    - fuelwood
+    - posts
+  products:
+    food:
+    - boiled fruit, chewed raw by Mapuche, eaten fresh
+    sap_resin_latex: *id006
+    bark:
+    - bark for tanning, soap
+    leaves:
+    - leaves in infusion
+    dyes: *id003
+    medicinal:
+    - leaf infusions for digestive and respiratory complaints
+    toxicity: null
+  lore:
+    folklore:
+    - Mapuche eat peumo fruit in rites and meals
+    cultures:
+    - Mapuche and Chilean rural culture
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'medium: fruit and charcoal'
+    dimensions: *id008
+    hooks:
+    - charcoal tree; fruit food
+  sources:
+  - https://en.wikipedia.org/wiki/Cryptocarya_alba
+  - https://powo.science.kew.org/results?q=Cryptocarya%20alba
+- id: physic-nut
+  names:
+  - physic nut
+  - jatropha
+  scientific: Jatropha curcas
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - product
+  - medicinal
+  habitat:
+    range: Mexico and Central America; naturalised in all tropics
+    ecosystem: dry forest, scrub, hedges
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1800
+    substrate: poor, sandy, well-drained soils
+    niche: scrub tree and live hedge
+    strata:
+    - shrub
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: sprawling shrub or small tree with smooth stems, soft green
+    height_m:
+    - 3
+    - 6
+    trunk_diameter_m:
+    - 0.1
+    - 0.2
+    lifespan_y: 50
+    growth_rate: fast
+    leaves: broad palmately lobed leaves 6-15 cm, pale green, long petioles
+    seasonal: deciduous in dry season
+    flowers: small yellow-green flowers in clusters
+    fruit_visible: round, green then yellow-black capsules 3 cm with 3 black seeds
+    bark: smooth, greenish-grey, peeling thin papery strips, with watery latex
+  timber:
+    heartwood: soft, pale
+    sapwood: pale
+    grain: coarse
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: low
+    scent: null
+    fuel: null
+    uses:
+    - living fences
+    - fuelwood
+  products:
+    food: *id005
+    sap_resin_latex:
+    - clear latex staining cloth brown-red; seed oil for lamps, soap and biodiesel
+    bark: *id001
+    leaves: *id002
+    dyes:
+    - dark dye from bark
+    medicinal:
+    - seed oil as purgative; latex for wounds (folk)
+    toxicity: seeds contain curcin and phorbol esters, violently purgative and fatal in small amounts
+      to humans and livestock
+  lore:
+    folklore: *id009
+    cultures:
+    - Portuguese colonial plant spread across Africa and Asia
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      savagery: 'high: poisonous seeds'
+      yield: 'medium: oil'
+    dimensions: *id008
+    hooks:
+    - poison and oil crafting; lamp fuel
+  sources:
+  - https://en.wikipedia.org/wiki/Jatropha_curcas
+  - https://powo.science.kew.org/results?q=Jatropha%20curcas
+- id: piassava
+  names:
+  - piassava
+  scientific: Attalea funifera
+  rank: species
+  stands_for:
+  - Leopoldinia piassaba (Pará piassava)
+  distinct_from:
+  - 'babassu: babassu is an oil palm'
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  habitat:
+    range: Coastal Bahia and Sergipe, Brazil (restinga and Atlantic Forest)
+    ecosystem: coastal Atlantic Forest and restinga
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 200
+    substrate: sandy coastal soils
+    niche: palm in forest and cleared secondary growth
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: short trunk (to 8 m) covered with old leaf bases and fibre, crowned with huge pinnate leaves
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m:
+    - 0.3
+    - 0.4
+    lifespan_y: null
+    growth_rate: slow
+    leaves: erect, stiff, pinnate leaves 8-10 m, dark green
+    seasonal: evergreen
+    flowers: large spike under the crown, orange-yellow flowers
+    fruit_visible: woody oval nuts 5-8 cm in large clusters, with hard shells
+    bark: black fibre-clad trunk with brown hairs
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - fibre broom heads
+    - thatch
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves:
+    - piassava fibre (stiff dark fibre from leaf sheaths) for brooms, brushes, ropes, thatch
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: *id009
+    cultures:
+    - 'Bahian economy: export fibre, street brooms of cities'
+    - nuts as vegetable ivory
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: fibre'
+    dimensions: *id008
+    hooks:
+    - 'piassava fibre crafting: brushes, brooms, rope'
+  sources:
+  - https://en.wikipedia.org/wiki/Attalea_funifera
+  - https://powo.science.kew.org/results?q=Attalea%20funifera
+- id: pink-poui
+  names:
+  - pink poui
+  - roble de sabana
+  - maquilishuat
+  - apamate
+  scientific: Tabebuia rosea
+  rank: species
+  stands_for:
+  - Tabebuia heterophylla (pink cedar)
+  distinct_from:
+  - 'ipe: ipê has far denser timber and darker pink flowers'
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  habitat:
+    range: Mexico to northern South America (Pacific slope of Central America); El Salvador national tree
+    ecosystem: tropical dry and moist forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1200
+    substrate: well-drained soils
+    niche: canopy of seasonal forest, savanna
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tree with straight trunk and rounded crown, bare in bloom
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m:
+    - 0.4
+    - 0.9
+    lifespan_y: null
+    growth_rate: fast
+    leaves: palmately compound leaves with 5 leaflets, glossy green
+    seasonal: leafless in dry season, when covered in flowers
+    flowers: large pink trumpet-shaped flowers in dense clusters on bare branches
+    fruit_visible: long thin pods 20-40 cm with winged seeds
+    bark: grey, fissured, with thin ridges
+  timber:
+    heartwood: light brown with pink tinge
+    sapwood: whitish
+    grain: straight
+    texture: medium
+    density_kg_m3: 670
+    janka_n: 4270
+    workability: easy
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good
+    uses:
+    - furniture
+    - joinery
+    - construction
+    - flooring
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - bark decoction for fever and kidney complaints (folk)
+    toxicity: null
+  lore:
+    folklore: *id009
+    cultures:
+    - Salvadoran maquilishuat symbol
+    - streets of Latin America
+    symbolism:
+    - national tree of El Salvador (maquilishuat)
+    notable_trees: *id007
+  game_fit:
+    fields:
+      alignment: 'high: ornamental national tree'
+    dimensions: *id008
+    hooks:
+    - pink flower spectacle in dry season; light carving timber
+  sources:
+  - https://en.wikipedia.org/wiki/Tabebuia_rosea
+  - https://powo.science.kew.org/results?q=Tabebuia%20rosea
+  - https://www.fpl.fs.usda.gov/documnts/TechSheets/Chudnoff/TropAmerican/htmlDocs_tropamerican/Tabebuiasppwhitecedar.html
+  - https://dendro.cnre.vt.edu/dendrology/woodtech/tabebuia.pdf
+- id: pitanga
+  names:
+  - pitanga
+  - Surinam cherry
+  scientific: Eugenia uniflora
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  habitat:
+    range: Brazil (Atlantic coast), Paraguay, Uruguay, Argentina; widely cultivated
+    ecosystem: Atlantic Forest, restinga, home gardens
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: sandy to loamy soils
+    niche: understory shrub and small tree
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: bushy small tree or large shrub, branching low
+    height_m:
+    - 2
+    - 7
+    trunk_diameter_m:
+    - 0.1
+    - 0.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: small opposite oval glossy leaves 2-6 cm, aromatic, bronze-red when young
+    seasonal: evergreen
+    flowers: small white fragrant flowers with many stamens
+    fruit_visible: ribbed 8-furrowed round fruit 2-4 cm, green, orange, red to dark maroon
+    bark: smooth, mottled reddish to grey, flaking
+  timber:
+    heartwood: pale
+    sapwood: pale
+    grain: irregular
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard but small
+    rot_resistance: moderate
+    scent: null
+    fuel: null
+    uses:
+    - tool handles
+    - charcoal
+  products:
+    food:
+    - fruit fresh or as juice, jam, liqueur
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves:
+    - aromatic leaves in tea, strewn on floors
+    dyes: *id003
+    medicinal:
+    - leaf tea for fever, diarrhoea and hypertension (folk)
+    toxicity: null
+  lore:
+    folklore: *id009
+    cultures:
+    - Brazilian backyards and Guaraní use
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'medium: fruit'
+    dimensions: *id008
+    hooks:
+    - fruit and aromatic leaf
+  sources:
+  - https://en.wikipedia.org/wiki/Eugenia_uniflora
+  - https://powo.science.kew.org/results?q=Eugenia%20uniflora
+- id: poinsettia
+  names:
+  - poinsettia
+  - nochebuena
+  - cuetlaxóchitl
+  scientific: Euphorbia pulcherrima
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - flowers
+  - cultural
+  habitat:
+    range: Southern Mexico and Guatemala (Pacific slope), seasonal dry forest
+    ecosystem: tropical dry forest, cloud forest margins
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 100
+    - 2000
+    substrate: rocky, well-drained soils
+    niche: understory shrub-tree in dry forest
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: sprawling shrub to small multi-stemmed tree
+    height_m:
+    - 1
+    - 4
+    trunk_diameter_m:
+    - 0.05
+    - 0.15
+    lifespan_y: null
+    growth_rate: fast
+    leaves: simple lance-shaped leaves 7-16 cm, dark green
+    seasonal: semi-deciduous
+    flowers: tiny yellow cyathia surrounded by vivid scarlet bracts, which are the visible display
+    fruit_visible: small capsule
+    bark: smooth, grey-green
+  timber:
+    heartwood: soft
+    sapwood: pale
+    grain: irregular
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: poor
+    scent: null
+    fuel: null
+    uses:
+    - ornamental only
+  products:
+    food: *id005
+    sap_resin_latex:
+    - milky latex
+    bark: *id001
+    leaves: *id002
+    dyes:
+    - red dye from bracts (Aztec)
+    medicinal:
+    - latex used to treat fever (Aztec)
+    toxicity: latex irritates skin and eyes; mildly toxic if eaten, but rarely serious
+  lore:
+    folklore:
+    - Aztec cuetlaxóchitl, symbol of purity and of warriors' blood; Christmas flower in Mexico (nochebuena)
+      from legend of the poor girl's gift
+    cultures:
+    - Aztec dye and fever medicine
+    - Mexican Christmas traditions
+    symbolism:
+    - Christmas flower
+    notable_trees: *id007
+  game_fit:
+    fields:
+      weirdness: low
+      alignment: 'high: ritual flower'
+    dimensions: *id008
+    hooks:
+    - red bract dye; festival decoration
+  sources:
+  - https://en.wikipedia.org/wiki/Poinsettia
+  - https://powo.science.kew.org/results?q=Euphorbia%20pulcherrima
+- id: polylepis
+  names:
+  - queñua
+  - polylepis
+  scientific: Polylepis
+  rank: genus
+  stands_for:
+  - Polylepis tarapacana
+  - Polylepis racemosa
+  - Polylepis incana
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: High Andes from Venezuela to Chile and Argentina; ~45 species
+    ecosystem: high-Andean treeline woodland (queñoales)
+    climate:
+      temperature:
+      - cold
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 3000
+    - 5200
+    substrate: rocky slopes, glacial moraines
+    niche: treeline woodland above forest
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: twisted gnarled low trees with crooked trunks, forming open woods
+    height_m:
+    - 2
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 0.8
+    lifespan_y: 500
+    growth_rate: slow
+    leaves: small compound leaves with hairy, waxy leaflets, dark green above and pale or rusty below
+    seasonal: evergreen
+    flowers: small inconspicuous wind-pollinated flowers in drooping racemes
+    fruit_visible: small winged or spiny nutlets
+    bark: many thin layers of red-brown papery bark peeling in sheets, insulating against cold
+  timber:
+    heartwood: reddish
+    sapwood: pale
+    grain: twisted, irregular
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard to work (twisted)
+    rot_resistance: moderate
+    scent: null
+    fuel: good, high-altitude fuel
+    uses:
+    - fuelwood
+    - charcoal
+    - tool handles
+    - roof beams
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark:
+    - papery bark used as paper-like wrapping and tinder
+    leaves: *id002
+    dyes:
+    - red dye from bark
+    medicinal:
+    - leaf and bark tea in folk medicine (Polylepis incana)
+    toxicity: null
+  lore:
+    folklore:
+    - sacred high-altitude tree for Quechua and Aymara
+    cultures:
+    - Inca plantings of Polylepis near temples and roads
+    - Andean highland peoples for fuel
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      liminality: 'high: highest-growing tree, edge of the world'
+      weirdness: 'medium: papery red bark'
+    dimensions:
+    - aether
+    hooks:
+    - high-altitude fuel and papery bark tinder
+  sources:
+  - https://en.wikipedia.org/wiki/Polylepis
+  - https://powo.science.kew.org/results?q=Polylepis
+- id: ponytail-palm
+  names:
+  - ponytail palm
+  - elephant-foot tree
+  scientific: Beaucarnea recurvata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Eastern Mexico (Veracruz, Tamaulipas, San Luis Potosí, Oaxaca)
+    ecosystem: tropical dry forest and scrub
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 1200
+    substrate: dry rocky soils
+    niche: dry-forest and cliff plant
+    strata:
+    - open
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: swollen bottle-shaped base storing water, one or few trunks topped by tufts of long strap leaves
+    height_m:
+    - 3
+    - 9
+    trunk_diameter_m:
+    - 0.3
+    - 1.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: long narrow leathery strap leaves 1-2 m, drooping, dark green, with fine edge teeth
+    seasonal: evergreen
+    flowers: large panicle of tiny creamy flowers, dioecious
+    fruit_visible: small three-winged capsules
+    bark: pale grey, thickly corky in a polygonal pattern on the swollen base
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - ornamental
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: *id009
+    cultures: *id011
+    symbolism: *id010
+    notable_trees: *id007
+  game_fit:
+    fields:
+      weirdness: 'high: bottle-shaped trunk'
+    dimensions: *id008
+    hooks:
+    - water-storing stem; strap-leaf fibre
+  sources:
+  - https://en.wikipedia.org/wiki/Beaucarnea_recurvata
+  - https://powo.science.kew.org/results?q=Beaucarnea%20recurvata
+- id: primavera
+  names:
+  - primavera
+  - white mahogany
+  scientific: Roseodendron donnell-smithii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  habitat:
+    range: Pacific slope of Mexico, Guatemala, El Salvador, Honduras (native dry forest); planted widely
+    ecosystem: tropical dry forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1000
+    substrate: well-drained soils
+    niche: canopy of dry forest
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tall straight trunk with rounded crown
+    height_m:
+    - 20
+    - 30
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: fast
+    leaves: palmately compound leaves of 5 leaflets, bright green
+    seasonal: 'deciduous: leafless in the dry season when covered in flowers'
+    flowers: masses of bright yellow trumpet flowers on bare crowns
+    fruit_visible: long thin pods with winged seeds
+    bark: grey-brown, fissured
+  timber:
+    heartwood: pale cream to light yellow-brown, satiny
+    sapwood: whitish
+    grain: straight to wavy; ribbon figure
+    texture: medium, lustrous
+    density_kg_m3: 465
+    janka_n: 3170
+    workability: very easy to work, finishes well
+    rot_resistance: not durable
+    scent: null
+    fuel: moderate
+    uses:
+    - furniture
+    - veneer
+    - plywood
+    - interior joinery
+    - instrument parts
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Central American furniture trade, white mahogany
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      alignment: 'medium: ornamental and timber crop'
+    dimensions: *id008
+    hooks:
+    - pale light timber for furniture; yellow dry-season bloom
+  sources:
+  - https://en.wikipedia.org/wiki/Roseodendron_donnell-smithii
+  - https://www.wood-database.com/primavera/
+  - https://powo.science.kew.org/results?q=Roseodendron%20donnell-smithii
+- id: purpleheart
+  names:
+  - purpleheart
+  - amaranth
+  scientific: Peltogyne
+  rank: genus
+  stands_for:
+  - Peltogyne venosa
+  - Peltogyne paniculata
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Mexico to Brazil; Amazon, Guianas, Central America (Peltogyne venosa, P. paniculata)
+    ecosystem: lowland rainforest, terra firme
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m:
+    - 0
+    - 600
+    substrate: well-drained uplands
+    niche: canopy and emergent tree
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall straight trunk, buttressed, with dense crown
+    height_m:
+    - 30
+    - 50
+    trunk_diameter_m:
+    - 0.6
+    - 1.2
+    lifespan_y: null
+    growth_rate: slow
+    leaves: pinnate leaves of one pair of curved, butterfly-shaped leaflets with translucent dots, dark
+      green
+    seasonal: evergreen
+    flowers: small white flowers in panicles
+    fruit_visible: flat single-seeded pods
+    bark: smooth grey-brown, scaly or fissured
+  timber:
+    heartwood: brown when freshly cut, turning vivid purple-violet on exposure, darkening to deep brown
+      over time
+    sapwood: pale yellow-white
+    grain: straight to interlocked
+    texture: fine to medium
+    density_kg_m3: 905
+    janka_n: 11190
+    workability: hard and dense; blunts tools; glues poorly; polishes well
+    rot_resistance: very durable
+    scent: null
+    fuel: good, hot
+    uses:
+    - furniture
+    - inlay
+    - flooring
+    - bridges
+    - decking
+    - turning
+    - instrument parts
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes:
+    - purple tint extracted from the wood
+    medicinal: *id004
+    toxicity: dust can irritate eyes, skin and lungs
+  lore:
+    folklore: []
+    cultures:
+    - South American wood trade, ship planking
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      weirdness: 'high: wood turns purple on exposure'
+      yield: 'high: fine hardwood'
+    dimensions:
+    - aether
+    hooks:
+    - 'purple wood: decorative building and tools; dense hardwood'
+  sources:
+  - https://www.wood-database.com/purpleheart/
+  - https://en.wikipedia.org/wiki/Peltogyne
+  - https://powo.science.kew.org/results?q=Peltogyne
+- id: puya
+  names:
+  - queen of the Andes
+  - titanka
+  scientific: Puya raimondii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  habitat:
+    range: High Andes of Peru and Bolivia (3,200-4,800 m), Cordillera Blanca
+    ecosystem: high-altitude puna grassland
+    climate:
+      temperature:
+      - cold
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 3200
+    - 4800
+    substrate: rocky grassland and slopes
+    niche: giant rosette plant in puna grassland
+    strata:
+    - open
+    - herbaceous
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: huge rosette of stiff spiny leaves on a short trunk, with a single giant flowering spike
+    height_m:
+    - 3
+    - 12
+    trunk_diameter_m:
+    - 0.5
+    - 2.0
+    lifespan_y: 100
+    growth_rate: slow
+    leaves: rosette of 2,000 stiff, narrow, saw-toothed leaves with barbed margins, grey-green
+    seasonal: evergreen
+    flowers: spike up to 10 m with about 8,000 greenish-white to cream flowers, once, after 40-100 years,
+      then the plant dies
+    fruit_visible: capsules with winged seeds
+    bark: trunk covered in dead leaf bases
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - fuelwood from dead stalks
+    - roof frames
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore:
+    - said to bloom only once and die, a monument to endurance
+    cultures:
+    - Quechua queen of the Andes (reina de los Andes)
+    - Raimondi discovered it in 1870
+    symbolism:
+    - symbol of the high Andes
+    notable_trees:
+    - Titanka stands at Cordillera Blanca, Huascarán National Park
+    - Cabanaconde stands, Peru
+  game_fit:
+    fields:
+      weirdness: 'high: flowers once after a century'
+      liminality: 'high: dies after flowering'
+    dimensions:
+    - aether
+    hooks:
+    - spiny rosette as barrier; spike as pole
+  sources:
+  - https://en.wikipedia.org/wiki/Puya_raimondii
+  - https://powo.science.kew.org/results?q=Puya%20raimondii
+- id: quaresmeira
+  names:
+  - quaresmeira
+  - glory tree
+  - manacá-da-serra
+  scientific: Pleroma granulosum
+  rank: group
+  stands_for:
+  - Pleroma mutabile (manacá-da-serra)
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  habitat:
+    range: Atlantic Forest of Brazil (Pleroma granulosum, P. mutabile), Rio de Janeiro to Santa Catarina
+    ecosystem: Atlantic Forest, forest edge and gaps
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: moist well-drained soils, disturbed ground
+    niche: pioneer of gaps, secondary forest
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tree with open crown, young branches four-angled
+    height_m:
+    - 8
+    - 15
+    trunk_diameter_m:
+    - 0.2
+    - 0.5
+    lifespan_y: 40
+    growth_rate: fast
+    leaves: oval opposite leaves with three to five prominent parallel veins, dark green
+    seasonal: evergreen
+    flowers: large purple flowers 8-10 cm, opening white and ageing through pink to purple, around Lent
+      (quaresma)
+    fruit_visible: round capsule with many tiny seeds
+    bark: grey-brown, rough, fissured
+  timber:
+    heartwood: pale brown
+    sapwood: pale
+    grain: straight
+    texture: coarse
+    density_kg_m3: 550
+    janka_n: null
+    workability: easy
+    rot_resistance: not durable
+    scent: null
+    fuel: moderate
+    uses:
+    - fuelwood
+    - poles
+    - cabinetry
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - leaf and bark tea for diarrhoea (folk)
+    toxicity: null
+  lore:
+    folklore:
+    - blooms during Lent, hence the name quaresmeira
+    cultures:
+    - Brazilian streets and parks
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      weirdness: 'medium: colour-changing flowers'
+      yield: low
+    dimensions: *id008
+    hooks:
+    - purple flowers for dye and festival decoration; pioneer for gaps
+  sources:
+  - https://en.wikipedia.org/wiki/Pleroma_granulosum
+  - https://powo.science.kew.org/results?q=Pleroma%20granulosum
+- id: quassia
+  names:
+  - quassia
+  - bitterwood
+  scientific: Quassia amara
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  - flowers
+  habitat:
+    range: Tropical America (Amazon, Central America) and the Caribbean
+    ecosystem: lowland rainforest understory
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m:
+    - 0
+    - 500
+    substrate: moist soils
+    niche: small understory tree
+    strata:
+    - understory
+    - shrub
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: shrub or small tree with slender crooked stems
+    height_m:
+    - 3
+    - 6
+    trunk_diameter_m:
+    - 0.05
+    - 0.15
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: pinnate leaves with winged central stalk, five leaflets, dark green
+    seasonal: evergreen
+    flowers: showy red tubular flowers in drooping panicles
+    fruit_visible: small black drupes in clusters
+    bark: smooth grey
+  timber:
+    heartwood: pale yellow
+    sapwood: pale
+    grain: straight
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: easy
+    rot_resistance: poor
+    scent: null
+    fuel: null
+    uses:
+    - bitter chips
+  products:
+    food: *id005
+    sap_resin_latex: []
+    bark:
+    - bitter bark
+    leaves: []
+    dyes: *id003
+    medicinal:
+    - bitters (quassin) used as tonic, febrifuge and anthelmintic
+    - insecticide spray
+    toxicity: bitter quassin is mildly toxic in large doses
+  lore:
+    folklore:
+    - named for Graman Quassi, a Surinamese healer who revealed its use against fever in the 1700s
+    cultures:
+    - Suriname Maroon healers
+    - beer-bittering and tonic bitters in Europe
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'medium: bitter medicine and insecticide'
+    dimensions: *id008
+    hooks:
+    - bitter extract for medicine and pest repellent
+  sources:
+  - https://en.wikipedia.org/wiki/Quassia_amara
+  - https://powo.science.kew.org/results?q=Quassia%20amara
+- id: quebracho
+  names:
+  - quebracho
+  - axe-breaker
+  scientific: Schinopsis lorentzii
+  rank: genus
+  stands_for:
+  - Schinopsis balansae
+  distinct_from:
+  - 'white-quebracho: white quebracho is an unrelated medicinal-bark tree'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: Gran Chaco of Argentina, Paraguay, Bolivia, Brazil (Schinopsis lorentzii, S. balansae)
+    ecosystem: Chaco dry forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 500
+    substrate: dry sandy-clay soils
+    niche: canopy tree of dry thorn forest
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: straight trunk with dense rounded crown, often twisted
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.4
+    - 1.2
+    lifespan_y: null
+    growth_rate: slow
+    leaves: small compound leaves of small leathery leaflets, dark green, shiny
+    seasonal: evergreen
+    flowers: small yellow-green flowers in panicles
+    fruit_visible: small winged samaras, red-brown
+    bark: dark grey, deeply fissured, thick
+  timber:
+    heartwood: deep red-brown, turning dark red
+    sapwood: yellowish
+    grain: interlocked
+    texture: fine
+    density_kg_m3: 1205
+    janka_n: 15702
+    workability: very hard to work; blunts tools
+    rot_resistance: extremely durable
+    scent: null
+    fuel: hot, charcoal
+    uses:
+    - railway sleepers
+    - fence posts
+    - charcoal
+    - heavy construction
+    - tannin extraction
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark:
+    - tannin-rich heartwood extract used to tan leather
+    leaves: *id002
+    dyes:
+    - red tannin dye
+    medicinal:
+    - bark and heartwood used for tanning, folk use
+    toxicity: null
+  lore:
+    folklore:
+    - 'axe-breaker: name from quebrar hacha'
+    cultures:
+    - Chaco indigenous peoples, tannin industry of Argentina and Paraguay (quebrachales)
+    - forests logged for tannin from 1880s to 1960s
+    symbolism:
+    - national tree of Argentina (red quebracho; with ceibo as national flower)
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: tannin, hardwood'
+      savagery: 'medium: hard wood, dry thorn forest'
+    dimensions: *id008
+    hooks:
+    - tannin for leather crafting; hardest posts and charcoal
+  sources:
+  - https://en.wikipedia.org/wiki/Schinopsis_lorentzii
+  - https://www.wood-database.com/quebracho/
+  - https://powo.science.kew.org/results?q=Schinopsis%20lorentzii
+  - https://www.wood-database.com/quebracho/
+- id: queen-palm
+  names:
+  - queen palm
+  - jerivá
+  - pindó
+  scientific: Syagrus romanzoffiana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - folklore
+  habitat:
+    range: Southern Brazil, Paraguay, Uruguay, northeast Argentina; planted worldwide
+    ecosystem: Atlantic Forest and gallery forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: moist well-drained soils
+    niche: canopy palm in open forest
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: slender solitary palm with a graceful crown of pinnate leaves
+    height_m:
+    - 10
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 0.5
+    lifespan_y: null
+    growth_rate: fast
+    leaves: feathery pinnate leaves 3-5 m with drooping leaflets, bright green
+    seasonal: evergreen
+    flowers: creamy yellow flowers in large branched inflorescence in a boat-shaped spathe
+    fruit_visible: pendant clusters of orange oval fruit 2 cm, sweet and fibrous
+    bark: smooth grey ringed trunk
+  timber:
+    heartwood: dark brown outer wall
+    sapwood: pale
+    grain: coarse fibrous
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: moderate
+    scent: null
+    fuel: null
+    uses:
+    - posts
+    - craft
+    - thatch
+  products:
+    food:
+    - fruit pulp eaten, fruit used to feed pigs
+    - palm heart (palmito jerivá)
+    - seeds oil
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves:
+    - leaf fibre
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore:
+    - 'Guaraní myth: pindó is the first tree of creation'
+    cultures:
+    - Guaraní
+    - Southern Cone street tree and plantation
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      alignment: 'medium: myth and streets'
+    dimensions: *id008
+    hooks:
+    - edible fruit and palm heart; fibre
+  sources:
+  - https://en.wikipedia.org/wiki/Syagrus_romanzoffiana
+  - https://powo.science.kew.org/results?q=Syagrus%20romanzoffiana
+- id: quillay
+  names:
+  - quillay
+  - soapbark
+  scientific: Quillaja saponaria
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - cultural
+  habitat:
+    range: Central Chile (Coquimbo to Araucanía)
+    ecosystem: Mediterranean sclerophyll forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: dry rocky slopes
+    niche: scrub and woodland on dry hills
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: evergreen tree with rounded crown and straight trunk
+    height_m:
+    - 10
+    - 20
+    trunk_diameter_m:
+    - 0.3
+    - 0.8
+    lifespan_y: null
+    growth_rate: slow
+    leaves: small oval, leathery, glossy dark green leaves 3-6 cm
+    seasonal: evergreen
+    flowers: small creamy-white star-shaped flowers in terminal clusters
+    fruit_visible: star-shaped woody capsules of five follicles with winged seeds
+    bark: dark grey to black, rough, deeply fissured
+  timber:
+    heartwood: pale pinkish brown
+    sapwood: pale
+    grain: straight
+    texture: fine
+    density_kg_m3: 850
+    janka_n: null
+    workability: hard to work
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good
+    uses:
+    - carpentry
+    - tool handles
+    - charcoal
+    - fuelwood
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark:
+    - 'saponin-rich bark: soap and shampoo'
+    - QS-21 saponin, vaccine adjuvant
+    - foaming agent in drinks
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - bark tea for coughs; wound wash
+    toxicity: saponin dust irritates eyes and nose; toxic if eaten in quantity
+  lore:
+    folklore: []
+    cultures:
+    - Mapuche use for hair washing and soap
+    - Chilean industry exporting saponins
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: saponin soap'
+      alignment: medium
+    dimensions: *id008
+    hooks:
+    - soap from bark; medicinal adjuvant
+  sources:
+  - https://en.wikipedia.org/wiki/Quillaja_saponaria
+  - https://powo.science.kew.org/results?q=Quillaja%20saponaria
+- id: rain-tree
+  names:
+  - rain tree
+  - monkeypod
+  - saman
+  scientific: Samanea saman
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  habitat:
+    range: Native to northern South America, Central America and Caribbean; planted pantropically
+    ecosystem: tropical seasonal forest, savanna, parks
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1000
+    substrate: deep soils, tolerates variety
+    niche: giant spreading tree of open savanna and settlements
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: huge umbrella crown wider than tall on a short thick trunk
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m:
+    - 1.0
+    - 2.5
+    lifespan_y: 150
+    growth_rate: fast
+    leaves: feathery bipinnate leaves that fold at night and before rain
+    seasonal: semi-deciduous; briefly leafless in dry season
+    flowers: pink and white powder-puff flowers with long stamens
+    fruit_visible: flat dark brown pods 10-20 cm with sweet pulp
+    bark: dark grey-brown, rough, with deep furrows
+  timber:
+    heartwood: rich chocolate brown, with pale sapwood
+    sapwood: pale yellow
+    grain: interlocked, often wavy figure
+    texture: coarse
+    density_kg_m3: 600
+    janka_n: 4010
+    workability: easy to work, finishes well
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good
+    uses:
+    - carved bowls (monkeypod)
+    - furniture
+    - veneer
+    - crafts
+  products:
+    food:
+    - pod pulp eaten and used for fodder
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - bark and leaf decoction for diarrhoea, stomach aches (folk)
+    toxicity: null
+  lore:
+    folklore:
+    - folding leaves said to herald rain and moisture drip from insects (cicada excretions) beneath the
+      crown, hence rain tree
+    cultures:
+    - Hawaiian monkeypod carving
+    - Latin American plazas
+    symbolism: []
+    notable_trees:
+    - Hitachi tree, Moanalua Gardens, Oahu (Hitachi advertisements)
+  game_fit:
+    fields:
+      yield: 'medium: shade, bowls, fodder'
+      alignment: medium
+    dimensions: *id008
+    hooks:
+    - giant shade tree and carved-bowl wood
+  sources:
+  - https://en.wikipedia.org/wiki/Samanea_saman
+  - https://www.wood-database.com/monkeypod/
+  - https://powo.science.kew.org/results?q=Samanea%20saman
+  - https://www.wood-database.com/monkeypod/
+- id: ramon
+  names:
+  - ramón
+  - breadnut
+  - Maya nut
+  scientific: Brosimum alicastrum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'snakewood: snakewood is a timber tree'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  habitat:
+    range: Mexico (Yucatán) and Central America to Peru and Brazil, Caribbean
+    ecosystem: tropical moist and dry forest, Maya lowlands
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonal'
+    elevation_m:
+    - 0
+    - 1600
+    substrate: karst limestone soils to alluvium
+    niche: canopy and emergent of lowland forest
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: tall straight trunk, buttressed, dense dark crown
+    height_m:
+    - 20
+    - 45
+    trunk_diameter_m:
+    - 0.5
+    - 1.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: oval leaves, glossy dark green, 5-15 cm, drooping
+    seasonal: evergreen
+    flowers: small unisexual flower heads, hidden within a round receptacle
+    fruit_visible: round yellow-orange or green fruit 2 cm with thin sweet pulp and a large round seed
+    bark: grey-brown, smooth to scaly, with latex
+  timber:
+    heartwood: pale yellowish-white to tan
+    sapwood: white
+    grain: straight to interlocked
+    texture: medium
+    density_kg_m3: 750
+    janka_n: 6760
+    workability: moderate
+    rot_resistance: not durable
+    scent: null
+    fuel: good
+    uses:
+    - construction
+    - furniture
+    - plywood
+    - fuelwood
+    - charcoal
+  products:
+    food:
+    - seeds boiled or ground into flour (ramon nut), roasted like coffee
+    - fruit pulp
+    sap_resin_latex:
+    - white latex, drunk like milk
+    bark: *id001
+    leaves:
+    - leafy branches as cattle fodder
+    dyes: *id003
+    medicinal:
+    - latex and seeds for asthma and lactation (folk)
+    toxicity: null
+  lore:
+    folklore:
+    - said to have fed the Maya during drought; groves persist around ruins
+    cultures:
+    - Maya food and fodder tree
+    - modern revival projects in Guatemala and Mexico
+    symbolism:
+    - food of the ancient Maya
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: food and fodder'
+      alignment: 'high: cultivated by Maya'
+    dimensions: *id008
+    hooks:
+    - 'famine food: nuts, flour, fodder'
+  sources:
+  - https://en.wikipedia.org/wiki/Brosimum_alicastrum
+  - https://powo.science.kew.org/results?q=Brosimum%20alicastrum
+  - https://www.wood-database.com/breadnut/
+- id: rauli
+  names:
+  - raulí
+  - roble pellín
+  - Nothofagus alpina
+  scientific: Lophozonia alpina
+  rank: group
+  stands_for:
+  - Lophozonia obliqua (roble pellín)
+  distinct_from:
+  - 'coihue: coihue is evergreen'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: South-central Chile and adjacent Argentina (Lophozonia alpina, L. obliqua)
+    ecosystem: temperate Valdivian and Andean forest
+    climate:
+      temperature:
+      - cool-temperate
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1500
+    substrate: volcanic and loamy soils
+    niche: canopy of mixed Nothofagus forest
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: straight columnar trunk with spreading crown
+    height_m:
+    - 30
+    - 45
+    trunk_diameter_m:
+    - 1.0
+    - 2.0
+    lifespan_y: 400
+    growth_rate: fast
+    leaves: oval leaves 4-8 cm with scalloped or toothed margins and prominent parallel veins, bright
+      green
+    seasonal: deciduous; leaves turn yellow, orange and red in autumn
+    flowers: inconspicuous small green flowers
+    fruit_visible: small three-winged nuts in cupules with spiny scales
+    bark: grey, smooth when young, fissured and furrowed with age
+  timber:
+    heartwood: pinkish to reddish brown
+    sapwood: pale pink
+    grain: straight
+    texture: fine to medium
+    density_kg_m3: 550
+    janka_n: 4400
+    workability: easy to work; finishes well
+    rot_resistance: not durable
+    scent: null
+    fuel: good
+    uses:
+    - furniture
+    - flooring
+    - joinery
+    - veneer
+    - barrels
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Mapuche for timber and carving
+    - Chilean southern timber industry
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'medium: red-hued timber'
+    dimensions: *id008
+    hooks:
+    - red hardwood for furniture
+  sources:
+  - https://en.wikipedia.org/wiki/Nothofagus_alpina
+  - https://powo.science.kew.org/results?q=Lophozonia%20alpina
+  - https://www.fpl.fs.usda.gov/documnts/TechSheets/Chudnoff/SEAsian_Oceanic/htmlDocs_SEAsian/Nothofagusspp.html
+  - https://www.anyonewood.com/rauli/
+- id: red-mangrove
+  names:
+  - red mangrove
+  scientific: Rhizophora mangle
+  rank: group
+  stands_for:
+  - Rhizophora racemosa
+  - Rhizophora mucronata
+  - Rhizophora apiculata
+  - Rhizophora stylosa
+  distinct_from:
+  - 'black-mangrove: black mangrove breathes through pencil pneumatophores, not stilt roots'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: Atlantic and Caribbean coasts of the Americas (including south Florida), West Africa, Pacific
+      coast of the Americas, Galápagos
+    ecosystem: tidal estuary and coastal mangrove
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m:
+    - 0
+    - 10
+    substrate: saline waterlogged mud
+    niche: seaward fringe of mangrove swamp
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tree on arching stilt (prop) roots rising from the water, dense rounded crown
+    height_m:
+    - 3
+    - 25
+    trunk_diameter_m:
+    - 0.2
+    - 0.6
+    lifespan_y: 100
+    growth_rate: moderate
+    leaves: oval leathery opposite leaves 6-12 cm, glossy dark green, salt-excreting
+    seasonal: evergreen
+    flowers: small pale-yellow flowers, four-petalled, wind-pollinated
+    fruit_visible: pencil-shaped propagules 20-30 cm that germinate on the tree and drop into the mud
+    bark: smooth grey on young stems, rough dark red-brown to black with age
+  timber:
+    heartwood: dark red-brown
+    sapwood: pale pinkish
+    grain: straight to interlocked
+    texture: fine, dense
+    density_kg_m3: 1070
+    janka_n: 12280
+    workability: hard, difficult to work
+    rot_resistance: moderately durable in water
+    scent: null
+    fuel: excellent charcoal
+    uses:
+    - charcoal
+    - firewood
+    - posts
+    - piles
+    - fish traps
+  products:
+    food: *id005
+    sap_resin_latex: *id006
+    bark:
+    - tannin-rich bark for tanning leather and dye
+    leaves: *id002
+    dyes:
+    - red-brown tannin dye
+    medicinal:
+    - bark decoction for sore throats and wounds (folk)
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - 'coastal peoples of Caribbean, West Africa and Atlantic Americas: charcoal, tannin, fishing'
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      liminality: 'high: tidal edge between land and sea'
+      savagery: 'medium: tangled roots, crocodiles, mud'
+    dimensions:
+    - terra
+    hooks:
+    - tannin and charcoal; shoreline nursery
+  sources:
+  - https://en.wikipedia.org/wiki/Rhizophora_mangle
+  - https://powo.science.kew.org/results?q=Rhizophora%20mangle
+  - https://www.fpl.fs.usda.gov/documnts/TechSheets/Chudnoff/TropAmerican/htmlDocs_tropamerican/Rhizophoramangle.html
+  - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0313824
+- id: rosewood-oil-tree
+  names:
+  - pau-rosa
+  - Brazilian rosewood oil tree
+  - Aniba rosaeodora
+  scientific: Aniba rosaeodora
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'brazilian-rosewood: pau-rosa is a laurel grown for oil, not timber'
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  habitat:
+    range: Brazilian Amazon (Pará, Amazonas), Guianas, Colombia, Peru
+    ecosystem: terra firme lowland rainforest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - wet
+      note: null
+    elevation_m:
+    - 0
+    - 400
+    substrate: well-drained clay and sandy soils
+    niche: canopy tree of upland rainforest
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: tall straight trunk with a rounded crown
+    height_m:
+    - 25
+    - 40
+    trunk_diameter_m:
+    - 0.5
+    - 1.0
+    lifespan_y: null
+    growth_rate: slow
+    leaves: simple oval leathery leaves, dark glossy green, aromatic when crushed
+    seasonal: evergreen
+    flowers: small yellowish flowers in panicles
+    fruit_visible: one-seeded round berry on a cup
+    bark: smooth brown, reddish inner bark, aromatic
+  timber:
+    heartwood: yellowish brown, aromatic
+    sapwood: pale yellow
+    grain: straight to interlocked
+    texture: medium
+    density_kg_m3: null
+    janka_n: null
+    workability: moderate
+    rot_resistance: good
+    scent: strongly aromatic, rose and linalool
+    fuel: moderate
+    uses:
+    - perfume wood oil distillation
+    - construction
+  products:
+    food: *id005
+    sap_resin_latex:
+    - wood and leaf essential oil (linalool, up to 90%), steam-distilled for perfumery
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal:
+    - linalool oil in aromatherapy and folk uses
+    toxicity: null
+  lore:
+    folklore:
+    - source of the scent in Chanel No. 5; overharvest nearly extirpated wild trees
+    cultures:
+    - Amazonian distilleries and French perfumers from the 1920s
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'high: essential oil'
+      weirdness: 'medium: scented heartwood'
+    dimensions: *id008
+    hooks:
+    - rose-scented essential oil crafting
+  sources:
+  - https://en.wikipedia.org/wiki/Aniba_rosaeodora
+  - https://powo.science.kew.org/results?q=Aniba%20rosaeodora
+- id: rosita-de-cacao
+  names:
+  - rosita de cacao
+  - flor de cacao
+  scientific: Quararibea funebris
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  habitat:
+    range: Southern Mexico (Oaxaca, Chiapas), Central America
+    ecosystem: tropical moist forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 1000
+    substrate: rich forest soils
+    niche: understory and canopy tree in moist forest
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: tree with straight trunk and rounded crown, often grown beside houses
+    height_m:
+    - 10
+    - 25
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: simple oval to oblong leaves, glossy dark green above
+    seasonal: evergreen
+    flowers: small fragrant brownish-green flowers with strong spicy-floral scent, dried and used
+    fruit_visible: fleshy oval green to yellowish fruit with a seed
+    bark: grey-brown, smooth
+  timber:
+    heartwood: pale
+    sapwood: pale
+    grain: straight
+    texture: medium
+    density_kg_m3: null
+    janka_n: null
+    workability: moderate
+    rot_resistance: fair
+    scent: null
+    fuel: fair
+    uses:
+    - shade
+    - posts
+  products:
+    food:
+    - dried flowers (rosita de cacao, flor de cacao) ground into tejate and chocolate drinks
+    sap_resin_latex: *id006
+    bark: *id001
+    leaves: *id002
+    dyes: *id003
+    medicinal: *id004
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - 'Oaxacan and Mixtec drinks: tejate, chocolate; Aztec used flowers to flavour cacao'
+    symbolism: []
+    notable_trees: *id007
+  game_fit:
+    fields:
+      yield: 'medium: aromatic flavouring'
+    dimensions: *id008
+    hooks:
+    - aromatic flower spice for food and drink crafting
+  sources:
+  - https://en.wikipedia.org/wiki/Quararibea_funebris
+  - https://powo.science.kew.org/results?q=Quararibea%20funebris

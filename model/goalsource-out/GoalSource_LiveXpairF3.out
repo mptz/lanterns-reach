@@ -1,0 +1,30 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 26 and seed 6885416448706645113 with 2 workers on 8 cores with 3641MB heap and 1024MB offheap memory [pid: 1242501] (Linux 6.12.115-140.210.amzn2023.x86_64 amd64, Amazon.com Inc. 21.0.13 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file goal-model/model/GoalSource.tla
+Parsing file /tmp/Integers.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module GoalSource
+Starting... (2026-11-15 17:26:16)
+Implied-temporal checking--satisfiability problem has 2 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-15 17:26:16.
+Checking 2 branches of temporal properties for the current state space with 23566 total distinct states at (2026-11-15 17:26:19)
+Finished checking temporal properties in 00s at 2026-11-15 17:26:19
+Progress(34) at 2026-11-15 17:26:19: 45,436 states generated (45,436 s/min), 11,783 distinct states found (11,783 ds/min), 11 states left on queue.
+Progress(35) at 2026-11-15 17:26:19: 45,468 states generated, 11,785 distinct states found, 0 states left on queue.
+Checking 2 branches of temporal properties for the complete state space with 23570 total distinct states at (2026-11-15 17:26:19)
+Finished checking temporal properties in 00s at 2026-11-15 17:26:20
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 2.2E-11
+45468 states generated, 11785 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 35.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 5 and the 95th percentile is 2).
+Finished in 03s at (2026-11-15 17:26:20)

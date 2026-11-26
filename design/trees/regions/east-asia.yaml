@@ -1,0 +1,2897 @@
+# Tree candidates: east-asia. Fields per design/trees.md.
+# Total: 161; tiers: 1: 25, 2: 80, 3: 56
+# Inclusion: well-known 10, folklore 6, cultural 112, striking 70, flowers 26, fruit 31, medicinal 27, toxic 10, product 87
+# Genera with 5+ entries: Pinus 8, Prunus 8, Acer 7, Quercus 6, Citrus 5
+
+- id: bamboo
+  names:
+  - giant bamboo
+  - moso bamboo
+  - Phyllostachys pubescens (syn.)
+  scientific: Phyllostachys edulis
+  rank: group
+  stands_for:
+  - Bambusa vulgaris
+  - Dendrocalamus giganteus
+  distinct_from:
+  - 'madake: thin-walled timber bamboo'
+  - 'black-bamboo: black culms'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  - product
+  region: east-asia
+  why: Tree-like grass of Asian forests, symbol of integrity and one of the Four Gentlemen; flowers in
+    synchronized mass events.
+- id: camellia
+  names:
+  - camellia
+  - tsubaki
+  scientific: Camellia japonica
+  rank: genus
+  stands_for:
+  - Camellia reticulata (Yunnan camellia)
+  distinct_from:
+  - 'oil-camellia: tea-oil seed crop'
+  - 'tea-plant: small white flowers, tea leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: east-asia
+  why: Winter flowers that drop whole, linked to samurai and tsubaki oil.
+- id: camphor-tree
+  names:
+  - camphor tree
+  - kusunoki
+  - Cinnamomum camphora (syn.)
+  scientific: Camphora officinarum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'nanmu: golden imperial timber'
+  - 'stout-camphor: Taiwan giant'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - striking
+  - product
+  region: east-asia
+  why: Giant shrine trees in Japan (Kamō no Ōkusu), source of camphor; Taiwan was the world's main camphor
+    producer under Qing and Japanese monopolies.
+- id: chinese-bayberry
+  names:
+  - yangmei
+  - Chinese bayberry
+  - Morella rubra (syn.)
+  scientific: Myrica rubra
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: east-asia
+  why: Bumpy crimson fruit of Zhejiang.
+- id: chinese-fir
+  names:
+  - Chinese fir
+  scientific: Cunninghamia lanceolata
+  rank: species
+  stands_for:
+  - Cunninghamia konishii
+  distinct_from:
+  - 'taiwania: far taller, scale leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: east-asia
+  why: Fragrant timber traditionally used for coffins and houses in southern China.
+- id: cycad
+  names:
+  - cycad
+  - sago cycad
+  scientific: Cycas revoluta
+  rank: group
+  stands_for:
+  - Cycas taitungensis
+  - Cycas panzhihuaensis
+  distinct_from:
+  - 'woods-cycad: South African Encephalartos, a single male clone'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - toxic
+  - product
+  region: east-asia
+  why: Palm-like seed plant of the Ryukyus and southern China from an ancient lineage; seeds are very
+    toxic, yet Okinawans processed them into famine starch.
+- id: dawn-redwood
+  names:
+  - dawn redwood
+  scientific: Metasequoia glyptostroboides
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'glyptostrobus: swamp cypress relic'
+  - 'cathaya: relic conifer'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - well-known
+  region: east-asia
+  why: Known only as a fossil until found alive in China in the 1940s; deciduous conifer with ferny foliage.
+- id: dove-tree
+  names:
+  - dove tree
+  - handkerchief tree
+  scientific: Davidia involucrata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'wilson-tree: relic with bracts'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: east-asia
+  why: Large white bracts hang like handkerchiefs or doves.
+- id: eucommia
+  names:
+  - hardy rubber tree
+  - du zhong
+  scientific: Eucommia ulmoides
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - striking
+  - product
+  region: east-asia
+  why: Only temperate rubber tree; leaves stretch latex threads when torn; Chinese medicine bark.
+- id: ginkgo
+  names:
+  - ginkgo
+  - maidenhair tree
+  scientific: Ginkgo biloba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - cultural
+  - medicinal
+  - toxic
+  region: east-asia
+  why: Living fossil unchanged for about 200 million years, golden fan leaves, temple tree surviving Hiroshima,
+    foul seed coats and toxic seeds.
+- id: goldenrain-tree
+  names:
+  - goldenrain tree
+  scientific: Koelreuteria paniculata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: east-asia
+  why: Yellow flower sprays and lantern pods, planted on scholars' graves in ancient China.
+- id: hinoki
+  names:
+  - hinoki cypress
+  - hinoki
+  scientific: Chamaecyparis obtusa
+  rank: species
+  stands_for:
+  - Chamaecyparis obtusa var. formosana (Taiwan yellow cypress)
+  distinct_from:
+  - 'sawara: finer sprays'
+  - 'taiwan-cypress: Taiwan giants'
+  - 'hiba: broad scale leaves'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: east-asia
+  why: Lemon-scented wood of Shinto shrines (Ise is rebuilt from it every 20 years) and hinoki baths;
+    first of the five sacred trees of Kiso.
+- id: japanese-black-pine
+  names:
+  - Japanese black pine
+  - kuromatsu
+  scientific: Pinus thunbergii
+  rank: species
+  stands_for:
+  - Pinus luchuensis (Ryukyu pine, Okinawa prefectural tree)
+  distinct_from:
+  - 'japanese-red-pine: orange bark, inland'
+  - 'korean-pine: nut pine'
+  - 'huangshan-pine: cliff pine'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: east-asia
+  why: Dark-barked coastal pine of Japan and Korea, planted as wind and tsunami breaks (Niji no Matsubara);
+    the pine of gardens, bonsai and New Year kadomatsu.
+- id: japanese-cherry
+  names:
+  - Japanese cherry
+  - sakura
+  - Yoshino cherry
+  - somei-yoshino
+  - sato-zakura
+  scientific: Prunus serrulata
+  rank: group
+  stands_for:
+  - Prunus × yedoensis (Somei-yoshino, the grafted clone of most hanami)
+  - Prunus serrulata cultivars (Kanzan, sato-zakura)
+  distinct_from:
+  - 'yamazakura: wild hill cherry'
+  - 'higan-cherry: weeping long-lived cherry'
+  - 'taiwan-cherry: deep pink bells'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - flowers
+  region: east-asia
+  why: Sakura blossom and hanami are central to Japanese culture as a symbol of transience; most hanami
+    trees are one grafted clone, Somei-yoshino, planted across Japan since the Meiji era.
+- id: japanese-maple
+  names:
+  - Japanese maple
+  - momiji
+  - full-moon maple
+  - hauchiwa-kaede
+  scientific: Acer palmatum
+  rank: group
+  stands_for:
+  - Acer shirasawanum
+  - Acer japonicum (fullmoon maple)
+  distinct_from:
+  - 'sugar-maple: syrup maple'
+  - 'snakebark-maple: striped bark'
+  - 'trident-maple: three-lobed bonsai maple'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  region: east-asia
+  why: Delicately cut leaves and momijigari autumn-leaf viewing in Japan.
+- id: japanese-raisin-tree
+  names:
+  - Japanese raisin tree
+  scientific: Hovenia dulcis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  region: east-asia
+  why: Swollen sweet fruit stalks taste like raisins and are a traditional hangover cure.
+- id: jujube
+  names:
+  - jujube
+  - Chinese date
+  scientific: Ziziphus jujuba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - product
+  region: east-asia
+  why: Date-like fruit in Chinese medicine and wedding customs.
+- id: katsura
+  names:
+  - katsura
+  scientific: Cercidiphyllum japonicum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: east-asia
+  why: Heart-shaped leaves that smell of burnt sugar in autumn.
+- id: lacquer-tree
+  names:
+  - lacquer tree
+  - urushi
+  scientific: Toxicodendron vernicifluum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-wax-tree: wax rather than lacquer'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - toxic
+  - cultural
+  - product
+  region: east-asia
+  why: Sap becomes urushi lacquer, but causes poison-ivy-like rashes.
+- id: loquat
+  names:
+  - loquat
+  scientific: Eriobotrya japonica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  region: east-asia
+  why: Spring fruit and a cough syrup from its leaves.
+- id: lychee
+  names:
+  - lychee
+  scientific: Litchi chinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'longan: smaller brown-skinned relative'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: east-asia
+  why: Fruit beloved of Yang Guifei, carried by relay horse to the Tang court.
+- id: orange
+  names:
+  - sweet orange
+  - orange
+  - bitter orange
+  - Citrus × sinensis (syn.)
+  scientific: Citrus × aurantium
+  rank: group
+  stands_for:
+  - Citrus × aurantium bitter-orange group (Seville orange)
+  distinct_from:
+  - 'mandarin: loose peel'
+  - 'kumquat: eaten whole'
+  - 'yuzu: aromatic hardy citrus'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - cultural
+  - flowers
+  - product
+  region: east-asia
+  why: Sweet orange arose in southern China; oranges are luck symbols at Chinese New Year, and bitter
+    orange gives neroli and orange-blossom bridal flowers.
+- id: osmanthus
+  names:
+  - sweet osmanthus
+  scientific: Osmanthus fragrans
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - folklore
+  - cultural
+  - product
+  region: east-asia
+  why: Fragrant autumn flowers; Wu Gang forever fells an osmanthus on the Moon.
+- id: pagoda-tree
+  names:
+  - Japanese pagoda tree
+  - Chinese scholar tree
+  - Sophora japonica (syn.)
+  scientific: Styphnolobium japonicum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - medicinal
+  - product
+  region: east-asia
+  why: Classic Chinese courtyard and court tree (three huai stood for the three highest ministers), planted
+    at temples and tombs; flower buds yield yellow dye and rutin.
+- id: paper-mulberry
+  names:
+  - paper mulberry
+  scientific: Broussonetia papyrifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'xuan-paper-elm: other Chinese paper bark'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: east-asia
+  why: Bark for washi and the first paper, and Pacific tapa cloth.
+- id: paulownia
+  names:
+  - paulownia
+  - princess tree
+  - kiri
+  scientific: Paulownia tomentosa
+  rank: genus
+  stands_for:
+  - Paulownia fortunei
+  - Paulownia elongata
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - striking
+  - product
+  region: east-asia
+  why: Japanese kiri chests made at a daughter's birth; soundboards of the koto and guqin; violet flowers;
+    very light wood; emblem of the Japanese government.
+- id: peach
+  names:
+  - peach
+  - nectarine
+  scientific: Prunus persica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - fruit
+  - folklore
+  - flowers
+  region: east-asia
+  why: Peaches of immortality in Chinese myth, peach-wood charms against demons, and showy spring blossom.
+- id: persimmon
+  names:
+  - persimmon
+  - kaki
+  scientific: Diospyros kaki
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ebony: black heartwood relative'
+  - 'american-persimmon: smaller North American fruit'
+  - 'date-plum: small blue-black fruit'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: east-asia
+  why: Orange fruit dried as hoshigaki; unripe fruit gives kakishibu tannin for waterproofing paper and
+    dye; the black heart (kurogaki) is ebony-like.
+- id: sichuan-pepper
+  names:
+  - Sichuan pepper
+  scientific: Zanthoxylum bungeanum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sansho: Japanese pepper, leaf spice'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: east-asia
+  why: Spiny tree with numbing husks central to Sichuan cooking.
+- id: snakebark-maple
+  names:
+  - snakebark maple
+  scientific: Acer davidii
+  rank: group
+  stands_for:
+  - Acer capillipes
+  distinct_from:
+  - 'paperbark-maple: peeling cinnamon bark'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: east-asia
+  why: Green-and-white striped bark makes these maples instantly recognizable.
+- id: star-anise
+  names:
+  - star anise
+  scientific: Illicium verum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'shikimi: toxic Japanese star anise'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - toxic
+  - medicinal
+  - product
+  region: east-asia
+  why: Star-shaped spice; Japanese star anise is neurotoxic; source of shikimic acid for Tamiflu.
+- id: sugi
+  names:
+  - Japanese cedar
+  - sugi
+  - yakusugi
+  - Jōmon Sugi
+  scientific: Cryptomeria japonica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'chinese-fir: broad flat needles'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: east-asia
+  why: Japan's tallest native tree, in vast plantations and shrine avenues (Nikkō's Cedar Avenue); on
+    Yakushima, sugi over 1,000 years old are called yakusugi, and Jōmon Sugi is estimated at 2,000 to
+    7,000 years; often called Japan's national tree, though none is official.
+- id: tea-plant
+  names:
+  - tea plant
+  scientific: Camellia sinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'assam-tea: large-leaved tea'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - medicinal
+  - product
+  region: east-asia
+  why: Normally a pruned shrub but grows into trees in Yunnan, where 'tea tree kings' are over 1,000 years
+    old.
+- id: torreya
+  names:
+  - torreya
+  - kaya
+  scientific: Torreya nucifera
+  rank: genus
+  stands_for:
+  - Torreya grandis
+  distinct_from:
+  - 'florida-torreya: rare North American relative'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - striking
+  - product
+  region: east-asia
+  why: Kaya wood makes the finest Go and shogi boards; Torreya grandis nuts are a Zhejiang delicacy; Jeju's
+    Bija forest holds thousands of old kaya.
+- id: tree-of-heaven
+  names:
+  - tree of heaven
+  scientific: Ailanthus altissima
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: east-asia
+  why: Fast-growing tree with rank-smelling leaves that feed the ailanthus silkmoth for wild silk; invasive
+    abroad, the tree of 'A Tree Grows in Brooklyn'.
+- id: tung-tree
+  names:
+  - tung tree
+  scientific: Vernicia fordii
+  rank: species
+  stands_for:
+  - Vernicia montana
+  distinct_from:
+  - 'chinese-tallow: tallow instead of oil'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - cultural
+  - product
+  region: east-asia
+  why: Seed oil is tung oil for wood finishes; seeds are poisonous.
+- id: umbrella-pine
+  names:
+  - Japanese umbrella pine
+  - koyamaki
+  scientific: Sciadopitys verticillata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: east-asia
+  why: Sole survivor of a 230-million-year-old family, whorled needles like umbrella spokes; one of Kiso's
+    sacred trees.
+- id: ume
+  names:
+  - ume
+  - Japanese apricot
+  - Chinese plum
+  - mei
+  scientific: Prunus mume
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - fruit
+  region: east-asia
+  why: Late-winter blossom is one of China's Four Gentlemen and the national flower of Taiwan (ROC); the
+    fruit becomes umeboshi and umeshu.
+- id: weeping-willow
+  names:
+  - weeping willow
+  scientific: Salix babylonica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'corkscrew-willow: twisted branches'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - cultural
+  - striking
+  region: east-asia
+  why: Cascading form and a symbol of parting in Chinese poetry and on the willow-pattern plate.
+- id: white-mulberry
+  names:
+  - white mulberry
+  scientific: Morus alba
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - fruit
+  - product
+  region: east-asia
+  why: Leaves feed silkworms; Fusang, the mulberry where suns rest in Chinese myth.
+- id: wutong
+  names:
+  - Chinese parasol tree
+  - wutong
+  scientific: Firmiana simplex
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  region: east-asia
+  why: The only tree the phoenix will perch on in Chinese myth; a courtyard tree of poetry, whose first
+    falling leaf announces autumn.
+- id: yulan-magnolia
+  names:
+  - yulan magnolia
+  - saucer magnolia
+  scientific: Magnolia denudata
+  rank: group
+  stands_for:
+  - Magnolia × soulangeana
+  - Magnolia kobus
+  - Magnolia liliiflora
+  distinct_from:
+  - 'japanese-bigleaf-magnolia: giant leaves'
+  - 'oyama-magnolia: nodding white flowers after the leaves'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: east-asia
+  why: White blossoms on bare branches, the city flower of Shanghai.
+- id: zelkova
+  names:
+  - zelkova
+  - keyaki
+  - neuti-namu
+  scientific: Zelkova serrata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: east-asia
+  why: Japan's great temple timber (Kiyomizu-dera's stage stands on keyaki pillars); in Korea, ancient
+    zelkovas are dangsan-namu, village guardian trees.
+- id: madake
+  names:
+  - madake
+  - Japanese timber bamboo
+  - Phyllostachys bambusoides (syn.)
+  scientific: Phyllostachys reticulata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bamboo: taller, thinner-walled, straighter culms'
+  split_from: bamboo
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: east-asia
+  why: Tall thin-walled culms used for shakuhachi flutes, scaffolding and fishing rods; flowers about
+    once a century.
+- id: black-bamboo
+  names:
+  - black bamboo
+  - kuro-chiku
+  scientific: Phyllostachys nigra
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bamboo: black culms'
+  split_from: bamboo
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: east-asia
+  why: Culms ripen from green to jet black; used for crafts, fans and garden screens.
+- id: oil-camellia
+  names:
+  - tea-oil camellia
+  - youcha
+  - sasanqua
+  scientific: Camellia oleifera
+  rank: species
+  stands_for:
+  - Camellia sasanqua (sasanqua, Japanese autumn hedge camellia)
+  distinct_from:
+  - 'camellia: small white flowers, oil crop'
+  split_from: camellia
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: east-asia
+  why: 'Small-leaved autumn-flowering camellias: Camellia oleifera is a major Chinese seed-oil crop of
+    the southern hills, and sasanqua is Japan''s hedge camellia.'
+- id: nanmu
+  names:
+  - nanmu
+  - Chinese phoebe
+  scientific: Phoebe zhennan
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'camphor-tree: golden figured wood, little camphor'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: east-asia
+  why: Golden-sheened scented timber reserved for imperial palaces; fragrant and rot-resistant.
+- id: machilus
+  names:
+  - tabu-no-ki
+  - Japanese bay tree
+  scientific: Machilus thunbergii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'camphor-tree: glossy laurel with sticky bark'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: east-asia
+  why: Coastal evergreen laurel whose bark mucilage binds incense; shrine tree of Japanese coasts.
+- id: stout-camphor
+  names:
+  - stout camphor
+  - bull camphor
+  scientific: Cinnamomum kanehirae
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'camphor-tree: larger, little camphor oil'
+  split_from: camphor-tree
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - medicinal
+  region: east-asia
+  why: Giant Taiwanese camphor, sole host of the prized niu-chang-chih fungus.
+- id: cassia
+  names:
+  - Chinese cinnamon
+  - cassia
+  - Cinnamomum cassia (syn.)
+  scientific: Cinnamomum aromaticum
+  rank: species
+  stands_for:
+  - Cinnamomum burmanni (Indonesian cassia)
+  - Cinnamomum loureiroi (Saigon cinnamon)
+  distinct_from:
+  - 'cinnamon: thin quilled bark of true cinnamon'
+  - 'camphor-tree: camphor, not spice'
+  split_from: cinnamon
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - cultural
+  - well-known
+  region: east-asia
+  why: Southern Chinese spice bark, thicker and stronger than true cinnamon.
+- id: glyptostrobus
+  names:
+  - Chinese swamp cypress
+  - water pine
+  scientific: Glyptostrobus pensilis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'bald-cypress: evergreen-ish, wet-paddy tree'
+  split_from: dawn-redwood
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: east-asia
+  why: Critically endangered swamp conifer with knees, once widespread across the Northern Hemisphere.
+- id: sawara
+  names:
+  - sawara cypress
+  scientific: Chamaecyparis pisifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'hinoki: finer sprays, redder bark'
+  split_from: hinoki
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: east-asia
+  why: Threadleaf cypress with finer foliage and weaker timber than hinoki.
+- id: taiwan-cypress
+  names:
+  - Taiwan red cypress
+  - benihi
+  scientific: Chamaecyparis formosensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'hinoki: huge, red-tinged, Taiwan'
+  split_from: hinoki
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - cultural
+  region: east-asia
+  why: Giant aromatic mountain cypresses of Alishan, prized for temple timber; the Alishan Sacred Tree
+    was one.
+- id: taiwania
+  names:
+  - taiwania
+  - coffin tree
+  scientific: Taiwania cryptomerioides
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'chinese-fir: far taller, scale-like leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: east-asia
+  why: Among Asia's tallest conifers, with huge ancient trees and rot-resistant timber.
+- id: hiba
+  names:
+  - hiba
+  - Japanese arborvitae
+  - asunaro
+  scientific: Thujopsis dolabrata
+  rank: species
+  stands_for:
+  - Thuja standishii (nezuko, Japanese thuja)
+  distinct_from:
+  - 'hinoki: broad scale leaves, silver-white underside'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: east-asia
+  why: Broad flattened scale foliage with silvery undersides and rot-proof, hinokitiol-rich wood; asunaro
+    and nezuko are two of the five sacred trees of Kiso.
+- id: chinese-arborvitae
+  names:
+  - Chinese arborvitae
+  - oriental thuja
+  scientific: Platycladus orientalis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'thuya: upright sprays, Asian'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  region: east-asia
+  why: Temple and imperial-garden conifer with vertical flat sprays, Beijing city tree; the Xuanyuan cypress
+    at the Yellow Emperor's mausoleum is said to be 5,000 years old.
+- id: chinese-weeping-cypress
+  names:
+  - mourning cypress
+  - Sichuan cypress
+  scientific: Cupressus funebris
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'italian-cypress: weeping habit'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: east-asia
+  why: Drooping, scented cypress of Sichuan, planted in temple and tomb groves.
+- id: chinese-juniper
+  names:
+  - Chinese juniper
+  - ibuki
+  scientific: Juniperus chinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'common-juniper: scale foliage, tree form'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: east-asia
+  why: Twisted bonsai and temple juniper of China and Japan.
+- id: needle-juniper
+  names:
+  - needle juniper
+  - Korean juniper
+  scientific: Juniperus rigida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'chinese-juniper: needles only'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: east-asia
+  why: Spiky juniper of Korean and Mongolian hills; berries and timber used.
+- id: japanese-red-pine
+  names:
+  - akamatsu
+  - Japanese red pine
+  - sonamu
+  - Chinese red pine
+  scientific: Pinus densiflora
+  rank: species
+  stands_for:
+  - Pinus tabuliformis (Chinese red pine)
+  distinct_from:
+  - 'japanese-black-pine: orange bark, inland'
+  split_from: japanese-black-pine
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: east-asia
+  why: Orange-barked two-needle pine of Japanese, Korean and, as Chinese red pine, northern Chinese hills;
+    matsutake host; sonamu is Korea's best-loved tree and North Korea's national tree.
+- id: korean-pine
+  names:
+  - Korean pine
+  - Korean nut pine
+  - Armand pine
+  scientific: Pinus koraiensis
+  rank: species
+  stands_for:
+  - Pinus armandii (Armand pine, western China)
+  distinct_from:
+  - 'japanese-red-pine: five needles, big nut cones'
+  split_from: japanese-black-pine
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  - cultural
+  region: east-asia
+  why: 'Five-needle nut pines: Korean pine of the Manchurian forests and Russian Far East gives large
+    edible pine nuts and tall straight timber; Armand pine fills the role in western China.'
+- id: huangshan-pine
+  names:
+  - Huangshan pine
+  scientific: Pinus hwangshanensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-black-pine: flat crown on granite peaks'
+  split_from: japanese-black-pine
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: east-asia
+  why: Cliff-hugging flat-crowned pine of Huangshan, symbol of Chinese landscape painting; the Welcoming-Guest
+    Pine is its emblem.
+- id: masson-pine
+  names:
+  - Masson pine
+  scientific: Pinus massoniana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-red-pine: south China, rosin crop'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  region: east-asia
+  why: South Chinese resin pine, a major source of rosin and turpentine.
+- id: lacebark-pine
+  names:
+  - lacebark pine
+  scientific: Pinus bungeana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-black-pine: mottled peeling bark'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: east-asia
+  why: Bark flakes into cream, olive and maroon patches; temple pine in Beijing.
+- id: japanese-white-pine
+  names:
+  - goyomatsu
+  - Japanese white pine
+  scientific: Pinus parviflora
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-black-pine: soft blue-tinged needles'
+  split_from: japanese-black-pine
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: east-asia
+  why: Blue-green short needles; favourite bonsai and garden pine.
+- id: siberian-dwarf-pine
+  names:
+  - Siberian dwarf pine
+  scientific: Pinus pumila
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'korean-pine: prostrate shrub-like'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  region: east-asia
+  why: Sprawling prostrate pine of Kamchatka and Japanese alpine zones; nut food for bears and nutcrackers.
+- id: yamazakura
+  names:
+  - yamazakura
+  - hill cherry
+  scientific: Prunus jamasakura
+  rank: species
+  stands_for:
+  - Prunus sargentii (Sargent cherry, ōyamazakura)
+  - Prunus speciosa (Ōshima cherry, whose salted leaves wrap sakura-mochi)
+  distinct_from: []
+  split_from: japanese-cherry
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - product
+  region: east-asia
+  why: Wild Japanese cherries that flower with bronze new leaves, the cherries of Mount Yoshino; durable
+    timber for woodblock printing; Sargent cherry adds fiery autumn colour in the north.
+- id: higan-cherry
+  names:
+  - higan zakura
+  - weeping cherry
+  - shidare-zakura
+  - Prunus pendula (syn.)
+  scientific: Prunus itosakura
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: japanese-cherry
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - flowers
+  - striking
+  region: east-asia
+  why: Early-blooming, very long-lived cherry; weeping shidare-zakura such as Miharu Takizakura, and the
+    Jindai-zakura said to be 2,000 years old, are national monuments.
+- id: taiwan-cherry
+  names:
+  - Taiwan cherry
+  - Formosan cherry
+  scientific: Prunus campanulata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  split_from: japanese-cherry
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: east-asia
+  why: Deep pink bell flowers in midwinter, marking Taiwanese spring.
+- id: japanese-plum
+  names:
+  - Japanese plum
+  - Chinese plum
+  scientific: Prunus salicina
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'plum: Asian species, larger sweeter fruit'
+  split_from: plum
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  region: east-asia
+  why: Main commercial plum of Asia, with red-skinned juicy fruit.
+- id: trident-maple
+  names:
+  - trident maple
+  scientific: Acer buergerianum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-maple: three-lobed, flaking bark'
+  split_from: japanese-maple
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: east-asia
+  why: Three-lobed leaves and flaking orange bark; the bonsai maple of choice.
+- id: shantung-maple
+  names:
+  - Shantung maple
+  - purpleblow maple
+  scientific: Acer truncatum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-maple: truncate leaf base'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: east-asia
+  why: Seed oil rich in nervonic acid; vivid red autumn in northern China.
+- id: amur-maple
+  names:
+  - Amur maple
+  - Acer ginnala (syn.)
+  scientific: Acer tataricum subsp. ginnala
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-maple: three-lobed, shrubby'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: east-asia
+  why: Small hardy maple of Manchuria and the Russian Far East with scarlet autumn.
+- id: painted-maple
+  names:
+  - painted maple
+  - itaya-kaede
+  scientific: Acer pictum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sugar-maple: Asian tapped maple'
+  split_from: sugar-maple
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: east-asia
+  why: Common east Asian mountain maple; sap tapped in Korea as gorosoe.
+- id: paperbark-maple
+  names:
+  - paperbark maple
+  scientific: Acer griseum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'snakebark-maple: peeling cinnamon bark'
+  split_from: snakebark-maple
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  region: east-asia
+  why: Cinnamon bark peels like paper; rare in the wild.
+- id: japanese-wax-tree
+  names:
+  - Japanese wax tree
+  - haze
+  scientific: Toxicodendron succedaneum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lacquer-tree: wax rather than lacquer'
+  split_from: lacquer-tree
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - toxic
+  region: east-asia
+  why: Fruit wax made candles in Edo Japan; bright red autumn leaves, skin irritant.
+- id: longan
+  names:
+  - longan
+  - dragon eye
+  scientific: Dimocarpus longan
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lychee: brown smooth skin, smaller'
+  split_from: lychee
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - cultural
+  region: east-asia
+  why: Smaller brown-skinned relative of lychee with translucent white aril.
+- id: mandarin
+  names:
+  - mandarin
+  - satsuma
+  - mikan
+  scientific: Citrus reticulata
+  rank: species
+  stands_for:
+  - Citrus tachibana (tachibana)
+  distinct_from:
+  - 'orange: smaller, loose peel'
+  split_from: orange
+  tier: 1
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: east-asia
+  why: Loose-skinned winter citrus, mikan in Japan, a luck symbol at Chinese New Year; the wild tachibana
+    by Kyoto's Shishinden is the fruit of eternal youth in Japanese myth.
+- id: kumquat
+  names:
+  - kumquat
+  scientific: Citrus japonica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'orange: tiny oval fruit, edible rind'
+  split_from: orange
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: east-asia
+  why: Eaten whole including the sweet rind; good-luck plant at Chinese New Year.
+- id: yuzu
+  names:
+  - yuzu
+  scientific: Citrus junos
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'orange: cold-hardy, sour, aromatic'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  - cultural
+  region: east-asia
+  why: Hardy aromatic citrus, midwinter bath fruit in Japan; peel used as flavouring.
+- id: trifoliate-orange
+  names:
+  - trifoliate orange
+  - karatachi
+  scientific: Citrus trifoliata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'orange: thorny and deciduous'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - striking
+  region: east-asia
+  why: Thorny deciduous citrus used as hedge and rootstock.
+- id: sansho
+  names:
+  - Japanese pepper
+  - sansho
+  scientific: Zanthoxylum piperitum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sichuan-pepper: leaves used, milder'
+  split_from: sichuan-pepper
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: east-asia
+  why: Leaf and berry spice of Japan, numbing pepper for eel dishes.
+- id: shikimi
+  names:
+  - shikimi
+  - Japanese star anise
+  scientific: Illicium anisatum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'star-anise: toxic fruit, not a spice'
+  split_from: star-anise
+  tier: 3
+  status: extant
+  inclusion:
+  - toxic
+  - cultural
+  - product
+  region: east-asia
+  why: Toxic star anise planted at Buddhist graves; bark burnt as incense.
+- id: chinese-hawthorn
+  names:
+  - Chinese hawthorn
+  - shanzha
+  scientific: Crataegus pinnatifida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'hawthorn: bigger fruit, lobed leaves'
+  split_from: hawthorn
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - cultural
+  region: east-asia
+  why: Large red fruit candied on sticks as tanghulu and used in medicine.
+- id: asian-pear
+  names:
+  - nashi
+  - Asian pear
+  scientific: Pyrus pyrifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pear: round, crisp, apple-like'
+  split_from: pear
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: east-asia
+  why: Crisp round Asian pear, a major crop of Japan, Korea and China.
+- id: chinese-quince
+  names:
+  - Chinese quince
+  - karin
+  - mogwa
+  scientific: Pseudocydonia sinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'quince: Asian, flaking bark'
+  split_from: quince
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  region: east-asia
+  why: Large aromatic fruit used in tea and liqueurs; mottled peeling bark.
+- id: flowering-crabapple
+  names:
+  - Chinese crabapple
+  - haitang
+  scientific: Malus spectabilis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'crab-apple: pink double flowers'
+  split_from: crab-apple
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: east-asia
+  why: Spring-flowering crabapple, symbol of wealth in Chinese gardens.
+- id: chinese-chestnut
+  names:
+  - Chinese chestnut
+  - kuri
+  scientific: Castanea mollissima
+  rank: species
+  stands_for:
+  - Castanea crenata (Japanese chestnut, kuri)
+  distinct_from:
+  - 'sweet-chestnut: smaller, Asian'
+  split_from: sweet-chestnut
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: east-asia
+  why: Blight-resistant chestnuts roasted across China and Korea; Japanese kuri, eaten since the Jōmon,
+    gave the posts of Sannai-Maruyama and rot-resistant railway sleepers.
+- id: manchurian-walnut
+  names:
+  - Manchurian walnut
+  - onigurumi
+  - heartnut
+  scientific: Juglans mandshurica
+  rank: species
+  stands_for:
+  - Juglans mandshurica var. sachalinensis (Japanese walnut; heartnut is its heart-shaped-nut form; syn.
+    Juglans ailantifolia)
+  distinct_from:
+  - 'walnut: hardier, hard shell'
+  split_from: walnut
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: east-asia
+  why: Hardy walnut of Korea, Manchuria, the Russian Far East and Japan with thick-shelled nuts; the Japanese
+    heartnut splits cleanly into two hearts.
+- id: chinese-pistache
+  names:
+  - Chinese pistache
+  scientific: Pistacia chinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'pistachio: Asian, non-edible nut'
+  split_from: pistachio
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - cultural
+  region: east-asia
+  why: Brilliant autumn colour; the kai tree said to grow from a cutting Zigong planted at Confucius'
+    tomb; seed oil and young shoots eaten.
+- id: amur-cork-tree
+  names:
+  - Amur cork tree
+  - kihada
+  scientific: Phellodendron amurense
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cork-oak: cork, but not oak'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - striking
+  region: east-asia
+  why: Thick corky bark yields yellow dye and berberine medicine; Amur forest tree.
+- id: golden-larch
+  names:
+  - golden larch
+  scientific: Pseudolarix amabilis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dahurian-larch: cones fall apart, short shoots'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: east-asia
+  why: Deciduous conifer turning gold in autumn; bonsai favourite.
+- id: dahurian-larch
+  names:
+  - Dahurian larch
+  - karamatsu
+  scientific: Larix gmelinii
+  rank: species
+  stands_for:
+  - Larix kaempferi (Japanese larch, karamatsu)
+  distinct_from:
+  - 'larch: Asian taiga tree'
+  split_from: larch
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - product
+  - cultural
+  region: east-asia
+  why: Dominant taiga tree of eastern Siberia, Mongolia and Manchuria; Japanese larch (karamatsu) of Japan's
+    high slopes is planted widely for timber.
+- id: korean-fir
+  names:
+  - Korean fir
+  scientific: Abies koreana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'silver-fir: small, violet cones'
+  split_from: silver-fir
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: east-asia
+  why: Violet cones on small trees of Jeju's mountains; popular Christmas tree.
+- id: veitch-fir
+  names:
+  - Veitch fir
+  - Nikko fir
+  - todomatsu
+  scientific: Abies veitchii
+  rank: species
+  stands_for:
+  - Abies mariesii (Maries fir, the 'snow monsters' of Zaō)
+  - Abies sachalinensis (Sakhalin fir, todomatsu)
+  distinct_from:
+  - 'korean-fir: Japan, taller'
+  split_from: silver-fir
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  region: east-asia
+  why: Subalpine and northern firs of Japan and Sakhalin; rime-coated Maries firs form Zaō's juhyō 'snow
+    monsters'; Sakhalin fir is Hokkaido's main pulp tree.
+- id: ezo-spruce
+  names:
+  - ezo spruce
+  scientific: Picea jezoensis
+  rank: species
+  stands_for:
+  - Picea asperata (dragon spruce, western China)
+  distinct_from:
+  - 'norway-spruce: silvery underside, far-eastern'
+  split_from: norway-spruce
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: east-asia
+  why: Dark spruce of Hokkaido and the Russian Far East; Hokkaido's main timber.
+- id: japanese-hemlock
+  names:
+  - tsuga
+  - Japanese hemlock
+  scientific: Tsuga sieboldii
+  rank: species
+  stands_for:
+  - Tsuga chinensis (Chinese hemlock)
+  distinct_from:
+  - 'eastern-hemlock: Asian'
+  split_from: eastern-hemlock
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: east-asia
+  why: Rare Japanese conifer with flattened shoots.
+- id: keteleeria
+  names:
+  - cow-tail fir
+  scientific: Keteleeria fortunei
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'chinese-fir: separate genus, upright cones'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: east-asia
+  why: Relict subtropical conifer with upright cones.
+- id: cathaya
+  names:
+  - cathaya
+  scientific: Cathaya argyrophylla
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dawn-redwood: relic conifer'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: east-asia
+  why: Living-fossil conifer known only from a few Chinese mountains.
+- id: fujian-cypress
+  names:
+  - Fujian cypress
+  scientific: Fokienia hodginsii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'hinoki: subtropical, scented'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: east-asia
+  why: Rare resinous subtropical cypress of southern China.
+- id: chinese-incense-cedar
+  names:
+  - Chinese incense cedar
+  scientific: Calocedrus macrolepis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'incense-cedar: North American relative'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: east-asia
+  why: Scented timber of Yunnan and Taiwan.
+- id: japanese-yew
+  names:
+  - Japanese yew
+  - ichii
+  scientific: Taxus cuspidata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'yew: Asian, hardy, red wood'
+  split_from: yew
+  tier: 2
+  status: extant
+  inclusion:
+  - toxic
+  - medicinal
+  - cultural
+  region: east-asia
+  why: Hardy yew whose red wood made imperial shaku sceptres; source of taxol.
+- id: plum-yew
+  names:
+  - Japanese plum yew
+  scientific: Cephalotaxus harringtonia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'yew: plum-like seeds'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - toxic
+  region: east-asia
+  why: Alkaloid-rich evergreen with plum-like seeds.
+- id: nagi
+  names:
+  - nagi
+  - Japanese podocarp
+  scientific: Nageia nagi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-pine: broadleaf conifer'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  region: east-asia
+  why: Broad-leaved podocarp sacred at Shinto shrines of Kumano; leaves said not to tear.
+- id: kusamaki
+  names:
+  - Buddhist pine
+  - kusamaki
+  scientific: Podocarpus macrophyllus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'nagi: narrower leaves'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: east-asia
+  why: Hedge and temple podocarp of Japan and southern China.
+- id: mongolian-oak
+  names:
+  - Mongolian oak
+  - mizunara
+  - konara
+  scientific: Quercus mongolica
+  rank: species
+  stands_for:
+  - Quercus mongolica var. crispula (mizunara)
+  - Quercus serrata (konara)
+  distinct_from:
+  - 'english-oak: heavy-lobed Asian oak'
+  split_from: english-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: east-asia
+  why: Dominant deciduous oaks of north-east Asian forests and Japanese satoyama coppice; mizunara gives
+    Japanese whisky casks, konara logs grow shiitake, and the leaves feed tussah silkworms.
+- id: sawtooth-oak
+  names:
+  - sawtooth oak
+  - kunugi
+  scientific: Quercus acutissima
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'english-oak: bristle-toothed leaves'
+  split_from: english-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - fruit
+  - product
+  region: east-asia
+  why: Oak with bristle-tipped chestnut-like leaves, satoyama beetle tree and acorn starch.
+- id: chinese-cork-oak
+  names:
+  - Chinese cork oak
+  scientific: Quercus variabilis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cork-oak: Asian, thinner cork'
+  split_from: cork-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  region: east-asia
+  why: Cork-bark oak of China and Korea.
+- id: daimyo-oak
+  names:
+  - daimyo oak
+  - kashiwa
+  scientific: Quercus dentata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mongolian-oak: huge leaves'
+  split_from: english-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: east-asia
+  why: Huge lobed leaves up to 30 cm stay on the twig through winter, so kashiwa stands for family continuity;
+    the leaves wrap kashiwa-mochi for Children's Day.
+- id: ring-cupped-oak
+  names:
+  - kashi
+  - Japanese evergreen oak
+  - arakashi
+  - ring-cupped oak
+  scientific: Quercus glauca
+  rank: species
+  stands_for:
+  - Quercus acuta (akagashi)
+  - Quercus myrsinifolia (shirakashi)
+  - Quercus gilva (ichii-gashi)
+  distinct_from:
+  - 'live-oak: ringed cups'
+  split_from: live-oak
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  - cultural
+  region: east-asia
+  why: Evergreen oaks of East Asia's laurel forests with acorns in ringed cups; very hard wood for planes,
+    tool handles and bokken; acorns eaten.
+- id: shii
+  names:
+  - shii
+  - Japanese chinquapin
+  scientific: Castanopsis sieboldii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sweet-chestnut: evergreen, edible acorn-like nut'
+  split_from: sweet-chestnut
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - striking
+  region: east-asia
+  why: Evergreen laurel-forest giant with edible nuts; shrine groves in warm Japan.
+- id: japanese-stone-oak
+  names:
+  - Japanese stone oak
+  - matebashii
+  scientific: Lithocarpus edulis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'shii: acorn, not chestnut-like'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  region: east-asia
+  why: Evergreen acorn tree, acorn flour a famine food.
+- id: japanese-beech
+  names:
+  - buna
+  - Japanese beech
+  scientific: Fagus crenata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'european-beech: Asian, wavy-edged leaf'
+  split_from: european-beech
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: east-asia
+  why: Shirakami beech forests with mossy floor; autumn gold.
+- id: erman-birch
+  names:
+  - stone birch
+  - Erman's birch
+  scientific: Betula ermanii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'birch: white bark (includes Asian white birch)'
+  split_from: birch
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: east-asia
+  why: Cream-pink peeling bark; Kamchatka and Korean mountain birch.
+- id: daurian-birch
+  names:
+  - black birch
+  - Daurian birch
+  scientific: Betula davurica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'birch: white bark (includes Asian white birch)'
+  split_from: birch
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  region: east-asia
+  why: Dark shaggy-peeling bark, northeast Asia.
+- id: siberian-elm
+  names:
+  - Siberian elm
+  - karagach
+  scientific: Ulmus pumila
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'elm: small leaved, drought-tough'
+  - 'elm: this is a drought-hardy Central Asian elm'
+  split_from: elm
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: east-asia
+  why: Tough elm of the Mongolian steppe and shelterbelt tree; bark flour a famine food.
+- id: lacebark-elm
+  names:
+  - Chinese elm
+  - lacebark elm
+  scientific: Ulmus parvifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'elm: mottled bark, autumn flowering'
+  split_from: elm
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: east-asia
+  why: Mottled flaking bark and small leaves; a bonsai staple.
+- id: chinese-hackberry
+  names:
+  - enoki
+  - Chinese hackberry
+  scientific: Celtis sinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mediterranean-hackberry: Asian'
+  split_from: mediterranean-hackberry
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: east-asia
+  why: Host tree of Japan's national butterfly, the great purple emperor; planted on Edo highways as ichirizuka
+    milestone trees and as village shade.
+- id: muku
+  names:
+  - muku tree
+  scientific: Aphananthe aspera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'zelkova: rough leaves'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: east-asia
+  why: Sandpaper leaves used for polishing wood; shrine tree.
+- id: amur-linden
+  names:
+  - Amur linden
+  - Manchurian linden
+  - shinanoki
+  - bodaiju
+  scientific: Tilia amurensis
+  rank: species
+  stands_for:
+  - Tilia japonica (shinanoki)
+  - Tilia miqueliana (bodaiju, temple linden)
+  distinct_from:
+  - 'linden: Asian honey tree'
+  split_from: linden
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: east-asia
+  why: Honey lindens of the Ussuri taiga and Japan; Japanese linden bark gives shina-fu cloth and rope,
+    and bodaiju stands in for the Bodhi tree at temples, its seeds strung as prayer beads.
+- id: manchurian-ash
+  names:
+  - Manchurian ash
+  scientific: Fraxinus mandshurica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ash: Asian'
+  split_from: ash
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: east-asia
+  why: Hardwood of the Amur forests used for furniture and bats.
+- id: chinese-ash
+  names:
+  - Chinese ash
+  - wax ash
+  scientific: Fraxinus chinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ash: wax insects'
+  split_from: ash
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: east-asia
+  why: Host tree of wax scale insects, source of Chinese insect wax.
+- id: glossy-privet
+  names:
+  - glossy privet
+  - nuzhenzi
+  scientific: Ligustrum lucidum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'chinese-ash: evergreen'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: east-asia
+  why: White wax scale host with medicinal berries.
+- id: chinese-tallow
+  names:
+  - Chinese tallow tree
+  scientific: Triadica sebifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tung-tree: tallow'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: east-asia
+  why: Seed coat tallow for candles; scarlet autumn.
+- id: chinese-sumac
+  names:
+  - Chinese sumac
+  scientific: Rhus chinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lacquer-tree: harmless, tannin galls'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: east-asia
+  why: Galls are the source of Chinese gallnut tannin and dye.
+- id: chinese-toon
+  names:
+  - Chinese toon
+  - xiang chun
+  scientific: Toona sinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'toona: edible shoots, hardy'
+  split_from: toona
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - medicinal
+  region: east-asia
+  why: Spring shoots eaten as a prized vegetable; pink new leaves.
+- id: formosan-sweetgum
+  names:
+  - Formosan sweetgum
+  scientific: Liquidambar formosana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'sweetgum: three-lobed, Asian'
+  split_from: sweetgum
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: east-asia
+  why: East Asian sweetgum with three-lobed leaves.
+- id: chinese-tulip-tree
+  names:
+  - Chinese tulip tree
+  scientific: Liriodendron chinense
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'tulip-tree: Asian species'
+  split_from: tulip-tree
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  region: east-asia
+  why: Chinese sister of the tulip tree, with narrower flowers.
+- id: japanese-bigleaf-magnolia
+  names:
+  - hoonoki
+  - Japanese bigleaf magnolia
+  scientific: Magnolia obovata
+  rank: species
+  stands_for:
+  - Magnolia officinalis (houpu)
+  distinct_from:
+  - 'yulan-magnolia: huge leaves'
+  split_from: yulan-magnolia
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - flowers
+  - medicinal
+  region: east-asia
+  why: Leaves up to 40 cm wrap food and grill hoba-miso; fragrant flowers; the bark is houpu, a staple
+    of Chinese medicine.
+- id: wilson-tree
+  names:
+  - Chinese Wilson tree
+  scientific: Emmenopterys henryi
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dove-tree: bracts'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  region: east-asia
+  why: Rare tree with sporadic spectacular white bracts.
+- id: happy-tree
+  names:
+  - happy tree
+  - xi shu
+  scientific: Camptotheca acuminata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dove-tree: shared Chinese relic status'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - cultural
+  region: east-asia
+  why: Source of camptothecin for cancer drugs, called tree of joy.
+- id: kousa-dogwood
+  names:
+  - Korean dogwood
+  - Chinese dogwood
+  scientific: Cornus kousa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'flowering-dogwood: Asian'
+  split_from: flowering-dogwood
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - fruit
+  region: east-asia
+  why: White bracts and strawberry-like fruit; mottled bark.
+- id: japanese-horse-chestnut
+  names:
+  - tochinoki
+  - Japanese horse chestnut
+  scientific: Aesculus turbinata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'horse-chestnut: edible with processing'
+  split_from: horse-chestnut
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: east-asia
+  why: Starchy nuts for tochi-mochi after leaching; hardwood.
+- id: sakaki
+  names:
+  - sakaki
+  scientific: Cleyera japonica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'camellia: related family'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  region: east-asia
+  why: Evergreen offerings tree of Shinto, used in tamagushi.
+- id: rose-of-sharon
+  names:
+  - rose of Sharon
+  - mugunghwa
+  scientific: Hibiscus syriacus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'waru: coastal tree hibiscus'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - product
+  region: east-asia
+  why: National flower of Korea; bark fibre.
+- id: hong-kong-orchid-tree
+  names:
+  - Hong Kong orchid tree
+  scientific: Bauhinia × blakeana
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'orchid-tree: sterile magenta'
+  split_from: orchid-tree
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: east-asia
+  why: Sterile hybrid, emblem of Hong Kong.
+- id: chinese-redbud
+  names:
+  - Chinese redbud
+  scientific: Cercis chinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'judas-tree: Asian'
+  split_from: judas-tree
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  region: east-asia
+  why: Magenta flowers on bare wood.
+- id: kalopanax
+  names:
+  - castor aralia
+  - harigiri
+  scientific: Kalopanax septemlobus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'japanese-maple: maple-like leaves'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  region: east-asia
+  why: Prickly tree with maple-like leaves, shoots eaten.
+- id: kuromoji
+  names:
+  - kuromoji
+  scientific: Lindera umbellata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'camphor-tree: aromatic laurel'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: east-asia
+  why: Scented twigs for tea-ceremony toothpicks.
+- id: isunoki
+  names:
+  - isunoki
+  scientific: Distylium racemosum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'witch-hazel: related'
+  split_from: witch-hazel
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  region: east-asia
+  why: Insect-gall whistling tree, hard wood.
+- id: yuzuriha
+  names:
+  - yuzuriha
+  scientific: Daphniphyllum macropodum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'camellia: unrelated evergreen'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  region: east-asia
+  why: New Year symbol of succession.
+- id: trachycarpus
+  names:
+  - Chinese windmill palm
+  scientific: Trachycarpus fortunei
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'cycad: palm'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - striking
+  region: east-asia
+  why: Fibre for rope, raincoats and brooms; hardy palm.
+- id: mongolian-poplar
+  names:
+  - Mongolian poplar
+  scientific: Populus suaveolens
+  rank: species
+  stands_for:
+  - Populus simonii (Simon's poplar)
+  distinct_from:
+  - 'black-poplar: balsam buds'
+  split_from: black-poplar
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  region: east-asia
+  why: Balsam poplars of Mongolian steppe rivers and northern Chinese shelterbelts.
+- id: corkscrew-willow
+  names:
+  - corkscrew willow
+  - dragon-claw willow
+  - Salix matsudana (syn.)
+  scientific: Salix babylonica 'Tortuosa'
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'weeping-willow: twisted, upright'
+  split_from: weeping-willow
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  region: east-asia
+  why: Contorted, twisting branches; a cultivar of the same species as the weeping willow.
+- id: chosenia
+  names:
+  - Korean willow
+  - Chosenia
+  - Chosenia arbutifolia (syn.)
+  scientific: Salix arbutifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'white-willow: different genus'
+  split_from: white-willow
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  region: east-asia
+  why: Tall riverbank willow of the Russian Far East and Korea, long kept in its own genus.
+- id: xuan-paper-elm
+  names:
+  - Chinese wingceltis
+  - qingtan
+  scientific: Pteroceltis tatarinowii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'paper-mulberry: paper bark'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: east-asia
+  why: Bark is the fibre for Xuan paper of China.
+- id: siberian-apricot
+  names:
+  - Siberian apricot
+  scientific: Prunus sibirica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'apricot: hardy'
+  split_from: apricot
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  region: east-asia
+  why: Hardy apricot of Mongolia, seed kernels.
+- id: huanghuali
+  names:
+  - huanghuali
+  - Hainan rosewood
+  - fragrant rosewood
+  scientific: Dalbergia odorifera
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'siamese-rosewood: red hongmu of Indochina'
+  - 'indian-rosewood: darker Indian timber'
+  split_from: null
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  - medicinal
+  region: east-asia
+  why: Golden-brown fragrant timber of Hainan with 'ghost-face' figure, the classic wood of Ming furniture;
+    heartwood is jiangxiang incense and medicine; wild trees are nearly logged out.
+- id: oyama-magnolia
+  names:
+  - Oyama magnolia
+  - Siebold's magnolia
+  - mongnan
+  scientific: Magnolia sieboldii
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'yulan-magnolia: upright flowers on bare branches'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  region: east-asia
+  why: Nodding white cup flowers with crimson stamens; the national flower of North Korea.
+- id: ubame-oak
+  names:
+  - ubame oak
+  - ubamegashi
+  scientific: Quercus phillyreoides
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'ring-cupped-oak: larger toothed leaves'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  region: east-asia
+  why: Small-leaved coastal evergreen oak burned into binchōtan, the hard white charcoal of Kishū; Wakayama's
+    prefectural tree.
+- id: fukugi
+  names:
+  - fukugi
+  scientific: Garcinia subelliptica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'mangosteen: edible-fruited Garcinia'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: east-asia
+  why: Dense evergreen planted in rows around Okinawan houses against typhoons (Bise village); bark dyes
+    Ryukyu textiles yellow.
+- id: wisteria
+  names:
+  - Japanese wisteria
+  - fuji
+  - Chinese wisteria
+  scientific: Wisteria floribunda
+  rank: group
+  stands_for:
+  - Wisteria sinensis (Chinese wisteria)
+  distinct_from:
+  - 'tree-wisteria: unrelated African tree'
+  split_from: null
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - cultural
+  - striking
+  - toxic
+  region: east-asia
+  why: Woody climber trained over trellises into tree-like canopies of hanging violet racemes; the Great
+    Wisteria of Ashikaga covers hundreds of square metres; seeds toxic.
+- id: mizuki
+  names:
+  - giant dogwood
+  - mizuki
+  - table dogwood
+  scientific: Cornus controversa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kousa-dogwood: white bracts, strawberry-like fruit'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - product
+  region: east-asia
+  why: Branches spread in level tiers like a wedding cake; its soft white wood is turned into kokeshi
+    dolls.
+- id: japanese-stewartia
+  names:
+  - Japanese stewartia
+  - natsutsubaki
+  - shara
+  scientific: Stewartia pseudocamellia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'camellia: evergreen, winter flowers'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - flowers
+  - striking
+  - cultural
+  region: east-asia
+  why: Camellia-like summer flowers that last a day, and mottled peeling bark; planted at Japanese temples
+    as shara, the stand-in for the sal tree under which the Buddha died.
+- id: chinese-catalpa
+  names:
+  - Chinese catalpa
+  - zi
+  scientific: Catalpa ovata
+  rank: species
+  stands_for:
+  - Catalpa bungei (Manchurian catalpa, qiu)
+  distinct_from:
+  - 'catalpa: North American, white flowers'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - flowers
+  region: east-asia
+  why: Mulberry and catalpa (sangzi) planted by the house stand for one's hometown; printing blocks of
+    catalpa made 'to hand to the catalpa' mean sending a book to print.
+- id: tarajo-holly
+  names:
+  - tarajo
+  - broadleaf holly
+  - postcard tree
+  scientific: Ilex latifolia
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'holly: small spiny leaves'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: east-asia
+  why: Leaves so thick that writing scratched on them darkens, hence the 'postcard tree' and Japan Post's
+    symbol tree; leaves make bitter kuding tea.
+- id: chinese-honey-locust
+  names:
+  - Chinese honey locust
+  - zaojiao
+  scientific: Gleditsia sinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'honey-locust: North American, sweet pods'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - medicinal
+  - striking
+  region: east-asia
+  why: Huge branched thorns on the trunk; its pods were China's traditional soap and are a medicine.
+- id: chinese-olive
+  names:
+  - Chinese olive
+  - ganlan
+  - black Chinese olive
+  scientific: Canarium album
+  rank: species
+  stands_for:
+  - Canarium pimela (black Chinese olive, wulan)
+  distinct_from:
+  - 'pili-nut: Philippine nut Canarium'
+  - 'olive: unrelated Mediterranean olive'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  region: east-asia
+  why: Bitter-then-sweet green fruit of southern China; black-olive stones are carved into miniature boats
+    and prayer beads.
+- id: hwangchil
+  names:
+  - hwangchil
+  - Korean dendropanax
+  scientific: Dendropanax morbiferus
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'lacquer-tree: black urushi lacquer'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - product
+  - cultural
+  - medicinal
+  region: east-asia
+  why: Sap makes hwangchil, a golden varnish used on Korean armour and royal objects since the Three Kingdoms.
+- id: ohyo-elm
+  names:
+  - ohyō
+  - Manchurian elm
+  - cut-leaf elm
+  scientific: Ulmus laciniata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'siberian-elm: small unlobed leaves'
+  - 'wych-elm: European relative'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  - striking
+  region: east-asia
+  why: Leaves end in three to five sharp points; its inner bark is woven into attus, the Ainu bark-fibre
+    robes.
+- id: chinese-fan-palm
+  names:
+  - Chinese fan palm
+  - birō
+  - kuikui
+  scientific: Livistona chinensis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'livistona-palm: Australian relative'
+  - 'trachycarpus: hairy fibrous trunk'
+  split_from: null
+  tier: 3
+  status: extant
+  inclusion:
+  - cultural
+  - product
+  region: east-asia
+  why: Fan palm of southern China, Taiwan and the Ryukyus; leaves make Xinhui palm-leaf fans, thatched
+    the birōge carriages of Heian nobles, and the palm is sacred at Ryukyu utaki groves.

@@ -1,0 +1,3995 @@
+# sub-saharan-africa chunk 2: regions/sub-saharan-africa.yaml entries 42-83
+- id: whistling-thorn
+  names:
+  - whistling thorn
+  scientific: Vachellia drepanolobium
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: whistling thorn has swollen ant-inhabited thorns'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: upland East Africa, from South Sudan and Ethiopia through Uganda and Kenya to Tanzania
+    ecosystem: wooded grassland and thorn savanna
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      note: 'temperature: tropical highland; moisture: semi-arid to seasonally dry'
+    elevation_m: null
+    substrate: heavy black-cotton clay soils with impeded drainage
+    niche: often a near-monoculture thicket on black-cotton plains
+    strata:
+    - open
+    - shrub
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: shrub or small tree, often multi-stemmed, coppicing after fire
+    height_m:
+    - 1
+    - 6
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: deciduous, small, bipinnate
+    seasonal: little change; flowers with the rains
+    flowers: cream-white puffball heads
+    fruit_visible: narrow sickle-shaped pods
+    bark: grey to black, rough
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: hard and termite-resistant, but stems are thin
+    rot_resistance: resistant to termites
+    scent: null
+    fuel: firewood, kindling and charcoal; coppices for regrowth
+    uses:
+    - fencing
+    - tool handles
+    - small implements
+    - charcoal
+  products:
+    food: []
+    sap_resin_latex:
+    - gum collected as glue
+    bark: []
+    leaves:
+    - browse for giraffe and other herbivores
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: thorns that whistle in the wind and swarm with defending ants'
+      savagery: 'high: an ant-guarded thicket that punishes anything that touches it'
+    dimensions: []
+    hooks:
+    - whistling-thorn sound as an audio cue for windy savanna
+    - ant swarm as a hazard when harvesting
+  sources:
+  - https://powo.science.kew.org/results?q=Vachellia%20drepanolobium
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Acacia_drepanolobium.PDF
+- id: yellowwood
+  names:
+  - real yellowwood
+  - broad-leaved yellowwood
+  - upright yellowwood
+  - opregte-geelhout
+  - umkhoba
+  scientific: Podocarpus latifolius
+  rank: group
+  stands_for:
+  - Podocarpus henkelii (Henkel's yellowwood)
+  distinct_from:
+  - 'totara: African yellowwoods are the southern African podocarps'
+  - 'outeniqua-yellowwood: Outeniqua is a taller emergent with flaking, dimpled bark'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  habitat:
+    range: Afromontane forests from the Western Cape through KwaZulu-Natal to Limpopo, Eswatini and Lesotho;
+      the wider P. latifolius/milanjianus complex reaches East and Central Africa
+    ecosystem: Afromontane and Afrotemperate evergreen forest
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      - tropical
+      moisture:
+      - humid
+      note: 'temperature: warm-temperate to tropical montane'
+    elevation_m: null
+    substrate: moist, deep forest soils; stunted on exposed rocky ground
+    niche: canopy of mixed montane forest, such as the Knysna forest
+    strata:
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: straight, cylindrical, single trunk clear of branches for 10-20 m; stunted shrub at high altitude
+    height_m:
+    - 20
+    - 35
+    trunk_diameter_m:
+    - 0.5
+    - 3
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen conifer, strap-shaped leathery leaves 2.5-10 cm, glaucous to dark green; new flush
+      bright pale green
+    seasonal: little change
+    flowers: none (conifer); male cones pinkish catkins 1-3 cm
+    fruit_visible: berry-like seed on a fleshy pink-purple to red aril, 8-14 mm
+    bark: greyish brown to dark grey, flaking in long strips; inner bark pale pink
+  timber:
+    heartwood: pale yellowish brown, not distinct from sapwood
+    sapwood: pale yellow
+    grain: straight
+    texture: fine, even
+    density_kg_m3: 485
+    janka_n: 6030
+    workability: easy to saw, plane and finish; air-dries quickly
+    rot_resistance: not durable outdoors
+    scent: null
+    fuel: null
+    uses:
+    - floorboards
+    - furniture
+    - panelling
+    - roof beams
+    - ceilings
+  products:
+    food:
+    - sweet aril of the seed cone
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the main structural and floor timber of Cape colonial houses; now largely protected from felling
+    symbolism:
+    - national tree of South Africa
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: national tree, sheltering montane forest'
+    dimensions: []
+    hooks:
+    - pale yellow softwood planks for early building
+    - aril as forage food
+  sources:
+  - https://plantuse.plantnet.org/en/Podocarpus_latifolius_(PROTA)
+  - https://pza.sanbi.org/podocarpus-latifolius
+- id: yohimbe
+  names:
+  - yohimbe
+  - Pausinystalia johimbe (syn.)
+  scientific: Corynanthe johimbe
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - medicinal
+  - toxic
+  - product
+  habitat:
+    range: lowland forest of Nigeria, Cameroon, Equatorial Guinea, Gabon, Congo and Cabinda
+    ecosystem: evergreen lowland rain forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: forest soils
+    niche: forest understory to lower canopy
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: straight unbuttressed bole, grooved at base; compact crown with branches in whorls
+    height_m:
+    - 15
+    - 35
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: null
+    growth_rate: null
+    leaves: evergreen, large obovate leaves 13-47 cm in whorls of three, margins often wavy
+    seasonal: little change
+    flowers: small, in whorled terminal panicles
+    fruit_visible: small capsules
+    bark: grey to reddish brown, longitudinally fissured with transverse cracks, peels easily; inner bark
+      pink and fibrous, bitter
+  timber:
+    heartwood: ochre-yellow
+    sapwood: thin, yellow, not clearly demarcated
+    grain: null
+    texture: fine
+    density_kg_m3: 700
+    janka_n: null
+    workability: moderately hard; used locally
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - local construction
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - bark stripped for yohimbine alkaloids
+    - traded mainly from Cameroon
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark used in West and Central Africa as an aphrodisiac and stimulant; yohimbine is a prescription
+      drug
+    toxicity: bark extracts raise blood pressure and heart rate and cause anxiety and insomnia; overdose
+      is dangerous, and supplement strength is unreliable
+  lore:
+    folklore: []
+    cultures:
+    - aphrodisiac of Bantu peoples of Cameroon and Gabon
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'low: no lore beyond the drug'
+    dimensions: []
+    hooks:
+    - bark as a potent stimulant reagent with a harmful overdose
+  sources:
+  - https://plantuse.plantnet.org/en/Pausinystalia_johimbe_(PROTA)
+  - https://powo.science.kew.org/results?q=Corynanthe%20johimbe
+- id: zebrawood
+  names:
+  - zebrawood
+  - zebrano
+  - zingana
+  scientific: Microberlinia brazzavillensis
+  rank: species
+  stands_for:
+  - Microberlinia bisulcata
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Cameroon, Gabon and Republic of the Congo; M. bisulcata in a small area of Cameroon
+    ecosystem: evergreen lowland rain forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: forest soils
+    niche: scattered canopy tree, often fewer than one per square kilometre
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: null
+    period: null
+  form:
+    habit: tall straight bole clear for up to 15 m with low buttresses, dense crown
+    height_m:
+    - 20
+    - 45
+    trunk_diameter_m:
+    - 1
+    - 1.5
+    lifespan_y: null
+    growth_rate: null
+    leaves: evergreen, paripinnate with 7-14 pairs of small oblong leaflets
+    seasonal: little change
+    flowers: white, in reddish-hairy terminal panicles
+    fruit_visible: flat woody pods
+    bark: reddish, scaly; inner bark pink, fibrous
+  timber:
+    heartwood: light golden yellow with bold dark brown to black stripes
+    sapwood: pale, distinct
+    grain: interlocked or wavy
+    texture: coarse
+    density_kg_m3: 805
+    janka_n: 8160
+    workability: difficult; tears out, glues and finishes acceptably
+    rot_resistance: durable; resists termites and decay
+    scent: unpleasant when worked
+    fuel: null
+    uses:
+    - veneer
+    - furniture
+    - tool handles
+    - skis
+    - sporting equipment
+    - guitar bodies
+    - inlays
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'low: striking but ordinary rainforest timber'
+    dimensions: []
+    hooks:
+    - striped decorative wood for high-value furniture and inlay
+  sources:
+  - https://www.wood-database.com/zebrawood/
+  - https://plantuse.plantnet.org/en/Microberlinia_brazzavillensis_(PROTA)
+- id: fony-baobab
+  names:
+  - fony baobab
+  - red-stemmed baobab
+  - ringy
+  scientific: Adansonia rubrostipa
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'grandidier-baobab: Grandidier''s baobab is a tall flat-topped column'
+  - 'african-baobab: fony baobab is far smaller, with red peeling bark'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: endemic to western and southwestern Madagascar
+    ecosystem: dry deciduous forest and spiny forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m: null
+    substrate: well-drained sandy or limestone soils
+    niche: scattered among the dry and spiny forest
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: bottle-shaped trunk constricted below the branches; horizontal branches that curve upward at
+      the tips
+    height_m:
+    - 4
+    - 20
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, palmately compound with 3-5 finely toothed leaflets; in leaf November to April
+    seasonal: leafless through the dry season
+    flowers: large fragrant yellow to orange-yellow flowers with a long staminal tube and brush of stamens,
+      February to April
+    fruit_visible: round woody fruit
+    bark: reddish brown, peeling in thin sheets
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: soft, water-storing trunk; not a timber
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - fruit pulp and seeds eaten locally
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: squat bottle trunk with red peeling bark'
+    dimensions: []
+    hooks:
+    - a water-storing trunk as an emergency water source in dry forest
+  sources:
+  - https://plantuse.plantnet.org/en/Adansonia_rubrostipa_(PROTA)
+  - https://powo.science.kew.org/results?q=Adansonia%20rubrostipa
+- id: kiaat
+  names:
+  - kiaat
+  - mukwa
+  - bloodwood
+  - African teak
+  - West African rosewood
+  - muninga
+  scientific: Pterocarpus angolensis
+  rank: group
+  stands_for:
+  - Pterocarpus erinaceus (kosso, West African rosewood)
+  distinct_from:
+  - 'padauk: padauk is a rainforest tree with vivid coral-red wood'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - medicinal
+  - product
+  habitat:
+    range: miombo and dry woodland from Tanzania and DR Congo to Angola, Namibia, Zimbabwe, Mozambique
+      and northern South Africa; P. erinaceus in the Sudano-Sahelian savanna from Senegal to Chad
+    ecosystem: miombo and deciduous savanna woodland
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'temperature: tropical to subtropical; moisture: seasonally dry'
+    elevation_m: null
+    substrate: deep, well-drained sands and rocky slopes; frost-free
+    niche: open woodland canopy
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single straight bole with a high, wide, flat-topped crown
+    height_m:
+    - 12
+    - 25
+    trunk_diameter_m:
+    - 0.5
+    - 1
+    lifespan_y: 100
+    growth_rate: slow
+    leaves: deciduous, pinnate with 11-25 drooping leaflets, deep green
+    seasonal: leafless late in the dry season; flowers before the new leaves
+    flowers: scented orange-yellow pea flowers in sprays 10-20 cm, around October
+    fruit_visible: round pods 8-12 cm across, a central bristly seed case inside a papery wing, like a
+      brown fried egg, hanging on after leaf fall
+    bark: grey to dark brown, cracked into rectangular blocks; bleeds blood-red sap when cut
+  timber:
+    heartwood: golden brown to reddish brown, often streaked
+    sapwood: pale grey or pale yellow, distinct
+    grain: straight to interlocked
+    texture: medium to coarse
+    density_kg_m3: 605
+    janka_n: 6050
+    workability: works and finishes well; very stable
+    rot_resistance: moderately durable; moderately resistant to termites
+    scent: faint
+    fuel: null
+    uses:
+    - furniture
+    - drums
+    - canoes
+    - carvings
+    - flooring
+    - boatbuilding
+  products:
+    food: []
+    sap_resin_latex:
+    - blood-red astringent kino from the bark
+    bark: []
+    leaves: []
+    dyes:
+    - red sap used as a dye and cosmetic
+    medicinal:
+    - red bark exudate as an astringent for diarrhoea
+    - nosebleeds and sores
+    toxicity: null
+  lore:
+    folklore:
+    - the red sap that runs from a cut tree is read as blood (Shona mubvamaropa)
+    cultures:
+    - Shona
+    - Venda and Tswana drums and furniture
+    symbolism:
+    - protected tree in South Africa
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: a tree that bleeds red when cut'
+    dimensions: []
+    hooks:
+    - red kino as an early dye and medicine
+    - stable wood for drums and furniture
+  sources:
+  - https://www.wood-database.com/kiaat/
+  - https://plantuse.plantnet.org/en/Pterocarpus_angolensis_(PROTA)
+  - https://plantuse.plantnet.org/en/Pterocarpus_erinaceus_(PROTA)
+- id: camel-thorn
+  names:
+  - camel thorn
+  - kameeldoring
+  - giraffe thorn
+  - mokala
+  scientific: Vachellia erioloba
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: camel thorn has velvety ear-shaped grey pods and a denser crown'
+  tier: 1
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - well-known
+  habitat:
+    range: Kalahari and adjoining dry country of Namibia, Botswana, South Africa, western Zimbabwe, Angola
+      and Zambia
+    ecosystem: arid savanna and Kalahari dunes
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      - semi-arid
+      note: 'moisture: arid to semi-arid'
+    elevation_m: null
+    substrate: deep dry sands; taps groundwater with very deep roots
+    niche: scattered giant on sandveld and along dry riverbeds
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: spreading umbrella to rounded crown on a stout trunk; spiny shrub when young or on poor sites
+    height_m:
+    - 2
+    - 20
+    trunk_diameter_m: null
+    lifespan_y: 300
+    growth_rate: slow
+    leaves: semi-evergreen, small bipinnate grey-green leaves that fold in heat
+    seasonal: flowers late winter to spring
+    flowers: golden-yellow puffball heads
+    fruit_visible: thick, velvety grey half-moon or ear-shaped pods that do not split
+    bark: grey to blackish brown, deeply furrowed; paired whitish spines up to 6 cm, swollen at the base
+  timber:
+    heartwood: dark reddish brown
+    sapwood: pale, distinct
+    grain: interlocked
+    texture: fine to medium
+    density_kg_m3: 1185
+    janka_n: 16370
+    workability: extremely hard and dense; very difficult to work
+    rot_resistance: very durable; dead trunks stand for centuries
+    scent: null
+    fuel: excellent; the favoured braai and firewood of the Kalahari, which drives felling
+    uses:
+    - firewood
+    - fence posts
+    - carvings
+  products:
+    food:
+    - roasted seeds as a coffee substitute
+    - gum eaten
+    sap_resin_latex:
+    - edible gum
+    bark: []
+    leaves:
+    - pods and leaves browsed by cattle
+    - giraffe and antelope
+    dyes: []
+    medicinal:
+    - gum and bark used in local remedies
+    toxicity: young pods can release cyanide and have poisoned livestock in quantity
+  lore:
+    folklore: []
+    cultures:
+    - the "tree of life" of the Kalahari
+    - used by San and Tswana peoples
+    symbolism:
+    - protected tree in South Africa; the tree in the title of the PBS series Nature
+    notable_trees:
+    - 'Deadvlei, Namib-Naukluft Park: black dead camel thorns that died roughly 600-700 years ago stand
+      undecayed on a white clay pan'
+  game_fit:
+    fields:
+      liminality: 'high: Deadvlei''s dead-standing trees, centuries without decay'
+      savagery: 'high: Kalahari giant armed with spines'
+    dimensions: []
+    hooks:
+    - extremely dense fuelwood
+    - dead standing trunks as a harvestable resource in deserts
+  sources:
+  - https://www.wood-database.com/camelthorn/
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Acacia_erioloba.PDF
+  - https://pza.sanbi.org/vachellia-erioloba
+- id: babul
+  names:
+  - babul
+  - gum arabic tree
+  - Egyptian thorn
+  - scented-pod acacia
+  - kikar
+  - sunt
+  scientific: Vachellia nilotica
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: babul has black fissured bark and necklace-like pods'
+  - 'gum-arabic: babul gum is a lesser grade; its pods and bark are tannin sources'
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - cultural
+  - product
+  habitat:
+    range: Africa from Senegal to Egypt and south to South Africa, through Arabia to the Indian subcontinent;
+      invasive in Australia
+    ecosystem: riverine woodland, floodplain and dry savanna
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - arid
+      - semi-arid
+      - seasonally-dry
+      note: 'temperature: tropical to subtropical; moisture: arid to seasonally dry'
+    elevation_m: null
+    substrate: alluvial clays and seasonally flooded soils, also black cotton soils
+    niche: river banks and floodplain forests (sunt forests of the Nile)
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: single trunk with a dense, rounded to umbrella crown
+    height_m:
+    - 5
+    - 20
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: bipinnate, feathery
+    seasonal: little change
+    flowers: bright golden-yellow fragrant puffball heads
+    fruit_visible: grey hairy pods constricted between the seeds like a string of beads
+    bark: dark to black, deeply fissured, slash grey-pink; paired straight grey spines 5-7.5 cm
+  timber:
+    heartwood: pale red to pinkish brown, darkening
+    sapwood: yellowish white, distinct
+    grain: straight to interlocked
+    texture: fine
+    density_kg_m3: 740
+    janka_n: null
+    workability: strong, tough and heavy; silica blunts tools
+    rot_resistance: durable if well seasoned
+    scent: null
+    fuel: excellent firewood and charcoal
+    uses:
+    - railway sleepers
+    - cart wheels
+    - tool handles
+    - mine props
+    - boatbuilding
+    - posts
+  products:
+    food:
+    - gum eaten
+    - seeds roasted
+    sap_resin_latex:
+    - reddish gum of lower grade than true gum arabic
+    bark:
+    - bark and pods rich in tannin for tanning leather
+    leaves:
+    - browse
+    dyes:
+    - black and brown dye from pods and bark
+    medicinal:
+    - bark and pods as astringents; twigs used as chewing sticks
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the akakia of Dioscorides
+    - type species of the old genus Acacia; sunt timber of ancient Egyptian boats
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - tannin for leather
+    - black dye
+    - gum glue
+    - chewing-stick toothbrush
+  sources:
+  - https://plantuse.plantnet.org/en/Acacia_nilotica_(PROTA)
+  - https://www.cabidigitallibrary.org/doi/10.1079/cabicompendium.2325
+- id: mugumo
+  names:
+  - mugumo
+  - Natal fig
+  - barkcloth fig
+  - mutuba
+  - strangler fig
+  scientific: Ficus thonningii
+  rank: group
+  stands_for:
+  - Ficus natalensis (mutuba barkcloth fig)
+  distinct_from:
+  - 'sycamore-fig: sycamore fig fruits in clusters on its trunk and is not a strangler'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - folklore
+  - product
+  habitat:
+    range: tropical and southern Africa and the Cape Verde Islands; F. natalensis from northeastern South
+      Africa to Uganda and Kenya
+    ecosystem: montane and riverine forest, wooded grassland and farmland
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - seasonally-dry
+      - subhumid
+      - humid
+      note: 'temperature: tropical to subtropical; moisture: seasonally dry to humid'
+    elevation_m: null
+    substrate: varied; often starts on rocks or other trees
+    niche: strangler on host trees or rocks; spared as a shade and shrine tree in farmland
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: semi-epiphytic strangler becoming a free-standing tree with a short trunk, aerial roots and
+      a wide spreading crown
+    height_m:
+    - 5
+    - 30
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, leathery oblong to obovate leaves 2.5-10 cm
+    seasonal: little change
+    flowers: hidden inside the figs
+    fruit_visible: small figs in leaf axils, ripening yellow to red
+    bark: grey, smooth, with white latex
+  timber:
+    heartwood: creamy brown
+    sapwood: not distinct
+    grain: null
+    texture: rough
+    density_kg_m3: 510
+    janka_n: null
+    workability: soft to moderately hard, easy to work
+    rot_resistance: not durable
+    scent: null
+    fuel: firewood; soft wood used for friction fire sticks
+    uses:
+    - household utensils
+    - house posts
+    - fire sticks
+  products:
+    food:
+    - figs eaten
+    sap_resin_latex:
+    - white latex
+    bark:
+    - inner bark beaten into barkcloth (Baganda olubugo); regrows after stripping
+    - harvested yearly for decades
+    leaves:
+    - dry-season livestock fodder
+    dyes: []
+    medicinal:
+    - bark and latex in local remedies
+    toxicity: null
+  lore:
+    folklore:
+    - Kikuyu elders prayed to Ngai for rain beneath the mugumo, offering a sacrificed lamb; felling one
+      was taboo
+    cultures:
+    - Kikuyu and Mount Kenya peoples
+    - Baganda barkcloth makers
+    symbolism:
+    - Ugandan barkcloth-making is on UNESCO's Representative List of the Intangible Cultural Heritage
+    notable_trees:
+    - the Waiyaki Way fig, Nairobi, spared from the Nairobi Expressway by presidential decree in 2020
+  game_fit:
+    fields:
+      liminality: 'high: sacred prayer tree, strangler that grows on others'
+      alignment: 'high: rain-prayer tree'
+    dimensions:
+    - aether
+    hooks:
+    - barkcloth as an early fabric
+    - fire-drill sticks
+  sources:
+  - https://plantuse.plantnet.org/en/Ficus_natalensis_(PROTA)
+  - https://tropical.theferns.info/viewtropical.php?id=Ficus+thonningii
+  - https://ich.unesco.org/en/RL/barkcloth-making-in-uganda-00139
+- id: tree-aloe
+  names:
+  - tree aloe
+  - Barberton's aloe
+  - Aloe bainesii (syn.)
+  - Aloe barberae (syn.)
+  scientific: Aloidendron barberae
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'quiver-tree: quiver tree is a desert aloe with golden bark and a sparse crown'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - flowers
+  habitat:
+    range: Eastern Cape through KwaZulu-Natal, Eswatini and Mpumalanga to Mozambique
+    ecosystem: subtropical coastal and ravine forest, dry valleys
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonally dry'
+    elevation_m: null
+    substrate: well-drained soils, often slopes
+    niche: forest margins and kloofs
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: forked, tree-like succulent with a thick trunk and dense rounded crown of rosettes
+    height_m:
+    - 5
+    - 18
+    trunk_diameter_m:
+    - 0.5
+    - 3
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen succulent rosettes of long, recurved, dark green leaves at the branch tips
+    seasonal: flowers in midwinter
+    flowers: tubular rose-pink flowers with green tips on short spikes, visited by sunbirds
+    fruit_visible: capsules
+    bark: smooth grey-brown
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: fibrous succulent stem; not a timber
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism:
+    - named for Mary Elizabeth Barber
+    - the Eastern Cape naturalist who sent it to Kew
+    notable_trees:
+    - Kirstenbosch tree planted in 1922, 3 m across at the base by 2011
+  game_fit:
+    fields:
+      weirdness: 'high: a forest-sized aloe'
+    dimensions: []
+    hooks:
+    - winter-flowering nectar source
+  sources:
+  - https://pza.sanbi.org/aloidendron-barberae
+  - https://powo.science.kew.org/results?q=Aloidendron%20barberae
+- id: african-ebony
+  names:
+  - African ebony
+  - Gabon ebony
+  - Cameroon ebony
+  - Madagascar ebony
+  - Mauritius ebony
+  scientific: Diospyros crassiflora
+  rank: group
+  stands_for:
+  - Diospyros tessellaria (Mauritius ebony)
+  - Diospyros perrieri (Madagascar ebony)
+  distinct_from:
+  - 'ebony: the Asian Ceylon ebony entry'
+  - 'jackalberry: jackalberry is a savanna fruit tree with brown-black wood only in the core'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: lowland forest from Nigeria and Cameroon to Gabon, the Congos and CAR; relatives in Madagascar
+      and Mauritius
+    ecosystem: evergreen lowland rain forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: forest soils
+    niche: lower canopy and understory of closed forest
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: cylindrical or fluted bole, clear for up to 15 m, without buttresses
+    height_m:
+    - 15
+    - 25
+    trunk_diameter_m:
+    - 0.6
+    - 1.2
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, glossy dark green lanceolate leaves 10-21 cm
+    seasonal: little change
+    flowers: small cream flowers in axillary clusters
+    fruit_visible: round berries held in a woody calyx
+    bark: blackish grey to black, finely fissured, flaking in thick scales
+  timber:
+    heartwood: jet black, sometimes with dark brown streaks
+    sapwood: pale, distinct
+    grain: straight to interlocked
+    texture: very fine
+    density_kg_m3: 955
+    janka_n: 13700
+    workability: hard to work, blunts tools; polishes to a high lustre
+    rot_resistance: very durable
+    scent: null
+    fuel: null
+    uses:
+    - violin fingerboards
+    - tailpieces and pegs
+    - guitar fingerboards
+    - piano black keys
+    - carvings
+    - knife handles
+    - chess pieces
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - carved ebony of West and Central African sculpture; traded since ancient Egypt
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: black heartwood, prized for instruments'
+    dimensions:
+    - enigma
+    hooks:
+    - black wood for instruments and high-tier handles
+  sources:
+  - https://www.wood-database.com/gaboon-ebony/
+  - https://plantuse.plantnet.org/en/Diospyros_crassiflora_(PROTA)
+  - https://www.iucnredlist.org/species/33048/2831931
+- id: african-wild-olive
+  names:
+  - African wild olive
+  - brown olive
+  - woira
+  - olienhout
+  scientific: Olea europaea subsp. cuspidata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'olive: the Mediterranean olive bears oily fruit; the wild olive has small bitter fruit and brown-backed
+    leaves'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - striking
+  habitat:
+    range: dry Africa from Egypt and Ethiopia to South Africa, the Mascarenes, Arabia, Iran and the Himalaya
+      to southwestern China
+    ecosystem: dry montane forest, woodland, riverine bush and rocky hillsides
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'temperature: subtropical to warm-temperate; moisture: semi-arid to subhumid'
+    elevation_m: null
+    substrate: rocky and well-drained soils, often near water
+    niche: Ethiopian highland church forests; ravines and kraal trees in southern Africa
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: much-branched, often gnarled tree with a dense rounded crown
+    height_m:
+    - 2
+    - 15
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, narrow leathery leaves 3-7 cm, glossy grey-green above, silvery to golden-brown
+      scaly beneath
+    seasonal: little change
+    flowers: small greenish-white to cream, in spring
+    fruit_visible: small purple-black drupes 6 mm, bitter
+    bark: grey to dark brown, rough and fissured
+  timber:
+    heartwood: yellowish to reddish brown with dark figuring
+    sapwood: pale yellow
+    grain: straight to wavy
+    texture: fine, even, oily
+    density_kg_m3: 1150
+    janka_n: null
+    workability: hard and blunts tools; turns and polishes beautifully
+    rot_resistance: fairly durable
+    scent: null
+    fuel: excellent fuelwood
+    uses:
+    - Maasai clubs (rungu)
+    - house poles
+    - turnery
+    - furniture
+    - carvings
+  products:
+    food:
+    - fruit eaten fresh
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - leaf tea; leaves used in Tanzania for brewing beer
+    dyes: []
+    medicinal:
+    - leaf tea for blood pressure and colds; smoke used to fumigate milk gourds
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Maasai clubs and charcoal for cleaning calabashes; Ethiopian Orthodox church forests
+    symbolism:
+    - ancestor of the cultivated olive
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: kept in sacred church forests'
+    dimensions: []
+    hooks:
+    - very dense club wood
+    - fumigation smoke for preserving milk
+  sources:
+  - https://plantuse.plantnet.org/en/Olea_europaea_(PROTA)
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Olea_europaea_ssp._africana.PDF
+- id: ethiopian-frankincense
+  names:
+  - Ethiopian frankincense
+  - Eritrean frankincense
+  - Sudanese frankincense
+  - itan zaf
+  - maydi
+  scientific: Boswellia papyrifera
+  rank: group
+  stands_for:
+  - Boswellia frereana (maydi)
+  distinct_from:
+  - 'frankincense: Arabian frankincense (Boswellia sacra)'
+  - 'myrrh: myrrh comes from Commiphora'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  habitat:
+    range: Ethiopia, Eritrea, Sudan and the Sahel to Nigeria and Cameroon; B. frereana in northern Somalia
+    ecosystem: dry deciduous woodland and rocky hills
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - semi-arid
+      note: null
+    elevation_m:
+    - 1100
+    - 1900
+    substrate: shallow rocky and stony soils on steep slopes
+    niche: open woodland on hillsides
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous tree with thick branches tipped by leaf clusters, rounded crown
+    height_m:
+    - 4
+    - 12
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: null
+    leaves: deciduous, pinnate, clustered at the branch tips
+    seasonal: leafless in the dry season, when it flowers
+    flowers: small white to pinkish flowers in large panicles on bare branches
+    fruit_visible: red three-angled capsules
+    bark: pale, peeling in thin papery sheets; bleeds resin when cut
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: soft; used locally only
+    rot_resistance: null
+    scent: null
+    fuel: firewood
+    uses:
+    - live fences
+  products:
+    food: []
+    sap_resin_latex:
+    - frankincense oleo-gum resin tapped from bark cuts
+    - yellow translucent tears with a lemon-pine scent
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - resin as an anti-inflammatory; maydi paste (malmal) rubbed on joints in Somalia
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - burned in Ethiopian Orthodox services and the coffee ceremony; maydi is the Coptic Church's frankincense
+    symbolism:
+    - believed to be the main frankincense of antiquity
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: church incense'
+      liminality: 'high: incense burned at the threshold of the sacred'
+    dimensions:
+    - aether
+    hooks:
+    - incense resin as a ritual or warding consumable
+  sources:
+  - https://www.fao.org/4/xii/0845-a1.htm
+  - https://apps.worldagroforestry.org/usefultrees/pdflib/Boswellia_papyrifera_ETH.pdf
+- id: enset
+  names:
+  - enset
+  - false banana
+  - Ethiopian banana
+  scientific: Ensete ventricosum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'banana: enset bears no edible fruit; its pseudostem and corm are the food'
+  tier: 1
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  - product
+  habitat:
+    range: wild from Ethiopia through East Africa to southern Africa; cultivated mainly in the southern
+      and southwestern Ethiopian highlands
+    ecosystem: montane forest edges and highland farm gardens
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - subhumid
+      - humid
+      note: 'temperature: tropical highland; moisture: humid to subhumid'
+    elevation_m:
+    - 1500
+    - 3100
+    substrate: deep, fertile, well-manured soils
+    niche: dense homestead gardens around Ethiopian highland houses
+    strata:
+    - understory
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: giant herb with a thick pseudostem of leaf sheaths, swollen at the base, over a large corm
+    height_m:
+    - 4
+    - 11
+    trunk_diameter_m: null
+    lifespan_y: 10
+    growth_rate: fast
+    leaves: huge paddle leaves to 5 m by 1.5 m, bright to dark green, midrib often red or purple
+    seasonal: flowers once after 2-10 years, then dies
+    flowers: drooping inflorescence 1-2 m, with large dark red-brown bracts
+    fruit_visible: dry, inedible banana-like fruit with hard black seeds
+    bark: none; smooth green to reddish pseudostem
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: not woody
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - kocho
+    - fermented starch from scraped pseudostem and grated corm
+    - stored in pits for months; bulla
+    - dried starch; boiled corm (amicho)
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - fibre from leaf sheaths for rope and sacks; leaves for wrapping food and thatch
+    dyes: []
+    medicinal:
+    - used in Ethiopian folk medicine for bone fractures and childbirth
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the staple of the Gurage
+    - Sidama
+    - Hadiya and other southern Ethiopian peoples
+    - about 20 million people; called the tree against hunger
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: one plant gives starch to feed a household'
+    dimensions: []
+    hooks:
+    - famine food that stores for years in pits
+    - fibre for rope
+  sources:
+  - https://plantuse.plantnet.org/en/Ensete_ventricosum_(PROTA)
+  - https://www.kew.org/read-and-watch/enset-ethiopia-false-banana
+- id: african-palmyra
+  names:
+  - African fan palm
+  - ronier
+  - rônier
+  - deleb palm
+  - African palmyra palm
+  - toddy palm
+  scientific: Borassus aethiopum
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'palmyra-palm: the Asian palmyra lacks the African palm''s mid-trunk bulge'
+  - 'doum-palm: doum branches; ronier stays single'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - fruit
+  - product
+  habitat:
+    range: tropical Africa from Senegal to Ethiopia and south to northern South Africa; northwest Madagascar
+      and the Comoros; absent from the Central African rainforest and the deserts
+    ecosystem: savanna, floodplain grassland and river valleys
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonally dry'
+    elevation_m: null
+    substrate: deep alluvial and sandy soils, often with a high water table
+    niche: groves on floodplains and savanna near water
+    strata:
+    - open
+    - emergent
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: solitary unbranched palm with a spindle-shaped bulge high on the trunk, at about two thirds
+      of its height, in trees over about 25 years old
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m:
+    - 0.6
+    - 2.1
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, stiff fan-shaped leaves about 3 m across on 2 m spiny petioles
+    seasonal: little change
+    flowers: male flowers hidden in scaly catkins; female flowers about 2 cm, on separate trees
+    fruit_visible: heavy round orange-yellow to brown fruits 15 cm, in large hanging bunches
+    bark: pale grey, smooth to ringed with old leaf scars; young palms clothed in dead leaf bases
+  timber:
+    heartwood: dark brown, coarse, fibrous outer stem
+    sapwood: soft pithy core
+    grain: fibrous
+    texture: coarse
+    density_kg_m3: 793
+    janka_n: null
+    workability: very hard outer stem, soft centre; split rather than sawn
+    rot_resistance: very resistant to termites and fungi
+    scent: null
+    fuel: firewood and charcoal
+    uses:
+    - termite-proof rafters and beams
+    - pilings
+    - the toron beams of Sahel mud mosques
+    - wharves
+  products:
+    food:
+    - fruit pulp eaten roasted or as porridge
+    - germinating seedling roots eaten as a vegetable
+    - palm sugar
+    sap_resin_latex:
+    - sap tapped from the crown or inflorescence for palm wine
+    bark: []
+    leaves:
+    - fibre and leaves for mats
+    - baskets
+    - hats and thatch
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Baoulé and Kulango fruit porridge in Côte d'Ivoire; Sahel builders' timber
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: wine, fruit, fibre and rafters from one palm'
+    dimensions: []
+    hooks:
+    - termite-proof palm beams for early buildings
+    - palm wine
+  sources:
+  - https://tropical.theferns.info/viewtropical.php?id=Borassus+aethiopum
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Borassus_aethiopum.PDF
+  - https://knust.academia.edu/oseiasibe
+- id: coast-coral-tree
+  names:
+  - coast coral tree
+  - lucky bean tree
+  - common coral tree
+  - umsintsi
+  - Erythrina caffra (syn.)
+  scientific: Erythrina afra
+  rank: group
+  stands_for:
+  - Erythrina lysistemon (common coral tree)
+  - Erythrina abyssinica
+  distinct_from:
+  - 'coral-tree: the South American cockspur coral tree has crested flowers in summer'
+  tier: 2
+  status: extant
+  inclusion:
+  - flowers
+  - toxic
+  - cultural
+  habitat:
+    range: coastal Eastern Cape and KwaZulu-Natal (E. afra); E. lysistemon through eastern southern Africa;
+      E. abyssinica in East and Central African savanna
+    ecosystem: coastal bush, riverine forest and savanna woodland
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'temperature: subtropical to tropical; moisture: seasonally dry'
+    elevation_m: null
+    substrate: well-drained soils, rocky outcrops
+    niche: forest margins, bushveld and village trees
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: deciduous tree with a short stout trunk and spreading, rounded crown
+    height_m:
+    - 6
+    - 15
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: null
+    growth_rate: fast
+    leaves: trifoliate, broad leaflets; petiole and midrib sometimes prickly
+    seasonal: leafless for up to 4-5 months; flowers on bare branches in late winter to spring
+    flowers: dense racemes of scarlet to orange-red tubular pea flowers, visited by sunbirds
+    fruit_visible: black, constricted woody pods splitting to show glossy scarlet seeds with a black spot
+    bark: grey-brown, smooth or corky, with scattered hooked prickles
+  timber:
+    heartwood: pale, not distinct
+    sapwood: pale
+    grain: null
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: lightweight, soft and corky; planed surfaces woolly
+    rot_resistance: not durable
+    scent: null
+    fuel: smoulders without flame for long periods, so used to carry fire
+    uses:
+    - canoes
+    - rafts
+    - net floats
+    - troughs
+    - carved stools
+    - drums
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark and leaves for wounds
+    - sores and toothache
+    toxicity: seeds contain erythrina alkaloids, curare-like and poisonous if chewed or eaten
+  lore:
+    folklore:
+    - red seeds carried as lucky beans and charms against misfortune
+    cultures:
+    - planted on graves by some Zulu communities; branch cuttings root readily as living fences
+    symbolism:
+    - Erythrina is the official tree of Los Angeles
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: grave tree with charm seeds'
+    dimensions: []
+    hooks:
+    - lucky-bean seeds as charms or a poison reagent
+    - cork-light wood for floats
+    - smouldering fire carrier
+  sources:
+  - https://plantuse.plantnet.org/en/Erythrina_abyssinica_(PROTA)
+  - https://pza.sanbi.org/erythrina-caffra
+  - https://tropical.theferns.info/viewtropical.php?id=Erythrina+lysistemon
+- id: bread-tree
+  names:
+  - bread tree
+  - broodboom
+  - Eastern Cape giant cycad
+  - Modjadji cycad
+  - uJobane
+  scientific: Encephalartos
+  rank: genus
+  stands_for:
+  - Encephalartos altensteinii
+  - Encephalartos transvenosus (Modjadji cycad)
+  distinct_from:
+  - 'cycad: the cycad entry is the East Asian sago cycad'
+  - 'woods-cycad: Wood''s cycad is extinct in the wild'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - toxic
+  habitat:
+    range: Eastern Cape and southern KwaZulu-Natal (E. altensteinii); hills near Modjadjiskloof, Limpopo
+      (E. transvenosus)
+    ecosystem: coastal scrub, valley forest and montane forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - subhumid
+      - humid
+      note: 'moisture: humid to subhumid'
+    elevation_m: null
+    substrate: steep rocky slopes and river banks
+    niche: rocky slopes, and pure cycad forest at Modjadji
+    strata:
+    - understory
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: palm-like single or branched trunk crowned with a rosette of stiff leaves
+    height_m:
+    - 3
+    - 12
+    trunk_diameter_m:
+    - 0.3
+    - 0.5
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, pinnate, 2.5-3 m long, glossy dark green with stiff, toothed leaflets
+    seasonal: cones every few years
+    flowers: none (cycad); male and female cones on separate plants
+    fruit_visible: huge greenish-yellow cones up to 80 cm and 34 kg, shedding bright scarlet to orange
+      seeds 4 cm
+    bark: rough, armoured with old leaf bases in a net-like pattern
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: starchy pith; not a timber
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food:
+    - starchy pith buried to ferment
+    - then ground and baked as bread (the source of the name)
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - stems harvested for traditional medicine
+    toxicity: cones, seeds and raw pith are poisonous (cycasin and BMAA); pith must be leached or fermented
+      before eating
+  lore:
+    folklore:
+    - the Lobedu Rain Queens (Modjadji) protect the Modjadji cycad forest as sacred
+    cultures:
+    - Lobedu people of Limpopo
+    symbolism: []
+    notable_trees:
+    - E. altensteinii in Kew's Palm House, there since 1775, called the oldest pot plant in the world
+  game_fit:
+    fields:
+      liminality: 'high: ancient lineage and a Rain Queen''s sacred grove'
+      weirdness: 'high: living fossil with giant cones'
+    dimensions:
+    - enigma
+    hooks:
+    - toxic starch that must be processed into bread
+    - a teaching hook for food prep
+  sources:
+  - https://pza.sanbi.org/encephalartos-altensteinii
+  - https://pza.sanbi.org/encephalartos-transvenosus
+  - https://www.iucnredlist.org/species/41882/2958390
+- id: phantom-tree
+  names:
+  - phantom tree
+  - bottle moringa
+  - sprokiesboom
+  scientific: Moringa ovalifolia
+  rank: group
+  stands_for:
+  - Moringa drouhardii
+  distinct_from:
+  - 'moringa: the drumstick moringa is a slender fast-growing crop tree'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - folklore
+  habitat:
+    range: Namibia and southwestern Angola; M. drouhardii in southwestern Madagascar
+    ecosystem: desert and semi-desert
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      note: null
+    elevation_m: null
+    substrate: rocky slopes and escarpments
+    niche: escarpment passes into the Namib; the Fairy Tale Forest of Etosha
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: swollen succulent trunk and a few stubby branches
+    height_m:
+    - 2
+    - 7
+    trunk_diameter_m:
+    - 0.3
+    - 1
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, bipinnate with small oval leaflets
+    seasonal: leafless much of the year, ghostly pale against rock
+    flowers: small, white to cream, fragrant, in sprays
+    fruit_visible: long pods
+    bark: smooth, pale whitish to silvery grey
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: soft, water-storing; not a timber
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - browsed by elephants and giraffes
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore:
+    - a San story tells that the gods threw the tree out of paradise and it landed upside down, roots
+      in the air (a story also told of the baobab)
+    cultures:
+    - San
+    symbolism: []
+    notable_trees:
+    - the Fairy Tale Forest (Sprokieswoud), a stand in Etosha National Park
+  game_fit:
+    fields:
+      liminality: 'high: pale ghost trees thrown out of paradise'
+      weirdness: 'high: upside-down bottle form'
+    dimensions:
+    - enigma
+    hooks:
+    - landmark grove for a desert biome
+  sources:
+  - https://powo.science.kew.org/results?q=Moringa%20ovalifolia
+  - https://tropical.theferns.info/viewtropical.php?id=Moringa+ovalifolia
+- id: dracaena-ombet
+  names:
+  - Gabal Elba dragon tree
+  - Nubian dragon tree
+  - ombet
+  scientific: Dracaena ombet
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'dragon-tree: the Canary dragon tree is larger, with denser umbrella crown'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  habitat:
+    range: Red Sea hills of Egypt (Gebel Elba), Sudan, Eritrea, Djibouti, Ethiopia, Somalia and western
+      Saudi Arabia
+    ecosystem: dry mountain scrub
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      note: null
+    elevation_m:
+    - 1000
+    - 1800
+    substrate: rocky slopes and cliffs
+    niche: mist-fed upper slopes of coastal mountains
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: forked trunk with an umbrella of rosettes at the branch tips
+    height_m:
+    - 2
+    - 8
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, stiff sword leaves 40-60 cm, grey-green, in dense terminal rosettes
+    seasonal: little change
+    flowers: whitish, in branched panicles about 0.5 m
+    fruit_visible: round berries 10-12 mm
+    bark: grey, smooth to scaly
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: fibrous monocot stem; not a timber
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - red dragon's blood resin from the trunk
+    bark: []
+    leaves:
+    - leaf fibre for rope and mats
+    dyes:
+    - dragon's blood as a red dye
+    medicinal:
+    - resin used locally for wounds
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Beja peoples of the Red Sea hills
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: umbrella-shaped tree that bleeds red resin'
+    dimensions: []
+    hooks:
+    - dragon's blood as a red dye and varnish
+  sources:
+  - https://www.iucnredlist.org/species/30394/9535177
+  - https://tropical.theferns.info/viewtropical.php?id=Dracaena+ombet
+- id: african-cherry
+  names:
+  - African cherry
+  - pygeum
+  - red stinkwood
+  - mueri
+  - bitter almond
+  scientific: Prunus africana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - product
+  habitat:
+    range: Afromontane forests from Cameroon and Bioko to Ethiopia, East Africa and South Africa; Madagascar,
+      São Tomé and Grande Comore
+    ecosystem: montane evergreen forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: 'temperature: tropical montane'
+    elevation_m:
+    - 1500
+    - 2300
+    substrate: moist forest soils
+    niche: light-demanding canopy tree of secondary and gap forest
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tall single trunk with a large spreading crown
+    height_m:
+    - 10
+    - 40
+    trunk_diameter_m:
+    - 0.5
+    - 1
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, glossy dark green elliptic leaves to 20 cm with finely toothed margins and pink-red
+      petioles; crushed leaves smell of bitter almonds
+    seasonal: little change
+    flowers: small fragrant white to cream flowers in axillary racemes
+    fruit_visible: two-lobed red to purple-black cherries about 1 cm, bitter
+    bark: grey-black to dark brown, rugged, scaling in rectangular pieces
+  timber:
+    heartwood: red to dark red-brown
+    sapwood: pale
+    grain: straight to interlocked
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard; smells unpleasant when fresh (stinkwood)
+    rot_resistance: durable; dimensionally stable
+    scent: almond-like to unpleasant when freshly cut
+    fuel: null
+    uses:
+    - axe and hoe handles
+    - furniture
+    - household utensils
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - bark stripped for pygeum extract
+    - exported mainly from Cameroon and Madagascar
+    leaves: []
+    dyes: []
+    medicinal:
+    - pygeum bark extract for benign prostatic hyperplasia; traditional bark remedies for fever
+    - malaria
+    - stomach pain and wounds
+    toxicity: leaves and seeds contain cyanogenic glycosides, like other Prunus
+  lore:
+    folklore: []
+    cultures:
+    - its fruit is a favoured food of mountain gorillas in the Virungas
+    symbolism:
+    - CITES Appendix II since 1995
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: high in medicine, but harvest kills the tree
+    dimensions: []
+    hooks:
+    - high-value medicinal bark with over-harvest risk
+    - durable handle wood
+  sources:
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Prunus_africana.PDF
+  - https://www.cites.org/eng/prog/prunus_africana
+  - https://pza.sanbi.org/prunus-africana
+- id: jackalberry
+  names:
+  - jackalberry
+  - African ebony
+  - musoni
+  - jakkalsbessie
+  - monkey guava
+  scientific: Diospyros mespiliformis
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'african-ebony: jackalberry is a savanna fruit tree, its black wood confined to the core'
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - folklore
+  habitat:
+    range: tropical Africa from Senegal and Sudan to South Africa and Namibia; Yemen
+    ecosystem: savanna, riverine forest and woodland
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'temperature: tropical to subtropical; moisture: seasonally dry'
+    elevation_m: null
+    substrate: deep alluvial soils and termite mounds
+    niche: termite mounds and river banks in savanna
+    strata:
+    - open
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: tall upright tree with a dense, dark, rounded crown; often on a termite mound
+    height_m:
+    - 4
+    - 25
+    trunk_diameter_m:
+    - 0.3
+    - 1.5
+    lifespan_y: 200
+    growth_rate: slow
+    leaves: evergreen, dark glossy elliptic leaves to 14 cm, wavy-edged; flushes of new leaves pink to
+      red
+    seasonal: new red leaves in spring
+    flowers: fragrant cream-white, male clustered and female solitary on separate trees
+    fruit_visible: round fruits 2-3 cm in a cup of curled sepals, yellow ripening to purple
+    bark: grey-black, rough and squared; inner bark reddish
+  timber:
+    heartwood: dark brown to black core (true ebony) in old trees
+    sapwood: wide, pale pinkish brown
+    grain: straight
+    texture: fine
+    density_kg_m3: 850
+    janka_n: 8110
+    workability: hard but works well; polishes finely
+    rot_resistance: durable; resists termites
+    scent: null
+    fuel: good firewood
+    uses:
+    - furniture
+    - canoes
+    - carvings
+    - flooring
+    - pestles
+    - axe handles
+  products:
+    food:
+    - sweet fruit eaten fresh or dried
+    - made into beer and brandy
+    - or ground into flour
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes:
+    - roots and bark give a dye
+    medicinal:
+    - leaves
+    - bark and roots for fever
+    - dysentery and wounds
+    toxicity: null
+  lore:
+    folklore:
+    - in parts of southern Africa it is believed that spirits live in the tree, and it should not be cut
+    cultures:
+    - left standing in Bantu farm fields for its fruit
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: spirit tree growing out of termite mounds'
+    dimensions: []
+    hooks:
+    - savanna fruit
+    - black heartwood in old trees as a rare find
+  sources:
+  - https://plantuse.plantnet.org/en/Diospyros_mespiliformis_(PROTA)
+  - https://pza.sanbi.org/diospyros-mespiliformis
+- id: mobola-plum
+  names:
+  - mobola plum
+  - mupundu
+  - hissing tree
+  - tutu
+  - ìdòfún
+  scientific: Parinari curatellifolia
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - fruit
+  - product
+  habitat:
+    range: Guinean savanna from Senegal to Chad, through East Africa to miombo woodland of Zambia, Zimbabwe
+      and northern South Africa; Madagascar
+    ecosystem: miombo and deciduous woodland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonally dry'
+    elevation_m: null
+    substrate: often poorly drained soils; sometimes dominant on seasonally sodden ground
+    niche: spared in fields when woodland is cleared
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: evergreen tree with heavy branches, mushroom-shaped crown in drier areas
+    height_m:
+    - 10
+    - 22
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, stiff leathery leaves, dark green above, grey-hairy beneath
+    seasonal: little change
+    flowers: small, white, fragrant, in sprays
+    fruit_visible: plum-like oval fruits 3-5 cm, yellow-brown and grey-speckled when ripe
+    bark: dark grey, rough and corky, cracked into blocks
+  timber:
+    heartwood: reddish brown
+    sapwood: pale
+    grain: null
+    texture: null
+    density_kg_m3: 720
+    janka_n: null
+    workability: hard; silica crystals blunt tools
+    rot_resistance: not durable
+    scent: null
+    fuel: good charcoal
+    uses:
+    - charcoal
+    - posts
+  products:
+    food:
+    - sweet fruit pulp eaten fresh or dried
+    - fermented into beer and spirits
+    - kernels eaten
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark and leaves for wounds and fever
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - fruit tree of Shona
+    - Ndebele and Bemba peoples
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: fruit over three months of the dry season'
+    dimensions: []
+    hooks:
+    - fermentable fruit
+    - seed-kernel oil
+  sources:
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Parinari_curatellifolia.PDF
+  - https://tropical.theferns.info/viewtropical.php?id=Parinari+curatellifolia
+- id: okoume
+  names:
+  - okoumé
+  - Gaboon mahogany
+  - gaboon
+  - angouma
+  scientific: Aucoumea klaineana
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - well-known
+  - product
+  habitat:
+    range: Gabon, Republic of the Congo, Equatorial Guinea (Río Muni) and southern Cameroon
+    ecosystem: lowland rain forest and secondary forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: forest soils
+    niche: light-demanding pioneer, forms gregarious stands in old clearings and savanna edges
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tall, often bent bole clear for up to 21 m, with buttresses up to 3 m; open crown
+    height_m:
+    - 30
+    - 60
+    trunk_diameter_m:
+    - 1
+    - 2.4
+    lifespan_y: null
+    growth_rate: fast
+    leaves: evergreen, pinnate with 7-13 leathery leaflets
+    seasonal: little change
+    flowers: small, in panicles; male and female on separate trees
+    fruit_visible: winged capsules
+    bark: greyish to orange-brown, shedding rectangular scales to show orange; slash strongly resinous,
+      pink-red
+  timber:
+    heartwood: pale pinkish brown
+    sapwood: greyish white, not sharply distinct
+    grain: straight to slightly interlocked
+    texture: medium
+    density_kg_m3: 430
+    janka_n: 1790
+    workability: light and easy to peel and work; dulls tools from silica
+    rot_resistance: not durable; heartwood susceptible to termites
+    scent: null
+    fuel: null
+    uses:
+    - marine plywood
+    - kayaks
+    - light aircraft
+    - panelling
+    - cigar boxes
+    - veneer
+  products:
+    food: []
+    sap_resin_latex:
+    - resin from the bark
+    - burned in torches and oil lamps
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - resin used in skin care
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Gabon's main export timber since the early 20th century
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - light plywood for boats
+    - resin torches for early lighting
+  sources:
+  - https://www.wood-database.com/okoume/
+  - https://plantuse.plantnet.org/en/Aucoumea_klaineana_(PROTA)
+- id: afrormosia
+  names:
+  - afrormosia
+  - assamela
+  - kokrodua
+  - African teak
+  scientific: Pericopsis elata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'iroko: afrormosia is finer and darkens to golden brown'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: Côte d'Ivoire, Ghana, Nigeria, Cameroon, the Republic of the Congo and DR Congo; largest stocks
+      in DR Congo
+    ecosystem: moist semi-deciduous forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: forest soils
+    niche: light-demanding canopy tree, often in patches linked to old disturbance
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: straight bole clear for up to 30 m with low blunt buttresses; flat-topped crown with massive
+      spreading branches
+    height_m:
+    - 30
+    - 50
+    trunk_diameter_m:
+    - 1
+    - 1.5
+    lifespan_y: 400
+    growth_rate: slow
+    leaves: deciduous, pinnate with 7-9 leaflets
+    seasonal: briefly leafless; flowers at the end of the dry season
+    flowers: small white pea flowers in panicles
+    fruit_visible: flat papery pods
+    bark: creamy grey, flaking in thin pieces to leave red-brown patches
+  timber:
+    heartwood: yellowish brown to greenish brown, darkening to golden brown
+    sapwood: pale yellow-brown, distinct
+    grain: straight to interlocked
+    texture: fine
+    density_kg_m3: 725
+    janka_n: 6980
+    workability: works well; iron stains the wood
+    rot_resistance: very durable; resists termites
+    scent: null
+    fuel: null
+    uses:
+    - boatbuilding
+    - flooring
+    - veneer
+    - furniture
+    - a substitute for teak
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism:
+    - CITES Appendix II since 1992 after heavy logging from 1948
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - durable boatbuilding wood
+  sources:
+  - https://www.wood-database.com/afrormosia/
+  - https://plantuse.plantnet.org/en/Pericopsis_elata_(PROTA)
+  - https://orbi.uliege.be/bitstream/2268/163437/1/Bourland&Doucet_Ecology_P_elata_14feb14.pdf
+- id: ekki
+  names:
+  - ekki
+  - azobé
+  - red ironwood
+  scientific: Lophira alata
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - product
+  habitat:
+    range: West and Central Africa from Sierra Leone to Cameroon, Gabon, the Congos and Uganda
+    ecosystem: lowland rain forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: forest soils
+    niche: light-demanding large canopy and emergent tree
+    strata:
+    - canopy
+    - emergent
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: very straight cylindrical bole clear for up to 30 m, unbuttressed; hemispherical crown
+    height_m:
+    - 40
+    - 60
+    trunk_diameter_m:
+    - 1
+    - 1.8
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, tough narrow leaves to 25 cm in clusters at the branch tips
+    seasonal: drops all leaves for one to two weeks around December, then flushes bright red, colouring
+      the canopy
+    flowers: large white, strong-smelling flowers in loose terminal sprays
+    fruit_visible: conical brown capsule with two unequal wings, 6 and 12 cm
+    bark: rusty brown to orange-brown, scaly, peeling in long narrow strips, with a bright sulphur-yellow
+      layer beneath
+  timber:
+    heartwood: dark red-brown to chocolate brown with white silica flecks
+    sapwood: pale pink, distinct
+    grain: interlocked
+    texture: coarse
+    density_kg_m3: 1065
+    janka_n: 14330
+    workability: very hard and heavy; difficult to work, needs pre-drilling
+    rot_resistance: very durable; resists termites and marine borers well
+    scent: null
+    fuel: null
+    uses:
+    - lock gates
+    - canal and sea defences
+    - harbour piles
+    - railway sleepers
+    - bridge decks
+    - heavy flooring
+  products:
+    food:
+    - seed oil used locally for cooking
+    sap_resin_latex: []
+    bark:
+    - bark used for tanning
+    leaves: []
+    dyes: []
+    medicinal:
+    - seed oil and bark in local remedies
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - waterproof heavy timber for docks
+    - locks and piers
+  sources:
+  - https://www.wood-database.com/ekki/
+  - https://plantuse.plantnet.org/en/Lophira_alata_(PROTA)
+- id: afzelia
+  names:
+  - pod mahogany
+  - lucky bean tree
+  - doussié
+  - chamfuta
+  - peulmahonie
+  scientific: Afzelia quanzensis
+  rank: group
+  stands_for:
+  - Afzelia africana (doussié)
+  distinct_from:
+  - 'coast-coral-tree: afzelia''s lucky beans are black with a red aril'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - striking
+  habitat:
+    range: Somalia and DR Congo to South Africa (A. quanzensis); West and Central African savanna from
+      Senegal to Uganda (A. africana)
+    ecosystem: dry woodland, sand forest and savanna
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'temperature: tropical to subtropical; moisture: seasonally dry'
+    elevation_m: null
+    substrate: well-drained sandy soils
+    niche: canopy tree of woodland and sand forest
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: single trunk with a wide spreading crown
+    height_m:
+    - 12
+    - 35
+    trunk_diameter_m:
+    - 0.5
+    - 1.5
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, pinnate with glossy dark green leaflets
+    seasonal: leafless late in the dry season
+    flowers: greenish with one large red petal, October to November
+    fruit_visible: thick flat woody pods up to 23 cm, splitting to show shiny black seeds each capped
+      with a hard scarlet-orange aril
+    bark: smooth grey, flaking in irregular patches
+  timber:
+    heartwood: light to reddish brown
+    sapwood: pale yellowish, distinct
+    grain: interlocked
+    texture: coarse
+    density_kg_m3: 805
+    janka_n: 8050
+    workability: works fairly well; stable once dry
+    rot_resistance: very durable; resists termites
+    scent: null
+    fuel: null
+    uses:
+    - parquet flooring
+    - furniture
+    - railway sleepers
+    - boatbuilding
+    - canoes
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - bark and roots in local medicine
+    toxicity: null
+  lore:
+    folklore:
+    - black-and-red seeds carried as lucky charms
+    cultures:
+    - seeds threaded into necklaces and ornaments
+    symbolism:
+    - protected tree in South Africa
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - lucky-bean seeds as a trinket or currency
+    - durable flooring wood
+  sources:
+  - https://www.wood-database.com/afzelia/
+  - https://plantuse.plantnet.org/en/Afzelia_quanzensis_(PROTA)
+  - https://plantuse.plantnet.org/en/Afzelia_africana_(PROTA)
+- id: sneezewood
+  names:
+  - sneezewood
+  - nieshout
+  - umthathi
+  scientific: Ptaeroxylon obliquum
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  habitat:
+    range: South Africa, Eswatini, Mozambique, Zimbabwe, Botswana, Namibia and Angola
+    ecosystem: dry forest, bushveld, coastal and sand forest
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonally dry'
+    elevation_m: null
+    substrate: rocky hillsides and well-drained soils
+    niche: forest margins and rocky woodland
+    strata:
+    - canopy
+    - understory
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: shrub or small to medium tree with a straight bole
+    height_m:
+    - 3
+    - 20
+    trunk_diameter_m:
+    - 0.3
+    - 0.6
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, paired pinnate leaves with 3-8 pairs of lopsided blue-green leaflets
+    seasonal: flowers on bare twigs in late winter to spring
+    flowers: small fragrant white to creamy yellow flowers in dense clusters
+    fruit_visible: two-winged reddish-brown capsules
+    bark: whitish grey and smooth, becoming fissured
+  timber:
+    heartwood: rose-red to dark red, maturing to golden brown with orange figure
+    sapwood: pale grey, narrow
+    grain: straight to interlocked
+    texture: fine
+    density_kg_m3: 1000
+    janka_n: 13700
+    workability: hard; turns well; sawdust causes violent sneezing
+    rot_resistance: extremely durable; fence posts last decades
+    scent: peppery, sneeze-inducing
+    fuel: burns hot even when green; burned in steam tugs
+    uses:
+    - fence and telegraph poles
+    - railway sleepers
+    - bearings
+    - xylophone keys in Mozambique
+    - turnery
+    - furniture
+  products:
+    food: []
+    sap_resin_latex:
+    - resin used against warts and cattle ticks
+    bark:
+    - powdered as snuff for headaches; repels moths
+    leaves: []
+    dyes: []
+    medicinal:
+    - Xhosa snuff for headaches; resin for warts
+    toxicity: sawdust and wood oils (nieshoutol) are strong respiratory irritants, causing sneezing, rhinitis
+      and asthma
+  lore:
+    folklore: []
+    cultures:
+    - Xhosa snuff
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: wood that fights back with sneezing dust'
+    dimensions: []
+    hooks:
+    - near-rotproof fence posts
+    - sneezing-powder reagent
+  sources:
+  - https://www.wood-database.com/sneezewood/
+  - https://plantuse.plantnet.org/en/Ptaeroxylon_obliquum_(PROTA)
+- id: hagenia
+  names:
+  - hagenia
+  - kosso
+  - kousso
+  - African redwood
+  - East African rosewood
+  scientific: Hagenia abyssinica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - medicinal
+  - flowers
+  - striking
+  habitat:
+    range: Afromontane highlands from Sudan and Ethiopia through Kenya, Uganda, Rwanda, Burundi, eastern
+      DR Congo and Tanzania to Malawi and Zambia
+    ecosystem: upper montane forest and Hagenia-Juniperus woodland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: 'temperature: tropical montane'
+    elevation_m:
+    - 2000
+    - 3000
+    substrate: moist volcanic and montane soils
+    niche: near the upper forest limit, below the giant heather zone
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: short, often crooked trunk with thick branches and a wide umbrella crown
+    height_m:
+    - 6
+    - 20
+    trunk_diameter_m:
+    - 0.6
+    - 2.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, pinnate leaves to 50 cm with 7-13 serrated leaflets, green above, silvery-haired
+      beneath; twigs shaggy with silver hairs
+    seasonal: little change
+    flowers: huge drooping panicles 30-60 cm; female trees pinkish red, male trees white to orange-buff
+    fruit_visible: dry fruits hidden in the persistent reddish flower heads
+    bark: pale red-brown, thick and flaking
+  timber:
+    heartwood: dark red to red-brown
+    sapwood: creamy yellow
+    grain: null
+    texture: null
+    density_kg_m3: 655
+    janka_n: null
+    workability: soft for its weight; works easily
+    rot_resistance: null
+    scent: null
+    fuel: firewood
+    uses:
+    - furniture
+    - flooring
+    - construction
+    - carving
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - dried female flower heads (kosso) taken in Ethiopia to expel tapeworm; now discouraged because the
+      dose is uncontrolled
+    toxicity: kosso is a strong purgative; overdose causes vomiting, diarrhoea and nerve symptoms
+  lore:
+    folklore: []
+    cultures:
+    - the traditional Ethiopian tapeworm cure
+    - needed because raw beef (kitfo) is widely eaten
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: treeline tree at the edge of the alpine zone'
+    dimensions: []
+    hooks:
+    - purgative cure for parasites
+    - red montane timber
+  sources:
+  - https://plantuse.plantnet.org/en/Hagenia_abyssinica_(PROTA)
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Hagenia_abyssinica.PDF
+- id: bitter-kola
+  names:
+  - bitter kola
+  - orogbo
+  - akiilu
+  - false kola
+  scientific: Garcinia kola
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'kola: bitter kola seeds are bitter and caffeine-free, from a different family'
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  habitat:
+    range: West and Central Africa from Senegal and Sierra Leone to Nigeria, Cameroon, Gabon and DR Congo
+    ecosystem: lowland rain forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m: null
+    substrate: forest soils
+    niche: middle storey of moist forest; kept on farms
+    strata:
+    - understory
+    - canopy
+    shade_tolerance: tolerant
+    period: null
+  form:
+    habit: single trunk with a dense, spreading crown
+    height_m:
+    - 12
+    - 30
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, glossy dark green, opposite, elliptic leathery leaves
+    seasonal: little change
+    flowers: small greenish-white to yellow flowers
+    fruit_visible: orange, apple-sized fruits with orange pulp around 2-4 brown seeds
+    bark: brown, yellow resinous latex when cut
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: null
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - chewing sticks
+  products:
+    food:
+    - bitter seeds chewed as a masticatory and offered to guests
+    sap_resin_latex:
+    - yellow resinous latex
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - seeds for coughs
+    - throat infections
+    - colic and colds; stems as chewing sticks
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - orogbo offered in Yoruba rites and to guests; Igbo hospitality alongside true kola
+    symbolism:
+    - a symbol of long life in Yoruba tradition
+    - since the seed keeps for a long time
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: hospitality seed shared with guests'
+    dimensions: []
+    hooks:
+    - seed as a social gift item and a cough remedy
+  sources:
+  - https://tropical.theferns.info/viewtropical.php?id=Garcinia+kola
+  - https://www.iucnredlist.org/species/34715/9883983
+- id: khat
+  names:
+  - khat
+  - qat
+  - miraa
+  - chat
+  scientific: Catha edulis
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  habitat:
+    range: Afromontane East and southern Africa from Ethiopia to South Africa; cultivated in Ethiopia,
+      Kenya and Yemen
+    ecosystem: montane forest and forest margins; terraced farms
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - subhumid
+      note: 'temperature: tropical montane'
+    elevation_m: null
+    substrate: well-drained slopes
+    niche: forest margins in the wild; cropped hedges in cultivation
+    strata:
+    - canopy
+    - understory
+    - shrub
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: slender, erect tree with a small pointed crown; kept as a 2.5-6 m multi-stemmed shrub when
+      cropped
+    height_m:
+    - 2.5
+    - 25
+    trunk_diameter_m:
+    - 0.1
+    - 0.2
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, glossy oblong leaves with serrated edges, young twigs reddish
+    seasonal: little change
+    flowers: tiny white to greenish flowers in clusters
+    fruit_visible: small red-brown three-lobed capsules
+    bark: smooth pale grey-green, rough on large trees
+  timber:
+    heartwood: golden yellow to brown, lustrous
+    sapwood: not distinct
+    grain: straight
+    texture: fine, even
+    density_kg_m3: 640
+    janka_n: null
+    workability: strong, moderately hard
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses:
+    - poles
+    - tool handles
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - fresh young leaves and shoots chewed as a stimulant (cathinone)
+    dyes: []
+    medicinal:
+    - leaves chewed against fatigue and hunger
+    toxicity: cathinone is an amphetamine-like stimulant; heavy use causes insomnia, dependence and psychosis;
+      controlled in many countries
+  lore:
+    folklore: []
+    cultures:
+    - afternoon qat sessions in Yemen; chewing in Ethiopian
+    - Somali and Kenyan Meru (miraa) communities
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - stimulant leaf with a dependence cost
+  sources:
+  - https://plantuse.plantnet.org/en/Catha_edulis_(PROTA)
+  - https://www.who.int/publications/m/item/khat
+- id: giant-lobelia
+  names:
+  - giant lobelia
+  - gin-and-tonic lobelia
+  - Cousin Itt lobelia
+  scientific: Lobelia deckenii
+  rank: group
+  stands_for:
+  - Lobelia gibberrima
+  - Lobelia telekii
+  distinct_from:
+  - 'dendrosenecio: giant groundsels branch into candelabras; lobelias stay single rosettes'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: alpine zones of Kilimanjaro (L. deckenii), Mount Kenya, the Aberdares and Mount Elgon (L. telekii)
+      and other East African mountains
+    ecosystem: Afroalpine moorland
+    climate:
+      temperature:
+      - cold
+      moisture:
+      - humid
+      note: 'temperature: alpine'
+    elevation_m:
+    - 3300
+    - 5000
+    substrate: moist valley bottoms (L. deckenii) or dry rocky slopes (L. telekii)
+    niche: alpine bogs, valley floors and moraines
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: massive rosettes on a stout stem, sending up a single towering flower spike; monocarpic rosettes
+      die after flowering
+    height_m:
+    - 1
+    - 3.7
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen rosettes of long fleshy leaves that close at night around a pool of water, which
+      freezes and insulates the bud
+    seasonal: rosettes grow for decades before flowering once
+    flowers: tall spike of blue-purple flowers hidden among long bracts, hairy and grey in L. telekii,
+      pollinated by sunbirds
+    fruit_visible: dry capsules with tiny dark seeds
+    bark: covered in dead marcescent leaves
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: hollow pithy stem; not a timber
+    rot_resistance: null
+    scent: null
+    fuel: null
+    uses: []
+  products:
+    food: []
+    sap_resin_latex:
+    - bitter milky sap with alkaloids
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: bitter sap contains alkaloids, probably including lobeline, which deters herbivores
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      weirdness: 'high: rosettes that freeze their own water pools'
+      liminality: 'high: high alpine zone above the clouds'
+    dimensions:
+    - aether
+    hooks:
+    - ice from the rosette pools
+    - landmark plant for alpine biomes
+  sources:
+  - https://powo.science.kew.org/results?q=Lobelia%20deckenii
+  - https://powo.science.kew.org/results?q=Lobelia%20telekii
+- id: madagascar-rosewood
+  names:
+  - Madagascar rosewood
+  - bois de rose
+  - palissandre
+  scientific: Dalbergia baronii
+  rank: group
+  stands_for:
+  - Dalbergia maritima (bois de rose)
+  - Dalbergia louvelii
+  distinct_from:
+  - 'african-blackwood: Madagascar rosewood is red-brown, not near-black'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: endemic to eastern Madagascar, including Masoala and Marojejy
+    ecosystem: evergreen lowland rain forest and coastal forest
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - humid
+      note: null
+    elevation_m:
+    - 0
+    - 600
+    substrate: lowland forest soils, marsh edges
+    niche: scattered canopy tree
+    strata:
+    - canopy
+    shade_tolerance: null
+    period: null
+  form:
+    habit: medium tree with a short bole
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m:
+    - 0.5
+    - 1.4
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, pinnate with 17-25 small leaflets, yellowish-hairy beneath
+    seasonal: briefly leafless
+    flowers: small white pea flowers in short panicles
+    fruit_visible: small flat one-seeded pods
+    bark: whitish to pale brown, cracked
+  timber:
+    heartwood: reddish brown to purplish red, darkening, with dark stripes; D. maritima purplish red turning
+      near-black
+    sapwood: pale, distinct
+    grain: straight to interlocked
+    texture: fine
+    density_kg_m3: 935
+    janka_n: 12080
+    workability: hard but works and polishes well
+    rot_resistance: very durable
+    scent: rose-like when worked
+    fuel: null
+    uses:
+    - guitar bodies and fingerboards
+    - cabinetmaking
+    - marquetry
+    - fine furniture
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - D. maritima heartwood used for bilharzia and malaria
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism:
+    - CITES Appendix II since 2013 with a zero export quota, after illegal logging in Masoala and Marojejy
+      surged following the 2009 political crisis
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - rare scented hardwood for instruments
+    - a contraband resource
+  sources:
+  - https://www.wood-database.com/madagascar-rosewood/
+  - https://plantuse.plantnet.org/en/Dalbergia_baronii_(PROTA)
+  - https://plantuse.plantnet.org/en/Dalbergia_maritima_(PROTA)
+- id: sweet-thorn
+  names:
+  - sweet thorn
+  - soetdoring
+  - Karoo thorn
+  - Cape gum
+  - Acacia karroo (syn.)
+  scientific: Vachellia karroo
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: sweet thorn has paired long white thorns and yellow pompoms, not a flat crown'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - medicinal
+  - product
+  habitat:
+    range: southern Africa from southern Angola and Zambia to Mozambique and South Africa
+    ecosystem: open woodland, wooded grassland and the Karoo
+    climate:
+      temperature:
+      - warm-temperate
+      - subtropical
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'temperature: subtropical to warm-temperate; moisture: semi-arid to subhumid'
+    elevation_m: null
+    substrate: deep soils; along drainage lines in dry country
+    niche: encroaches on grassland and old fields
+    strata:
+    - open
+    - shrub
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: shrub or small tree with a rounded crown, branching low
+    height_m:
+    - 3
+    - 12
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: fast
+    leaves: deciduous to semi-evergreen, fine bipinnate, dark green
+    seasonal: masses of yellow flowers in early summer
+    flowers: bright yellow, scented puffball heads
+    fruit_visible: narrow, flat, sickle-shaped brown pods
+    bark: red on young branches, dark rough and fissured with age, reddish in the fissures; paired straight
+      white thorns up to 25 cm
+  timber:
+    heartwood: reddish
+    sapwood: pale
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: hard; few trees reach timber size
+    rot_resistance: sapwood perishable
+    scent: null
+    fuel: excellent firewood and charcoal
+    uses:
+    - fence posts
+    - firewood
+    - charcoal
+    - rafts
+    - sewing needles from thorns
+  products:
+    food:
+    - sweet gum eaten by people and bushbabies
+    sap_resin_latex:
+    - edible gum used as a gum arabic substitute
+    bark:
+    - bark tannin for leather; inner bark fibre for rope
+    leaves:
+    - browse
+    dyes: []
+    medicinal:
+    - bark and gum for diarrhoea
+    - colds and sore throats
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - fenced the enclosures of the Zulu royal women
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: thorny thickets that invade grassland'
+    dimensions: []
+    hooks:
+    - long white thorns as needles
+    - tannin for leather
+    - gum glue
+  sources:
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Acacia_karroo.PDF
+  - https://pza.sanbi.org/vachellia-karroo
+  - https://www.cabidigitallibrary.org/doi/full/10.1079/cabicompendium.2289
+- id: ana-tree
+  names:
+  - ana tree
+  - winter thorn
+  - apple-ring acacia
+  - Faidherbia
+  - white acacia
+  - Acacia albida (syn.)
+  scientific: Faidherbia albida
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: ana tree drops its leaves in the rains and has twisted orange pods'
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  habitat:
+    range: Africa from the Sahel to South Africa, and the Middle East; introduced to India and Pakistan
+    ecosystem: floodplains, riverine woodland and Sahel parkland
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'temperature: tropical to subtropical; moisture: semi-arid to subhumid'
+    elevation_m: null
+    substrate: deep alluvial soils with groundwater, sandy river banks
+    niche: farmed parkland and river floodplains
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tall spreading tree with a deep taproot
+    height_m:
+    - 6
+    - 30
+    trunk_diameter_m:
+    - 1
+    - 2
+    lifespan_y: 90
+    growth_rate: fast
+    leaves: bipinnate, grey-green
+    seasonal: reverse phenology, leafless in the rainy season and in leaf through the dry season
+    flowers: cream to yellow flower spikes in the dry season
+    fruit_visible: bright orange coiled pods like apple-peel rings
+    bark: grey, smooth when young, fissured and flaky with age; paired straight white spines
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: 645
+    janka_n: 4350
+    workability: medium-weight hardwood
+    rot_resistance: null
+    scent: null
+    fuel: firewood
+    uses:
+    - house and grain-store construction
+    - mortars
+    - canoes
+    - handicraft
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - dry-season fodder; leaf fall fertilises crops
+    dyes: []
+    medicinal:
+    - bark used in local remedies
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Sahel farmers grow millet and sorghum beneath it because it is leafless while crops grow; ash makes
+      soap
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: crops grow better beneath it'
+      weirdness: 'high: green when everything else is bare'
+    dimensions: []
+    hooks:
+    - fertility tree for farming
+    - dry-season fodder pods
+  sources:
+  - https://plantuse.plantnet.org/en/Faidherbia_albida_(PROTA)
+  - https://www.fao.org/family-farming/detail/ru/c/1744660/
+- id: knob-thorn
+  names:
+  - knob thorn
+  - knoppiesdoring
+  - Acacia nigrescens (syn.)
+  scientific: Senegalia nigrescens
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'umbrella-thorn: knob thorn''s trunk is studded with thorn-tipped knobs'
+  tier: 3
+  status: extant
+  inclusion:
+  - striking
+  habitat:
+    range: savanna from Tanzania and Zambia to Botswana, Zimbabwe, Mozambique and the South African lowveld
+    ecosystem: dry savanna and bushveld
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - semi-arid
+      note: 'temperature: tropical to subtropical'
+    elevation_m: null
+    substrate: fertile basalt and clay soils; frost-sensitive
+    niche: lowveld savanna
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: upright tree with a conical crown when young, rounded with age
+    height_m:
+    - 8
+    - 20
+    trunk_diameter_m:
+    - 0.5
+    - 0.9
+    lifespan_y: null
+    growth_rate: slow
+    leaves: deciduous, bipinnate with few large rounded leaflets
+    seasonal: flowers on bare branches in late winter (August-September)
+    flowers: creamy-white spikes, browsed by giraffes
+    fruit_visible: flat, dark brown pods
+    bark: dark brown to blackish, rough and fissured; trunk studded with woody knobs tipped by hooked
+      thorns, often lost in old trees
+  timber:
+    heartwood: dark brown with light and dark streaks
+    sapwood: narrow, whitish yellow
+    grain: interlocked
+    texture: fine
+    density_kg_m3: 1100
+    janka_n: 19080
+    workability: very hard and heavy; difficult to work
+    rot_resistance: very durable; resists termites
+    scent: null
+    fuel: good firewood
+    uses:
+    - mine props
+    - fence posts
+    - railway sleepers
+    - tool handles
+  products:
+    food: []
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - browse for giraffe and elephant
+    dyes: []
+    medicinal:
+    - root ointment for convulsions
+    toxicity: null
+  lore:
+    folklore: []
+    cultures: []
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      savagery: 'high: armoured trunk of thorned knobs'
+    dimensions: []
+    hooks:
+    - extremely hard timber for props and posts
+  sources:
+  - https://plantuse.plantnet.org/en/Acacia_nigrescens_(PROTA)
+  - https://powo.science.kew.org/results?q=Senegalia%20nigrescens
+- id: desert-date
+  names:
+  - desert date
+  - soapberry tree
+  - Egyptian balsam
+  - zachun
+  - balanites
+  - lalob
+  - hegleeg
+  scientific: Balanites aegyptiaca
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - medicinal
+  - cultural
+  - product
+  - toxic
+  habitat:
+    range: Sahel and dry tropical Africa from Mauritania to Sudan, Ethiopia and Tanzania, north to Egypt,
+      and the Middle East from Syria to Yemen
+    ecosystem: Sahel savanna and dry thorn woodland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - arid
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'moisture: arid to subhumid'
+    elevation_m: null
+    substrate: sand to heavy clay; tolerates flooding
+    niche: scattered in dry savanna and around villages
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: narrow spiny tree with a fluted trunk and tangled crown
+    height_m:
+    - 4
+    - 10
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, compound leaves of two leathery leaflets growing from the base of long straight
+      green spines
+    seasonal: little change
+    flowers: small fragrant greenish-yellow flowers in clusters
+    fruit_visible: date-like drupes 2.5-4 cm, green ripening yellow-brown, with sticky bittersweet pulp
+      around a hard stone
+    bark: grey-brown, ragged, with yellow-green patches where it sheds
+  timber:
+    heartwood: yellowish brown
+    sapwood: pale yellow
+    grain: null
+    texture: fine
+    density_kg_m3: 797
+    janka_n: null
+    workability: hard, fine; carves well
+    rot_resistance: resists insects
+    scent: null
+    fuel: good firewood and charcoal
+    uses:
+    - tool handles
+    - mortars and pestles
+    - stools
+    - combs
+    - carvings
+  products:
+    food:
+    - fruit pulp eaten fresh or dried and brewed
+    - kernel oil for cooking
+    - young leaves and flowers cooked
+    sap_resin_latex:
+    - gum
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal:
+    - fruit
+    - bark and roots against intestinal worms and for jaundice; extracts kill the snails and larvae that
+      spread bilharzia and Guinea worm
+    toxicity: fruit, bark and roots contain saponins, toxic to fish, snails and mosquito larvae, so used
+      as fish poison and soap
+  lore:
+    folklore:
+    - sometimes identified as the zaqqum, the tree of hell in the Qur'an
+    cultures:
+    - fruit pulp lathers like soap for washing clothes; Sahel and Sudanese food tree
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'low: a candidate for the Qur''anic tree of hell'
+    dimensions: []
+    hooks:
+    - soap from fruit pulp
+    - fish poison
+    - cooking oil
+  sources:
+  - https://hal.science/hal-05177544v1
+  - https://tropical.theferns.info/viewtropical.php?id=Balanites+aegyptiaca
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Balanites_aegyptiaca.PDF
+- id: buffalo-thorn
+  names:
+  - buffalo thorn
+  - umphafa
+  - umLahlankosi
+  - blinkblaar-wag-'n-bietjie
+  scientific: Ziziphus mucronata
+  rank: species
+  stands_for: []
+  distinct_from:
+  - 'christs-thorn: buffalo thorn''s paired thorns point one forward, one back'
+  tier: 2
+  status: extant
+  inclusion:
+  - folklore
+  - cultural
+  - fruit
+  - medicinal
+  habitat:
+    range: tropical and southern Africa from Ethiopia and West Africa to South Africa; Arabia
+    ecosystem: open woodland, savanna and riverine bush
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - semi-arid
+      - seasonally-dry
+      - subhumid
+      note: 'temperature: tropical to subtropical; moisture: semi-arid to subhumid'
+    elevation_m:
+    - 0
+    - 2100
+    substrate: varied; often alluvial soils and termite mounds
+    niche: river banks, woodland and termite mounds
+    strata:
+    - open
+    - shrub
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small spreading tree or tangled scrambling shrub with drooping zigzag branchlets
+    height_m:
+    - 3
+    - 17
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, glossy light green, three-veined from the base
+    seasonal: turns yellow in autumn
+    flowers: small greenish-yellow flowers in clusters, rich in nectar
+    fruit_visible: round berries ripening deep red-brown and shiny
+    bark: red-brown on young stems, becoming mottled grey and cracked into small blocks over stringy red
+      underbark; paired thorns, one hooked back, one straight
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: fine
+    density_kg_m3: null
+    janka_n: null
+    workability: hard
+    rot_resistance: resists termites
+    scent: null
+    fuel: good firewood and charcoal
+    uses:
+    - building poles
+    - posts
+    - live and dead fencing
+    - hunting and fishing weapons
+  products:
+    food:
+    - mealy fruit eaten raw or as porridge
+    - roasted seeds as coffee substitute
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - browse
+    dyes: []
+    medicinal:
+    - root infusions for pain and dysentery; bark and leaves for coughs and skin sepsis
+    toxicity: null
+  lore:
+    folklore:
+    - 'the paired thorns, one pointing forward and one back, are read by the Zulu and other peoples as
+      a lesson: look forward but remember where you came from'
+    - its branch is used to carry the spirit of a person who died away from home back to the family
+    cultures:
+    - Zulu umLahlankosi
+    - used as a grave marker for chiefs; some believe it is never struck by lightning
+    - so a safe shelter in storms
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      liminality: 'high: carries spirits of the dead home'
+    dimensions: []
+    hooks:
+    - hook-thorn branches for barrier fences
+    - lightning-safe shelter tree
+  sources:
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Ziziphus_mucronata.PDF
+  - https://pza.sanbi.org/ziziphus-mucronata
+- id: shepherds-tree
+  names:
+  - shepherd's tree
+  - witgat
+  - matopi
+  - motlôpi
+  scientific: Boscia albitrunca
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - striking
+  - cultural
+  - folklore
+  - fruit
+  habitat:
+    range: Kalahari, bushveld and lowveld of South Africa, Namibia, Botswana and Zimbabwe, north to Mozambique,
+      Zambia and Angola
+    ecosystem: arid savanna
+    climate:
+      temperature:
+      - subtropical
+      moisture:
+      - arid
+      - semi-arid
+      note: 'moisture: arid to semi-arid'
+    elevation_m: null
+    substrate: sands, calcrete and rocky ground; sometimes brackish
+    niche: scattered shade tree on dunes and plains
+    strata:
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small tree with a sturdy, often twisted white trunk and dense rounded crown, its underside
+      clipped flat by browsers
+    height_m:
+    - 3
+    - 10
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: slow
+    leaves: evergreen, narrow stiff grey-green leaves
+    seasonal: little change; flowers late winter to spring
+    flowers: small greenish-yellow, petal-less, starburst-shaped, in clusters
+    fruit_visible: round berries about 1 cm, yellowish, brittle-skinned
+    bark: smooth whitish to silver-grey, with dark rough patches
+  timber:
+    heartwood: null
+    sapwood: null
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: soft
+    rot_resistance: null
+    scent: null
+    fuel: firewood (avoided by some)
+    uses:
+    - building poles
+  products:
+    food:
+    - roots pounded into porridge and roasted as a coffee substitute
+    - fruit eaten
+    - flower buds pickled like capers
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - important browse for livestock and game
+    dyes: []
+    medicinal:
+    - bark
+    - leaves and roots for constipation
+    - epilepsy
+    - haemorrhoids and skin complaints
+    toxicity: null
+  lore:
+    folklore:
+    - some peoples believe the wood must not be burned, or cows will bear only bull calves
+    cultures:
+    - the "tree of life" of the Kalahari
+    - where shepherds shelter from the heat
+    symbolism:
+    - protected tree in South Africa
+    notable_trees:
+    - a tree in the central Kalahari found in 1974 with roots 68 m deep, the deepest recorded for any
+      plant
+  game_fit:
+    fields:
+      liminality: 'high: a burn taboo'
+      alignment: 'high: shade and food in the desert'
+    dimensions: []
+    hooks:
+    - root coffee
+    - desert shade landmark
+  sources:
+  - https://plantuse.plantnet.org/en/Boscia_albitrunca_(PROTA)
+  - https://pza.sanbi.org/boscia-albitrunca
+- id: mongongo
+  names:
+  - mongongo
+  - manketti
+  - mugongo
+  scientific: Schinziophyton rautanenii
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - fruit
+  - cultural
+  - product
+  habitat:
+    range: northern Namibia, northern Botswana, southwestern Zambia and western Zimbabwe, with belts in
+      Malawi, Mozambique, Angola, Tanzania and DR Congo
+    ecosystem: dry woodland on Kalahari sands
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - semi-arid
+      note: 'temperature: subtropical to tropical'
+    elevation_m: null
+    substrate: deep Kalahari sand on dune ridges and wooded hills
+    niche: groves on sand ridges
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: large spreading tree with a thick trunk
+    height_m:
+    - 7
+    - 20
+    trunk_diameter_m:
+    - 0.5
+    - 1
+    lifespan_y: 100
+    growth_rate: moderate
+    leaves: deciduous, hand-shaped with 5-7 leaflets; twigs exude white gum
+    seasonal: leafless in the dry season
+    flowers: yellowish, in loose sprays; male and female trees
+    fruit_visible: egg-shaped velvety grey-green fruits about 3 cm, falling March to May, with a hard
+      pitted shell around an edible nut
+    bark: whitish to pale grey-brown, smooth then flaking, golden sheen
+  timber:
+    heartwood: pale yellow to straw-coloured, not distinct
+    sapwood: pale
+    grain: straight or wavy
+    texture: coarse
+    density_kg_m3: null
+    janka_n: null
+    workability: very light and strong for its weight, like balsa; saws woolly
+    rot_resistance: not durable; termite-susceptible
+    scent: null
+    fuel: null
+    uses:
+    - fishing floats
+    - toys
+    - curios
+    - drawing boards
+    - insulation
+    - ox-drawn sledges
+    - musical instruments
+    - friction fire sticks
+  products:
+    food:
+    - nuts roasted and eaten
+    - a high-protein
+    - high-fat staple that stores for months; fruit pulp cooked
+    sap_resin_latex: []
+    bark: []
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - a staple of the Ju/'hoansi and other San peoples, eaten for centuries per archaeological finds
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      yield: 'high: a nut staple that stores well'
+    dimensions: []
+    hooks:
+    - storable nut food
+    - very light wood for floats and fire drills
+  sources:
+  - https://plantuse.plantnet.org/en/Schinziophyton_rautanenii_(PROTA)
+  - https://tropical.theferns.info/viewtropical.php?id=Ricinodendron%20rautanenii
+- id: msasa
+  names:
+  - msasa
+  - miombo
+  - masasa
+  - mtondo
+  - muputu
+  scientific: Brachystegia spiciformis
+  rank: group
+  stands_for:
+  - Julbernardia globiflora (munondo)
+  - Brachystegia boehmii
+  distinct_from: []
+  tier: 1
+  status: extant
+  inclusion:
+  - well-known
+  - striking
+  - cultural
+  - product
+  habitat:
+    range: miombo woodland of Tanzania, Zambia, Malawi, Zimbabwe, Mozambique, Angola and DR Congo, with
+      an outlier in the Soutpansberg of South Africa
+    ecosystem: miombo woodland
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonally dry'
+    elevation_m:
+    - 0
+    - 1400
+    substrate: well-drained, nutrient-poor soils
+    niche: dominant canopy tree of miombo woodland
+    strata:
+    - canopy
+    shade_tolerance: intermediate
+    period: null
+  form:
+    habit: broad, flat-topped to rounded crown on a single trunk
+    height_m:
+    - 8
+    - 19
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, pinnate with 2-7 pairs of leaflets
+    seasonal: the spring flush (August-September) turns whole woodlands amber, red and wine-purple before
+      greening
+    flowers: small fragrant green flowers in racemes
+    fruit_visible: flat woody pods that split explosively
+    bark: grey, smooth to rough
+  timber:
+    heartwood: pale to reddish brown, sometimes striped
+    sapwood: wide, pale cream to white
+    grain: interlocked
+    texture: medium
+    density_kg_m3: 800
+    janka_n: 7380
+    workability: fairly heavy; works moderately well
+    rot_resistance: moderately durable
+    scent: null
+    fuel: good firewood and charcoal; the main charcoal of the miombo belt
+    uses:
+    - construction
+    - door frames
+    - canoes
+    - railway sleepers when treated
+    - utensils
+    - beehives
+  products:
+    food: []
+    sap_resin_latex: []
+    bark:
+    - bark fibre for rope
+    - barkcloth
+    - grain bins and bark beehives
+    leaves: []
+    dyes: []
+    medicinal: []
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - msasa gives its name to places across Zimbabwe; the miombo woodland feeds charcoal and honey economies
+    symbolism:
+    - protected tree in South Africa
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: the miombo spring is a red-gold display'
+    dimensions: []
+    hooks:
+    - bark beehives for honey
+    - charcoal for smelting
+    - seasonal red leaf flush for spring visuals
+  sources:
+  - https://plantuse.plantnet.org/en/Brachystegia_spiciformis_(PROTA)
+  - https://powo.science.kew.org/results?q=Brachystegia%20spiciformis
+- id: anogeissus
+  names:
+  - African birch
+  - axlewood
+  - ngálama
+  - kane
+  - Anogeissus leiocarpa (syn.)
+  scientific: Terminalia leiocarpa
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  habitat:
+    range: tropical Africa from Senegal and Guinea to Sudan and Eritrea, south to DR Congo
+    ecosystem: savanna, gallery forest and forest edges
+    climate:
+      temperature:
+      - tropical
+      moisture:
+      - seasonally-dry
+      note: 'moisture: seasonally dry'
+    elevation_m: null
+    substrate: seasonal wetland soils and river banks
+    niche: gallery forest along rivers and savanna
+    strata:
+    - canopy
+    - open
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: tall tree with a straight bole and drooping branches
+    height_m:
+    - 15
+    - 30
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: deciduous, small silvery-hairy elliptic leaves
+    seasonal: leafless in the dry season
+    flowers: small yellowish flowers in round heads, June to October
+    fruit_visible: tiny winged fruits in dense cone-like balls
+    bark: grey, scaly and flaking
+  timber:
+    heartwood: dark brown to black
+    sapwood: whitish yellow, distinct
+    grain: null
+    texture: fine
+    density_kg_m3: 960
+    janka_n: null
+    workability: heavy and hard
+    rot_resistance: durable; resists termites
+    scent: null
+    fuel: excellent fuel and charcoal
+    uses:
+    - house piles and rafters
+    - axles
+    - tool handles
+    - agricultural implements
+    - cabinetmaking
+  products:
+    food: []
+    sap_resin_latex:
+    - gum
+    bark:
+    - inner bark as chewing sticks in Nigeria
+    leaves:
+    - crushed leaves boiled for the yellow mordant dye bath of bògòlanfini mudcloth
+    dyes:
+    - yellow leaf dye
+    - black when combined with iron-rich river mud
+    medicinal:
+    - inner bark against worms in people and livestock
+    - and for animal trypanosomiasis
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - Bamana bògòlanfini mudcloth of Mali
+    - once made by women for family occasions
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields: {}
+    dimensions: []
+    hooks:
+    - yellow mordant dye that reacts with iron mud to make black
+    - hardwood axles
+  sources:
+  - https://plantuse.plantnet.org/en/Anogeissus_leiocarpa_(PROTA)
+  - https://powo.science.kew.org/results?q=Terminalia%20leiocarpa
+- id: toothbrush-tree
+  names:
+  - toothbrush tree
+  - miswak
+  - arak
+  - mustard tree
+  - peelu
+  scientific: Salvadora persica
+  rank: species
+  stands_for: []
+  distinct_from: []
+  tier: 2
+  status: extant
+  inclusion:
+  - cultural
+  - medicinal
+  - product
+  - fruit
+  habitat:
+    range: dry Africa from the Sahel and Egypt through East Africa to southern Africa, Arabia, Iran and
+      India
+    ecosystem: desert floodplains, river banks and dry savanna
+    climate:
+      temperature:
+      - subtropical
+      - tropical
+      moisture:
+      - arid
+      note: 'temperature: tropical to subtropical'
+    elevation_m: null
+    substrate: saline and alkaline soils with access to groundwater
+    niche: wadis, river banks and saline flats
+    strata:
+    - open
+    - shrub
+    shade_tolerance: intolerant
+    period: null
+  form:
+    habit: small tree or sprawling shrub with a crooked trunk and drooping branches, often forming thickets
+    height_m:
+    - 3
+    - 7
+    trunk_diameter_m: null
+    lifespan_y: null
+    growth_rate: moderate
+    leaves: evergreen, fleshy round to oval pale green leaves
+    seasonal: little change
+    flowers: tiny greenish-yellow flowers in loose sprays
+    fruit_visible: clusters of small round berries turning pink to red, juicy and peppery
+    bark: whitish, rough and cracked
+  timber:
+    heartwood: white
+    sapwood: not distinct
+    grain: null
+    texture: null
+    density_kg_m3: null
+    janka_n: null
+    workability: soft, white and easy to work
+    rot_resistance: resists termites
+    scent: cress- or mustard-scented roots
+    fuel: firewood and charcoal
+    uses:
+    - chewing sticks
+    - light construction
+  products:
+    food:
+    - sweet-peppery berries eaten fresh or dried; young shoots and leaves eaten as greens
+    sap_resin_latex: []
+    bark: []
+    leaves:
+    - browse for camels and goats
+    dyes: []
+    medicinal:
+    - twigs and roots chewed as miswak to clean teeth
+    - with antimicrobial compounds; seed oil (khakan fat) used for rheumatism
+    toxicity: null
+  lore:
+    folklore: []
+    cultures:
+    - the miswak recommended in Islamic tradition (sunnah) and used for over a thousand years across Africa
+    - Arabia and South Asia
+    symbolism: []
+    notable_trees: []
+  game_fit:
+    fields:
+      alignment: 'high: a tool of daily ritual cleanliness'
+    dimensions: []
+    hooks:
+    - miswak as a daily hygiene item
+    - salt-tolerant shade tree
+  sources:
+  - https://apps.worldagroforestry.org/treedb2/AFTPDFS/Salvadora_persica.PDF
+  - https://tropical.theferns.info/viewtropical.php?id=Salvadora+persica

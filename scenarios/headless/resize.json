@@ -1,0 +1,19 @@
+{
+  "include": "../v0.1-scene.json",
+  "window": {
+    "resize": {
+      "frame": 60,
+      "size": [
+        900,
+        500
+      ]
+    }
+  },
+  "view": {
+    "buffer": "lit",
+    "overlays": [
+      "stats",
+      "wireframe"
+    ]
+  }
+}
