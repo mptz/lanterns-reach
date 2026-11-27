@@ -87,13 +87,13 @@ in `coords/typed-positions`, and the testing conventions above).
 - **Goal:** a durable world representation first, then concurrency, then
   simulation. Terrain is a sparse octree of terrain nodes, generated
   strictly outside in and refined progressively (`world/surveyor`,
-  `world/octave-pyramid`), with chunk data at its full-detail leaves; it is
+  `world/octave-pyramid`), with chunks' Bricks at its full-detail leaves; it is
   built single-threaded, then driven by goals (`engine/dispenser`'s
   `GoalSource`), then made concurrent. Only then do chunks become
   simulation objects: actors in a Vicinity (`world/chunk`, `sim/vicinity`),
   proven by a first slice of soft simulation. Hard simulation (conserved
   objects, scarce resources) is v0.4.
-- **The order follows the data's dependencies:** a chunk's data is a leaf
+- **The order follows the data's dependencies:** a chunk's Brick is a leaf
   TerrainNode's, which needs its ancestors, so terrain nodes come before
   chunk actors, and a chunk mesh wanted as a goal pulls everything outside
   in.
@@ -216,7 +216,18 @@ The chunk payload, single-threaded:
     resolving here; none may be left without a disposition.
     - *The owner's review of the Brick and chunk designs as they stand*
       (`design/brick.md`, `design/chunk.md`, the v0.2.1–v0.2.3 code), and
-      the questions the owner set aside while v0.2.3 was built.
+      the questions the owner set aside while v0.2.3 was built. Brick
+      review, design side done (2026-11-27): units rather than feet in
+      engine docs (glossary `unit`); the chunk or terrain node, not the
+      Brick, is the abstraction boundary (`invariant/brick/owner-only`);
+      superclasses are blocks (`invariant/world/superclasses-unobtainable`);
+      no chunk-data type: `Chunk` is the actor and owns its Brick, and a
+      full-detail terrain node is the other owner
+      (`invariant/chunk/content-is-cells-and-time`, with costly summaries
+      handed off). **Code in v0.2.4:** `ChunkData` becomes `Chunk` (the
+      single-threaded stand-in for the actor, held by `ChunkWorld`);
+      raycasting within the chunk and the emitter set move from
+      `ChunkWorld` into it; engine comments speak in units.
     - *Mesher layering:* the bitmask mesher is `BlockState`-specific inside
       the palette representation; whether to make it entry-agnostic
       (class and appearance tables in, abstract quads out) before coarse
@@ -292,7 +303,7 @@ Terrain outside in, single-threaded:
   and strict halving to chunk leaves, solid and air nodes left
   unsubdivided, the desired mosaic by screen-space error with 2:1 balance,
   node meshes as cubes at the node's spacing (reusing the greedy mesher)
-  with skirts, full-detail leaves as chunk data and chunk meshes, the v0.1
+  with skirts, full-detail leaves owning chunks' Bricks, and chunk meshes, the v0.1
   scene's chunk as an edited leaf. *Claim: the mosaic covers the view exactly
   once, with no gaps at seams.* `world/surveyor`, `world/octave-pyramid`,
   `world/chunk`.
@@ -379,7 +390,7 @@ Actors and concurrency:
 
 Chunks as simulation objects:
 - **v0.2.23 A single Vicinity, and edits:** chunk actors built from leaf
-  chunk data when they join and returned to terrain nodes when they leave
+  terrain nodes' Bricks when they join and returned to terrain nodes when they leave
   (pinned until saved, here never), per-chunk queues, the nudge mask and
   mail bit, the tool-user stand-in, replies; the Vicinity joins the halt
   hierarchy under the World. *Claim: edits through actors

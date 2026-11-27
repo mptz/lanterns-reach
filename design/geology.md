@@ -158,7 +158,7 @@ re-checked; numbers are approximate and only meant to set relative weights.
   artificial scarcity"; `ethics/wanting-coupled-to-liking`). Extracted ore is
   unaffected: it already left the chunk.
 - **Anti-x-ray by construction**, provided resolution happens late enough: an
-  unrevealed site carries no ore, so a modified client reading chunk data
+  unrevealed site carries no ore, so a modified client reading terrain content
   learns only where sites *could* be, which the host rock already tells an
   informed player.
 - Open: what counts as "revealed" (exposed face, line of sight, distance at

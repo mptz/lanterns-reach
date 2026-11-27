@@ -4,7 +4,9 @@ A chunk is a 64³ region of one dimension (`world/cubic-chunks`). While it
 is in a Vicinity it is an idle actor: it changes only in its own turns, and
 everyone else reads it through semantic queries or signals it. Outside
 every Vicinity it is not an object at all, only World state (Tenure,
-below). This file specifies **only the chunk's interface**: what callers
+below). The actor is the C++ class `Chunk`; the cells it owns are a Brick
+(`world/brick`), and there is no separate chunk-data type between them
+(owner, 2026-11-27). This file specifies **only the chunk's interface**: what callers
 can ask of it, under which contract, and what it publishes. How any of this is implemented (cell representations, version
 counters, hidden simulation state and ticking structures, meshing kernels, where each piece
 of state is stored) is deliberately left out, to be settled once the
@@ -37,20 +39,21 @@ Every operation belongs to exactly one contract (the actor convention,
   chunk actors. Their generation, loading, refinement and meshing are goal
   actors in the World's `GoalSource` (`engine/goal-source`), not chunk
   turns, and any number run at once.
-- **What the Cartographer creates and the World loads is chunk data, not a
-  chunk:** a value at one level of detail (format to be settled): at
-  coarse levels terrain shape, const node grids shared by their readers
-  (`world/octave-pyramid`); at full detail cells, owned and move-only,
-  which a chunk actor takes. Outside every Vicinity the World keeps the chunk data of the
-  level it reached, and refinement starts from it when a viewpoint comes
-  closer (`world/progressive-lod`). A chunk actor is built from chunk data
-  at full detail. The World need not keep chunk data one per chunk: it may
-  hold coarse levels as larger rectangular volumes spanning many chunks,
-  which is also what a server replicates for distant terrain.
+- **What the Cartographer creates and the World loads is terrain-node
+  content, not a chunk:** a value at one level of detail (format to be
+  settled): at coarse levels terrain shape, const node grids shared by
+  their readers (`world/octave-pyramid`); at full detail a chunk's cells,
+  a Brick, owned and move-only, which a chunk actor takes. Outside every
+  Vicinity the World keeps the terrain node of the level it reached, and
+  refinement starts from it when a viewpoint comes closer
+  (`world/progressive-lod`). A chunk actor is built from a full-detail
+  terrain node. The World need not keep coarse content one node per
+  chunk: it may hold coarse levels as larger rectangular volumes spanning
+  many chunks, which is also what a server replicates for distant terrain.
 - **The key and the World's record are what is stable:** dimension, coord,
   `contentVersion` and stage persist across tenures. The World creates the
   actor when the chunk joins a Vicinity (from loaded or
-  generated chunk data, refined to full detail first if needed), and
+  generated content, refined to full detail first if needed), and
   dissolves it once the frozen Vicinity it was cleaved off into has saved and
   shut down.
 - **Nothing outside its Vicinity holds a chunk:** the World's record points
@@ -60,24 +63,39 @@ Every operation belongs to exactly one contract (the actor convention,
   next gets one catches whatever they meant (`core/level-triggered`).
 
 ## Rules that keep the two paths one
-A chunk is either an actor in a Vicinity or chunk data held by the World.
-A design choice and three invariants keep the two from drifting apart, so what is left open
-about distant chunks is format, not concurrency:
-- **`invariant/chunk/one-chunk-data-type`** — A chunk actor's content is
-  exactly one chunk-data value (a Brick, scarce references and the
-  last-materialized time), moved in on join and out on dissolve; the
-  encoder and digest take that value, and the mesher takes its Brick, never
-  an actor-specific form. Chunk data is a plain aggregate with no interface
-  of its own, so it adds no layer between the actor and its Brick.
-  - **Enforced:** type: the actor holds a `ChunkData` member, and the
-    encoder, digest and mesher take only `const ChunkData&` or
-    `const Brick&`; test: the randomized equivalence test (v0.2.2) over an
-    actor's data and the World's copy.
-- **The World's chunk data is never authoritative** (a design choice,
+A chunk is either an actor in a Vicinity or a full-detail terrain node held
+by the World; each owns the chunk's Brick, and each is the abstraction
+boundary over it (`world/brick`). A design choice and three invariants keep
+the two from drifting apart, so what is left open about distant chunks is
+format, not concurrency:
+- **`invariant/chunk/content-is-cells-and-time`** — A chunk's
+  authoritative content is exactly its cells (a Brick) and its
+  last-materialized time; scarce instances are referenced from cells, by
+  reference properties carrying their ULIDs (`sim/block-metadata`), not by
+  a separate list. On join and dissolve the Brick and the time move
+  between the terrain node and the actor without a copy, **with the
+  maintained summaries that would be costly to recompute** (the content
+  digest, today). Hand-offs between inert terrain and simulated chunks
+  happen with great frequency, so they are where efficiency effort goes:
+  a summary whose recomputation is material (on the order of a millisecond
+  per chunk or more) is handed off rather than rebuilt, and only trivially
+  cheap ones are left for the new owner to recompute. This is a judgement
+  per summary, not a cutoff (owner, 2026-11-27). Reads both owners need (meshing, the full digest,
+  an emitter scan, a raycast within a Brick) are functions of a Brick, so
+  there is no second form of the content to drift. Simulation state
+  (event schedules, per-turn indexes) belongs to the actor alone and never
+  moves. A class pairing a Brick with bookkeeping both owners share comes
+  only when that bookkeeping asks for it, refactored in as needed, not as
+  a layer kept in advance.
+  - **Enforced:** type: join takes, and dissolve returns, the Brick, the
+    time and the handed-off summaries, and nothing else; test: the
+    randomized equivalence test (v0.2.2) over an actor's Brick and the
+    terrain node's, with a handed-off digest equal to a recomputed one.
+- **The World's terrain nodes are never authoritative** (a design choice,
   not a checkable invariant): the truth is the manifest, its chunk blobs and the
   seed (`engine/world`). Any entry in the World's tables can be dropped
   and rebuilt, so a bug there costs pop-in, not corruption.
-- **`invariant/chunk/form-changes-synchronised`** — Chunk data changes form
+- **`invariant/chunk/form-changes-synchronised`** — A chunk's Brick changes owner
   only at synchronised moments: entry (a join, while the chunk is idle),
   exit (a cleaved Vicinity's save), and a goal actor's result installed in
   a turn of the actor it was sent to. No other path creates,
@@ -92,17 +110,19 @@ about distant chunks is format, not concurrency:
   anchor, evaluated on read or on entry; decay of absent chunks
   (`persist/presence-not-absence`) is applied on entry; none of these is a
   write. A client's distant copies change only when its World installs
-  chunk data replicated from the server.
+  terrain-node content replicated from the server.
   - **Enforced:** type: content is `ActorOwned<…, ChunkTurn>`, so only a
-    chunk actor's turn can write it, and World-held chunk data is
+    chunk actor's turn can write it, and a terrain node's Brick is
     `const`.
 
 ## Full-detail terrain nodes
-A terrain node (`world/surveyor`) at full detail is one chunk's data, and it
-is what a chunk actor is built from when the chunk joins a Vicinity.
+A terrain node (`world/surveyor`) at full detail owns one chunk's Brick and
+last-materialized time, and it is what a chunk actor is built from when the
+chunk joins a Vicinity.
 - **A dissolving actor populates one.** When the actor dissolves, its
-  full-detail chunk data moves into a terrain node without a copy, with the
-  digests it was maintaining, keyed by the chunk-blob version its Vicinity's
+  Brick and last-materialized time move into a terrain node without a copy,
+  with the summaries that are handed off (the digests it was maintaining),
+  keyed by the chunk-blob version its Vicinity's
   save
   committed.
 - **Pending, then clean.** Until that save commits, the node is pinned:
@@ -152,8 +172,8 @@ their Vicinity, so the whole answer is consistent across them.
   representation-independent digest of one subsystem's full-detail content
   (`data/content-digest`), computed lazily on first request and maintained
   per edit after that, and a version that changes whenever content does.
-  Digests belong to chunk actors, which take part in simulation; coarse
-  chunk data outside a Vicinity carries none, or at most a digest of that
+  Digests belong to chunk actors, which take part in simulation; a coarse
+  terrain node carries none, or at most a digest of that
   level's own data, never one over every cell it stands for.
 - `stage() → Stage`: the generation or refinement stage it has reached.
 - `encoded(version) → Payload?`: its encoded content or delta at a version,
@@ -191,10 +211,10 @@ costs at most latency.
 The Dispenser runs a chunk's turn through its Vicinity, the source for its
 members' turns, with an **intent**; the turn does exactly that, and
 reports facts, never requests.
-- **Install chunk data:** installs chunk data a goal actor generated or
+- **Install content:** installs the full-detail Brick a goal actor generated or
   refined (`worldgen/cartographer`), received as a message; reports the stage reached. No chunk
   turn calls the Cartographer.
-- **Load:** installs loaded chunk data (plentiful content) and the scarce
+- **Load:** installs a loaded Brick and last-materialized time (plentiful content) and the scarce
   instances the scarce table anchors here; reports the stage (full).
 - **Consume mail:** takes the hard messages its Vicinity holds for it, one
   at a time, in per-sender order; consuming takes ownership. Each is a
@@ -253,13 +273,13 @@ encoding kernels.
   transaction, or a query over a set of chunks).
 - Whether `encoded(version)` is the chunk's or a separate cache's.
 - The World's state for chunks with no actor beyond TerrainNodes: bitmaps
-  per region for stage and flags, mesh handles, and how coarse chunk data
-  is grouped into
+  per region for stage and flags, mesh handles, and how coarse terrain-node
+  content is grouped into
   volumes (world-aligned power-of-two boxes no larger than the key spacing
   of the coarsest release tier they hold, `worldgen/seed-keys`; and whether
   the server and
   client group alike).
-- The format of chunk data at each level of detail (for terrain shape, a
+- The format of terrain-node content at each level of detail (for terrain shape, a
   coarse level's content is its composed fields, `world/octave-pyramid`), and
   the eviction of full-detail terrain nodes beyond distance-first.
 - Entry latency: a chunk joining a Vicinity must be decoded or generated

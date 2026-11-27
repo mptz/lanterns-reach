@@ -317,7 +317,7 @@ giving back, and work entering only through sources. What stays here:
   ledger's job (`persist/edit-atomicity`). (Scarce, conserved state is
   saved per Vicinity in the world's scarce table, "Conserved objects, hard
   messages and persistence".) Loading is a pure
-  goal actor that reads chunk data from its chunk blob instead of the seed;
+  goal actor that reads a chunk's Brick from its chunk blob instead of the seed;
   a chunk
   actor is built from it only when the chunk enters a Vicinity
   (`world/chunk`).
@@ -423,7 +423,7 @@ giving back, and work entering only through sources. What stays here:
   runnable goal actors; the Dispenser has no ready queue); generation and
   refinement work is the Surveyor's.
 - **Chunk storage itself, through a version counter per palette-form chunk** (below): one writer (the
-  chunk actor's own turn), many optimistic readers. Chunk data the World
+  chunk actor's own turn), many optimistic readers. Terrain nodes the World
   holds outside every Vicinity is immutable and needs neither.
 - **Hard messages:** the Vicinity's per-chunk queues (edits, conserved
   transfers), each multi-producer and consumed only by its chunk's turn
@@ -440,7 +440,7 @@ ultralightweight shared-memory concurrency model behind the virtualized API.
 - **Start with one seqlock counter per chunk**, and **instrument retries**; split into per-subchunk counters only
   if retries show it's needed.
 - **Scope of the terms**: this is the **reference implementation
-  for palette-form chunk data** (the palette representation, `world/brick`), not for
+  for palette-form chunks** (the palette representation, `world/brick`), not for
   air or uniform chunks. "Chunk" is an engine-wide term; **"subchunk" is
   scoped to particular representations,** each of which may define it its
   own way (named "subchunk" to avoid the in-game brick blocks and the
@@ -578,7 +578,7 @@ one of two roles: **owner** or **borrower**.
     declared tolerance (`world/brick`); test: ThreadSanitizer builds.
   - **Cost:** relaxed loads (plain loads on x86), plus the version check
     where a query validates.
-  - **Why:** lets cross-thread reads of hot chunk data be zero-copy
+  - **Why:** lets cross-thread reads of hot chunks be zero-copy
     without making the owner copy on write.
 - **`invariant/concurrency/free-after-grace-period`** — A published object
   is freed only by a cleanup actor its owner registers with `retire` after
@@ -826,7 +826,7 @@ questions. What the rest of this model relies on:
   7. **shape-rewriting processes** (decay, reality bombs, pocket decay)
      **touching owned entities:** open;
   8. **a derived copy promoted to authority** (client prediction, caches,
-     level of detail): the World's chunk data is never authoritative
+     level of detail): the World's terrain nodes are never authoritative
      (`world/chunk`), and a client's edits
      are tentative until the authority replies;
   9. **rewinds, replays and duplicate delivery:** exactly-once delivery,
@@ -1067,8 +1067,8 @@ model relies on:
   (`invariant/cartographer/worker-turns-only`): not a Dispenser
   source or consumer. The Surveyor decides what to generate and registers
   goal actors with the World's `GoalSource` (`engine/goal-source`), and the
-  completed goal actor holds the chunk data: the World keeps it as a
-  terrain node, or sends it to a joining chunk's actor to install. Checked by the Dispenser's worker
+  completed goal actor holds the content: the World keeps it as a
+  terrain node, or sends its Brick to a joining chunk's actor to install. Checked by the Dispenser's worker
   marker (`invariant/dispenser/worker-marker`).
 - **Pure, and blind to the world** (`invariant/cartographer/pure-function`,
   `invariant/cartographer/never-reads-world`): no Surveyor, chunk, Vicinity or
@@ -1143,7 +1143,7 @@ from replication, and doesn't need to.
 
 ### Meshing and the simulation border
 - **Meshing runs in the chunk's own turn** (chunks in a Vicinity.
-  Full-detail chunk data the World holds is meshed by mesh goal actors, and
+  Full-detail terrain nodes the World holds are meshed by mesh goal actors, and
   distant terrain is drawn per `world/octave-pyramid`): at most one turn per chunk
   already means meshing and simulation never run on one chunk at once; the
   data is warm in cache. Meshing reads the chunk's own storage, which no
@@ -1214,7 +1214,7 @@ pooled meshes, GPU culling, indirect draws) and `engine/reference-hardware`.
     Surveyor pushes a **retire descriptor** (render item id) into the same
     descriptor vector; the frame thread frees the pool range and record
     entry after the frame fence. Distant terrain is drawn per box from the
-    World's chunk data (`world/octave-pyramid`), so its render items are
+    World's terrain nodes (`world/octave-pyramid`), so its render items are
     keyed by box, not chunk, have no chunk record, and retire the same way.
   - **The mesher:** a process-wide mesher (a no-op `NoOpMesher` when
     headless), with per-chunk decisions made from the render

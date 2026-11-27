@@ -90,7 +90,8 @@ questions. Its residency and membership planning is specified in
   records, each only if newer (several Vicinities' saves may share one
   transaction and one `fsync`, in any order), plus loads (manifest queries
   and the scarce instances anchored at a chunk, in its turns;
-  chunk-blob reads are goal actors, whose chunk data the World keeps or a
+  chunk-blob reads are goal actors, whose Brick the World keeps in a terrain
+  node or a
   joining
   chunk's actor receives)
   and the offline collection of unreferenced chunk blobs at startup. A clean

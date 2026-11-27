@@ -205,7 +205,7 @@ that `deps/parallelism` chose over TBB and Taskflow.
   function actor's result; conditions and other completions carry only
   facts.** Generation is a goal actor in the World's `GoalSource`: for a
   chunk outside every Vicinity the completed goal actor is the terrain
-  node the World keeps, and a joining chunk's actor receives its chunk data
+  node the World keeps, and a joining chunk's actor receives its Brick
   as a message and installs it in its own turn (`engine/goal-source`).
   Dependent work becomes runnable through GoalSource's dependencies, and
   outside waiters through conditions (`Conditions and chaining`). A result belonging to

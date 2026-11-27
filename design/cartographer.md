@@ -3,7 +3,7 @@
 The Cartographer provides a stateless, parallel, asynchronous,
 player-independent world generation service. A requester names a box (a
 chunk, or a larger volume of distant terrain) and a level of detail, and
-is returned ownership of chunk data for it in *generated baseline* form:
+is returned ownership of its content in *generated baseline* form:
 the world as it would be if nobody had touched it. It encapsulates the
 whole noise schedule (fields, octaves, levels, sample grids, lattice
 offsets, the composite `surface`): no caller knows there are octaves. The Cartographer is called only from goal actors' and function actors'
@@ -33,15 +33,15 @@ it generates lives in `design/worldgen.md` (fields), `design/regions.md`
   have dependencies (a node's parent, structure plans), so they are goal
   actors, run on worker threads, any number at once.
 - **Only goal actors and function actors call the Cartographer.** The
-  actor holds the chunk data it computes: for a chunk outside every
+  actor holds the content it computes: for a chunk outside every
   Vicinity the World owns that goal actor (`world/chunk`; a TerrainNode's
   sibling set is one, `world/surveyor`, `engine/goal-source`), or the chunk's actor
   receives it as a message and installs it in its own turn; the Surveyor records the stage reached (a
   fact, never a request). No actor's turn calls the Cartographer.
-- **The output is chunk data, not a chunk:** an owned value at one level
-  of detail: at a coarse level const node grids, from which the next
-  level's refinement starts; at full detail move-only cells
-  (`world/chunk`).
+- **The output is terrain-node content, not a chunk:** an owned value at
+  one level of detail: at a coarse level const node grids, from which the
+  next level's refinement starts; at full detail a move-only Brick
+  (`world/chunk`, `world/brick`).
 - **Seed keys are cached by the Cartographer** and come from the key
   provider (`worldgen/seed-keys`); see "Requests and keys" below.
 - **Full-detail output carries its content digest**
@@ -56,7 +56,7 @@ it generates lives in `design/worldgen.md` (fields), `design/regions.md`
   parent for one level, a resident ancestor several levels up when one
   request composes several levels at once, none at a root. The box is a chunk,
   or a world-aligned power-of-two volume no larger than the key region of
-  its coarsest octave (`worldgen/seed-keys`). The result is chunk data for
+  its coarsest octave (`worldgen/seed-keys`). The result is the content of
   the box at that level: cells at full detail; at a coarse level, its
   composed fields on the node's sample grid, for each field with an
   octave at that level, rather than cells. **Refinement is one request for
@@ -121,7 +121,7 @@ These mechanisms check the invariants below; each invariant's
 - **`invariant/cartographer/pure-function`** — The Cartographer is
   conceptually a pure function of seed keys and generation specification
   (dimension, coordinate, stage / LoD, generator version) to generated
-  chunk data; side effects (logging, internal caching) don't appear at the
+  content; side effects (logging, internal caching) don't appear at the
   API.
   - **Enforced:** telemetry or watchdog: sampled regeneration (varying the
     context is what tests purity rather than repeatability).

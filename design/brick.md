@@ -2,7 +2,7 @@
 
 A **Brick** is the engine's one cell storage: 64³ cells, each 2ᵏ units on
 a side, in a palettized form whose palette entries are block states, at
-every level of detail. Chunk data is a full-detail (1-unit) Brick; distant
+every level of detail. A chunk's cells are a full-detail (1-unit) Brick; distant
 terrain may hold its cells as coarser Bricks.
 
 **The Brick is storage; its owner is the abstraction boundary** (owner,
@@ -26,10 +26,13 @@ as other engine terms share theirs.
 ## Role
 - **The one cell storage,** at any power-of-two cell size: 1 unit at full
   detail, coarser for distant terrain.
-- **Chunk data is a full-detail Brick** plus the chunk's scarce references and
-  its last-materialized time (`world/chunk`; there is no per-block
-  metadata, `sim/block-metadata`), and a chunk actor is chunk
-  data plus simulation machinery.
+- **A chunk's content is a full-detail Brick** plus its last-materialized
+  time, owned by the chunk actor (`Chunk`) in a Vicinity or by a full-detail
+  terrain node outside one, with no chunk-data type between owner and Brick
+  (`invariant/chunk/content-is-cells-and-time`; there is no per-block
+  metadata, and scarce instances are referenced from cells,
+  `sim/block-metadata`). Bookkeeping both owners share is factored out
+  beside the Brick only when it grows enough to ask for it.
 - **The same shape as a TerrainNode's grid** (N = 64,
   `world/octave-pyramid`), so a node at spacing s can hold its cells as a
   Brick at cell size s; where coarse Bricks are used is part of the
@@ -66,7 +69,7 @@ as other engine terms share theirs.
   how many entries the indices can name), and nothing a reader can reach is
   ever reallocated: the palette is one array allocated at its capacity,
   never a growing vector. A Brick is an internal representation, used only by
-  its owner (a chunk's data, or the terrain's), which is the only writer
+  its owner (a chunk actor, or a terrain node), which is the only writer
   and, behind its API, decides how readers reach it.
 - **Growth copies and swaps:** palettes keep no per-entry counts, so an
   edit can't tell which entries are dead. An edit that needs a new entry

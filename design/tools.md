@@ -196,7 +196,7 @@ inventory (`inventory/slots-and-pack`).
      presentation, immediate.
   2. **Damage** (cracks) is soft state published by the swinging body
      (cell, progress, tool), with a TTL that lapses when the player stops
-     (`core/soft-state`), not chunk data. **Other players see cracks**
+     (`core/soft-state`), not chunk content. **Other players see cracks**
      (arguably yes, as in Minecraft; a relatively low priority for
      multiplayer), and **they need not be tightly in sync** with the
      swinging for them, unlike for the player breaking the block: updates

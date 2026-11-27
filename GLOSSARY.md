@@ -30,7 +30,8 @@ power-of-two cell size, holding either one uniform value or indices into a
 palette. `world/brick`
 
 **Cartographer** — The world-generation service: given a region and a level
-of detail, it produces chunk data from the seed, without reading the world
+of detail, it produces that region's content from the seed (a terrain
+node's: cells at full detail), without reading the world
 or keeping state between requests. `worldgen/cartographer`
 
 **cascade** — In GoalSource, the abandonment that spreads from a goal actor
@@ -40,17 +41,14 @@ to every dependent not yet started when it is abandoned or withdrawn.
 **chunk** — A 64³ cube of one dimension, the unit of simulation, storage and
 replication. `world/chunk`
 
-**chunk actor** — A chunk's form while it is a member of a Vicinity, which
-can simulate; outside every Vicinity a chunk exists only as chunk data.
-`world/chunk`
+**chunk actor** (`Chunk`) — A chunk's form while it is a member of a
+Vicinity, which can simulate. It owns the chunk's Brick and
+last-materialized time; outside every Vicinity a full-detail terrain node
+owns them instead. `world/chunk`
 
 **chunk blob** — The immutable, write-once saved form of one chunk's
 plentiful content at one version, which becomes current only when a commit
 names it in the manifest. `sim/concurrency-model`
-
-**chunk data** — A value describing a region of terrain at one level of
-detail, as generated or loaded, from which a chunk actor is built.
-`world/chunk`
 
 **cleanup actor** — The actor a `retire` call hands objects to; it frees them
 once no thread can still be reading them. `engine/dispenser`
@@ -235,7 +233,8 @@ are released together, at a distance suited to that band.
 `worldgen/seed-keys`
 
 **residency** — What of the world is held where and at what level of detail:
-unloaded, chunk data, or a frozen or running chunk actor.
+unloaded, a terrain node the World holds, or a frozen or running chunk
+actor.
 `sim/residency-levels`
 
 **retire** — To end an object's use now and its life later: the caller has
@@ -304,8 +303,8 @@ from outside, worlds are loaded, paused and shut down through it.
 Vicinity, from 2¹⁷-unit roots down to chunk-sized leaves. `world/surveyor`
 
 **terrain node** (`TerrainNode`) — One node of the terrain: a region held
-at its level of detail, with no actor of its own; at full detail it is one
-chunk's data at rest. `world/surveyor`
+at its level of detail, with no actor of its own; at full detail it owns
+one chunk's Brick and last-materialized time at rest. `world/surveyor`
 
 **time block** — A span of world time in `sim/random-ticks`'s hierarchy,
 with its own key derived from its parent's; clients hold only current and

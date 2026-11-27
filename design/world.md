@@ -192,7 +192,7 @@ chunk voxel data.
 
 Terrain density is a Laplacian pyramid of noise octaves. Level k is the
 partial sum of every octave from the coarsest down to octave k, and that one
-structure is at once the generation stage, the stored chunk data, the level
+structure is at once the generation stage, the stored terrain-node content, the level
 of detail drawn, the unit replicated for distant terrain, and the source of
 the bounds that skip fine evaluation. This entry owns terrain shape's levels
 of detail; `world/progressive-lod` keeps the stage ladder for materials and
@@ -331,7 +331,7 @@ features, which are not additive.
   each node's box, the same in every direction (`world/surveyor`).
 - **Storage is cumulative, per field:** a box at level k holds the
   composed field `Pₖ` of each field whose octaves reach its level, on its
-  node-sized grid with its apron; chunk data at level k is exactly that
+  node-sized grid with its apron; a terrain node's content at level k is exactly that
   (`world/chunk`). Increments are never stored: a level's octaves are
   generated fresh, added to the parent's composed field, and dropped. A
   field with no octave in the level's bin is not copied: the node's turns
@@ -507,7 +507,8 @@ features, which are not additive.
 
 ## world/brick — A Brick is 64³ cells at a power-of-two cell size, in one palettized form
 - **Specified in `design/brick.md`** (an entity doc): the engine's one cell
-  container; chunk data is a full-detail Brick.
+  storage; a chunk's cells are a full-detail Brick, owned by the chunk actor
+  or a terrain node.
 
 ## world/chunk-representation — Virtualized chunk representation (multiple reps, one interface)
 
@@ -566,7 +567,7 @@ features, which are not additive.
   and seam cost, to measure in v0.2.
 
 - **Scope:** chunks at full detail (actors in a Vicinity, and full-detail
-  chunk data the World holds). Distant terrain is drawn per
+  terrain nodes the World holds). Distant terrain is drawn per
   `world/octave-pyramid`, from boxes, not chunk meshes.
 - **Three layers, kept separate:**
   1. **Cell visibility classes** — camera-independent, per cell: opaque,

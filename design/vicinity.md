@@ -102,7 +102,7 @@ Vicinity's own role, invariants and open questions. Residency levels are
   wherever Vicinities hold adjacent chunks, at most one of them is running
   (none, when the World is paused). Together with the border rule above,
   nothing that runs ever reads another running Vicinity's members; what
-  lies beyond a Vicinity is a frozen Vicinity's members or chunk data the
+  lies beyond a Vicinity is a frozen Vicinity's members or terrain nodes the
   World holds, both immutable.
 - **Connected through portals too.** Adjacency includes portal links, so
   walking through a portal never crosses a Vicinity boundary, and opening
