@@ -90,6 +90,7 @@ reachable. To compare captures between builds, use
 ## Measurements
 
 ```
+build-release/sandbox_tests --time-states   # interning, loading, the state table's size
 build-release/sandbox_tests --time-meshers  # greedy, unmerged, per-cell: time, phases, sizes
 build-release/sandbox_tests --time-mesh   # time to mesh a full 64³ chunk (per-cell)
 build-release/sandbox_tests --time-chunk  # edits, growth, compaction, the digest, memory
@@ -105,5 +106,14 @@ perf record -F 500 -o /tmp/perf.data build-release/sandbox_tests --mesh-case=4
 perf report -i /tmp/perf.data --stdio          # flat profile
 tools/sample_stacks.sh -n 20 -- build-debug/sandbox_tests --mesh-case=4   # gdb stack samples
 ```
-`perf` needs `kernel.perf_event_paranoid` at 2 or below; call graphs
-(`--call-graph dwarf`) also need `kernel.perf_event_mlock_kb` raised.
+`perf` needs `kernel.perf_event_paranoid` at 2 or below for flat profiles.
+Every build has frame pointers, so `perf record --call-graph fp` gives call
+graphs, but on this kernel only with `perf_event_paranoid` at 1 or below.
+
+## Block definitions and ULIDs
+Every block definition has a `"ulid"`, minted once and kept for good
+(`data/stable-identity`). To give new definitions one:
+```
+tools/mint_ulid.py --add assets/blocks/*.json   # only files without a "ulid"; nothing else changes
+tools/mint_ulid.py 3                            # print three new ULIDs
+```

@@ -47,7 +47,7 @@ private:
     std::optional<std::uint64_t> meshedGeneration_;  // the generation buildMesh last meshed
 };
 
-// Test-only access to the world's chunk data.
+// Test-only access to the world's chunk.
 struct ChunkWorldTestAccess {
     static Chunk& chunk(ChunkWorld& w) { return w.chunk_; }
     static const Chunk& chunk(const ChunkWorld& w) { return w.chunk_; }

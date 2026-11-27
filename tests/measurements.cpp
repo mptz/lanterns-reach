@@ -367,3 +367,51 @@ void timeMeshers() {
                     same, byTurn, byMaterial, other);
     }
 }
+
+// `sandbox_tests --time-states` (versions.md v0.2.4, measurements): the cost
+// of interning a state, of loading the definitions with every state interned,
+// and the state table's size.
+void timeStates() {
+    std::vector<double> load;
+    std::size_t states = 0, defs = 0;
+    for (int rep = 0; rep < 5; ++rep) {
+        const auto t0 = Clock::now();
+        const BlockRegistry r = BlockRegistry::load(SANDBOX_ASSET_DIR "/blocks");
+        load.push_back(msSince(t0));
+        states = r.states().size();
+        defs = r.defs().size();
+    }
+    std::printf("Loading %zu definitions (textures included) and interning their %zu states: %.2f ms (median of 5)\n", defs,
+                states, median(load));
+    const StateTable& shipped = registry().states();
+    std::printf("States per shipped definition:");
+    for (std::uint32_t d = 1; d < shipped.definitionCount() && d <= registry().defs().size(); ++d)
+        std::printf(" %s %u", shipped.definitionAt(d).name.c_str(), shipped.definitionAt(d).stateCount);
+    std::printf("\n");
+
+    // Interning alone: fresh tables, 2¹⁰ states per definition, hashed as they are first seen.
+    for (int rep = 0; rep < 3; ++rep) {
+        StateTable t;
+        PropertyDecl v{"v", {}, true, 0};
+        for (std::uint32_t i = 0; i < StateTable::kMaxStatesPerDefinition; ++i) v.values.push_back("v" + std::to_string(i));
+        constexpr std::uint32_t kDefs = 64;
+        std::vector<std::uint32_t> ids;
+        for (std::uint32_t d = 0; d < kDefs; ++d)
+            ids.push_back(t.addDefinition(Id128::fromParts(0xBE7C000000000000ull, d), "m" + std::to_string(d), 0, nullptr,
+                                          orient::Symmetry::Uniform, {v}, false));
+        const auto t0 = Clock::now();
+        for (std::uint32_t d : ids)
+            for (std::uint32_t i = 0; i < StateTable::kMaxStatesPerDefinition; ++i) t.intern(d, orient::kIdentity, std::span<const std::uint32_t>(&i, 1));
+        const double ms = msSince(t0);
+        const auto n = static_cast<double>(t.size() - 1);
+        // A lookup of a state already interned (no hash).
+        const auto t1 = Clock::now();
+        std::uint64_t sink = 0;
+        for (std::uint32_t d : ids)
+            for (std::uint32_t i = 0; i < StateTable::kMaxStatesPerDefinition; ++i)
+                sink += t.intern(d, orient::kIdentity, std::span<const std::uint32_t>(&i, 1)).value;
+        const double lookupMs = msSince(t1);
+        std::printf("Interning %.0f new states: %.0f ns each; an existing one: %.0f ns; table %.0f bytes per state (sink %llu)\n", n,
+                    ms * 1e6 / n, lookupMs * 1e6 / n, static_cast<double>(t.bytes()) / n, static_cast<unsigned long long>(sink & 1));
+    }
+}

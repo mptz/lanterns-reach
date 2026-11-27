@@ -105,6 +105,7 @@ ChunkWorld worldWith(std::initializer_list<CellPos> solid);
 
 void runCoordsTests();
 void runIdentityTests();
+void runStateTests();
 void runChunkTests();
 void runOrientationTests();
 void runBlocksTests();
@@ -118,6 +119,7 @@ void runEquivalenceTests(bool longRun);
 void timeChunkMesh();             // sandbox_tests --time-mesh
 void timeChunkRepresentations();  // sandbox_tests --time-chunk
 void timeMeshers();               // sandbox_tests --time-meshers
+void timeStates();                // sandbox_tests --time-states
 void runPlacementTests();
 void runInputTests();
 void runTranslucencyTests();

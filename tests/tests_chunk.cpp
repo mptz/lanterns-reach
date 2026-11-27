@@ -36,9 +36,9 @@ void testChunkAddressing() {
     CHECK((ChunkId{0, {0, 0, 1}} < ChunkId{1, {0, 0, 0}}) && (ChunkId{0, {-1, 5, 5}} < ChunkId{0, {0, 0, 0}}));
 }
 
-// The chunk data: edits go through it, a state already in the palette reuses
+// The chunk: edits go through it, a state already in the palette reuses
 // its entry, a new state appends one.
-void testChunkDataPalette() {
+void testChunkPalette() {
     Chunk d(testStates());
     CHECK(ChunkTestAccess::paletteSize(d) == 1 && d.get({0, 0, 0}) == kAirState && d.get({63, 63, 63}) == kAirState);
     const StateId stone = solidState();
@@ -114,7 +114,7 @@ void testChunkMeshAtBoundary() {
 
 void runChunkTests() {
     testChunkAddressing();
-    testChunkDataPalette();
+    testChunkPalette();
     testChunkBoundary();
     testChunkMeshAtBoundary();
 }

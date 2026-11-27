@@ -46,11 +46,32 @@ inline constexpr StateId kAirState{0};  // air is always state 0
 constexpr std::uint64_t lookupKey(StateId s) { return s.value; }
 
 // A declared variant property (orientation is not one: it comes from the
-// definition's symmetry). Values are names; the first is the default.
+// definition's symmetry). No value is a designated default (world/brick):
+// an optional property is absent or one of its values (a flag is optional
+// with the one value "true"), and a mandatory one always has a value. In
+// the table a value is an index: for an optional property 0 is absent and
+// i is values[i − 1]; for a mandatory one i is values[i]. `initial` is a
+// mandatory property's starting value (behaviour, never identity).
 struct PropertyDecl {
     std::string name;
     std::vector<std::string> values;
+    bool mandatory = false;
+    std::uint32_t initial = 0;  // index into values (mandatory only)
     bool operator==(const PropertyDecl&) const = default;
+
+    std::uint32_t domainSize() const { return static_cast<std::uint32_t>(values.size()) + (mandatory ? 0u : 1u); }
+    // The value's name; "" for an absent optional property.
+    std::string_view valueName(std::uint32_t index) const {
+        return mandatory ? std::string_view(values[index]) : index == 0 ? std::string_view() : std::string_view(values[index - 1]);
+    }
+    // The index of a named value, or nothing.
+    std::optional<std::uint32_t> indexOf(std::string_view value) const {
+        for (std::size_t i = 0; i < values.size(); ++i)
+            if (values[i] == value) return static_cast<std::uint32_t>(i + (mandatory ? 0 : 1));
+        return std::nullopt;
+    }
+    // Where a new block starts: absent, or the initial value.
+    std::uint32_t startIndex() const { return mandatory ? initial : 0u; }
 };
 
 // A cell's visibility class (world/chunk-meshing, layer 1).
@@ -73,7 +94,7 @@ public:
         std::vector<PropertyDecl> properties;  // sorted by name
         std::vector<orient::Rot> orientations;  // canonical rotations, ascending; [0] is the identity
         std::vector<std::string> orientationText;  // per orientation: its canonical value ("" for the default)
-        std::uint32_t stateCount = 1;  // orientations × every property's domain
+        std::uint32_t stateCount = 1;  // orientations × every property's domain (absence counted)
         std::vector<StateId> dense;    // by dense index; kNoState where not yet interned
     };
     static constexpr StateId kNoState{0xFFFFFFFFu};
@@ -100,10 +121,12 @@ public:
     std::string text(StateId s) const;
 
     // Moving between states of one definition: dense lookups, interning only
-    // a state never seen.
+    // a state never seen. A definition's starting state is unrotated, with its
+    // optional properties absent and its mandatory ones at their initial value.
     StateId defaultState(std::uint32_t definition);
     StateId withOrientation(StateId s, orient::Rot placed);
     StateId with(StateId s, std::string_view property, std::string_view value);
+    StateId without(StateId s, std::string_view property);  // an optional property absent
 
     // Reads by id.
     const StateHash& hash(StateId s) const { return rows_[s.value].hash; }
@@ -115,9 +138,9 @@ public:
     bool isAir(StateId s) const { return s == kAirState; }
     Visibility visibility(StateId s) const { return rows_[s.value].visibility; }
     bool translucent(StateId s) const { return visibility(s) == Visibility::Translucent; }
-    // The property's value name.
+    // The property's value name ("" if it is optional and absent).
     std::string_view value(StateId s, std::string_view property) const;
-    std::vector<std::uint32_t> values(StateId s) const;  // one per property, in name order
+    std::vector<std::uint32_t> values(StateId s) const;  // one index per property, in name order
     // The face's appearance id (render/block-textures) and what it shows.
     std::uint32_t appearance(StateId s, orient::Face face) const { return rows_[s.value].appearance[face]; }
     const FacePayload& payload(std::uint32_t appearanceId) const { return payloads_[appearanceId]; }

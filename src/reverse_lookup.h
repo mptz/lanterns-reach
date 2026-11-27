@@ -1,7 +1,7 @@
 #pragma once
 // The reverse lookup (world/brick): an entry to its palette index, which an
 // edit needs to find whether its state is already an entry. It belongs to the
-// Brick's owner (chunk data), not the Brick: only the owner's turn edits and
+// Brick's owner (the chunk), not the Brick: only the owner's turn edits and
 // no reader uses it, so it needs no synchronisation.
 //
 // A linear scan of the palette up to a threshold; above it, a flat

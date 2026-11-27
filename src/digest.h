@@ -47,12 +47,8 @@ constexpr std::uint64_t digestWeight(std::uint32_t cell) {
     return digestWeightAt(cell & 63u, (cell >> 6) & 63u, (cell >> 12) & 63u);
 }
 
-// H(s): the state's canonical 64-bit encoding, domain-separated and mixed,
-// reduced mod p.
-inline constexpr std::uint64_t kDigestHDomain = 0x48415348535F5348ull;
-constexpr std::uint64_t digestStateHash(std::uint64_t canonicalEncoding) {
-    return reduceMod(mix64(kDigestHDomain ^ canonicalEncoding));
-}
+// H(s), a state's term, comes from its state hash (StateTable::digestTerm):
+// already uniform, so it is only reduced mod p.
 
 inline constexpr std::uint32_t kDigestCells = 64u * 64u * 64u;
 

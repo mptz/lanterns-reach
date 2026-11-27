@@ -6,6 +6,7 @@
 //   sandbox_tests --mesh-case=N   one fixed case of the mesh equivalence test (SANDBOX_TEST_VERBOSE=1 for sizes)
 //   sandbox_tests --skip-equivalence / --only-equivalence   ctest's entries (the mesh cases have their own)
 //   sandbox_tests --time-chunk    time edits, growth, compaction, the digest and memory (Release)
+//   sandbox_tests --time-states   interning, loading, the state table's size (Release)
 //   sandbox_tests --time-meshers  greedy, unmerged and per-cell meshing: time, phases, sizes (Release)
 //   sandbox_tests --time-mesh     time meshing a full 64³ chunk (use a Release build)
 
@@ -15,6 +16,10 @@ int main(int argc, char** argv) {
     const std::string arg = argc > 1 ? argv[1] : "";
     if (arg == "--time-mesh") {
         timeChunkMesh();
+        return 0;
+    }
+    if (arg == "--time-states") {
+        timeStates();
         return 0;
     }
     if (arg == "--time-meshers") {
@@ -33,6 +38,7 @@ int main(int argc, char** argv) {
     if (!onlyEquivalence) {
         runCoordsTests();
         runIdentityTests();
+        runStateTests();
         runChunkTests();
         runDigestTests();
         runRepresentationTests();

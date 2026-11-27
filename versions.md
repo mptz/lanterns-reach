@@ -1098,7 +1098,8 @@ Display-required:
   packed quads drawn without per-vertex buffers.
 
 ## v0.2.4 — Block definitions with ULIDs, and state hashes
-- Status: SPECIFIED 2026-11-27, not started. Depends on v0.2.3.
+- Status: **BUILT 2026-11-27**; headless criteria 1–9 pass, criterion 10
+  (owner spot-check) pending. Depends on v0.2.3.
 - **Claim:** a block state's identity is its definition's ULID and its
   named property values, and nothing the game shows changes when palettes
   hold interned state ids instead of process-local encodings. **Falsifying
@@ -1135,26 +1136,31 @@ Display-required:
   file unchanged; a file that has one is left alone. Authoring uses the
   real clock (`data/stable-identity`); simulation minting is not in this
   release.
-- **Variant properties in definitions:** `"properties"` declares named
-  properties, each an enumeration of value names (`["a", "b", ...]`, the
-  first the default) or `"bool"` (default `false`). Names are
-  `[a-z0-9_]+`; `orientation` is reserved, its domain coming from the
+- **Variant properties in definitions** (no value is a default, owner
+  2026-11-27, `world/brick`): `"properties"` declares named properties,
+  each optional (absent, or one of its values) or mandatory (always one of
+  its values): `"flag"` (optional, the one value `true`), a list of value
+  names (an optional enumeration), or `{"values": [...], "mandatory":
+  true}`. `"initial"` names the starting value of each mandatory property
+  (behaviour, not identity), and is required for each one. Names and
+  values are `[a-z0-9_]+`; `orientation` is reserved, its domain coming from the
   definition's `symmetry` (the cosets of its symmetry group,
   `world/block-orientation`). No shipped definition declares a property
   yet; test fixtures do. Integer and reference properties are later.
-- **The per-definition cap:** the product of a definition's domain sizes,
-  orientations included, is at most 2¹⁰; the loader rejects a definition
+- **The per-definition cap:** the product of a definition's domain sizes
+  (an optional property counts absence as a value), orientations
+  included, is at most 2¹⁰; the loader rejects a definition
   over it, naming the file and the product.
 - **The canonical text and the state hash** (`world/brick`):
-  `<ULID>[name=value,...]`, properties at their default left out, names
-  sorted, the brackets left out when nothing is written. Orientation is
+  `<ULID>[name=value,...]`, absent optional properties left out and
+  mandatory ones always written, names sorted, the brackets left out when nothing is written. Orientation is
   written as `world/block-orientation` specifies (the images of +x and +z
   of the coset member that sorts first). The state hash is BLAKE3
   `derive_key` with the context string
   `"lanterns-reach 2026-11-27 block state v1"` over that text's UTF-8
   bytes, truncated to its first 16 bytes. The text also parses back to a
   definition and property values (unknown ULIDs and names, bad values, and
-  defaults written explicitly are errors), so it is the reconstruction a
+  a missing mandatory property are errors), so it is the reconstruction a
   saved state travels with.
 - **BLAKE3** via `FetchContent`, pinned to a release commit, built portable
   (`deps/hashing`), checked against the library's published test vectors.
@@ -1234,9 +1240,10 @@ Headless:
    values; lower case parses; `I`, `L`, `O`, `U`, wrong lengths and a first
    character above `7` are rejected; BLAKE3 matches its published vectors.
 4. State-hash tests: pinned canonical texts and hashes for a fixture
-   definition's states; adding a property with a default to the fixture
-   leaves every existing hash unchanged; reordering an enumeration's values
-   changes no hash; every coset of every symmetry has a distinct
+   definition's states; adding an optional property to the fixture leaves
+   every existing hash unchanged, and adding a mandatory one changes every
+   hash; reordering a domain's values changes no hash; the initial values
+   change no hash; every coset of every symmetry has a distinct
    orientation text that parses back to it; every interned state's hash is
    distinct.
 5. Round trips, for every state of every shipped definition and fixture:

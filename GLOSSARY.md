@@ -188,6 +188,11 @@ noise octaves to the one above, so the same structure serves generation,
 storage, rendering and replication at every level of detail.
 `world/octave-pyramid`
 
+**optional property**, **mandatory property** — The two kinds of a block's
+variant property: an optional one may be absent (a flag is one, absent
+meaning false), a mandatory one always has a value. No value is a
+designated default. `world/brick`
+
 **palette** — A Brick's table of the distinct values its cells use, which the
 cells index. `world/brick`
 
@@ -276,7 +281,8 @@ logic machine), which senses through the body and sends it intentions.
 
 **state hash** — A block state's durable identity: a 128-bit content hash
 (BLAKE3) of its canonical text, its definition's ULID and its named
-property values with defaults left out, written like a ULID.
+property values (absent optional properties left out), written like a
+ULID.
 This, not the state id, is what is saved. It is not a ULID: it carries no
 timestamp and is derived, never minted. `world/brick`, `data/stable-identity`
 

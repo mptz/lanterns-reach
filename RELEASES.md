@@ -494,3 +494,101 @@ The open items listed at the head of v0.2.4 in `versions.md`, each decided.
 | Discretionary compaction | **Decided:** compaction is never automatic, since neither the Brick nor its owner has the context to schedule it. It runs at a save or a bulk fill, or when a caller asks through an explicit operation that nothing uses yet (`world/brick`). |
 | Measurements on a second reference machine | **Dropped:** releases are not validated on several machines. Measurements name the machine they ran on (`engine/reference-hardware`). Every v0.2.x number so far is from a Dell Latitude 7480: Intel Core i7-7600U (2 cores, 4 threads, 2.8–3.9 GHz, 4 MiB L3), 16 GB, Intel HD 620 (Kaby Lake GT2), Debian 13. |
 | Profiling call graphs | **Done in v0.2.4:** frame pointers in every build, so `perf record --call-graph fp` works. |
+
+### Choices (built 2026-11-27)
+- **`Id128`** (`id128.h`) is the one 128-bit value type, with the aliases
+  `Ulid` (minted) and `StateHash` (derived). The spec named the type `Ulid`;
+  a state hash isn't a ULID (glossary), so the shared type has a neutral
+  name. Crockford text is strict: upper case out, either case in, `I`, `L`,
+  `O`, `U`, wrong lengths and a first character above `7` rejected.
+- **BLAKE3 1.8.8**, its portable C files only, built as a static library
+  with every SIMD path compiled out (`deps/hashing`); checked against five
+  of its published `derive_key` vectors. Context string
+  `"lanterns-reach 2026-11-27 block state v1"`.
+- **No value is a designated default** (owner, 2026-11-27, during the
+  build): properties are optional (absent, or one of their values; a flag
+  is optional with the one value `true`) or mandatory (always written).
+  JSON: `"flag"`, a list (optional), or `{"values": [...], "mandatory":
+  true}`, with `"initial"` naming each mandatory property's starting value.
+  The spec's "first value is the default" and its reordering test are
+  replaced: reordering a domain never changes a hash, adding an optional
+  property never does, adding a mandatory one always does.
+- **The state table** is owned by `BlockRegistry` (`registry.states()`,
+  append-only, so a const registry can still intern). Registry type t is
+  the table's definition t + 1; air is definition 0 and `StateId{0}`, with a
+  built-in ULID (`01M8F3N35FMTBBXQ1NFX22HGFS`). A row holds the hash, the
+  digest term, the definition, the dense index, the rotation, the
+  visibility class and six appearance ids; property values are decoded
+  from the dense index. Every shipped state (42) is interned at load.
+- **The dense index** is orientation slot (canonical rotations ascending)
+  then properties in name order, mixed radix; `withOrientation`, `with` and
+  `without` are lookups in it, interning only a state never seen.
+- **`H(s)`** is stored per row (`digestTerm`); the stand-in
+  `digestStateHash` is gone. The Brick's `fullDigest` takes the term as a
+  function from its owner, and its reverse lookup hashes `lookupKey`
+  (the `StateId` itself).
+- **Callers:** `BlockState` is gone. `registry.state(type, rotation)`
+  gives a `StateId`; reads go through the table (`type`, `orientation`,
+  `definition`, `appearance`, `visibility`). `afterCommit` and
+  `targetingOverlay` gained a `StateTable&` parameter (they had no
+  registry). Air checks compare with `kAirState`.
+- **`Chunk`** holds `const StateTable&`, its id, its emitter set (moved from
+  `ChunkWorld`) and raycasting; `meshInto` uses the chunk's own id.
+- **Test states past the registry** are states of synthetic definitions in
+  the shared table (one mandatory property of 2¹⁰ values each), interned
+  on first sight, so the representation tests' 2¹⁹ distinct states are real
+  table rows; the lazy interning path carries them.
+- **The minting tool** is `tools/mint_ulid.py`; every shipped definition
+  and negative fixture got its ULID from it. `--add` inserts the field
+  after the opening brace.
+- **Frame pointers** (`-fno-omit-frame-pointer -mno-omit-leaf-frame-pointer`)
+  in every target. `perf record --call-graph fp` still needs
+  `kernel.perf_event_paranoid` at 1 or below on this kernel; at 2 it refuses
+  even user-only call chains.
+
+### Tests
+- **Identifiers** (`tests_identity.cpp`): Crockford text at 0, the maximum,
+  pinned values and 2,000 random ones, lower case, every rejection; BLAKE3's
+  vectors at lengths 0, 1, 1023, 1024, 1025.
+- **States** (`tests_states.cpp`): air; canonical texts pinned exactly
+  (`<ULID>[color=red,orientation=+y+x,stage=b]`) and two hashes pinned;
+  evolution (an added optional property keeps all 48 fixture hashes, an
+  added mandatory one keeps none, reordered domains and another initial
+  value keep all); orientation texts for all 11 symmetries (equal exactly
+  for equal cosets, the identity writes nothing, each parses back); round
+  trips of every shipped and fixture state through intern, hash, text,
+  dense index and named values; no two hashes equal; 13 malformed texts
+  rejected; lazy interning; fatal checks (duplicate ULID, over 2¹⁰ states,
+  a value outside its domain, `without` on a mandatory property); pinned
+  digests (v0.1 scene 1243621874014904966, uniform stone
+  1879917277027827065); and nothing interns after load (scene, three
+  meshers, emitters, a raycast, every tool's plan).
+- **Loader** (`ctest`): missing, malformed, duplicate and air's ULID, a
+  reserved property name, a one-value mandatory domain, a mandatory
+  property without an initial value, 1,032 states; the minting tool.
+- The v0.2.2 and v0.2.3 equivalence and meshing tests pass with `StateId`
+  palette entries; `--long` passes.
+
+### Measurements (Dell Latitude 7480, Release; `sandbox_tests --time-states`)
+- **Interning a new state:** about 520 ns (BLAKE3 over a 26–60 byte text,
+  the row, the maps); **an existing one:** about 12 ns.
+- **Loading the 16 shipped definitions with textures and interning their
+  42 states:** 0.9 ms.
+- **The state table:** about 168 bytes per state (row, hash map, dense
+  index), so 2¹⁹ states would take about 84 MB.
+- **States per definition:** furnace 24, log 3, every other block 1.
+- **Interning after load:** none (a test counts it).
+
+### Acceptance status (v0.2.4)
+| # | Criterion | Status |
+|---|---|---|
+| 1 | Build + ctest, Debug and Release, Clang, `-Werror`, zero warnings, frame pointers | ✅ (25 tests Debug, 32 s with `-j8`; 24 Release, 5 s) |
+| 2 | Every v0.2.3 capture identical; `quad_*` within budget; absorbance | ✅ (65 runs; only the live F1/F7 text differs) |
+| 3 | Identifier and BLAKE3 tests | ✅ |
+| 4 | State-hash tests | ✅ (with the owner's optional/mandatory rule in place of first-value defaults) |
+| 5 | Round trips | ✅ |
+| 6 | Loader rejections | ✅ (8 fixtures) |
+| 7 | Pinned digests; equivalence tests with `StateId` | ✅ |
+| 8 | The minting tool | ✅ |
+| 9 | `ChunkData` and `BlockState` gone; raycast and emitters are `Chunk`'s | ✅ |
+| 10 | The v0.1 world plays unchanged | owner spot-check pending |

@@ -199,13 +199,26 @@ as other engine terms share theirs.
     the state's reconstruction and its form in logs:
     `<definition ULID>[name=value,...]`, the ULID upper case, properties
     sorted by name, the brackets left out when no property is written.
-    Names are `[a-z0-9_]+`. **A property at its default value is left
-    out**, so adding a property with a default to an existing definition
-    leaves every existing state's hash unchanged. Enumerated values are
-    written by name, never by index, so reordering a domain changes no
-    hash; booleans are `true` and `false`. Orientation is written so it
-    doesn't depend on how the 24 rotations are numbered
-    (`world/block-orientation`). The grammar (`data/grammar`) reads
+    Names and values are `[a-z0-9_]+`, and values are written by name,
+    never by index, so reordering a domain changes no hash. **No value is
+    a designated default** (owner, 2026-11-27); a property is one of two
+    kinds:
+    - **Optional** (the common case): its domain is *absent* plus its
+      named values, and absence is written as nothing. A flag is an
+      optional property with the one value `true` (absent means false).
+      Adding an optional property to an existing definition leaves every
+      existing state's hash unchanged, since every existing state has it
+      absent.
+    - **Mandatory** (a wool colour, a wood kind: every state has a value
+      and none is special): always written. Adding one to an existing
+      definition changes every state's identity, so it is a migration
+      (`data/stable-identity`), as it should be.
+    Orientation is effectively optional, absent meaning unrotated, and is
+    written so it doesn't depend on how the 24 rotations are numbered
+    (`world/block-orientation`). Which state a block starts in when it is
+    placed or generated is behaviour, not identity: a definition names an
+    initial value for each mandatory property, its optional ones start
+    absent, and none of that enters a hash. The grammar (`data/grammar`) reads
     properties into the same values; this text is the identity, whatever
     authors write.
 - **Never persisted without its reconstruction:** a saved Brick or a network message may

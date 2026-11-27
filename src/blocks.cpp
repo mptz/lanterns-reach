@@ -116,7 +116,8 @@ std::optional<ParsedDefinition> parseDefinition(std::string_view text, std::stri
         return std::nullopt;
     }
     for (const auto& [key, value] : j.items())
-        if (key != "ulid" && key != "name" && key != "symmetry" && key != "properties" && key != "textures" && key != "roughness" &&
+        if (key != "ulid" && key != "name" && key != "symmetry" && key != "properties" && key != "initial" && key != "textures" &&
+            key != "roughness" &&
             key != "metallic" && key != "reflectance" && key != "emissive" && key != "translucency") {
             error = "unknown field \"" + key + "\"";
             return std::nullopt;
@@ -152,15 +153,18 @@ std::optional<ParsedDefinition> parseDefinition(std::string_view text, std::stri
         return std::nullopt;
     }
     def.symmetry = *sym;
-    // Variant properties (world/brick): each an enumeration of value names,
-    // the first its default, or "bool" (false, then true). Names and values
-    // are [a-z0-9_]+; orientation is reserved (it comes from the symmetry).
+    // Variant properties (world/brick); no value is a designated default:
+    //   "flag"                                 optional, the one value "true"
+    //   ["a", "b", ...]                        optional: absent, or one of its values
+    //   {"values": [...], "mandatory": true}   always one of its values
+    // and "initial" names each mandatory property's starting value. Names and
+    // values are [a-z0-9_]+; orientation is reserved (it comes from the symmetry).
     auto plainName = [](const std::string& n) {
         return !n.empty() && std::all_of(n.begin(), n.end(), [](char c) { return (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '_'; });
     };
     if (j.contains("properties")) {
         if (!j["properties"].is_object()) {
-            error = "\"properties\" must be an object of name: [values] or \"bool\"";
+            error = "\"properties\" must be an object of name: \"flag\", [values] or {\"values\": [...], \"mandatory\": true}";
             return std::nullopt;
         }
         for (const auto& [name, domain] : j["properties"].items()) {
@@ -168,11 +172,32 @@ std::optional<ParsedDefinition> parseDefinition(std::string_view text, std::stri
                 error = "property \"" + name + "\": names are [a-z0-9_]+, and \"orientation\" is reserved";
                 return std::nullopt;
             }
-            PropertyDecl p{name, {}};
-            if (domain.is_string() && domain.get<std::string>() == "bool") {
-                p.values = {"false", "true"};
-            } else if (domain.is_array() && domain.size() >= 2) {
-                for (const auto& v : domain) {
+            PropertyDecl p{name, {}, false, 0};
+            const nlohmann::json* list = nullptr;
+            if (domain.is_string() && domain.get<std::string>() == "flag") {
+                p.values = {"true"};
+            } else if (domain.is_array()) {
+                list = &domain;
+            } else if (domain.is_object() && domain.contains("values") &&
+                       std::all_of(domain.items().begin(), domain.items().end(), [](const auto& kv) { return kv.key() == "values" || kv.key() == "mandatory"; })) {
+                list = &domain["values"];
+                if (domain.contains("mandatory")) {
+                    if (!domain["mandatory"].is_boolean()) {
+                        error = "property \"" + name + "\": \"mandatory\" is true or false";
+                        return std::nullopt;
+                    }
+                    p.mandatory = domain["mandatory"].get<bool>();
+                }
+            } else {
+                error = "property \"" + name + "\" must be \"flag\", a list of value names, or {\"values\": [...], \"mandatory\": true}";
+                return std::nullopt;
+            }
+            if (list) {
+                if (!list->is_array() || list->empty() || (p.mandatory && list->size() < 2)) {
+                    error = "property \"" + name + "\": an optional property needs a value, a mandatory one at least two";
+                    return std::nullopt;
+                }
+                for (const auto& v : *list) {
                     if (!v.is_string() || !plainName(v.get<std::string>()) ||
                         std::find(p.values.begin(), p.values.end(), v.get<std::string>()) != p.values.end()) {
                         error = "property \"" + name + "\": values are distinct [a-z0-9_]+ names";
@@ -180,18 +205,40 @@ std::optional<ParsedDefinition> parseDefinition(std::string_view text, std::stri
                     }
                     p.values.push_back(v.get<std::string>());
                 }
-            } else {
-                error = "property \"" + name + "\" must be \"bool\" or a list of at least two value names";
-                return std::nullopt;
             }
             def.properties.push_back(std::move(p));
         }
         std::sort(def.properties.begin(), def.properties.end(), [](const PropertyDecl& a, const PropertyDecl& b) { return a.name < b.name; });
     }
+    if (j.contains("initial") && !j["initial"].is_object()) {
+        error = "\"initial\" must be an object of mandatory property: value";
+        return std::nullopt;
+    }
+    for (PropertyDecl& p : def.properties) {
+        const bool given = j.contains("initial") && j["initial"].contains(p.name);
+        if (p.mandatory != given) {
+            error = "\"initial\" names each mandatory property's starting value, and only those (\"" + p.name + "\")";
+            return std::nullopt;
+        }
+        if (!given) continue;
+        const nlohmann::json& v = j["initial"][p.name];
+        const auto it = v.is_string() ? std::find(p.values.begin(), p.values.end(), v.get<std::string>()) : p.values.end();
+        if (it == p.values.end()) {
+            error = "\"initial\": \"" + p.name + "\" must be one of its values";
+            return std::nullopt;
+        }
+        p.initial = static_cast<std::uint32_t>(it - p.values.begin());
+    }
+    if (j.contains("initial"))
+        for (const auto& [key, value] : j["initial"].items())
+            if (std::none_of(def.properties.begin(), def.properties.end(), [&](const PropertyDecl& p) { return p.name == key; })) {
+                error = "\"initial\": no property \"" + key + "\"";
+                return std::nullopt;
+            }
     // The per-definition cap (world/brick): orientations times every domain.
     {
         std::uint64_t states = static_cast<std::uint64_t>(orient::kRotCount) / orient::symmetry(def.symmetry).subgroup.size();
-        for (const PropertyDecl& p : def.properties) states *= p.values.size();
+        for (const PropertyDecl& p : def.properties) states *= p.domainSize();
         if (states > StateTable::kMaxStatesPerDefinition) {
             error = "has " + std::to_string(states) + " states (orientations times property values); at most " +
                     std::to_string(StateTable::kMaxStatesPerDefinition);

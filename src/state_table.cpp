@@ -44,8 +44,9 @@ std::uint32_t StateTable::addDefinition(Ulid ulid, std::string name, BlockTypeId
         }
     std::uint64_t count = d.orientations.size();
     for (const PropertyDecl& p : d.properties) {
-        FATAL_UNLESS(!p.values.empty(), "a property with no values");
-        count *= p.values.size();
+        FATAL_UNLESS(!p.values.empty() && (!p.mandatory || p.values.size() >= 2), "a property with too few values");
+        FATAL_UNLESS(!p.mandatory || p.initial < p.values.size(), "a mandatory property's initial value is outside its values");
+        count *= p.domainSize();
     }
     FATAL_UNLESS(count <= kMaxStatesPerDefinition, "a block definition with more than 2^10 states");
     d.stateCount = static_cast<std::uint32_t>(count);
@@ -60,7 +61,7 @@ std::uint32_t StateTable::addDefinition(Ulid ulid, std::string name, BlockTypeId
 
 std::uint32_t StateTable::denseIndex(const Definition& d, std::size_t orientationSlot, std::span<const std::uint32_t> values) const {
     std::uint64_t index = orientationSlot;
-    for (std::size_t i = 0; i < d.properties.size(); ++i) index = index * d.properties[i].values.size() + values[i];
+    for (std::size_t i = 0; i < d.properties.size(); ++i) index = index * d.properties[i].domainSize() + values[i];
     return static_cast<std::uint32_t>(index);
 }
 
@@ -69,7 +70,7 @@ std::vector<std::uint32_t> StateTable::values(StateId s) const {
     std::uint32_t dense = rows_[s.value].dense;
     std::vector<std::uint32_t> out(d.properties.size());
     for (std::size_t i = d.properties.size(); i-- > 0;) {
-        const auto n = static_cast<std::uint32_t>(d.properties[i].values.size());
+        const std::uint32_t n = d.properties[i].domainSize();
         out[i] = dense % n;
         dense /= n;
     }
@@ -80,7 +81,7 @@ std::string StateTable::canonicalText(const Definition& d, std::size_t orientati
     std::vector<std::pair<std::string_view, std::string_view>> written;
     if (!d.orientationText[orientationSlot].empty()) written.emplace_back("orientation", d.orientationText[orientationSlot]);
     for (std::size_t i = 0; i < d.properties.size(); ++i)
-        if (values[i] != 0) written.emplace_back(d.properties[i].name, d.properties[i].values[values[i]]);
+        if (d.properties[i].mandatory || values[i] != 0) written.emplace_back(d.properties[i].name, d.properties[i].valueName(values[i]));
     std::sort(written.begin(), written.end());
     std::string text = d.ulid.text();
     if (written.empty()) return text;
@@ -110,7 +111,7 @@ StateId StateTable::internDense(std::uint32_t definition, std::uint32_t dense) {
     std::vector<std::uint32_t> vals(d.properties.size());
     std::uint32_t rest = dense;
     for (std::size_t i = d.properties.size(); i-- > 0;) {
-        const auto n = static_cast<std::uint32_t>(d.properties[i].values.size());
+        const std::uint32_t n = d.properties[i].domainSize();
         vals[i] = rest % n;
         rest /= n;
     }
@@ -144,7 +145,7 @@ StateId StateTable::intern(std::uint32_t definition, orient::Rot orientation, st
     FATAL_UNLESS(definition < definitions_.size(), "intern: no such definition");
     const Definition& d = definitions_[definition];
     FATAL_UNLESS(values.size() == d.properties.size(), "intern: one value per property");
-    for (std::size_t i = 0; i < values.size(); ++i) FATAL_UNLESS(values[i] < d.properties[i].values.size(), "intern: a value outside its domain");
+    for (std::size_t i = 0; i < values.size(); ++i) FATAL_UNLESS(values[i] < d.properties[i].domainSize(), "intern: a value outside its domain");
     const orient::Rot canonical = orient::canonicalize(d.symmetry, orientation);
     const auto slot = static_cast<std::size_t>(std::find(d.orientations.begin(), d.orientations.end(), canonical) - d.orientations.begin());
     return internDense(definition, denseIndex(d, slot, values));
@@ -171,6 +172,7 @@ std::optional<StateId> StateTable::parse(std::string_view text) {
     const Definition& d = definitions_[*def];
     std::size_t slot = 0;
     std::vector<std::uint32_t> vals(d.properties.size(), 0);
+    std::vector<bool> seen(d.properties.size(), false);
     std::string_view rest = text.substr(26);
     if (!rest.empty()) {
         if (rest.size() < 3 || rest.front() != '[' || rest.back() != ']') return std::nullopt;
@@ -191,14 +193,18 @@ std::optional<StateId> StateTable::parse(std::string_view text) {
             } else {
                 const auto p = std::find_if(d.properties.begin(), d.properties.end(), [&](const PropertyDecl& q) { return q.name == name; });
                 if (p == d.properties.end()) return std::nullopt;
-                const auto v = std::find(p->values.begin(), p->values.end(), value);
-                if (v == p->values.end() || v == p->values.begin()) return std::nullopt;  // the default isn't written
-                vals[static_cast<std::size_t>(p - d.properties.begin())] = static_cast<std::uint32_t>(v - p->values.begin());
+                const auto v = p->indexOf(value);
+                if (!v) return std::nullopt;
+                const auto i = static_cast<std::size_t>(p - d.properties.begin());
+                vals[i] = *v;
+                seen[i] = true;
             }
             if (comma == std::string_view::npos) break;
             rest = rest.substr(comma + 1);
         }
     }
+    for (std::size_t i = 0; i < d.properties.size(); ++i)
+        if (d.properties[i].mandatory && !seen[i]) return std::nullopt;  // a mandatory property is always written
     return internDense(*def, denseIndex(d, slot, vals));
 }
 
@@ -209,7 +215,13 @@ std::string StateTable::text(StateId s) const {
     return canonicalText(d, slot, vals);
 }
 
-StateId StateTable::defaultState(std::uint32_t definition) { return internDense(definition, 0); }
+StateId StateTable::defaultState(std::uint32_t definition) {
+    FATAL_UNLESS(definition < definitions_.size(), "defaultState: no such definition");
+    const Definition& d = definitions_[definition];
+    std::vector<std::uint32_t> vals;
+    for (const PropertyDecl& p : d.properties) vals.push_back(p.startIndex());
+    return internDense(definition, denseIndex(d, 0, vals));
+}
 
 StateId StateTable::withOrientation(StateId s, orient::Rot placed) {
     return intern(definitionIndex(s), placed, values(s));
@@ -220,9 +232,18 @@ StateId StateTable::with(StateId s, std::string_view property, std::string_view 
     std::vector<std::uint32_t> vals = values(s);
     const auto p = std::find_if(d.properties.begin(), d.properties.end(), [&](const PropertyDecl& q) { return q.name == property; });
     FATAL_UNLESS(p != d.properties.end(), "with: no such property");
-    const auto v = std::find(p->values.begin(), p->values.end(), value);
-    FATAL_UNLESS(v != p->values.end(), "with: no such value");
-    vals[static_cast<std::size_t>(p - d.properties.begin())] = static_cast<std::uint32_t>(v - p->values.begin());
+    const auto v = p->indexOf(value);
+    FATAL_UNLESS(v.has_value(), "with: no such value");
+    vals[static_cast<std::size_t>(p - d.properties.begin())] = *v;
+    return intern(definitionIndex(s), orientation(s), vals);
+}
+
+StateId StateTable::without(StateId s, std::string_view property) {
+    const Definition& d = definition(s);
+    std::vector<std::uint32_t> vals = values(s);
+    const auto p = std::find_if(d.properties.begin(), d.properties.end(), [&](const PropertyDecl& q) { return q.name == property; });
+    FATAL_UNLESS(p != d.properties.end() && !p->mandatory, "without: no such optional property");
+    vals[static_cast<std::size_t>(p - d.properties.begin())] = 0;
     return intern(definitionIndex(s), orientation(s), vals);
 }
 
@@ -230,7 +251,7 @@ std::string_view StateTable::value(StateId s, std::string_view property) const {
     const Definition& d = definition(s);
     const std::vector<std::uint32_t> vals = values(s);
     for (std::size_t i = 0; i < d.properties.size(); ++i)
-        if (d.properties[i].name == property) return d.properties[i].values[vals[i]];
+        if (d.properties[i].name == property) return d.properties[i].valueName(vals[i]);
     return {};
 }
 

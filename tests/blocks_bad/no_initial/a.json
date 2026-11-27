@@ -1,0 +1,2 @@
+{ "ulid": "01M8F3N34NT0J4AT96PQW8A0G3", "name": "a", "symmetry": "uniform",
+  "properties": { "color": { "values": ["red", "blue"], "mandatory": true } }, "textures": { "+z": "../../../assets/blocks/lamp.png" } }

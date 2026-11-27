@@ -257,6 +257,7 @@ add_executable(sandbox_tests
   tests/test_support.cpp
   tests/tests_coords.cpp
   tests/tests_identity.cpp
+  tests/tests_states.cpp
   tests/tests_chunk.cpp
   tests/tests_digest.cpp
   tests/tests_representation.cpp
@@ -303,7 +304,15 @@ add_test(NAME engine_loads_blocks COMMAND sandbox --check-blocks --blocks ${BLOC
 set(BAD_FIXTURES
   "wrong_keys|do not match the orbit representatives"
   "not16|block textures are 16×16"
-  "wrong_tiles|4 tiles of 16×16")
+  "wrong_tiles|4 tiles of 16×16"
+  "no_ulid|missing \"ulid\""
+  "bad_ulid|is not 26 characters of Crockford base32"
+  "dup_ulid|is also"
+  "air_ulid|is air's"
+  "reserved_property|\"orientation\" is reserved"
+  "bad_domain|a mandatory one at least two"
+  "no_initial|names each mandatory property's starting value"
+  "too_many_states|has 1032 states")
 foreach(entry ${BAD_FIXTURES})
   string(REPLACE "|" ";" parts "${entry}")
   list(GET parts 0 fixture)
@@ -311,6 +320,10 @@ foreach(entry ${BAD_FIXTURES})
   add_test(NAME engine_rejects_${fixture}
     COMMAND ${EXPECT_FAIL} "${why}" $<TARGET_FILE:sandbox> --check-blocks --blocks ${BAD_BLOCKS}/${fixture})
 endforeach()
+# The ULID minting tool: well formed, distinct, monotonic; --add only inserts.
+add_test(NAME mint_ulid
+  COMMAND ${Python3_EXECUTABLE} -I ${CMAKE_CURRENT_SOURCE_DIR}/tests/check_mint_ulid.py
+          ${CMAKE_CURRENT_SOURCE_DIR}/tools/mint_ulid.py ${CMAKE_CURRENT_BINARY_DIR}/test_out/mint_ulid)
 # The texture generator creates its output directory and reproduces the
 # committed assets byte for byte.
 add_test(NAME gen_block_texture
