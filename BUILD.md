@@ -102,13 +102,32 @@ Every mesh-equivalence case is its own `ctest` entry with a timeout, and
 `sandbox_tests --mesh-case=N` runs one. To see where a slow run spends its
 time:
 ```
-perf record -F 500 -o /tmp/perf.data build-release/sandbox_tests --mesh-case=4
-perf report -i /tmp/perf.data --stdio          # flat profile
-tools/sample_stacks.sh -n 20 -- build-debug/sandbox_tests --mesh-case=4   # gdb stack samples
+perf record -F 500 --call-graph fp -o /tmp/perf.data build-release/sandbox_tests --mesh-case=4
+perf report -i /tmp/perf.data --children --stdio      # call graph (every build has frame pointers)
+perf report -i /tmp/perf.data --no-children --stdio   # flat profile
+tools/sample_stacks.sh -n 20 -- build-debug/sandbox_tests --mesh-case=4   # gdb stack samples, no perf needed
 ```
-`perf` needs `kernel.perf_event_paranoid` at 2 or below for flat profiles.
-Every build has frame pointers, so `perf record --call-graph fp` gives call
-graphs, but on this kernel only with `perf_event_paranoid` at 1 or below.
+
+### Setting up `perf` on a machine
+`sudo apt install linux-perf` on Debian. Debian ships
+`kernel.perf_event_paranoid` at 3, which forbids `perf` for normal users.
+Flat profiles need 2 or below; call graphs (`--call-graph fp`) need **1** on
+Debian 13's kernel, even for user-space-only events. 1 lets a user profile
+their own processes, kernel included, but not the whole system; leave it at
+2 or 3 on a shared machine.
+
+Set it now:
+```
+sudo sysctl kernel.perf_event_paranoid=1
+```
+Keep it across reboots (files in `/etc/sysctl.d` are read at boot):
+```
+echo 'kernel.perf_event_paranoid = 1' | sudo tee /etc/sysctl.d/90-perf.conf
+sudo sysctl --system   # applies every file there now, as a reboot would
+```
+Check: `cat /proc/sys/kernel/perf_event_paranoid` prints `1`. To undo,
+delete `/etc/sysctl.d/90-perf.conf` and reboot, or set the value back
+with `sysctl`.
 
 ## Block definitions and ULIDs
 Every block definition has a `"ulid"`, minted once and kept for good

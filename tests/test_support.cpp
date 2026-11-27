@@ -59,7 +59,7 @@ StateId testState(std::uint32_t k) {
         FATAL_UNLESS(type < kAirType, "testState: out of synthetic states");
         PropertyDecl v{"v", {}, /*mandatory=*/true, 0};
         for (std::uint32_t i = 0; i < StateTable::kMaxStatesPerDefinition; ++i) v.values.push_back("v" + std::to_string(i));
-        synthetic.push_back(testStates().addDefinition(Id128::fromParts(0x7E57000000000000ull, n), "synthetic_" + std::to_string(n),
+        synthetic.push_back(testStates().addDefinition(Uid::fromParts(0x7E57000000000000ull, n), "synthetic_" + std::to_string(n),
                                                        static_cast<BlockTypeId>(type), nullptr, orient::Symmetry::Uniform, {v}, false));
     }
     const std::uint32_t value = j % StateTable::kMaxStatesPerDefinition;

@@ -15,36 +15,36 @@
 #include <string>
 #include <string_view>
 
-struct Id128 {
+struct Uid {
     std::array<std::uint8_t, 16> bytes{};  // big-endian: bytes[0] holds the most significant bits
 
-    constexpr auto operator<=>(const Id128&) const = default;
+    constexpr auto operator<=>(const Uid&) const = default;
 
     // Bits 0–63 and 64–127 as numbers.
     std::uint64_t high() const;
     std::uint64_t low() const;
-    static Id128 fromParts(std::uint64_t high, std::uint64_t low);
+    static Uid fromParts(std::uint64_t high, std::uint64_t low);
 
     // 26 characters of Crockford base32.
     std::string text() const;
     // The value of 26 characters of Crockford base32 (either case), or
     // nothing for any other length, a character outside the alphabet (I, L,
     // O and U included) or a first character above 7.
-    static std::optional<Id128> parse(std::string_view text);
+    static std::optional<Uid> parse(std::string_view text);
 };
 
-using Ulid = Id128;       // minted once: a definition, a scarce instance
-using StateHash = Id128;  // derived: a block state's content hash (world/brick)
+using Ulid = Uid;       // minted once: a definition, a scarce instance
+using StateHash = Uid;  // derived: a block state's content hash (world/brick)
 
 // BLAKE3 in derive_key mode (deps/hashing): the first 16 bytes of the key
 // derived from `material` under `context`. A context string names one use and
 // its version, so hashes of different uses or versions never collide.
-Id128 blake3DeriveKey128(std::string_view context, std::string_view material);
+Uid blake3DeriveKey128(std::string_view context, std::string_view material);
 // The full 32-byte output, for checking against BLAKE3's published vectors.
 std::array<std::uint8_t, 32> blake3DeriveKey256(std::string_view context, std::string_view material);
 
 // In-memory hashing for unordered containers (never persisted or compared
 // across processes; deps/toolchain).
-struct Id128Hash {
-    std::size_t operator()(const Id128& id) const { return static_cast<std::size_t>(id.low() ^ (id.high() * 0x9E3779B97F4A7C15ull)); }
+struct UidHash {
+    std::size_t operator()(const Uid& id) const { return static_cast<std::size_t>(id.low() ^ (id.high() * 0x9E3779B97F4A7C15ull)); }
 };

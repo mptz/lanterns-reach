@@ -1098,8 +1098,9 @@ Display-required:
   packed quads drawn without per-vertex buffers.
 
 ## v0.2.4 — Block definitions with ULIDs, and state hashes
-- Status: **BUILT 2026-11-27**; headless criteria 1–9 pass, criterion 10
-  (owner spot-check) pending. Depends on v0.2.3.
+- Status: **CLOSED 2026-11-27.** Criteria 1–10 pass; criterion 10 confirmed
+  by the owner. Properties are optional or mandatory, with no designated
+  defaults (owner, during the build). Depends on v0.2.3.
 - **Claim:** a block state's identity is its definition's ULID and its
   named property values, and nothing the game shows changes when palettes
   hold interned state ids instead of process-local encodings. **Falsifying

@@ -477,7 +477,7 @@ The owner accepted the `greedy` captures (`build-debug/cap-023`), cracks and
 | 10 | Plays unchanged; F3 shows merged quads | ✅ owner (stripes across the floor, large merged surfaces) |
 | 11 | No cracks or sparkles at T-junctions | ✅ owner: not perceptible interactively |
 
-## v0.2.4 (in progress)
+## v0.2.4 (closed 2026-11-27)
 
 ### Dispositions (owner, 2026-11-27)
 The open items listed at the head of v0.2.4 in `versions.md`, each decided.
@@ -496,10 +496,10 @@ The open items listed at the head of v0.2.4 in `versions.md`, each decided.
 | Profiling call graphs | **Done in v0.2.4:** frame pointers in every build, so `perf record --call-graph fp` works. |
 
 ### Choices (built 2026-11-27)
-- **`Id128`** (`id128.h`) is the one 128-bit value type, with the aliases
+- **`Uid`** (`uid.h`) is the one 128-bit value type, with the aliases
   `Ulid` (minted) and `StateHash` (derived). The spec named the type `Ulid`;
   a state hash isn't a ULID (glossary), so the shared type has a neutral
-  name. Crockford text is strict: upper case out, either case in, `I`, `L`,
+  name, `Uid` (owner, 2026-11-27: uniqueness matters more than the width). Crockford text is strict: upper case out, either case in, `I`, `L`,
   `O`, `U`, wrong lengths and a first character above `7` rejected.
 - **BLAKE3 1.8.8**, its portable C files only, built as a static library
   with every SIMD path compiled out (`deps/hashing`); checked against five
@@ -542,9 +542,10 @@ The open items listed at the head of v0.2.4 in `versions.md`, each decided.
   and negative fixture got its ULID from it. `--add` inserts the field
   after the opening brace.
 - **Frame pointers** (`-fno-omit-frame-pointer -mno-omit-leaf-frame-pointer`)
-  in every target. `perf record --call-graph fp` still needs
-  `kernel.perf_event_paranoid` at 1 or below on this kernel; at 2 it refuses
-  even user-only call chains.
+  in every target. `perf record --call-graph fp` needs
+  `kernel.perf_event_paranoid` at 1 or below on this kernel (at 2 it refuses
+  even user-only call chains); the owner set it to 1, and `BUILD.md` says
+  how.
 
 ### Tests
 - **Identifiers** (`tests_identity.cpp`): Crockford text at 0, the maximum,
@@ -591,4 +592,4 @@ The open items listed at the head of v0.2.4 in `versions.md`, each decided.
 | 7 | Pinned digests; equivalence tests with `StateId` | ✅ |
 | 8 | The minting tool | ✅ |
 | 9 | `ChunkData` and `BlockState` gone; raycast and emitters are `Chunk`'s | ✅ |
-| 10 | The v0.1 world plays unchanged | owner spot-check pending |
+| 10 | The v0.1 world plays unchanged | ✅ owner (interactive use) |

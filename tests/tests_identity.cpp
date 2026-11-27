@@ -2,7 +2,7 @@
 // deps/hashing; versions.md v0.2.4 acceptance 3). Registered through
 // sandbox_tests.cpp.
 
-#include "id128.h"
+#include "uid.h"
 #include "test_support.h"
 
 namespace {
@@ -18,31 +18,31 @@ std::string hex(const std::uint8_t* p, std::size_t n) {
 }
 
 void testText() {
-    const Id128 zero{};
+    const Uid zero{};
     CHECK(zero.text() == "00000000000000000000000000");
-    const Id128 max = Id128::fromParts(~std::uint64_t{0}, ~std::uint64_t{0});
+    const Uid max = Uid::fromParts(~std::uint64_t{0}, ~std::uint64_t{0});
     CHECK(max.text() == "7ZZZZZZZZZZZZZZZZZZZZZZZZZ");
-    CHECK(Id128::parse(zero.text()) == zero && Id128::parse(max.text()) == max);
+    CHECK(Uid::parse(zero.text()) == zero && Uid::parse(max.text()) == max);
     // A pinned value: 1 in the lowest bit, and a value spanning both halves.
-    CHECK(Id128::fromParts(0, 1).text() == "00000000000000000000000001");
-    CHECK(Id128::fromParts(1, 0).text() == "0000000000000G000000000000");
+    CHECK(Uid::fromParts(0, 1).text() == "00000000000000000000000001");
+    CHECK(Uid::fromParts(1, 0).text() == "0000000000000G000000000000");
     std::mt19937_64 rng(17);
     bool ok = true;
     for (int i = 0; i < 2000; ++i) {
-        const Id128 v = Id128::fromParts(rng(), rng());
+        const Uid v = Uid::fromParts(rng(), rng());
         const std::string t = v.text();
-        ok = ok && t.size() == 26 && t[0] <= '7' && Id128::parse(t) == v && v.high() == Id128::parse(t)->high();
+        ok = ok && t.size() == 26 && t[0] <= '7' && Uid::parse(t) == v && v.high() == Uid::parse(t)->high();
         std::string lower = t;
         for (char& c : lower) c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
-        ok = ok && Id128::parse(lower) == v;  // case-insensitive on input
+        ok = ok && Uid::parse(lower) == v;  // case-insensitive on input
     }
     CHECK(ok);
     // Rejected: I, L, O, U (either case), other characters, wrong lengths, a first character above 7.
     for (const char* bad : {"0000000000000000000000000I", "0000000000000000000000000l", "0000000000000000000000000O",
                             "0000000000000000000000000u", "000000000000000000000000-0", "0000000000000000000000000",
                             "000000000000000000000000000", "80000000000000000000000000", "Z0000000000000000000000000", ""})
-        CHECK(!Id128::parse(bad).has_value());
-    CHECK(Id128::parse("7ZZZZZZZZZZZZZZZZZZZZZZZZZ").has_value());
+        CHECK(!Uid::parse(bad).has_value());
+    CHECK(Uid::parse("7ZZZZZZZZZZZZZZZZZZZZZZZZZ").has_value());
 }
 
 // BLAKE3's published derive_key vectors (test_vectors/test_vectors.json at the
@@ -62,7 +62,7 @@ void testBlake3Vectors() {
         for (std::size_t i = 0; i < v.length; ++i) input[i] = static_cast<char>(i % 251);
         const auto out = blake3DeriveKey256(context, input);
         CHECK(hex(out.data(), out.size()) == v.derived);
-        const Id128 truncated = blake3DeriveKey128(context, input);
+        const Uid truncated = blake3DeriveKey128(context, input);
         CHECK(hex(truncated.bytes.data(), 16) == std::string(v.derived).substr(0, 32));
     }
     // Another context, another key.

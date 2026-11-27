@@ -224,7 +224,7 @@ void testFatalChecks() {
     CHECK(fires([&] { addFixture(t, {}); }));  // the same ULID twice
     std::vector<std::string> many;
     for (int i = 0; i < 42; ++i) many.push_back("v" + std::to_string(i));
-    CHECK(fires([&] { t.addDefinition(Id128::fromParts(1, 2), "big", 0, nullptr, Symmetry::Oriented, {optionalEnum("v", many)}, false); }));  // 24 × 43 > 2¹⁰
+    CHECK(fires([&] { t.addDefinition(Uid::fromParts(1, 2), "big", 0, nullptr, Symmetry::Oriented, {optionalEnum("v", many)}, false); }));  // 24 × 43 > 2¹⁰
     const std::uint32_t outOfDomain[3] = {2, 0, 0};
     CHECK(fires([&] { t.intern(def, kIdentity, outOfDomain); }));
     CHECK(fires([&] { t.without(t.defaultState(def), "color"); }));  // mandatory

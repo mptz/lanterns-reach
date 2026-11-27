@@ -1,4 +1,4 @@
-#include "id128.h"
+#include "uid.h"
 
 #include <blake3.h>
 
@@ -16,27 +16,27 @@ int digitValue(char c) {
 
 }  // namespace
 
-std::uint64_t Id128::high() const {
+std::uint64_t Uid::high() const {
     std::uint64_t v = 0;
     for (int i = 0; i < 8; ++i) v = (v << 8) | bytes[static_cast<std::size_t>(i)];
     return v;
 }
 
-std::uint64_t Id128::low() const {
+std::uint64_t Uid::low() const {
     std::uint64_t v = 0;
     for (int i = 8; i < 16; ++i) v = (v << 8) | bytes[static_cast<std::size_t>(i)];
     return v;
 }
 
-Id128 Id128::fromParts(std::uint64_t high, std::uint64_t low) {
-    Id128 id;
+Uid Uid::fromParts(std::uint64_t high, std::uint64_t low) {
+    Uid id;
     for (int i = 7; i >= 0; --i, high >>= 8) id.bytes[static_cast<std::size_t>(i)] = static_cast<std::uint8_t>(high);
     for (int i = 15; i >= 8; --i, low >>= 8) id.bytes[static_cast<std::size_t>(i)] = static_cast<std::uint8_t>(low);
     return id;
 }
 
 // 128 bits as 26 digits of 5 bits: the first digit holds the top 3 bits.
-std::string Id128::text() const {
+std::string Uid::text() const {
     std::string out(26, '0');
     const unsigned __int128 v = (static_cast<unsigned __int128>(high()) << 64) | low();
     for (int i = 25; i >= 0; --i)
@@ -44,7 +44,7 @@ std::string Id128::text() const {
     return out;
 }
 
-std::optional<Id128> Id128::parse(std::string_view text) {
+std::optional<Uid> Uid::parse(std::string_view text) {
     if (text.size() != 26) return std::nullopt;
     unsigned __int128 v = 0;
     for (std::size_t i = 0; i < 26; ++i) {
@@ -64,9 +64,9 @@ std::array<std::uint8_t, 32> blake3DeriveKey256(std::string_view context, std::s
     return out;
 }
 
-Id128 blake3DeriveKey128(std::string_view context, std::string_view material) {
+Uid blake3DeriveKey128(std::string_view context, std::string_view material) {
     const auto full = blake3DeriveKey256(context, material);
-    Id128 id;
+    Uid id;
     for (std::size_t i = 0; i < 16; ++i) id.bytes[i] = full[i];
     return id;
 }

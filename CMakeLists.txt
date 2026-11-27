@@ -7,7 +7,7 @@ if(NOT DEFINED CMAKE_CXX_COMPILER AND NOT DEFINED ENV{CXX})
 endif()
 # The one version label: the window title and Vulkan app name come from
 # PROJECT_VERSION (SANDBOX_VERSION below).
-project(sandbox VERSION 0.2.3 LANGUAGES C CXX)
+project(sandbox VERSION 0.2.4 LANGUAGES C CXX)
 
 # The sandbox (versions.md): the engine, its CPU-only core and the tests.
 # Compiling needs no display; running needs a GPU + window system.
@@ -187,7 +187,7 @@ add_library(sandbox_core STATIC
   src/cube.cpp
   src/chunk.cpp
   src/state_table.cpp
-  src/id128.cpp
+  src/uid.cpp
   src/bitmask_mesh.cpp
   src/chunk_mesh.cpp
   src/chunk_world.cpp

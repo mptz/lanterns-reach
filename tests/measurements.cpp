@@ -397,7 +397,7 @@ void timeStates() {
         constexpr std::uint32_t kDefs = 64;
         std::vector<std::uint32_t> ids;
         for (std::uint32_t d = 0; d < kDefs; ++d)
-            ids.push_back(t.addDefinition(Id128::fromParts(0xBE7C000000000000ull, d), "m" + std::to_string(d), 0, nullptr,
+            ids.push_back(t.addDefinition(Uid::fromParts(0xBE7C000000000000ull, d), "m" + std::to_string(d), 0, nullptr,
                                           orient::Symmetry::Uniform, {v}, false));
         const auto t0 = Clock::now();
         for (std::uint32_t d : ids)

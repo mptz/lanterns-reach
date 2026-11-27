@@ -28,7 +28,7 @@
 #include <vector>
 
 #include "appearance.h"
-#include "id128.h"
+#include "uid.h"
 #include "orientation.h"
 
 struct BlockDef;
@@ -172,8 +172,8 @@ private:
 
     std::vector<Definition> definitions_;
     std::vector<Row> rows_;
-    std::unordered_map<StateHash, StateId, Id128Hash> byHash_;
-    std::unordered_map<Ulid, std::uint32_t, Id128Hash> byUlid_;
+    std::unordered_map<StateHash, StateId, UidHash> byHash_;
+    std::unordered_map<Ulid, std::uint32_t, UidHash> byUlid_;
     std::vector<FacePayload> payloads_;
     std::map<FacePayload, std::uint32_t> payloadIds_;
     std::uint64_t interned_ = 0;
