@@ -612,7 +612,8 @@ Display-required:
   per-chunk meshing cost, an open question in `sim/concurrency-model`.
 
 ## v0.2.2 — Uniform, palette widths and the digest
-- Status: SPECIFIED 2026-11-13, not started. Depends on v0.2.1.
+- Status: **BUILT 2026-11-26**; headless criteria 1–5 pass, criterion 6
+  (owner spot-check) pending. Depends on v0.2.1.
 - **Claim:** a chunk's representation and palette width are invisible:
   the same content, stored uniform or as a palette at any width, answers
   every probe and raycast, digests and meshes identically, through any
@@ -622,12 +623,12 @@ Display-required:
   shrinking), `world/chunk-representation`, `data/content-digest`,
   `world/chunk-meshing` (rep-swap invariance), `core/opaque-chunk-queries`.
 - **Prior work:** prototypes of the Brick, the digest and the reverse
-  lookup, with tests and benchmarks, at tag
-  `archive/2026-11-14-brick-research` (`proposals/prototypes/`; read it
-  with `git show` or a worktree). Its `NOTES.md` lists what is worth
+  lookup, with tests and benchmarks, in `prototypes/` (standalone, built
+  from `prototypes/CMakeLists.txt`). Its `NOTES.md` lists what is worth
   reusing (the randomised equivalence test, the digest, the reverse-lookup
-  candidates, the benchmarks) and where `brick.hpp` differs from the spec;
-  the spec wins.
+  candidates, the benchmarks) and where `brick/brick.hpp` differs from the
+  spec; the spec wins. `prototypes/brick-research.md` has the research and
+  its measurements.
 
 ### Scope
 - **The representation pointer:** chunk data holds one pointer to its

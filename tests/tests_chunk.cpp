@@ -40,17 +40,17 @@ void testChunkAddressing() {
 // its entry, a new state appends one.
 void testChunkDataPalette() {
     ChunkData d;
-    CHECK(d.paletteSize() == 1 && d.get({0, 0, 0}).isAir() && d.get({63, 63, 63}).isAir());
+    CHECK(ChunkTestAccess::paletteSize(d) == 1 && d.get({0, 0, 0}).isAir() && d.get({63, 63, 63}).isAir());
     const BlockState stone = solidState();
-    CHECK(d.set({1, 2, 3}, stone) && d.paletteSize() == 2);
+    CHECK(d.set({1, 2, 3}, stone) && ChunkTestAccess::paletteSize(d) == 2);
     CHECK(d.get({1, 2, 3}) == stone && d.get({3, 2, 1}).isAir());  // x, y, z not mixed up
     CHECK(!d.set({1, 2, 3}, stone));                                // no change
-    CHECK(d.set({4, 5, 6}, stone) && d.paletteSize() == 2);         // reused
-    CHECK(d.set({1, 2, 3}, BlockState::air()) && d.paletteSize() == 2);  // air is entry 0
+    CHECK(d.set({4, 5, 6}, stone) && ChunkTestAccess::paletteSize(d) == 2);         // reused
+    CHECK(d.set({1, 2, 3}, BlockState::air()) && ChunkTestAccess::paletteSize(d) == 2);  // air is entry 0
     const BlockState rotated{typeOf("furnace"), orient::kIdentity};
-    CHECK(d.set({0, 0, 0}, rotated) && d.paletteSize() == 3);       // appended
-    CHECK(d.set({9, 9, 9}, rotated) && d.paletteSize() == 3);
-    CHECK(d.set({9, 9, 9}, stone) && d.paletteSize() == 3);
+    CHECK(d.set({0, 0, 0}, rotated) && ChunkTestAccess::paletteSize(d) == 3);       // appended
+    CHECK(d.set({9, 9, 9}, rotated) && ChunkTestAccess::paletteSize(d) == 3);
+    CHECK(d.set({9, 9, 9}, stone) && ChunkTestAccess::paletteSize(d) == 3);
     // A copy is independent (it owns its own Brick).
     ChunkData copy = d;
     CHECK(copy.set({20, 20, 20}, stone) && d.get({20, 20, 20}).isAir() && copy.get({4, 5, 6}) == stone);
@@ -76,7 +76,7 @@ void testChunkBoundary() {
         CHECK(w.probe(c) == solidState());
     }
     for (const CellPos& c : inside) CHECK(w.probe(c) == solidState());  // no edit disturbed another
-    CHECK(w.paletteSize() == 2);
+    CHECK(ChunkTestAccess::paletteSize(ChunkWorldTestAccess::chunk(w)) == 2);
 
     // Just outside, on every face: air, not editable, rejected, nothing changes.
     const std::uint64_t gen = w.generation();
@@ -96,7 +96,7 @@ void testChunkBoundary() {
     CHECK(!w.editable({1'000'000'000, -1'000'000'000, 5}));
     // Removing everything again reuses air (entry 0); the palette doesn't grow.
     for (const CellPos& c : inside) CHECK(w.apply({{{c, BlockState::air()}}}).changed == 1);
-    CHECK(w.paletteSize() == 2);
+    CHECK(ChunkTestAccess::paletteSize(ChunkWorldTestAccess::chunk(w)) == 2);
 }
 
 // The world's mesh covers the whole chunk and nothing outside it: a block on

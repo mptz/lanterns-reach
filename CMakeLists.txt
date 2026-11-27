@@ -167,6 +167,7 @@ add_library(sandbox_core STATIC
   src/blocks.cpp
   src/cube.cpp
   src/chunk.cpp
+  src/chunk_mesh.cpp
   src/chunk_world.cpp
   src/placement.cpp
   src/hands.cpp
@@ -234,6 +235,9 @@ add_executable(sandbox_tests
   tests/test_support.cpp
   tests/tests_coords.cpp
   tests/tests_chunk.cpp
+  tests/tests_digest.cpp
+  tests/tests_representation.cpp
+  tests/tests_equivalence.cpp
   tests/tests_orientation.cpp
   tests/tests_blocks.cpp
   tests/tests_shading.cpp

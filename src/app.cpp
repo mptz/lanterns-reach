@@ -88,7 +88,7 @@ int run(const RunOptions& opt, const Scenario& sc, bool validation, const BlockR
         ChunkWorld chunkWorld(registry);  // generator "empty": all air; the scene goes on top
         {
             std::vector<std::string> warnings;
-            chunkWorld.apply(sceneEdits(sc, registry, &warnings));
+            chunkWorld.applyBulk(sceneEdits(sc, registry, &warnings));
             for (const std::string& w : warnings) std::fprintf(stderr, "[sandbox] warning: %s\n", w.c_str());
         }
         WorldQuery& world = chunkWorld;  // everything below goes through the seam

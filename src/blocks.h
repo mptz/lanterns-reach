@@ -79,6 +79,13 @@ struct BlockState {
     bool operator==(const BlockState&) const = default;
 };
 
+// The state's canonical 64-bit encoding: what the content digest and the
+// reverse lookup hash (data/content-digest). Process-scoped (the registry
+// index), until state hashes arrive in v0.2.4.
+inline std::uint64_t canonicalEncoding(const BlockState& s) {
+    return (std::uint64_t{s.type} << 8) | s.orientation;
+}
+
 inline constexpr std::uint32_t kTextureSize = 16;  // texels per block face edge (render/block-textures)
 inline constexpr std::uint32_t kSetColumns = 4;    // tiles per atlas row
 inline constexpr std::uint32_t kMaxRandomTiles = 32;  // MeshVertex::texInfo carries count − 1 in 5 bits

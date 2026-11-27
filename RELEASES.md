@@ -180,3 +180,127 @@ Clang 19 Release, this headless authoring machine; the reference machines
 | 3 | Unit tests: floor division/local indices, face and corner probes and edits, outside rejected, palette reuse and append | ✅ |
 | 4 | `DenseGrid` gone; `world.grid` rejected naming `world.generator` | ✅ |
 | 5 | The v0.1 world plays unchanged | ✅ owner (interactive use, 2026-11-26) |
+
+## v0.2.2 (built 2026-11-26; owner spot-check pending)
+
+Uniform, palette widths 1–32 bits, growth, compaction and the content digest,
+behind the chunk's interface. The prototypes (`prototypes/brick/`) were the
+starting point; the spec won where they differ (their `NOTES.md` lists where).
+
+### Choices
+- **Files:** `brick.h` (rewritten: abstract `Brick<E>` with `UniformBrick`
+  and `PaletteBrickAt<E, B>`, one instantiation per width; a palette Brick
+  is built, never resized, and `widened()` returns the next-width Brick),
+  `reverse_lookup.h` (the owner's lookup), `digest.h`, `fatal.h`
+  (always-on fatal checks with a throwing test handler), `chunk_mesh.h/.cpp`
+  (the per-cell mesher, moved out of `ChunkWorld` and run over any
+  `ChunkData`), `chunk.h/.cpp` (`ChunkData`: the representation pointer, the
+  reverse lookup, the lazy digest).
+- **The representation pointer is the Brick pointer** `ChunkData` already
+  held. A change builds the new Brick from the old, swaps the pointer and
+  frees the old one directly. Reads go through one virtual call per cell
+  (the mesher and raycasts), which cost the per-cell mesh 13–42% (below);
+  v0.2.3's bitmask meshing doesn't read cell by cell.
+- **Growth is the fallback only:** a full palette is replaced by one at the
+  next width when an edit needs a new entry. There is no high-water mark and
+  no discretionary compaction (chunk actors, v0.2.23). At 32 bits the
+  capacity is 2¹⁹ when built (a placeholder: room for every cell distinct
+  plus dead entries) and doubles when full.
+- **Compaction** (bulk fills and the test API) picks uniform if one state
+  is live, else the narrowest width with live entries at most 7/8 of
+  capacity, so two live states take 2 bits, not 1 (width 1 comes from
+  promotion, or is forced). The v0.1 scene's 20 states take 8 bits.
+- **A bulk fill** is `ChunkWorld::applyBulk`: the edits through the normal
+  path, then compaction, ending where a fill from scratch would. The
+  `empty` generator is a uniform air chunk. `app.cpp` applies the scenario's
+  scene with it.
+- **The reverse lookup** is a scalar scan up to 32 entries, then a table
+  sized to the palette's capacity (so 512 KiB at 16 bits, 4 MiB at 32),
+  built lazily and dropped on any swap or compaction (rebuilt from the
+  palette, O(entries)). The prototypes' SIMD scan needs 4-byte entries with
+  no padding, which `BlockState` doesn't promise; not done.
+- **The digest:** `H(s)` hashes `type << 8 | orientation` (the stand-in
+  until v0.2.4), through a domain-separated SplitMix64 finaliser reduced
+  mod p; `W` and the arithmetic are as `data/content-digest` defines them.
+  Lazy per chunk, maintained per edit, kept across any change of
+  representation. `K` is computed once per process on first use (0.7 ms).
+- **Test-only APIs:** `ChunkTestAccess` (`chunk.h`: representation, width,
+  palette size and capacity, live entries, force a width, compact, drop the
+  digest, whether the table is built, growth count, bytes) and
+  `ChunkWorldTestAccess` (the world's `ChunkData`). `ChunkWorld::paletteSize`
+  is gone. `gReverseScanMax` can be changed by measurements only.
+
+### Tests
+- **Digest** (`tests_digest.cpp`): modular arithmetic at the edges and
+  against 128-bit division; all 2¹⁸ weights nonzero and on coordinates; `K`;
+  `mix64(0)` pinned; uniform digest `H(s)·K` in every width; incremental
+  equals recomputation after 20,000 random edits; any width or compaction
+  leaves it unchanged.
+- **Representations** (`tests_representation.cpp`): promotion; growth at
+  every boundary 1→2→4→8→16→32; a full palette with a dead entry grows; a
+  dead entry is reused; no edit compacts; the low-water width rule; bulk
+  fill (the v0.1 scene, uniform, two states); uniform air and solid meshes;
+  the reverse lookup either side of its threshold; a 32-bit palette past
+  2¹⁸ entries and its doubling; the fatal checks.
+- **Randomized equivalence** (`tests_equivalence.cpp`): per seed, copies by
+  bulk fill, by single edits from uniform air, with a lazy digest, and
+  forced to every width that holds the content, against a plain-array
+  oracle: probes after every edit, and at checkpoints the corners, a
+  random 4096 cells (every cell at the last one), 24 raycasts (an
+  independent DDA), the digest, and the per-cell mesh as a sorted quad list
+  (bulk fill against the widest copy, every fourth checkpoint). Phases:
+  random edits, growth across width boundaries, a full palette with a dead
+  entry, explicit compactions, a bulk fill of new content, collapse to one
+  state and compaction to uniform, promotion again. Six fixed seeds run in
+  `ctest` (about 3 s Release, 25 s Debug); `sandbox_tests --long` adds 24
+  seeds of 20,000 edits (16 s Release).
+- **Mutation checks** (by hand, each caught): skipping the incremental
+  digest, dropping the last cell when widening, off-by-one renumbering in
+  compaction, the lookup missing an entry, a wrong low-water rule.
+
+### Measurements (this machine, Release, Clang 19)
+`build-release/sandbox_tests --time-chunk`; runs vary by about ±30%.
+Only one reference machine was measured (the owner did not gate the release
+on the second).
+
+| Per-edit cost, ns | scan (≤ 32) | table (> 32) |
+|---|---|---|
+| 1 bit (2 entries) | 22 | |
+| 2 bits (4) | 29 | |
+| 4 bits (16) | 42 | |
+| 8 bits | 47 (32) | 24 (33), 32 (200) |
+| 16 bits | 43 (32) | 30 (33), 20 (200), 23 (5000), 77 (65000) |
+| 32 bits | 70 (32) | 21 (200), 25 (5000), 59 (70000) |
+
+- **Scan against table** (width 8): the table is as fast or faster at every
+  size from 2 entries up (scan 17 → 41 ns across 2 → 64 entries, table about
+  16 ns). With the scalar scan the threshold only decides when to pay for the
+  table's build and memory, not speed. 32 stays (the spec's placeholder);
+  a SIMD scan, or a smaller table, would change that. Worth revisiting
+  with the second machine.
+- **Growth** (the one repacking edit): 0.48 ms at 1→2, 2→4, 4→8 and 8→16
+  bits; 1.2 ms for 16→32 (65,536 entries).
+- **Explicit compaction:** 0.6–1.4 ms (up to 1.4 ms at 70,000 entries).
+- **Full digest:** 1.2 ms for a palette chunk. The weights alone cost 0.69 ms
+  computed and 0.29 ms from a precomputed 2 MiB table: the table would save
+  about 0.4 ms of the 1.2 per full pass, which happens once per chunk
+  lifetime; not worth 2 MiB, not adopted. A uniform digest is O(1) after `K`.
+- **Memory** (indices + palette + table, KiB): 32 (1 bit), 64 (2), 128 (4),
+  256 (8, up to 32 entries; 259 at 256 entries), 1,026 (16 bits, 300
+  entries: the table is sized to the 65,536 capacity, so 512 of it is the
+  table), 1,280 (16 bits, full), 5,632 (32 bits, 70,000 entries, of which
+  the table is 4,096). Uniform: 4 bytes. The 16-bit table is the cost to
+  reconsider if many chunks sit at 16 bits.
+- **The v0.1 scene chunk:** width 8, palette 20, live 20.
+- **Per-cell meshing** is slower through the virtual `at`: 23.8 ms solid,
+  151 ms checkerboard, 2.0 ms for the v0.1 scene (v0.2.1: 18, 134, 1.4).
+
+### Acceptance status (v0.2.2)
+| # | Criterion | Status |
+|---|---|---|
+| 1 | Build + ctest, Debug and Release, Clang, `-Werror`, zero warnings | ✅ (Debug 8 tests, 26 s; Release 7, 4 s) |
+| 2 | Every v0.2.1 capture identical; absorbance | ✅ (65 runs pass; the same five differ only in live F1/F7 text) |
+| 3 | Equivalence test in `ctest` for fixed seeds; a longer run once | ✅ (`--long`: 24 more seeds, passes) |
+| 4 | Digest unit tests | ✅ |
+| 5 | Representation unit tests | ✅ |
+| 6 | The v0.1 world plays unchanged | owner spot-check pending |

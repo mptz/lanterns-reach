@@ -22,22 +22,28 @@ public:
     BlockState probe(const CellPos& cell) const override;
     bool editable(const CellPos& cell) const override { return contains(cell); }
     ApplyResult apply(const EditSet& edits) override;
+    // Setup only: `apply`, then ends a bulk fill (chunk.h finishBulkFill), so
+    // the chunk is uniform or a palette at the narrowest width.
+    ApplyResult applyBulk(const EditSet& edits);
     std::vector<ChunkId> dirtyChunks() const override;
     WorldMesh buildMesh(const ChunkId& chunk) override;
     std::vector<Emitter> emitters() const override;
     std::uint64_t generation() const override { return generation_; }
 
-    // The palette size of the (only) chunk, for tests.
-    std::size_t paletteSize() const { return chunk_.paletteSize(); }
-
     static constexpr ChunkId kChunk{};  // the world: dimension 0, chunk (0,0,0)
 
 private:
+    friend struct ChunkWorldTestAccess;
     bool contains(const CellPos& c) const;
-    std::uint32_t frameBits(const CellPos& c, BlockTypeId type, glm::ivec3 n) const;
 
     const BlockRegistry& registry_;
     ChunkData chunk_;
     std::uint64_t generation_ = 0;
     std::optional<std::uint64_t> meshedGeneration_;  // the generation buildMesh last meshed
+};
+
+// Test-only access to the world's chunk data.
+struct ChunkWorldTestAccess {
+    static ChunkData& chunk(ChunkWorld& w) { return w.chunk_; }
+    static const ChunkData& chunk(const ChunkWorld& w) { return w.chunk_; }
 };
