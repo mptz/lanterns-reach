@@ -181,7 +181,7 @@ Clang 19 Release, this headless authoring machine; the reference machines
 | 4 | `DenseGrid` gone; `world.grid` rejected naming `world.generator` | ✅ |
 | 5 | The v0.1 world plays unchanged | ✅ owner (interactive use, 2026-11-26) |
 
-## v0.2.2 (built 2026-11-26; owner spot-check pending)
+## v0.2.2 (closed 2026-11-26)
 
 Uniform, palette widths 1–32 bits, growth, compaction and the content digest,
 behind the chunk's interface. The prototypes (`prototypes/brick/`) were the
@@ -201,11 +201,20 @@ starting point; the spec won where they differ (their `NOTES.md` lists where).
   frees the old one directly. Reads go through one virtual call per cell
   (the mesher and raycasts), which cost the per-cell mesh 13–42% (below);
   v0.2.3's bitmask meshing doesn't read cell by cell.
-- **Growth is the fallback only:** a full palette is replaced by one at the
-  next width when an edit needs a new entry. There is no high-water mark and
-  no discretionary compaction (chunk actors, v0.2.23). At 32 bits the
-  capacity is 2¹⁹ when built (a placeholder: room for every cell distinct
-  plus dead entries) and doubles when full.
+- **Palette capacity is independent of the index width** (owner,
+  2026-11-26; first built as capacity = the width's range, which sized the
+  reverse table at 512 KiB for any 16-bit chunk). A palette is one array
+  allocated at its capacity and never a vector: the capacity is the next
+  power of two at or above its entries, at least 16 (a placeholder), at
+  most what the width can name (2ʷ). A full palette is replaced by a new
+  Brick with twice the capacity at the same width, or, once the capacity
+  equals the width's range, at the next width; the old Brick is retired
+  (here freed at the swap) and is never written after it. So the 1-, 2- and
+  4-bit widths hold 2, 4 and 16 entries and never double, and an 8-bit
+  palette swaps at 32, 64 and 128 entries before widening at 256.
+- **Growth is the fallback only:** it happens when an edit needs a new
+  entry and the palette is full. There is no high-water mark and no
+  discretionary compaction (chunk actors, v0.2.23).
 - **Compaction** (bulk fills and the test API) picks uniform if one state
   is live, else the narrowest width with live entries at most 7/8 of
   capacity, so two live states take 2 bits, not 1 (width 1 comes from
@@ -214,11 +223,12 @@ starting point; the spec won where they differ (their `NOTES.md` lists where).
   path, then compaction, ending where a fill from scratch would. The
   `empty` generator is a uniform air chunk. `app.cpp` applies the scenario's
   scene with it.
-- **The reverse lookup** is a scalar scan up to 32 entries, then a table
-  sized to the palette's capacity (so 512 KiB at 16 bits, 4 MiB at 32),
+- **The reverse lookup** is a scalar scan up to 8 entries, then a table
+  sized to the palette's capacity (at most about twice its entries),
   built lazily and dropped on any swap or compaction (rebuilt from the
-  palette, O(entries)). The prototypes' SIMD scan needs 4-byte entries with
-  no padding, which `BlockState` doesn't promise; not done.
+  palette, O(entries)). The prototypes' SIMD scan (threshold 32) needs
+  4-byte entries with no padding, which `BlockState` doesn't promise; not
+  done. The owner agreed to the scalar scan and to revisit it.
 - **The digest:** `H(s)` hashes `type << 8 | orientation` (the stand-in
   until v0.2.4), through a domain-separated SplitMix64 finaliser reduced
   mod p; `W` and the arithmetic are as `data/content-digest` defines them.
@@ -237,11 +247,14 @@ starting point; the spec won where they differ (their `NOTES.md` lists where).
   equals recomputation after 20,000 random edits; any width or compaction
   leaves it unchanged.
 - **Representations** (`tests_representation.cpp`): promotion; growth at
-  every boundary 1→2→4→8→16→32; a full palette with a dead entry grows; a
-  dead entry is reused; no edit compacts; the low-water width rule; bulk
+  every width boundary 1→2→4→8→16→32; capacity doubling within a width,
+  32 → 64 → 128 → 256, then widening; the palette array never moves and the
+  retired Brick stays intact; a full palette with a dead entry grows; a
+  dead entry is reused; no edit compacts; the low-water width rule and the
+  build capacity; bulk
   fill (the v0.1 scene, uniform, two states); uniform air and solid meshes;
   the reverse lookup either side of its threshold; a 32-bit palette past
-  2¹⁸ entries and its doubling; the fatal checks.
+  2¹⁸ entries by sixteen doublings from 16; the fatal checks.
 - **Randomized equivalence** (`tests_equivalence.cpp`): per seed, copies by
   bulk fill, by single edits from uniform air, with a lazy digest, and
   forced to every width that holds the content, against a plain-array
@@ -263,35 +276,38 @@ starting point; the spec won where they differ (their `NOTES.md` lists where).
 Only one reference machine was measured (the owner did not gate the release
 on the second).
 
-| Per-edit cost, ns | scan (≤ 32) | table (> 32) |
+| Per-edit cost, ns (random cell, random existing state) | lookup | ns |
 |---|---|---|
-| 1 bit (2 entries) | 22 | |
-| 2 bits (4) | 29 | |
-| 4 bits (16) | 42 | |
-| 8 bits | 47 (32) | 24 (33), 32 (200) |
-| 16 bits | 43 (32) | 30 (33), 20 (200), 23 (5000), 77 (65000) |
-| 32 bits | 70 (32) | 21 (200), 25 (5000), 59 (70000) |
+| 1 bit, 2 entries | scan | 16 |
+| 2 bits, 4 entries | scan | 19 |
+| 4 bits, 16 entries | table | 19 |
+| 8 bits, 32 / 33 / 200 entries | table | 19 / 17 / 20 |
+| 16 bits, 32 / 200 / 5000 / 65000 entries | table | 20 / 19 / 23 / 42 |
+| 32 bits, 32 / 200 / 5000 / 70000 entries | table | 22 / 20 / 20 / 43 |
 
-- **Scan against table** (width 8): the table is as fast or faster at every
-  size from 2 entries up (scan 17 → 41 ns across 2 → 64 entries, table about
-  16 ns). With the scalar scan the threshold only decides when to pay for the
-  table's build and memory, not speed. 32 stays (the spec's placeholder);
-  a SIMD scan, or a smaller table, would change that. Worth revisiting
-  with the second machine.
-- **Growth** (the one repacking edit): 0.48 ms at 1→2, 2→4, 4→8 and 8→16
-  bits; 1.2 ms for 16→32 (65,536 entries).
-- **Explicit compaction:** 0.6–1.4 ms (up to 1.4 ms at 70,000 entries).
+- **Scan against table** (width 8, table sized to capacity): the scan is 19
+  ns at 2 entries, 22 at 8, 26 at 16, 54 at 32 and 79 at 64; the table is
+  18–20 ns throughout. The scalar scan's crossover is 2–8 entries, so the
+  threshold is 8 (it was 32 with the prototypes' SIMD scan).
+- **Growth to the next width** (a repacking edit): about 0.5–0.65 ms up to
+  16 bits, 1.1 ms for 16→32 (65,536 entries).
+- **Capacity doubling within a width** (a copy of the indices and palette):
+  0.013 ms at 8 bits (32→64), 0.055 ms (128→256), 0.04 ms at 16 bits
+  (1,024→2,048), 0.32 ms (32,768→65,536), 1.9 ms at 32 bits
+  (131,072→262,144).
+- **Explicit compaction:** 0.6–1.0 ms.
 - **Full digest:** 1.2 ms for a palette chunk. The weights alone cost 0.69 ms
-  computed and 0.29 ms from a precomputed 2 MiB table: the table would save
+  computed and 0.30 ms from a precomputed 2 MiB table: the table would save
   about 0.4 ms of the 1.2 per full pass, which happens once per chunk
-  lifetime; not worth 2 MiB, not adopted. A uniform digest is O(1) after `K`.
-- **Memory** (indices + palette + table, KiB): 32 (1 bit), 64 (2), 128 (4),
-  256 (8, up to 32 entries; 259 at 256 entries), 1,026 (16 bits, 300
-  entries: the table is sized to the 65,536 capacity, so 512 of it is the
-  table), 1,280 (16 bits, full), 5,632 (32 bits, 70,000 entries, of which
-  the table is 4,096). Uniform: 4 bytes. The 16-bit table is the cost to
-  reconsider if many chunks sit at 16 bits.
-- **The v0.1 scene chunk:** width 8, palette 20, live 20.
+  lifetime; not worth 2 MiB, not adopted. A uniform digest is O(1) after `K`
+  (computed once per process, 0.7 ms).
+- **Memory** (indices + palette array + reverse table, KiB): 32 (1 bit),
+  64 (2), 128 (4), 256 (8 bits, 32 entries: 256.4; 256 entries: 259),
+  518 (16 bits, 300 entries: 512 + 2 + 4), 1,280 (16 bits, full: 512 + 256 +
+  512), 2,560 (32 bits, 70,000 entries: 1,024 + 512 + 1,024). Uniform: 4
+  bytes. (The first build sized the table to the width's range: 1,026 KiB
+  for the 300-entry 16-bit chunk, 5,632 for the 70,000-entry 32-bit one.)
+- **The v0.1 scene chunk:** width 8, palette 20, live 20 (capacity 32).
 - **Per-cell meshing** is slower through the virtual `at`: 23.8 ms solid,
   151 ms checkerboard, 2.0 ms for the v0.1 scene (v0.2.1: 18, 134, 1.4).
 
@@ -303,4 +319,4 @@ on the second).
 | 3 | Equivalence test in `ctest` for fixed seeds; a longer run once | ✅ (`--long`: 24 more seeds, passes) |
 | 4 | Digest unit tests | ✅ |
 | 5 | Representation unit tests | ✅ |
-| 6 | The v0.1 world plays unchanged | owner spot-check pending |
+| 6 | The v0.1 world plays unchanged | ✅ owner on `a83b9c6` (2026-11-26); the palette-capacity change after it re-checked by the 65 headless runs |

@@ -146,7 +146,7 @@ struct Run {
         add("fill-lazy", 0, true).data() = copies[0]->data();
         fillChunk(add("edits").data(), oracle, false);  // promotion and every growth on the way
         for (unsigned w : kBrickWidths) {
-            if (brickPaletteCapacity(w) < n) continue;
+            if (brickIndexLimit(w) < n) continue;
             Copy& c = add("w" + std::to_string(w), w);
             c.data() = copies[0]->data();
             TA::forceWidth(c.data(), w);
@@ -269,9 +269,9 @@ void runSeed(unsigned seed, const Params& p, bool mesh, int meshEvery, bool long
         {
             ChunkData& d = r.fillCopy().data();
             if (!TA::isUniform(d) && TA::width(d) < 32) {
-                const std::uint32_t need = TA::paletteCapacity(d) - TA::paletteSize(d);
+                const std::uint32_t need = brickIndexLimit(TA::width(d)) - TA::paletteSize(d);
                 if (need <= 70000) {
-                    while (!TA::paletteFull(d)) r.edit(r.randomCell(), r.newState(), false);
+                    while (TA::paletteSize(d) < brickIndexLimit(TA::width(d))) r.edit(r.randomCell(), r.newState(), false);
                     const BlockState victim = r.oracle[r.randomCell()];
                     BlockState keep = victim;
                     while (keep == victim) keep = r.oracle[r.randomCell()];
@@ -315,7 +315,7 @@ void runSeed(unsigned seed, const Params& p, bool mesh, int meshEvery, bool long
             for (auto& c : r.copies) {
                 fillChunk(c->data(), r.oracle, true);
                 CHECK(m == 1 ? TA::isUniform(c->data()) : TA::width(c->data()) == brickCompactedWidth(m));
-                if (c->forcedWidth != 0 && brickPaletteCapacity(c->forcedWidth) >= m) TA::forceWidth(c->data(), c->forcedWidth);
+                if (c->forcedWidth != 0 && brickIndexLimit(c->forcedWidth) >= m) TA::forceWidth(c->data(), c->forcedWidth);
                 if (!c->lazyDigest) (void)c->data().digest();
             }
             r.checkpoint(true);

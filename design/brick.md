@@ -54,21 +54,30 @@ as other engine terms share theirs.
   that, so a change comes only if profiling of other readers asks for it.
   Nothing persisted depends on it (`data/content-digest` is defined on
   coordinates).
-- **A Brick is never resized in place:** its index width and palette
-  capacity are fixed when it is built, and nothing a reader can reach is
-  ever reallocated. A Brick is an internal representation, used only by
+- **A Brick is never resized in place:** its index width and its palette's
+  physical capacity are fixed when it is built (the capacity is the
+  palette array's allocation, independent of the width, which only limits
+  how many entries the indices can name), and nothing a reader can reach is
+  ever reallocated: the palette is one array allocated at its capacity,
+  never a growing vector. A Brick is an internal representation, used only by
   its owner (a chunk's data, or the terrain's), which is the only writer
   and, behind its API, decides how readers reach it.
 - **Growth copies and swaps:** palettes keep no per-entry counts, so an
   edit can't tell which entries are dead. An edit that needs a new entry
   appends it within the palette's capacity, storing the entry before any
-  index that refers to it. Widening builds a new Brick (the next width, or
-  at 32 bits a larger capacity), copies into it, swaps the owner's pointer,
-  and retires the old Brick (`retire`,
-  `engine/dispenser`), in the owner's own turn and outside any write
+  index that refers to it. A full palette is replaced by a new Brick with
+  twice the capacity, at the same width while the capacity is below what
+  the width can name (2ʷ entries), else at the next width; it copies into
+  it, swaps the owner's pointer, and retires the old Brick (`retire`,
+  `engine/dispenser`), which stays readable and is never written again,
+  in the owner's own turn and outside any write
   window, which holds only the pointer store (`sim/concurrency-model`'s
   representation swapping). A Brick widens at most five times
-  (1 → 32 bits), each one copy, so growth can't thrash. **No edit ever
+  (1 → 32 bits) and doubles its capacity at most 31 times, each one copy,
+  so growth can't thrash. A Brick is built with room for its entries: the
+  next power of two at or above them, at least 16 (a placeholder), at most
+  what its width can name, so the 1-, 2- and 4-bit widths hold 2, 4 and 16
+  entries and never double below their limit. **No edit ever
   compacts.** Edits only ever upgrade a Brick (uniform to palette,
   narrower to wider).
   - **Widening is proactive, at a high-water mark:** once the palette
@@ -112,15 +121,17 @@ as other engine terms share theirs.
   palette index, which an edit needs to find whether its state is already
   an entry): only the owner's turn edits and no reader uses it, so it
   needs no synchronisation and never sits on a reader's path. A linear
-  scan of the palette (SIMD, 4-byte entries) up to a threshold (32
-  entries, measured on one machine; a placeholder until both reference
-  machines are measured); above it, a flat linear-probing table of
-  palette indices at load at most ½, comparing through the palette.
-  - **Sized to the Brick's palette capacity** when built, so it never
-    regrows within one Brick's life (about 2 MiB at a capacity of 2¹⁸,
-    4 MiB at 2¹⁹); a swap that keeps indices (growth) carries it over or
-    resizes it with the new capacity, and a compaction rebuilds it from
-    the new palette, in O(live entries).
+  scan of the palette up to a threshold (8 entries with a scalar scan, 32
+  with a SIMD scan over 4-byte entries, measured on one machine; a
+  placeholder until both reference machines are measured); above it, a
+  flat linear-probing table of palette indices at load at most ½,
+  comparing through the palette.
+  - **Sized to the Brick's palette capacity** when built, which is at most
+    about twice its entries (the capacity doubles to fit them), so it
+    never regrows within one Brick's life (512 B at a capacity of 64
+    entries, 1 MiB at 2¹⁷); a swap to another Brick (growth) or a
+    compaction drops it, and the next lookup that needs it rebuilds it from the
+    palette, in O(entries).
   - **Built on the first edit that needs it, and dropped when the owner
     stops editing** (a chunk freezing or saving), so only Bricks being
     edited carry one.
@@ -248,7 +259,8 @@ as other engine terms share theirs.
   - **Enforced:** fatal check on interning, in every build.
 - **`invariant/brick/never-reallocated-in-place`** — A Brick is never
   reallocated in place: its width and palette capacity are fixed for its
-  life, every change of either is a new Brick swapped in by its owner, and
+  life (the palette is one array allocated at its capacity), every change
+  of either is a new Brick swapped in by its owner, and
   an old Brick is freed only after a grace period.
   - **Enforced:** type: no resizing operation exists on the class, and the
     swap path is the only constructor from another Brick.

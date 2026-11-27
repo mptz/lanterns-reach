@@ -13,13 +13,17 @@
 // `std::uint64_t canonicalEncoding(const E&)` found by argument-dependent
 // lookup (the digest and the reverse lookup hash it).
 //
-// A Brick is never resized in place. Palettes keep no per-entry counts, so a
-// Brick can't tell which entries are dead; an edit that needs an entry
-// appends it (the entry is stored before any index that refers to it), and a
-// full palette is replaced by `widened()`, a new Brick at the next width that
-// the owner swaps in. The reverse lookup (entry to index) belongs to the
-// owner, not the Brick.
+// A Brick is never resized in place. Its palette array has a fixed physical
+// capacity, set when the Brick is built and independent of the index width
+// (the width only limits how many entries the indices can name). Palettes keep
+// no per-entry counts, so a Brick can't tell which entries are dead; an edit
+// that needs an entry appends it (the entry is stored before any index that
+// refers to it), and a full palette is replaced by `grown()`, a new Brick
+// the owner swaps in: twice the capacity at the same width, or, once the
+// capacity reaches what the width can name, the next width. The reverse
+// lookup (entry to index) belongs to the owner, not the Brick.
 
+#include <algorithm>
 #include <bit>
 #include <cstddef>
 #include <cstdint>
@@ -44,34 +48,26 @@ constexpr std::size_t brickCellIndex(int x, int y, int z) {
 
 inline constexpr unsigned kBrickWidths[] = {1, 2, 4, 8, 16, 32};
 inline constexpr std::uint32_t kNoIndex = 0xFFFFFFFFu;  // never a palette index
-// A 32-bit palette's capacity when built (it may exceed 2¹⁸: dead entries
-// accumulate until a compaction); a full one is replaced by one of twice the
-// capacity, up to the 2³² − 1 indices there are.
-inline constexpr std::uint32_t kBrickCapacity32 = 1u << 19;
+inline constexpr std::uint32_t kBrickMinCapacity = 16;  // a palette's smallest physical capacity (a placeholder)
 
-// Entries a palette at storage width w can address; at 32 bits, the capacity
-// it is built with.
-constexpr std::uint32_t brickPaletteCapacity(unsigned w, std::uint32_t capacity32 = kBrickCapacity32) {
-    return w >= 32 ? capacity32 : std::uint32_t{1} << w;
+// Entries the indices at storage width w can name (2^w; at 32 bits, every
+// index but kNoIndex). A palette's physical capacity never exceeds it.
+constexpr std::uint32_t brickIndexLimit(unsigned w) { return w >= 32 ? kNoIndex : std::uint32_t{1} << w; }
+
+// The capacity a palette is built with to hold `entries`: the next power of
+// two at or above them, at least kBrickMinCapacity, at most the width's limit.
+inline std::uint32_t brickBuildCapacity(unsigned w, std::uint32_t entries) {
+    const std::uint64_t want = std::bit_ceil(std::max<std::uint64_t>(kBrickMinCapacity, entries));
+    return static_cast<std::uint32_t>(std::min<std::uint64_t>(want, brickIndexLimit(w)));
 }
 
-// A 32-bit palette's capacity for `entries` live entries: kBrickCapacity32,
-// doubled until the entries sit at or below the low-water mark of 7/8.
-inline std::uint32_t brickCapacity32For(std::uint32_t entries) {
-    std::uint64_t cap = kBrickCapacity32;
-    while (std::uint64_t{entries} * 8 > cap * 7 && cap < 0x80000000ull) cap *= 2;
-    return static_cast<std::uint32_t>(cap);
-}
-
-// The smallest aligned width whose palette holds `entries` at or below the
-// low-water mark of 7/8 of its capacity (a placeholder, world/brick). At 32
-// bits `capacityOut`, if given, receives the capacity to build with.
-inline unsigned brickCompactedWidth(std::uint32_t entries, std::uint32_t* capacityOut = nullptr) {
+// The smallest aligned width whose indices name `entries` at or below the
+// low-water mark of 7/8 of their limit (a placeholder, world/brick).
+inline unsigned brickCompactedWidth(std::uint32_t entries) {
     for (unsigned w : kBrickWidths) {
         if (w == 32) break;
-        if (std::uint64_t{entries} * 8 <= std::uint64_t{brickPaletteCapacity(w)} * 7) return w;
+        if (std::uint64_t{entries} * 8 <= std::uint64_t{brickIndexLimit(w)} * 7) return w;
     }
-    if (capacityOut) *capacityOut = brickCapacity32For(entries);
     return 32;
 }
 
@@ -118,31 +114,50 @@ public:
     virtual void exportIndices(std::uint32_t* out) const = 0;
     // Sets every cell's index to remap[in[cell]] (the build stream).
     virtual void importIndices(const std::uint32_t* in, const std::uint32_t* remap) = 0;
-    // A new Brick with the same cells and palette at the next width (at 32
-    // bits, at twice the capacity): the owner swaps it in and frees this one.
-    virtual std::unique_ptr<PaletteBrick> widened() const = 0;
+    // A new Brick with the same cells and palette, for a full palette: twice
+    // the capacity at the same width, or, when the capacity already equals
+    // what the width can name, the next width. The owner swaps it in and
+    // retires this one, which is never written again.
+    virtual std::unique_ptr<PaletteBrick> grown() const = 0;
+    // Whether grown() changes the width (the palette is at its width's limit).
+    bool atWidthLimit() const { return capacity_ >= brickIndexLimit(this->width()); }
 
     const E& at(std::uint32_t cell) const final { return palette_[indexAt(cell)]; }
 
     const E& entry(std::uint32_t i) const { return palette_[i]; }
-    std::uint32_t entries() const { return static_cast<std::uint32_t>(palette_.size()); }
+    std::uint32_t entries() const { return size_; }
     std::uint32_t capacity() const { return capacity_; }
-    bool full() const { return entries() >= capacity_; }
-    const std::vector<E>& palette() const { return palette_; }
+    bool full() const { return size_ >= capacity_; }
 
     // Appends an entry and returns its index; fatal when full. The entry is
     // stored before any index refers to it.
     std::uint32_t append(const E& e) {
         FATAL_UNLESS(!full(), "palette append when full");
-        palette_.push_back(e);
-        return entries() - 1;
+        palette_[size_] = e;
+        return size_++;
     }
 
-    std::size_t paletteBytes() const final { return palette_.capacity() * sizeof(E); }
+    std::size_t paletteBytes() const final { return std::size_t{capacity_} * sizeof(E); }
 
 protected:
-    explicit PaletteBrick(std::uint32_t capacity) : capacity_(capacity) {}
-    std::vector<E> palette_;
+    // `capacity` entries of storage, allocated once: the array never moves.
+    PaletteBrick(unsigned width, std::uint32_t capacity)
+        : palette_(std::make_unique<E[]>(capacity)), capacity_(capacity) {
+        FATAL_UNLESS(capacity >= 1 && capacity <= brickIndexLimit(width), "palette capacity beyond its width's limit");
+    }
+    PaletteBrick(const PaletteBrick& o)
+        : Brick<E>(o), palette_(std::make_unique<E[]>(o.capacity_)), size_(o.size_), capacity_(o.capacity_) {
+        std::copy(o.palette_.get(), o.palette_.get() + o.size_, palette_.get());
+    }
+    // The grown Brick's palette: this one's entries, in a larger array.
+    void copyPaletteTo(PaletteBrick& g) const {
+        std::copy(palette_.get(), palette_.get() + size_, g.palette_.get());
+        g.size_ = size_;
+    }
+
+private:
+    std::unique_ptr<E[]> palette_;
+    std::uint32_t size_ = 0;
     std::uint32_t capacity_;
 };
 
@@ -154,8 +169,8 @@ class PaletteBrickAt final : public PaletteBrick<E> {
     static constexpr std::uint64_t kMask = (std::uint64_t{1} << B) - 1;
 
 public:
-    explicit PaletteBrickAt(std::uint32_t capacity = brickPaletteCapacity(B))
-        : PaletteBrick<E>(capacity), words_(kBrickCells / kPerWord, 0) {}
+    explicit PaletteBrickAt(std::uint32_t capacity = kBrickMinCapacity)
+        : PaletteBrick<E>(B, std::min(capacity, brickIndexLimit(B))), words_(kBrickCells / kPerWord, 0) {}
 
     // The width-specific accessors: a shift and a mask.
     std::uint32_t indexAt(std::uint32_t cell) const override {
@@ -183,24 +198,29 @@ public:
         }
     }
 
-    std::unique_ptr<PaletteBrick<E>> widened() const override {
-        if constexpr (B == 32) {
-            FATAL_UNLESS(this->capacity_ < 0x80000000u, "palette growth past 2^32 - 1 entries");
-            auto g = std::make_unique<PaletteBrickAt<E, 32>>(this->capacity_ * 2);
+    std::unique_ptr<PaletteBrick<E>> grown() const override {
+        const std::uint64_t doubled = std::uint64_t{this->capacity()} * 2;
+        if (!this->atWidthLimit()) {  // room in the width: a bigger palette, the same indices
+            auto g = std::make_unique<PaletteBrickAt>(
+                static_cast<std::uint32_t>(std::min<std::uint64_t>(doubled, brickIndexLimit(B))));
             g->words_ = words_;
-            g->palette_ = this->palette_;
+            this->copyPaletteTo(*g);
             return g;
+        }
+        if constexpr (B == 32) {
+            fatal("palette growth past 2^32 - 1 entries");
         } else {
-            auto g = std::make_unique<PaletteBrickAt<E, 2 * B>>();
+            auto g = std::make_unique<PaletteBrickAt<E, 2 * B>>(
+                static_cast<std::uint32_t>(std::min<std::uint64_t>(doubled, brickIndexLimit(2 * B))));
             for (std::uint32_t c = 0; c < kBrickCells; ++c) g->put(c, indexAt(c));
-            g->palette_ = this->palette_;
+            this->copyPaletteTo(*g);
             return g;
         }
     }
 
     std::uint64_t fullDigest() const override {
-        std::vector<std::uint64_t> h(this->palette_.size());
-        for (std::size_t s = 0; s < h.size(); ++s) h[s] = digestStateHash(canonicalEncoding(this->palette_[s]));
+        std::vector<std::uint64_t> h(this->entries());
+        for (std::size_t s = 0; s < h.size(); ++s) h[s] = digestStateHash(canonicalEncoding(this->entry(static_cast<std::uint32_t>(s))));
         std::uint64_t d = 0;
         for (std::uint32_t c = 0; c < kBrickCells; ++c) d = addMod(d, mulMod(digestWeight(c), h[indexAt(c)]));
         return d;
@@ -222,17 +242,17 @@ private:
     std::vector<std::uint64_t> words_;
 };
 
-// A palette Brick at width w (one of kBrickWidths), every index 0 and an empty
-// palette. At 32 bits, `capacity32` is its capacity.
+// A palette Brick at width w (one of kBrickWidths), every index 0, an empty
+// palette and room for `capacity` entries (at most what the width can name).
 template <class E>
-std::unique_ptr<PaletteBrick<E>> makePaletteBrick(unsigned w, std::uint32_t capacity32 = kBrickCapacity32) {
+std::unique_ptr<PaletteBrick<E>> makePaletteBrick(unsigned w, std::uint32_t capacity = kBrickMinCapacity) {
     switch (w) {
-        case 1: return std::make_unique<PaletteBrickAt<E, 1>>();
-        case 2: return std::make_unique<PaletteBrickAt<E, 2>>();
-        case 4: return std::make_unique<PaletteBrickAt<E, 4>>();
-        case 8: return std::make_unique<PaletteBrickAt<E, 8>>();
-        case 16: return std::make_unique<PaletteBrickAt<E, 16>>();
-        case 32: return std::make_unique<PaletteBrickAt<E, 32>>(capacity32);
+        case 1: return std::make_unique<PaletteBrickAt<E, 1>>(capacity);
+        case 2: return std::make_unique<PaletteBrickAt<E, 2>>(capacity);
+        case 4: return std::make_unique<PaletteBrickAt<E, 4>>(capacity);
+        case 8: return std::make_unique<PaletteBrickAt<E, 8>>(capacity);
+        case 16: return std::make_unique<PaletteBrickAt<E, 16>>(capacity);
+        case 32: return std::make_unique<PaletteBrickAt<E, 32>>(capacity);
         default: fatal("makePaletteBrick: not an aligned width");
     }
 }

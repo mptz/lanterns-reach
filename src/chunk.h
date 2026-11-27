@@ -97,7 +97,7 @@ private:
     const PaletteBrick<BlockState>& palette() const { return static_cast<const PaletteBrick<BlockState>&>(*brick_); }
 
     // Replaces the Brick with one holding the same content: uniform if
-    // width is 0, else a palette at that width. keepDead keeps every palette
+    // width is 0, else a palette at that width (with room for its entries). keepDead keeps every palette
     // entry and index (a pure repack); otherwise only the live entries
     // remain, renumbered in ascending old-index order (a compaction). The
     // digest carries over.
@@ -110,7 +110,8 @@ private:
     std::unique_ptr<Brick<BlockState>> brick_;
     ReverseLookup<BlockState> lookup_;     // the owner's reverse lookup, built lazily
     mutable std::optional<std::uint64_t> digest_;
-    std::uint64_t growths_ = 0;            // widenings by an edit (the fallback path)
+    std::uint64_t growths_ = 0;            // swaps by an edit that found the palette full (the fallback path)
+    std::uint64_t widenings_ = 0;          // of those, the ones that changed the width
 };
 
 // Test-only access to the representation (called out in RELEASES.md).
@@ -128,7 +129,8 @@ struct ChunkTestAccess {
     static void dropDigest(ChunkData& c) { c.digest_.reset(); }
     static bool digestComputed(const ChunkData& c) { return c.digest_.has_value(); }
     static bool tableBuilt(const ChunkData& c) { return c.lookup_.tableBuilt(); }
-    static std::uint64_t growths(const ChunkData& c) { return c.growths_; }
+    static std::uint64_t growths(const ChunkData& c) { return c.growths_; }      // swaps for a full palette
+    static std::uint64_t widenings(const ChunkData& c) { return c.widenings_; }  // of which the width grew
     // Bytes held: indices, palette and reverse table.
     static std::size_t indexBytes(const ChunkData& c) { return c.brick_->indexBytes(); }
     static std::size_t paletteBytes(const ChunkData& c) { return c.brick_->paletteBytes(); }

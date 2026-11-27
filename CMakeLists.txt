@@ -7,7 +7,7 @@ if(NOT DEFINED CMAKE_CXX_COMPILER AND NOT DEFINED ENV{CXX})
 endif()
 # The one version label: the window title and Vulkan app name come from
 # PROJECT_VERSION (SANDBOX_VERSION below).
-project(sandbox VERSION 0.2.1 LANGUAGES C CXX)
+project(sandbox VERSION 0.2.2 LANGUAGES C CXX)
 
 # The v0.1.x validation harness (see versions.md).
 # Compiling needs no display; running needs a GPU + window system.

@@ -612,8 +612,9 @@ Display-required:
   per-chunk meshing cost, an open question in `sim/concurrency-model`.
 
 ## v0.2.2 — Uniform, palette widths and the digest
-- Status: **BUILT 2026-11-26**; headless criteria 1–5 pass, criterion 6
-  (owner spot-check) pending. Depends on v0.2.1.
+- Status: **CLOSED 2026-11-26.** Criteria 1–6 pass; criterion 6 confirmed
+  by the owner. The palette's capacity is independent of its index width
+  (`world/brick`). Measured on one reference machine only. Depends on v0.2.1.
 - **Claim:** a chunk's representation and palette width are invisible:
   the same content, stored uniform or as a palette at any width, answers
   every probe and raycast, digests and meshes identically, through any
@@ -646,15 +647,17 @@ Display-required:
   32 bits, one instantiation per width, an access a shift and a mask.
 - **Promotion and growth** (no per-entry counts):
   - a uniform chunk edited to a second state promotes to a palette at 1 bit;
-  - a new state is appended within the palette's capacity; when the
-    palette is full (its width's range, or at 32 bits its fixed capacity),
-    the chunk builds a new Brick at the next width or capacity, copies into
-    it and swaps its representation pointer, with no scan for dead
-    entries; a Brick is never resized in place;
+  - a new state is appended within the palette's capacity, a fixed
+    allocation independent of the index width (at least 16, a power of two,
+    at most the width's range); when the palette is full, the chunk builds
+    a new Brick with twice the capacity (the next width once the capacity
+    reaches the width's range), copies into it and swaps its
+    representation pointer, with no scan for dead entries; a Brick is
+    never resized in place, and its palette is never a growing vector;
   - the reverse lookup, held by the chunk's data rather than the Brick
     (`world/brick`): a linear scan up to a threshold, then a table sized
-    to the palette's capacity, built lazily; an edit whose state has a
-    dead entry reuses it;
+    to the palette's capacity (at most about twice its entries), built
+    lazily; an edit whose state has a dead entry reuses it;
   - edits only upgrade, and no edit compacts; a chunk becomes uniform or
     narrower only through a bulk fill or an explicit compaction (the test
     API here; at saves once persistence exists), which renumbers the live entries and picks

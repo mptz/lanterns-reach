@@ -6,7 +6,8 @@
 //
 // A linear scan of the palette up to a threshold; above it, a flat
 // linear-probing table of palette indices at load at most 1/2, comparing
-// through the palette, sized to the palette's capacity when built (so it never
+// through the palette, sized to the palette's physical capacity when built (at
+// most 2× the entries once the capacity has doubled to fit them, so it never
 // regrows within one Brick's life), built lazily on the first lookup that needs
 // it. Dead entries are found like live ones, so an edit reuses them.
 //
@@ -21,10 +22,12 @@
 #include "brick.h"
 #include "digest.h"
 
-// The scan's threshold: 32 entries, measured on one machine in the research
-// (prototypes/brick-research.md); a placeholder until both reference machines
-// are measured (versions.md v0.2.2, measurements).
-inline constexpr std::uint32_t kReverseScanMax = 32;
+// The scan's threshold: 8 entries. With the scalar scan the table, sized to the
+// palette's capacity, is as fast at 2–4 entries and faster from 8; the
+// threshold only decides when to pay for it (versions.md v0.2.2, measurements:
+// one machine so far, a placeholder until both are measured). A SIMD scan
+// would move it up (prototypes/brick-research.md found 32 with one).
+inline constexpr std::uint32_t kReverseScanMax = 8;
 
 // The threshold in force: kReverseScanMax, except that measurements change it
 // (sandbox_tests --time-chunk). Nothing else writes it.

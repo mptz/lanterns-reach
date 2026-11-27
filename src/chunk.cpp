@@ -4,7 +4,7 @@
 
 ChunkData::ChunkData() : brick_(std::make_unique<UniformBrick<BlockState>>(BlockState::air())) {}
 
-ChunkData::ChunkData(const ChunkData& o) : brick_(o.brick_->clone()), digest_(o.digest_), growths_(o.growths_) {}
+ChunkData::ChunkData(const ChunkData& o) : brick_(o.brick_->clone()), digest_(o.digest_), growths_(o.growths_), widenings_(o.widenings_) {}
 
 ChunkData& ChunkData::operator=(const ChunkData& o) {
     if (this != &o) {
@@ -12,6 +12,7 @@ ChunkData& ChunkData::operator=(const ChunkData& o) {
         lookup_.drop();
         digest_ = o.digest_;
         growths_ = o.growths_;
+        widenings_ = o.widenings_;
     }
     return *this;
 }
@@ -33,7 +34,7 @@ bool ChunkData::set(const glm::ivec3& local, const BlockState& state) {
     if (brick_->width() == 0) {
         // Promotion: a uniform chunk edited to a second state becomes a
         // palette at 1 bit, all indices 0 = the old state.
-        auto p = makePaletteBrick<BlockState>(1);
+        auto p = makePaletteBrick<BlockState>(1, brickBuildCapacity(1, 2));
         p->append(old);
         p->setIndex(cell, p->append(state));
         brick_ = std::move(p);
@@ -43,9 +44,11 @@ bool ChunkData::set(const glm::ivec3& local, const BlockState& state) {
         std::uint32_t index = lookup_.find(*p, state);
         if (index == kNoIndex) {
             if (p->full()) {
-                // Growth: a new Brick at the next width (or capacity), swapped
-                // in. No scan for dead entries; the old Brick is freed here.
-                brick_ = p->widened();
+                // Growth: a new Brick at twice the capacity (or, at its
+                // width's limit, the next width), swapped in. No scan for dead
+                // entries; the old Brick is freed here.
+                if (p->atWidthLimit()) ++widenings_;
+                brick_ = p->grown();
                 p = &palette();
                 lookup_.drop();
                 ++growths_;
@@ -72,7 +75,7 @@ void ChunkData::rebuild(unsigned width, bool keepDead) {
     if (brick_->width() == 0) {
         if (width == 0) return;
         const BlockState s = static_cast<const UniformBrick<BlockState>&>(*brick_).state();
-        auto q = makePaletteBrick<BlockState>(width);
+        auto q = makePaletteBrick<BlockState>(width, brickBuildCapacity(width, 1));
         q->append(s);
         brick_ = std::move(q);
         lookup_.drop();
@@ -93,10 +96,8 @@ void ChunkData::rebuild(unsigned width, bool keepDead) {
         lookup_.drop();
         return;
     }
-    std::uint32_t capacity32 = kBrickCapacity32;
-    if (width == 32) capacity32 = brickCapacity32For(n);
-    FATAL_UNLESS(n <= (width == 32 ? capacity32 : brickPaletteCapacity(width)), "width too narrow for the live entries");
-    auto q = makePaletteBrick<BlockState>(width, capacity32);
+    FATAL_UNLESS(n <= brickIndexLimit(width), "width too narrow for the live entries");
+    auto q = makePaletteBrick<BlockState>(width, brickBuildCapacity(width, n));
     std::vector<std::uint32_t> remap(p.entries(), 0);
     for (std::uint32_t s = 0; s < p.entries(); ++s)
         if (live[s]) remap[s] = q->append(p.entry(s));
@@ -122,6 +123,6 @@ std::uint32_t ChunkTestAccess::paletteCapacity(const ChunkData& c) {
 
 void ChunkTestAccess::forceWidth(ChunkData& c, unsigned width) {
     // Keep dead entries when the palette fits the new width (a repack), else compact.
-    const bool fits = c.brick_->width() != 0 && width != 0 && c.palette().entries() <= brickPaletteCapacity(width);
+    const bool fits = c.brick_->width() != 0 && width != 0 && c.palette().entries() <= brickIndexLimit(width);
     c.rebuild(width, fits);
 }

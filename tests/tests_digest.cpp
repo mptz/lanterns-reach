@@ -92,7 +92,7 @@ void testIncrementalDigest() {
     // Representation and width changes carry the digest over unchanged.
     const std::uint32_t live = TA::liveEntries(d);
     for (unsigned w : kBrickWidths) {
-        if (brickPaletteCapacity(w) < live) continue;
+        if (brickIndexLimit(w) < live) continue;
         TA::forceWidth(d, w);
         CHECK(TA::digestComputed(d) && d.digest() == incremental);
         TA::dropDigest(d);
