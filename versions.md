@@ -276,6 +276,10 @@ The chunk payload, single-threaded:
   budget are sized for the format they keep. *Claim: every mesh covers
   the same faces as before at about a tenth of the bytes, and translucent
   absorbance stays exact.* `world/chunk-meshing`, `render/block-textures`.
+  The appearance id's width and contents are open here: the owner is open
+  to wider ids that embed payload bits directly (2026-11-27) if that
+  helps the packed quad or the shader; appearance ids are derived and
+  never persisted, so nothing constrains their layout but this format.
   Also (from v0.2.4's dispositions): the pinhole cracks at T-junctions
   between merged quads (enlarge merged quads only, or every opaque quad,
   in the vertex shader the packed format rewrites) and the `log_columns`
