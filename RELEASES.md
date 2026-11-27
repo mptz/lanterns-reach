@@ -341,7 +341,7 @@ No behaviour change: the 65 headless captures match v0.2.2's, and the tests pass
   together under `-j` (Debug: 24 s instead of 28). `no_dense_grid` is retired.
 - **`prototypes/` moved to `attic/prototypes/`.**
 
-## v0.2.3 (built 2026-11-27; owner confirmation of F3 pending)
+## v0.2.3 (closed 2026-11-27)
 
 Greedy bitmask meshing per representation, `render.mesher`, and the
 merged-quad harness retired.
@@ -459,6 +459,10 @@ merged-quad harness retired.
   `world/block-orientation`'s expectation.
 - Only one reference machine was measured.
 
+### Reference captures
+The owner accepted the `greedy` captures (`build-debug/cap-023`), cracks and
+`log_columns` flips included, as the reference for later releases.
+
 ### Acceptance status (v0.2.3)
 | # | Criterion | Status |
 |---|---|---|
@@ -471,5 +475,5 @@ merged-quad harness retired.
 | 7 | Working state; a second thread | ✅ |
 | 8 | Append-only | ✅ |
 | 9 | `render.mergedQuad` rejected; `quad_*` comparisons | ✅ rejected; comparisons pass within the recorded crack budget |
-| 10 | Plays unchanged; F3 shows merged quads | plays unchanged ✅ owner; F3 pending |
+| 10 | Plays unchanged; F3 shows merged quads | ✅ owner (stripes across the floor, large merged surfaces) |
 | 11 | No cracks or sparkles at T-junctions | ✅ owner: not perceptible on the GPU machine |

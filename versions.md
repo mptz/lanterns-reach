@@ -786,9 +786,10 @@ Display-required:
 - The v0.1 scene chunk's width, palette size and live entries.
 
 ## v0.2.3 — Greedy meshing per representation
-- Status: **BUILT 2026-11-27.** Headless criteria pass (cracks at
-  T-junctions deferred by the owner, `RELEASES.md`); criterion 10's F3 check
-  pending. Depends on v0.2.2.
+- Status: **CLOSED 2026-11-27.** Criteria 1–11 pass; 10 and 11 confirmed by
+  the owner. Cracks at T-junctions deferred by the owner and dispositioned
+  in v0.2.4 (`RELEASES.md`). Measured on one reference machine only.
+  Depends on v0.2.2.
 - **Claim:** each representation meshes a chunk its own way, and the result
   covers exactly the faces the per-cell rule emits, each with the appearance
   the per-cell rule gives it, while merging coplanar faces of identical
