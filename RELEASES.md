@@ -6,6 +6,15 @@ verification, and measurements. How to build and run is `BUILD.md`; what a
 release is meant to do is `versions.md`. Notes for finished major versions
 move to `attic/` once they stop being useful.
 
+## Tagging a release
+A point release is tagged `vX.Y.Z` (annotated, `git tag -a`) on the commit
+that closes it. That commit sets `project(sandbox VERSION X.Y.Z)` in
+`CMakeLists.txt`, so the window title, the F1 overlay and the Vulkan app
+version match the tag, and marks the release closed in `versions.md` and
+here. Documentation commits after it aren't tagged. The tag message is the
+release's title and claim from `versions.md`. Tags are pushed only when the
+owner says so.
+
 ## v0.1 (closed 2026-11-04)
 The build notes for v0.1 through v0.1.9 are history in
 `attic/build-notes-v0.1.md`.
