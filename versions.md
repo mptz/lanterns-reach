@@ -187,7 +187,7 @@ display-required) · Measurements.
 ### Roadmap
 The chunk payload, single-threaded:
 - **v0.2.0 Groundwork** (code done; below).
-- **v0.2.1 One chunk:** chunk data as a 1 ft Brick in the palette
+- **v0.2.1 One chunk:** chunk data as a full-detail Brick in the palette
   representation at one width; the v0.1 world placed in chunk (0,0,0). *Claim: v0.1 captures are
   identical with the world in a chunk.* (Detailed below.)
 - **v0.2.2 Uniform, palette widths and the digest:** the representation
@@ -556,7 +556,7 @@ Display-required:
   `core/opaque-chunk-queries`.
 
 ### Scope
-- **Chunk data, a 1 ft Brick** (`world/brick`): a 64³ cubic chunk addressed by
+- **Chunk data, a full-detail Brick** (`world/brick`): a 64³ cubic chunk addressed by
   `(dimension_id, chunk_coord)`, `dimension_id` always 0. `chunk_coord` is
   the 64-bit cell coordinate floor-divided by 64; local indices are 0–63 per
   axis. Floor division and the local index are implemented and unit-tested

@@ -92,7 +92,7 @@ file once decided.
     projectiles, field and effect propagation — reach at most 64 cells past
     their home per tick, so every effect targets one of the 26 neighbours;
     only true exceptions (bullet-speed objects, instant effects) go beyond. In world units the limit is 64 cells × tick
-    rate: at 20 Hz, 1,280 ft/s ≈ 390 m/s, just above the speed of sound
+    rate: at 20 Hz, 1,280 units/s ≈ 390 m/s, just above the speed of sound
     (terminal velocity ≈ 9
     cells/tick, arrows 8–16, sound ≈ 56, a rifle bullet ≈ 150). It limits how
     far an effect reaches in a tick, not a requirement to sub-step it 64

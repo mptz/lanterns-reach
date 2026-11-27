@@ -15,7 +15,8 @@ re-checked; numbers are approximate and only meant to set relative weights.
   solid rock cell is a specific rock (granite, shale, basalt, ...). "Stone"
   exists only as the **coarse-LOD superclass** that `world/progressive-lod`
   already describes ("stone → a specific stone ... from finer noise"); it
-  never survives refinement to a playable LOD.
+  never survives refinement to a playable LOD, and is never obtainable
+  (`invariant/world/superclasses-unobtainable`).
 - Rationale: in a digging game the rock is most of what the player looks at
   and handles. A plausible, varied geology gives mining texture, and makes
   rock a readable signal of what lies nearby (see `geology/rock-suites`).

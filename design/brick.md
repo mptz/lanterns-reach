@@ -1,12 +1,18 @@
 # world/brick — The Brick: 64³ cells at a power-of-two cell size
 
-A **Brick** is the engine's one cell container: 64³ cells, each 2ᵏ ft on a
-side, in a palettized form whose palette entries are block states (or, at
-coarse levels, material classes). Chunk data is a 1 ft Brick; distant
-terrain may hold its cells as coarser Bricks. Everything that needs cells
-(meshing, queries, edits, generation's output, saving) goes through a
-Brick's interface, and nothing outside it sees indices, widths or the
-palette (`core/opaque-chunk-queries`).
+A **Brick** is the engine's one cell storage: 64³ cells, each 2ᵏ units on
+a side, in a palettized form whose palette entries are block states, at
+every level of detail. Chunk data is a full-detail (1-unit) Brick; distant
+terrain may hold its cells as coarser Bricks.
+
+**The Brick is storage; its owner is the abstraction boundary** (owner,
+2026-11-27). A Brick's owner is a chunk, for simulated terrain up close, or
+a terrain node, for distant terrain (`world/surveyor`), which may also
+store its cells some other way. The owner's code works with the Brick
+directly, indices, widths and palette included, and nothing outside the
+owner sees any of them: callers ask the chunk or the terrain node semantic
+questions (`core/opaque-chunk-queries`). The Brick itself keeps only its
+own class invariants (below).
 
 `design/world.md` holds the entries that use Bricks
 (`world/chunk-representation`, `world/chunk-meshing`, `world/cubic-chunks`)
@@ -18,9 +24,9 @@ Brick's own role, structure, invariants and open questions.
 as other engine terms share theirs.
 
 ## Role
-- **The one cell container,** at any power-of-two cell size: 1 ft at full
+- **The one cell storage,** at any power-of-two cell size: 1 unit at full
   detail, coarser for distant terrain.
-- **Chunk data is a 1 ft Brick** plus the chunk's scarce references and
+- **Chunk data is a full-detail Brick** plus the chunk's scarce references and
   its last-materialized time (`world/chunk`; there is no per-block
   metadata, `sim/block-metadata`), and a chunk actor is chunk
   data plus simulation machinery.
@@ -217,19 +223,23 @@ as other engine terms share theirs.
   what keeps palettes and the state table small.
 
 ## What a cell holds by level
-- At 1 ft, a full block state; coarser, a material class from the stage
-  ladder for that level (`world/progressive-lod`), with no orientation. The
-  class vocabulary of far and middle levels is bounded at 8 bits for now
-  (pink trees seen from afar need more than a handful of classes), which
-  bounds those Bricks' palettes. Whether material classes are definitions
-  with ULIDs, like blocks, is open.
+- **A block state, at every level** (owner, 2026-11-27): a coarse Brick's
+  palette holds block states interned like a full-detail Brick's. What a
+  coarse cell shows is a **superclass** block where the stage ladder
+  hasn't specialised it yet (generic stone, a soil, a canopy,
+  `world/progressive-lod`): superclasses are block definitions like any
+  other, with ULIDs, and one that needs no orientation declares none. So
+  coarse Bricks persist, replicate and mesh as full-detail ones do, and no
+  second vocabulary or palette bound exists for them.
 
 ## Invariants (draft)
-- **`invariant/brick/opaque-encoding`** — Nothing outside a Brick sees its
-  indices, widths or palette.
-  - **Enforced:** type: the API (`core/opaque-chunk-queries`).
+- **`invariant/brick/owner-only`** — Only a Brick's owner (a chunk or a
+  terrain node) reads or writes it, and nothing outside the owner sees its
+  cells, indices, widths or palette.
+  - **Enforced:** type: the owner holds the Brick privately and its API
+    answers semantic queries (`core/opaque-chunk-queries`).
 - **`invariant/brick/representation-invisible`** — A Brick's
-  representation and width are invisible: the same content, uniform or as
+  representation and width are invisible in its owner's answers: the same content, uniform or as
   a palette at any width, answers every query, digest and mesh
   identically.
   - **Enforced:** test: the rep-swap tests (`world/chunk-meshing`).
@@ -266,8 +276,6 @@ as other engine terms share theirs.
     swap path is the only constructor from another Brick.
 
 ## Open
-- Whether material classes are definitions with ULIDs, so coarse Bricks
-  persist and replicate like 1 ft ones.
 - Where coarse Bricks are used (the coarse-to-fine pipeline).
 - The reverse lookup's scan threshold on both reference machines.
 - The live Brick's dirty-read policy per reader.

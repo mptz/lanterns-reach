@@ -102,7 +102,7 @@ one code path without duplicating the world.
 f32 only ever holds a value relative to a nearby origin (camera, chunk corner,
 or dimension-local frame) — never an absolute world position. Absolute position
 lives solely in the authoritative type (f64, see `coords/f64-authoritative`).
-- Why: absolute f32 at the 10⁹ world edge has ~64-unit (foot) ULP — far past
+- Why: absolute f32 at the 10⁹ world edge has ~64-unit ULP — far past
   Bedrock's jitter and into whole-building granularity. Camera/chunk-relative
   f32 carries only small magnitudes (render distance), where f32 ULP is
   sub-millimetre. Same type, clean precision, purely because the magnitude
@@ -188,7 +188,9 @@ entropy at the STORAGE boundary, this bounds it at the GENERATION source.
 ### core/opaque-chunk-queries — Chunks answer semantic queries; the voxel representation is never introspected
 
 A chunk's internal voxel representation is **private**. No consumer outside the
-chunk may read its voxel storage; consumers only ask the chunk **semantic
+chunk may read its voxel storage (the chunk's own code uses its storage, a
+Brick, directly; a terrain node is the same boundary for distant terrain,
+`world/brick`); consumers only ask the chunk **semantic
 questions** and receive **answers**. There is NO public `getVoxel(x,y,z)`
 accessor — its absence is the tenet. This is the enforcement spine that makes
 `world/chunk-representation`'s swappable reps real: the moment a raw voxel

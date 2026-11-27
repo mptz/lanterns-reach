@@ -96,7 +96,7 @@ contracts, invariants and open questions.
   So a chunk's life is a terrain node that gets an actor when it joins a
   Vicinity and becomes a terrain node again when it leaves.
 - **`Terrain` is a sparse octree of terrain nodes,** owned by the World.
-  Roots are world-aligned 2¹⁷ ft
+  Roots are world-aligned 2¹⁷ units
   boxes (the view radius); each node splits into eight half-size children,
   strictly, down to chunk-sized leaves at full detail
   (`world/octave-pyramid`: one bin of scale per level, the roots folding
@@ -344,7 +344,7 @@ contracts, invariants and open questions.
   (`world/octave-pyramid`), simulation membership and rates, and
   priorities. Vertical anisotropy (a flattened range, since players mostly
   look and move horizontally) is a later adjustment if measurement asks.
-- **The simulation distance is a setting in blocks** (feet), not chunks:
+- **The simulation distance is a setting in blocks** (cells), not chunks:
   a chunk is wanted running when its box comes within that distance, so
   the setting's granularity is independent of the chunk size, and
   hysteresis bands keep a chunk at the edge from flickering in and out.

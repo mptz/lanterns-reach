@@ -273,8 +273,8 @@ bandwidth where it buys material richness and image quality.
   must read as clearly coloured. Physical reference (from memory,
   approximate): real coloured glass is strongly absorbing. Stained ("pot
   metal") glass a few millimetres thick passes roughly 70–90 % of its own
-  colour and only a few to ~20 % of the others, so a 1-ft block of truly
-  coloured glass would be nearly black. Following `core/realistic-in-kind`, a
+  colour and only a few to ~20 % of the others, so a block of truly
+  coloured glass (about a foot, `world/voxel-scale`) would be nearly black. Following `core/realistic-in-kind`, a
   block is tinted **like a sheet of stained glass**, not like a foot of solid
   coloured glass: σ is set from a target transmittance per block (about 0.85
   passed, 0.10–0.15 absorbed), giving σ ≈ 0.15 and ≈ 2. Two layers are then
@@ -334,7 +334,7 @@ bandwidth where it buys material richness and image quality.
     per-vertex AO: no lights in the light list, chunk-local (no halos in
     the first pass, `world/chunk-meshing`, so it may seam at borders),
     cheap for a lava lake. Trade-off: per-vertex, soft, no specular.
-  - **Key emitters reach well beyond 7** (the v0.1.4 harness radius, 7 ft at
+  - **Key emitters reach well beyond 7** (the v0.1.4 harness radius, 7 units at
     our scale); plan for long-range shadowed lights.
   - **Propagated volume, if built:** flood-fill light through air a bounded
     distance, per cell, computed in the same turn that rebuilds the chunk mesh

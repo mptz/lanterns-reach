@@ -286,6 +286,12 @@ palettes and never saved. `world/brick`
 **state table** — The process-wide table of block states and what systems
 need to know about each, indexed by state id. `world/brick`
 
+**superclass** — A placeholder block that coarse terrain holds where the
+stage ladder hasn't yet chosen a specific block (generic stone, a soil, a
+canopy): a block definition like any other, which refinement replaces by a
+member before the terrain is playable, and which is never obtainable.
+`world/progressive-lod`
+
 **Surveyor** — The World's planning component: it decides what of the world
 should be resident where, at what detail, and issues the work to get
 there. `world/surveyor`
@@ -295,7 +301,7 @@ from outside, worlds are loaded, paused and shut down through it.
 `engine/dispenser`
 
 **Terrain** — The World's sparse octree of everything outside every
-Vicinity, from 2¹⁷ ft roots down to chunk-sized leaves. `world/surveyor`
+Vicinity, from 2¹⁷-unit roots down to chunk-sized leaves. `world/surveyor`
 
 **terrain node** (`TerrainNode`) — One node of the terrain: a region held
 at its level of detail, with no actor of its own; at full detail it is one
@@ -314,6 +320,12 @@ scarce instance: a 48-bit millisecond timestamp then 80 random bits, written
 as 26 characters of Crockford base32 (the first is 0–7). Every durable id in
 the game, ULID or state hash, uses that 128-bit form and text.
 `data/stable-identity`
+
+**unit** — The edge length of one full-detail cell, and the engine's unit of
+length: world coordinates, sizes and speeds are in units, and a cell at a
+coarse level spans 2ᵏ units. How large a unit is in the game world is
+`world/voxel-scale`'s choice (about a foot); engine docs speak in units.
+`world/voxel-scale`
 
 **Vicinity** — A set of chunks simulated together as one single-threaded
 actor; Vicinities don't overlap, and they merge and cleave as viewpoints move.
@@ -352,9 +364,6 @@ turn. `engine/dispenser`
 - **manifest:** the chunk manifest (the save's table of current chunk blobs),
   versus a content-bundle manifest (a hashed list of a bundle's contents).
   Prefer "chunk manifest" and "bundle manifest".
-- **material class:** a crafting category a recipe takes (fibre, sheet),
-  versus the coarse value a distant Brick's cells hold in place of a block
-  state. Prefer "crafting material class" and "coarse material class".
 - **node:** an terrain node (a terrain node), versus a node of the Dispenser's
   halt hierarchy (System, World, Vicinity, Registrar), versus a waiter node in
   a condition's list. Prefer "TerrainNode", "hierarchy node" and "waiter".

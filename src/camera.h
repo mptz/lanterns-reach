@@ -35,7 +35,7 @@ public:
     glm::mat4 view() const;
     static glm::mat4 projection(float fovY, float aspect, float zNear, float zFar);
 
-    // Near plane: 0.6" (blocks are 1 ft), close enough that a face the
+    // Near plane: 0.05 units (0.6" at `world/voxel-scale`'s foot), close enough that a face the
     // player stands against isn't clipped (v0.1 build choice). Far: past
     // anything one 64³ chunk holds (arbitrary until v0.2 streams terrain; the
     // reverse-Z question goes with it).

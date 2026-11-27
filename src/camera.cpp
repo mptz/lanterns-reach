@@ -7,7 +7,7 @@
 #include <glm/geometric.hpp>
 
 namespace {
-constexpr double kSpeed = 4.0;       // free-fly feet per second; placeholder, tune in play (a body brings real speeds)
+constexpr double kSpeed = 4.0;       // free-fly units per second; placeholder, tune in play (a body brings real speeds)
 constexpr double kFastFactor = 4.0;  // Ctrl: crosses the v0.1 scene (32 cells) in about 2 s; chosen by eye
 // Just short of straight up/down, so right() = forward × up never degenerates.
 constexpr double kPitchLimit = std::numbers::pi / 2.0 - 0.001;

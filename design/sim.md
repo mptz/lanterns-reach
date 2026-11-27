@@ -755,9 +755,9 @@ with residency, degradation, the hard simulation and evaluation use cases in
   touches only adjacent chunks, and nothing needs the Vicinity for reads
   (`sim/concurrency-model`). Every bounded effect fits; only declared
   exceptions go beyond.
-- **In world units:** 64 cells × tick rate per second. At 20 Hz: 1,280 ft/s ≈
-  390 m/s. At 10 Hz: 640 ft/s ≈ 195 m/s. At the 60 Hz base tick of
-  `sim/multi-rate`, 3,840 ft/s ≈ 1,170 m/s. Either way it covers terminal
+- **In world units:** 64 cells × tick rate per second. At 20 Hz: 1,280 units/s ≈
+  390 m/s (at `world/voxel-scale`'s foot). At 10 Hz: 640 units/s ≈ 195 m/s. At the 60 Hz base tick of
+  `sim/multi-rate`, 3,840 units/s ≈ 1,170 m/s. Either way it covers terminal
   velocity (~55 m/s), fluid flow, thrown objects and arrows (50–100 m/s) and
   field/effect propagation. At low tick rates **sound is slowed** below its
   real 343 m/s (to ~57% at 10 Hz); accepted, because players won't notice a
@@ -765,7 +765,7 @@ with residency, degradation, the hard simulation and evaluation use cases in
 - **The limit is a ceiling; the effective speed is variable**. How fast
   information actually travels depends on how each
   subsystem is simulated: its rate (`sim/multi-rate`; a subsystem stepping
-  at 20 Hz moves information at most 1,280 ft/s), skipped steps
+  at 20 Hz moves information at most 1,280 units/s), skipped steps
   (`sim/subsystem-rate-degradation`), and whether a chunk is simulated at
   all. Unsimulated chunks already implied this; the rule turns a hard drop
   to zero into a variable rate below the ceiling.

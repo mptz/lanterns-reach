@@ -7,7 +7,8 @@
 // f32 lives in rebase() below — nowhere else.
 //
 // Axis convention (coords/axis-convention): x = east, y = north, z = up;
-// right-handed. 1 unit ≈ 1 foot.
+// right-handed. Lengths are in units (one full-detail cell); a unit is about a
+// foot in the game world (world/voxel-scale).
 
 #include <cmath>
 #include <cstdint>

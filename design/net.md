@@ -116,7 +116,7 @@ assumes rather than restates.
     and per camera** — which is a second reason the server cannot do it: there is no
     single render origin, there is one per viewer.
   - **The wire carries authoritative/quantized values, NEVER f32.** Sending
-    absolute f32 world positions would reintroduce the ~1-foot-ULP edge error
+    absolute f32 world positions would reintroduce the ~1-unit-ULP edge error
     `core/f32-origin-relative` exists to prevent; each client rebases to its own
     f32 locally. Positions travel as an integer chunk coordinate plus a
     quantized local offset; the exact quantization is open

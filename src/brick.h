@@ -1,5 +1,5 @@
 #pragma once
-// A Brick (world/brick): the dense 1 ft representation of one chunk's cells.
+// A Brick (world/brick): the dense, full-detail representation of one chunk's cells.
 // Two representations, behind one interface:
 //   - uniform: one entry fills the Brick, no per-cell storage;
 //   - palette: bit-packed indices into a palette of entries, at an aligned
