@@ -86,6 +86,7 @@ int run(const RunOptions& opt, const Scenario& sc, bool validation, const BlockR
         DevUi::setMouseEnabled(!state.captured);
 
         ChunkWorld chunkWorld(registry);  // generator "empty": all air; the scene goes on top
+        chunkWorld.setMesher(sc.mesher);
         {
             std::vector<std::string> warnings;
             chunkWorld.applyBulk(sceneEdits(sc, registry, &warnings));
@@ -233,21 +234,13 @@ int run(const RunOptions& opt, const Scenario& sc, bool validation, const BlockR
             }
             if (!stale.empty() || lightsGeneration != world.generation()) {
                 const double t0 = glfwGetTime();
-                bool meshOk = true;
                 for (const ChunkId& id : stale) {
                     WorldMesh mesh = world.buildMesh(id);
                     orderTranslucentFaces(mesh, order, camera.position);
-                    if (sc.mergedQuad && !mergeTopFaces(mesh, kMergedQuadCell, kMergedQuadSize)) {
-                        std::fprintf(stderr, "[sandbox] error: --merged-quad: the stone floor region isn't one flat texture\n");
-                        rc = 1;
-                        meshOk = false;
-                        break;
-                    }
                     renderer.setWorldMesh(mesh);  // one chunk: the renderer holds one mesh
                     meshedChunks.insert(id);
                     meshStats = {(glfwGetTime() - t0) * 1000.0, mesh.indices.size() / 6, meshStats.rebuilds + 1};
                 }
-                if (!meshOk) break;
                 lights = lightsFromEmitters(world.emitters(), Renderer::kMaxPointLights);
                 lightsGeneration = world.generation();
             }

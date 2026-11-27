@@ -258,8 +258,10 @@ void parseInto(const json& j, Scenario& s, const std::string& directory, int dep
     }
     if (j.contains("render")) {
         const json& r = j["render"];
+        if (r.is_object() && r.contains("mergedQuad"))
+            fail("render.mergedQuad", "removed in v0.2.3 (the mesher merges quads itself); use render.mesher");
         onlyFields(r, "render", {"anisotropy", "variants", "glassFrames", "momentBias", "faceOrder", "oitView",
-                                 "mergedQuad"});
+                                 "mesher"});
         if (r.contains("anisotropy")) s.anisotropy = static_cast<float>(number(r["anisotropy"], "render.anisotropy"));
         if (r.contains("variants")) s.variants = boolean(r["variants"], "render.variants");
         if (r.contains("glassFrames")) s.glassFrames = boolean(r["glassFrames"], "render.glassFrames");
@@ -271,7 +273,12 @@ void parseInto(const json& j, Scenario& s, const std::string& directory, int dep
             s.faceOrder = *order;
         }
         if (r.contains("oitView")) s.oitView = static_cast<int>(integer(r["oitView"], "render.oitView", 0, 3));
-        if (r.contains("mergedQuad")) s.mergedQuad = boolean(r["mergedQuad"], "render.mergedQuad");
+        if (r.contains("mesher")) {
+            const std::string m = string(r["mesher"], "render.mesher");
+            const auto mesher = parseMesher(m);
+            if (!mesher) fail("render.mesher", "\"" + m + "\" is not greedy | unmerged | per-cell");
+            s.mesher = *mesher;
+        }
     }
     if (j.contains("tools")) {
         const json& t = j["tools"];

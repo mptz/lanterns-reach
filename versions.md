@@ -210,6 +210,38 @@ The chunk payload, single-threaded:
   Definitions stay JSON; the grammar-based loading arc comes later. *Claim: captures are identical, and every state round-trips
   through its definition ULID and named property values.* `world/brick`,
   `data/stable-identity`, `world/block-orientation`.
+  - **Also in v0.2.4: disposition the open items** (owner, 2026-11-27). Each
+    item gets a decision: done in v0.2.4, scheduled to a named release, or
+    dropped with the reason, recorded in `RELEASES.md`. Not every item needs
+    resolving here; none may be left without a disposition.
+    - *The owner's review of the Brick and chunk designs as they stand*
+      (`design/brick.md`, `design/chunk.md`, the v0.2.1–v0.2.3 code), and
+      the questions the owner set aside while v0.2.3 was built.
+    - *Mesher layering:* the bitmask mesher is `BlockState`-specific inside
+      the palette representation; whether to make it entry-agnostic
+      (class and appearance tables in, abstract quads out) before coarse
+      Bricks reuse it (v0.2.9).
+    - *Cracks at T-junctions in greedy meshes:* isolated pixels on lavapipe,
+      not perceptible to the owner on the GPU machine; enlarge merged quads
+      only, enlarge every opaque quad, or leave them; and the `log_columns`
+      tile flips at cell edges in merged quads (cause unconfirmed).
+    - *Merge key and materials:* material id is `type + 1`, so different
+      block types never merge and the orientation/material split counts are
+      near-trivial until materials are decoupled from types; and no two
+      distinct shipped states share a face payload, so that merge is tested
+      only by construction.
+    - *Reverse lookup:* the scalar scan (threshold 8) against a SIMD scan;
+      16-bit table slots for palettes under 2¹⁶ entries.
+    - *Sub-byte widths (1, 2, 4 bits):* keep or drop once worldgen shows
+      where chunks sit (the owner expects 8 bits).
+    - *Per-cell reads through a virtual call* (the per-cell mesher,
+      raycasts, `probe`): 13–42% on per-cell meshing since v0.2.1.
+    - *Discretionary compaction* stays in `world/brick` for chunk actors
+      (v0.2.23): confirm, or remove it from the design.
+    - *Measurements on the second reference machine* (v0.2.1–v0.2.3), which
+      the owner did not gate those releases on.
+    - *Profiling:* flat `perf` profiles work; call graphs need
+      `kernel.perf_event_mlock_kb` raised or a frame-pointer build.
 - **v0.2.5 Packed quads, translucent merging and a cutout block:** a packed
   quad format (8 bytes per quad, positions pulled in the vertex shader
   from the quad's corner and size) replacing the four-vertex quad, with
@@ -754,7 +786,9 @@ Display-required:
 - The v0.1 scene chunk's width, palette size and live entries.
 
 ## v0.2.3 — Greedy meshing per representation
-- Status: SPECIFIED 2026-11-15, not started. Depends on v0.2.2.
+- Status: **BUILT 2026-11-27.** Headless criteria pass (cracks at
+  T-junctions deferred by the owner, `RELEASES.md`); criterion 10's F3 check
+  pending. Depends on v0.2.2.
 - **Claim:** each representation meshes a chunk its own way, and the result
   covers exactly the faces the per-cell rule emits, each with the appearance
   the per-cell rule gives it, while merging coplanar faces of identical

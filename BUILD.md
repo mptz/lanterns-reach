@@ -51,7 +51,7 @@ Out-of-source trees are `build-debug/` and `build-release/` (both gitignored):
 cmake -S . -B build-debug   -G Ninja -DCMAKE_BUILD_TYPE=Debug
 cmake -S . -B build-release -G Ninja -DCMAKE_BUILD_TYPE=Release
 cmake --build build-debug
-ctest --test-dir build-debug -j4        # 8 tests; Release has 7
+ctest --test-dir build-debug -j8        # 16 tests; Release has 15
 ```
 
 The build uses `-Werror` with `-Wall -Wextra -Wpedantic -Wshadow -Wconversion`
@@ -74,8 +74,10 @@ shipped scenarios). Esc quits; Tab toggles mouse capture.
 ## Headless checks
 
 ```
-tools/headless_check.sh build-debug [out-dir]   # about 3 minutes
+tools/headless_check.sh build-debug [out-dir] [mesher]   # about 3 minutes
 ```
+
+With a mesher (`greedy`, `unmerged`, `per-cell`), every scenario runs under it.
 
 Runs every scenario under `scenarios/headless/` on Mesa lavapipe inside Xvfb,
 screenshotting each, plus the order-invariance, determinism, merged-quad and
@@ -88,7 +90,20 @@ reachable. To compare captures between builds, use
 ## Measurements
 
 ```
-build-release/sandbox_tests --time-mesh   # time to mesh a full 64³ chunk
+build-release/sandbox_tests --time-meshers  # greedy, unmerged, per-cell: time, phases, sizes
+build-release/sandbox_tests --time-mesh   # time to mesh a full 64³ chunk (per-cell)
 build-release/sandbox_tests --time-chunk  # edits, growth, compaction, the digest, memory
 build-release/sandbox_tests --long        # the tests with the longer equivalence run
 ```
+
+## Finding slow or hung tests
+Every mesh-equivalence case is its own `ctest` entry with a timeout, and
+`sandbox_tests --mesh-case=N` runs one. To see where a slow run spends its
+time:
+```
+perf record -F 500 -o /tmp/perf.data build-release/sandbox_tests --mesh-case=4
+perf report -i /tmp/perf.data --stdio          # flat profile
+tools/sample_stacks.sh -n 20 -- build-debug/sandbox_tests --mesh-case=4   # gdb stack samples
+```
+`perf` needs `kernel.perf_event_paranoid` at 2 or below; call graphs
+(`--call-graph dwarf`) also need `kernel.perf_event_mlock_kb` raised.

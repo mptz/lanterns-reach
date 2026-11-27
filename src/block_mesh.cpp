@@ -3,7 +3,6 @@
 #include "cube.h"
 
 #include <cmath>
-#include <optional>
 
 namespace shader {
 using namespace glm;
@@ -52,45 +51,4 @@ void appendFace(std::vector<MeshVertex>& vertices, std::vector<std::uint32_t>& i
         vertices.push_back({corner + v.pos * scale + glm::vec3(0.5f), v.normal, tex.layer, materialId, info});
     }
     for (std::uint32_t i : {0u, 1u, 2u, 0u, 2u, 3u}) indices.push_back(base + i);
-}
-
-bool mergeTopFaces(WorldMesh& mesh, const CellPos& minCell, int size) {
-    // Mesh-relative corner of the region; the +z faces lie at z = minCell.z + 1.
-    const glm::dvec3 lo = cellCorner(minCell) - mesh.origin;
-    const glm::vec3 lo3(lo);
-    std::vector<bool> drop(mesh.vertices.size() / 4, false);
-    std::optional<MeshVertex> first;
-    int found = 0;
-    for (std::size_t q = 0; q < drop.size(); ++q) {
-        const MeshVertex& v = mesh.vertices[q * 4];
-        if (v.normal.z < 0.5f) continue;
-        glm::vec3 c(0.0f);
-        for (std::size_t k = 0; k < 4; ++k) c += mesh.vertices[q * 4 + k].pos * 0.25f;
-        const glm::vec3 d = c - lo3;
-        const float sz = static_cast<float>(size);
-        if (std::abs(d.z - 1.0f) > 1e-4f || d.x < 0.0f || d.y < 0.0f || d.x > sz || d.y > sz) continue;
-        if (first && (v.layer != first->layer || v.material != first->material || v.texInfo != first->texInfo)) return false;
-        first = v;
-        drop[q] = true;
-        ++found;
-    }
-    if (found != size * size) return false;
-    std::vector<MeshVertex> verts;
-    std::vector<std::uint32_t> idx;
-    for (std::size_t q = 0; q < drop.size(); ++q) {
-        if (drop[q]) continue;
-        const auto base = static_cast<std::uint32_t>(verts.size());
-        for (std::size_t k = 0; k < 4; ++k) verts.push_back(mesh.vertices[q * 4 + k]);
-        for (std::uint32_t i : {0u, 1u, 2u, 0u, 2u, 3u}) idx.push_back(base + i);
-    }
-    // One quad, wound CCW about +z like the cube's own faces.
-    const float s = static_cast<float>(size), z = lo3.z + 1.0f;
-    const auto base = static_cast<std::uint32_t>(verts.size());
-    for (const glm::vec2 corner : {glm::vec2(0, 0), glm::vec2(s, 0), glm::vec2(s, s), glm::vec2(0, s)})
-        verts.push_back({glm::vec3(lo3.x + corner.x, lo3.y + corner.y, z), glm::vec3(0, 0, 1), first->layer,
-                         first->material, first->texInfo});
-    for (std::uint32_t i : {0u, 1u, 2u, 0u, 2u, 3u}) idx.push_back(base + i);
-    mesh.vertices = std::move(verts);
-    mesh.indices = std::move(idx);
-    return true;
 }

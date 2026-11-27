@@ -50,7 +50,7 @@ All optional. Coordinates are world cells or positions (z up).
 | `render.momentBias` | MBOIT moment bias | 5e-4 |
 | `render.faceOrder` | translucent face order: `forward`, `reverse`, `shuffle:<seed>` | as built |
 | `render.oitView` | F9: 0 off, 1 absorbance, 2 moments b1 b2, 3 moments b3 b4 | 0 |
-| `render.mergedQuad` | replace the stone floor's top faces over cells x, y 2–5 with one quad (the per-fragment variant test) | false |
+| `render.mesher` | how chunks are meshed: `greedy` (bitmask mesher, coplanar faces of equal appearance merged), `unmerged` (the same path, one quad per face), `per-cell` (the reference rule). `render.mergedQuad` (v0.1.8's harness) is rejected | `greedy` |
 | `tools.patch`, `tools.consume` | the held container's patch size N (1–9) and the survival consumption rule | 1, false |
 | `events` | the timed input script (below) | none |
 | `frames` | run this many frames, then exit | see below |

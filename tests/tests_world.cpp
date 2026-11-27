@@ -77,13 +77,13 @@ void testChunkEditsMeshEmitters() {
     CHECK(g.generation() == gen0 + 1 && g.buildMesh(ChunkWorld::kChunk).indices == before.indices);
     CHECK(g.probe({1, 1, 1}) == solidState() && g.probe({65, 1, 1}).isAir() && g.probe({-1, 0, 0}).isAir());
 
-    auto faces = [](const WorldMesh& m) { return m.indices.size() / 6; };
+    auto faces = [](const WorldMesh& m) { return unitFaces(m).size(); };  // unit faces: the mesher may merge quads
     CHECK(faces(g.buildMesh(ChunkWorld::kChunk)) == 6);
     g.apply({{{{2, 1, 1}, solidState()}}});
     CHECK(faces(g.buildMesh(ChunkWorld::kChunk)) == 10);  // the shared face is culled on both sides
     g.apply({{{{0, 0, 0}, solidState()}}});
     CHECK(faces(g.buildMesh(ChunkWorld::kChunk)) == 16);  // at the chunk's corner: outside counts as air
-    const WorldMesh m = g.buildMesh(ChunkWorld::kChunk);
+    const WorldMesh m = meshWith(g, Mesher::PerCell);  // one quad per unit face: 4 vertices, 8 outline points each
     CHECK(m.vertices.size() == faces(m) * 4 && m.edgeLines.size() == faces(m) * 8);
     g.apply({{{{1, 1, 1}, BlockState::air()}}});
     CHECK(faces(g.buildMesh(ChunkWorld::kChunk)) == 12);

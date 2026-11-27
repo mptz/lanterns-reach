@@ -3,6 +3,9 @@
 // ±30% run to run. versions.md lists what each release measures.
 
 #include <chrono>
+#include <cmath>
+#include <map>
+#include <tuple>
 
 #include "test_support.h"
 
@@ -241,5 +244,126 @@ void timeChunkRepresentations() {
             const ChunkData& d = ChunkWorldTestAccess::chunk(w);
             std::printf("  width %u, palette %u, live %u\n", TA::width(d), TA::paletteSize(d), TA::liveEntries(d));
         }
+    }
+}
+
+// `sandbox_tests --time-meshers` (versions.md v0.2.3, measurements): for each
+// case and mesher, the median time per mesh and, for the bitmask path, where
+// it went; quads, vertices and bytes; the merge ratio (unit faces per quad);
+// the working state's size; and, in the v0.1 scene, how many coplanar
+// neighbouring faces could not merge because of orientation or material.
+void timeMeshers() {
+    struct Shape {
+        const char* name;
+        Cells cells;
+    };
+    std::vector<Shape> shapes;
+    std::mt19937_64 rng(77);
+    {
+        std::string err;
+        const auto scene = loadScenario(SANDBOX_SCENARIO_DIR "/v0.1-scene.json", err);
+        ChunkWorld w(registry());
+        if (scene) {
+            std::vector<std::string> warnings;
+            w.applyBulk(sceneEdits(*scene, registry(), &warnings));
+        }
+        Cells c(kBrickCells);
+        for (std::uint32_t i = 0; i < kBrickCells; ++i) c[i] = ChunkWorldTestAccess::chunk(w).get(localOfIndex(i));
+        shapes.push_back({"v0.1 scene", c});
+    }
+    shapes.push_back({"uniform solid", Cells(kBrickCells, solidState())});
+    {
+        Cells c(kBrickCells, BlockState::air());  // a heightmap: stone, dirt, grass
+        const BlockState stone = solidState(), dirt{typeOf("dirt"), orient::kIdentity}, grass{typeOf("grass"), orient::kIdentity};
+        for (int y = 0; y < 64; ++y)
+            for (int x = 0; x < 64; ++x) {
+                const int top = 24 + static_cast<int>(8.0 * std::sin(x * 0.15) * std::cos(y * 0.11)) + static_cast<int>(rng() % 2);
+                for (int z = 0; z <= top; ++z)
+                    c[static_cast<std::size_t>(brickCellIndex(x, y, z))] = z == top ? grass : z > top - 3 ? dirt : stone;
+            }
+        shapes.push_back({"heightmap", c});
+    }
+    {
+        Cells c(kBrickCells, BlockState::air());
+        for (std::uint32_t i = 0; i < kBrickCells; ++i) {
+            const glm::ivec3 l = localOfIndex(i);
+            if ((l.x + l.y + l.z) % 2 == 0) c[i] = solidState();
+        }
+        shapes.push_back({"checkerboard", c});
+    }
+    {
+        Cells c(kBrickCells, BlockState::air());  // random, many states, opaque and translucent
+        for (auto& s : c) s = rng() % 3 == 0 ? testState(1 + static_cast<std::uint32_t>(rng() % (validStateCount() - 1))) : BlockState::air();
+        shapes.push_back({"random, many states", c});
+    }
+
+    MeshTimings phases;
+    std::printf("Mesh time per chunk (ms, median of 7) and size, by mesher:\n");
+    std::printf("  %-20s %-9s %9s %8s %8s %9s %8s\n", "case", "mesher", "ms", "quads", "transl.", "KiB", "faces/q");
+    for (const Shape& sh : shapes) {
+        ChunkData d;
+        fillChunk(d, sh.cells, true);
+        for (Mesher m : {Mesher::Greedy, Mesher::Unmerged, Mesher::PerCell}) {
+            std::vector<double> ms;
+            WorldMesh last;
+            for (int rep = 0; rep < 7; ++rep) {
+                WorldMesh out;
+                const auto t0 = Clock::now();
+                d.meshInto(testContext(), ChunkWorld::kChunk, m, out);
+                ms.push_back(msSince(t0));
+                last = std::move(out);
+            }
+            const std::size_t quads = last.indices.size() / 6, tq = last.translucentIndices.size() / 6;
+            const double kib = static_cast<double>((last.vertices.size() + last.translucentVertices.size()) * sizeof(MeshVertex) +
+                                                   (last.indices.size() + last.translucentIndices.size()) * 4) / 1024.0;
+            const std::size_t faces = unitFaces(last).size();
+            std::printf("  %-20s %-9s %9.3f %8zu %8zu %9.1f %8.2f\n", sh.name, mesherName(m), median(ms), quads, tq, kib,
+                        quads + tq ? static_cast<double>(faces) / static_cast<double>(quads + tq) : 0.0);
+        }
+        // Where the greedy mesh's time goes (one more mesh, timed by phase; the
+        // timers themselves cost a little).
+        phases = {};
+        setMeshTimings(&phases);
+        for (int rep = 0; rep < 7; ++rep) {
+            WorldMesh out;
+            d.meshInto(testContext(), ChunkWorld::kChunk, Mesher::Greedy, out);
+        }
+        setMeshTimings(nullptr);
+        std::printf("  %-20s   greedy phases (ms, mean): masks %.3f, culling %.3f, transposes %.3f, merging %.3f, emission %.3f\n",
+                    "", phases.masks / 7, phases.culling / 7, phases.transposes / 7, phases.merging / 7, phases.emission / 7);
+    }
+    std::printf("\nWorking state on this thread after the cases: %zu bytes (%zu allocations)\n", meshWorkingBytes(),
+                meshWorkingAllocations());
+
+    // Merges split by orientation or material in the v0.1 scene: coplanar
+    // neighbouring opaque faces (the next cell along either in-plane axis has
+    // a face in the same direction) whose payloads differ.
+    {
+        ChunkData d;
+        fillChunk(d, shapes[0].cells, true);
+        WorldMesh out;
+        d.meshInto(testContext(), ChunkWorld::kChunk, Mesher::PerCell, out);
+        std::map<std::tuple<int, int, int, int>, FacePayload> faces;
+        for (const UnitFace& f : unitFaces(out))
+            if (!f.translucent) faces[{f.x, f.y, f.z, f.dir}] = f.payload;
+        constexpr int kBit[6] = {1, 1, 0, 0, 0, 0}, kRow[6] = {2, 2, 2, 2, 1, 1};
+        std::size_t same = 0, byTurn = 0, byMaterial = 0, other = 0;
+        for (const auto& [key, p] : faces) {
+            const auto [x, y, z, dir] = key;
+            for (int axis : {kBit[dir], kRow[dir]}) {
+                int n[3] = {x, y, z};
+                ++n[axis];
+                const auto it = faces.find({n[0], n[1], n[2], dir});
+                if (it == faces.end()) continue;
+                const FacePayload& q = it->second;
+                if (p == q) ++same;
+                else if (p.layer == q.layer && p.material == q.material && p.texInfo != q.texInfo) ++byTurn;
+                else if (p.layer == q.layer && p.texInfo == q.texInfo && p.material != q.material) ++byMaterial;
+                else ++other;
+            }
+        }
+        std::printf("\nv0.1 scene, coplanar neighbouring opaque faces: %zu with equal payload (mergeable), %zu split by "
+                    "orientation (same layer and material, different turn or set), %zu by material only, %zu different textures\n",
+                    same, byTurn, byMaterial, other);
     }
 }

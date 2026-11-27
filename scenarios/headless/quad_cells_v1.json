@@ -15,5 +15,8 @@
   },
   "view": {
     "buffer": "lit"
+  },
+  "render": {
+    "mesher": "per-cell"
   }
 }

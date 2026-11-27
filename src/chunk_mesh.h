@@ -1,14 +1,25 @@
 #pragma once
-// Per-cell meshing of one chunk (world/chunk-meshing): the v0.1 rule over the
-// chunk's cells, with everything outside the chunk treated as air. It reads
-// the chunk through its interface only, so it gives the same mesh for the same
-// content in any representation (rep-swap invariance). Greedy and bitmask
-// meshing arrive in v0.2.3.
+// Meshing a chunk (world/chunk-meshing). Three meshers share one face rule: a
+// cell emits a face wherever its neighbour doesn't cover it, with everything
+// outside the chunk treated as air (isolated meshing).
+//   - the per-cell rule, `meshPerCell`: the reference, reading cells through
+//     the chunk's interface, so it works over any representation;
+//   - the bitmask mesher (bitmask_mesh.h), run by each representation, which
+//     culls with word operations and merges coplanar faces of equal
+//     appearance.
+// `ChunkData::meshInto` picks one.
 
+#include "appearance.h"
 #include "blocks.h"
 #include "chunk.h"
 #include "world_query.h"
 
-// Positions are relative to the chunk's minimum corner, which is the mesh
-// origin. Uniform air meshes to nothing without visiting a cell.
-WorldMesh meshChunkPerCell(const BlockRegistry& registry, const ChunkData& chunk, const ChunkId& id);
+// What meshing needs besides cells: the block definitions and the faces'
+// appearance ids.
+struct MeshContext {
+    const BlockRegistry& registry;
+    const AppearanceTable& appearance;
+};
+
+// Appends the per-cell rule's faces for the chunk to `out`, in cell order.
+void meshPerCell(const MeshContext& context, const ChunkData& chunk, const ChunkId& id, WorldMesh& out);

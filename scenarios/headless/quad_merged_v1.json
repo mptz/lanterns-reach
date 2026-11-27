@@ -17,6 +17,6 @@
     "buffer": "lit"
   },
   "render": {
-    "mergedQuad": true
+    "mesher": "greedy"
   }
 }

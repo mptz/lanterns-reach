@@ -340,3 +340,136 @@ No behaviour change: the 65 headless captures match v0.2.2's, and the tests pass
 - **`ctest`** has `sandbox_equivalence` apart from `sandbox_tests`, so they run
   together under `-j` (Debug: 24 s instead of 28). `no_dense_grid` is retired.
 - **`prototypes/` moved to `attic/prototypes/`.**
+
+## v0.2.3 (built 2026-11-27; owner confirmation of F3 pending)
+
+Greedy bitmask meshing per representation, `render.mesher`, and the
+merged-quad harness retired.
+
+### Choices
+- **The mesher is chunk code, `BlockState`-specific, inside the palette
+  representation** (owner, 2026-11-26): `bitmask_mesh.cpp` is instantiated
+  per index width and reads the Brick's packed words directly (one virtual
+  dispatch per mesh, none per cell). Making it entry-agnostic for coarse
+  Bricks is dispositioned in v0.2.4. Measured before choosing, for the
+  opaque mask alone: a virtual call per cell 0.43–0.47 ms, export to an
+  array 0.21–0.26, a fused loop per width 0.09–0.18.
+- **Dispatch** (`ChunkData::meshInto`, append-only): `per-cell` reads cells
+  through the chunk's interface (the reference); otherwise uniform air
+  emits nothing and touches no working state, uniform opaque emits six
+  64×64 quads with no masks, uniform translucent runs the translucent pass
+  with an all-ones group mask, and a palette runs the bitmask mesher.
+- **Appearance ids** (`appearance.h`): every registry type × 24
+  orientations × 6 faces, interned once per `ChunkWorld` over the payload
+  (layer, material, packed texInfo). A stand-in until v0.2.4's state table.
+- **Translucent faces** are emitted one quad per face in the per-cell rule's
+  order: per row, every group's six face words are combined and the set
+  bits visited in ascending x, each cell's faces in face order. Frame bits
+  come from the masks, not from `frameBits`. Translucent output is
+  byte-identical to the per-cell rule's.
+- **What "byte-identical" covers:** origin, vertices, indices, translucent
+  vertices and indices, and edge lines, in order. It holds across every
+  representation and width for one mesher. The per-cell and bitmask meshers
+  order opaque quads differently (cell order against direction, slice,
+  row), so between meshers the opaque comparison is the unit-face multiset.
+- **Uniform translucent** emits 24,576 unit quads (one per boundary face),
+  as its palette form does.
+- **Quad geometry:** a quad's four vertices follow the unit cube's corner
+  order scaled along the face's bit and row axes, so a 1×1 quad is exactly
+  the per-cell rule's face (the `unmerged` captures are pixel-identical).
+- **Working state:** one `thread_local` struct (masks, ±x planes, per-entry
+  tables, group masks), grown only for a larger palette or more groups;
+  198 KB after the measurement cases. Re-entry on one thread is fatal.
+  `MeshTimings` is an optional per-thread hook for the phase breakdown.
+- **`render.mesher`** (`greedy` default, `unmerged`, `per-cell`) is a field
+  of `ChunkWorld`, not of the `WorldQuery` seam. `render.mergedQuad` is
+  rejected naming it; `mergeTopFaces` and its region constants are gone; the
+  `quad_*` pairs compare `per-cell` against `greedy`.
+- **`tools/headless_check.sh` takes a mesher** as a third argument and runs
+  every scenario under it through a wrapper that includes the real one.
+
+### Deviations from the spec, with the owner's decisions
+- **Pinhole cracks at T-junctions** in `greedy` captures: isolated pixels,
+  1–22 per capture on lavapipe, where the sky or a surface behind shows
+  through. The `quad_*` pairs differ in 5 pixels (variant view) and 6 over
+  1/255 (lit, up to 61/255). Not perceptible to the owner on the GPU
+  machine. Owner's choice (2026-11-27): defer the fix (enlarging merged or
+  all opaque quads) until more of the architecture is in place, and
+  disposition it in v0.2.4. The `quad_*` comparisons therefore allow a
+  recorded budget of 16 pixels over their tolerance (`imgdiff.py --allow`),
+  so a real regression still fails.
+- **`log_columns`: 216 pixels over 1/255** with `greedy`. The `unmerged`
+  capture matches the reference exactly, and the differing pixels sit where
+  the reference has high local contrast (median neighbour contrast 13
+  against 5 for random geometry pixels). That is consistent with merged
+  quads interpolating position across cell boundaries, so that `floor(pos)`
+  picks the neighbouring cell's matched bark tile. Cause not fully
+  confirmed; dispositioned in v0.2.4.
+
+### Tests
+- **Face sets** (`tests_meshing.cpp`): faces at every corner and face centre
+  against outside air; runs at bit 0, bit 63 and the full width, rows 0 and
+  63; a 64×64 plane to one quad; a checkerboard to one quad per face; two
+  log orientations with different turns not merging; `random` and `matched`
+  faces merging; glass against stone; frame bits from masks equal the
+  per-cell rule's on the v0.1 scene and a three-glass blob; the transpose.
+  Two cases are vacuous on shipped blocks and say so when run: no two
+  distinct states share a face payload, and no two block types share a face
+  texture (materials are per type).
+- **Uniform fast paths, working state, a second `std::thread`, append-only
+  output** (acceptance 6–8).
+- **Mesh equivalence and rep-swap invariance**
+  (`tests_mesh_equivalence.cpp`): eight fixed cases (sparse, medium, dense,
+  terrain, boxes, uniform solid and glass, two states), each in the widths
+  that hold it, built by edits (dead entries) and with renumbered entries,
+  before and after random edits. Greedy and unmerged equal the per-cell
+  rule's unit faces and translucent bytes, and every copy meshes to the
+  bulk fill's bytes. Each case is its own `ctest` entry
+  (`mesh_equivalence_N`, timeout 600 s); `sandbox_tests --mesh-case=N` runs
+  one. `--long` adds 24 random cases at every width.
+- **A slow test that was a bug:** the first version of case 7 asked for 300
+  distinct states from a registry of about 100, and its loop drawing them
+  never ended (the suite ran 30 minutes before it was stopped). Found by
+  running each case alone in parallel under a timeout, then taking gdb
+  stack samples (`tools/sample_stacks.sh`). Fixed by capping the draw at the
+  registry's size; dense content is now a corner region.
+
+### Measurements (this machine, Release, Clang 19; `sandbox_tests --time-meshers`)
+| Case | greedy ms | unmerged ms | per-cell ms | greedy quads (+ translucent) | unit faces per quad |
+|---|---|---|---|---|---|
+| v0.1 scene | 0.63 | 1.12 | 2.55 | 163 (+132) | 17.0 |
+| uniform solid | 0.002 | 3.9 | 17.9 | 6 | 4,096 |
+| heightmap (stone, dirt, grass) | 1.63 | 3.27 | 11.2 | 6,880 | 2.97 |
+| checkerboard | 152 | 147 | 154 | 786,432 | 1.00 |
+| random, many states | 71 | 76 | 83 | 330,674 (+50,418) | 1.01 |
+
+- **Phases** (greedy, ms): v0.1 scene masks 0.37, culling 0.22, transposes
+  0.04, merging 0.03, emission 0.12; heightmap 0.52 / 0.10 / 0.05 / 0.37 /
+  0.83. In the worst cases emission dominates (checkerboard 161 of about
+  190 ms with timers on): about 200 ns per quad, growing the four-vertex,
+  28-byte-per-vertex output and its outline lines (130 MB for the
+  checkerboard). That is the cost v0.2.5's 8-byte packed quads address;
+  masks and culling stay under 2 ms in every case.
+- **Bytes per mesh:** 48 KiB greedy against 824 KiB unmerged for the v0.1
+  scene; 1 KiB against 4 MiB for a uniform solid.
+- **Working state:** 198 KB after all cases.
+- **v0.1 scene, coplanar neighbouring opaque faces:** 8,792 with equal
+  payload, 0 split by orientation, 0 by material alone, 230 with different
+  textures. The scene has no rotated blocks side by side, so it doesn't test
+  `world/block-orientation`'s expectation.
+- Only one reference machine was measured.
+
+### Acceptance status (v0.2.3)
+| # | Criterion | Status |
+|---|---|---|
+| 1 | Build + ctest, Debug and Release, Clang, `-Werror`, zero warnings | ✅ (16 tests Debug, 31 s with `-j8`; 15 Release, 6 s) |
+| 2 | `per-cell` and `unmerged` identical to v0.2.2; `greedy` within 1/255 on diagonals and F3 outlines; absorbance with every mesher | ✅ for `per-cell`, `unmerged` and absorbance; `greedy` also shows the deferred cracks and the `log_columns` flips (above) |
+| 3 | Face-set equivalence, fixed seeds in ctest and a longer run | ✅ (`--long` passes) |
+| 4 | Rep-swap invariance | ✅ |
+| 5 | Unit tests | ✅ (two vacuous on shipped blocks, noted) |
+| 6 | Uniform fast paths | ✅ |
+| 7 | Working state; a second thread | ✅ |
+| 8 | Append-only | ✅ |
+| 9 | `render.mergedQuad` rejected; `quad_*` comparisons | ✅ rejected; comparisons pass within the recorded crack budget |
+| 10 | Plays unchanged; F3 shows merged quads | plays unchanged ✅ owner; F3 pending |
+| 11 | No cracks or sparkles at T-junctions | ✅ owner: not perceptible on the GPU machine |

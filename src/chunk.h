@@ -18,9 +18,12 @@
 #include "brick.h"
 #include "chunk_coord.h"
 #include "digest.h"
+#include "mesher.h"
 #include "reverse_lookup.h"
 
 struct ChunkTestAccess;
+struct MeshContext;
+struct WorldMesh;
 
 class ChunkData {
 public:
@@ -47,6 +50,14 @@ public:
     // one pass, then maintained per edit. Equal for equal content, whatever
     // the representation or width.
     std::uint64_t digest() const;
+
+    // Appends the chunk's faces to `out` (positions relative to the chunk's
+    // minimum corner, which becomes the mesh origin). Each representation
+    // meshes its own way: uniform air emits nothing, a uniform solid its six
+    // sides, a palette the bitmask mesher; `PerCell` is the reference over
+    // any of them. Only appends: whatever `out` holds is never read, moved or
+    // changed. Defined in chunk_mesh.cpp.
+    void meshInto(const MeshContext& context, const ChunkId& id, Mesher mesher, WorldMesh& out) const;
 
     // Ends a bulk fill (the `empty` generator, a scenario's scene applied as
     // one edit set): compacts, so the chunk is uniform if one state remains,

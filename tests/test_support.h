@@ -25,6 +25,7 @@
 #include "camera.h"
 #include "check.h"
 #include "chunk.h"
+#include "bitmask_mesh.h"
 #include "chunk_mesh.h"
 #include "chunk_world.h"
 #include "digest.h"
@@ -69,6 +70,35 @@ Cells distinctContent(std::uint32_t n, std::uint32_t base);
 // growth on the way); finish=true then ends it like a bulk fill (compaction).
 void fillChunk(ChunkData& data, const Cells& cells, bool finish);
 
+// What meshing needs besides cells: the registry and its appearance table.
+const AppearanceTable& testAppearance();
+MeshContext testContext();
+
+// A mesh as its multiset of unit faces (cell, direction, payload, which mesh),
+// sorted: a merged quad contributes one per cell it covers, so an overlapping
+// or missing quad shows as a difference. A quad that isn't an axis-aligned
+// rectangle wound outward is reported as one face with direction −1.
+struct UnitFace {
+    int x = 0, y = 0, z = 0;
+    int dir = 0;  // 0..5 as orient::Face, −1: malformed quad
+    bool translucent = false;
+    FacePayload payload;
+    constexpr auto operator<=>(const UnitFace&) const = default;
+};
+std::vector<UnitFace> unitFaces(const WorldMesh& mesh);
+// The mesh's quads (opaque and translucent) as {width, height} along each
+// face's axes (unit faces are 1×1), for tests of what merges.
+struct QuadSize {
+    int dir = 0, w = 0, h = 0;
+    bool operator==(const QuadSize&) const = default;
+};
+std::vector<QuadSize> quadSizes(const WorldMesh& mesh);
+// A mesh of the world's chunk with the mesher, from scratch.
+WorldMesh meshWith(ChunkWorld& world, Mesher mesher);
+// The same bytes: vertices, indices, translucent vertices and indices, and
+// the edge lines, in order.
+bool sameMesh(const WorldMesh& a, const WorldMesh& b);
+
 // A world with the given cells set to stone.
 ChunkWorld worldWith(std::initializer_list<CellPos> solid);
 
@@ -78,11 +108,14 @@ void runOrientationTests();
 void runBlocksTests();
 void runShadingTests();
 void runWorldTests();
+void runMeshingTests();
+void runMeshEquivalenceTests(bool longRun, int onlyCase = -1);  // onlyCase: a fixed case's seed
 void runDigestTests();
 void runRepresentationTests();
 void runEquivalenceTests(bool longRun);
 void timeChunkMesh();             // sandbox_tests --time-mesh
 void timeChunkRepresentations();  // sandbox_tests --time-chunk
+void timeMeshers();               // sandbox_tests --time-meshers
 void runPlacementTests();
 void runInputTests();
 void runTranslucencyTests();

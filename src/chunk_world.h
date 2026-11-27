@@ -11,6 +11,7 @@
 #include <tuple>
 #include <vector>
 
+#include "appearance.h"
 #include "chunk.h"
 #include "world_query.h"
 
@@ -19,6 +20,10 @@ public:
     // The registry must outlive the world (meshing reads its face tables and
     // materials). The world starts as air (the `empty` generator).
     explicit ChunkWorld(const BlockRegistry& registry);
+
+    // How `buildMesh` meshes (the scenario's `render.mesher`): greedy by default.
+    void setMesher(Mesher m) { mesher_ = m; }
+    Mesher mesher() const { return mesher_; }
 
     std::optional<RayHit> raycast(const WorldPos& origin, const glm::dvec3& dir, double maxDistance) const override;
     BlockState probe(const CellPos& cell) const override;
@@ -42,6 +47,8 @@ private:
     glm::vec3 emission(const BlockState& s) const;
 
     const BlockRegistry& registry_;
+    AppearanceTable appearance_;  // the merge key: every face's appearance id
+    Mesher mesher_ = Mesher::Greedy;
     ChunkData chunk_;
     // The cells that emit, maintained per edit (core/opaque-chunk-queries:
     // a public answer is O(1) or O(surface), never O(volume)), in z, y, x

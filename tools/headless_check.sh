@@ -8,10 +8,16 @@
 # missing-validation-layer check, screenshotting the window mid-run. Every
 # run must exit 0 (no validation errors, incl. sync validation).
 #
-# usage: tools/headless_check.sh [build-dir] [out-dir]
+# usage: tools/headless_check.sh [build-dir] [out-dir] [mesher]
+#
+# With a mesher (greedy | unmerged | per-cell), every scenario runs under it
+# through a small wrapper that includes the real one and sets render.mesher;
+# the comparisons that fix their own mesher (the quad_* pairs) are skipped.
+# Without, scenarios run as written (greedy unless they say otherwise).
 set -euo pipefail
 BIN="${1:-build-debug}/sandbox"
 OUT="${2:-build-debug/headless}"
+MESHER="${3:-}"
 mkdir -p "$OUT"
 export VK_DRIVER_FILES="${VK_DRIVER_FILES:-/usr/share/vulkan/icd.d/lvp_icd.json}"
 
@@ -31,13 +37,20 @@ SCN="$(dirname "$0")/../scenarios"
 # event settles (the engine's rule: 20 frames past the last event, 60 past a
 # resize, at least 60; or the scenario's `frames`), writing its own final
 # image (--capture, UI included). Validation covers every frame that runs.
+scenario_for() {  # path: the scenario to run, wrapped when a mesher is forced
+    if [ -z "$MESHER" ]; then echo "$1"; return; fi
+    mkdir -p "$OUT/wrap"
+    local w="$OUT/wrap/$(basename "$1")"
+    printf '{"include": "%s", "render": {"mesher": "%s"}}\n' "$(realpath "$1")" "$MESHER" >"$w"
+    echo "$w"
+}
 shot() {  # name [capture-name]
     local name=$1 out=${2:-$1}
-    if "$BIN" --scenario "$SCN/headless/$name.json" --capture "$OUT/$out.png" >"$OUT/$out.log" 2>&1; then echo "PASS $out"
+    if "$BIN" --scenario "$(scenario_for "$SCN/headless/$name.json")" --capture "$OUT/$out.png" >"$OUT/$out.log" 2>&1; then echo "PASS $out"
     else echo "FAIL $out (see $OUT/$out.log)"; fail=1; fi
 }
-compare() {  # label, a, b, max
-    if python3 -I "$(dirname "$0")/imgdiff.py" "$2" "$3" --max "$4" >"$OUT/diff.txt"; then echo "PASS $1: $(cat "$OUT/diff.txt")"
+compare() {  # label, a, b, max [allowed pixels over max]
+    if python3 -I "$(dirname "$0")/imgdiff.py" "$2" "$3" --max "$4" --allow "${5:-0}" >"$OUT/diff.txt"; then echo "PASS $1: $(cat "$OUT/diff.txt")"
     else echo "FAIL $1: $(cat "$OUT/diff.txt")"; fail=1; fi
 }
 
@@ -56,10 +69,18 @@ done
 # faces it replaces.
 shot variant_run variant_run_a
 shot variant_run variant_run_b
-for q in quad_cells_v1 quad_merged_v1 quad_cells_v7 quad_merged_v7; do shot "$q"; done
 compare "variant runs a vs b" "$OUT/variant_run_a.png" "$OUT/variant_run_b.png" 0
-compare "merged quad (variant view)" "$OUT/quad_cells_v7.png" "$OUT/quad_merged_v7.png" 0
-compare "merged quad (lit)" "$OUT/quad_cells_v1.png" "$OUT/quad_merged_v1.png" 1
+# The quad_* pairs run the same view under the per-cell rule and under the
+# greedy mesher: merging is invisible by construction (variant view exactly,
+# lit within 1/255 along triangle diagonals), except for isolated pinhole
+# cracks at T-junctions between merged quads, a recorded budget of at most 16
+# pixels per view (RELEASES.md v0.2.3: 5 and 6 measured on lavapipe; not
+# perceptible on the GPU machine; their fix is dispositioned in v0.2.4).
+if [ -z "$MESHER" ]; then
+    for q in quad_cells_v1 quad_merged_v1 quad_cells_v7 quad_merged_v7; do shot "$q"; done
+    compare "merged quad (variant view)" "$OUT/quad_cells_v7.png" "$OUT/quad_merged_v7.png" 0 16
+    compare "merged quad (lit)" "$OUT/quad_cells_v1.png" "$OUT/quad_merged_v1.png" 1 16
+fi
 
 # Order invariance (v0.1.6): forward / reverse / three shuffles of the
 # translucent faces agree to within 1/255 per channel, and with preview
@@ -71,7 +92,7 @@ for o in reverse shuffle_1 shuffle_2 shuffle_3; do compare "order forward vs $o"
 
 # Absorbance matches Beer–Lambert, read back from the GPU: the v0.1 scene's
 # checks.absorbance cases.
-if "$BIN" --scenario "$SCN/v0.1-scene.json" --check-absorbance >"$OUT/absorbance.log" 2>&1; then
+if "$BIN" --scenario "$(scenario_for "$SCN/v0.1-scene.json")" --check-absorbance >"$OUT/absorbance.log" 2>&1; then
     echo "PASS absorbance ($(grep -c 'PASS' "$OUT/absorbance.log") checks)"
 else echo "FAIL absorbance (see $OUT/absorbance.log)"; fail=1; fi
 

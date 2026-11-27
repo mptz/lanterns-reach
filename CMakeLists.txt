@@ -167,6 +167,8 @@ add_library(sandbox_core STATIC
   src/blocks.cpp
   src/cube.cpp
   src/chunk.cpp
+  src/appearance.cpp
+  src/bitmask_mesh.cpp
   src/chunk_mesh.cpp
   src/chunk_world.cpp
   src/placement.cpp
@@ -238,10 +240,12 @@ add_executable(sandbox_tests
   tests/tests_digest.cpp
   tests/tests_representation.cpp
   tests/tests_equivalence.cpp
+  tests/tests_mesh_equivalence.cpp
   tests/tests_orientation.cpp
   tests/tests_blocks.cpp
   tests/tests_shading.cpp
   tests/tests_world.cpp
+  tests/tests_meshing.cpp
   tests/tests_placement.cpp
   tests/tests_input.cpp
   tests/tests_translucency.cpp
@@ -250,13 +254,22 @@ add_executable(sandbox_tests
   tests/measurements.cpp)
 target_include_directories(sandbox_tests PRIVATE tests shaders)  # tests include shaders/pbr.glsl as C++
 target_compile_options(sandbox_tests PRIVATE ${SANDBOX_WARNINGS})
-target_link_libraries(sandbox_tests PRIVATE sandbox_core)
+find_package(Threads REQUIRED)
+target_link_libraries(sandbox_tests PRIVATE sandbox_core Threads::Threads)
 target_compile_definitions(sandbox_tests PRIVATE SANDBOX_ASSET_DIR="${CMAKE_CURRENT_SOURCE_DIR}/assets"
                                                SANDBOX_SCENARIO_DIR="${CMAKE_CURRENT_SOURCE_DIR}/scenarios")
 # The randomized equivalence test is the long pole: its own ctest entry, so it
 # runs beside the rest under `ctest -j`.
 add_test(NAME sandbox_tests COMMAND sandbox_tests --skip-equivalence)
 add_test(NAME sandbox_equivalence COMMAND sandbox_tests --only-equivalence)
+# The mesh equivalence cases (versions.md v0.2.3 acceptance 3 and 4) one per
+# entry, so `ctest -j` spreads them. A timeout on each: a hang fails, not waits.
+set(MESH_EQUIVALENCE_CASES 1 2 3 4 5 6 7 8)
+foreach(n ${MESH_EQUIVALENCE_CASES})
+  add_test(NAME mesh_equivalence_${n} COMMAND sandbox_tests --mesh-case=${n})
+  set_tests_properties(mesh_equivalence_${n} PROPERTIES TIMEOUT 600)
+endforeach()
+set_tests_properties(sandbox_tests sandbox_equivalence PROPERTIES TIMEOUT 600)
 
 # Block definitions: the engine's --check-blocks is the one validator
 # (v0.1.8), checking structure only. It accepts every shipped definition and

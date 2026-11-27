@@ -1,5 +1,5 @@
 #pragma once
-// Textured block faces, shared by the world mesh (chunk_world.cpp) and the
+// Textured block faces, shared by the world mesh (chunk_mesh.cpp, bitmask_mesh.cpp) and the
 // preview ghosts (renderer.cpp), so a ghost shows exactly the faces the
 // placed block will: same texture layers, same turns, same orientation.
 
@@ -40,11 +40,3 @@ std::uint32_t connectedTile(std::uint32_t frameBits, std::uint32_t turn);
 // by that many blocks (ghosts enclose the block they replace).
 void appendFace(std::vector<MeshVertex>& vertices, std::vector<std::uint32_t>& indices, const FaceTexture& tex,
                 orient::Face face, glm::vec3 corner, std::uint32_t materialId, float inflate = 0.0f);
-
-// Test harness (v0.1.8, criterion 4): replaces the +z faces of the size×size
-// cells from `minCell` (all at minCell.z) in the opaque mesh with ONE quad
-// spanning them, as v0.2's merged faces will. Requires those faces to exist
-// with one texture and material; returns false (mesh unchanged) otherwise.
-// Rendered, it must look exactly like the unmerged faces: random and matched tiles are
-// chosen per fragment.
-bool mergeTopFaces(WorldMesh& mesh, const CellPos& minCell, int size);

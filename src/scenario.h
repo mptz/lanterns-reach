@@ -14,6 +14,7 @@
 
 #include "blocks.h"
 #include "coords.h"
+#include "mesher.h"
 #include "intentions.h"
 #include "translucency.h"
 #include "world_query.h"
@@ -68,7 +69,7 @@ struct Scenario {
     float momentBias = 5e-4f;  // as OitSettings
     FaceOrder faceOrder;
     int oitView = 0;
-    bool mergedQuad = false;
+    Mesher mesher = Mesher::Greedy;
     // tools
     int patch = 1;
     bool consume = false;

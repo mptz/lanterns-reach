@@ -1,8 +1,8 @@
 #pragma once
 // Harness checks that need the renderer: --check-absorbance (the OIT
 // absorbance read back at the centre pixel, compared with Beer–Lambert: σ ×
-// the analytic chord of that pixel's ray through each translucent cube) and
-// the --merged-quad region. The cases come from the scenario's `checks`.
+// the analytic chord of that pixel's ray through each translucent cube).
+// The cases come from the scenario's `checks`.
 
 #include <cstddef>
 #include <vector>
@@ -13,11 +13,6 @@
 #include "camera.h"
 #include "renderer.h"
 #include "scenario.h"
-
-// The merged-quad test region: inside the v0.1 scene's stone floor
-// (scenarios/v0.1-scene.json), 4×4 cells.
-inline constexpr CellPos kMergedQuadCell{2, 2, 15};
-inline constexpr int kMergedQuadSize = 4;
 
 class AbsorbanceCheck {
 public:

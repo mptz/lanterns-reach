@@ -14,7 +14,7 @@ constexpr double kInf = std::numeric_limits<double>::infinity();
 
 }  // namespace
 
-ChunkWorld::ChunkWorld(const BlockRegistry& registry) : registry_(registry) {}
+ChunkWorld::ChunkWorld(const BlockRegistry& registry) : registry_(registry), appearance_(registry) {}
 
 bool ChunkWorld::contains(const CellPos& c) const { return chunkOf(c) == kChunk.coord; }
 
@@ -135,9 +135,15 @@ std::vector<Emitter> ChunkWorld::emitters() const {
 
 WorldMesh ChunkWorld::buildMesh(const ChunkId& id) {
     static const ChunkData kAir;  // every chunk but the one is air
-    if (id != kChunk) return meshChunkPerCell(registry_, kAir, id);
+    WorldMesh mesh;
+    const MeshContext context{registry_, appearance_};
+    if (id != kChunk) {
+        kAir.meshInto(context, id, mesher_, mesh);
+        return mesh;
+    }
     meshedGeneration_ = generation_;
-    return meshChunkPerCell(registry_, chunk_, id);
+    chunk_.meshInto(context, id, mesher_, mesh);
+    return mesh;
 }
 
 ApplyResult ChunkWorld::applyBulk(const EditSet& edits) {

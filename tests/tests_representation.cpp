@@ -206,7 +206,8 @@ void testUniformMesh() {
     Cells all(kBrickCells, solidState());
     fillChunk(ChunkWorldTestAccess::chunk(w), all, true);
     CHECK(TA::isUniform(ChunkWorldTestAccess::chunk(w)));
-    CHECK(w.buildMesh(ChunkWorld::kChunk).indices.size() / 6 == 6 * 64 * 64);  // the shell
+    CHECK(w.buildMesh(ChunkWorld::kChunk).indices.size() / 6 == 6);  // six merged quads, 64×64
+    CHECK(unitFaces(w.buildMesh(ChunkWorld::kChunk)).size() == 6 * 64 * 64);  // the shell
     CHECK(w.probe({0, 0, 0}) == solidState() && w.probe({63, 63, 63}) == solidState());
 }
 

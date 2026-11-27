@@ -2,6 +2,7 @@
 
 #include <glm/vector_relational.hpp>
 
+#include "bitmask_mesh.h"
 #include "block_mesh.h"
 
 namespace {
@@ -59,10 +60,10 @@ std::uint32_t frameBits(const BlockRegistry& registry, const Probe& probe, const
 // (translucent). Vertex positions are relative to the chunk's minimum corner.
 } // namespace
 
-WorldMesh meshChunkPerCell(const BlockRegistry& registry, const ChunkData& chunk, const ChunkId& id) {
-    WorldMesh mesh;
+void meshPerCell(const MeshContext& context, const ChunkData& chunk, const ChunkId& id, WorldMesh& mesh) {
+    const BlockRegistry& registry = context.registry;
     mesh.origin = cellCorner(chunkOrigin(id.coord));
-    if (const auto u = chunk.uniformState(); u && u->isAir()) return mesh;  // uniform air meshes to nothing
+    if (const auto u = chunk.uniformState(); u && u->isAir()) return;  // uniform air meshes to nothing
     const Probe probe{chunk, id.coord};
     for (int z = 0; z < kChunkSize; ++z)
         for (int y = 0; y < kChunkSize; ++y)
@@ -101,6 +102,18 @@ WorldMesh meshChunkPerCell(const BlockRegistry& registry, const ChunkData& chunk
                     }
                 }
             }
-    return mesh;
 }
 
+void ChunkData::meshInto(const MeshContext& context, const ChunkId& id, Mesher mesher, WorldMesh& out) const {
+    out.origin = cellCorner(chunkOrigin(id.coord));
+    if (mesher == Mesher::PerCell) {
+        meshPerCell(context, *this, id, out);
+        return;
+    }
+    const bool merge = mesher == Mesher::Greedy;
+    if (const auto uniform = uniformState()) {
+        bitmaskMeshUniform(*uniform, context, id, merge, out);  // air emits nothing and touches no working state
+        return;
+    }
+    bitmaskMeshPalette(palette(), context, id, merge, out);
+}

@@ -23,7 +23,7 @@ void testScenarioParse() {
         "window": {"size": [800, 600], "resize": {"frame": 40, "size": [640, 480]}},
         "view": {"buffer": "variant", "overlays": ["stats", "editSet"], "preview": true},
         "render": {"anisotropy": 4, "variants": false, "glassFrames": false, "momentBias": 1e-3,
-                   "faceOrder": "shuffle:7", "oitView": 2, "mergedQuad": true},
+                   "faceOrder": "shuffle:7", "oitView": 2, "mesher": "unmerged"},
         "tools": {"patch": 3, "consume": true},
         "events": [{"frame": 5, "key": "x"}, {"frame": 2, "hold": "x", "until": 9, "shift": true},
                    {"frame": 7, "click": "right"}, {"frame": 8, "wheel": "down"}],
@@ -34,7 +34,7 @@ void testScenarioParse() {
     CHECK(s->generator == "empty" && s->scene.size() == 2 && s->scene[1].rotation == 8 && s->scene[1].from == CellPos{3, 4, 5});
     CHECK(s->camera.z == 3.5 && s->look.y == 5.0 && s->width == 800 && s->resizeFrame == 40L && s->resizeWidth == 640);
     CHECK(s->bufferView == 7 && s->overlay(Overlay::Stats) && s->overlay(Overlay::EditSet) && !s->overlay(Overlay::Bounds));
-    CHECK(s->preview && s->anisotropy == 4.0f && !s->variants && !s->glassFrames && s->oitView == 2 && s->mergedQuad);
+    CHECK(s->preview && s->anisotropy == 4.0f && !s->variants && !s->glassFrames && s->oitView == 2 && s->mesher == Mesher::Unmerged);
     CHECK(s->faceOrder.kind == FaceOrder::Kind::Shuffle && s->faceOrder.seed == 7 && s->patch == 3 && s->consume);
     CHECK(s->absorbance.size() == 1 && s->absorbance[0].cubes.size() == 1);
     // Events expand to raw press/release pairs, sorted by frame (stable):
@@ -49,6 +49,12 @@ void testScenarioParse() {
     const auto grid = parseScenario(R"({"world": {"grid": 16}})", ".", err);
     CHECK(!grid && err.find("world.grid") != std::string::npos && err.find("world.generator") != std::string::npos);
     CHECK(!parseScenario(R"({"world": {"generator": "flat"}})", ".", err) && err.find("world.generator") != std::string::npos);
+    // v0.1.8's merged-quad harness is gone: render.mergedQuad is rejected, naming its replacement.
+    const auto merged = parseScenario(R"({"render": {"mergedQuad": true}})", ".", err);
+    CHECK(!merged && err.find("render.mergedQuad") != std::string::npos && err.find("render.mesher") != std::string::npos);
+    CHECK(!parseScenario(R"({"render": {"mesher": "voxel"}})", ".", err) && err.find("render.mesher") != std::string::npos);
+    const auto def = parseScenario("{}", ".", err);
+    CHECK(def && def->mesher == Mesher::Greedy);
     // Unknown fields, keys and buttons are errors naming the field.
     struct Bad { const char* text; const char* where; };
     for (const Bad& b : {Bad{R"({"camera": {"pos": [0,0,0], "zoom": 2}})", "camera.zoom"},

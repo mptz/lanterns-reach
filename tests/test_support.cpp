@@ -98,3 +98,106 @@ void fillChunk(ChunkData& data, const Cells& cells, bool finish) {
     for (std::uint32_t c = 0; c < kBrickCells; ++c) data.set(localOfIndex(c), cells[c]);
     if (finish) data.finishBulkFill();
 }
+
+namespace {
+// The face axes as the mesher's planes use them (bit axis, row axis).
+constexpr int kTestBitAxis[6] = {1, 1, 0, 0, 0, 0};
+constexpr int kTestRowAxis[6] = {2, 2, 2, 2, 1, 1};
+
+void decompose(const std::vector<MeshVertex>& verts, bool translucent, std::vector<UnitFace>& out) {
+    for (std::size_t q = 0; q + 4 <= verts.size(); q += 4) {
+        const MeshVertex* v = &verts[q];
+        int dir = -1;
+        for (int d = 0; d < 6; ++d)
+            if (v[0].normal == glm::vec3(orient::faceNormal(static_cast<orient::Face>(d)))) dir = d;
+        auto bad = [&] { out.push_back({0, 0, 0, -1, translucent, {}}); };
+        if (dir < 0) {
+            bad();
+            continue;
+        }
+        const int a = dir / 2, b = kTestBitAxis[dir], r = kTestRowAxis[dir];
+        glm::vec3 lo = v[0].pos, hi = v[0].pos;
+        bool ok = true;
+        for (int k = 0; k < 4; ++k) {
+            lo = glm::min(lo, v[k].pos);
+            hi = glm::max(hi, v[k].pos);
+            ok = ok && v[k].normal == v[0].normal && v[k].layer == v[0].layer && v[k].material == v[0].material &&
+                 v[k].texInfo == v[0].texInfo && v[k].pos[a] == v[0].pos[a];
+        }
+        // The four corners of the rectangle, once each, wound counter-clockwise from outside.
+        const glm::vec3 e1 = v[1].pos - v[0].pos, e2 = v[2].pos - v[0].pos;
+        ok = ok && glm::dot(glm::cross(e1, e2), v[0].normal) > 0.0f;
+        for (int k = 0; k < 4; ++k) {
+            const bool onB = v[k].pos[b] == lo[b] || v[k].pos[b] == hi[b], onR = v[k].pos[r] == lo[r] || v[k].pos[r] == hi[r];
+            ok = ok && onB && onR;
+            for (int m = k + 1; m < 4; ++m) ok = ok && !(v[k].pos == v[m].pos);
+        }
+        const float wf = hi[b] - lo[b], hf = hi[r] - lo[r];
+        ok = ok && wf >= 1.0f && hf >= 1.0f && wf == std::floor(wf) && hf == std::floor(hf);
+        if (!ok) {
+            bad();
+            continue;
+        }
+        const bool positive = dir % 2 == 0;
+        glm::ivec3 base(0);
+        base[a] = static_cast<int>(v[0].pos[a]) - (positive ? 1 : 0);
+        for (int i = 0; i < static_cast<int>(wf); ++i)
+            for (int j = 0; j < static_cast<int>(hf); ++j) {
+                glm::ivec3 c = base;
+                c[b] = static_cast<int>(lo[b]) + i;
+                c[r] = static_cast<int>(lo[r]) + j;
+                out.push_back({c.x, c.y, c.z, dir, translucent, {v[0].layer, v[0].material, v[0].texInfo}});
+            }
+    }
+}
+}  // namespace
+
+std::vector<UnitFace> unitFaces(const WorldMesh& mesh) {
+    std::vector<UnitFace> out;
+    decompose(mesh.vertices, false, out);
+    decompose(mesh.translucentVertices, true, out);
+    std::sort(out.begin(), out.end());
+    return out;
+}
+
+std::vector<QuadSize> quadSizes(const WorldMesh& mesh) {
+    std::vector<QuadSize> out;
+    for (const auto* verts : {&mesh.vertices, &mesh.translucentVertices})
+        for (std::size_t q = 0; q + 4 <= verts->size(); q += 4) {
+            const MeshVertex* v = &(*verts)[q];
+            int dir = 0;
+            for (int d = 0; d < 6; ++d)
+                if (v[0].normal == glm::vec3(orient::faceNormal(static_cast<orient::Face>(d)))) dir = d;
+            glm::vec3 lo = v[0].pos, hi = v[0].pos;
+            for (int k = 1; k < 4; ++k) {
+                lo = glm::min(lo, v[k].pos);
+                hi = glm::max(hi, v[k].pos);
+            }
+            out.push_back({dir, static_cast<int>(hi[kTestBitAxis[dir]] - lo[kTestBitAxis[dir]]),
+                           static_cast<int>(hi[kTestRowAxis[dir]] - lo[kTestRowAxis[dir]])});
+        }
+    return out;
+}
+
+WorldMesh meshWith(ChunkWorld& world, Mesher mesher) {
+    const Mesher saved = world.mesher();
+    world.setMesher(mesher);
+    WorldMesh m = world.buildMesh(ChunkWorld::kChunk);
+    world.setMesher(saved);
+    return m;
+}
+
+bool sameMesh(const WorldMesh& a, const WorldMesh& b) {
+    auto same = [](const auto& x, const auto& y) {
+        return x.size() == y.size() && (x.empty() || std::memcmp(x.data(), y.data(), x.size() * sizeof(x[0])) == 0);
+    };
+    return a.origin.x == b.origin.x && a.origin.y == b.origin.y && a.origin.z == b.origin.z && same(a.vertices, b.vertices) &&
+           same(a.indices, b.indices) && same(a.translucentVertices, b.translucentVertices) &&
+           same(a.translucentIndices, b.translucentIndices) && same(a.edgeLines, b.edgeLines);
+}
+
+const AppearanceTable& testAppearance() {
+    static const AppearanceTable table(registry());
+    return table;
+}
+MeshContext testContext() { return {registry(), testAppearance()}; }

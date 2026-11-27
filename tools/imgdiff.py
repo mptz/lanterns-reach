@@ -2,10 +2,13 @@
 """Compare two PNGs (8-bit RGB/RGBA, non-interlaced; the subset --capture and
 the texture generator write). Standard library only.
 
-usage: imgdiff.py A.png B.png [--max N]
+usage: imgdiff.py A.png B.png [--max N [--allow K]]
 
 Prints the maximum per-channel difference (0-255) and how many pixels
-differ at all. With --max N, exits 1 if the maximum difference exceeds N.
+differ at all. With --max N, exits 1 if the maximum difference exceeds N;
+with --allow K as well, exits 1 only if more than K pixels exceed N (a
+recorded budget for known, isolated differences, such as the pinhole cracks
+at T-junctions between merged quads, RELEASES.md v0.2.3).
 """
 import struct
 import sys
@@ -61,9 +64,14 @@ def read_png(path):
 
 def main(argv):
     limit = None
+    allow = 0
     if "--max" in argv:
         i = argv.index("--max")
         limit = int(argv[i + 1])
+        argv = argv[:i] + argv[i + 2:]
+    if "--allow" in argv:
+        i = argv.index("--allow")
+        allow = int(argv[i + 1])
         argv = argv[:i] + argv[i + 2:]
     a, b = argv
     wa, ha, ra = read_png(a)
@@ -71,14 +79,16 @@ def main(argv):
     if (wa, ha) != (wb, hb):
         print(f"size differs: {wa}x{ha} vs {wb}x{hb}")
         return 1
-    worst, differing = 0, 0
+    worst, differing, over = 0, 0, 0
     for row_a, row_b in zip(ra, rb):
         for pa, pb in zip(row_a, row_b):
             d = max(abs(pa[c] - pb[c]) for c in range(3))
             worst = max(worst, d)
             differing += d > 0
-    print(f"max per-channel difference {worst}/255; {differing} of {wa * ha} pixels differ")
-    return 1 if limit is not None and worst > limit else 0
+            over += limit is not None and d > limit
+    note = f"; {over} over {limit}/255 (allowed {allow})" if limit is not None and allow else ""
+    print(f"max per-channel difference {worst}/255; {differing} of {wa * ha} pixels differ{note}")
+    return 1 if limit is not None and over > allow else 0
 
 
 if __name__ == "__main__":

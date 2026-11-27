@@ -70,7 +70,7 @@ constexpr std::pair<std::string_view, std::string_view> kRemovedFlags[] = {
     {"--no-glass-frames", "render.glassFrames"},
     {"--anisotropy", "render.anisotropy"},
     {"--no-variants", "render.variants"},
-    {"--merged-quad", "render.mergedQuad"},
+    {"--merged-quad", "render.mesher"},
     {"--patch", "tools.patch"},
     {"--consume", "tools.consume"},
     {"--cam", "camera.pos"},
