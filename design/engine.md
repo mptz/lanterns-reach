@@ -216,7 +216,7 @@ Language, rendering backend, and target platform.
   simulation and concurrency docs, `data/cheap-invariants`'s totals,
   `engine/goal-source`'s counts of goal actors abandoned by cascade), accumulated per
   thread and merged once a frame, readable by the developer UI and dumped
-  by headless runs. Measurements recorded in `BUILD-NOTES.md` come from it.
+  by headless runs. Measurements recorded in `RELEASES.md` come from it.
 - **Histograms are log-linear and fixed-size** (the HdrHistogram scheme),
   so percentiles (p50, p90, p99 and beyond) come without keeping samples:
   - **Buckets:** each power of two is split into S linear sub-buckets, so

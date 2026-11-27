@@ -6,15 +6,14 @@ any dependency/decision notes. Versions are build targets, not design decisions 
 the design lives in `DESIGN.md` + `design/*`; this file says *in what order* we
 realize it.
 
-## For the build agent (read this first)
+## How to read this file (read this first)
 
-You have the **whole design repository** (`DESIGN.md` + `GLOSSARY.md` +
-`design/*.md` + this file) but **not** the conversation that produced it.
-Read `GLOSSARY.md` first for the vocabulary. A version's entry states
-its scope and the build choices the design leaves open, and names the
-`group/slug` entries it builds; **read those entries**, which specify the
-design itself (from v0.2 on, entries reference the design rather than
-restating it). Rules:
+The repository is the whole record: `DESIGN.md`, `GLOSSARY.md`,
+`design/*.md` and this file. Read `GLOSSARY.md` first for the vocabulary. A
+version's entry states its scope and the build choices the design leaves
+open, and names the `group/slug` entries it builds; **read those entries**,
+which specify the design itself (from v0.2 on, entries reference the design
+rather than restating it). Rules:
 
 - **This file is authoritative for a version's SCOPE.** Where a version entry
   specifies something concrete (vertex count, shading formula, controls), build
@@ -25,11 +24,12 @@ restating it). Rules:
   `## ` / `### ` heading in some `design/*.md` file — grep for the slug. Read the
   referenced entry when you need the rationale, but the version entry already
   states what to do.
-- **Decisions already made are not yours to relitigate** (language, API, axis
-  convention, libraries). If a choice is genuinely unspecified and you must make
-  one to proceed, pick the simplest reversible option, implement it, and record
-  what you chose in a `BUILD-NOTES.md` at the repo root (create it if absent) —
-  do not block.
+- **Decisions already made are not up for relitigation** (language, API, axis
+  convention, libraries) unless the owner reopens them. If a choice is
+  genuinely unspecified and you must make one to proceed, pick the simplest
+  reversible option, implement it, and record what you chose in
+  `RELEASES.md` at the repo root (the per-release choices, results and
+  measurements; `BUILD.md` is how to build). Don't block on it.
 - **Platform reality:** the design/authoring environment is a **headless** cloud
   desktop; builds and interactive runs happen on a **separate machine with a GPU
   and a display**. So: the build must not assume a display is present at *compile*
@@ -50,7 +50,7 @@ restating it). Rules:
 - **Captures are regression detectors, not specifications.** A
   "pixel-identical" criterion catches unintended change; it is never a
   reason to keep a slower or worse design. When a capture diverges,
-  investigate the cause and record it in `BUILD-NOTES.md`; if it is the
+  investigate the cause and record it in `RELEASES.md`; if it is the
   expected consequence of a sound change (different triangulation, a
   compiler's floating point), say so, and the owner rebaselines after
   inspecting it. Exactness that matters is held by its own test (face sets,
@@ -114,7 +114,7 @@ in `coords/typed-positions`, and the testing conventions above).
 6. **Every release ends healthy:** playable, the headless suite green, prior
    captures identical.
 7. **Measurements are deliverables:** a release that can first measure an
-   open number records it in `BUILD-NOTES.md`, on both reference machines
+   open number records it in `RELEASES.md`, on both reference machines
    (`engine/reference-hardware`) where it is a performance number.
 8. **Detail just in time:** only the next one or two releases are fully
    specified; the rest are one line (claim and slugs) and are detailed when
@@ -157,7 +157,7 @@ display-required) · Measurements.
   - **Once workers exist, play always has at least one free-running
     worker;** lockstep is selected only by tests or a debug flag.
   - A new test-only API or test-only representation is called out in
-    `BUILD-NOTES.md`.
+    `RELEASES.md`.
 
 ### Stand-ins in v0.2, and when they expire
 - **Frame-thread `apply`** (edits written by the frame thread to the chunk
@@ -408,7 +408,7 @@ drawing beyond cubes); override grids for edited chunks.
   and the entity docs), and is refined as later releases implement it.
   Criteria 1–5 pass, criterion 5 confirmed by the owner; also fixed
   Shift+click with items that have no secondary action
-  (`input/per-hand-use`; `BUILD-NOTES.md`). SPECIFIED 2026-11-04, detailed 2026-11-05
+  (`input/per-hand-use`; `RELEASES.md`). SPECIFIED 2026-11-04, detailed 2026-11-05
   (after v0.1.9). Carry-over from v0.1 and preparation for the rest of v0.2
   (2026-11-04). v0.1.9 did neither item, so both are here.
 - **Note (2026-11-10):** the concurrency model this release waits on is
@@ -417,7 +417,7 @@ drawing beyond cubes); override grids for edited chunks.
 - **Purpose:** before chunks arrive, make the harness data-driven and break
   up the one large source file, so v0.2.1 can add worlds and tests without
   growing either.
-- **Design work alongside, not by the build agent:** the **v0.2 concurrency
+- **Design work alongside the build:** the **v0.2 concurrency
   model** is written and reviewed with the owner in the design repo before
   v0.2.1's build starts. It is drafted as `sim/concurrency-model` in
   `design/concurrency.md` (2026-11-05); the requirements below were written
@@ -483,7 +483,7 @@ drawing beyond cubes); override grids for edited chunks.
   change.
 - **`src/renderer.cpp`** (1,004 lines) is at the threshold: split it if a
   seam is natural (for example pass setup versus per-frame recording), or
-  justify keeping it whole in `BUILD-NOTES.md`.
+  justify keeping it whole in `RELEASES.md`.
   `tests/sandbox_tests.cpp` is split in v0.2.1 (T2), not here.
 - **Deferred items from `attic/REVIEW-v0.1.md`, recorded so they aren't lost:**
   T2 split the tests by module (v0.2.1); D3 device-local meshes with a staging
@@ -503,7 +503,7 @@ Headless:
 3. Removed flags are rejected with a message naming the scenario field that
    replaced them; an unknown scenario field, key or button is an error.
 4. No source file over ~1,000 lines except `tests/sandbox_tests.cpp` (v0.2.1)
-   and anything justified in `BUILD-NOTES.md`; ~500 is a weak guideline
+   and anything justified in `RELEASES.md`; ~500 is a weak guideline
    (2026-11-04); `main()` only parses, loads and runs.
 
 Display-required:
@@ -515,7 +515,7 @@ Display-required:
 ## v0.2.1 — One chunk
 - Status: **CLOSED 2026-11-26.** Criteria 1–5 pass; criterion 5 and the Clang
   captures confirmed by the owner. The meshing measurement was taken on one
-  reference machine only (`BUILD-NOTES.md`); the owner did not gate the
+  reference machine only (`RELEASES.md`); the owner did not gate the
   release on the second. Depends on v0.2.0.
 - **Claim:** the world can live in a 64³ chunk without changing anything the
   game sees. **Falsifying test:** any v0.2.0 scenario capture differs.
@@ -571,7 +571,7 @@ Display-required:
   2. switch to Clang (libstdc++ kept, `-Werror` as before, with
      `-Wthread-safety` on); compare every capture against step 1's within a
      tolerance (`tools/imgdiff.py --max`), record the differences and their
-     cause in `BUILD-NOTES.md`, and, once the owner has inspected them, take
+     cause in `RELEASES.md`, and, once the owner has inspected them, take
      the Clang captures as the reference.
   The chunk work then starts from the Clang reference.
 
@@ -680,7 +680,7 @@ Display-required:
   - A change of representation or width carries the digest over unchanged.
   - Exposed as a chunk query, `digest()`.
 - **Test-only APIs** (through the test access type, called out in
-  `BUILD-NOTES.md`): force a representation and width, compact, inspect the
+  `RELEASES.md`): force a representation and width, compact, inspect the
   representation, width, palette size and live entries.
 - **The randomized equivalence test:** for many seeds, build contents from
   one state to as many distinct states as the registry allows (types times
@@ -722,7 +722,7 @@ Headless:
 2. Every v0.2.1 capture is pixel-identical; `--check-absorbance` passes.
 3. The randomized equivalence test passes for a fixed set of seeds in
    `ctest`, and a longer run (more seeds and longer edit sequences) passes
-   once, recorded in `BUILD-NOTES.md`.
+   once, recorded in `RELEASES.md`.
 4. Digest unit tests: the incremental digest equals a full recomputation
    after random edits; a uniform chunk's digest equals `H(s) · K`;
    `W(c)` is nonzero for all 2¹⁸ cells;
@@ -907,7 +907,7 @@ Display-required:
   v0.1.8's tolerances (0 in the variant view, 1/255 lit);
   `render.mergedQuad` is rejected with a message naming `render.mesher`.
 - **Test-only APIs** (through the test access type, called out in
-  `BUILD-NOTES.md`): mesh one chunk with a chosen mesher; decompose a mesh
+  `RELEASES.md`): mesh one chunk with a chosen mesher; decompose a mesh
   into its sorted multiset of unit faces (cell, direction, payload); read
   a counter of working-state allocations on the current thread.
 - **Named constants** for every new tuning value (none is expected beyond
@@ -950,11 +950,11 @@ Headless:
    is identical except lit pixels within 1/255 along triangle diagonals, as
    v0.1.8 measured for its merged quad, and the F3 outlines in the scenarios
    with the wireframe on (`overlays`, `resize`), which now outline merged
-   quads; the differences are recorded in `BUILD-NOTES.md` and, once
+   quads; the differences are recorded in `RELEASES.md` and, once
    inspected, the `greedy` captures become the reference.
    `--check-absorbance` passes with every mesher.
 3. The randomized face-set equivalence test passes for a fixed set of seeds
-   in `ctest`, and a longer run passes once, recorded in `BUILD-NOTES.md`:
+   in `ctest`, and a longer run passes once, recorded in `RELEASES.md`:
    content from sparse to full, every registry type and canonical
    orientation, variant-set blocks and several translucent groups, stored in
    every representation and width that holds it; the `greedy` and

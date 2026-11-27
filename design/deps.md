@@ -427,7 +427,7 @@ the authoritative coordinate type.
 
 ### deps/image-loading — texture decode (COMMITTED, added in v0.1)
 - **stb_image** (single header, public domain), PNG-only build, pinned by
-  commit. Added by the v0.1 build agent to load block textures; clear winner
+  commit. Added in v0.1 to load block textures; clear winner
   for a small header-only decoder.
 
 ### deps/data-formats — temporary block definitions (COMMITTED for v0.1.x)

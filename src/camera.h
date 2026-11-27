@@ -31,7 +31,7 @@ public:
 
     // World (z-up RH) -> view basis (x right, y down, z forward). That basis
     // is also right-handed, so this is a proper rotation (no axis flip) and
-    // triangle winding is preserved — see BUILD-NOTES.md (frontFace).
+    // triangle winding is preserved — see attic/build-notes-v0.1.md (frontFace).
     glm::mat4 view() const;
     static glm::mat4 projection(float fovY, float aspect, float zNear, float zFar);
 

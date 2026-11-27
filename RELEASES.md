@@ -1,8 +1,10 @@
-# Build notes
+# Release notes
 
-Choices the build agent made where `versions.md` left something open, plus
-build/verification facts. Per `versions.md`, these are the simplest
-reversible options. Revisit freely.
+Per point release: the choices made where `versions.md` left something open
+(the simplest reversible option each time, so revisit freely), the results of
+verification, and measurements. How to build and run is `BUILD.md`; what a
+release is meant to do is `versions.md`. Notes for finished major versions
+move to `attic/` once they stop being useful.
 
 ## v0.1 (closed 2026-11-04)
 The build notes for v0.1 through v0.1.9 are history in
@@ -10,17 +12,11 @@ The build notes for v0.1 through v0.1.9 are history in
 
 ## v0.2.0 (built 2026-11-05)
 
-### Build, test & run
-As before; `ctest` runs 8 tests (Debug), 7 (Release). A run is now a
-scenario (`scenarios/README.md`):
-```
-build-debug/sandbox                                                   # scenarios/v0.1-scene.json, interactive
-build-debug/sandbox --scenario scenarios/headless/lit.json --capture lit.png
-build-release/sandbox --scenario scenarios/perf-1080p.json --gpu-report   # the v0.1.9 baseline's setup
-```
-Remaining flags: `--scenario`, `--capture`, `--gpu-report`,
-`--check-absorbance`, `--blocks`, `--check-blocks`. The 27 others are
-rejected, naming the field that replaced them.
+### Flags
+A run is a scenario (`scenarios/README.md`). Remaining flags: `--scenario`,
+`--capture`, `--gpu-report`, `--check-absorbance`, `--blocks`,
+`--check-blocks`. The 27 others are rejected, naming the field that replaced
+them. `ctest` ran 8 tests (Debug), 7 (Release).
 
 ### Choices
 - **Schema** (`scenarios/README.md`): `include`, `world`, `scene`, `camera`,
@@ -175,15 +171,3 @@ Clang 19 Release, this headless authoring machine; the reference machines
 | 3 | Unit tests: floor division/local indices, face and corner probes and edits, outside rejected, palette reuse and append | ✅ |
 | 4 | `DenseGrid` gone; `world.grid` rejected naming `world.generator` | ✅ |
 | 5 | The v0.1 world plays unchanged | ✅ owner (interactive use, 2026-11-26) |
-
-### Build directories
-Out-of-source trees are `build-debug/` (Debug) and `build-release/`
-(Release), both Clang. They are gitignored (`/build*/`). The old `build/`
-(GCC, with the first fetched dependency sources) is obsolete and can be
-deleted; a fresh configure fetches the dependencies again.
-```
-cmake -S . -B build-debug -G Ninja -DCMAKE_BUILD_TYPE=Debug
-cmake -S . -B build-release -G Ninja -DCMAKE_BUILD_TYPE=Release
-cmake --build build-debug && ctest --test-dir build-debug
-tools/headless_check.sh build-debug
-```

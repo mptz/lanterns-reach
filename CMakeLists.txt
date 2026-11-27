@@ -29,11 +29,11 @@ find_program(GLSLC glslc HINTS "$ENV{VULKAN_SDK}/bin" REQUIRED)
 
 # ---------------------------------------------------------------------------
 # Third-party pins (FetchContent). Bump deliberately; record breakage in
-# BUILD-NOTES.md.
+# RELEASES.md.
 #   GLFW          3.5.1
 #   GLM           1.0.3
 #   VMA           v3.5.0
-#   vk-bootstrap  v1.3.275  (must match system Vulkan headers 1.3.275; see BUILD-NOTES.md)
+#   vk-bootstrap  v1.3.275  (must match system Vulkan headers 1.3.275; see attic/build-notes-v0.1.md)
 #   stb           003501f6d7a8668ce8b6d875e34dd97ad0d5d5b5 (stb_image only)
 #   Dear ImGui    v1.93.0  (core + imgui_impl_glfw + imgui_impl_vulkan)
 #   nlohmann/json v3.12.0  (v0.1.3 block definitions; temporary until the grammar)
@@ -144,7 +144,7 @@ target_include_directories(imgui SYSTEM PUBLIC ${imgui_SOURCE_DIR} ${imgui_SOURC
 # IMGUI_DISABLE_DEFAULT_SHELL_FUNCTIONS: compiles out ImGui's default
 # "open in shell" handler (fork + execvp("xdg-open")), the only
 # process-spawning path in the third-party code we build (flagged in the
-# v0.1.5 dependency review, BUILD-NOTES.md). We have no link widgets.
+# v0.1.5 dependency review, attic/build-notes-v0.1.md). We have no link widgets.
 target_compile_definitions(imgui PUBLIC IMGUI_DISABLE_OBSOLETE_FUNCTIONS IMGUI_DISABLE_DEFAULT_SHELL_FUNCTIONS
                                         GLFW_INCLUDE_NONE)
 target_link_libraries(imgui PUBLIC Vulkan::Vulkan glfw)

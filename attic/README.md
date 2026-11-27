@@ -8,6 +8,6 @@ approaches weighed for cross-chunk execution
 
 **Not authoritative.** Current design decisions live in `DESIGN.md` and
 `design/`; the roadmap in `versions.md`; current behaviour in the code and
-`BUILD-NOTES.md`. Agents don't read this directory unless a task points
+`RELEASES.md`. Agents don't read this directory unless a task points
 here. Git keeps the full history of everything regardless; the attic keeps
 retired material greppable and out of the main files.
