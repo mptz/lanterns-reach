@@ -276,7 +276,7 @@ The chunk payload, single-threaded:
   budget are sized for the format they keep. *Claim: every mesh covers
   the same faces as before at about a tenth of the bytes, and translucent
   absorbance stays exact.* `world/chunk-meshing`, `render/block-textures`.
-  The appearance id's width and contents are open here: the owner is open
+  (Detailed below.) The appearance id's width and contents are open here: the owner is open
   to wider ids that embed payload bits directly (2026-11-27) if that
   helps the packed quad or the shader; appearance ids are derived and
   never persisted, so nothing constrains their layout but this format.
@@ -1273,6 +1273,196 @@ Display-required:
   shipped definition.
 - Whether anything per cell or per frame interns (a counter, expected 0
   after load).
+
+## v0.2.5 — Packed quads, translucent merging and a cutout block
+- Status: SPECIFIED 2026-11-27, not started. Depends on v0.2.4.
+- **Claim:** every mesh covers the same faces as before, each with the
+  appearance the per-cell rule gives it, at about a tenth of the bytes;
+  translucent faces merge like opaque ones and absorbance stays exact; a
+  cutout block meshes and draws by its own culling rule. **Falsifying
+  tests:** the face-set equivalence test finds a unit face, frame or tile
+  that differs from the per-cell rule's; a mesh is not at most a tenth of
+  its v0.2.4 bytes; `--check-absorbance` or an order-invariance comparison
+  fails; a capture differs beyond what is listed below.
+- **Builds on:** v0.2.4; `world/chunk-meshing` (the face rule, cutout,
+  per-representation meshing), `render/block-textures` (appearance ids,
+  variant sets chosen per fragment, connected frames),
+  `render/transparency` (exact absorbance from closed boundaries; cutout
+  in the G-buffer), `render/gpu-driven` and `sim/concurrency-model`'s
+  "Meshes and the GPU" (vertex pulling, sized ahead of the mesh pool).
+- **Also in this release** (v0.2.4's dispositions): the pinhole cracks at
+  T-junctions between merged quads, the `log_columns` tile flips, and the
+  appearance id's width.
+
+### Scope
+- **The packed quad: 8 bytes, pulled by the vertex shader** (provisional
+  layout, a named struct with pack and unpack functions and one place that
+  defines the bits; the shader mirrors it):
+
+  | Bits | Field |
+  |---|---|
+  | 0–17 | x, y, z of the quad's minimum cell in the chunk, 6 bits each |
+  | 18–23, 24–29 | width − 1 and height − 1 along the face's bit and row axes (1–64 each) |
+  | 30–32 | face direction (`orient::Face`) |
+  | 33–36 | translucent faces: which of the quad's four sides are framed (below); opaque and cutout: 0 |
+  | 37–60 | appearance id, 24 bits |
+  | 61–63 | spare (later attributes; 0) |
+
+  The vertex shader takes the quad from `gl_VertexIndex / 4` and the corner
+  from `gl_VertexIndex % 4`, in the unit cube's corner order scaled along
+  the face's axes (so a 1×1 quad is exactly today's face); one static index
+  buffer serves every mesh. Positions are integers relative to the chunk's
+  origin, rebased on the CPU as today. A mesh is two arrays of `uint64_t`
+  (opaque and cutout, translucent), read by the shaders as storage buffers
+  (host-visible, as today; device-local is v0.2.6).
+- **Appearance ids on the GPU:** the state table's appearance payloads
+  (layer, material, packed texture info) are uploaded as one storage buffer
+  indexed by appearance id, grown when the table grows; the shaders read the
+  payload from it. **24 bits** of id are enough for a long while (today a
+  few hundred payloads exist) and leave spare bits in the quad; overflowing
+  them is fatal, as state ids are. The owner's offer of wider ids embedding
+  payload bits is not taken: the payload (a 32-bit layer, a material and
+  10 bits of texture info) doesn't fit beside the geometry in 8 bytes, and
+  one lookup per vertex is cheap. Recorded so it can be revisited if the
+  layout changes.
+- **Every mesher emits packed quads:** the per-cell rule emits 1×1 quads in
+  cell order, the bitmask mesher its merged (or, `unmerged`, 1×1) quads; the
+  uniform paths likewise. `MeshVertex` and the four-vertex quad are gone
+  from world meshes (the preview ghosts keep their own small vertex format:
+  they are a few faces rebuilt per frame).
+- **F3 outlines from the quads:** the wireframe pass pulls each quad's four
+  edges from the same arrays (8 line vertices per quad), so meshes carry no
+  outline list (`WorldMesh::edgeLines` goes). The `overlays` and `resize`
+  captures keep drawing one outline per quad.
+- **Translucent faces merge, with frames by quad side.** A connected frame
+  marks each edge of a translucent face whose in-plane neighbour doesn't
+  continue the surface (`render/block-textures`). Within a merged quad every
+  interior edge continues, so only the quad's sides can be framed, but one
+  side could mix framed and unframed edges, which no fixed-size quad can
+  describe. So **translucent merging is constrained:** a quad grows only
+  while each of its four sides stays uniformly framed or unframed (the
+  in-plane neighbours along a side all continue the surface, or none
+  does), and its four side bits then describe its frames exactly. The merge
+  key is the appearance id plus whether the face shows the surface layer
+  (against air, or a translucent group of higher type id; never against
+  opaque, `render/block-textures`), which is the mesh's, not the state's.
+  The fragment shader picks the connected tile from which of its cell's
+  edges lie on a framed side (the edges at the quad's border, where the bit
+  is set), so the per-cell rule's 1×1 quads carry exactly its frame bits,
+  and the equivalence test compares them face by face. The constraint
+  costs some quads on jagged outlines; the measurement says how many.
+- **Positional tiles chosen per fragment for translucent faces too:**
+  `random` and `matched` tiles come from world position in the shader, as
+  for opaque faces; the CPU no longer resolves them for world meshes
+  (`resolvePositional` stays for the ghosts).
+- **The cell a fragment hashes comes from the quad, not the interpolated
+  position:** the vertex shader passes the quad's minimum cell and extents
+  flat, and the fragment shader takes the cell as that corner plus the
+  floor of its position within the quad, clamped to the quad. This is the
+  candidate fix for the `log_columns` flips (merged quads picking a
+  neighbour's tile at cell edges); the captures say whether it suffices.
+- **T-junction cracks:** merged **opaque and cutout** quads (width or height
+  above 1) are enlarged in the vertex shader by a small named constant,
+  in-plane, so their T-junctions overlap rather than crack; 1×1 quads are
+  not, so the per-cell and `unmerged` paths keep their exact geometry.
+  **Translucent quads are never enlarged** (an overlap would count
+  absorbance twice, `render/transparency`); their T-junctions are measured,
+  and if they show as specks of wrong absorbance in the captures, the
+  fallback is translucent faces unmerged (an `unmerged` setting for the
+  translucent pass alone), recorded and dispositioned.
+- **The cutout visibility class** (`world/chunk-meshing`): a definition
+  marked `"cutout": true` is drawn in the G-buffer pass with an alpha test
+  (texels below 0.5 discarded) and is opaque for every other purpose
+  (lighting, shadows later). Its culling rule:
+  - **a cutout cell never hides a neighbour:** an opaque or translucent
+    face against it is emitted;
+  - **an opaque neighbour hides a cutout face;**
+  - **between two cutout cells of one block type the faces are culled**
+    (decided here: one rule with translucent groups, fewer faces and less
+    overdraw; foliage may revisit it once it exists), and between two
+    different cutout types both faces are emitted.
+  The bitmask mesher builds a cutout mask per cutout type present (like
+  translucent groups), culls by word operations, and merges cutout quads
+  like opaque ones (equal appearance id). **A test cutout block** ships: a
+  grate (an iron lattice with transparent holes), its texture made by the
+  texture generator from a recipe. It is not in the v0.1 scene, so the
+  existing captures don't change; a new scenario shows it.
+- **Tinted glass stands in for water** until fluids: no water block is added.
+- **Test-only APIs:** pack and unpack a quad; decompose a mesh into unit
+  faces with their payload and, for translucent faces, their frame bits.
+
+### Stand-ins
+- **Host-visible meshes:** until v0.2.6's mesh pool.
+- **The quad layout is provisional:** the spare bits and the 24-bit
+  appearance id are revisited when ambient occlusion or per-vertex light
+  arrives.
+- **Tinted glass as water:** until fluids.
+- **Cutout culling between two of one type:** until foliage exists to judge
+  it by.
+- **Ghosts on their own vertex format:** until ghosts are drawn from packed
+  quads, if ever (no release needs it).
+
+### Out of scope
+The mesh pool, device-local buffers and GPU culling (v0.2.6 onwards);
+ambient occlusion and per-vertex light; the clear-glass fast path and water
+(`render/transparency`); real foliage; materials decoupled from block types;
+any change to the merge rule's shape beyond the translucent side constraint.
+
+### Acceptance criteria
+Headless:
+1. Build + `ctest` pass, Debug and Release, Clang, `-Werror`, zero
+   warnings.
+2. With `per-cell` and `unmerged`, every v0.2.4 capture is pixel-identical
+   (same exceptions as v0.2.0: the live F1 and F7 text). With `greedy`:
+   opaque surfaces within 1/255 of the v0.2.4 `greedy` captures except
+   where cracks closed; translucent surfaces within 1/255 of the `per-cell`
+   captures (merging is invisible). The differences are recorded and, once
+   inspected, the new captures become the reference. `--check-absorbance`
+   passes with every mesher, and the order-invariance comparisons pass.
+3. The `quad_*` comparisons pass with **no crack budget** (0 in the variant
+   view, 1/255 lit); `log_columns` differs from its `per-cell` capture by no
+   more than v0.2.3's 216 pixels, and less if the cell-from-quad change
+   works (recorded either way).
+4. The face-set equivalence and rep-swap tests pass on packed quads, now
+   including merged translucent faces: decomposed into unit faces, every
+   mesher's output equals the per-cell rule's faces, payloads and frame
+   bits exactly, and every representation gives the same bytes.
+5. Packed-format tests: pack and unpack round-trip at every field's
+   extremes (cells 0 and 63, extents 1 and 64, every direction, side bits,
+   appearance ids 0 and 2²⁴ − 1); the shader's unpacking agrees with the
+   C++ (a compute or vertex readback of a pinned set of quads).
+6. Translucent merging tests: a glass slab merges to one quad per side with
+   its four sides framed; an L-shaped and a holed region merge into quads
+   whose side bits reproduce the per-cell frame bits; an interface between
+   two tints is framed once; glass against stone is unframed and merges.
+7. Cutout tests: the culling rule on every side and against each class;
+   two of one cutout type cull, two types don't; cutout quads merge; a
+   uniform cutout chunk meshes to its six sides; the new `cutout` scenario
+   captures the grate in front of stone and glass, with zero validation
+   errors.
+8. Bytes: every mesh in the `--time-meshers` cases is at most a tenth of
+   its v0.2.4 size (vertices, indices and outlines then; quads now).
+
+Display-required:
+9. The v0.1 world plays unchanged; glass shows merged quads in F3 with
+   frames unchanged; the grate's holes show what is behind it (owner).
+10. No cracks or sparkles at T-junctions, opaque or translucent, close up,
+    at grazing angles and at distance (owner).
+
+### Measurements
+- Bytes per mesh, v0.2.4 against v0.2.5, for the `--time-meshers` cases
+  and the v0.1 scene.
+- Mesh time per mesher (emission should fall with the bytes), and the
+  translucent quad count: unmerged, merged without the side constraint
+  (counted, not drawn) and with it.
+- GPU frame time for `perf-1080p` on this machine's HD 620, v0.2.4 against
+  v0.2.5 (`--gpu-report`): vertex pulling against vertex attributes.
+- The appearance payload buffer's size, and the largest appearance id in use.
+
+### Sources
+- [voxel.wiki, vertex pulling](https://voxel.wiki/wiki/vertex-pulling/) and
+  [cgerikj, binary-greedy-meshing](https://github.com/cgerikj/binary-greedy-meshing):
+  8-byte quads pulled in the vertex shader, one index buffer for every mesh.
 
 ## Roadmap beyond v0.2 (direction, 2026-10-30)
 - **Note (2026-11-10):** the v0.4 and v0.5 bullets predate
