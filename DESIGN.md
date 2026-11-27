@@ -304,7 +304,7 @@ the history). Open issues stay conversational, and may say who raised what.
 
 ### `design/engine.md` — engine & platform
 - `engine/cpp-vulkan-linux` — C++ + Vulkan, Linux-only for now; Windows the likely next platform (native Vulkan), macOS a distant port (MoltenVK and ARM to check)
-- `engine/reference-hardware` — old hardware from about 2016: Intel HD 530 as the minimum, GTX 1050 Mobile as the comfortable default (both owner machines); expensive work is a budget tuned from measured frame time; mesh pool sized by video memory
+- `engine/reference-hardware` — old hardware from about 2016: Intel HD 530 as the minimum, GTX 1050 Mobile as the comfortable default; development and measurement on the owner's current machines (a Latitude 7480 with HD 620, and more), measurements naming their machine, the 1050M for occasional validation; expensive work is a budget tuned from measured frame time; mesh pool sized by video memory
 - `engine/telemetry` (draft) — structured logging, a counter registry read by the developer UI and dumped headlessly, with log-linear fixed-size histograms (percentiles without samples, merged by adding counts, windowed by summing), fatal-check reports, Tracy profiling; the developer UI's layout (overlays apart from panels, fixed-role keys, a launcher, favourites)
 - `engine/graphics-api` — raw Vulkan 1.3, not WebGPU: Linux-only, bindless many-chunk rendering, explicit sync, AI-authorship economics; GPU compute corroborates but doesn't decide
 - `engine/vulkan-abstraction` — 1.3 dynamic rendering + VMA/vk-bootstrap/Vulkan-Hpp + a render-graph seam for barriers/sync

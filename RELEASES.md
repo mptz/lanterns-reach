@@ -156,8 +156,7 @@ Done in two steps so a capture change has one cause. Captures are from
 
 ### Measurement: meshing a full 64³ chunk
 `build-release/sandbox_tests --time-mesh` (median of 7, per-cell rule,
-Clang 19 Release, this headless authoring machine; the reference machines
-(`engine/reference-hardware`) are still to run it):
+Clang 19 Release, on the Dell Latitude 7480, `engine/reference-hardware`):
 
 | World | Time | Faces |
 |---|---|---|
@@ -476,7 +475,7 @@ The owner accepted the `greedy` captures (`build-debug/cap-023`), cracks and
 | 8 | Append-only | ✅ |
 | 9 | `render.mergedQuad` rejected; `quad_*` comparisons | ✅ rejected; comparisons pass within the recorded crack budget |
 | 10 | Plays unchanged; F3 shows merged quads | ✅ owner (stripes across the floor, large merged surfaces) |
-| 11 | No cracks or sparkles at T-junctions | ✅ owner: not perceptible on the GPU machine |
+| 11 | No cracks or sparkles at T-junctions | ✅ owner: not perceptible interactively |
 
 ## v0.2.4 (in progress)
 

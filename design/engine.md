@@ -19,12 +19,12 @@ Language, rendering backend, and target platform.
 - Consequences: Keep a thin render-backend seam so "Linux-only" does not become
   "Vulkan welded into gameplay." Gameplay/sim must not depend on Vulkan types.
 
-## engine/reference-hardware — Two owner machines span the target range; expensive work is a budget tuned from measured frame time
+## engine/reference-hardware — The target range is hardware from about 2016; development runs on the owner's current machines; expensive work is a budget tuned from measured frame time
 
 - Decision: the target range is **old hardware from about 2016**, spanning
   "out-of-date integrated graphics" to "out-of-date gaming laptop". Both
-  ends are machines the owner runs (the owner keeps computers for 10+
-  years, and isn't the only one):
+  ends exist as owner machines (the owner keeps computers for 10+ years,
+  and isn't the only one), though not every release runs on them (below):
   - **Minimum: Intel HD 530** (Skylake GT2, 2015; ~0.4 TFLOPS, ~34 GB/s
     shared with the CPU, system RAM as video memory). Everything at its
     lowest settings must run here. The reference GPU of the v0.1.x
@@ -37,12 +37,18 @@ Language, rendering backend, and target platform.
     Radeon 680M/780M) fall near or above the 1050M, so the range covers
     current thin-and-light laptops too. The Steam Deck (RDNA2, ~1.6 TFLOPS,
     Linux and Vulkan) would be an easy optional fixed-spec check.
-- **Measurements are taken on the machine at hand, which is named with
-  them** (in `RELEASES.md`); releases are not validated on several
-  machines (owner, 2026-11-27). The target range above decides what must
-  scale, not where each number is measured. So far: a Dell Latitude 7480
-  (Intel Core i7-7600U, 2 cores and 4 threads at 2.8–3.9 GHz, 4 MiB L3,
-  16 GB; Intel HD 620, Kaby Lake GT2, the HD 530's class), Debian 13.
+- **Where development and measurement run** (owner, 2026-11-27):
+  - **Main development machines:** a Dell Latitude 7480 (Intel Core
+    i7-7600U, 2 cores and 4 threads at 2.8–3.9 GHz, 4 MiB L3, 16 GB;
+    Intel HD 620, Kaby Lake GT2, the HD 530's class; Debian 13), and at
+    least one more, not yet used. Each has a GPU and a display: there is no
+    separate headless authoring host.
+  - **The GTX 1050 Mobile** stays in play for validation now and then, not
+    every release.
+  - **The HD 530** may see occasional use, with no guarantee.
+  - **Measurements name the machine they ran on** (in `RELEASES.md`), and
+    no release is gated on running on several machines. The target range
+    above decides what must scale, not where each number is measured.
 - **Don't optimize for either card; make expensive work scale.** Shadow
   faces per frame (`render/shadows`), cascade count and resolution, lights
   per cluster, render scale and LoD distances are budgets **tuned from

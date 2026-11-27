@@ -75,7 +75,7 @@ compare "variant runs a vs b" "$OUT/variant_run_a.png" "$OUT/variant_run_b.png" 
 # lit within 1/255 along triangle diagonals), except for isolated pinhole
 # cracks at T-junctions between merged quads, a recorded budget of at most 16
 # pixels per view (RELEASES.md v0.2.3: 5 and 6 measured on lavapipe; not
-# perceptible on the GPU machine; their fix is dispositioned in v0.2.4).
+# perceptible interactively; their fix is dispositioned in v0.2.4).
 if [ -z "$MESHER" ]; then
     for q in quad_cells_v1 quad_merged_v1 quad_cells_v7 quad_merged_v7; do shot "$q"; done
     compare "merged quad (variant view)" "$OUT/quad_cells_v7.png" "$OUT/quad_merged_v7.png" 0 16

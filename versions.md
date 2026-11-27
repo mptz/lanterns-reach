@@ -30,23 +30,23 @@ rather than restating it). Rules:
   reversible option, implement it, and record what you chose in
   `RELEASES.md` at the repo root (the per-release choices, results and
   measurements; `BUILD.md` is how to build). Don't block on it.
-- **Platform reality:** the design/authoring environment is a **headless** cloud
-  desktop; builds and interactive runs happen on a **separate machine with a GPU
-  and a display**. So: the build must not assume a display is present at *compile*
-  time (no display needed to compile/link/validate), but *running* v0.1 needs a
-  GPU + display/window system. Keep the two separable.
+- **Platform:** development happens on machines with a GPU and a display
+  (`engine/reference-hardware`); there is no separate headless authoring
+  host. The build still needs no display to compile, link or run `ctest`,
+  and the automated suite runs headlessly (lavapipe under Xvfb), so it is
+  reproducible and runs anywhere.
 - **Testing conventions:** a test executable (`sandbox_tests`, its sources
   split by module from v0.2.1) with a minimal in-house `CHECK(expr)` macro (no test framework dependency),
   registered with CTest; Python tool checks registered as CTest tests;
   `ctest --test-dir build` passes headlessly. Display-required checks run
-  on lavapipe under Xvfb (`tools/headless_check.sh`) where noted; the human
-  on the GPU machine confirms the rest.
+  on lavapipe under Xvfb (`tools/headless_check.sh`) where noted; the owner
+  confirms the rest by eye, interactively.
 - **`attic/` is history, not authoritative:** don't read it unless a task
   points there.
 - **Verification is part of the task.** Each version lists **acceptance
   criteria**; the build is not done until they pass (or, if they can't be checked
   headlessly, until the headless subset passes and the display-dependent ones are
-  clearly listed for a human to confirm on the GPU machine).
+  clearly listed for the owner to confirm interactively).
 - **Captures are regression detectors, not specifications.** A
   "pixel-identical" criterion catches unintended change; it is never a
   reason to keep a slower or worse design. When a capture diverges,
@@ -234,7 +234,7 @@ The chunk payload, single-threaded:
       Bricks reuse it (v0.2.9). → **Dropped:** palettes hold block states at
       every level, so the entry type is always `BlockState`.
     - *Cracks at T-junctions in greedy meshes:* isolated pixels on lavapipe,
-      not perceptible to the owner on the GPU machine; enlarge merged quads
+      not perceptible to the owner interactively; enlarge merged quads
       only, enlarge every opaque quad, or leave them; and the `log_columns`
       tile flips at cell edges in merged quads (cause unconfirmed).
       → **Scheduled to v0.2.5** (the packed quads rewrite that shader path).
