@@ -237,7 +237,9 @@ The chunk payload, single-threaded:
       not perceptible to the owner interactively; enlarge merged quads
       only, enlarge every opaque quad, or leave them; and the `log_columns`
       tile flips at cell edges in merged quads (cause unconfirmed).
-      → **Scheduled to v0.2.5** (the packed quads rewrite that shader path).
+      → **Tile flips scheduled to v0.2.5** (the packed quads rewrite that
+      shader path); **cracks deferred** until they show on GPU hardware
+      (owner, 2026-11-27).
     - *Merge key and materials:* material id is `type + 1`, so different
       block types never merge and the orientation/material split counts are
       near-trivial until materials are decoupled from types; and no two
@@ -280,10 +282,10 @@ The chunk payload, single-threaded:
   to wider ids that embed payload bits directly (2026-11-27) if that
   helps the packed quad or the shader; appearance ids are derived and
   never persisted, so nothing constrains their layout but this format.
-  Also (from v0.2.4's dispositions): the pinhole cracks at T-junctions
-  between merged quads (enlarge merged quads only, or every opaque quad,
-  in the vertex shader the packed format rewrites) and the `log_columns`
-  tile flips at cell edges in merged quads (`RELEASES.md` v0.2.3).
+  Also (from v0.2.4's dispositions): the `log_columns` tile flips at cell
+  edges in merged quads (`RELEASES.md` v0.2.3). The pinhole cracks at
+  T-junctions stay deferred until they show on GPU hardware (owner,
+  2026-11-27).
 - **v0.2.6 The mesh pool:** device-local meshes, VMA virtual ranges, staging
   blocks, deferred release by timeline value, a record list rebuilt each
   frame. *Claim: meshes upload and retire without stalls, and the pool's
@@ -1290,9 +1292,10 @@ Display-required:
   `render/transparency` (exact absorbance from closed boundaries; cutout
   in the G-buffer), `render/gpu-driven` and `sim/concurrency-model`'s
   "Meshes and the GPU" (vertex pulling, sized ahead of the mesh pool).
-- **Also in this release** (v0.2.4's dispositions): the pinhole cracks at
-  T-junctions between merged quads, the `log_columns` tile flips, and the
-  appearance id's width.
+- **Also in this release** (v0.2.4's dispositions): the `log_columns`
+  tile flips and the appearance id's width; inner corners of connected
+  glass frames (owner, 2026-11-27). The pinhole cracks at T-junctions stay
+  deferred (owner): nothing shows on GPU hardware.
 
 ### Scope
 - **The packed quad: 8 bytes, pulled by the vertex shader** (provisional
@@ -1305,8 +1308,8 @@ Display-required:
   | 18–23, 24–29 | width − 1 and height − 1 along the face's bit and row axes (1–64 each) |
   | 30–32 | face direction (`orient::Face`) |
   | 33–36 | translucent faces: which of the quad's four sides are framed (below); opaque and cutout: 0 |
-  | 37–60 | appearance id, 24 bits |
-  | 61–63 | spare (later attributes; 0) |
+  | 37–40 | translucent faces: which of the quad's four corners carry an inner-corner frame (below); otherwise 0 |
+  | 41–63 | appearance id, 23 bits |
 
   The vertex shader takes the quad from `gl_VertexIndex / 4` and the corner
   from `gl_VertexIndex % 4`, in the unit cube's corner order scaled along
@@ -1318,9 +1321,12 @@ Display-required:
 - **Appearance ids on the GPU:** the state table's appearance payloads
   (layer, material, packed texture info) are uploaded as one storage buffer
   indexed by appearance id, grown when the table grows; the shaders read the
-  payload from it. **24 bits** of id are enough for a long while (today a
-  few hundred payloads exist) and leave spare bits in the quad; overflowing
-  them is fatal, as state ids are. The owner's offer of wider ids embedding
+  payload from it. **23 bits** of id (8 million payloads) are what is left
+  beside the geometry and frame bits, and are enough for a long while (the
+  shipped blocks have at most 252: 42 states × 6 faces); overflowing them is
+  fatal, as state ids are. No bits are spare: ambient occlusion or
+  per-vertex light needs about 8 bits per quad, so it brings a new layout or
+  a second stream either way. The owner's offer of wider ids embedding
   payload bits is not taken: the payload (a 32-bit layer, a material and
   10 bits of texture info) doesn't fit beside the geometry in 8 bytes, and
   one lookup per vertex is cheap. Recorded so it can be revisited if the
@@ -1351,6 +1357,17 @@ Display-required:
   is set), so the per-cell rule's 1×1 quads carry exactly its frame bits,
   and the equivalence test compares them face by face. The constraint
   costs some quads on jagged outlines; the measurement says how many.
+- **Inner corners of frames** (owner, 2026-11-27): at a concave corner of a
+  glass region (the inside of an L) the corner cell's two edges both
+  continue, so neither carries a band, but its diagonal neighbour doesn't,
+  and the two bands meeting there stop a band's width short. A face's
+  **corner bit** is set where both edges at a corner continue and the
+  diagonal in-plane neighbour doesn't continue the surface; the fragment
+  shader then draws that corner's square from the fully framed tile, over
+  the face's edge tile, so the 16 edge tiles stay (no 47-tile set). A
+  corner is one cell, so a quad carries its four corners' bits with no
+  further constraint on merging; the per-cell rule computes the same bits,
+  and the equivalence test compares them.
 - **Positional tiles chosen per fragment for translucent faces too:**
   `random` and `matched` tiles come from world position in the shader, as
   for opaque faces; the CPU no longer resolves them for world meshes
@@ -1361,15 +1378,12 @@ Display-required:
   floor of its position within the quad, clamped to the quad. This is the
   candidate fix for the `log_columns` flips (merged quads picking a
   neighbour's tile at cell edges); the captures say whether it suffices.
-- **T-junction cracks:** merged **opaque and cutout** quads (width or height
-  above 1) are enlarged in the vertex shader by a small named constant,
-  in-plane, so their T-junctions overlap rather than crack; 1×1 quads are
-  not, so the per-cell and `unmerged` paths keep their exact geometry.
-  **Translucent quads are never enlarged** (an overlap would count
-  absorbance twice, `render/transparency`); their T-junctions are measured,
-  and if they show as specks of wrong absorbance in the captures, the
-  fallback is translucent faces unmerged (an `unmerged` setting for the
-  translucent pass alone), recorded and dispositioned.
+- **Translucent faces merge, whatever their T-junctions do** (owner,
+  2026-11-27): merging is the desired end state, so any specks of wrong
+  absorbance at T-junctions are recorded, like the opaque pinholes, for
+  later. No quad is enlarged: the opaque cracks stay deferred, and an
+  enlarged translucent quad would count absorbance twice
+  (`render/transparency`).
 - **The cutout visibility class** (`world/chunk-meshing`): a definition
   marked `"cutout": true` is drawn in the G-buffer pass with an alpha test
   (texels below 0.5 discarded) and is opaque for every other purpose
@@ -1393,8 +1407,8 @@ Display-required:
 
 ### Stand-ins
 - **Host-visible meshes:** until v0.2.6's mesh pool.
-- **The quad layout is provisional:** the spare bits and the 24-bit
-  appearance id are revisited when ambient occlusion or per-vertex light
+- **The quad layout is provisional:** the 23-bit appearance id and the
+  frame bits are revisited when ambient occlusion or per-vertex light
   arrives.
 - **Tinted glass as water:** until fluids.
 - **Cutout culling between two of one type:** until foliage exists to judge
@@ -1413,28 +1427,31 @@ Headless:
 1. Build + `ctest` pass, Debug and Release, Clang, `-Werror`, zero
    warnings.
 2. With `per-cell` and `unmerged`, every v0.2.4 capture is pixel-identical
-   (same exceptions as v0.2.0: the live F1 and F7 text). With `greedy`:
-   opaque surfaces within 1/255 of the v0.2.4 `greedy` captures except
-   where cracks closed; translucent surfaces within 1/255 of the `per-cell`
-   captures (merging is invisible). The differences are recorded and, once
+   (same exceptions as v0.2.0: the live F1 and F7 text), except glass at
+   inner corners, which now shows its corner frames. With `greedy`: opaque
+   surfaces identical to the v0.2.4 `greedy` captures; translucent surfaces
+   within 1/255 of the `per-cell` captures (merging is invisible), specks at
+   T-junctions apart, which are counted and recorded. The differences are recorded and, once
    inspected, the new captures become the reference. `--check-absorbance`
    passes with every mesher, and the order-invariance comparisons pass.
-3. The `quad_*` comparisons pass with **no crack budget** (0 in the variant
-   view, 1/255 lit); `log_columns` differs from its `per-cell` capture by no
-   more than v0.2.3's 216 pixels, and less if the cell-from-quad change
-   works (recorded either way).
+3. The `quad_*` comparisons pass within their recorded crack budget, as in
+   v0.2.3; `log_columns` differs from its `per-cell` capture by no more than
+   v0.2.3's 216 pixels, and less if the cell-from-quad change works
+   (recorded either way).
 4. The face-set equivalence and rep-swap tests pass on packed quads, now
    including merged translucent faces: decomposed into unit faces, every
-   mesher's output equals the per-cell rule's faces, payloads and frame
-   bits exactly, and every representation gives the same bytes.
+   mesher's output equals the per-cell rule's faces, payloads, frame bits
+   and corner bits exactly, and every representation gives the same bytes.
 5. Packed-format tests: pack and unpack round-trip at every field's
    extremes (cells 0 and 63, extents 1 and 64, every direction, side bits,
    appearance ids 0 and 2²⁴ − 1); the shader's unpacking agrees with the
    C++ (a compute or vertex readback of a pinned set of quads).
 6. Translucent merging tests: a glass slab merges to one quad per side with
    its four sides framed; an L-shaped and a holed region merge into quads
-   whose side bits reproduce the per-cell frame bits; an interface between
-   two tints is framed once; glass against stone is unframed and merges.
+   whose side bits reproduce the per-cell frame bits; the L's inner corner
+   and the hole's four corners carry corner bits, and a convex corner
+   doesn't; an interface between two tints is framed once; glass against
+   stone is unframed and merges.
 7. Cutout tests: the culling rule on every side and against each class;
    two of one cutout type cull, two types don't; cutout quads merge; a
    uniform cutout chunk meshes to its six sides; the new `cutout` scenario
@@ -1444,10 +1461,12 @@ Headless:
    its v0.2.4 size (vertices, indices and outlines then; quads now).
 
 Display-required:
-9. The v0.1 world plays unchanged; glass shows merged quads in F3 with
-   frames unchanged; the grate's holes show what is behind it (owner).
-10. No cracks or sparkles at T-junctions, opaque or translucent, close up,
-    at grazing angles and at distance (owner).
+9. The v0.1 world plays unchanged; glass shows merged quads in F3, with its
+   frames unchanged except closed inner corners; the grate's holes show what
+   is behind it (owner).
+10. Translucent T-junctions: no specks of wrong tint visible close up, at
+    grazing angles or at distance (owner; if any show, they are recorded
+    and dispositioned, not fixed here).
 
 ### Measurements
 - Bytes per mesh, v0.2.4 against v0.2.5, for the `--time-meshers` cases

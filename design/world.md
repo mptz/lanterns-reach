@@ -587,7 +587,9 @@ features, which are not additive.
 - **Face rule (who owns a boundary face):** a chunk emits faces only for **its
   own cells**, treating cells outside it as air (isolated meshing, below). A face between two cells is drawn on the side whose cell is not
   covered by the other: opaque next to non-opaque → the opaque side's face;
-  cutout never hides its neighbour; translucent next to translucent of the
+  cutout never hides its neighbour, an opaque neighbour hides a cutout face,
+  and two cutout cells of one block type hide each other's faces (v0.2.5; a
+  meshing rule only, to revisit once foliage exists); translucent next to translucent of the
   **same group** → nothing (a glass wall reads as one pane), different group
   or air → a face. Two opaque or two transparent cells → nothing.
   **Translucent cells emit their own boundary** (`render/transparency`,
@@ -646,7 +648,17 @@ features, which are not additive.
       lies on another's edge); if they show, opaque quads are enlarged
       slightly in the vertex shader, a cheap and reversible remedy.
       Translucent quads are never enlarged, which would blend twice and
-      break exact absorbance.
+      break exact absorbance. Measured in v0.2.3: isolated pixels on
+      lavapipe, nothing visible on GPU hardware, so deferred (owner).
+    - **Translucent faces merge too** (v0.2.5), with one constraint: a
+      quad grows only while each of its sides stays uniformly framed or
+      unframed (`render/block-textures`), so four side bits and four
+      corner bits in the quad describe its connected frames exactly, and
+      the mesh stays a function of the chunk alone. Their merge key is the
+      appearance id plus whether the face shows the surface layer. Jagged
+      outlines cost some extra quads; a per-chunk volume of glass groups
+      read by the fragment shader was the alternative, rejected for its
+      memory and its reads beyond the quad.
   - *the per-cell rule* — the reference meshing that the bitmask mesher
     must match, over any representation.
 - **Whole-chunk remesh, no sub-blocks** (supersedes the sub-chunk mesh

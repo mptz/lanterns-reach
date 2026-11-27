@@ -598,6 +598,19 @@ bandwidth where it buys material richness and image quality.
   variant sets are one mechanism with three selection rules: `random`,
   `matched` (edge labels matched to neighbours) and `connected` (framed
   edges, from the mesher).
+  - **Chosen per fragment from the quad** (v0.2.5): a merged translucent
+    quad carries which of its four sides are framed and which of its four
+    corners are inner corners; a fragment's tile is the edge tile for the
+    framed sides its cell touches, plus, where a corner bit is set, that
+    corner's square from the fully framed tile. Frames are not part of the
+    appearance payload (they depend on neighbours), which is what keeps
+    appearance ids per state.
+  - **Inner corners** (owner, 2026-11-27): at a concave corner of a region
+    the corner cell's two edges both continue, so neither has a band, but
+    its diagonal neighbour doesn't continue, and the two bands meeting
+    there would stop a band's width short. The corner bit closes it, so the
+    16 edge tiles suffice where connected-texture schemes use 47 (blob
+    sets).
 - Open: decoupling materials from block types. A face's material id is
   its block type's, so two block types never share an appearance id and
   never merge in the mesher (`world/chunk-meshing`), even with identical

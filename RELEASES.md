@@ -486,7 +486,7 @@ The open items listed at the head of v0.2.4 in `versions.md`, each decided.
 |---|---|
 | The owner's review of the Brick and chunk designs | **Done (design):** units rather than feet in engine docs; the chunk or terrain node is the abstraction boundary, the Brick only storage; superclasses are blocks and never obtainable; no chunk-data type, `Chunk` is the actor and owns its Brick. **Code in v0.2.4:** `ChunkData` becomes `Chunk`; raycasting and the emitter set move into it. |
 | Mesher layering (entry-agnostic for coarse Bricks) | **Dropped:** palettes hold block states at every level, so the mesher's entry type is always `BlockState`. Meshing at a coarse cell size stays v0.2.9's. |
-| T-junction cracks; `log_columns` tile flips | **Scheduled to v0.2.5**, whose packed quads rewrite the vertex shader path both live in. |
+| T-junction cracks; `log_columns` tile flips | **Tile flips scheduled to v0.2.5**, whose packed quads rewrite that shader path. **Cracks deferred** until they show on GPU hardware (owner, 2026-11-27; first recorded as scheduled to v0.2.5). |
 | Merge key and materials | **Deferred** until materials are their own definitions; open in `render/block-textures`, not yet scheduled. The two vacuous merge tests keep printing their notice. |
 | Reverse lookup: SIMD scan, 16-bit table slots | **Dropped:** the scalar scan is accepted (16–43 ns per edit), and the table is at most about twice the entries. Revisit only if a profile shows edits. |
 | Sub-byte widths (1, 2, 4 bits) | **Scheduled to v0.3**, when real chunks show where palettes sit. |
