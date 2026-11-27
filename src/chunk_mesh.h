@@ -7,7 +7,7 @@
 //   - the bitmask mesher (bitmask_mesh.h), run by each representation, which
 //     culls with word operations and merges coplanar faces of equal
 //     appearance.
-// `ChunkData::meshInto` picks one.
+// `Chunk::meshInto` picks one.
 
 #include "appearance.h"
 #include "blocks.h"
@@ -22,4 +22,4 @@ struct MeshContext {
 };
 
 // Appends the per-cell rule's faces for the chunk to `out`, in cell order.
-void meshPerCell(const MeshContext& context, const ChunkData& chunk, const ChunkId& id, WorldMesh& out);
+void meshPerCell(const MeshContext& context, const Chunk& chunk, const ChunkId& id, WorldMesh& out);

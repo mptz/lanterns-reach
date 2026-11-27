@@ -154,6 +154,9 @@ target_link_libraries(imgui PUBLIC Vulkan::Vulkan glfw)
 # ---------------------------------------------------------------------------
 # deps/toolchain: no fused multiply-add contraction, so float results don't depend on the target.
 add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-ffp-contract=off>)
+# Frame pointers in every build, so `perf record --call-graph fp` gives call
+# graphs with no system setting (versions.md v0.2.4).
+add_compile_options(-fno-omit-frame-pointer -mno-omit-leaf-frame-pointer)
 set(SANDBOX_WARNINGS -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wno-missing-field-initializers -Werror)
 # deps/toolchain: Clang, libstdc++, thread-safety analysis on (the annotations arrive with the concurrency work).
 list(APPEND SANDBOX_WARNINGS -Wthread-safety)

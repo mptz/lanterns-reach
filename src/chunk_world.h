@@ -2,8 +2,9 @@
 // The v0.2.1 world: one chunk, (dimension 0, chunk (0,0,0)), holding cells
 // 0–63 per axis, behind the WorldQuery seam. Cells outside it read as air and
 // reject edits. v0.2.9 puts octree terrain around it; v0.2.24 adds several
-// chunks. Nothing outside the chunk code (brick.h, chunk.*) sees cells,
-// indices or the palette.
+// chunks. ChunkWorld is the world's stand-in (cells to chunks, edits outside
+// the chunk rejected, the generation counter, dirtiness, the mesher setting);
+// the chunk answers the semantic queries.
 
 #include <cstdint>
 #include <optional>
@@ -49,7 +50,7 @@ private:
     const BlockRegistry& registry_;
     AppearanceTable appearance_;  // the merge key: every face's appearance id
     Mesher mesher_ = Mesher::Greedy;
-    ChunkData chunk_;
+    Chunk chunk_;
     // The cells that emit, maintained per edit (core/opaque-chunk-queries:
     // a public answer is O(1) or O(surface), never O(volume)), in z, y, x
     // order, so `emitters()` reads no cell but the emitters.
@@ -65,6 +66,6 @@ private:
 
 // Test-only access to the world's chunk data.
 struct ChunkWorldTestAccess {
-    static ChunkData& chunk(ChunkWorld& w) { return w.chunk_; }
-    static const ChunkData& chunk(const ChunkWorld& w) { return w.chunk_; }
+    static Chunk& chunk(ChunkWorld& w) { return w.chunk_; }
+    static const Chunk& chunk(const ChunkWorld& w) { return w.chunk_; }
 };

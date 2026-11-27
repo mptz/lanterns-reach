@@ -68,8 +68,8 @@ double median(std::vector<double> v) {
 }
 
 // A chunk at width w holding `entries` distinct live states (air first).
-ChunkData chunkWith(std::uint32_t entries, unsigned w) {
-    ChunkData d;
+Chunk chunkWith(std::uint32_t entries, unsigned w) {
+    Chunk d;
     for (std::uint32_t k = 1; k < entries; ++k) d.set(localOfIndex(k * 3u % kBrickCells), testState(k));
     // Every state live (2 cells each is not needed: one cell each, air elsewhere).
     if (w != 0 && ChunkTestAccess::width(d) != w) ChunkTestAccess::forceWidth(d, w);
@@ -86,7 +86,7 @@ void timeChunkRepresentations() {
     const Row rows[] = {{1, 2}, {2, 4}, {4, 16}, {8, 32}, {8, 33}, {8, 200}, {16, 32}, {16, 33}, {16, 200}, {16, 5000},
                         {16, 65000}, {32, 32}, {32, 200}, {32, 5000}, {32, 70000}};
     for (const Row& r : rows) {
-        ChunkData d = chunkWith(r.entries, r.w);
+        Chunk d = chunkWith(r.entries, r.w);
         if (TA::width(d) != r.w || TA::paletteSize(d) != r.entries) {
             std::printf("  (setup failed: width %u entries %u)\n", r.w, r.entries);
             continue;
@@ -96,7 +96,7 @@ void timeChunkRepresentations() {
         for (auto& wk : work) wk = {localOfIndex(static_cast<std::uint32_t>(rng() % kBrickCells)), testState(static_cast<std::uint32_t>(rng() % r.entries))};
         std::vector<double> ns;
         for (int rep = 0; rep < 5; ++rep) {
-            ChunkData c = d;
+            Chunk c = d;
             const auto t0 = Clock::now();
             for (const auto& [cell, state] : work) c.set(cell, state);
             ns.push_back(msSince(t0) * 1e6 / kEdits);
@@ -107,7 +107,7 @@ void timeChunkRepresentations() {
     std::printf("\nScan against table, width 8 (ns per edit; the threshold is the crossover):\n");
     std::printf("  %8s %10s %10s\n", "entries", "scan", "table");
     for (std::uint32_t entries : {2u, 4u, 8u, 12u, 16u, 20u, 24u, 32u, 48u, 64u}) {
-        ChunkData d = chunkWith(entries, 8);
+        Chunk d = chunkWith(entries, 8);
         constexpr std::uint32_t kEdits = 400000;
         std::vector<std::pair<glm::ivec3, BlockState>> work(kEdits);
         for (auto& wk : work) wk = {localOfIndex(static_cast<std::uint32_t>(rng() % kBrickCells)), testState(static_cast<std::uint32_t>(rng() % entries))};
@@ -115,7 +115,7 @@ void timeChunkRepresentations() {
         for (int table = 0; table < 2; ++table) {
             std::vector<double> ns;
             for (int rep = 0; rep < 5; ++rep) {
-                ChunkData c = d;
+                Chunk c = d;
                 TA::setScanMax(c, table ? 0 : 1000);
                 const auto t0 = Clock::now();
                 for (const auto& [cell, state] : work) c.set(cell, state);
@@ -129,10 +129,10 @@ void timeChunkRepresentations() {
     std::printf("\nGrowth (the one edit that repacks a full palette to the next width), ms:\n");
     for (unsigned w : {1u, 2u, 4u, 8u, 16u}) {
         const std::uint32_t n = std::uint32_t{1} << w;
-        ChunkData d = chunkWith(n, w);
+        Chunk d = chunkWith(n, w);
         std::vector<double> ms;
         for (int rep = 0; rep < 7; ++rep) {
-            ChunkData c = d;
+            Chunk c = d;
             const auto t0 = Clock::now();
             c.set({1, 1, 1}, testState(n + 5));
             ms.push_back(msSince(t0));
@@ -143,10 +143,10 @@ void timeChunkRepresentations() {
 
     std::printf("\nCapacity doubling within a width (a full palette below its width's limit), ms:\n");
     for (const Row& r : {Row{8, 32}, Row{8, 128}, Row{16, 1024}, Row{16, 32768}, Row{32, 131072}}) {
-        ChunkData d = chunkWith(r.entries, r.w);
+        Chunk d = chunkWith(r.entries, r.w);
         std::vector<double> ms;
         for (int rep = 0; rep < 7; ++rep) {
-            ChunkData c = d;
+            Chunk c = d;
             const auto t0 = Clock::now();
             c.set({1, 1, 1}, testState(r.entries + 5));
             ms.push_back(msSince(t0));
@@ -157,22 +157,22 @@ void timeChunkRepresentations() {
 
     std::printf("\nExplicit compaction, ms (dead entries dropped, narrowest width):\n");
     for (const Row& r : {Row{2, 3}, Row{4, 14}, Row{8, 200}, Row{16, 5000}, Row{16, 50000}, Row{32, 70000}}) {
-        ChunkData d = chunkWith(r.entries, r.w);
+        Chunk d = chunkWith(r.entries, r.w);
         std::vector<double> ms;
         for (int rep = 0; rep < 5; ++rep) {
-            ChunkData c = d;
+            Chunk c = d;
             const auto t0 = Clock::now();
             TA::compact(c);
             ms.push_back(msSince(t0));
         }
-        ChunkData c = d;
+        Chunk c = d;
         TA::compact(c);
         std::printf("  width %2u, %6u entries -> width %2u: %7.3f ms\n", r.w, r.entries, TA::width(c), median(ms));
     }
 
     std::printf("\nFull digest of one chunk, ms:\n");
     {
-        ChunkData d = chunkWith(40, 8);
+        Chunk d = chunkWith(40, 8);
         std::vector<double> ms;
         for (int rep = 0; rep < 9; ++rep) {
             TA::dropDigest(d);
@@ -202,7 +202,7 @@ void timeChunkRepresentations() {
         std::printf("  weights alone, computed (262144 × W):          %7.3f ms\n", median(wCompute));
         std::printf("  weights alone, from a 2 MiB table (sweep):     %7.3f ms   (sink %llu)\n", median(wTable),
                     static_cast<unsigned long long>(sink & 1));
-        ChunkData u;
+        Chunk u;
         TA::dropDigest(u);
         const auto t0 = Clock::now();
         (void)u.digest();
@@ -216,7 +216,7 @@ void timeChunkRepresentations() {
 
     std::printf("\nMemory of a chunk at each width (KiB): indices + palette + reverse table:\n");
     for (const Row& r : {Row{1, 2}, Row{2, 4}, Row{4, 16}, Row{8, 32}, Row{8, 256}, Row{16, 300}, Row{16, 65536}, Row{32, 70000}}) {
-        ChunkData d = chunkWith(r.entries, r.w);
+        Chunk d = chunkWith(r.entries, r.w);
         if (TA::width(d) != r.w) {
             std::printf("  (setup failed: width %u entries %u)\n", r.w, r.entries);
             continue;
@@ -229,7 +229,7 @@ void timeChunkRepresentations() {
                     static_cast<double>(TA::indexBytes(d) + TA::paletteBytes(d) + TA::tableBytes(d)) / 1024);
     }
     {
-        ChunkData u;
+        Chunk u;
         std::printf("  uniform: %zu bytes\n", TA::paletteBytes(u));
     }
 
@@ -241,7 +241,7 @@ void timeChunkRepresentations() {
             ChunkWorld w(registry());
             std::vector<std::string> warnings;
             w.applyBulk(sceneEdits(*scene, registry(), &warnings));
-            const ChunkData& d = ChunkWorldTestAccess::chunk(w);
+            const Chunk& d = ChunkWorldTestAccess::chunk(w);
             std::printf("  width %u, palette %u, live %u\n", TA::width(d), TA::paletteSize(d), TA::liveEntries(d));
         }
     }
@@ -301,7 +301,7 @@ void timeMeshers() {
     std::printf("Mesh time per chunk (ms, median of 7) and size, by mesher:\n");
     std::printf("  %-20s %-9s %9s %8s %8s %9s %8s\n", "case", "mesher", "ms", "quads", "transl.", "KiB", "faces/q");
     for (const Shape& sh : shapes) {
-        ChunkData d;
+        Chunk d;
         fillChunk(d, sh.cells, true);
         for (Mesher m : {Mesher::Greedy, Mesher::Unmerged, Mesher::PerCell}) {
             std::vector<double> ms;
@@ -309,7 +309,7 @@ void timeMeshers() {
             for (int rep = 0; rep < 7; ++rep) {
                 WorldMesh out;
                 const auto t0 = Clock::now();
-                d.meshInto(testContext(), ChunkWorld::kChunk, m, out);
+                d.meshInto(testContext(), m, out);
                 ms.push_back(msSince(t0));
                 last = std::move(out);
             }
@@ -326,7 +326,7 @@ void timeMeshers() {
         setMeshTimings(&phases);
         for (int rep = 0; rep < 7; ++rep) {
             WorldMesh out;
-            d.meshInto(testContext(), ChunkWorld::kChunk, Mesher::Greedy, out);
+            d.meshInto(testContext(), Mesher::Greedy, out);
         }
         setMeshTimings(nullptr);
         std::printf("  %-20s   greedy phases (ms, mean): masks %.3f, culling %.3f, transposes %.3f, merging %.3f, emission %.3f\n",
@@ -339,10 +339,10 @@ void timeMeshers() {
     // neighbouring opaque faces (the next cell along either in-plane axis has
     // a face in the same direction) whose payloads differ.
     {
-        ChunkData d;
+        Chunk d;
         fillChunk(d, shapes[0].cells, true);
         WorldMesh out;
-        d.meshInto(testContext(), ChunkWorld::kChunk, Mesher::PerCell, out);
+        d.meshInto(testContext(), Mesher::PerCell, out);
         std::map<std::tuple<int, int, int, int>, FacePayload> faces;
         for (const UnitFace& f : unitFaces(out))
             if (!f.translucent) faces[{f.x, f.y, f.z, f.dir}] = f.payload;

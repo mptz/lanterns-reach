@@ -364,10 +364,10 @@ void testAppendOnly() {
     std::mt19937_64 rng(13);
     ChunkWorld w(registry());
     fillChunk(ChunkWorldTestAccess::chunk(w), randomMixed(rng, 25), true);
-    const ChunkData& chunk = ChunkWorldTestAccess::chunk(w);
+    const Chunk& chunk = ChunkWorldTestAccess::chunk(w);
     for (Mesher m : {Mesher::Greedy, Mesher::Unmerged, Mesher::PerCell}) {
         WorldMesh fresh;
-        chunk.meshInto(context(), ChunkWorld::kChunk, m, fresh);
+        chunk.meshInto(context(), m, fresh);
         WorldMesh out;  // a previous chunk's quads: both meshes, with their indices and outlines
         for (int i = 0; i < 3; ++i) {
             out.vertices.push_back({{float(i), 1, 2}, {0, 0, 1}, 7u + static_cast<unsigned>(i), 8, 9});
@@ -377,7 +377,7 @@ void testAppendOnly() {
             out.edgeLines.push_back({float(i), 5, 6});
         }
         const WorldMesh prefix = out;
-        chunk.meshInto(context(), ChunkWorld::kChunk, m, out);
+        chunk.meshInto(context(), m, out);
         CHECK(sameBytes({out.vertices.begin(), out.vertices.begin() + 3}, prefix.vertices));
         CHECK(sameBytes({out.translucentVertices.begin(), out.translucentVertices.begin() + 3}, prefix.translucentVertices));
         CHECK(std::equal(prefix.indices.begin(), prefix.indices.end(), out.indices.begin()));

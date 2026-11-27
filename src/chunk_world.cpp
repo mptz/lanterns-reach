@@ -8,12 +8,6 @@
 
 #include "chunk_mesh.h"
 
-namespace {
-
-constexpr double kInf = std::numeric_limits<double>::infinity();
-
-}  // namespace
-
 ChunkWorld::ChunkWorld(const BlockRegistry& registry) : registry_(registry), appearance_(registry) {}
 
 bool ChunkWorld::contains(const CellPos& c) const { return chunkOf(c) == kChunk.coord; }
@@ -45,79 +39,8 @@ ApplyResult ChunkWorld::apply(const EditSet& edits) {
     return result;
 }
 
-// Amanatides–Woo DDA in chunk-local f64 coordinates. A ray starting outside
-// the chunk is first clipped to its box (slab test) and enters through a face.
-std::optional<RayHit> ChunkWorld::raycast(const WorldPos& worldOrigin, const glm::dvec3& rawDir,
-                                         double maxDistance) const {
-    const double len = std::sqrt(rawDir.x * rawDir.x + rawDir.y * rawDir.y + rawDir.z * rawDir.z);
-    if (!(len > 0.0)) return std::nullopt;
-    const glm::dvec3 d = rawDir / len;
-    const glm::dvec3 o = worldOrigin - cellCorner(chunkOrigin(kChunk.coord));  // chunk-local
-    const double s = static_cast<double>(kChunkSize);
-
-    // Entry into [0, s]³.
-    double tEnter = 0.0, tExit = kInf;
-    int enterAxis = -1;
-    for (int a = 0; a < 3; ++a) {
-        if (d[a] == 0.0) {
-            if (o[a] < 0.0 || o[a] >= s) return std::nullopt;  // parallel and outside this slab
-            continue;
-        }
-        double t0 = (0.0 - o[a]) / d[a], t1 = (s - o[a]) / d[a];
-        if (t0 > t1) std::swap(t0, t1);
-        // An origin exactly on a face but outside the half-open cell range
-        // (e.g. x == size) enters through that face at t = 0.
-        const bool outsideSlab = o[a] < 0.0 || o[a] >= s;
-        if (t0 > tEnter || (enterAxis < 0 && outsideSlab && t0 >= tEnter)) {
-            tEnter = t0;
-            enterAxis = a;
-        }
-        tExit = std::min(tExit, t1);
-    }
-    if (tEnter > tExit || tEnter > maxDistance || tExit <= 0.0) return std::nullopt;
-
-    glm::dvec3 p = o + d * tEnter;
-    glm::ivec3 step(0), normal(0);
-    glm::i64vec3 cell;
-    for (int a = 0; a < 3; ++a) {
-        step[a] = d[a] > 0.0 ? 1 : (d[a] < 0.0 ? -1 : 0);
-        if (a == enterAxis) p[a] = d[a] > 0.0 ? 0.0 : s;  // exactly on the entered face
-        cell[a] = std::clamp(static_cast<std::int64_t>(std::floor(p[a])), std::int64_t{0},
-                             static_cast<std::int64_t>(kChunkSize - 1));
-    }
-    if (enterAxis >= 0) normal[enterAxis] = -step[enterAxis];
-
-    auto hitAt = [&](double t) {
-        const CellPos c{cell.x, cell.y, cell.z};
-        return RayHit{c, normal, cellCorner(chunkOrigin(kChunk.coord)) + o + d * t, probe(c), t};
-    };
-    if (!probe({cell.x, cell.y, cell.z}).isAir()) return hitAt(tEnter);  // inside (normal 0) or the entered cell
-
-    glm::dvec3 tMax, tDelta;
-    for (int a = 0; a < 3; ++a) {
-        if (step[a] == 0) {
-            tMax[a] = kInf;
-            tDelta[a] = kInf;
-            continue;
-        }
-        const double boundary = static_cast<double>(cell[a] + (step[a] > 0 ? 1 : 0));
-        tMax[a] = tEnter + (boundary - p[a]) / d[a];
-        tDelta[a] = 1.0 / std::abs(d[a]);
-    }
-    for (;;) {
-        // Smallest tMax; exact ties step x before y before z.
-        int a = 0;
-        if (tMax[1] < tMax[a]) a = 1;
-        if (tMax[2] < tMax[a]) a = 2;
-        const double t = tMax[a];
-        if (t > maxDistance) return std::nullopt;
-        cell[a] += step[a];
-        if (cell[a] < 0 || cell[a] >= kChunkSize) return std::nullopt;  // left the chunk
-        tMax[a] += tDelta[a];
-        normal = glm::ivec3(0);
-        normal[a] = -step[a];
-        if (!probe({cell.x, cell.y, cell.z}).isAir()) return hitAt(t);
-    }
+std::optional<RayHit> ChunkWorld::raycast(const WorldPos& origin, const glm::dvec3& dir, double maxDistance) const {
+    return chunk_.raycast(origin, dir, maxDistance);
 }
 
 glm::vec3 ChunkWorld::emission(const BlockState& s) const {
@@ -134,15 +57,14 @@ std::vector<Emitter> ChunkWorld::emitters() const {
 }
 
 WorldMesh ChunkWorld::buildMesh(const ChunkId& id) {
-    static const ChunkData kAir;  // every chunk but the one is air
     WorldMesh mesh;
     const MeshContext context{registry_, appearance_};
-    if (id != kChunk) {
-        kAir.meshInto(context, id, mesher_, mesh);
+    if (id != kChunk) {  // every chunk but the one is air
+        Chunk(id).meshInto(context, mesher_, mesh);
         return mesh;
     }
     meshedGeneration_ = generation_;
-    chunk_.meshInto(context, id, mesher_, mesh);
+    chunk_.meshInto(context, mesher_, mesh);
     return mesh;
 }
 

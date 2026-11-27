@@ -95,12 +95,12 @@ Cells makeCells(const Case& c, std::mt19937_64& rng) {
 
 struct Copy {
     std::string name;
-    ChunkData data;
+    Chunk data;
 };
 
-WorldMesh meshOf(const ChunkData& d, Mesher m) {
+WorldMesh meshOf(const Chunk& d, Mesher m) {
     WorldMesh out;
-    d.meshInto(testContext(), ChunkWorld::kChunk, m, out);
+    d.meshInto(testContext(), m, out);
     return out;
 }
 
@@ -152,7 +152,7 @@ void runCase(const Case& c, bool longRun) {
     const bool verbose = std::getenv("SANDBOX_TEST_VERBOSE") != nullptr;
     const auto t0 = std::chrono::steady_clock::now();
     if (verbose) {
-        ChunkData probe;
+        Chunk probe;
         fillChunk(probe, cells, true);
         const WorldMesh m = meshOf(probe, Mesher::Greedy);
         std::fprintf(stderr, "mesh case %u: shape %d, %u live states, greedy %zu quads + %zu translucent, per-cell %zu faces\n", c.seed,
@@ -161,7 +161,7 @@ void runCase(const Case& c, bool longRun) {
     }
     try {
         std::vector<Copy> copies;
-        copies.push_back({"fill", ChunkData{}});
+        copies.push_back({"fill", Chunk{}});
         fillChunk(copies.back().data, cells, true);
         const std::uint32_t live = TA::liveEntries(copies[0].data);
         // The widest width that holds it, forced: the palette at another width.
@@ -176,10 +176,10 @@ void runCase(const Case& c, bool longRun) {
                 copies.push_back({"w" + std::to_string(w), copies[0].data});
                 TA::forceWidth(copies.back().data, w);
             }
-        copies.push_back({"edits", ChunkData{}});  // promotion and growth on the way, a dead air entry
+        copies.push_back({"edits", Chunk{}});  // promotion and growth on the way, a dead air entry
         fillChunk(copies.back().data, cells, false);
         // Entries in another order: cells set in reverse, then compacted (renumbered by first appearance).
-        copies.push_back({"reordered", ChunkData{}});
+        copies.push_back({"reordered", Chunk{}});
         for (std::uint32_t i = kBrickCells; i-- > 0;) copies.back().data.set(localOfIndex(i), cells[i]);
         TA::compact(copies.back().data);
         compare(run, copies, longRun);

@@ -50,19 +50,19 @@ void testWeights() {
 void testUniformDigest() {
     for (std::uint32_t k : {0u, 1u, 77u, 300u}) {
         const BlockState s = testState(k);
-        ChunkData u;
+        Chunk u;
         u.set({0, 0, 0}, s);
         Cells cells(kBrickCells, BlockState::air());
         cells[0] = s;
         CHECK(u.digest() == oracleDigest(cells));
         // A chunk filled with one state: H(s) · K, whatever the representation.
         Cells all(kBrickCells, s);
-        ChunkData f;
+        Chunk f;
         fillChunk(f, all, true);
         CHECK((k == 0 || TA::isUniform(f)) && f.digest() == mulMod(digestStateHash(canonicalEncoding(s)), digestK()));
         CHECK(f.digest() == oracleDigest(all));
         for (unsigned w : kBrickWidths) {  // a forced palette of one entry
-            ChunkData p = f;
+            Chunk p = f;
             TA::dropDigest(p);
             TA::forceWidth(p, w);
             CHECK(TA::width(p) == w);
@@ -75,7 +75,7 @@ void testIncrementalDigest() {
     std::mt19937_64 rng(11);
     std::vector<std::uint32_t> pool;
     Cells cells = makeContent(40, rng, pool);
-    ChunkData d;
+    Chunk d;
     fillChunk(d, cells, true);
     (void)d.digest();
     for (int i = 0; i < 20000; ++i) {

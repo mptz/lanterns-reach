@@ -68,7 +68,7 @@ Cells makeContent(std::uint32_t n, std::mt19937_64& rng, std::vector<std::uint32
 Cells distinctContent(std::uint32_t n, std::uint32_t base);
 // Sets every cell of `data` that differs from air by edits (promotion and
 // growth on the way); finish=true then ends it like a bulk fill (compaction).
-void fillChunk(ChunkData& data, const Cells& cells, bool finish);
+void fillChunk(Chunk& data, const Cells& cells, bool finish);
 
 // What meshing needs besides cells: the registry and its appearance table.
 const AppearanceTable& testAppearance();

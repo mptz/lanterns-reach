@@ -94,7 +94,7 @@ Cells distinctContent(std::uint32_t n, std::uint32_t base) {
     return cells;
 }
 
-void fillChunk(ChunkData& data, const Cells& cells, bool finish) {
+void fillChunk(Chunk& data, const Cells& cells, bool finish) {
     for (std::uint32_t c = 0; c < kBrickCells; ++c) data.set(localOfIndex(c), cells[c]);
     if (finish) data.finishBulkFill();
 }

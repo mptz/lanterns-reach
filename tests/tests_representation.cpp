@@ -9,7 +9,7 @@ namespace {
 using TA = ChunkTestAccess;
 
 void testPromotion() {
-    ChunkData d;
+    Chunk d;
     CHECK(TA::isUniform(d) && d.uniformState() == BlockState::air());
     CHECK(!d.set({1, 2, 3}, BlockState::air()) && TA::isUniform(d));  // no change
     CHECK(d.set({1, 2, 3}, testState(4)));
@@ -28,7 +28,7 @@ void testGrowthAtEveryBoundary() {
     for (unsigned w : {1u, 2u, 4u, 8u}) {
         const std::uint32_t n = std::uint32_t{1} << w;
         Cells cells = distinctContent(n, 1);
-        ChunkData d;
+        Chunk d;
         fillChunk(d, cells, true);
         TA::forceWidth(d, w);  // a repack: the n entries fill a palette at width w exactly
         CHECK(TA::width(d) == w && TA::paletteSize(d) == n && TA::paletteFull(d));
@@ -47,7 +47,7 @@ void testGrowthAtEveryBoundary() {
 // 16 → 32 bits: 2¹⁶ entries fill a 16-bit palette, one more state grows it.
 // The synthetic states are fine for storage.
 void testGrowthTo32Bits() {
-    ChunkData d;
+    Chunk d;
     for (std::uint32_t k = 1; k < 65536; ++k) d.set(localOfIndex(k), testState(k));
     CHECK(TA::width(d) == 16 && TA::paletteSize(d) == 65536 && TA::paletteFull(d));
     const std::uint64_t grew = TA::growths(d);
@@ -61,7 +61,7 @@ void testGrowthTo32Bits() {
 // A full palette with a dead entry grows; nothing is reclaimed by an edit.
 void testFullWithDeadEntryGrows() {
     Cells cells = distinctContent(4, 10);
-    ChunkData d;
+    Chunk d;
     fillChunk(d, cells, true);
     CHECK(TA::width(d) == 4 && TA::paletteSize(d) == 4);  // 4 entries > 7/8 of a 2-bit palette: 4 bits
     TA::forceWidth(d, 2);  // a 2-bit palette is full at 4 entries (a repack: entries fit)
@@ -84,7 +84,7 @@ void testFullWithDeadEntryGrows() {
 void testDeadEntryReuse() {
     Cells cells = distinctContent(3, 20);
     cells[0] = testState(29);  // state 29 only at cell 0
-    ChunkData d;
+    Chunk d;
     fillChunk(d, cells, true);
     CHECK(TA::paletteSize(d) == 4);
     d.set({0, 0, 0}, testState(20));  // 29 is now dead
@@ -99,7 +99,7 @@ void testDeadEntryReuse() {
 // palette at its width until an explicit compaction.
 void testEditsNeverCompact() {
     Cells cells = distinctContent(300, 1);  // 16 bits
-    ChunkData d;
+    Chunk d;
     fillChunk(d, cells, true);
     CHECK(TA::width(d) == 16);
     for (std::uint32_t c = 0; c < kBrickCells; ++c)
@@ -132,7 +132,7 @@ void testLowWaterMark() {
 // width; at the limit it moves to the next width, with twice the capacity.
 void testGrowthWithinWidth() {
     Cells cells = distinctContent(20, 1);
-    ChunkData d;
+    Chunk d;
     fillChunk(d, cells, true);
     CHECK(TA::width(d) == 8 && TA::paletteSize(d) == 20 && TA::paletteCapacity(d) == 32);
     std::uint32_t k = 21;
@@ -182,18 +182,18 @@ void testBulkFill() {
     if (!scene) return;
     std::vector<std::string> warnings;
     w.applyBulk(sceneEdits(*scene, registry(), &warnings));
-    const ChunkData& d = ChunkWorldTestAccess::chunk(w);
+    const Chunk& d = ChunkWorldTestAccess::chunk(w);
     const std::uint32_t live = TA::liveEntries(d);
     CHECK(!TA::isUniform(d) && TA::paletteSize(d) == live);  // compacted: no dead entries
     CHECK(TA::width(d) == brickCompactedWidth(live) && live > 1);
     // One state remains: uniform.
     Cells all(kBrickCells, testState(3));
-    ChunkData f;
+    Chunk f;
     fillChunk(f, all, true);
     CHECK(TA::isUniform(f));
     Cells two = all;
     two[7] = testState(4);
-    ChunkData g;
+    Chunk g;
     fillChunk(g, two, true);
     CHECK(TA::width(g) == 2 && TA::paletteSize(g) == 2);  // 2 > 7/8 of a 1-bit palette
 }
@@ -214,7 +214,7 @@ void testUniformMesh() {
 // The reverse lookup agrees on either side of its scan threshold, and the
 // table is built only above it.
 void testReverseLookupThreshold() {
-    ChunkData d;
+    Chunk d;
     const std::uint32_t top = 3 * kReverseScanMax;
     for (std::uint32_t k = 1; k <= top; ++k) {
         d.set(localOfIndex(1000 + k), testState(k));
@@ -234,7 +234,7 @@ void testReverseLookupThreshold() {
 // A palette past 2¹⁸ entries at 32 bits (dead ones included): the capacity
 // doubles by swapping Bricks, the width stays. One cell, rewritten.
 void testThirtyTwoBits() {
-    ChunkData d;
+    Chunk d;
     d.set({0, 0, 0}, testState(1));
     d.set({1, 0, 0}, testState(2));
     TA::forceWidth(d, 32);

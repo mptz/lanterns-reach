@@ -1,13 +1,16 @@
 #include "chunk.h"
 
 #include <algorithm>
+#include <cmath>
+#include <limits>
 
-ChunkData::ChunkData() : brick_(std::make_unique<UniformBrick<BlockState>>(BlockState::air())) {}
+Chunk::Chunk(ChunkId id) : id_(id), brick_(std::make_unique<UniformBrick<BlockState>>(BlockState::air())) {}
 
-ChunkData::ChunkData(const ChunkData& o) : brick_(o.brick_->clone()), digest_(o.digest_), growths_(o.growths_), widenings_(o.widenings_) {}
+Chunk::Chunk(const Chunk& o) : id_(o.id_), brick_(o.brick_->clone()), digest_(o.digest_), growths_(o.growths_), widenings_(o.widenings_) {}
 
-ChunkData& ChunkData::operator=(const ChunkData& o) {
+Chunk& Chunk::operator=(const Chunk& o) {
     if (this != &o) {
+        id_ = o.id_;
         brick_ = o.brick_->clone();
         lookup_.drop();
         digest_ = o.digest_;
@@ -17,17 +20,17 @@ ChunkData& ChunkData::operator=(const ChunkData& o) {
     return *this;
 }
 
-std::optional<BlockState> ChunkData::uniformState() const {
+std::optional<BlockState> Chunk::uniformState() const {
     if (brick_->width() != 0) return std::nullopt;
     return static_cast<const UniformBrick<BlockState>&>(*brick_).state();
 }
 
-std::uint64_t ChunkData::digest() const {
+std::uint64_t Chunk::digest() const {
     if (!digest_) digest_ = brick_->fullDigest();
     return *digest_;
 }
 
-bool ChunkData::set(const glm::ivec3& local, const BlockState& state) {
+bool Chunk::set(const glm::ivec3& local, const BlockState& state) {
     const auto cell = static_cast<std::uint32_t>(brickCellIndex(local.x, local.y, local.z));
     const BlockState old = brick_->at(cell);
     if (old == state) return false;
@@ -63,7 +66,7 @@ bool ChunkData::set(const glm::ivec3& local, const BlockState& state) {
     return true;
 }
 
-std::uint32_t ChunkData::liveEntries() const {
+std::uint32_t Chunk::liveEntries() const {
     if (brick_->width() == 0) return 1;
     const PaletteBrick<BlockState>& p = palette();
     std::vector<std::uint8_t> live(p.entries(), 0);
@@ -71,7 +74,7 @@ std::uint32_t ChunkData::liveEntries() const {
     return static_cast<std::uint32_t>(std::count(live.begin(), live.end(), std::uint8_t{1}));
 }
 
-void ChunkData::rebuild(unsigned width, bool keepDead) {
+void Chunk::rebuild(unsigned width, bool keepDead) {
     if (brick_->width() == 0) {
         if (width == 0) return;
         const BlockState s = static_cast<const UniformBrick<BlockState>&>(*brick_).state();
@@ -106,23 +109,103 @@ void ChunkData::rebuild(unsigned width, bool keepDead) {
     lookup_.drop();
 }
 
-void ChunkData::compact() {
+void Chunk::compact() {
     const std::uint32_t live = liveEntries();
     rebuild(live == 1 ? 0u : brickCompactedWidth(live), false);
 }
 
-void ChunkData::finishBulkFill() { compact(); }
+void Chunk::finishBulkFill() { compact(); }
 
-std::uint32_t ChunkTestAccess::paletteSize(const ChunkData& c) {
+std::uint32_t ChunkTestAccess::paletteSize(const Chunk& c) {
     return c.brick_->width() == 0 ? 1u : c.palette().entries();
 }
 
-std::uint32_t ChunkTestAccess::paletteCapacity(const ChunkData& c) {
+std::uint32_t ChunkTestAccess::paletteCapacity(const Chunk& c) {
     return c.brick_->width() == 0 ? 1u : c.palette().capacity();
 }
 
-void ChunkTestAccess::forceWidth(ChunkData& c, unsigned width) {
+void ChunkTestAccess::forceWidth(Chunk& c, unsigned width) {
     // Keep dead entries when the palette fits the new width (a repack), else compact.
     const bool fits = c.brick_->width() != 0 && width != 0 && c.palette().entries() <= brickIndexLimit(width);
     c.rebuild(width, fits);
+}
+
+namespace {
+constexpr double kInf = std::numeric_limits<double>::infinity();
+}  // namespace
+
+// Amanatides–Woo DDA in chunk-local f64 coordinates. A ray starting outside
+// the chunk is first clipped to its box (slab test) and enters through a face.
+std::optional<RayHit> Chunk::raycast(const WorldPos& worldOrigin, const glm::dvec3& rawDir,
+                                         double maxDistance) const {
+    const double len = std::sqrt(rawDir.x * rawDir.x + rawDir.y * rawDir.y + rawDir.z * rawDir.z);
+    if (!(len > 0.0)) return std::nullopt;
+    const glm::dvec3 d = rawDir / len;
+    const glm::dvec3 o = worldOrigin - cellCorner(chunkOrigin(id_.coord));  // chunk-local
+    const double s = static_cast<double>(kChunkSize);
+
+    // Entry into [0, s]³.
+    double tEnter = 0.0, tExit = kInf;
+    int enterAxis = -1;
+    for (int a = 0; a < 3; ++a) {
+        if (d[a] == 0.0) {
+            if (o[a] < 0.0 || o[a] >= s) return std::nullopt;  // parallel and outside this slab
+            continue;
+        }
+        double t0 = (0.0 - o[a]) / d[a], t1 = (s - o[a]) / d[a];
+        if (t0 > t1) std::swap(t0, t1);
+        // An origin exactly on a face but outside the half-open cell range
+        // (e.g. x == size) enters through that face at t = 0.
+        const bool outsideSlab = o[a] < 0.0 || o[a] >= s;
+        if (t0 > tEnter || (enterAxis < 0 && outsideSlab && t0 >= tEnter)) {
+            tEnter = t0;
+            enterAxis = a;
+        }
+        tExit = std::min(tExit, t1);
+    }
+    if (tEnter > tExit || tEnter > maxDistance || tExit <= 0.0) return std::nullopt;
+
+    glm::dvec3 p = o + d * tEnter;
+    glm::ivec3 step(0), normal(0);
+    glm::i64vec3 cell;
+    for (int a = 0; a < 3; ++a) {
+        step[a] = d[a] > 0.0 ? 1 : (d[a] < 0.0 ? -1 : 0);
+        if (a == enterAxis) p[a] = d[a] > 0.0 ? 0.0 : s;  // exactly on the entered face
+        cell[a] = std::clamp(static_cast<std::int64_t>(std::floor(p[a])), std::int64_t{0},
+                             static_cast<std::int64_t>(kChunkSize - 1));
+    }
+    if (enterAxis >= 0) normal[enterAxis] = -step[enterAxis];
+
+    auto local = [&] { return glm::ivec3(static_cast<int>(cell.x), static_cast<int>(cell.y), static_cast<int>(cell.z)); };
+    auto hitAt = [&](double t) {
+        const CellPos c = cellAt(id_.coord, local());
+        return RayHit{c, normal, cellCorner(chunkOrigin(id_.coord)) + o + d * t, get(local()), t};
+    };
+    if (!get(local()).isAir()) return hitAt(tEnter);  // inside (normal 0) or the entered cell
+
+    glm::dvec3 tMax, tDelta;
+    for (int a = 0; a < 3; ++a) {
+        if (step[a] == 0) {
+            tMax[a] = kInf;
+            tDelta[a] = kInf;
+            continue;
+        }
+        const double boundary = static_cast<double>(cell[a] + (step[a] > 0 ? 1 : 0));
+        tMax[a] = tEnter + (boundary - p[a]) / d[a];
+        tDelta[a] = 1.0 / std::abs(d[a]);
+    }
+    for (;;) {
+        // Smallest tMax; exact ties step x before y before z.
+        int a = 0;
+        if (tMax[1] < tMax[a]) a = 1;
+        if (tMax[2] < tMax[a]) a = 2;
+        const double t = tMax[a];
+        if (t > maxDistance) return std::nullopt;
+        cell[a] += step[a];
+        if (cell[a] < 0 || cell[a] >= kChunkSize) return std::nullopt;  // left the chunk
+        tMax[a] += tDelta[a];
+        normal = glm::ivec3(0);
+        normal[a] = -step[a];
+        if (!get(local()).isAir()) return hitAt(t);
+    }
 }

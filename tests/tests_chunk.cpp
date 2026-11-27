@@ -39,7 +39,7 @@ void testChunkAddressing() {
 // The chunk data: edits go through it, a state already in the palette reuses
 // its entry, a new state appends one.
 void testChunkDataPalette() {
-    ChunkData d;
+    Chunk d;
     CHECK(ChunkTestAccess::paletteSize(d) == 1 && d.get({0, 0, 0}).isAir() && d.get({63, 63, 63}).isAir());
     const BlockState stone = solidState();
     CHECK(d.set({1, 2, 3}, stone) && ChunkTestAccess::paletteSize(d) == 2);
@@ -52,7 +52,7 @@ void testChunkDataPalette() {
     CHECK(d.set({9, 9, 9}, rotated) && ChunkTestAccess::paletteSize(d) == 3);
     CHECK(d.set({9, 9, 9}, stone) && ChunkTestAccess::paletteSize(d) == 3);
     // A copy is independent (it owns its own Brick).
-    ChunkData copy = d;
+    Chunk copy = d;
     CHECK(copy.set({20, 20, 20}, stone) && d.get({20, 20, 20}).isAir() && copy.get({4, 5, 6}) == stone);
 }
 

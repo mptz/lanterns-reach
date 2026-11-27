@@ -94,7 +94,7 @@ struct Copy {
     std::unique_ptr<ChunkWorld> world;  // reads go through the world's seam
     unsigned forcedWidth = 0;           // 0: not forced
     bool lazyDigest = false;            // digest asked for only at checkpoints
-    ChunkData& data() { return ChunkWorldTestAccess::chunk(*world); }
+    Chunk& data() { return ChunkWorldTestAccess::chunk(*world); }
 };
 
 struct Params {
@@ -267,7 +267,7 @@ void runSeed(unsigned seed, const Params& p, bool mesh, int meshEvery, bool long
         // state grows the palette (an edit reclaims nothing); then edit back
         // to the killed state and check its dead entry is reused.
         {
-            ChunkData& d = r.fillCopy().data();
+            Chunk& d = r.fillCopy().data();
             if (!TA::isUniform(d) && TA::width(d) < 32) {
                 const std::uint32_t need = brickIndexLimit(TA::width(d)) - TA::paletteSize(d);
                 if (need <= 70000) {

@@ -1,9 +1,13 @@
 #pragma once
-// Chunks (world/cubic-chunks, world/chunk). A chunk is a 64³ cube of cells
-// addressed by (dimension_id, chunk_coord). Chunk data owns its Brick through
-// a pointer, the representation pointer: uniform or a palette at some width
-// (brick.h). Every edit goes through the chunk data, never straight to the
-// Brick. A change of representation builds the new Brick from the old, swaps
+// The chunk (world/cubic-chunks, world/chunk): a 64³ cube of cells addressed
+// by (dimension_id, chunk_coord). `Chunk` is the chunk actor, here its
+// single-threaded stand-in (no Vicinity or turns yet), held by ChunkWorld. It
+// owns its cells as a Brick through a pointer, the representation pointer:
+// uniform or a palette at some width (brick.h); there is no chunk-data type
+// between them (invariant/chunk/content-is-cells-and-time). It is the
+// abstraction boundary over its Brick: its code uses the Brick directly, and
+// callers ask it semantic questions. Every edit goes through the chunk, never
+// straight to the Brick. A change of representation builds the new Brick from the old, swaps
 // the pointer and frees the old one directly (single-threaded here: the
 // seqlock window and retirement through a grace period arrive with validated
 // reads, v0.2.24).
@@ -20,19 +24,22 @@
 #include "digest.h"
 #include "mesher.h"
 #include "reverse_lookup.h"
+#include "world_query.h"
 
 struct ChunkTestAccess;
 struct MeshContext;
 struct WorldMesh;
 
-class ChunkData {
+class Chunk {
 public:
     // Every cell air (the `empty` generator): a uniform Brick.
-    ChunkData();
-    ChunkData(const ChunkData& o);
-    ChunkData& operator=(const ChunkData& o);
-    ChunkData(ChunkData&&) noexcept = default;
-    ChunkData& operator=(ChunkData&&) noexcept = default;
+    explicit Chunk(ChunkId id = {});
+
+    const ChunkId& id() const { return id_; }
+    Chunk(const Chunk& o);
+    Chunk& operator=(const Chunk& o);
+    Chunk(Chunk&&) noexcept = default;
+    Chunk& operator=(Chunk&&) noexcept = default;
 
     BlockState get(const glm::ivec3& local) const {
         return brick_->at(static_cast<std::uint32_t>(brickCellIndex(local.x, local.y, local.z)));
@@ -52,12 +59,18 @@ public:
     std::uint64_t digest() const;
 
     // Appends the chunk's faces to `out` (positions relative to the chunk's
-    // minimum corner, which becomes the mesh origin). Each representation
+    // minimum corner, which becomes the mesh origin; the chunk's own id says
+    // where that is). Each representation
     // meshes its own way: uniform air emits nothing, a uniform solid its six
     // sides, a palette the bitmask mesher; `PerCell` is the reference over
     // any of them. Only appends: whatever `out` holds is never read, moved or
     // changed. Defined in chunk_mesh.cpp.
-    void meshInto(const MeshContext& context, const ChunkId& id, Mesher mesher, WorldMesh& out) const;
+    void meshInto(const MeshContext& context, Mesher mesher, WorldMesh& out) const;
+
+    // The first solid cell along a ray within this chunk (world positions
+    // and cells; outside the chunk is air), within maxDistance. `dir` need
+    // not be normalized.
+    std::optional<RayHit> raycast(const WorldPos& origin, const glm::dvec3& dir, double maxDistance) const;
 
     // Ends a bulk fill (the `empty` generator, a scenario's scene applied as
     // one edit set): compacts, so the chunk is uniform if one state remains,
@@ -81,6 +94,7 @@ private:
     void compact();
     std::uint32_t liveEntries() const;
 
+    ChunkId id_;
     std::unique_ptr<Brick<BlockState>> brick_;
     ReverseLookup<BlockState> lookup_;     // the owner's reverse lookup, built lazily
     mutable std::optional<std::uint64_t> digest_;
@@ -90,24 +104,24 @@ private:
 
 // Test-only access to the representation (called out in RELEASES.md).
 struct ChunkTestAccess {
-    static bool isUniform(const ChunkData& c) { return c.brick_->width() == 0; }
-    static unsigned width(const ChunkData& c) { return c.brick_->width(); }  // 0 = uniform
-    static std::uint32_t paletteSize(const ChunkData& c);                    // 1 if uniform
-    static std::uint32_t liveEntries(const ChunkData& c) { return c.liveEntries(); }
-    static bool paletteFull(const ChunkData& c) { return c.brick_->width() != 0 && c.palette().full(); }
-    static std::uint32_t paletteCapacity(const ChunkData& c);
+    static bool isUniform(const Chunk& c) { return c.brick_->width() == 0; }
+    static unsigned width(const Chunk& c) { return c.brick_->width(); }  // 0 = uniform
+    static std::uint32_t paletteSize(const Chunk& c);                    // 1 if uniform
+    static std::uint32_t liveEntries(const Chunk& c) { return c.liveEntries(); }
+    static bool paletteFull(const Chunk& c) { return c.brick_->width() != 0 && c.palette().full(); }
+    static std::uint32_t paletteCapacity(const Chunk& c);
     // A palette at that width (0: uniform, needs exactly one live state),
     // keeping dead entries when the palette fits, else compacting.
-    static void forceWidth(ChunkData& c, unsigned width);
-    static void compact(ChunkData& c) { c.compact(); }
-    static void dropDigest(ChunkData& c) { c.digest_.reset(); }
-    static bool digestComputed(const ChunkData& c) { return c.digest_.has_value(); }
-    static bool tableBuilt(const ChunkData& c) { return c.lookup_.tableBuilt(); }
-    static void setScanMax(ChunkData& c, std::uint32_t n) { c.lookup_.setScanMax(n); }
-    static std::uint64_t growths(const ChunkData& c) { return c.growths_; }      // swaps for a full palette
-    static std::uint64_t widenings(const ChunkData& c) { return c.widenings_; }  // of which the width grew
+    static void forceWidth(Chunk& c, unsigned width);
+    static void compact(Chunk& c) { c.compact(); }
+    static void dropDigest(Chunk& c) { c.digest_.reset(); }
+    static bool digestComputed(const Chunk& c) { return c.digest_.has_value(); }
+    static bool tableBuilt(const Chunk& c) { return c.lookup_.tableBuilt(); }
+    static void setScanMax(Chunk& c, std::uint32_t n) { c.lookup_.setScanMax(n); }
+    static std::uint64_t growths(const Chunk& c) { return c.growths_; }      // swaps for a full palette
+    static std::uint64_t widenings(const Chunk& c) { return c.widenings_; }  // of which the width grew
     // Bytes held: indices, palette and reverse table.
-    static std::size_t indexBytes(const ChunkData& c) { return c.brick_->indexBytes(); }
-    static std::size_t paletteBytes(const ChunkData& c) { return c.brick_->paletteBytes(); }
-    static std::size_t tableBytes(const ChunkData& c) { return c.lookup_.tableBytes(); }
+    static std::size_t indexBytes(const Chunk& c) { return c.brick_->indexBytes(); }
+    static std::size_t paletteBytes(const Chunk& c) { return c.brick_->paletteBytes(); }
+    static std::size_t tableBytes(const Chunk& c) { return c.lookup_.tableBytes(); }
 };

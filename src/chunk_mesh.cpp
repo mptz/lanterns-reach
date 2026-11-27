@@ -9,7 +9,7 @@ namespace {
 
 // Cells of one chunk; everything outside it is air.
 struct Probe {
-    const ChunkData& chunk;
+    const Chunk& chunk;
     ChunkCoord coord;
     BlockState operator()(const CellPos& c) const {
         return chunkOf(c) == coord ? chunk.get(localOf(c)) : BlockState::air();
@@ -60,7 +60,7 @@ std::uint32_t frameBits(const BlockRegistry& registry, const Probe& probe, const
 // (translucent). Vertex positions are relative to the chunk's minimum corner.
 } // namespace
 
-void meshPerCell(const MeshContext& context, const ChunkData& chunk, const ChunkId& id, WorldMesh& mesh) {
+void meshPerCell(const MeshContext& context, const Chunk& chunk, const ChunkId& id, WorldMesh& mesh) {
     const BlockRegistry& registry = context.registry;
     mesh.origin = cellCorner(chunkOrigin(id.coord));
     if (const auto u = chunk.uniformState(); u && u->isAir()) return;  // uniform air meshes to nothing
@@ -104,7 +104,8 @@ void meshPerCell(const MeshContext& context, const ChunkData& chunk, const Chunk
             }
 }
 
-void ChunkData::meshInto(const MeshContext& context, const ChunkId& id, Mesher mesher, WorldMesh& out) const {
+void Chunk::meshInto(const MeshContext& context, Mesher mesher, WorldMesh& out) const {
+    const ChunkId& id = id_;
     out.origin = cellCorner(chunkOrigin(id.coord));
     if (mesher == Mesher::PerCell) {
         meshPerCell(context, *this, id, out);
