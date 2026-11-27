@@ -318,9 +318,10 @@ entity ledger, and dimension garbage collection.
     authoring time or a scarce instance when it is minted: a 48-bit
     millisecond timestamp, then 80 random bits, ordered within a millisecond
     by incrementing the random part. **State hashes** are not ULIDs: they are
-    128-bit content hashes of a definition ULID and canonical property
-    values (`world/brick`), derived by anyone who has the inputs and never
-    minted, so they carry no timestamp. They share the encoding so that one
+    128-bit content hashes (BLAKE3, `deps/hashing`) of a state's canonical
+    text, its definition ULID and named property values (`world/brick`),
+    derived by anyone who has the inputs and never minted, so they carry no
+    timestamp. They share the encoding so that one
     parser, printer and database key type serves both.
   - **Minting takes its clock and randomness from the caller.** The
     simulation never reads the wall clock or an unseeded generator to mint a

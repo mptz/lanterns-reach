@@ -169,7 +169,7 @@ as other engine terms share theirs.
   How much of that each reader tolerates, or validates away, is the
   owner's policy, behind its API.
 
-## Palette entries: block states (draft, to try)
+## Palette entries: block states
 - **A block's definition** has one ULID and holds what is true of every
   instance: material properties, symmetries, collision, behaviour, and the
   variant properties it declares. Appearance is a separate binding, so
@@ -188,6 +188,26 @@ as other engine terms share theirs.
   Minecraft's block states, where each block enumerates its own states, and
   holds up for player-defined blocks, since a new block or property needs
   no global layout, and blocks without a property pay nothing for it.
+  - **The hash is cryptographic** (owner, 2026-11-27): BLAKE3 in its
+    `derive_key` mode, with a versioned context string, truncated to 128
+    bits (`deps/hashing`). States are interned often but not on a hot
+    path, and a cryptographic hash removes accidental collisions and
+    makes deliberate ones (about 2⁶⁴ work) impractical, even for
+    player-defined blocks. A new encoding gets a new context string, so
+    old and new hashes never collide.
+  - **What is hashed is a canonical text form** (owner, 2026-11-27), also
+    the state's reconstruction and its form in logs:
+    `<definition ULID>[name=value,...]`, the ULID upper case, properties
+    sorted by name, the brackets left out when no property is written.
+    Names are `[a-z0-9_]+`. **A property at its default value is left
+    out**, so adding a property with a default to an existing definition
+    leaves every existing state's hash unchanged. Enumerated values are
+    written by name, never by index, so reordering a domain changes no
+    hash; booleans are `true` and `false`. Orientation is written so it
+    doesn't depend on how the 24 rotations are numbered
+    (`world/block-orientation`). The grammar (`data/grammar`) reads
+    properties into the same values; this text is the identity, whatever
+    authors write.
 - **Never persisted without its reconstruction:** a saved Brick or a network message may
   carry state hashes, or a palettized form of them, for speed, but always
   with what is needed to reconstruct each state from definitions (each
@@ -202,8 +222,9 @@ as other engine terms share theirs.
   one per world face (`render/block-textures`), derived from the
   definition, the state and the resource pack rather than part of the
   state's identity.
-  - **State ids:** a palette entry is a 32-bit **state id**, a dense index
-    into the table, assigned when the process first sees the state (a chunk blob
+  - **State ids:** a palette entry is a 32-bit **state id** (`StateId`, a
+    distinct type, so it can't be mixed up with a palette index), a dense
+    index into the table, assigned when the process first sees the state (a chunk blob
     load, definition loading, a generator registering its palette, a
     player creating a block). Ids are scoped to the process and never
     persisted; state hashes are what is persisted. Reading a state's data
@@ -211,6 +232,14 @@ as other engine terms share theirs.
     meshed or queried, not per cell.
   - **Interning** (state hash to id) is the one hash, used only when a
     state is first seen, never per cell or per edit.
+  - **Retrieved ahead of time** (owner, 2026-11-27): now that a state has a
+    lookup cost, code resolves the ids it will need before the loop that
+    uses them (a tool its states when an action is planned, a generator
+    its palette when it starts, a mesher one table row per palette
+    entry), and anything per cell, per face or per frame reads the table
+    by id only. Moving between states of one definition (another
+    orientation, `lit` on) is an array lookup in the definition's dense
+    index of its states, not an intern.
   - **Shared across threads:** the table only grows by appending, in
     chunked storage that never moves, so reads by id take no lock;
     interning takes a short lock (sharded if measurement asks), and is
@@ -221,7 +250,10 @@ as other engine terms share theirs.
     large, long-running server; at worst that is a crash, and a restart
     starts the count again. A telemetry gauge counts interned states.
 - **Kept under control:** each definition caps the number of states its
-  domains multiply out to (checked when definitions load). A value that is
+  domains multiply out to at **2¹⁰** (owner, 2026-11-27; checked when
+  definitions load, and a definition over it is rejected). That bounds the
+  product of orientations and every other property; unique objects (a
+  written book) take another path, below. A value that is
   open-ended or timestamped is not part of a state: timing comes from
   closed forms keyed by the state, the coordinates and world time;
   rare rich content (a book's text) is a world-level record that a

@@ -274,13 +274,15 @@ logic machine), which senses through the body and sends it intentions.
 `sim/player-embodiment`
 
 
-**state hash** — A block state's durable identity: a 128-bit content hash of
-its definition's ULID and its canonical property values, written like a ULID.
+**state hash** — A block state's durable identity: a 128-bit content hash
+(BLAKE3) of its canonical text, its definition's ULID and its named
+property values with defaults left out, written like a ULID.
 This, not the state id, is what is saved. It is not a ULID: it carries no
 timestamp and is derived, never minted. `world/brick`, `data/stable-identity`
 
-**state id** — A block state's compact number within one process, used in
-palettes and never saved. `world/brick`
+**state id** (`StateId`) — A block state's compact 32-bit number within one
+process, used in palettes and resolved ahead of time, never saved.
+`world/brick`
 
 **state table** — The process-wide table of block states and what systems
 need to know about each, indexed by state id. `world/brick`

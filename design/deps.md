@@ -436,6 +436,16 @@ the authoritative coordinate type.
   (`data/grammar`) — more checkable and expressive — once the grammar exists.
   Validation tooling is Python standard library only (`tools/validate_blocks.py`).
 
+### deps/hashing — cryptographic content hashes (COMMITTED, added in v0.2.4)
+- **BLAKE3** (the official C implementation, CC0-1.0 or Apache-2.0), via
+  `FetchContent`, pinned to a release commit, built portable (no assembly;
+  hashing is not on a hot path). Used in `derive_key` mode with a
+  versioned context string per use, truncated to 128 bits: state hashes
+  first (`world/brick`), content-addressed authored objects later
+  (`data/authored-content`). Chosen over SHA-256 for speed and the built-in
+  key-derivation mode; the in-process mixes (`mix64`, `hash.h`) stay for
+  digests' weights and lookups, which are not identities.
+
 ### deps/testing — deliberately minimal (COMMITTED for v0.1.x)
 - **No test framework.** A single test executable with a tiny in-house
   `CHECK(expr)` macro, registered with **CTest**, plus Python tool checks

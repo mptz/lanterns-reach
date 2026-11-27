@@ -209,7 +209,7 @@ The chunk payload, single-threaded:
   state table's six appearance ids per state (`render/block-textures`).
   Definitions stay JSON; the grammar-based loading arc comes later. *Claim: captures are identical, and every state round-trips
   through its definition ULID and named property values.* `world/brick`,
-  `data/stable-identity`, `world/block-orientation`.
+  `data/stable-identity`, `world/block-orientation`. (Detailed below.)
   - **Also in v0.2.4: disposition the open items** (owner, 2026-11-27). Each
     item gets a decision: done in v0.2.4, scheduled to a named release, or
     dropped with the reason, recorded in `RELEASES.md`. Not every item needs
@@ -1092,6 +1092,175 @@ Display-required:
   the recursive block-swap transpose.
 - [voxel.wiki, vertex pulling](https://voxel.wiki/wiki/vertex-pulling/):
   packed quads drawn without per-vertex buffers.
+
+## v0.2.4 — Block definitions with ULIDs, and state hashes
+- Status: SPECIFIED 2026-11-27, not started. Depends on v0.2.3.
+- **Claim:** a block state's identity is its definition's ULID and its
+  named property values, and nothing the game shows changes when palettes
+  hold interned state ids instead of process-local encodings. **Falsifying
+  tests:** a v0.2.3 capture differs; a state fails to round-trip through
+  its definition ULID and named property values, or through its state hash;
+  two distinct states share a state hash; a chunk's digest differs between
+  two runs.
+- **Builds on:** v0.2.3; `world/brick` (palette entries, the state table,
+  state ids, interning, the per-definition cap, retrieval ahead of time),
+  `data/stable-identity` (ULIDs, the one identifier format, minting),
+  `world/block-orientation` (orientation as a property),
+  `render/block-textures` (appearance ids), `data/content-digest` (`H(s)`),
+  `deps/hashing`, `world/chunk` (`Chunk` owns its Brick).
+- **Also in this release:** the dispositions above, and the code they call
+  for (`Chunk`, units in comments, frame pointers).
+
+### Scope
+- **The one identifier format** (`data/stable-identity`): a 128-bit `Ulid`
+  value type and its 26-character Crockford base32 text, most significant
+  bits first, upper case on output, case-insensitive on input; text with
+  `I`, `L`, `O` or `U`, of the wrong length, or whose first character is
+  above `7` is rejected. State hashes use the same type and text. The
+  engine parses and prints; it mints nothing in this release.
+- **A ULID in every block definition:** each JSON definition gains
+  `"ulid"`. The loader rejects a definition with no ULID, a malformed one,
+  or one another definition already has, naming the file. Air is a
+  built-in definition with a fixed ULID in code (minted once with the
+  tool), not a file.
+- **The minting tool** (`tools/mint_ulid.py`, Python standard library
+  only): prints new ULIDs (48-bit millisecond time from the real clock,
+  80 random bits from the system, the random part incremented within a
+  millisecond), and `--add FILE...` gives each definition that has no
+  `"ulid"` one, inserting the field and leaving every other byte of the
+  file unchanged; a file that has one is left alone. Authoring uses the
+  real clock (`data/stable-identity`); simulation minting is not in this
+  release.
+- **Variant properties in definitions:** `"properties"` declares named
+  properties, each an enumeration of value names (`["a", "b", ...]`, the
+  first the default) or `"bool"` (default `false`). Names are
+  `[a-z0-9_]+`; `orientation` is reserved, its domain coming from the
+  definition's `symmetry` (the cosets of its symmetry group,
+  `world/block-orientation`). No shipped definition declares a property
+  yet; test fixtures do. Integer and reference properties are later.
+- **The per-definition cap:** the product of a definition's domain sizes,
+  orientations included, is at most 2¹⁰; the loader rejects a definition
+  over it, naming the file and the product.
+- **The canonical text and the state hash** (`world/brick`):
+  `<ULID>[name=value,...]`, properties at their default left out, names
+  sorted, the brackets left out when nothing is written. Orientation is
+  written as `world/block-orientation` specifies (the images of +x and +z
+  of the coset member that sorts first). The state hash is BLAKE3
+  `derive_key` with the context string
+  `"lanterns-reach 2026-11-27 block state v1"` over that text's UTF-8
+  bytes, truncated to its first 16 bytes. The text also parses back to a
+  definition and property values (unknown ULIDs and names, bad values, and
+  defaults written explicitly are errors), so it is the reconstruction a
+  saved state travels with.
+- **BLAKE3** via `FetchContent`, pinned to a release commit, built portable
+  (`deps/hashing`), checked against the library's published test vectors.
+- **The state table:** process-wide, one row per interned state, indexed by
+  `StateId` (32 bits, a distinct type; air is `StateId{0}`). A row holds the
+  state hash, the definition, the property values (orientation as a
+  rotation index), the visibility class, and six appearance ids, one per
+  world face (`render/block-textures`). Appearance ids are interned over
+  the face payload (layer, material, packed texture info) process-wide,
+  replacing v0.2.3's table per world.
+  - `intern(definition, property values) → StateId` canonicalises the
+    values (orientation under the definition's symmetry), hashes, and
+    returns the existing id for that hash or appends a row. Finding the
+    hash with a different definition or values is fatal
+    (`invariant/brick/unique-state-hash`); interning past 2³² is fatal.
+  - `find(StateHash) → StateId?`; `parse(text) → StateId?` and
+    `text(StateId)`; and per definition a **dense index** of its states by
+    property values (mixed radix over its domains, at most 2¹⁰ entries), so
+    `withOrientation(id, r)` and `with(id, name, value)` are array lookups,
+    never an intern.
+  - **Every state of every definition is interned when definitions load**
+    (about 100 today), in a fixed order: definitions as loaded, then their
+    dense index order. The intern-on-first-sight path exists and is tested,
+    but nothing else uses it yet.
+  - Single-threaded here: rows live in storage that never moves, so the
+    concurrent version (reads by id without a lock, a short lock to intern)
+    changes the locking, not the layout.
+- **Palette entries become `StateId`s:** `Brick<StateId>`. Everything that
+  held `BlockState{type, orientation}` holds a `StateId` and asks the state
+  table for what it needs: chunks, meshers, tools, placement, preview and
+  ghosts, hands and hotbars, the scenario loader (scene operations keep
+  their block names and rotation indices as input, resolved when the
+  scenario loads), harness checks, and tests. `BlockState` is removed.
+  Code resolves the ids it needs before the loop that uses them
+  (`world/brick`, retrieval ahead of time): a tool its states when it plans
+  an action, the meshers one table row per palette entry; nothing per cell,
+  per face or per frame interns or hashes.
+- **The digest's `H(s)` becomes a function of the state hash:** the state
+  hash's first 8 bytes, little-endian, reduced mod 2⁶¹ − 1. Digests then
+  agree across processes and runs, so the v0.1 scene's digest and a uniform
+  chunk's are pinned in tests. The reverse lookup hashes the `StateId`
+  itself (in-process only).
+- **`ChunkData` becomes `Chunk`** (`world/chunk`): the single-threaded
+  stand-in for the chunk actor, held by `ChunkWorld`. Raycasting within the
+  chunk and the emitter set move into `Chunk` from `ChunkWorld`, which keeps
+  the world's duties: cells to chunks, edits outside the chunk rejected,
+  the generation counter, dirtiness, the mesher setting.
+- **Frame pointers in every build** (`-fno-omit-frame-pointer`), so
+  `perf record --call-graph fp` gives call graphs with no system setting.
+- **Engine comments speak in units** (the glossary's `unit`).
+
+### Stand-ins
+- **Every state interned at load:** until states also arrive at run time
+  (chunk-blob loads with persistence, generator palettes in v0.2.8 and v0.3,
+  player-created blocks later).
+- **A single-threaded state table:** until states are interned off the
+  frame thread (workers, v0.2.17 onwards).
+- **Definitions in JSON:** until the grammar (`data/grammar`).
+- **Materials per block type** (a face's material id is its type's): until
+  materials are their own definitions (open in `render/block-textures`).
+
+### Out of scope
+Grammar loading; integer and reference properties and the world-level
+records they name; superclass blocks and drop tables; player-created
+definitions; persistence (saved chunk blobs carry states with their
+reconstruction once saves exist); concurrent interning; minting outside the
+tool; definitions whose appearance varies with a non-orientation property
+(the fixtures' properties change identity, not looks).
+
+### Acceptance criteria
+Headless:
+1. Build + `ctest` pass, Debug and Release, Clang, `-Werror`, zero
+   warnings, with frame pointers.
+2. Every v0.2.3 capture is pixel-identical (the `greedy` reference, the
+   `quad_*` comparisons within their budget); `--check-absorbance` passes.
+3. Identifier tests: `Ulid` text round-trips for 0, the maximum, and random
+   values; lower case parses; `I`, `L`, `O`, `U`, wrong lengths and a first
+   character above `7` are rejected; BLAKE3 matches its published vectors.
+4. State-hash tests: pinned canonical texts and hashes for a fixture
+   definition's states; adding a property with a default to the fixture
+   leaves every existing hash unchanged; reordering an enumeration's values
+   changes no hash; every coset of every symmetry has a distinct
+   orientation text that parses back to it; every interned state's hash is
+   distinct.
+5. Round trips, for every state of every shipped definition and fixture:
+   `StateId` → (ULID, named property values) → `intern` → the same id;
+   → state hash → `find` → the same id; → text → `parse` → the same id;
+   and the dense index agrees with `intern`.
+6. Loader: missing, malformed and duplicate ULIDs, an unknown or reserved
+   property name, a bad domain, and a definition over 2¹⁰ states are each
+   rejected naming the file (negative fixtures, as `tests/blocks_bad`).
+7. Digests: the v0.1 scene's and a uniform chunk's digests equal pinned
+   values; the v0.2.2 and v0.2.3 equivalence tests pass with `StateId`
+   palette entries.
+8. The minting tool (CTest): well-formed, distinct, monotonic ULIDs;
+   `--add` gives a ULID only to definitions without one, is idempotent,
+   and leaves the rest of each file byte-identical.
+9. `ChunkData` and `BlockState` no longer exist in `src/`; raycasting and
+   emitters are `Chunk`'s; the world tests pass unchanged in meaning.
+
+Display-required:
+10. The v0.1 world plays unchanged (owner spot-check).
+
+### Measurements
+- Intern cost per state (hash and table insert), and the time to load the
+  definitions and intern every state.
+- The state table's memory per state, and the number of states per
+  shipped definition.
+- Whether anything per cell or per frame interns (a counter, expected 0
+  after load).
 
 ## Roadmap beyond v0.2 (direction, 2026-10-30)
 - **Note (2026-11-10):** the v0.4 and v0.5 bullets predate

@@ -917,6 +917,13 @@ features, which are not additive.
 - Open: tuning only — hit-point region sizes for `corner`/`edge`-family
   selection, and whether the X-held orientation choice applies per block
   type or to every block placed while X is held.
+- **Orientation is a property with an enumeration-free name** (v0.2.4):
+  in a state's canonical text (`world/brick`), `orientation` names its
+  coset gH by the member that sorts first by (image of +x, image of +z),
+  axes ordered +x, −x, +y, −y, +z, −z, written as the two images (`+y+z`).
+  The identity's coset is the default and is left out. In-process code
+  keeps a rotation index (the lowest in the coset); no index is persisted
+  or hashed.
 
 ## world/climbing-and-descent — Ropes are block columns; falls hurt by deceleration; descent is a Terra progression
 
