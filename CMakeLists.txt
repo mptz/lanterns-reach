@@ -37,6 +37,7 @@ find_program(GLSLC glslc HINTS "$ENV{VULKAN_SDK}/bin" REQUIRED)
 #   stb           003501f6d7a8668ce8b6d875e34dd97ad0d5d5b5 (stb_image only)
 #   Dear ImGui    v1.93.0  (core + imgui_impl_glfw + imgui_impl_vulkan)
 #   nlohmann/json v3.12.0  (v0.1.3 block definitions; temporary until the grammar)
+#   BLAKE3        1.8.8    (state hashes, deps/hashing; portable C, no assembly)
 # ---------------------------------------------------------------------------
 include(FetchContent)
 set(FETCHCONTENT_QUIET ON)
@@ -84,7 +85,13 @@ FetchContent_Declare(json
   GIT_TAG 55f93686c01528224f448c19128836e7df245f72  # v3.12.0
   SYSTEM)
 
-FetchContent_MakeAvailable(glfw glm vma vk_bootstrap stb imgui json)  # stb, imgui: no CMakeLists, populate only
+FetchContent_Declare(blake3
+  GIT_REPOSITORY https://github.com/BLAKE3-team/BLAKE3.git
+  GIT_TAG 282d06646f0f47d90091e3413d0be2ba5bee3b1e  # 1.8.8
+  SOURCE_SUBDIR no-cmake  # populate only: we build its portable C sources below
+  SYSTEM)
+
+FetchContent_MakeAvailable(glfw glm vma vk_bootstrap stb imgui json blake3)  # stb, imgui: no CMakeLists, populate only
 
 # ---------------------------------------------------------------------------
 # Shaders: GLSL -> SPIR-V offline, emitted as C initializer lists
@@ -132,6 +139,15 @@ target_link_libraries(thirdparty_impl PUBLIC Vulkan::Vulkan GPUOpen::VulkanMemor
 add_library(stb_impl STATIC src/stb_impl.cpp)
 target_include_directories(stb_impl SYSTEM PUBLIC ${stb_SOURCE_DIR})
 
+# BLAKE3 (deps/hashing): the portable C implementation only. Hashing is not on
+# a hot path, so the SIMD variants and their assembly are compiled out.
+add_library(blake3 STATIC
+  ${blake3_SOURCE_DIR}/c/blake3.c
+  ${blake3_SOURCE_DIR}/c/blake3_dispatch.c
+  ${blake3_SOURCE_DIR}/c/blake3_portable.c)
+target_include_directories(blake3 SYSTEM PUBLIC ${blake3_SOURCE_DIR}/c)
+target_compile_definitions(blake3 PRIVATE BLAKE3_NO_SSE2 BLAKE3_NO_SSE41 BLAKE3_NO_AVX2 BLAKE3_NO_AVX512 BLAKE3_USE_NEON=0)
+
 # Dear ImGui (developer UI, render/dev-ui): core + GLFW/Vulkan backends.
 add_library(imgui STATIC
   ${imgui_SOURCE_DIR}/imgui.cpp
@@ -171,6 +187,7 @@ add_library(sandbox_core STATIC
   src/cube.cpp
   src/chunk.cpp
   src/appearance.cpp
+  src/id128.cpp
   src/bitmask_mesh.cpp
   src/chunk_mesh.cpp
   src/chunk_world.cpp
@@ -191,7 +208,7 @@ target_include_directories(sandbox_core PRIVATE shaders)
 target_include_directories(sandbox_core SYSTEM PUBLIC $<TARGET_PROPERTY:glfw,INTERFACE_INCLUDE_DIRECTORIES>)
 target_compile_definitions(sandbox_core PUBLIC GLM_FORCE_DEPTH_ZERO_TO_ONE GLM_FORCE_RADIANS GLFW_INCLUDE_NONE)
 target_compile_options(sandbox_core PRIVATE ${SANDBOX_WARNINGS})
-target_link_libraries(sandbox_core PUBLIC glm::glm nlohmann_json::nlohmann_json stb_impl)
+target_link_libraries(sandbox_core PUBLIC glm::glm nlohmann_json::nlohmann_json stb_impl blake3)
 
 add_executable(sandbox
   src/main.cpp
@@ -239,6 +256,7 @@ add_executable(sandbox_tests
   tests/sandbox_tests.cpp
   tests/test_support.cpp
   tests/tests_coords.cpp
+  tests/tests_identity.cpp
   tests/tests_chunk.cpp
   tests/tests_digest.cpp
   tests/tests_representation.cpp

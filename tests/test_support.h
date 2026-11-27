@@ -103,6 +103,7 @@ bool sameMesh(const WorldMesh& a, const WorldMesh& b);
 ChunkWorld worldWith(std::initializer_list<CellPos> solid);
 
 void runCoordsTests();
+void runIdentityTests();
 void runChunkTests();
 void runOrientationTests();
 void runBlocksTests();

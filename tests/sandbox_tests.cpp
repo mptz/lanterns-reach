@@ -32,6 +32,7 @@ int main(int argc, char** argv) {
     const bool onlyEquivalence = arg == "--only-equivalence", skipEquivalence = arg == "--skip-equivalence";
     if (!onlyEquivalence) {
         runCoordsTests();
+        runIdentityTests();
         runChunkTests();
         runDigestTests();
         runRepresentationTests();
