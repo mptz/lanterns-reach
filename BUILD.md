@@ -51,7 +51,7 @@ Out-of-source trees are `build-debug/` and `build-release/` (both gitignored):
 cmake -S . -B build-debug   -G Ninja -DCMAKE_BUILD_TYPE=Debug
 cmake -S . -B build-release -G Ninja -DCMAKE_BUILD_TYPE=Release
 cmake --build build-debug
-ctest --test-dir build-debug            # 8 tests; Release has 7
+ctest --test-dir build-debug -j4        # 8 tests; Release has 7
 ```
 
 The build uses `-Werror` with `-Wall -Wextra -Wpedantic -Wshadow -Wconversion`
@@ -89,4 +89,6 @@ reachable. To compare captures between builds, use
 
 ```
 build-release/sandbox_tests --time-mesh   # time to mesh a full 64³ chunk
+build-release/sandbox_tests --time-chunk  # edits, growth, compaction, the digest, memory
+build-release/sandbox_tests --long        # the tests with the longer equivalence run
 ```

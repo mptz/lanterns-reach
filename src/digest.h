@@ -10,6 +10,8 @@
 
 #include <cstdint>
 
+#include "hash.h"
+
 inline constexpr std::uint64_t kDigestP = (std::uint64_t{1} << 61) - 1;
 
 // Exact x mod p for any 64-bit x: x = hi·2⁶¹ + lo ≡ hi + lo (mod p).
@@ -33,14 +35,6 @@ constexpr std::uint64_t mulMod(std::uint64_t a, std::uint64_t b) {  // a, b < p
     return r >= kDigestP ? r - kDigestP : r;
 }
 
-// SplitMix64's finaliser (Steele, Lea, Flood 2014), with its increment.
-constexpr std::uint64_t mix64(std::uint64_t z) {
-    z += 0x9E3779B97F4A7C15ull;
-    z = (z ^ (z >> 30)) * 0xBF58476D1CE4E5B9ull;
-    z = (z ^ (z >> 27)) * 0x94D049BB133111EBull;
-    return z ^ (z >> 31);
-}
-
 // W(x, y, z) = 1 + (mix64(x | y << 6 | z << 12) mod (p − 1)): nonzero for
 // every cell by construction (a zero weight would make a cell invisible).
 constexpr std::uint64_t digestWeightAt(std::uint32_t x, std::uint32_t y, std::uint32_t z) {
@@ -62,12 +56,8 @@ constexpr std::uint64_t digestStateHash(std::uint64_t canonicalEncoding) {
 
 inline constexpr std::uint32_t kDigestCells = 64u * 64u * 64u;
 
-// K = Σ W(c) over a chunk: one constant for every chunk.
-inline std::uint64_t digestK() {
-    static const std::uint64_t k = [] {
-        std::uint64_t s = 0;
-        for (std::uint32_t c = 0; c < kDigestCells; ++c) s = addMod(s, digestWeight(c));
-        return s;
-    }();
-    return k;
-}
+// K = Σ W(c) over a chunk: one constant for every chunk. A literal, so no
+// first-use computation (0.7 ms) hides in the first uniform digest; the digest
+// tests recompute it from W and compare.
+inline constexpr std::uint64_t kDigestK = 11124190129113306ull;
+inline std::uint64_t digestK() { return kDigestK; }

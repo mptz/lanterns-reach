@@ -37,7 +37,7 @@ public:
 
     // Near plane: 0.6" (blocks are 1 ft), close enough that a face the
     // player stands against isn't clipped (v0.1 build choice). Far: past
-    // anything a 32³ grid holds (arbitrary until v0.2 streams chunks; the
+    // anything one 64³ chunk holds (arbitrary until v0.2 streams terrain; the
     // reverse-Z question goes with it).
     static constexpr float kNear = 0.05f;
     static constexpr float kFar = 1000.0f;

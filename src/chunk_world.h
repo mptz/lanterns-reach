@@ -7,6 +7,8 @@
 
 #include <cstdint>
 #include <optional>
+#include <set>
+#include <tuple>
 #include <vector>
 
 #include "chunk.h"
@@ -35,9 +37,21 @@ public:
 private:
     friend struct ChunkWorldTestAccess;
     bool contains(const CellPos& c) const;
+    // The light a cell's state emits (an opaque block's emissive, a
+    // translucent block's emission); zero if none.
+    glm::vec3 emission(const BlockState& s) const;
 
     const BlockRegistry& registry_;
     ChunkData chunk_;
+    // The cells that emit, maintained per edit (core/opaque-chunk-queries:
+    // a public answer is O(1) or O(surface), never O(volume)), in z, y, x
+    // order, so `emitters()` reads no cell but the emitters.
+    struct ZyxLess {
+        bool operator()(const CellPos& a, const CellPos& b) const {
+            return std::tie(a.z, a.y, a.x) < std::tie(b.z, b.y, b.x);
+        }
+    };
+    std::set<CellPos, ZyxLess> emitters_;
     std::uint64_t generation_ = 0;
     std::optional<std::uint64_t> meshedGeneration_;  // the generation buildMesh last meshed
 };

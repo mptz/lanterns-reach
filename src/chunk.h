@@ -8,7 +8,6 @@
 // seqlock window and retirement through a grace period arrive with validated
 // reads, v0.2.24).
 
-#include <compare>
 #include <cstdint>
 #include <memory>
 #include <optional>
@@ -17,45 +16,9 @@
 
 #include "blocks.h"
 #include "brick.h"
-#include "coords.h"
+#include "chunk_coord.h"
 #include "digest.h"
 #include "reverse_lookup.h"
-
-// Floor division and the matching non-negative remainder (cell −1 is chunk −1,
-// local 63).
-constexpr std::int64_t floorDiv(std::int64_t a, std::int64_t b) {
-    const std::int64_t q = a / b;
-    return (a % b != 0 && ((a < 0) != (b < 0))) ? q - 1 : q;
-}
-constexpr std::int64_t floorMod(std::int64_t a, std::int64_t b) { return a - floorDiv(a, b) * b; }
-
-struct ChunkCoord {
-    std::int64_t x = 0, y = 0, z = 0;
-    constexpr auto operator<=>(const ChunkCoord&) const = default;
-};
-
-using DimensionId = std::uint32_t;
-
-struct ChunkId {
-    DimensionId dimension = 0;  // always 0 until dimensions exist
-    ChunkCoord coord;
-    constexpr auto operator<=>(const ChunkId&) const = default;
-};
-
-// The chunk holding a cell, and the cell's local indices (0–63 per axis).
-constexpr ChunkCoord chunkOf(const CellPos& c) {
-    return {floorDiv(c.x, kChunkSize), floorDiv(c.y, kChunkSize), floorDiv(c.z, kChunkSize)};
-}
-constexpr glm::ivec3 localOf(const CellPos& c) {
-    return {static_cast<int>(floorMod(c.x, kChunkSize)), static_cast<int>(floorMod(c.y, kChunkSize)),
-            static_cast<int>(floorMod(c.z, kChunkSize))};
-}
-// The cell at a chunk's minimum corner.
-constexpr CellPos chunkOrigin(const ChunkCoord& c) { return {c.x * kChunkSize, c.y * kChunkSize, c.z * kChunkSize}; }
-constexpr CellPos cellAt(const ChunkCoord& c, const glm::ivec3& local) {
-    const CellPos o = chunkOrigin(c);
-    return {o.x + local.x, o.y + local.y, o.z + local.z};
-}
 
 struct ChunkTestAccess;
 
@@ -129,6 +92,7 @@ struct ChunkTestAccess {
     static void dropDigest(ChunkData& c) { c.digest_.reset(); }
     static bool digestComputed(const ChunkData& c) { return c.digest_.has_value(); }
     static bool tableBuilt(const ChunkData& c) { return c.lookup_.tableBuilt(); }
+    static void setScanMax(ChunkData& c, std::uint32_t n) { c.lookup_.setScanMax(n); }
     static std::uint64_t growths(const ChunkData& c) { return c.growths_; }      // swaps for a full palette
     static std::uint64_t widenings(const ChunkData& c) { return c.widenings_; }  // of which the width grew
     // Bytes held: indices, palette and reverse table.

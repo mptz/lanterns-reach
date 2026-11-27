@@ -184,7 +184,7 @@ Clang 19 Release, this headless authoring machine; the reference machines
 ## v0.2.2 (closed 2026-11-26)
 
 Uniform, palette widths 1–32 bits, growth, compaction and the content digest,
-behind the chunk's interface. The prototypes (`prototypes/brick/`) were the
+behind the chunk's interface. The prototypes (`attic/prototypes/brick/`) were the
 starting point; the spec won where they differ (their `NOTES.md` lists where).
 
 ### Choices
@@ -320,3 +320,23 @@ on the second).
 | 4 | Digest unit tests | ✅ |
 | 5 | Representation unit tests | ✅ |
 | 6 | The v0.1 world plays unchanged | ✅ owner on `a83b9c6` (2026-11-26); the palette-capacity change after it re-checked by the 65 headless runs |
+
+## Cleanup between v0.2.2 and v0.2.3 (2026-11-26)
+No behaviour change: the 65 headless captures match v0.2.2's, and the tests pass.
+- **`ChunkWorld::emitters()` is O(emitters):** the world keeps the set of
+  emitting cells, updated in `apply` from the old and new state of each
+  changed cell (z, y, x order, as the scan gave). It had scanned all 262,144
+  cells on every edit, a v0.1 dense-grid method carried over. A test compares
+  it with a brute-force scan across random edits, bulk applies and copies.
+- **`chunk_coord.h`** holds `ChunkCoord`, `ChunkId`, `chunkOf` and `localOf`;
+  `world_query.h` includes it instead of `chunk.h`, so tools, placement and
+  the renderer no longer pull in the Brick, the digest and the lookup.
+- **`hash.h`** has the one `mix64`; `tools.cpp`'s copy is gone (same function,
+  so the container captures match). `kDigestK` is a literal that the digest
+  test checks against the sum of the weights.
+- **The scan threshold** is a member of the lookup, set through
+  `ChunkTestAccess`, not a global.
+- **Measurements** moved to `tests/measurements.cpp`.
+- **`ctest`** has `sandbox_equivalence` apart from `sandbox_tests`, so they run
+  together under `-j` (Debug: 24 s instead of 28). `no_dense_grid` is retired.
+- **`prototypes/` moved to `attic/prototypes/`.**

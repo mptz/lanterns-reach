@@ -17,7 +17,7 @@
 #include <glm/vec3.hpp>
 
 #include "blocks.h"
-#include "chunk.h"
+#include "chunk_coord.h"
 #include "coords.h"
 
 struct RayHit {

@@ -6,6 +6,7 @@
 #include <cmath>
 #include <vector>
 
+#include "hash.h"
 #include "placement.h"
 
 namespace {
@@ -65,17 +66,11 @@ orient::Rot turnAbout(orient::Rot current, glm::ivec3 n, bool counterclockwise) 
 }
 
 std::uint64_t placementHash(const CellPos& cell, std::uint32_t containerId, std::uint64_t draws) {
-    auto mix = [](std::uint64_t z) {  // splitmix64 finalizer
-        z += 0x9E3779B97F4A7C15ull;
-        z = (z ^ (z >> 30)) * 0xBF58476D1CE4E5B9ull;
-        z = (z ^ (z >> 27)) * 0x94D049BB133111EBull;
-        return z ^ (z >> 31);
-    };
-    std::uint64_t h = mix(static_cast<std::uint64_t>(cell.x));
-    h = mix(h ^ static_cast<std::uint64_t>(cell.y));
-    h = mix(h ^ static_cast<std::uint64_t>(cell.z));
-    h = mix(h ^ containerId);
-    return mix(h ^ draws);
+    std::uint64_t h = mix64(static_cast<std::uint64_t>(cell.x));
+    h = mix64(h ^ static_cast<std::uint64_t>(cell.y));
+    h = mix64(h ^ static_cast<std::uint64_t>(cell.z));
+    h = mix64(h ^ containerId);
+    return mix64(h ^ draws);
 }
 
 bool hasSecondaryAction(const Item* item) { return item && item->kind == Item::Kind::Wrench; }

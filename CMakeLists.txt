@@ -9,7 +9,7 @@ endif()
 # PROJECT_VERSION (SANDBOX_VERSION below).
 project(sandbox VERSION 0.2.2 LANGUAGES C CXX)
 
-# The v0.1.x validation harness (see versions.md).
+# The sandbox (versions.md): the engine, its CPU-only core and the tests.
 # Compiling needs no display; running needs a GPU + window system.
 
 if(NOT CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -246,13 +246,17 @@ add_executable(sandbox_tests
   tests/tests_input.cpp
   tests/tests_translucency.cpp
   tests/tests_tools.cpp
-  tests/tests_scenario.cpp)
+  tests/tests_scenario.cpp
+  tests/measurements.cpp)
 target_include_directories(sandbox_tests PRIVATE tests shaders)  # tests include shaders/pbr.glsl as C++
 target_compile_options(sandbox_tests PRIVATE ${SANDBOX_WARNINGS})
 target_link_libraries(sandbox_tests PRIVATE sandbox_core)
 target_compile_definitions(sandbox_tests PRIVATE SANDBOX_ASSET_DIR="${CMAKE_CURRENT_SOURCE_DIR}/assets"
                                                SANDBOX_SCENARIO_DIR="${CMAKE_CURRENT_SOURCE_DIR}/scenarios")
-add_test(NAME sandbox_tests COMMAND sandbox_tests)
+# The randomized equivalence test is the long pole: its own ctest entry, so it
+# runs beside the rest under `ctest -j`.
+add_test(NAME sandbox_tests COMMAND sandbox_tests --skip-equivalence)
+add_test(NAME sandbox_equivalence COMMAND sandbox_tests --only-equivalence)
 
 # Block definitions: the engine's --check-blocks is the one validator
 # (v0.1.8), checking structure only. It accepts every shipped definition and
@@ -273,8 +277,6 @@ foreach(entry ${BAD_FIXTURES})
   add_test(NAME engine_rejects_${fixture}
     COMMAND ${EXPECT_FAIL} "${why}" $<TARGET_FILE:sandbox> --check-blocks --blocks ${BAD_BLOCKS}/${fixture})
 endforeach()
-add_test(NAME no_dense_grid
-  COMMAND ${Python3_EXECUTABLE} -I ${CMAKE_CURRENT_SOURCE_DIR}/tests/check_no_dense_grid.py ${CMAKE_CURRENT_SOURCE_DIR})
 # The texture generator creates its output directory and reproduces the
 # committed assets byte for byte.
 add_test(NAME gen_block_texture

@@ -34,7 +34,12 @@ ApplyResult ChunkWorld::apply(const EditSet& edits) {
             result.rejected.push_back(e.cell);
             continue;
         }
-        if (chunk_.set(localOf(e.cell), e.state)) ++result.changed;
+        const glm::ivec3 local = localOf(e.cell);
+        const BlockState old = chunk_.get(local);
+        if (!chunk_.set(local, e.state)) continue;
+        ++result.changed;
+        if (const glm::vec3 was = emission(old); was.x > 0.0f || was.y > 0.0f || was.z > 0.0f) emitters_.erase(e.cell);
+        if (const glm::vec3 now = emission(e.state); now.x > 0.0f || now.y > 0.0f || now.z > 0.0f) emitters_.insert(e.cell);
     }
     if (result.changed) ++generation_;
     return result;
@@ -115,18 +120,16 @@ std::optional<RayHit> ChunkWorld::raycast(const WorldPos& worldOrigin, const glm
     }
 }
 
+glm::vec3 ChunkWorld::emission(const BlockState& s) const {
+    if (s.isAir()) return glm::vec3(0.0f);
+    const BlockDef& def = registry_.def(s.type);
+    return def.translucent() ? def.translucency->emission : def.material.emissive;
+}
+
 std::vector<Emitter> ChunkWorld::emitters() const {
     std::vector<Emitter> out;
-    if (const auto u = chunk_.uniformState(); u && u->isAir()) return out;
-    for (int z = 0; z < kChunkSize; ++z)
-        for (int y = 0; y < kChunkSize; ++y)
-            for (int x = 0; x < kChunkSize; ++x) {
-                const BlockState st = chunk_.get({x, y, z});
-                if (st.isAir()) continue;
-                const BlockDef& def = registry_.def(st.type);
-                const glm::vec3 e = def.translucent() ? def.translucency->emission : def.material.emissive;
-                if (e.x > 0.0f || e.y > 0.0f || e.z > 0.0f) out.push_back({{x, y, z}, e});
-            }
+    out.reserve(emitters_.size());
+    for (const CellPos& c : emitters_) out.push_back({c, emission(chunk_.get(localOf(c)))});
     return out;
 }
 

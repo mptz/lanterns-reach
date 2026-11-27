@@ -26,23 +26,22 @@
 // palette's capacity, is as fast at 2–4 entries and faster from 8; the
 // threshold only decides when to pay for it (versions.md v0.2.2, measurements:
 // one machine so far, a placeholder until both are measured). A SIMD scan
-// would move it up (prototypes/brick-research.md found 32 with one).
+// would move it up (attic/prototypes/brick-research.md found 32 with one).
 inline constexpr std::uint32_t kReverseScanMax = 8;
-
-// The threshold in force: kReverseScanMax, except that measurements change it
-// (sandbox_tests --time-chunk). Nothing else writes it.
-inline std::uint32_t gReverseScanMax = kReverseScanMax;
 
 template <class E>
 class ReverseLookup {
 public:
+    // Measurements only (ChunkTestAccess): the threshold in force for this lookup.
+    void setScanMax(std::uint32_t n) { scanMax_ = n; }
+
     bool tableBuilt() const { return !slots_.empty(); }
     std::size_t tableBytes() const { return slots_.capacity() * sizeof(std::uint32_t); }
 
     // The palette index of `e`, or kNoIndex.
     std::uint32_t find(const PaletteBrick<E>& brick, const E& e) {
         const std::uint32_t n = brick.entries();
-        if (n <= gReverseScanMax) {
+        if (n <= scanMax_) {
             for (std::uint32_t i = 0; i < n; ++i)
                 if (brick.entry(i) == e) return i;
             return kNoIndex;
@@ -87,4 +86,5 @@ private:
 
     std::vector<std::uint32_t> slots_;
     unsigned shift_ = 64;
+    std::uint32_t scanMax_ = kReverseScanMax;
 };

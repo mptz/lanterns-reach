@@ -4,7 +4,8 @@ Material kept for reference after it stopped being current: the v0.1
 release specifications and build notes, the v0.1 code review, retired
 concurrency ideas worth revisiting (`concurrency-history.md`), and the
 approaches weighed for cross-chunk execution
-(`sim-execution-alternatives.md`).
+(`sim-execution-alternatives.md`), and the Brick research prototypes
+(`prototypes/`: standalone, used for v0.2.2; its GoalSource is obsolete).
 
 **Not authoritative.** Current design decisions live in `DESIGN.md` and
 `design/`; the roadmap in `versions.md`; current behaviour in the code and

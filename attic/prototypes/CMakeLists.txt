@@ -1,5 +1,5 @@
 # Standalone prototypes (Brick, GoalSource): independent of the repo's build.
-#   cmake -S prototypes -B build-proto -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_BUILD_TYPE=Release
+#   cmake -S attic/prototypes -B build-proto -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_BUILD_TYPE=Release
 #   cmake --build build-proto && ctest --test-dir build-proto
 cmake_minimum_required(VERSION 3.22)
 project(SandboxPrototypes CXX)

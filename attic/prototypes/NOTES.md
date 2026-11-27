@@ -5,13 +5,13 @@ before the real build. **The specs are authoritative:** `design/brick.md`
 (`world/brick`), the v0.2.2 detailed spec in `versions.md`, and
 `data/content-digest` in `design/data.md`. Where this code differs, the
 spec wins. The research behind the current Brick rules, with its
-measurements, is `prototypes/brick-research.md` in this directory.
+measurements, is `brick-research.md` in this directory.
 
 ## Build and test
 Clang, `-std=c++20 -Wall -Wextra -Werror -ffp-contract=off -Wthread-safety`:
 
 ```
-cmake -S prototypes -B <dir> -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_BUILD_TYPE=Release
+cmake -S attic/prototypes -B <dir> -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_BUILD_TYPE=Release
 cmake --build <dir> && ctest --test-dir <dir>
 <dir>/test_equivalence --long                          # the longer run
 <dir>/bench_brick; <dir>/bench_lookup; <dir>/bench_compaction

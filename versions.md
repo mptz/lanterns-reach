@@ -624,11 +624,11 @@ Display-required:
   shrinking), `world/chunk-representation`, `data/content-digest`,
   `world/chunk-meshing` (rep-swap invariance), `core/opaque-chunk-queries`.
 - **Prior work:** prototypes of the Brick, the digest and the reverse
-  lookup, with tests and benchmarks, in `prototypes/` (standalone, built
-  from `prototypes/CMakeLists.txt`). Its `NOTES.md` lists what is worth
+  lookup, with tests and benchmarks, in `attic/prototypes/` (standalone,
+  built from `attic/prototypes/CMakeLists.txt`). Its `NOTES.md` lists what is worth
   reusing (the randomised equivalence test, the digest, the reverse-lookup
   candidates, the benchmarks) and where `brick/brick.hpp` differs from the
-  spec; the spec wins. `prototypes/brick-research.md` has the research and
+  spec; the spec wins. `attic/prototypes/brick-research.md` has the research and
   its measurements.
 
 ### Scope

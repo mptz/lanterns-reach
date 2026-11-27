@@ -32,12 +32,12 @@
 
 #include <glm/vec3.hpp>
 
+#include "chunk_coord.h"
 #include "digest.h"
 #include "fatal.h"
 
-inline constexpr int kChunkBits = 6;
-inline constexpr int kChunkSize = 1 << kChunkBits;  // 64 cells per chunk edge: the one constant
 inline constexpr std::uint32_t kBrickCells = 1u << (3 * kChunkBits);  // 2¹⁸
+static_assert(kBrickCells == kDigestCells, "the digest's weights cover exactly a Brick's cells");
 
 // Layout (world/brick): cell index = x + 64·y + 64²·z (z up), chosen for
 // bitmask meshing. Behind this function; nothing else knows the formula.

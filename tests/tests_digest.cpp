@@ -40,7 +40,7 @@ void testWeights() {
         k = addMod(k, w);
     }
     CHECK(zeros == 0 && onCoordinates);
-    CHECK(k == digestK());
+    CHECK(k == digestK() && k == kDigestK);  // the literal is the sum
     // Pinned values: a change to W or H is a visible decision (digests are
     // compared across processes later).
     CHECK(digestWeightAt(0, 0, 0) == 1 + mix64(0) % (kDigestP - 1));

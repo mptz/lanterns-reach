@@ -1,7 +1,5 @@
 // Tests: world. Registered through sandbox_tests.cpp.
 
-#include <chrono>
-
 #include "test_support.h"
 
 namespace {
@@ -101,53 +99,64 @@ void testChunkEditsMeshEmitters() {
 }
 
 
+// emitters() reads no cell but the emitters: it follows every edit (opaque and
+// translucent emitters, replaced, removed, edits that change nothing, bulk
+// applies, copies), always in z, y, x order, and equals a brute-force scan.
+void testEmittersFollowEdits() {
+    const BlockState states[] = {BlockState::air(), solidState(), {typeOf("lamp"), kIdentity}, {typeOf("glow"), kIdentity},
+                                 {typeOf("glass_red"), kIdentity}, {typeOf("gold"), kIdentity}};
+    auto scan = [](const ChunkWorld& w) {  // every cell of the region the edits use, in z, y, x order
+        std::vector<Emitter> out;
+        for (std::int64_t z = 0; z < 12; ++z)
+            for (std::int64_t y = 0; y < 12; ++y)
+                for (std::int64_t x = 0; x < 12; ++x) {
+                    const BlockState st = w.probe({x, y, z});
+                    if (st.isAir()) continue;
+                    const BlockDef& def = registry().def(st.type);
+                    const glm::vec3 e = def.translucent() ? def.translucency->emission : def.material.emissive;
+                    if (e.x > 0.0f || e.y > 0.0f || e.z > 0.0f) out.push_back({{x, y, z}, e});
+                }
+        return out;
+    };
+    auto same = [](const std::vector<Emitter>& a, const std::vector<Emitter>& b) {
+        if (a.size() != b.size()) return false;
+        for (std::size_t i = 0; i < a.size(); ++i)
+            if (!(a[i].cell == b[i].cell) || a[i].emissive != b[i].emissive) return false;
+        return true;
+    };
+    std::mt19937_64 rng(3);
+    ChunkWorld w(registry());
+    CHECK(w.emitters().empty());
+    bool ok = true;
+    for (int i = 0; i < 4000; ++i) {
+        EditSet e;
+        for (int k = 0, n = 1 + static_cast<int>(rng() % 4); k < n; ++k)
+            e.edits.push_back({{static_cast<std::int64_t>(rng() % 12), static_cast<std::int64_t>(rng() % 12),
+                                static_cast<std::int64_t>(rng() % 12)},
+                               states[rng() % std::size(states)]});
+        if (i % 7 == 0) w.applyBulk(e);
+        else w.apply(e);
+        if (i % 20 == 0) {
+            const ChunkWorld copy = w;  // a copy carries its emitters
+            ok = ok && same(w.emitters(), scan(w)) && same(copy.emitters(), scan(w));
+        }
+    }
+    CHECK(ok);
+    CHECK(!w.emitters().empty());
+    // The lamp's light is what the registry says; replacing it with stone removes it.
+    ChunkWorld one(registry());
+    one.apply({{{{3, 4, 5}, BlockState{typeOf("lamp"), kIdentity}}}});
+    CHECK(one.emitters().size() == 1 && one.emitters()[0].cell == CellPos{3, 4, 5} && one.emitters()[0].emissive.x > 0.0f);
+    one.apply({{{{3, 4, 5}, solidState()}}});
+    CHECK(one.emitters().empty());
+    one.apply({{{{70, 0, 0}, BlockState{typeOf("lamp"), kIdentity}}}});  // rejected: outside the chunk
+    CHECK(one.emitters().empty());
+}
+
 }  // namespace
 
 void runWorldTests() {
     testRaycast();
     testChunkEditsMeshEmitters();
-}
-
-// `sandbox_tests --time-mesh`: the v0.2.1 measurement. Time to mesh the full
-// 64³ chunk with the per-cell rule: the median of seven runs, for a chunk of
-// solid stone (only the shell has faces), a 3-D checkerboard of stone and air
-// (every solid cell has six faces: the most faces a chunk can have), and the
-// v0.1 scene. Run it on a Release build.
-void timeChunkMesh() {
-    auto timeIt = [](ChunkWorld& w, std::size_t& faces) {
-        std::vector<double> ms;
-        for (int i = 0; i < 7; ++i) {
-            const auto t0 = std::chrono::steady_clock::now();
-            const WorldMesh m = w.buildMesh(ChunkWorld::kChunk);
-            const auto t1 = std::chrono::steady_clock::now();
-            faces = m.indices.size() / 6;
-            ms.push_back(std::chrono::duration<double, std::milli>(t1 - t0).count());
-        }
-        std::sort(ms.begin(), ms.end());
-        return ms[ms.size() / 2];
-    };
-    ChunkWorld solid(registry()), checker(registry());
-    EditSet all, alt;
-    for (int z = 0; z < kChunkSize; ++z)
-        for (int y = 0; y < kChunkSize; ++y)
-            for (int x = 0; x < kChunkSize; ++x) {
-                all.edits.push_back({{x, y, z}, solidState()});
-                if ((x + y + z) % 2 == 0) alt.edits.push_back({{x, y, z}, solidState()});
-            }
-    solid.apply(all);
-    checker.apply(alt);
-    std::size_t faces = 0;
-    double ms = timeIt(solid, faces);
-    std::printf("mesh 64^3 chunk, solid stone:   %8.2f ms, %zu faces\n", ms, faces);
-    ms = timeIt(checker, faces);
-    std::printf("mesh 64^3 chunk, checkerboard:  %8.2f ms, %zu faces\n", ms, faces);
-    std::string err;
-    const auto scene = loadScenario(SANDBOX_SCENARIO_DIR "/v0.1-scene.json", err);
-    if (scene) {
-        ChunkWorld w(registry());
-        std::vector<std::string> warnings;
-        w.apply(sceneEdits(*scene, registry(), &warnings));
-        ms = timeIt(w, faces);
-        std::printf("mesh 64^3 chunk, v0.1 scene:    %8.2f ms, %zu faces\n", ms, faces);
-    }
+    testEmittersFollowEdits();
 }
