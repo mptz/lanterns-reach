@@ -106,7 +106,7 @@ into the f32 render/compute pipeline. See also `core/f32-origin-relative`.
   constructible value.
 - Rationale: `core/f32-origin-relative` as a comment is silently violable; as a
   type it is unforgeable. Fits the project's lean toward making illegal states
-  unrepresentable (UUIDs, immutable objects).
+  unrepresentable (ULIDs, immutable objects).
 - Consequences: Constructing a `RenderPos` requires going through a rebase that
   takes an origin (the rebase rule in `core/f32-origin-relative`), so precision
   loss has nowhere to hide. Minor ergonomic cost: conversions are explicit at

@@ -830,7 +830,7 @@ questions. What the rest of this model relies on:
      (`world/chunk`), and a client's edits
      are tentative until the authority replies;
   9. **rewinds, replays and duplicate delivery:** exactly-once delivery,
-     and idempotence by UUID with versioned rows;
+     and idempotence by ULID with versioned rows;
   10. **the soft-to-hard mint:** allowed by design, for low-value soft
       output only;
   11. **holders and their contents:** a row's location may be a holder and
@@ -892,7 +892,7 @@ questions. What the rest of this model relies on:
   both, but a chunk's saved content holds only plentiful state: every
   scarce instance is persisted in the world's **scarce table**, by
   whichever Vicinity owns it when that Vicinity saves.
-- **The scarce table:** one row per instance, keyed by a **UUID** minted
+- **The scarce table:** one row per instance, keyed by a **ULID** minted
   with the instance (random, 128-bit, so any Vicinity mints without
   coordination). A row holds the instance's kind, state, location (an
   anchor chunk and cell, a holder and slot, in motion or queued in a
@@ -928,24 +928,24 @@ questions. What the rest of this model relies on:
     - **Why:** a delayed save from an earlier owner can then neither
       overwrite a newer row nor bring a consumed instance back out of
       equity, so commits from different Vicinities need no order.
-  - **`invariant/concurrency/scarce-by-uuid`** — Chunk content refers to
-    scarce instances by UUID and never holds them; the table is
+  - **`invariant/concurrency/scarce-by-ulid`** — Chunk content refers to
+    scarce instances by ULID and never holds them; the table is
     authoritative. A valuable block in a wall is a cell that refers to its
     row.
     - **Enforced:** type: a scarce instance is a move-only object held only
       by a Vicinity or the table, and a cell refers to it through a
-      reference property carrying its UUID (`sim/block-metadata`).
+      reference property carrying its ULID (`sim/block-metadata`).
   - **`invariant/concurrency/identity-survives-state-changes`** — An
-    instance keeps its UUID while it stays the same instance (a valuable
+    instance keeps its ULID while it stays the same instance (a valuable
     block mined and picked up changes only its row's state and location).
     When instances become others (an ore block into nuggets, crafting,
-    splitting or merging a stack), the outputs get new UUIDs and the
+    splitting or merging a stack), the outputs get new ULIDs and the
     inputs' moves to equity travel with them, committed in the same
     transaction as their rows.
     - **Enforced:** type: one transform API takes the inputs and outputs
       together and emits the inputs' moves to equity in the same capture;
       test: the offline balance of the books at startup.
-- **Loading reconciles towards the table:** a cell that refers to a UUID
+- **Loading reconciles towards the table:** a cell that refers to a ULID
   whose row says it is elsewhere shows nothing there; a row anchored at a
   cell restores its instance there. Where the two can't be reconciled (the
   cell now holds something else), the instance goes into **limbo**, a

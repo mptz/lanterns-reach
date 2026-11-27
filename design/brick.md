@@ -145,7 +145,7 @@ as other engine terms share theirs.
   owner's policy, behind its API.
 
 ## Palette entries: block states (draft, to try)
-- **A block's definition** has one UUID and holds what is true of every
+- **A block's definition** has one ULID and holds what is true of every
   instance: material properties, symmetries, collision, behaviour, and the
   variant properties it declares. Appearance is a separate binding, so
   texture packs remain possible. How definitions are loaded is a later,
@@ -157,21 +157,21 @@ as other engine terms share theirs.
 - **Variant properties** each have a small closed domain: orientation
   (canonicalised under the block's symmetries, `world/block-orientation`),
   lit or unlit, a growth stage.
-- **A state UUID** identifies each state a block can take, hashed from the
-  definition UUID and the canonical values of its own properties: a block
+- **A state hash** identifies each state a block can take, hashed from the
+  definition ULID and the canonical values of its own properties: a block
   with 6 canonical orientations and lit or unlit has 12. This generalises
   Minecraft's block states, where each block enumerates its own states, and
   holds up for player-defined blocks, since a new block or property needs
   no global layout, and blocks without a property pay nothing for it.
 - **Never persisted without its reconstruction:** a saved Brick or a network message may
-  carry state UUIDs, or a palettized form of them, for speed, but always
+  carry state hashes, or a palettized form of them, for speed, but always
   with what is needed to reconstruct each state from definitions (each
-  palette entry's definition UUID and named property values, or the hashing
+  palette entry's definition ULID and named property values, or the hashing
   scheme's key and version), so no information is lost when a block's
   properties change (`data/stable-identity`). The rule limits information
   loss, not the representation.
 - **The state table,** one per process and shared by every Brick, holds
-  what systems need per state: the state UUID, the definition, decoded
+  what systems need per state: the state hash, the definition, decoded
   property values (orientation as a column every block has, for generic
   rotation code), visibility class, collision, and six **appearance ids**,
   one per world face (`render/block-textures`), derived from the
@@ -181,10 +181,10 @@ as other engine terms share theirs.
     into the table, assigned when the process first sees the state (a chunk blob
     load, definition loading, a generator registering its palette, a
     player creating a block). Ids are scoped to the process and never
-    persisted; state UUIDs are what is persisted. Reading a state's data
+    persisted; state hashes are what is persisted. Reading a state's data
     by id is one array access, read once per palette entry when a Brick is
     meshed or queried, not per cell.
-  - **Interning** (state UUID to id) is the one hash, used only when a
+  - **Interning** (state hash to id) is the one hash, used only when a
     state is first seen, never per cell or per edit.
   - **Shared across threads:** the table only grows by appending, in
     chunked storage that never moves, so reads by id take no lock;
@@ -211,7 +211,7 @@ as other engine terms share theirs.
   class vocabulary of far and middle levels is bounded at 8 bits for now
   (pink trees seen from afar need more than a handful of classes), which
   bounds those Bricks' palettes. Whether material classes are definitions
-  with UUIDs, like blocks, is open.
+  with ULIDs, like blocks, is open.
 
 ## Invariants (draft)
 - **`invariant/brick/opaque-encoding`** — Nothing outside a Brick sees its
@@ -229,12 +229,12 @@ as other engine terms share theirs.
 - **`invariant/brick/index-in-palette`** — No index refers past the
   palette.
   - **Enforced:** fatal check on write; debug audit.
-- **`invariant/brick/unique-state-uuid`** — No two distinct states share a
-  state UUID.
+- **`invariant/brick/unique-state-hash`** — No two distinct states share a
+  state hash.
   - **Enforced:** fatal check on interning, in every build.
-- **`invariant/brick/no-state-id-leaves-process`** — Every state UUID
+- **`invariant/brick/no-state-id-leaves-process`** — Every state hash
   written to a save or a message travels with what reconstructs its state
-  from definitions (each palette entry's definition UUID and named
+  from definitions (each palette entry's definition ULID and named
   property values, or the hashing scheme's key and version), and no state
   id is written to either.
   - **Enforced:** type: the save and message encoders take the state
@@ -254,7 +254,7 @@ as other engine terms share theirs.
     swap path is the only constructor from another Brick.
 
 ## Open
-- Whether material classes are definitions with UUIDs, so coarse Bricks
+- Whether material classes are definitions with ULIDs, so coarse Bricks
   persist and replicate like 1 ft ones.
 - Where coarse Bricks are used (the coarse-to-fine pipeline).
 - The reverse lookup's scan threshold on both reference machines.

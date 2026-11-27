@@ -249,12 +249,12 @@ few states carry worldgen's choices for that tree, and its coordinates the
 rest of the tree's variety. `worldgen/tree-generation`
 
 **scarce** — Conserved and tracked by the ledger: items, mobs, pets,
-vehicles and valuable blocks once minted. Each scarce instance has a UUID
+vehicles and valuable blocks once minted. Each scarce instance has a ULID
 and its own row in the scarce table, so it can be rolled back but never
 duplicated or lost; everything else is plentiful. `sim/concurrency-model`
 
 **scarce table** — The saved table holding one versioned row per scarce
-instance, keyed by its UUID. `data/entity-ledger`
+instance, keyed by its ULID. `data/entity-ledger`
 
 **seed key** — A key derived one way from the world's seed that unlocks
 generation of one key region in one release tier. `worldgen/seed-keys`
@@ -275,15 +275,16 @@ logic machine), which senses through the body and sends it intentions.
 `sim/player-embodiment`
 
 
+**state hash** — A block state's durable identity: a 128-bit content hash of
+its definition's ULID and its canonical property values, written like a ULID.
+This, not the state id, is what is saved. It is not a ULID: it carries no
+timestamp and is derived, never minted. `world/brick`, `data/stable-identity`
+
 **state id** — A block state's compact number within one process, used in
 palettes and never saved. `world/brick`
 
 **state table** — The process-wide table of block states and what systems
 need to know about each, indexed by state id. `world/brick`
-
-**state UUID** — A block state's durable identity, derived from its
-definition and property values; this, not the state id, is what is saved.
-`world/brick`
 
 **Surveyor** — The World's planning component: it decides what of the world
 should be resident where, at what detail, and issues the work to get
@@ -307,6 +308,12 @@ next blocks' keys, so they can't predict events beyond them.
 
 **turn** — One uninterrupted, single-threaded run of one actor.
 `engine/dispenser`
+
+**ULID** — A 128-bit identifier minted once, for an authored definition or a
+scarce instance: a 48-bit millisecond timestamp then 80 random bits, written
+as 26 characters of Crockford base32 (the first is 0–7). Every durable id in
+the game, ULID or state hash, uses that 128-bit form and text.
+`data/stable-identity`
 
 **Vicinity** — A set of chunks simulated together as one single-threaded
 actor; Vicinities don't overlap, and they merge and cleave as viewpoints move.

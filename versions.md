@@ -163,7 +163,7 @@ display-required) · Measurements.
 - **Frame-thread `apply`** (edits written by the frame thread to the chunk
   holding them): until v0.2.23, when edits go through the Vicinity.
 - **Palette entries as today's `BlockState`** (registry index plus
-  orientation): until v0.2.4, when they become state UUIDs.
+  orientation): until v0.2.4, when they become state hashes.
 - **The toy pyramid generator** (a few summed sinusoid octaves per field,
   standing in for FastNoise2 behind the Cartographer seam, with stub
   keys): until v0.3, real worldgen.
@@ -199,16 +199,16 @@ The chunk payload, single-threaded:
   working state, append-only output, whole-chunk remesh. *Claim: it covers
   the same faces as per-cell meshing.* `world/chunk-meshing`. (Detailed
   below.)
-- **v0.2.4 Block definitions with UUIDs, and state UUIDs:** a UUID in
+- **v0.2.4 Block definitions with ULIDs, and state hashes:** a ULID in
   every block definition, declared variant properties with closed domains
   (orientation formalised among them) and a per-definition state cap,
-  state UUIDs hashed from the definition and canonical property values, the
-  interned state table, and palette entries switching from `BlockState` to
-  32-bit state ids interned from state UUIDs, with the state table's six
-  appearance ids per state (`render/block-textures`). Definitions stay
-  JSON; the grammar-based loading arc comes
-  later. *Claim: captures are identical, and every state round-trips
-  through its definition UUID and named property values.* `world/brick`,
+  state hashes (128-bit content hashes of the definition ULID and canonical
+  property values), ids written as 26-character Crockford base32 with
+  round-trip tests, the interned state table, and palette entries switching
+  from `BlockState` to 32-bit state ids interned from state hashes, with the
+  state table's six appearance ids per state (`render/block-textures`).
+  Definitions stay JSON; the grammar-based loading arc comes later. *Claim: captures are identical, and every state round-trips
+  through its definition ULID and named property values.* `world/brick`,
   `data/stable-identity`, `world/block-orientation`.
 - **v0.2.5 Packed quads, translucent merging and a cutout block:** a packed
   quad format (8 bytes per quad, positions pulled in the vertex shader
@@ -578,12 +578,12 @@ Display-required:
 ### Stand-ins
 - **Frame-thread `apply`** writes the chunk directly: until v0.2.23.
 - **Palette entries are today's `BlockState`** (registry index plus
-  orientation): until v0.2.4, state UUIDs.
+  orientation): until v0.2.4, state hashes.
 - **A single chunk as the whole world:** until v0.2.9, when octree terrain
   surrounds it and it becomes an edited leaf.
 
 ### Out of scope
-Uniform, the other palette widths and digests (v0.2.2); state UUIDs as
+Uniform, the other palette widths and digests (v0.2.2); state hashes as
 palette entries (v0.2.4); greedy meshing
 (v0.2.3); device-local meshes (v0.2.6); the Cartographer seam and terrain
 (v0.2.8 onwards); several chunks and seams (v0.2.24).
@@ -697,13 +697,13 @@ Display-required:
 ### Stand-ins
 - **Per-cell meshing:** until v0.2.3, greedy bitmask meshing.
 - **`H(s)` over today's `BlockState` encoding** (registry index plus
-  orientation, process-scoped): until v0.2.4, when it hashes the state UUID,
+  orientation, process-scoped): until v0.2.4, when it hashes the state hash,
   so digests become comparable across processes.
 - **Direct representation swaps, no seqlock:** until v0.2.24, validated
   reads.
 
 ### Out of scope
-Greedy and bitmask meshing (v0.2.3); state UUIDs (v0.2.4); seqlocks,
+Greedy and bitmask meshing (v0.2.3); state hashes (v0.2.4); seqlocks,
 validated reads and retiring old representations through a grace period
 (v0.2.24); digests of other subsystems;
 compaction other than after bulk fills and through the test API (saves,

@@ -9,7 +9,7 @@ file once decided.
   **Mostly dissolved 2026-11-05** by the committed direction in
   `sim/concurrency-model`. **Resolved:** per-Vicinity saves, immutable
   chunk blobs of plentiful content, and one short SQLite transaction per
-  save committing the chunk manifest, the UUID-keyed scarce table
+  save committing the chunk manifest, the ULID-keyed scarce table
   (versioned rows, applied only if newer) and the world records (portal
   rows included), so SQLite is the only commit point
   (`sim/concurrency-model`).
@@ -509,7 +509,7 @@ file once decided.
   by `sim/concurrency-model`:** movers owned by the Vicinity, conserved
   messages between chunks and their Vicinity, assemblies committing in
   the Vicinity's own turn, published state for soft
-  effects, and durability by per-Vicinity saves into a UUID-keyed scarce
+  effects, and durability by per-Vicinity saves into a ULID-keyed scarce
   table committed through SQLite (`persist/edit-atomicity`). (The 2026-10-30 resolution,
   send-and-bounce through per-pair outboxes plus reserve-then-commit, was
   removed.)

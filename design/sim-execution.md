@@ -184,7 +184,7 @@ hides its latency.
   - **Vicinity merges and cleaves** at halts, with nothing in flight
     (`sim/vicinity`).
   - **Persistence:** one save path per Vicinity, frozen or optimistic;
-    plentiful content in chunk blobs, scarce instances in a UUID-keyed
+    plentiful content in chunk blobs, scarce instances in a ULID-keyed
     scarce table with versioned rows; one short SQLite transaction per
     save; Vicinities rebuilt on load and adopting the scarce instances
     anchored in their chunks.
@@ -273,7 +273,7 @@ hides its latency.
 - **U16 Cross-subsystem coupling at a seam:** a boat carried by a current
   across a chunk boundary while fluids are degraded.
 - **U17 Save during simulation:** a consistent snapshot with conserved things
-  in flight (answered by per-Vicinity saves into a UUID-keyed scarce table,
+  in flight (answered by per-Vicinity saves into a ULID-keyed scarce table,
   optimistic against a transformation counter, `sim/concurrency-model`).
 - **U18 Piston push/pull across a chunk border:** a line (or, with sticky
   connectors, an assembly) of blocks whose cells and destination span two or

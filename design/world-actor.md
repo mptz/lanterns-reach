@@ -152,7 +152,7 @@ questions. Its residency and membership planning is specified in
   Registrar.
 
 ## Open
-- **Persistence, revisited:** per-Vicinity saves into a UUID-keyed scarce
+- **Persistence, revisited:** per-Vicinity saves into a ULID-keyed scarce
   table with versioned rows (`sim/concurrency-model`) removed the need for
   halted snapshots; still to settle there: scarce stacks, limbo, the deadline.
   The halt ordering above remains for pause and shutdown.

@@ -3,10 +3,10 @@
 Identity, immutability, the content-definition grammar, persistent storage, the
 entity ledger, and dimension garbage collection.
 
-## data/immutability — UUIDs + immutable data objects (at object granularity)
+## data/immutability — ULIDs + immutable data objects (at object granularity)
 - **Open:** the exact granularity boundary (`design/open-questions.md`).
 
-- Decision: Heavy use of UUIDs for identity and immutable data objects for
+- Decision: Heavy use of ULIDs for identity and immutable data objects for
   entities/items/definitions. Mutations produce new versions; identity is
   stable.
 - Rationale: Strong fit for determinism, networking, undo/history, and the
@@ -64,9 +64,9 @@ entity ledger, and dimension garbage collection.
   would be a serialization point that every chunk's physics contended on.
 - **Where it lives on disk:**
   - **every ledger entity persists in the world's scarce table,** wherever
-    it is simulated: one row per instance, keyed by a UUID minted with it,
+    it is simulated: one row per instance, keyed by a ULID minted with it,
     versioned, written only if newer, by the Vicinity that owns it when it
-    saves; chunk content refers to entities by UUID and never holds them,
+    saves; chunk content refers to entities by ULID and never holds them,
     so a chunk's saved content is plentiful state only
     (`sim/concurrency-model`). A crash can roll an entity back to where it
     was last saved, never duplicate or lose it;
@@ -76,9 +76,9 @@ entity ledger, and dimension garbage collection.
     balanced (live plus equity equals minted, per kind) and old equity rows
     are folded into totals (`sim/concurrency-model`);
   - **identity survives state changes; transformations carry their inputs'
-    moves to equity:** an entity keeps its UUID while it stays the same
+    moves to equity:** an entity keeps its ULID while it stays the same
     instance, and when entities become others (crafting, splitting or
-    merging a stack, ore into nuggets) the outputs get new UUIDs and the
+    merging a stack, ore into nuggets) the outputs get new ULIDs and the
     inputs' moves to equity commit with them;
   - **genuinely global records live in a small global store**: the
     portal / interdimensional reference table (`data/dimension-gc`),
@@ -240,13 +240,13 @@ entity ledger, and dimension garbage collection.
 - Decision: Content a player authors diegetically (`core/diegetic-authoring`) —
   a soul/AI binding, an N³ block, etc. — is an **immutable** object
   (`data/immutability`) that is **content-addressed by hash**. The hash IS the
-  content identity; a UUID identifies a particular instance/publication. Authored
+  content identity; a ULID identifies a particular instance/publication. Authored
   objects are expressed in `data/grammar` (bindings to engine capabilities).
 - Mechanism (content-addressed store, git/IPFS-like):
   author → canonicalize → hash → dedupe-or-publish → **reference by hash
   everywhere**. Entities "carry" authored content by hash; the heavy definition
   is fetched/cached once.
-- Properties this buys (why UUIDs + immutability were chosen early):
+- Properties this buys (why ULIDs + immutability were chosen early):
   - **Global dedup** — identical definitions converge to one hashed object; sync
     and storage scale with *distinct content*, not authoring volume (same
     entropy-proportional instinct as persistence and chunk reps).
@@ -301,21 +301,39 @@ entity ledger, and dimension garbage collection.
   dependencies/compatibility/conflicts to guide (not forbid) composition; this is
   the open design question, not a hard restriction.
 
-## data/stable-identity — UUIDs on every definition object; versioned records; migrations are total, tested functions
+## data/stable-identity — ULIDs on every definition object; versioned records; migrations are total, tested functions
 
 - Decision (extends `data/immutability`):
-  - **UUIDs identify every definition object**: block definitions, textures,
+  - **ULIDs identify every definition object**: block definitions, textures,
     attributes, materials, and so on, not just entities. The grammar
     (`data/grammar`) supports human-readable **nicknames** that resolve to
-    UUIDs at parse time. Persisted data and network messages reference UUIDs
-    only: never nicknames, and never a numeric index outside the scope that
-    defines it (a chunk palette index is chunk-local).
+    ULIDs at parse time. Persisted data and network messages reference ULIDs
+    (and the state hashes derived from them, `world/brick`) only: never
+    nicknames, and never a numeric index outside the scope that defines it (a
+    chunk palette index is chunk-local).
+  - **One identifier format.** Every durable id is 128 bits and prints as 26
+    characters of Crockford base32 (most significant bits first, so the first
+    character is 0–7; case-insensitive on input, upper case on output, no
+    `I`, `L`, `O` or `U`). **ULIDs** are minted once, for a definition at
+    authoring time or a scarce instance when it is minted: a 48-bit
+    millisecond timestamp, then 80 random bits, ordered within a millisecond
+    by incrementing the random part. **State hashes** are not ULIDs: they are
+    128-bit content hashes of a definition ULID and canonical property
+    values (`world/brick`), derived by anyone who has the inputs and never
+    minted, so they carry no timestamp. They share the encoding so that one
+    parser, printer and database key type serves both.
+  - **Minting takes its clock and randomness from the caller.** The
+    simulation never reads the wall clock or an unseeded generator to mint a
+    ledger entity's ULID: the Vicinity passes in world time and a stream
+    derived from its seed, so a replay mints the same ids
+    (`data/entity-ledger`, `sim/exact-core`). Authoring tools use the real
+    clock and system randomness.
   - **Every persisted record carries a schema version**: chunk blobs, ledger
     rows, portal rows, player records, save metadata.
   - **Migration N → N+1 is a total, pure, tested function** over one record
     kind; loading applies the chain. **Derived data is never persisted** (it
     is re-derived), so it never needs migrating.
-- Relation to `data/authored-content`: a UUID names the thing; a content hash
+- Relation to `data/authored-content`: a ULID names the thing; a content hash
   names one exact immutable content. They are complementary, not competing.
 - Why (the Minecraft lesson): numeric block IDs and ad-hoc state encodings
   forced "The Flattening" (1.13) and a large data-fixer layer that every save

@@ -332,7 +332,7 @@ mistakes, not adversaries.
   chunks involved are idle or their Vicinity halted; a frozen save asserts
   its Vicinity is frozen.
 - **Save audit** (fatal check, at each frozen save). The captured scarce
-  rows are compared with the running totals, every UUID appears exactly
+  rows are compared with the running totals, every ULID appears exactly
   once, and every captured row's location is inside this Vicinity.
 
 ## Invariants (draft)

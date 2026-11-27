@@ -40,7 +40,7 @@ represented, and how it stays reproducible.
 
 **Authoritative state is conserved and immutable; everything fast is a derived,
 rebuildable view of it.** The authoritative layer is identity-stable and
-auditable (f64 coords, UUIDs, immutable objects, the entity ledger's
+auditable (f64 coords, ULIDs, immutable objects, the entity ledger's
 conservation accounting). The performance layer is derived and disposable
 (f32 render data, the choice of a chunk's representation, caches); the
 cells themselves are authoritative. Many

@@ -343,7 +343,7 @@ Decide at implementation (`persist/diegetic-persistence`, `persist/edit-atomicit
   write-once, keyed by (chunk, version), holding plentiful content only;
   one short SQLite transaction per Vicinity save commits the chunk
   manifest (current version and digest per chunk), the scarce table (one
-  row per UUID, versioned, applied only if newer) and the world records
+  row per ULID, versioned, applied only if newer) and the world records
   (portal rows included). The chunk-blob store needs no transactions, so
   LMDB, region
   files or plain files are equally correct, and the choice is purely

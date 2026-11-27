@@ -871,7 +871,7 @@ with residency, degradation, the hard simulation and evaluation use cases in
 - **Rare content too rich for a state is a world-level record a state refers
   to:** a written book is a new state of the book block whose property is a
   reference to a centrally allocated record, persisted at the world level
-  and named by its UUID; sign text likewise. Reference properties are the
+  and named by its ULID; sign text likewise. Reference properties are the
   one exception to small closed domains (`world/brick`'s per-definition
   state cap), allowed only for content that is rare per chunk, so palettes
   stay small. Scarce instances keep their own table (`data/entity-ledger`).
