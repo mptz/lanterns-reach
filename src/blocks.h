@@ -69,14 +69,14 @@ std::optional<Image> loadPng(const std::string& path, std::string& error);
 
 inline constexpr std::uint32_t kTextureSize = 16;  // texels per block face edge (render/block-textures)
 inline constexpr std::uint32_t kSetColumns = 4;    // tiles per atlas row
-inline constexpr std::uint32_t kMaxRandomTiles = 32;  // MeshVertex::texInfo carries count − 1 in 5 bits
+inline constexpr std::uint32_t kMaxRandomTiles = 32;  // texture info (block_mesh.h packTexInfo) carries count − 1 in 5 bits
 
 // Edge bits of a matched or connected tile, in the image's own frame:
 // N = top row, E = right column, S = bottom row, W = left column.
 inline constexpr std::uint32_t kEdgeN = 1, kEdgeE = 2, kEdgeS = 4, kEdgeW = 8;
 
 // A face texture's selection rule (shaders/variants.glsl uses the same
-// numbering in MeshVertex::texInfo).
+// numbering in the texture info, block_mesh.h packTexInfo).
 enum class VariantSet : std::uint8_t { None = 0, Random = 1, MatchedNS = 2, MatchedNSEW = 3, Connected = 4 };
 // Tiles a set holds: `random` its declared count; matched ns 4; matched nsew
 // and connected 16; a single texture 1.

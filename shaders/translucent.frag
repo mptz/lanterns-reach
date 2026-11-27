@@ -1,5 +1,8 @@
 #version 460
 #extension GL_GOOGLE_include_directive : require
+#extension GL_EXT_buffer_reference : require
+#include "variants.glsl"
+#include "quad.glsl"
 #include "translucent_common.glsl"
 #include "translucent_surface.glsl"
 #include "common.glsl"
@@ -34,6 +37,7 @@ layout(location = 2) flat in uint inMaterial;
 layout(location = 3) in vec3 inMeshPos;
 layout(location = 4) flat in uint inLayer;
 layout(location = 5) flat in uint inTexInfo;
+layout(location = 6) flat in uvec2 inQuad;
 
 layout(location = 0) out vec4 outAccum;
 
@@ -45,7 +49,7 @@ void main() {
     // tolerated it; Intel showed the face's triangle diagonal (v0.1.9).
     Material m = materials[inMaterial];
     bool ghost = m.pbr.w > 0.5;
-    vec4 surface = translucentSurface(inMeshPos, inNormal, inLayer, inTexInfo, ghost);
+    vec4 surface = translucentSurface(inMeshPos, inNormal, inLayer, inTexInfo, inQuad, ghost);
     if (gl_FragCoord.z > texelFetch(gbDepth, px, 0).r) discard;  // behind opaque geometry
 
     float r = length(inRel);
@@ -53,7 +57,7 @@ void main() {
     float normalized = 0.0;
     if (b0.a > 0.001)
         normalized = oitNormalizedAbsorbance(texelFetch(oitMoments, px, 0) / b0.a, oitWarp(clamp(r, kOitNear, kOitFar)),
-                                             pc.toLight.w, pc.sun.w);
+                                             frame.toLight.w, frame.sun.w);
     vec3 transmittance = exp(-max(b0.rgb, vec3(0.0)) * normalized);
 
     vec3 n = normalize(inNormal);
@@ -66,9 +70,9 @@ void main() {
     vec3 emission = ghost ? surface.rgb * m.translucentEmission.rgb : m.translucentEmission.rgb;
     vec3 color = emission + pc.meshRel.w * fresnelF0(noAlbedo, 0.0, refl);
     color += coverage * pc.meshRel.w * frameAlbedo;
-    color += shadePbr(n, v, pc.toLight.xyz, noAlbedo, rough, 0.0, refl) * pc.sun.rgb;
-    color += coverage * shadePbr(n, v, pc.toLight.xyz, frameAlbedo, kFrameRoughness, 0.0, 0.5) * pc.sun.rgb;
-    uint count = uint(pc.params.z);
+    color += shadePbr(n, v, frame.toLight.xyz, noAlbedo, rough, 0.0, refl) * frame.sun.rgb;
+    color += coverage * shadePbr(n, v, frame.toLight.xyz, frameAlbedo, kFrameRoughness, 0.0, 0.5) * frame.sun.rgb;
+    uint count = uint(frame.params.z);
     for (uint i = 0u; i < count; ++i) {
         vec3 toL = lights[i].posRadius.xyz - inRel;
         float dist = length(toL);

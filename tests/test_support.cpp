@@ -116,53 +116,26 @@ void fillChunk(Chunk& data, const Cells& cells, bool finish) {
 }
 
 namespace {
-// The face axes as the mesher's planes use them (bit axis, row axis).
-constexpr int kTestBitAxis[6] = {1, 1, 0, 0, 0, 0};
-constexpr int kTestRowAxis[6] = {2, 2, 2, 2, 1, 1};
-
-void decompose(const std::vector<MeshVertex>& verts, bool translucent, std::vector<UnitFace>& out) {
-    for (std::size_t q = 0; q + 4 <= verts.size(); q += 4) {
-        const MeshVertex* v = &verts[q];
-        int dir = -1;
-        for (int d = 0; d < 6; ++d)
-            if (v[0].normal == glm::vec3(orient::faceNormal(static_cast<orient::Face>(d)))) dir = d;
-        auto bad = [&] { out.push_back({0, 0, 0, -1, translucent, {}}); };
-        if (dir < 0) {
-            bad();
-            continue;
-        }
-        const int a = dir / 2, b = kTestBitAxis[dir], r = kTestRowAxis[dir];
-        glm::vec3 lo = v[0].pos, hi = v[0].pos;
-        bool ok = true;
-        for (int k = 0; k < 4; ++k) {
-            lo = glm::min(lo, v[k].pos);
-            hi = glm::max(hi, v[k].pos);
-            ok = ok && v[k].normal == v[0].normal && v[k].layer == v[0].layer && v[k].material == v[0].material &&
-                 v[k].texInfo == v[0].texInfo && v[k].pos[a] == v[0].pos[a];
-        }
-        // The four corners of the rectangle, once each, wound counter-clockwise from outside.
-        const glm::vec3 e1 = v[1].pos - v[0].pos, e2 = v[2].pos - v[0].pos;
-        ok = ok && glm::dot(glm::cross(e1, e2), v[0].normal) > 0.0f;
-        for (int k = 0; k < 4; ++k) {
-            const bool onB = v[k].pos[b] == lo[b] || v[k].pos[b] == hi[b], onR = v[k].pos[r] == lo[r] || v[k].pos[r] == hi[r];
-            ok = ok && onB && onR;
-            for (int m = k + 1; m < 4; ++m) ok = ok && !(v[k].pos == v[m].pos);
-        }
-        const float wf = hi[b] - lo[b], hf = hi[r] - lo[r];
-        ok = ok && wf >= 1.0f && hf >= 1.0f && wf == std::floor(wf) && hf == std::floor(hf);
-        if (!ok) {
-            bad();
-            continue;
-        }
-        const bool positive = dir % 2 == 0;
-        glm::ivec3 base(0);
-        base[a] = static_cast<int>(v[0].pos[a]) - (positive ? 1 : 0);
-        for (int i = 0; i < static_cast<int>(wf); ++i)
-            for (int j = 0; j < static_cast<int>(hf); ++j) {
-                glm::ivec3 c = base;
-                c[b] = static_cast<int>(lo[b]) + i;
-                c[r] = static_cast<int>(lo[r]) + j;
-                out.push_back({c.x, c.y, c.z, dir, translucent, {v[0].layer, v[0].material, v[0].texInfo}});
+void decompose(const std::vector<std::uint64_t>& quads, bool translucent, std::vector<UnitFace>& out) {
+    for (const std::uint64_t packed : quads) {
+        const quad::Quad q = quad::unpack(packed);
+        const int dir = static_cast<int>(q.face);
+        const FacePayload payload = testStates().payload(q.appearance);
+        const bool along = quad::kRightAlongBit[dir];
+        for (int i = 0; i < q.w; ++i)
+            for (int j = 0; j < q.h; ++j) {
+                glm::ivec3 c = q.cell;
+                c[quad::kBitAxis[dir]] += i;
+                c[quad::kRowAxis[dir]] += j;
+                // The unit face's framed edges: those on a framed side of the quad.
+                const bool lowBit = i == 0, highBit = i == q.w - 1;
+                std::uint32_t frame = 0;
+                if ((along ? lowBit : highBit) && (q.sides & quad::kSideNegR)) frame |= quad::kSideNegR;
+                if ((along ? highBit : lowBit) && (q.sides & quad::kSidePosR)) frame |= quad::kSidePosR;
+                if (j == 0 && (q.sides & quad::kSideNegU)) frame |= quad::kSideNegU;
+                if (j == q.h - 1 && (q.sides & quad::kSidePosU)) frame |= quad::kSidePosU;
+                const bool outside = c.x > 63 || c.y > 63 || c.z > 63;
+                out.push_back({c.x, c.y, c.z, outside ? -1 : dir, translucent, payload, frame});
             }
     }
 }
@@ -170,27 +143,18 @@ void decompose(const std::vector<MeshVertex>& verts, bool translucent, std::vect
 
 std::vector<UnitFace> unitFaces(const WorldMesh& mesh) {
     std::vector<UnitFace> out;
-    decompose(mesh.vertices, false, out);
-    decompose(mesh.translucentVertices, true, out);
+    decompose(mesh.quads, false, out);
+    decompose(mesh.translucentQuads, true, out);
     std::sort(out.begin(), out.end());
     return out;
 }
 
 std::vector<QuadSize> quadSizes(const WorldMesh& mesh) {
     std::vector<QuadSize> out;
-    for (const auto* verts : {&mesh.vertices, &mesh.translucentVertices})
-        for (std::size_t q = 0; q + 4 <= verts->size(); q += 4) {
-            const MeshVertex* v = &(*verts)[q];
-            int dir = 0;
-            for (int d = 0; d < 6; ++d)
-                if (v[0].normal == glm::vec3(orient::faceNormal(static_cast<orient::Face>(d)))) dir = d;
-            glm::vec3 lo = v[0].pos, hi = v[0].pos;
-            for (int k = 1; k < 4; ++k) {
-                lo = glm::min(lo, v[k].pos);
-                hi = glm::max(hi, v[k].pos);
-            }
-            out.push_back({dir, static_cast<int>(hi[kTestBitAxis[dir]] - lo[kTestBitAxis[dir]]),
-                           static_cast<int>(hi[kTestRowAxis[dir]] - lo[kTestRowAxis[dir]])});
+    for (const auto* quads : {&mesh.quads, &mesh.translucentQuads})
+        for (const std::uint64_t packed : *quads) {
+            const quad::Quad q = quad::unpack(packed);
+            out.push_back({static_cast<int>(q.face), q.w, q.h});
         }
     return out;
 }
@@ -207,9 +171,8 @@ bool sameMesh(const WorldMesh& a, const WorldMesh& b) {
     auto same = [](const auto& x, const auto& y) {
         return x.size() == y.size() && (x.empty() || std::memcmp(x.data(), y.data(), x.size() * sizeof(x[0])) == 0);
     };
-    return a.origin.x == b.origin.x && a.origin.y == b.origin.y && a.origin.z == b.origin.z && same(a.vertices, b.vertices) &&
-           same(a.indices, b.indices) && same(a.translucentVertices, b.translucentVertices) &&
-           same(a.translucentIndices, b.translucentIndices) && same(a.edgeLines, b.edgeLines);
+    return a.origin.x == b.origin.x && a.origin.y == b.origin.y && a.origin.z == b.origin.z && same(a.quads, b.quads) &&
+           same(a.translucentQuads, b.translucentQuads);
 }
 
 MeshContext testContext() { return {registry(), registry().states()}; }

@@ -7,6 +7,7 @@
 #include "blocks.h"
 #include "digest.h"
 #include "fatal.h"
+#include "packed_quad.h"
 
 std::string orientationText(orient::Symmetry symmetry, orient::Rot canonical) {
     if (canonical == orient::kIdentity) return "";
@@ -97,6 +98,8 @@ std::string StateTable::canonicalText(const Definition& d, std::size_t orientati
 }
 
 std::uint32_t StateTable::internPayload(const FacePayload& p) {
+    // A packed quad carries 23 bits of appearance id (packed_quad.h).
+    FATAL_UNLESS(payloads_.size() <= quad::kMaxAppearance || payloadIds_.contains(p), "appearance ids exhausted (2^23)");
     const auto [it, fresh] = payloadIds_.emplace(p, static_cast<std::uint32_t>(payloads_.size()));
     if (fresh) payloads_.push_back(p);
     return it->second;

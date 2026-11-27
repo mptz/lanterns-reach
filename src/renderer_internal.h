@@ -31,9 +31,13 @@ inline constexpr glm::vec3 kWireColor(1.0f, 0.75f, 0.1f);
 inline constexpr int kSphereSegments = 32;
 inline constexpr float kPi = 3.14159265f;
 
+// Mesh draws pull packed quads and appearance payloads through buffer device
+// addresses (shaders/quad.glsl).
 struct GBufferPush {
     glm::mat4 mvp;           // proj · view · translate(camera-relative mesh origin)
     glm::ivec4 originCell;   // xyz: the mesh origin's integer cell (variant hashing); w: flags (gbuffer.frag)
+    std::uint64_t quads = 0;     // the mesh's opaque quads
+    std::uint64_t payloads = 0;  // the appearance table
 };
 struct LightingPush {
     glm::mat4 invViewProj;
@@ -58,13 +62,19 @@ struct PresentPush {
     std::int32_t oitView;
 };
 static_assert(sizeof(PresentPush) <= 128, "push constants must fit the guaranteed minimum");
-// Both translucency passes (shaders/translucent_common.glsl).
+// Both translucency passes (shaders/translucent_common.glsl): per draw, and
+// the frame's constants (a uniform buffer beside the frame's lights).
 struct TranslucentPush {
     glm::mat4 viewProj;
-    glm::vec4 meshRel;  // xyz camera-relative mesh origin, w ambient
+    glm::vec4 meshRel;       // xyz camera-relative mesh origin, w ambient
+    glm::ivec4 originCell;   // xyz the mesh origin's cell
+    std::uint64_t quads = 0;     // the mesh's translucent quads (0 for ghosts)
+    std::uint64_t payloads = 0;  // the appearance table
+};
+struct TranslucentFrame {
     glm::vec4 toLight;  // xyz −L, w moment bias
     glm::vec4 sun;      // rgb radiance, w overestimation
-    glm::vec4 params;   // camera near, camera far, point-light count
+    glm::vec4 params;   // camera near, camera far, point-light count, 1 = glass frames
 };
 static_assert(sizeof(TranslucentPush) <= 128, "push constants must fit the guaranteed minimum");
 struct GpuLight {
@@ -76,6 +86,14 @@ struct LinesPush {
     glm::vec4 offsetBias;  // xyz: camera-relative origin of the line buffer; w: toward-camera bias
 };
 static_assert(sizeof(LinesPush) <= 128, "push constants must fit the guaranteed minimum");
+// F3 outlines pulled from a mesh's quads (shaders/quad_lines.vert).
+struct QuadLinesPush {
+    glm::mat4 viewProj;
+    glm::vec4 offsetBias;  // xyz: camera-relative mesh origin; w: bias
+    glm::vec4 color;
+    std::uint64_t quads = 0;
+};
+static_assert(sizeof(QuadLinesPush) <= 128, "push constants must fit the guaranteed minimum");
 struct LineVertex {
     glm::vec3 pos;  // camera-relative
     glm::vec3 color;

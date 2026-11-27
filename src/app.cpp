@@ -239,7 +239,7 @@ int run(const RunOptions& opt, const Scenario& sc, bool validation, const BlockR
                     orderTranslucentFaces(mesh, order, camera.position);
                     renderer.setWorldMesh(mesh);  // one chunk: the renderer holds one mesh
                     meshedChunks.insert(id);
-                    meshStats = {(glfwGetTime() - t0) * 1000.0, mesh.indices.size() / 6, meshStats.rebuilds + 1};
+                    meshStats = {(glfwGetTime() - t0) * 1000.0, mesh.quads.size(), meshStats.rebuilds + 1};
                 }
                 lights = lightsFromEmitters(world.emitters(), Renderer::kMaxPointLights);
                 lightsGeneration = world.generation();

@@ -115,21 +115,12 @@ void testFaceOrder() {
     ChunkWorld g(registry());
     g.apply({{{{1, 1, 1}, registry().state(*glass, orient::kIdentity)}, {{5, 1, 1}, registry().state(*glass, orient::kIdentity)}, {{3, 5, 2}, registry().state(*glass, orient::kIdentity)}}});
     const WorldMesh base = g.buildMesh(ChunkWorld::kChunk);
-    CHECK(base.indices.empty() && base.translucentIndices.size() == 3 * 6 * 6);  // glass is translucent only
-    auto faces = [](const WorldMesh& m) {
-        std::multiset<std::array<std::uint32_t, 6>> out;
-        for (std::size_t f = 0; f < m.translucentIndices.size() / 6; ++f) {
-            std::array<std::uint32_t, 6> q;
-            for (std::size_t k = 0; k < 6; ++k) q[k] = m.translucentIndices[6 * f + k];
-            out.insert(q);
-        }
-        return out;
-    };
+    CHECK(base.quads.empty() && base.translucentQuads.size() == 3 * 6);  // glass is translucent only
+    auto faces = [](const WorldMesh& m) { return std::multiset<std::uint64_t>(m.translucentQuads.begin(), m.translucentQuads.end()); };
     const WorldPos eye{0.0, 0.0, 0.0};
     auto centerDist = [&](const WorldMesh& m, std::size_t f) {
-        glm::dvec3 c(0.0);
-        for (std::size_t k = 0; k < 6; ++k) c += glm::dvec3(m.translucentVertices[m.translucentIndices[6 * f + k]].pos);
-        c /= 6.0;
+        const quad::Quad q = quad::unpack(m.translucentQuads[f]);
+        glm::dvec3 c = glm::dvec3(q.cell) + glm::dvec3(0.5) + 0.5 * glm::dvec3(orient::faceNormal(q.face));  // a unit face's centre
         return c.x * c.x + c.y * c.y + c.z * c.z;
     };
     for (const char* spec : {"forward", "reverse", "shuffle:7"}) {
@@ -138,7 +129,7 @@ void testFaceOrder() {
         CHECK(faces(m) == faces(base));  // a permutation of whole faces
         if (std::string(spec) != "shuffle:7") {
             bool sorted = true;
-            for (std::size_t f = 1; f < m.translucentIndices.size() / 6; ++f) {
+            for (std::size_t f = 1; f < m.translucentQuads.size(); ++f) {
                 const double a = centerDist(m, f - 1), b = centerDist(m, f);
                 sorted = sorted && (std::string(spec) == "forward" ? a <= b : a >= b);
             }
@@ -149,7 +140,7 @@ void testFaceOrder() {
     orderTranslucentFaces(s1, *FaceOrder::parse("shuffle:7"), eye);
     orderTranslucentFaces(s2, *FaceOrder::parse("shuffle:7"), eye);
     orderTranslucentFaces(s3, *FaceOrder::parse("shuffle:8"), eye);
-    CHECK(s1.translucentIndices == s2.translucentIndices && s1.translucentIndices != s3.translucentIndices);
+    CHECK(s1.translucentQuads == s2.translucentQuads && s1.translucentQuads != s3.translucentQuads);
     CHECK(!FaceOrder::parse("sideways") && !FaceOrder::parse("shuffle:") && !FaceOrder::parse("shuffle:x"));
 }
 
@@ -163,12 +154,12 @@ void testTranslucentFaceRule() {
     auto put = [&](CellPos c, BlockTypeId t) { g.apply({{{c, registry().state(t, orient::kIdentity)}}}); };
     put({1, 1, 1}, *red);
     put({2, 1, 1}, *red);  // a run of one tint: 10 faces, no internal pair
-    CHECK(g.buildMesh(ChunkWorld::kChunk).translucentIndices.size() / 6 == 10);
+    CHECK(g.buildMesh(ChunkWorld::kChunk).translucentQuads.size() == 10);
     put({3, 1, 1}, *blue);  // another tint: the interface is two coplanar faces
-    CHECK(g.buildMesh(ChunkWorld::kChunk).translucentIndices.size() / 6 == 10 + 6);
+    CHECK(g.buildMesh(ChunkWorld::kChunk).translucentQuads.size() == 10 + 6);
     put({1, 1, 0}, testStates().type(solidState()));  // glass on stone keeps its face; stone keeps its face to the glass
     const WorldMesh m = g.buildMesh(ChunkWorld::kChunk);
-    CHECK(m.translucentIndices.size() / 6 == 16 && m.indices.size() / 6 == 6);
+    CHECK(m.translucentQuads.size() == 16 && m.quads.size() == 6);
     // Emitters include translucent blocks with emission.
     put({6, 6, 6}, *glow);
     bool found = false;
@@ -179,7 +170,8 @@ void testTranslucentFaceRule() {
 
 
 // Connected-glass frames (v0.1.8: a connected variant set): the mesher's
-// frame bits pick the set's tile, so a run of one tint is framed only along
+// frame bits (a quad's side bits, per unit face) pick the set's tile in the
+// fragment shader (block_mesh.h connectedTile is the same mapping), so a run of one tint is framed only along
 // its outline; interface pairs are framed once; faces against opaque cells
 // use tile 0 (fully transparent). Tiles are in the image's frame (kEdgeN …
 // kEdgeW), carried from the face frame by the face's turn.
@@ -193,17 +185,10 @@ void testGlassFrames() {
     auto put = [&](CellPos c, BlockTypeId t) { g.apply({{{c, registry().state(t, orient::kIdentity)}}}); };
     // The tile index of the translucent face of `cell` toward n.
     auto tile = [&](const WorldMesh& m, CellPos cell, glm::vec3 n) -> std::optional<std::uint32_t> {
-        const glm::vec3 lo(static_cast<float>(cell.x), static_cast<float>(cell.y), static_cast<float>(cell.z));
-        for (std::size_t q = 0; q < m.translucentVertices.size(); q += 4) {
-            glm::vec3 c(0.0f);
-            for (std::size_t k = 0; k < 4; ++k) c += m.translucentVertices[q + k].pos * 0.25f;
-            const MeshVertex& v = m.translucentVertices[q];
-            if (v.normal == n && glm::all(glm::lessThan(glm::abs(c - (lo + glm::vec3(0.5f) + n * 0.5f)), glm::vec3(1e-4f)))) {
-                const StateId st = g.probe(cell);
-                const Face f = n.z > 0.5f ? PosZ : n.z < -0.5f ? NegZ : n.x > 0.5f ? PosX : n.x < -0.5f ? NegX : n.y > 0.5f ? PosY : NegY;
-                return v.layer - faceTexture(testStates(), st, f).layer;
-            }
-        }
+        const Face f = n.z > 0.5f ? PosZ : n.z < -0.5f ? NegZ : n.x > 0.5f ? PosX : n.x < -0.5f ? NegX : n.y > 0.5f ? PosY : NegY;
+        for (const UnitFace& u : unitFaces(m))
+            if (u.translucent && u.dir == static_cast<int>(f) && u.x == cell.x && u.y == cell.y && u.z == cell.z)
+                return connectedTile(16u | u.frame, faceTexture(testStates(), g.probe(cell), f).turn);
         return std::nullopt;
     };
     // The +z face of a uniform block: R = +x, U = +y; its turn must be 0

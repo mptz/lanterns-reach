@@ -144,6 +144,8 @@ public:
     // The face's appearance id (render/block-textures) and what it shows.
     std::uint32_t appearance(StateId s, orient::Face face) const { return rows_[s.value].appearance[face]; }
     const FacePayload& payload(std::uint32_t appearanceId) const { return payloads_[appearanceId]; }
+    // Every payload, by appearance id (append-only: the renderer uploads it).
+    const std::vector<FacePayload>& payloads() const { return payloads_; }
     // The content digest's per-state term H(s) (data/content-digest): the
     // state hash's first 8 bytes, little-endian, reduced mod 2⁶¹ − 1.
     std::uint64_t digestTerm(StateId s) const { return rows_[s.value].digestTerm; }

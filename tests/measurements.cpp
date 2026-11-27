@@ -21,7 +21,7 @@ void timeChunkMesh() {
             const auto t0 = std::chrono::steady_clock::now();
             const WorldMesh m = w.buildMesh(ChunkWorld::kChunk);
             const auto t1 = std::chrono::steady_clock::now();
-            faces = m.indices.size() / 6;
+            faces = m.quads.size();
             ms.push_back(std::chrono::duration<double, std::milli>(t1 - t0).count());
         }
         std::sort(ms.begin(), ms.end());
@@ -299,7 +299,7 @@ void timeMeshers() {
 
     MeshTimings phases;
     std::printf("Mesh time per chunk (ms, median of 7) and size, by mesher:\n");
-    std::printf("  %-20s %-9s %9s %8s %8s %9s %8s\n", "case", "mesher", "ms", "quads", "transl.", "KiB", "faces/q");
+    std::printf("  %-20s %-9s %9s %8s %8s %9s %11s %8s\n", "case", "mesher", "ms", "quads", "transl.", "KiB", "v0.2.4 KiB", "faces/q");
     for (const Shape& sh : shapes) {
         Chunk d(testStates());
         fillChunk(d, sh.cells, true);
@@ -313,11 +313,13 @@ void timeMeshers() {
                 ms.push_back(msSince(t0));
                 last = std::move(out);
             }
-            const std::size_t quads = last.indices.size() / 6, tq = last.translucentIndices.size() / 6;
-            const double kib = static_cast<double>((last.vertices.size() + last.translucentVertices.size()) * sizeof(MeshVertex) +
-                                                   (last.indices.size() + last.translucentIndices.size()) * 4) / 1024.0;
+            const std::size_t quads = last.quads.size(), tq = last.translucentQuads.size();
+            const double kib = static_cast<double>((quads + tq) * sizeof(std::uint64_t)) / 1024.0;
+            // The same quads in v0.2.4's layout: 4 vertices of 36 bytes, 6
+            // 4-byte indices and an outline of 8 12-byte points each.
+            const double oldKib = static_cast<double>((quads + tq) * (4 * 36 + 6 * 4 + 8 * 12)) / 1024.0;
             const std::size_t faces = unitFaces(last).size();
-            std::printf("  %-20s %-9s %9.3f %8zu %8zu %9.1f %8.2f\n", sh.name, mesherName(m), median(ms), quads, tq, kib,
+            std::printf("  %-20s %-9s %9.3f %8zu %8zu %9.1f %11.1f %8.2f\n", sh.name, mesherName(m), median(ms), quads, tq, kib, oldKib,
                         quads + tq ? static_cast<double>(faces) / static_cast<double>(quads + tq) : 0.0);
         }
         // Where the greedy mesh's time goes (one more mesh, timed by phase; the
@@ -334,6 +336,8 @@ void timeMeshers() {
     }
     std::printf("\nWorking state on this thread after the cases: %zu bytes (%zu allocations)\n", meshWorkingBytes(),
                 meshWorkingAllocations());
+    std::printf("Appearance table: %zu payloads (largest id %zu), %zu bytes on the GPU\n", testStates().payloads().size(),
+                testStates().payloads().size() - 1, testStates().payloads().size() * 16);
 
     // Merges split by orientation or material in the v0.1 scene: coplanar
     // neighbouring opaque faces (the next cell along either in-plane axis has

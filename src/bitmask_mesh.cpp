@@ -8,7 +8,7 @@
 #include <glm/vector_relational.hpp>
 
 #include "block_mesh.h"
-#include "cube.h"
+#include "packed_quad.h"
 #include "fatal.h"
 
 namespace {
@@ -98,8 +98,8 @@ std::uint64_t neighbourWord(const std::uint64_t* plane, int d, int z, int y, boo
 // A face plane's axes: faces ±x run bits along y and rows along z (slice x);
 // ±y bits along x, rows along z (slice y); ±z bits along x, rows along y
 // (slice z).
-constexpr int kBitAxis[6] = {1, 1, 0, 0, 0, 0};
-constexpr int kRowAxis[6] = {2, 2, 2, 2, 1, 1};
+using quad::kBitAxis;
+using quad::kRowAxis;
 
 glm::ivec3 cellOf(int d, int slice, int bit, int row) {
     glm::ivec3 c(0);
@@ -109,26 +109,10 @@ glm::ivec3 cellOf(int d, int slice, int bit, int row) {
     return c;
 }
 
-// Appends one quad of width w along the face's bit axis and h along its row
-// axis, its four vertices in the unit cube's order (so a 1×1 quad is exactly
-// the per-cell rule's face), with its payload; and its four outline edges.
-void appendQuad(WorldMesh& out, int face, const glm::ivec3& cell, int w, int h, const FacePayload& payload) {
-    const auto& cv = cube::vertices();
-    const auto base = static_cast<std::uint32_t>(out.vertices.size());
-    for (int k = 0; k < 4; ++k) {
-        const Vertex& v = cv[static_cast<std::size_t>(face * 4 + k)];
-        glm::vec3 pos(static_cast<float>(cell.x), static_cast<float>(cell.y), static_cast<float>(cell.z));
-        for (int a = 0; a < 3; ++a) {
-            const float scale = a == kBitAxis[face] ? static_cast<float>(w) : a == kRowAxis[face] ? static_cast<float>(h) : 1.0f;
-            pos[a] += (v.pos[a] + 0.5f) * scale;
-        }
-        out.vertices.push_back({pos, v.normal, payload.layer, payload.material, payload.texInfo});
-    }
-    for (std::uint32_t i : {0u, 1u, 2u, 0u, 2u, 3u}) out.indices.push_back(base + i);
-    for (std::uint32_t k = 0; k < 4; ++k) {
-        out.edgeLines.push_back(out.vertices[base + k].pos);
-        out.edgeLines.push_back(out.vertices[base + (k + 1) % 4].pos);
-    }
+// Appends one opaque quad of width w along the face's bit axis and h along
+// its row axis.
+void appendQuad(WorldMesh& out, int face, const glm::ivec3& cell, int w, int h, std::uint32_t appearance) {
+    out.quads.push_back(quad::pack({.cell = cell, .w = w, .h = h, .face = static_cast<Face>(face), .appearance = appearance}));
 }
 
 // One face direction's greedy merge. `rowsFor(slice, rows)` fills the slice's
@@ -139,7 +123,7 @@ void appendQuad(WorldMesh& out, int face, const glm::ivec3& cell, int w, int h, 
 // while the same bits are set and every cell has that id, clearing what the
 // quad covers. Deterministic, not optimal; quads are at most 64×64.
 template <class RowsFn, class IdFn>
-void greedyDirection(const MeshContext& ctx, Phases& phases, int d, bool merge, WorldMesh& out, RowsFn&& rowsFor,
+void greedyDirection(Phases& phases, int d, bool merge, WorldMesh& out, RowsFn&& rowsFor,
                      IdFn&& idAt) {
     std::uint64_t rows[kEdge];
     for (int slice = 0; slice < kEdge; ++slice) {
@@ -164,7 +148,7 @@ void greedyDirection(const MeshContext& ctx, Phases& phases, int d, bool merge, 
                     rows[r] &= rows[r] - 1;
                 }
                 phases.lap(&MeshTimings::merging);
-                appendQuad(out, d, cellOf(d, slice, b, r), w, h, ctx.states.payload(id));
+                appendQuad(out, d, cellOf(d, slice, b, r), w, h, id);
                 phases.lap(&MeshTimings::emission);
             }
         }
@@ -215,7 +199,7 @@ std::uint32_t frameBitsFromMasks(const Work& w, int slot, int d, const glm::ivec
 // `stateAt(cell index)` is the cell's state (a palette lookup, or the uniform
 // state, which needs no cell read).
 template <class StateAt>
-void emitTranslucent(Work& w, const MeshContext& ctx, const ChunkId& id, WorldMesh& out, Phases& phases,
+void emitTranslucent(Work& w, const MeshContext& ctx, WorldMesh& out, Phases& phases,
                      StateAt&& stateAt) {
     const std::size_t slots = w.typeOfSlot.size();
     sizeAtLeast(w, w.faceWords, slots * 6);
@@ -236,23 +220,13 @@ void emitTranslucent(Work& w, const MeshContext& ctx, const ChunkId& id, WorldMe
                 any &= any - 1;
                 const StateId st = stateAt(static_cast<std::uint32_t>(brickCellIndex(x, y, z)));
                 const auto slot = static_cast<std::size_t>(w.slotOfType[ctx.states.type(st)]);
-                const BlockDef& def = *ctx.states.definition(st).def;
                 const glm::ivec3 local(x, y, z);
-                const CellPos world = cellAt(id.coord, local);
-                const glm::vec3 corner(static_cast<float>(x), static_cast<float>(y), static_cast<float>(z));
                 for (int d = 0; d < 6; ++d) {
                     if (((w.faceWords[slot * 6 + static_cast<std::size_t>(d)] >> x) & 1) == 0) continue;
                     const auto face = static_cast<Face>(d);
-                    FaceTexture tex = resolvePositional(faceTexture(ctx.states, st, face), world, face);
-                    if (tex.set == VariantSet::Connected && glm::any(glm::greaterThan(def.translucency->absorption, glm::vec3(0.0f))))
-                        tex.layer += connectedTile(frameBitsFromMasks(w, static_cast<int>(slot), d, local), tex.turn);
-                    const auto base = static_cast<std::uint32_t>(out.translucentVertices.size());
-                    appendFace(out.translucentVertices, out.translucentIndices, tex, face, corner,
-                               BlockRegistry::materialId(ctx.states.type(st)));
-                    for (std::uint32_t k = 0; k < 4; ++k) {
-                        out.edgeLines.push_back(out.translucentVertices[base + k].pos);
-                        out.edgeLines.push_back(out.translucentVertices[base + (k + 1) % 4].pos);
-                    }
+                    quad::Quad q{.cell = local, .face = face, .appearance = ctx.states.appearance(st, face)};
+                    if (framedFace(ctx.states, st, face)) q.sides = frameBitsFromMasks(w, static_cast<int>(slot), d, local) & 15u;
+                    out.translucentQuads.push_back(quad::pack(q));
                 }
             }
             phases.lap(&MeshTimings::emission);
@@ -284,7 +258,7 @@ void planeFaces(const Work& w, int d, int slice, std::uint64_t* rows, std::uint6
 }
 
 template <unsigned B>
-void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, const ChunkId& id, bool merge,
+void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, bool merge,
             WorldMesh& out) {
     Work& w = gWork;
     Guard guard(w);
@@ -359,7 +333,7 @@ void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, con
                     for (int x = 0; x < kEdge; ++x) w.planeX[static_cast<std::size_t>(x * kEdge + z)] = a[x];
                 }
                 greedyDirection(
-                    ctx, phases, d, merge, out,
+                    phases, d, merge, out,
                     [&](int slice, std::uint64_t* rows) {
                         std::uint64_t any = 0;
                         for (int r = 0; r < kEdge; ++r) any |= rows[r] = w.planeX[static_cast<std::size_t>(slice * kEdge + r)];
@@ -368,7 +342,7 @@ void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, con
                     idAt(d));
             } else {
                 greedyDirection(
-                    ctx, phases, d, merge, out,
+                    phases, d, merge, out,
                     [&](int slice, std::uint64_t* rows) {
                         std::uint64_t any = 0;
                         planeFaces(w, d, slice, rows, any);
@@ -380,7 +354,7 @@ void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, con
     }
 
     if (!w.typeOfSlot.empty())
-        emitTranslucent(w, ctx, id, out, phases,
+        emitTranslucent(w, ctx, out, phases,
                         [&brick](std::uint32_t cell) { return brick.entry(brick.indexAt(cell)); });
 }
 
@@ -399,19 +373,18 @@ void transpose64(std::uint64_t a[64]) {
         }
 }
 
-void bitmaskMeshPalette(const PaletteBrick<StateId>& brick, const MeshContext& context, const ChunkId& id,
-                        bool merge, WorldMesh& out) {
+void bitmaskMeshPalette(const PaletteBrick<StateId>& brick, const MeshContext& context, bool merge, WorldMesh& out) {
     switch (brick.width()) {
-        case 1: meshAt<1>(static_cast<const PaletteBrickAt<StateId, 1>&>(brick), context, id, merge, out); break;
-        case 2: meshAt<2>(static_cast<const PaletteBrickAt<StateId, 2>&>(brick), context, id, merge, out); break;
-        case 4: meshAt<4>(static_cast<const PaletteBrickAt<StateId, 4>&>(brick), context, id, merge, out); break;
-        case 8: meshAt<8>(static_cast<const PaletteBrickAt<StateId, 8>&>(brick), context, id, merge, out); break;
-        case 16: meshAt<16>(static_cast<const PaletteBrickAt<StateId, 16>&>(brick), context, id, merge, out); break;
-        default: meshAt<32>(static_cast<const PaletteBrickAt<StateId, 32>&>(brick), context, id, merge, out); break;
+        case 1: meshAt<1>(static_cast<const PaletteBrickAt<StateId, 1>&>(brick), context, merge, out); break;
+        case 2: meshAt<2>(static_cast<const PaletteBrickAt<StateId, 2>&>(brick), context, merge, out); break;
+        case 4: meshAt<4>(static_cast<const PaletteBrickAt<StateId, 4>&>(brick), context, merge, out); break;
+        case 8: meshAt<8>(static_cast<const PaletteBrickAt<StateId, 8>&>(brick), context, merge, out); break;
+        case 16: meshAt<16>(static_cast<const PaletteBrickAt<StateId, 16>&>(brick), context, merge, out); break;
+        default: meshAt<32>(static_cast<const PaletteBrickAt<StateId, 32>&>(brick), context, merge, out); break;
     }
 }
 
-void bitmaskMeshUniform(StateId state, const MeshContext& context, const ChunkId& id, bool merge,
+void bitmaskMeshUniform(StateId state, const MeshContext& context, bool merge,
                         WorldMesh& out) {
     if (context.states.isAir(state)) return;
     Work& w = gWork;
@@ -423,7 +396,7 @@ void bitmaskMeshUniform(StateId state, const MeshContext& context, const ChunkId
             const int boundary = d % 2 == 0 ? kEdge - 1 : 0;
             const std::uint32_t id0 = context.states.appearance(state, static_cast<Face>(d));
             greedyDirection(
-                context, phases, d, merge, out,
+                phases, d, merge, out,
                 [&](int slice, std::uint64_t* rows) {
                     if (slice != boundary) return false;
                     std::fill_n(rows, kEdge, kAllBits);
@@ -441,7 +414,7 @@ void bitmaskMeshUniform(StateId state, const MeshContext& context, const ChunkId
     slotFor(w, context.states.type(state));
     std::fill_n(w.groups.begin(), kRows, kAllBits);
     std::fill_n(w.opaque.begin(), kRows, std::uint64_t{0});
-    emitTranslucent(w, context, id, out, phases, [state](std::uint32_t) { return state; });
+    emitTranslucent(w, context, out, phases, [state](std::uint32_t) { return state; });
 }
 
 void setMeshTimings(MeshTimings* timings) { gWork.timings = timings; }

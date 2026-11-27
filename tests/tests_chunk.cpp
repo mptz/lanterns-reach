@@ -104,10 +104,10 @@ void testChunkBoundary() {
 void testChunkMeshAtBoundary() {
     ChunkWorld w(registry());
     w.apply({{{{0, 0, 0}, solidState()}, {{63, 63, 63}, solidState()}}});
-    CHECK(w.buildMesh(ChunkWorld::kChunk).indices.size() / 6 == 12);
+    CHECK(w.buildMesh(ChunkWorld::kChunk).quads.size() == 12);
     // Another chunk is all air: an empty mesh at its own origin.
     const WorldMesh other = w.buildMesh({0, {1, 0, 0}});
-    CHECK(other.indices.empty() && other.origin.x == 64.0 && other.origin.y == 0.0);
+    CHECK(other.quads.empty() && other.origin.x == 64.0 && other.origin.y == 0.0);
 }
 
 }  // namespace

@@ -1,9 +1,8 @@
 #pragma once
 // Test control for render/transparency's central claim (no sorting needed):
-// reorder the FACES of the translucent mesh's index buffer before upload.
-// The GPU blends in index-buffer order within a draw, so this permutes the
-// order fragments arrive at each pixel; both translucent passes draw from
-// the same buffer.
+// reorder the translucent mesh's quads before upload. The GPU blends in
+// primitive order within a draw, so this permutes the order fragments arrive
+// at each pixel; both translucent passes draw from the same quads.
 
 #include <cstdint>
 #include <optional>
@@ -21,7 +20,7 @@ struct FaceOrder {
     std::string describe() const;
 };
 
-// Forward = nearest face first from `eye` (by face center), Reverse =
+// Forward = nearest face first from `eye` (by quad centre), Reverse =
 // farthest first (what naive "over" blending needs), Shuffle = seeded
 // Fisher–Yates (std::mt19937_64, portable). AsBuilt leaves the mesh alone.
 void orderTranslucentFaces(WorldMesh& mesh, const FaceOrder& order, const WorldPos& eye);

@@ -133,10 +133,10 @@ void testMeshFaceTextures() {
     const BlockDef& def = registry().def(*log);
     const std::uint32_t endLayer = def.faceLayer[PosZ], sideLayer = def.faceLayer[NegY];
     CHECK(endLayer != sideLayer);
-    for (std::size_t q = 0; q + 3 < m.vertices.size(); q += 4) {
-        const MeshVertex& v = m.vertices[q];
-        const bool xFace = std::abs(v.normal.x) > 0.5f;
-        CHECK(v.layer == (xFace ? endLayer : sideLayer));
+    for (const std::uint64_t packed : m.quads) {
+        const quad::Quad q = quad::unpack(packed);
+        const bool xFace = q.face == PosX || q.face == NegX;
+        CHECK(testStates().payload(q.appearance).layer == (xFace ? endLayer : sideLayer));
     }
 }
 

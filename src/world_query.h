@@ -43,33 +43,17 @@ struct ApplyResult {
     std::vector<CellPos> rejected;    // edits outside the world (ignored)
 };
 
-// Mesh vertex as produced by the world (positions relative to the mesh
-// origin, which the renderer rebases through coords.h like everything else;
-// mesh origins lie on the integer lattice). Opaque and translucent faces use
-// one layout: `layer` is the face's texture-array layer (a variant set's tile
-// 0, or for a connected set the tile the mesher chose) and `texInfo` its
-// turn and set kind (shaders/block_texture.glsl). Texel positions come from
-// the fragment's position, so there is no UV.
-struct MeshVertex {
-    glm::vec3 pos;
-    glm::vec3 normal;
-    std::uint32_t layer;
-    std::uint32_t material;
-    std::uint32_t texInfo;
-};
-
+// A chunk's mesh (world/chunk-meshing): packed quads (packed_quad.h),
+// positions relative to the mesh origin, which the renderer rebases through
+// coords.h like everything else (mesh origins lie on the integer lattice).
 // Opaque faces go to the G-buffer; translucent faces (render/transparency)
-// to a separate mesh drawn by the OIT passes. Each translucent cell emits
+// to a separate array drawn by the OIT passes. Each translucent cell emits
 // its own faces, wound outward, wherever its neighbour isn't the same group
-// (block type): air, opaque, another tint, or outside the world. Faces are
-// quads: 4 vertices, 6 indices each, in both meshes.
+// (block type): air, opaque, another tint, or outside the world.
 struct WorldMesh {
     WorldPos origin;
-    std::vector<MeshVertex> vertices;
-    std::vector<std::uint32_t> indices;
-    std::vector<MeshVertex> translucentVertices;
-    std::vector<std::uint32_t> translucentIndices;
-    std::vector<glm::vec3> edgeLines;  // pairs of endpoints: outlines of every emitted face, both meshes (F3)
+    std::vector<std::uint64_t> quads;
+    std::vector<std::uint64_t> translucentQuads;
 };
 
 struct Emitter {

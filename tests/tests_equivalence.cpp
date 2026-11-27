@@ -65,26 +65,14 @@ int oracleRay(const Cells& cells, const Ray& r) {
     return -1;
 }
 
-using QuadKey = std::array<std::uint32_t, 36>;  // 4 vertices × (pos, normal, layer, material, texInfo)
+using QuadKey = std::pair<bool, std::uint64_t>;  // (translucent, packed quad)
 
 // A mesh as a sorted list of quads (opaque then translucent), so equal
 // content gives equal lists whatever order the faces were emitted in.
 std::vector<QuadKey> quadList(const WorldMesh& m) {
     std::vector<QuadKey> out;
-    for (const auto* verts : {&m.vertices, &m.translucentVertices})
-        for (std::size_t q = 0; q + 4 <= verts->size(); q += 4) {
-            QuadKey k{};
-            for (std::size_t v = 0; v < 4; ++v) {
-                const MeshVertex& mv = (*verts)[q + v];
-                std::uint32_t* o = &k[v * 9];
-                std::memcpy(o, &mv.pos, sizeof(float) * 3);
-                std::memcpy(o + 3, &mv.normal, sizeof(float) * 3);
-                o[6] = mv.layer;
-                o[7] = mv.material;
-                o[8] = mv.texInfo;
-            }
-            out.push_back(k);
-        }
+    for (const std::uint64_t q : m.quads) out.push_back({false, q});
+    for (const std::uint64_t q : m.translucentQuads) out.push_back({true, q});
     std::sort(out.begin(), out.end());
     return out;
 }

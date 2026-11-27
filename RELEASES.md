@@ -593,3 +593,87 @@ The open items listed at the head of v0.2.4 in `versions.md`, each decided.
 | 8 | The minting tool | ✅ |
 | 9 | `ChunkData` and `BlockState` gone; raycast and emitters are `Chunk`'s | ✅ |
 | 10 | The v0.1 world plays unchanged | ✅ owner (interactive use) |
+
+## v0.2.5 (in progress)
+Built in steps, each committed with its own checks (owner, 2026-11-27):
+**a** packed quads and vertex pulling with no visible change; **b** the
+fragment's cell from its quad (`log_columns`); **c** inner-corner bits;
+**d** constrained translucent merging; **e** the cutout class and grate.
+
+### v0.2.5a: packed quads, pulled (built 2026-11-27)
+#### Choices
+- **`packed_quad.h`** defines the bits (`quad::Quad`, `pack`, `unpack`, the
+  face axes and `kRightAlongBit`); `shaders/quad.glsl` mirrors it. Side bits
+  are in the face frame, −R, +R, −U, +U (connectedTile's frame-bit order);
+  corner bits (−R−U), (+R−U), (−R+U), (+R+U). Appearance ids past 2²³ − 1
+  are fatal in the state table.
+- **Buffer device addresses**, not descriptor sets: each draw pushes the
+  address of its quads and of the appearance table, so a mesh replaced at
+  any time needs no descriptor allocated or freed. `bufferDeviceAddress`
+  (Vulkan 1.2 core) is now required; lavapipe has it and so does the HD 620.
+- **Push constants stay within 128 bytes:** the translucency passes'
+  frame-wide constants (light direction, sun, near/far, light count, the
+  frames switch, the MBOIT bias and overestimation) moved to a per-frame
+  uniform buffer beside the frame's lights (set 1, binding 1), and the
+  absorbance pass now binds that set too. Its push block is the matrix, the
+  mesh offset, the mesh origin's cell and the two addresses (112 bytes).
+- **The appearance table** is `uvec4` per id (layer, material, texture
+  info, unused): 16 bytes, uploaded whole when the state table has more
+  payloads than were uploaded. The shipped blocks have 87 (largest id 86;
+  1,392 bytes).
+- **One static index buffer** (0 1 2 0 2 3 per quad), grown by doubling to
+  the largest mesh drawn; retired buffers stay alive with the meshes that
+  use them.
+- **Translucent faces** carry their appearance id (the state's, so no CPU
+  tile resolution) and, when framed (a connected set on an absorbing block,
+  `framedFace`), their frame bits as side bits. The fragment shader picks
+  the connected tile from the side bits at the fragment's cell (clamped to
+  the quad) and random or matched tiles from the cell plus the mesh origin,
+  so translucent faces now need the origin cell too. Opaque random and
+  matched tiles still hash the unclamped `floor(pos − n/2)` cell, as in
+  v0.2.4; step b changes that.
+- **Ghosts** keep `MeshVertex` (moved to `block_mesh.h`) and get their own
+  vertex shader, `ghost.vert`, and two pipelines sharing the translucency
+  fragment shaders.
+- **F3 outlines** come from a pulled line pipeline (`quad_lines.vert`, 8
+  vertices per quad) over both quad arrays; `WorldMesh::edgeLines` is gone.
+- **The bitmask mesher's API** lost its `ChunkId` (positions are
+  chunk-local and translucent tiles are no longer resolved on the CPU).
+
+#### Results
+- `ctest` passes, Debug (25) and Release (24), zero warnings.
+- **Captures** (`cap-025a`, greedy): all 65 runs pass, and every capture is
+  pixel-identical to `cap-024` except the five with live F1/F7 text
+  (hotbar, lighting, lit, overlays, resize), whose differences all lie in
+  the text panels.
+  With `unmerged` (`cap-025a-unmerged`) and `per-cell`
+  (`cap-025a-percell`), 59 runs each (the `quad_*` pairs run only with the
+  default mesher) pass and match `cap-023-unmerged` and `cap-023-percell`
+  (which v0.2.4 left unchanged) with the same five exceptions.
+  `--check-absorbance` passes with all three meshers, as do the
+  order-invariance comparisons.
+- **Tests:** the pack round trip at every field's extremes and each field's
+  bit position; `R` along the bit axis as `variants.glsl` has it; the unit
+  face decomposition now includes each unit face's frame bits, so the
+  equivalence tests compare frames as well as payloads.
+
+#### Measurements (Dell Latitude 7480, Release; `sandbox_tests --time-meshers`)
+| Case | greedy ms (v0.2.3) | greedy KiB | same quads in v0.2.4's layout, KiB |
+|---|---|---|---|
+| v0.1 scene | 0.56 (0.63) | 2.3 | 76 |
+| uniform solid | 0.002 (0.002) | 0.05 | 1.5 |
+| heightmap | 0.66 (1.63) | 54 | 1,774 |
+| checkerboard | 10.8 (152) | 6,144 | 202,752 |
+| random, many states | 9.0 (71) | 2,977 | 98,250 |
+
+The v0.2.4 layout cost 264 bytes per quad (4 vertices of 36 bytes, 6
+indices, an 8-point outline); a packed quad is 8, so every mesh is 1/33 of
+its v0.2.4 size. Emission no longer dominates: the checkerboard's greedy
+mesh fell from 152 ms to 11.
+
+#### Pending for v0.2.5
+- **Shader unpacking against the C++** (acceptance 5's readback): covered
+  so far only by the pixel-identical captures.
+- **GPU frame time, `perf-1080p`, v0.2.4 against v0.2.5:** needs the
+  owner's display. Xvfb has no DRI3, so the HD 620 driver can't present
+  there.

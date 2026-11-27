@@ -27,30 +27,43 @@ void Renderer::setWorldMesh(const WorldMesh& mesh) {
     // The current buffers may still be read by frames in flight: retire
     // them, tagged with the current frame number, and free them once every
     // frame that could use them has completed (see drawFrame).
-    if (mesh_.vertices) retiredMeshes_.emplace_back(frameNumber_, std::move(mesh_));
+    if (mesh_.quads || mesh_.tQuads) retiredMeshes_.emplace_back(frameNumber_, std::move(mesh_));
     mesh_ = GpuMesh{.origin = mesh.origin};
-    if (mesh.indices.empty()) return;
     using U = vk::BufferUsageFlagBits;
-    mesh_.vertices = std::make_unique<HostBuffer>(ctx_, sizeof(MeshVertex) * mesh.vertices.size(), U::eVertexBuffer);
-    mesh_.vertices->write(mesh.vertices.data(), sizeof(MeshVertex) * mesh.vertices.size());
-    mesh_.indices = std::make_unique<HostBuffer>(ctx_, sizeof(std::uint32_t) * mesh.indices.size(), U::eIndexBuffer);
-    mesh_.indices->write(mesh.indices.data(), sizeof(std::uint32_t) * mesh.indices.size());
-    mesh_.indexCount = static_cast<std::uint32_t>(mesh.indices.size());
-    std::vector<LineVertex> edges;
-    edges.reserve(mesh.edgeLines.size());
-    for (const glm::vec3& p : mesh.edgeLines) edges.push_back({p, kWireColor});
-    mesh_.edges = std::make_unique<HostBuffer>(ctx_, sizeof(LineVertex) * edges.size(), U::eVertexBuffer);
-    mesh_.edges->write(edges.data(), sizeof(LineVertex) * edges.size());
-    mesh_.edgeVertexCount = static_cast<std::uint32_t>(edges.size());
-    if (!mesh.translucentIndices.empty()) {
-        mesh_.tVertices = std::make_unique<HostBuffer>(ctx_, sizeof(MeshVertex) * mesh.translucentVertices.size(),
-                                                       U::eVertexBuffer);
-        mesh_.tVertices->write(mesh.translucentVertices.data(), sizeof(MeshVertex) * mesh.translucentVertices.size());
-        mesh_.tIndices = std::make_unique<HostBuffer>(ctx_, sizeof(std::uint32_t) * mesh.translucentIndices.size(),
-                                                      U::eIndexBuffer);
-        mesh_.tIndices->write(mesh.translucentIndices.data(), sizeof(std::uint32_t) * mesh.translucentIndices.size());
-        mesh_.tIndexCount = static_cast<std::uint32_t>(mesh.translucentIndices.size());
+    const auto pulled = U::eStorageBuffer | U::eShaderDeviceAddress;
+    auto upload = [&](const std::vector<std::uint64_t>& quads, std::unique_ptr<HostBuffer>& buffer, std::uint32_t& count) {
+        if (quads.empty()) return;
+        buffer = std::make_unique<HostBuffer>(ctx_, sizeof(std::uint64_t) * quads.size(), pulled);
+        buffer->write(quads.data(), sizeof(std::uint64_t) * quads.size());
+        count = static_cast<std::uint32_t>(quads.size());
+    };
+    upload(mesh.quads, mesh_.quads, mesh_.quadCount);
+    upload(mesh.translucentQuads, mesh_.tQuads, mesh_.tQuadCount);
+
+    // The static index buffer covers the largest mesh drawn so far; a
+    // bigger one replaces it (the old one stays with the meshes using it).
+    const std::uint32_t need = std::max(mesh_.quadCount, mesh_.tQuadCount);
+    if (need > quadIndexCapacity_) {
+        quadIndexCapacity_ = std::max(need, 2 * quadIndexCapacity_);
+        std::vector<std::uint32_t> indices;
+        indices.reserve(std::size_t{6} * quadIndexCapacity_);
+        for (std::uint32_t q = 0; q < quadIndexCapacity_; ++q)
+            for (std::uint32_t i : {0u, 1u, 2u, 0u, 2u, 3u}) indices.push_back(4 * q + i);
+        quadIndices_ = std::make_shared<HostBuffer>(ctx_, sizeof(std::uint32_t) * indices.size(), U::eIndexBuffer);
+        quadIndices_->write(indices.data(), sizeof(std::uint32_t) * indices.size());
     }
+    // The appearance table, re-uploaded whole when the state table has grown.
+    const std::vector<FacePayload>& payloads = registry_.states().payloads();
+    if (payloads.size() != payloadCount_) {
+        payloadCount_ = payloads.size();
+        std::vector<glm::uvec4> table;
+        table.reserve(payloads.size());
+        for (const FacePayload& p : payloads) table.emplace_back(p.layer, p.material, p.texInfo, 0u);
+        payloads_ = std::make_shared<HostBuffer>(ctx_, sizeof(glm::uvec4) * std::max<std::size_t>(table.size(), 1), pulled);
+        payloads_->write(table.data(), sizeof(glm::uvec4) * table.size());
+    }
+    mesh_.quadIndices = quadIndices_;
+    mesh_.payloads = payloads_;
 }
 
 void Renderer::readTimestamps(Frame& f) {
@@ -170,8 +183,12 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
     const GBufferPush meshPush{viewProj * glm::translate(glm::mat4(1.0f), meshRel),
                                glm::ivec4(static_cast<int>(originCell.x), static_cast<int>(originCell.y),
                                           static_cast<int>(originCell.z), (options.view == DebugView::Variant ? 1 : 0) | (options.variants ? 0 : 2))};
-    const bool hasMesh = mesh_.indexCount > 0;
-    const bool drawEdges = options.wireframe && mesh_.edgeVertexCount > 0;
+    const bool hasMesh = mesh_.quadCount > 0;
+    const bool drawEdges = options.wireframe && (mesh_.quadCount > 0 || mesh_.tQuadCount > 0);
+    const std::uint64_t payloadsAddress = mesh_.payloads ? mesh_.payloads->address() : 0;
+    GBufferPush meshPushPulled = meshPush;
+    meshPushPulled.quads = mesh_.quads ? mesh_.quads->address() : 0;
+    meshPushPulled.payloads = payloadsAddress;
 
     std::vector<LineVertex> lines;
     for (const DebugLine& l : debugLines) {
@@ -233,11 +250,13 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
                                   options.oit.view};
     const OitSettings& oit = options.oit;
     const TranslucentPush translucentPush{viewProj,  // the vertex shader adds meshRel itself
-                                          glm::vec4(meshRel, ls.ambient),
-                                          glm::vec4(-kLightDir, oit.momentBias),
-                                          glm::vec4(glm::vec3(kPi * ls.sun), oit.overestimation),
-                                          glm::vec4(Camera::kNear, Camera::kFar,
-                                                    static_cast<float>(gpuLights.size()), oit.glassFrames ? 1.0f : 0.0f)};
+                                          glm::vec4(meshRel, ls.ambient), meshPush.originCell,
+                                          mesh_.tQuads ? mesh_.tQuads->address() : 0, payloadsAddress};
+    const TranslucentFrame translucentFrame{glm::vec4(-kLightDir, oit.momentBias),
+                                            glm::vec4(glm::vec3(kPi * ls.sun), oit.overestimation),
+                                            glm::vec4(Camera::kNear, Camera::kFar, static_cast<float>(gpuLights.size()),
+                                                      oit.glassFrames ? 1.0f : 0.0f)};
+    frame.translucentFrame->write(&translucentFrame, sizeof translucentFrame);
     // Preview ghosts: one group (a ghost cell next to another shares no
     // face), mesh-relative to the first ghost's corner, rebased like the world.
     std::vector<MeshVertex> ghostVerts;
@@ -268,9 +287,10 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
     const auto ghostIndexCount = static_cast<std::uint32_t>(ghostIdx.size());
     TranslucentPush ghostPush = translucentPush;
     ghostPush.meshRel = glm::vec4(rebase(ghostOrigin, camera.position).v, ls.ambient);
-    const bool hasTranslucent = mesh_.tIndexCount > 0 || ghostIndexCount > 0;
+    ghostPush.quads = 0;
+    const bool hasTranslucent = mesh_.tQuadCount > 0 || ghostIndexCount > 0;
     const LinesPush linesPush{viewProj, glm::vec4(0.0f, 0.0f, 0.0f, kLineBias)};  // already camera-relative
-    const LinesPush edgesPush{viewProj, glm::vec4(meshRel, kLineBias)};          // mesh-relative
+    QuadLinesPush edgesPush{viewProj, glm::vec4(meshRel, kLineBias), glm::vec4(kWireColor, 1.0f)};  // mesh-relative
 
     // Swapchain contents are discarded every frame; the acquire semaphore
     // wait is at COLOR_ATTACHMENT_OUTPUT, so the first barrier chains off it.
@@ -307,11 +327,10 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
             c.bindPipeline(vk::PipelineBindPoint::eGraphics, *gbufferPipeline_);
             if (!hasMesh) return;
             c.bindDescriptorSets(vk::PipelineBindPoint::eGraphics, *gbufferPipelineLayout_, 0, *gbufferSet_, {});
-            c.bindVertexBuffers(0, mesh_.vertices->get(), vk::DeviceSize{0});
-            c.bindIndexBuffer(mesh_.indices->get(), 0, vk::IndexType::eUint32);
+            c.bindIndexBuffer(mesh_.quadIndices->get(), 0, vk::IndexType::eUint32);
             c.pushConstants(*gbufferPipelineLayout_, vk::ShaderStageFlagBits::eVertex | vk::ShaderStageFlagBits::eFragment, 0,
-                            sizeof(GBufferPush), &meshPush);
-            c.drawIndexed(mesh_.indexCount, 1, 0, 0, 0);  // one draw for the whole world
+                            sizeof(GBufferPush), &meshPushPulled);
+            c.drawIndexed(6 * mesh_.quadCount, 1, 0, 0, 0);  // one draw for the whole world
         },
     });
     graph.addPass(PassDesc{
@@ -330,15 +349,16 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
     });
     // Both translucency passes draw the same geometry: the world's translucent
     // mesh, then the preview ghosts (order doesn't matter: both passes sum).
-    auto drawTranslucent = [&](vk::CommandBuffer c, vk::PipelineLayout layout) {
+    auto drawTranslucent = [&](vk::CommandBuffer c, vk::PipelineLayout layout, vk::Pipeline world, vk::Pipeline ghost) {
         const auto stages = vk::ShaderStageFlagBits::eVertex | vk::ShaderStageFlagBits::eFragment;
-        if (mesh_.tIndexCount > 0) {
-            c.bindVertexBuffers(0, mesh_.tVertices->get(), vk::DeviceSize{0});
-            c.bindIndexBuffer(mesh_.tIndices->get(), 0, vk::IndexType::eUint32);
+        if (mesh_.tQuadCount > 0) {
+            c.bindPipeline(vk::PipelineBindPoint::eGraphics, world);
+            c.bindIndexBuffer(mesh_.quadIndices->get(), 0, vk::IndexType::eUint32);
             c.pushConstants(layout, stages, 0, sizeof(TranslucentPush), &translucentPush);
-            c.drawIndexed(mesh_.tIndexCount, 1, 0, 0, 0);
+            c.drawIndexed(6 * mesh_.tQuadCount, 1, 0, 0, 0);
         }
         if (ghostIndexCount > 0) {
+            c.bindPipeline(vk::PipelineBindPoint::eGraphics, ghost);
             c.bindVertexBuffers(0, frame.ghostVertices->get(), vk::DeviceSize{0});
             c.bindIndexBuffer(frame.ghostIndices->get(), 0, vk::IndexType::eUint32);
             c.pushConstants(layout, stages, 0, sizeof(TranslucentPush), &ghostPush);
@@ -357,9 +377,9 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
         .sampled = {depth, textures},
         .record = [&](vk::CommandBuffer c) {
             if (!hasTranslucent) return;
-            c.bindPipeline(vk::PipelineBindPoint::eGraphics, *absorbancePipeline_);
-            c.bindDescriptorSets(vk::PipelineBindPoint::eGraphics, *absorbancePipelineLayout_, 0, *absorbanceSet_, {});
-            drawTranslucent(c, *absorbancePipelineLayout_);
+            c.bindDescriptorSets(vk::PipelineBindPoint::eGraphics, *absorbancePipelineLayout_, 0,
+                                 {*absorbanceSet_, *frame.lightSet}, {});
+            drawTranslucent(c, *absorbancePipelineLayout_, *absorbancePipeline_, *ghostAbsorbancePipeline_);
         },
     });
     // Pass 2: shade camera-facing translucent faces, attenuated by the
@@ -371,10 +391,9 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
         .sampled = {depth, oitB0, oitMoments, textures},
         .record = [&](vk::CommandBuffer c) {
             if (!hasTranslucent) return;
-            c.bindPipeline(vk::PipelineBindPoint::eGraphics, *translucentPipeline_);
             c.bindDescriptorSets(vk::PipelineBindPoint::eGraphics, *translucentPipelineLayout_, 0,
                                  {*translucentSet_, *frame.lightSet}, {});
-            drawTranslucent(c, *translucentPipelineLayout_);
+            drawTranslucent(c, *translucentPipelineLayout_, *translucentPipeline_, *ghostTranslucentPipeline_);
         },
     });
     graph.addPass(PassDesc{
@@ -408,10 +427,17 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
                     c.draw(static_cast<std::uint32_t>(lines.size()), 1, 0, 0);
                 }
                 if (drawEdges) {
-                    c.bindVertexBuffers(0, mesh_.edges->get(), vk::DeviceSize{0});
-                    c.pushConstants(*linesPipelineLayout_, vk::ShaderStageFlagBits::eVertex, 0, sizeof(LinesPush),
-                                    &edgesPush);
-                    c.draw(mesh_.edgeVertexCount, 1, 0, 0);
+                    // Every quad's outline, opaque then translucent, from the quads themselves.
+                    c.bindPipeline(vk::PipelineBindPoint::eGraphics, *quadLinesPipeline_);
+                    c.bindDescriptorSets(vk::PipelineBindPoint::eGraphics, *quadLinesPipelineLayout_, 0, *linesSet_, {});
+                    for (const auto& [buffer, count] : {std::pair{mesh_.quads.get(), mesh_.quadCount},
+                                                        std::pair{mesh_.tQuads.get(), mesh_.tQuadCount}}) {
+                        if (count == 0) continue;
+                        edgesPush.quads = buffer->address();
+                        c.pushConstants(*quadLinesPipelineLayout_, vk::ShaderStageFlagBits::eVertex, 0,
+                                        sizeof(QuadLinesPush), &edgesPush);
+                        c.draw(8 * count, 1, 0, 0);
+                    }
                 }
             },
         });

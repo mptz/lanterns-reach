@@ -1,11 +1,13 @@
 #version 460
 #extension GL_GOOGLE_include_directive : require
+#extension GL_EXT_buffer_reference : require
 #include "common.glsl"
 
 layout(set = 0, binding = 0) uniform sampler2DArray blockTextures;
 
 #include "variants.glsl"
 #include "block_texture.glsl"
+#include "quad.glsl"
 #include "material.glsl"
 layout(set = 0, binding = 1, std430) readonly buffer Materials { Material materials[]; };
 
@@ -19,6 +21,7 @@ layout(location = 1) in vec3 inMeshPos;
 layout(location = 2) flat in uint inLayer;
 layout(location = 3) flat in uint inMaterial;
 layout(location = 4) flat in uint inTexInfo;
+layout(location = 5) flat in uvec2 inQuad;
 
 layout(location = 0) out vec4 outGB0;  // albedo (sRGB target), A = 1
 layout(location = 1) out vec2 outGB1;  // octahedral normal
@@ -31,7 +34,12 @@ void main() {
     uint kind = texSet(inTexInfo);
     bool positional = kind == kSetRandom || kind == kSetMatchedNS || kind == kSetMatchedNSEW;
     uint texInfo = (pc.originCell.w & 2) != 0 && positional ? (inTexInfo & 3u) : inTexInfo;
-    FaceTexel t = blockFaceTexel(inMeshPos, inNormal, pc.originCell.xyz, inLayer, texInfo);
+    Quad q = unpackQuad(inQuad);
+    // Random and matched tiles hash the cell behind the fragment (v0.2.4's
+    // rule); connected tiles come from the quad's side bits at its own cell.
+    ivec3 cell = ivec3(floor(inMeshPos - 0.5 * inNormal)) + pc.originCell.xyz;
+    FaceTexel t = blockFaceTexel(inMeshPos, inNormal, cell, inLayer, texInfo,
+                                 quadFramedPositions(q, quadCellAt(q, inMeshPos)));
     vec3 albedo = sampleBlockFace(t).rgb;
     if ((pc.originCell.w & 1) != 0) {
         // Texture-variant view (F2): the tile index as a colour; faces

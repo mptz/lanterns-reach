@@ -104,10 +104,6 @@ WorldMesh meshOf(const Chunk& d, Mesher m) {
     return out;
 }
 
-bool sameVertices(const std::vector<MeshVertex>& a, const std::vector<MeshVertex>& b) {
-    return a.size() == b.size() && (a.empty() || std::memcmp(a.data(), b.data(), a.size() * sizeof(MeshVertex)) == 0);
-}
-
 struct Abort {};  // a case stops at its first difference
 
 struct Run {
@@ -133,7 +129,7 @@ void compare(Run& run, std::vector<Copy>& copies, bool everyCopyPerCell) {
         ++run.meshes;
         if (m != Mesher::PerCell) {
             if (unitFaces(base) != want) run.fail("unit faces differ from the per-cell rule", copies[0].name, m);
-            if (!sameVertices(base.translucentVertices, ref.translucentVertices) || base.translucentIndices != ref.translucentIndices)
+            if (base.translucentQuads != ref.translucentQuads)
                 run.fail("translucent mesh differs from the per-cell rule's bytes", copies[0].name, m);
         }
         for (std::size_t i = 1; i < copies.size(); ++i) {
@@ -156,7 +152,7 @@ void runCase(const Case& c, bool longRun) {
         fillChunk(probe, cells, true);
         const WorldMesh m = meshOf(probe, Mesher::Greedy);
         std::fprintf(stderr, "mesh case %u: shape %d, %u live states, greedy %zu quads + %zu translucent, per-cell %zu faces\n", c.seed,
-                     static_cast<int>(c.shape), TA::liveEntries(probe), m.indices.size() / 6, m.translucentIndices.size() / 6,
+                     static_cast<int>(c.shape), TA::liveEntries(probe), m.quads.size(), m.translucentQuads.size(),
                      unitFaces(m).size());
     }
     try {

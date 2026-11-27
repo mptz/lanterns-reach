@@ -16,7 +16,7 @@ void checkPureAndCommits(ChunkWorld& w, const Item* item, bool secondary, const 
     const PlannedEdit a = planEdit(item, secondary, t, ctx, w);
     const PlannedEdit b = planEdit(item, secondary, t, ctx, w);
     CHECK(a.edits == b.edits && a.action == b.action);
-    CHECK(w.generation() == gen && w.buildMesh(ChunkWorld::kChunk).indices == before.indices);  // compute doesn't modify the world
+    CHECK(w.generation() == gen && w.buildMesh(ChunkWorld::kChunk).quads == before.quads);  // compute doesn't modify the world
     ChunkWorld committed = w;  // the click path: apply(planEdit(...))
     const ApplyResult r = committed.apply(a.edits);
     CHECK(r.rejected.empty());  // planned edits are always editable

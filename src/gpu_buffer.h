@@ -10,7 +10,8 @@
 
 class HostBuffer {
 public:
-    HostBuffer(VkContext& ctx, vk::DeviceSize size, vk::BufferUsageFlags usage) : allocator_(ctx.allocator.get()) {
+    HostBuffer(VkContext& ctx, vk::DeviceSize size, vk::BufferUsageFlags usage)
+        : allocator_(ctx.allocator.get()), device_(*ctx.device) {
         const VkBufferCreateInfo bci = vk::BufferCreateInfo{.size = size, .usage = usage};
         VmaAllocationCreateInfo aci{};
         aci.usage = VMA_MEMORY_USAGE_AUTO;
@@ -26,7 +27,7 @@ public:
     HostBuffer(const HostBuffer&) = delete;
     HostBuffer& operator=(const HostBuffer&) = delete;
     HostBuffer(HostBuffer&& o) noexcept
-        : allocator_(std::exchange(o.allocator_, VK_NULL_HANDLE)), buffer_(std::exchange(o.buffer_, {})),
+        : allocator_(std::exchange(o.allocator_, VK_NULL_HANDLE)), device_(o.device_), buffer_(std::exchange(o.buffer_, {})),
           allocation_(std::exchange(o.allocation_, VK_NULL_HANDLE)), mapped_(std::exchange(o.mapped_, nullptr)) {}
     ~HostBuffer() {
         if (allocator_ && buffer_) vmaDestroyBuffer(allocator_, buffer_, allocation_);
@@ -43,9 +44,15 @@ public:
         std::memcpy(out, mapped_, bytes);
     }
     vk::Buffer get() const { return buffer_; }
+    // The buffer's device address (created with eShaderDeviceAddress usage).
+    std::uint64_t address() const {
+        const VkBufferDeviceAddressInfo info{.sType = VK_STRUCTURE_TYPE_BUFFER_DEVICE_ADDRESS_INFO, .buffer = buffer_};
+        return vkGetBufferDeviceAddress(device_, &info);
+    }
 
 private:
     VmaAllocator allocator_ = VK_NULL_HANDLE;
+    VkDevice device_ = VK_NULL_HANDLE;
     vk::Buffer buffer_;
     VmaAllocation allocation_ = VK_NULL_HANDLE;
     void* mapped_ = nullptr;

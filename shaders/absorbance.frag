@@ -1,5 +1,8 @@
 #version 460
 #extension GL_GOOGLE_include_directive : require
+#extension GL_EXT_buffer_reference : require
+#include "variants.glsl"
+#include "quad.glsl"
 #include "translucent_common.glsl"
 #include "translucent_surface.glsl"
 #include "oit.glsl"
@@ -23,6 +26,7 @@ layout(location = 2) flat in uint inMaterial;
 layout(location = 3) in vec3 inMeshPos;
 layout(location = 4) flat in uint inLayer;
 layout(location = 5) flat in uint inTexInfo;
+layout(location = 6) flat in uvec2 inQuad;
 
 layout(location = 0) out vec4 outB0;       // rgb: per-channel absorbance; a: scalar (mean σ)
 layout(location = 1) out vec4 outMoments;  // b1..b4 of the scalar absorbance
@@ -42,7 +46,7 @@ void main() {
     outB0 = vec4(sigma * (s * f.b0), sigmaScalar * s * f.b0);
     outMoments = f.b * (sigmaScalar * s);
 
-    float coverage = translucentSurface(inMeshPos, inNormal, inLayer, inTexInfo, ghost).a;
+    float coverage = translucentSurface(inMeshPos, inNormal, inLayer, inTexInfo, inQuad, ghost).a;
     if (coverage > 0.0 && r < rOpaque) {
         float a = -log(1.0 - coverage);
         float w = oitWarp(clamp(r, kOitNear, kOitFar));

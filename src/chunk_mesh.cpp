@@ -4,6 +4,13 @@
 
 #include "bitmask_mesh.h"
 #include "block_mesh.h"
+#include "packed_quad.h"
+
+bool framedFace(const StateTable& states, StateId state, orient::Face face) {
+    const BlockDef* def = states.definition(state).def;
+    return def && def->translucent() && glm::any(glm::greaterThan(def->translucency->absorption, glm::vec3(0.0f))) &&
+           faceTexture(states, state, face).set == VariantSet::Connected;
+}
 
 namespace {
 
@@ -24,7 +31,7 @@ struct Probe {
 // Bits 0–3 (−R, +R, −U, +U): the edge is a boundary unless the in-plane
 // neighbour is the same type with an identical face (emitted, same surface
 // state) toward n — i.e. the region's surface continues flat across it.
-std::uint32_t frameBits(const StateTable& states, const Probe& probe, const CellPos& c, BlockTypeId type,
+std::uint32_t frameBitsAt(const StateTable& states, const Probe& probe, const CellPos& c, BlockTypeId type,
                         glm::ivec3 n) {
     auto surfaceOn = [&](const CellPos& cell) -> int {  // −1: no face; 0: face, no surface layer; 1: framed face
         const StateId across = probe(cell + n);
@@ -54,10 +61,10 @@ std::uint32_t frameBits(const StateTable& states, const Probe& probe, const Cell
 // translucent mesh) wherever its neighbour isn't the same group — block type
 // — so a run of one tint has no internal faces, an interface between two
 // tints is two coplanar faces, and glass against stone keeps its face (it
-// closes the volume for absorbance). Face textures come from block_mesh.h
-// (faceTexture); a connected set's tile is chosen here from the frame bits;
-// random and matched tiles by the fragment shader (opaque) or here
-// (translucent). Vertex positions are relative to the chunk's minimum corner.
+// closes the volume for absorbance). Every face is a 1×1 packed quad with
+// its state's appearance id; a framed translucent face (a connected set on
+// an absorbing block) carries its frame bits as side bits, from which the
+// fragment shader picks the connected tile. Positions are chunk-local.
 } // namespace
 
 void meshPerCell(const MeshContext& context, const Chunk& chunk, const ChunkId& id, WorldMesh& mesh) {
@@ -74,32 +81,17 @@ void meshPerCell(const MeshContext& context, const Chunk& chunk, const ChunkId& 
                 const CellPos c = cellAt(id.coord, local);
                 const BlockDef& def = *states.definition(st).def;
                 const bool translucent = def.translucent();
-                auto& verts = translucent ? mesh.translucentVertices : mesh.vertices;
-                auto& idx = translucent ? mesh.translucentIndices : mesh.indices;
-                const glm::vec3 corner(static_cast<float>(x), static_cast<float>(y), static_cast<float>(z));
+                auto& quads = translucent ? mesh.translucentQuads : mesh.quads;
                 for (int w = 0; w < orient::kFaceCount; ++w) {
                     const auto face = static_cast<orient::Face>(w);
                     const StateId n = probe(c + orient::faceNormal(face));
                     const bool hidden = translucent ? states.type(n) == states.type(st)
                                                     : !states.isAir(n) && !states.translucent(n);
                     if (hidden) continue;
-                    const auto base = static_cast<std::uint32_t>(verts.size());
-                    // Translucent faces are drawn per cell, so a random or
-                    // matched tile is chosen here; opaque faces choose theirs
-                    // per fragment (merged quads, v0.2).
-                    FaceTexture tex = faceTexture(states, st, face);
-                    if (translucent) tex = resolvePositional(tex, c, face);
-                    // A connected set's tile comes from the frame rule
-                    // (absorbing translucent faces only).
-                    if (tex.set == VariantSet::Connected)
-                        tex.layer += translucent && glm::any(glm::greaterThan(def.translucency->absorption, glm::vec3(0.0f)))
-                                         ? connectedTile(frameBits(states, probe, c, states.type(st), orient::faceNormal(face)), tex.turn)
-                                         : 0u;
-                    appendFace(verts, idx, tex, face, corner, BlockRegistry::materialId(states.type(st)));
-                    for (int k = 0; k < 4; ++k) {
-                        mesh.edgeLines.push_back(verts[base + static_cast<std::uint32_t>(k)].pos);
-                        mesh.edgeLines.push_back(verts[base + static_cast<std::uint32_t>((k + 1) % 4)].pos);
-                    }
+                    quad::Quad q{.cell = local, .face = face, .appearance = states.appearance(st, face)};
+                    if (translucent && framedFace(states, st, face))
+                        q.sides = frameBitsAt(states, probe, c, states.type(st), orient::faceNormal(face)) & 15u;
+                    quads.push_back(quad::pack(q));
                 }
             }
 }
@@ -113,8 +105,8 @@ void Chunk::meshInto(const MeshContext& context, Mesher mesher, WorldMesh& out) 
     }
     const bool merge = mesher == Mesher::Greedy;
     if (const auto uniform = uniformState()) {
-        bitmaskMeshUniform(*uniform, context, id, merge, out);  // air emits nothing and touches no working state
+        bitmaskMeshUniform(*uniform, context, merge, out);  // air emits nothing and touches no working state
         return;
     }
-    bitmaskMeshPalette(palette(), context, id, merge, out);
+    bitmaskMeshPalette(palette(), context, merge, out);
 }

@@ -8,9 +8,11 @@
 // timing.
 //
 // The world is drawn from the mesh it builds itself (WorldQuery::buildMesh):
-// each vertex carries its texture-array layer, its already-turned UV and its
-// material id, so the shader needs no orientation logic. A new mesh replaces
-// the old one; the old buffers live until no frame in flight can use them.
+// packed quads (packed_quad.h) which the vertex shaders pull through buffer
+// device addresses, each quad's payload (texture layer, material, texture
+// info) from the appearance table, uploaded from the state table. A new mesh
+// replaces the old one; the old buffers live until no frame in flight can
+// use them.
 
 #include <array>
 #include <memory>
@@ -148,8 +150,11 @@ private:
 
     struct GpuMesh {
         WorldPos origin;
-        std::unique_ptr<HostBuffer> vertices, indices, edges, tVertices, tIndices;
-        std::uint32_t indexCount = 0, edgeVertexCount = 0, tIndexCount = 0;
+        std::unique_ptr<HostBuffer> quads, tQuads;
+        std::uint32_t quadCount = 0, tQuadCount = 0;
+        // What the mesh's draws read besides its quads, kept alive with it
+        // (both are replaced, never rewritten, when they grow).
+        std::shared_ptr<HostBuffer> quadIndices, payloads;
     };
 
     struct Frame {
@@ -161,6 +166,7 @@ private:
         std::vector<std::string> timedPasses;      // names of the passes last recorded here
         std::unique_ptr<HostBuffer> lines;         // debug-line vertices, rewritten each frame
         std::unique_ptr<HostBuffer> lights;        // SSBO: point lights (camera-relative), rewritten each frame
+        std::unique_ptr<HostBuffer> translucentFrame;  // UBO: the translucency passes' frame constants
         vk::raii::DescriptorSet lightSet = nullptr;
         // A readback recorded into this frame: copied out after its fence.
         std::unique_ptr<HostBuffer> captureBuffer, probeBuffer;
@@ -183,6 +189,12 @@ private:
     HostBuffer materials_;  // SSBO: per material id (then one ghost material per type): PBR, emission, translucency
     TextureArray textures_;
     GpuMesh mesh_;
+    // The static quad index buffer (0 1 2 0 2 3 per quad, offset 4 per quad),
+    // grown to the largest mesh, and the appearance table, grown with the
+    // state table (append-only, so old meshes read the new one correctly).
+    std::shared_ptr<HostBuffer> quadIndices_, payloads_;
+    std::uint32_t quadIndexCapacity_ = 0;  // quads
+    std::size_t payloadCount_ = 0;
     std::vector<std::pair<std::uint64_t, GpuMesh>> retiredMeshes_;  // (frame it was replaced in, mesh)
     std::uint64_t frameNumber_ = 0;
     std::unique_ptr<GBuffer> gbuffer_;
@@ -215,6 +227,10 @@ private:
     vk::raii::PipelineLayout translucentPipelineLayout_ = nullptr;
     vk::raii::Pipeline absorbancePipeline_ = nullptr;
     vk::raii::Pipeline translucentPipeline_ = nullptr;
+    vk::raii::Pipeline ghostAbsorbancePipeline_ = nullptr;   // ghost.vert: MeshVertex input
+    vk::raii::Pipeline ghostTranslucentPipeline_ = nullptr;
+    vk::raii::PipelineLayout quadLinesPipelineLayout_ = nullptr;
+    vk::raii::Pipeline quadLinesPipeline_ = nullptr;  // F3 outlines from the quads; onto the swapchain
     vk::Format presentPipelineFormat_ = vk::Format::eUndefined;
 
     std::array<Frame, kFramesInFlight> frames_;

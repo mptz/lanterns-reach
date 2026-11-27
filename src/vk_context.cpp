@@ -79,9 +79,16 @@ VkContext::VkContext(GLFWwindow* w, bool enableValidation) : window(w), validati
     f13.dynamicRendering = VK_TRUE;
     f13.synchronization2 = VK_TRUE;
 
+    // Buffer device addresses: the mesh shaders pull packed quads and
+    // appearance payloads through pointers in push constants (v0.2.5).
+    VkPhysicalDeviceVulkan12Features f12{};
+    f12.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_1_2_FEATURES;
+    f12.bufferDeviceAddress = VK_TRUE;
+
     vkb::PhysicalDeviceSelector selector(vkbInstance, *surface);
-    vkb::PhysicalDevice vkbPhys =
-        unwrap(selector.set_minimum_version(1, 3).set_required_features_13(f13).select(), "physical device");
+    vkb::PhysicalDevice vkbPhys = unwrap(
+        selector.set_minimum_version(1, 3).set_required_features_12(f12).set_required_features_13(f13).select(),
+        "physical device");
     // Anisotropic filtering (block textures at grazing angles) where the
     // device has it: re-select with the feature required, which picks the
     // same device and enables it.
@@ -113,6 +120,7 @@ VkContext::VkContext(GLFWwindow* w, bool enableValidation) : window(w), validati
     aci.instance = *instance;
     aci.physicalDevice = *physicalDevice;
     aci.device = *device;
+    aci.flags = VMA_ALLOCATOR_CREATE_BUFFER_DEVICE_ADDRESS_BIT;
     VmaAllocator a = VK_NULL_HANDLE;
     if (vmaCreateAllocator(&aci, &a) != VK_SUCCESS) throw std::runtime_error("vmaCreateAllocator failed");
     allocator = VmaAllocatorOwner(a);

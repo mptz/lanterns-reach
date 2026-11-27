@@ -18,13 +18,9 @@ bool wellFormed(const std::vector<UnitFace>& faces) {
     return std::none_of(faces.begin(), faces.end(), [](const UnitFace& f) { return f.dir < 0; });
 }
 
-bool sameBytes(const std::vector<MeshVertex>& a, const std::vector<MeshVertex>& b) {
-    return a.size() == b.size() && (a.empty() || std::memcmp(a.data(), b.data(), a.size() * sizeof(MeshVertex)) == 0);
-}
-
 // The greedy and unmerged meshes decompose into exactly the per-cell rule's
-// unit faces, and the translucent mesh is byte-identical to its (cell order,
-// then face order). Returns the per-cell mesh's unit-face count.
+// unit faces (payloads and frame bits included), and the translucent quads
+// are identical to its (cell order, then face order). Returns the per-cell mesh's unit-face count.
 std::size_t faceSetsMatch(ChunkWorld& w) {
     const WorldMesh ref = meshWith(w, Mesher::PerCell);
     const auto want = unitFaces(ref);
@@ -33,8 +29,7 @@ std::size_t faceSetsMatch(ChunkWorld& w) {
         const WorldMesh got = meshWith(w, m);
         const auto faces = unitFaces(got);
         CHECK(wellFormed(faces) && faces == want);
-        CHECK(sameBytes(got.translucentVertices, ref.translucentVertices) && got.translucentIndices == ref.translucentIndices);
-        CHECK(got.vertices.size() == got.indices.size() / 6 * 4 && got.edgeLines.size() == (got.vertices.size() + got.translucentVertices.size()) * 2);
+        CHECK(got.translucentQuads == ref.translucentQuads);
     }
     return want.size();
 }
@@ -48,6 +43,37 @@ ChunkWorld worldOf(const StateId& s, std::initializer_list<CellPos> cells) {
 }
 
 StateId kGlass() { return registry().state(typeOf("glass_red"), orient::kIdentity); }
+
+// --- the packed quad (v0.2.5 acceptance 5) ------------------------------------
+
+// Pack and unpack round-trip at every field's extremes, and each field lands
+// in its own bits (packed_quad.h).
+void testPackedQuad() {
+    for (int cell : {0, 63})
+        for (int ext : {1, 64})
+            for (int d = 0; d < 6; ++d)
+                for (std::uint32_t bits : {0u, 5u, 10u, 15u})
+                    for (std::uint32_t app : {0u, 1u, quad::kMaxAppearance}) {
+                        const quad::Quad q{.cell = {cell, 63 - cell, cell}, .w = ext, .h = 65 - ext,
+                                           .face = static_cast<Face>(d), .sides = bits, .corners = 15u - bits, .appearance = app};
+                        CHECK(quad::unpack(quad::pack(q)) == q);
+                    }
+    CHECK(quad::pack({.cell = {63, 0, 0}, .w = 1, .h = 1}) == 63u);
+    CHECK(quad::pack({.cell = {0, 0, 63}, .w = 1, .h = 1}) == std::uint64_t{63} << 12);
+    CHECK(quad::pack({.w = 64, .h = 1}) == std::uint64_t{63} << 18);
+    CHECK(quad::pack({.w = 1, .h = 64}) == std::uint64_t{63} << 24);
+    CHECK(quad::pack({.face = NegZ}) == std::uint64_t{5} << 30);
+    CHECK(quad::pack({.sides = 15}) == std::uint64_t{15} << 33);
+    CHECK(quad::pack({.corners = 15}) == std::uint64_t{15} << 37);
+    CHECK(quad::pack({.appearance = quad::kMaxAppearance}) == ~std::uint64_t{0} << 41);
+    // R runs along the bit axis exactly where variants.glsl says it does.
+    for (int d = 0; d < 6; ++d) {
+        const glm::ivec3 n = orient::faceNormal(static_cast<Face>(d));
+        const glm::ivec3 up = n.z != 0 ? glm::ivec3(0, 1, 0) : glm::ivec3(0, 0, 1);
+        const glm::ivec3 right(up.y * n.z - up.z * n.y, up.z * n.x - up.x * n.z, up.x * n.y - up.y * n.x);
+        CHECK(right[quad::kBitAxis[d]] == (quad::kRightAlongBit[d] ? 1 : -1) && up[quad::kRowAxis[d]] == 1);
+    }
+}
 
 // --- the bit-matrix transpose ------------------------------------------------
 
@@ -129,7 +155,7 @@ void testRunsAndRows() {
         for (const CellPos& p : cells) ge.edits.push_back({p, kGlass()});
         g.apply(ge);
         faceSetsMatch(g);
-        CHECK(g.buildMesh(ChunkWorld::kChunk).translucentIndices.size() / 6 == static_cast<std::size_t>(4 * n + 2));
+        CHECK(g.buildMesh(ChunkWorld::kChunk).translucentQuads.size() == static_cast<std::size_t>(4 * n + 2));
     }
 }
 
@@ -154,7 +180,7 @@ void testPlanesAndCheckerboard() {
     c.apply(ce);
     const std::size_t faces = faceSetsMatch(c);
     CHECK(faces == 6 * 2048);
-    CHECK(c.buildMesh(ChunkWorld::kChunk).indices.size() / 6 == faces);  // every face its own quad, even greedy
+    CHECK(c.buildMesh(ChunkWorld::kChunk).quads.size() == faces);  // every face its own quad, even greedy
 }
 
 // --- what merges -------------------------------------------------------------
@@ -238,7 +264,7 @@ void testGlassAgainstStone() {
     w.apply({{{{5, 5, 5}, kGlass()}, {{6, 5, 5}, solidState()}}});
     CHECK(faceSetsMatch(w) == 12);
     const WorldMesh m = w.buildMesh(ChunkWorld::kChunk);
-    CHECK(m.translucentIndices.size() / 6 == 6 && m.indices.size() / 6 == 6);
+    CHECK(m.translucentQuads.size() == 6 && m.quads.size() == 6);
     const auto faces = unitFaces(m);
     CHECK(std::any_of(faces.begin(), faces.end(), [](const UnitFace& f) { return f.translucent && f.dir == orient::PosX && f.x == 5; }));
 }
@@ -255,7 +281,7 @@ void testFrameBitsFromMasks() {
         std::vector<std::string> warnings;
         w.applyBulk(sceneEdits(*scene, registry(), &warnings));
         CHECK(faceSetsMatch(w) > 0);
-        CHECK(!w.buildMesh(ChunkWorld::kChunk).translucentVertices.empty());
+        CHECK(!w.buildMesh(ChunkWorld::kChunk).translucentQuads.empty());
     }
     std::mt19937_64 rng(9);
     ChunkWorld blob(registry());
@@ -279,7 +305,7 @@ void testUniformFastPaths() {
     ChunkWorld air(registry());
     const std::size_t before = meshWorkingAllocations();
     const WorldMesh none = air.buildMesh(ChunkWorld::kChunk);
-    CHECK(none.vertices.empty() && none.translucentVertices.empty() && none.edgeLines.empty());
+    CHECK(none.quads.empty() && none.translucentQuads.empty());
     CHECK(meshWorkingAllocations() == before);
 
     // Uniform opaque: exactly six 64×64 quads, no masks built (the opaque path reads no working state).
@@ -292,7 +318,7 @@ void testUniformFastPaths() {
     CHECK(sizes.size() == 6 && std::all_of(sizes.begin(), sizes.end(), [](const QuadSize& q) { return q.w == 64 && q.h == 64; }));
     CHECK(meshWorkingAllocations() == beforeSolid);
     CHECK(unitFaces(sm) == unitFaces(meshWith(solid, Mesher::PerCell)));
-    CHECK(meshWith(solid, Mesher::Unmerged).indices.size() / 6 == 6 * 64 * 64);
+    CHECK(meshWith(solid, Mesher::Unmerged).quads.size() == 6 * 64 * 64);
     // Its palette form (forced to every width) meshes to the same bytes.
     for (unsigned width : kBrickWidths) {
         ChunkWorld p(registry());
@@ -308,7 +334,7 @@ void testUniformFastPaths() {
     fillChunk(ChunkWorldTestAccess::chunk(glass), Cells(kBrickCells, kGlass()), true);
     CHECK(TA::isUniform(ChunkWorldTestAccess::chunk(glass)));
     const WorldMesh gm = glass.buildMesh(ChunkWorld::kChunk);
-    CHECK(gm.translucentIndices.size() / 6 == 6 * 64 * 64 && gm.indices.empty());
+    CHECK(gm.translucentQuads.size() == 6 * 64 * 64 && gm.quads.empty());
     for (unsigned width : {1u, 8u, 32u}) {
         ChunkWorld p(registry());
         ChunkWorldTestAccess::chunk(p) = ChunkWorldTestAccess::chunk(glass);
@@ -316,7 +342,7 @@ void testUniformFastPaths() {
         CHECK(sameMesh(gm, meshWith(p, Mesher::Greedy)));
     }
     const WorldMesh gref = meshWith(glass, Mesher::PerCell);
-    CHECK(unitFaces(gm) == unitFaces(gref) && sameBytes(gm.translucentVertices, gref.translucentVertices));
+    CHECK(unitFaces(gm) == unitFaces(gref) && gm.translucentQuads == gref.translucentQuads);
 }
 
 // --- the working state ----------------------------------------------------------
@@ -367,26 +393,19 @@ void testAppendOnly() {
     for (Mesher m : {Mesher::Greedy, Mesher::Unmerged, Mesher::PerCell}) {
         WorldMesh fresh;
         chunk.meshInto(context(), m, fresh);
-        WorldMesh out;  // a previous chunk's quads: both meshes, with their indices and outlines
+        WorldMesh out;  // a previous chunk's quads, in both arrays
         for (int i = 0; i < 3; ++i) {
-            out.vertices.push_back({{float(i), 1, 2}, {0, 0, 1}, 7u + static_cast<unsigned>(i), 8, 9});
-            out.indices.push_back(static_cast<std::uint32_t>(i));
-            out.translucentVertices.push_back({{float(i), 3, 4}, {1, 0, 0}, 1, 2, 3});
-            out.translucentIndices.push_back(static_cast<std::uint32_t>(i));
-            out.edgeLines.push_back({float(i), 5, 6});
+            out.quads.push_back(0x1234 + static_cast<std::uint64_t>(i));
+            out.translucentQuads.push_back(0x5678 + static_cast<std::uint64_t>(i));
         }
         const WorldMesh prefix = out;
         chunk.meshInto(context(), m, out);
-        CHECK(sameBytes({out.vertices.begin(), out.vertices.begin() + 3}, prefix.vertices));
-        CHECK(sameBytes({out.translucentVertices.begin(), out.translucentVertices.begin() + 3}, prefix.translucentVertices));
-        CHECK(std::equal(prefix.indices.begin(), prefix.indices.end(), out.indices.begin()));
-        CHECK(std::equal(prefix.translucentIndices.begin(), prefix.translucentIndices.end(), out.translucentIndices.begin()));
-        CHECK(std::equal(prefix.edgeLines.begin(), prefix.edgeLines.end(), out.edgeLines.begin()));
-        // The appended tail is the fresh mesh, its indices shifted by what was there.
-        CHECK(out.vertices.size() == 3 + fresh.vertices.size() && out.translucentVertices.size() == 3 + fresh.translucentVertices.size());
-        CHECK(sameBytes({out.vertices.begin() + 3, out.vertices.end()}, fresh.vertices));
-        bool shifted = out.indices.size() == 3 + fresh.indices.size();
-        for (std::size_t i = 0; shifted && i < fresh.indices.size(); ++i) shifted = out.indices[3 + i] == fresh.indices[i] + 3;
+        // What was there is untouched; the appended tail is the fresh mesh.
+        bool shifted = out.quads.size() == 3 + fresh.quads.size() && out.translucentQuads.size() == 3 + fresh.translucentQuads.size();
+        shifted = shifted && std::equal(prefix.quads.begin(), prefix.quads.end(), out.quads.begin()) &&
+                  std::equal(prefix.translucentQuads.begin(), prefix.translucentQuads.end(), out.translucentQuads.begin()) &&
+                  std::equal(fresh.quads.begin(), fresh.quads.end(), out.quads.begin() + 3) &&
+                  std::equal(fresh.translucentQuads.begin(), fresh.translucentQuads.end(), out.translucentQuads.begin() + 3);
         CHECK(shifted);
     }
 }
@@ -394,6 +413,7 @@ void testAppendOnly() {
 }  // namespace
 
 void runMeshingTests() {
+    testPackedQuad();
     testTranspose();
     testBoundaryFaces();
     testRunsAndRows();

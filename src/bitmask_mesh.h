@@ -7,7 +7,7 @@
 // along x), cells outside the chunk read as air, and coplanar opaque faces of
 // equal appearance id are merged greedily into quads of at most 64×64.
 // Translucent faces are culled the same way and emitted one quad per face, in
-// the per-cell rule's order.
+// the per-cell rule's order. Quads are packed (packed_quad.h), chunk-local.
 //
 // The masks, planes and tables are a private, thread-local working set,
 // allocated on a thread's first mesh and reused. StateId-specific, and
@@ -21,12 +21,11 @@
 
 // Appends the chunk's faces to `out` (which is only appended to). `merge`
 // false emits every face as its own 1×1 quad.
-void bitmaskMeshPalette(const PaletteBrick<StateId>& brick, const MeshContext& context, const ChunkId& id,
-                        bool merge, WorldMesh& out);
+void bitmaskMeshPalette(const PaletteBrick<StateId>& brick, const MeshContext& context, bool merge, WorldMesh& out);
 // A uniform chunk: no masks for an opaque state (six sides, each one merged
 // quad), and a translucent state through the translucent pass with its group
 // mask set to all ones.
-void bitmaskMeshUniform(StateId state, const MeshContext& context, const ChunkId& id, bool merge,
+void bitmaskMeshUniform(StateId state, const MeshContext& context, bool merge,
                         WorldMesh& out);
 
 // Transposes a 64×64 bit matrix in place: afterwards bit r of a[c] is what

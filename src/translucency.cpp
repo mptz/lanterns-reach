@@ -6,6 +6,8 @@
 #include <random>
 #include <vector>
 
+#include "packed_quad.h"
+
 std::optional<FaceOrder> FaceOrder::parse(std::string_view s) {
     if (s == "forward") return FaceOrder{Kind::Forward};
     if (s == "reverse") return FaceOrder{Kind::Reverse};
@@ -30,7 +32,7 @@ std::string FaceOrder::describe() const {
 
 void orderTranslucentFaces(WorldMesh& mesh, const FaceOrder& order, const WorldPos& eye) {
     if (order.kind == FaceOrder::Kind::AsBuilt) return;
-    const std::size_t faces = mesh.translucentIndices.size() / 6;
+    const std::size_t faces = mesh.translucentQuads.size();
     std::vector<std::size_t> perm(faces);
     std::iota(perm.begin(), perm.end(), std::size_t{0});
     if (order.kind == FaceOrder::Kind::Shuffle) {
@@ -40,19 +42,23 @@ void orderTranslucentFaces(WorldMesh& mesh, const FaceOrder& order, const WorldP
         const glm::dvec3 e = eye - mesh.origin;
         std::vector<double> dist(faces);
         for (std::size_t f = 0; f < faces; ++f) {
-            glm::dvec3 c(0.0);
-            for (std::size_t k = 0; k < 6; ++k) c += glm::dvec3(mesh.translucentVertices[mesh.translucentIndices[6 * f + k]].pos);
-            const glm::dvec3 d = c / 6.0 - e;
-            dist[f] = d.x * d.x + d.y * d.y + d.z * d.z;
+            // The quad's centre: on its face plane, halfway along both axes.
+            const quad::Quad q = quad::unpack(mesh.translucentQuads[f]);
+            glm::dvec3 c(q.cell);
+            const int d = static_cast<int>(q.face);
+            if (d % 2 == 0) c[d / 2] += 1.0;
+            c[quad::kBitAxis[d]] += 0.5 * q.w;
+            c[quad::kRowAxis[d]] += 0.5 * q.h;
+            const glm::dvec3 v = c - e;
+            dist[f] = v.x * v.x + v.y * v.y + v.z * v.z;
         }
         const bool nearFirst = order.kind == FaceOrder::Kind::Forward;
         std::stable_sort(perm.begin(), perm.end(), [&](std::size_t a, std::size_t b) {
             return nearFirst ? dist[a] < dist[b] : dist[a] > dist[b];
         });
     }
-    std::vector<std::uint32_t> reordered;
-    reordered.reserve(mesh.translucentIndices.size());
-    for (std::size_t f : perm)
-        for (std::size_t k = 0; k < 6; ++k) reordered.push_back(mesh.translucentIndices[6 * f + k]);
-    mesh.translucentIndices = std::move(reordered);
+    std::vector<std::uint64_t> reordered;
+    reordered.reserve(faces);
+    for (std::size_t f : perm) reordered.push_back(mesh.translucentQuads[f]);
+    mesh.translucentQuads = std::move(reordered);
 }

@@ -6,15 +6,14 @@
 // The texel position comes from the fragment's MESH-RELATIVE position, not a
 // vertex UV, so a quad spanning several cells (v0.2's merged faces) still
 // samples per cell: the in-face coordinates (along R, along U; variants.glsl)
-// are continuous over the plane, the cell is floor(position − n/2), and the
-// image is turned per cell. Mesh origins are on the integer lattice, so
+// are continuous over the plane, and the image is turned per cell. Mesh origins are on the integer lattice, so
 // fract() of mesh-relative coordinates is the in-cell position.
 //
-// Vertex texture info (MeshVertex::texInfo): bits 0–1 the image's CCW
+// Texture info (an appearance payload's, state_table.h): bits 0–1 the image's CCW
 // quarter turns on this face, bits 2–4 the set kind (variants.glsl), bits
 // 5–9 a random set's tile count − 1. Random and matched faces pick their
-// tile here, per fragment; a connected face's layer is already resolved by
-// the mesher.
+// tile here, per fragment, from the face's cell; a connected face's from
+// which of its cell's edges lie on a framed side of its quad.
 
 const float kTexelsPerFace = 16.0;  // blocks.h kTextureSize
 
@@ -39,7 +38,10 @@ struct FaceTexel {
     float layer;
 };
 
-FaceTexel blockFaceTexel(vec3 pos, vec3 normal, ivec3 originCell, uint layer, uint texInfo) {
+// `cell` is the world cell the face belongs to (random and matched sets hash
+// it); `framed` the face positions of its connected-frame edges
+// (quad.glsl quadFramedPositions; 0 without frames).
+FaceTexel blockFaceTexel(vec3 pos, vec3 normal, ivec3 cell, uint layer, uint texInfo, uint framed) {
     ivec3 n = ivec3(round(normal));
     vec3 r = vec3(variantFaceRight(n));
     vec3 u = vec3(variantFaceUp(n));
@@ -49,10 +51,10 @@ FaceTexel blockFaceTexel(vec3 pos, vec3 normal, ivec3 originCell, uint layer, ui
     t.uvRaw = turnImageUv(raw, texTurn(texInfo));
     uint l = layer;
     uint kind = texSet(texInfo);
-    if (kind == kSetRandom || kind == kSetMatchedNS || kind == kSetMatchedNSEW) {
-        ivec3 cell = ivec3(floor(pos - 0.5 * normal)) + originCell;
+    if (kind == kSetRandom || kind == kSetMatchedNS || kind == kSetMatchedNSEW)
         l += variantTile(kind, texRandomCount(texInfo), cell, n, texTurn(texInfo));
-    }
+    else if (kind == kSetConnected)
+        l += variantImageBits(framed, texTurn(texInfo));
     t.layer = float(l);
     return t;
 }

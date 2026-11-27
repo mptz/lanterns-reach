@@ -21,5 +21,10 @@ struct MeshContext {
     const StateTable& states;
 };
 
+// Whether a face carries connected-glass frames (render/block-textures): a
+// translucent block that absorbs, showing a connected set on that face.
+// Only such faces have side bits, and only their merging is constrained.
+bool framedFace(const StateTable& states, StateId state, orient::Face face);
+
 // Appends the per-cell rule's faces for the chunk to `out`, in cell order.
 void meshPerCell(const MeshContext& context, const Chunk& chunk, const ChunkId& id, WorldMesh& out);

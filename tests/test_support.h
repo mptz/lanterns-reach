@@ -34,6 +34,7 @@
 #include "hands.h"
 #include "intentions.h"
 #include "orientation.h"
+#include "packed_quad.h"
 #include "placement.h"
 #include "scenario.h"
 #include "tools.h"
@@ -75,15 +76,16 @@ void fillChunk(Chunk& data, const Cells& cells, bool finish);
 // What meshing needs besides cells: the registry and its appearance table.
 MeshContext testContext();
 
-// A mesh as its multiset of unit faces (cell, direction, payload, which mesh),
-// sorted: a merged quad contributes one per cell it covers, so an overlapping
-// or missing quad shows as a difference. A quad that isn't an axis-aligned
-// rectangle wound outward is reported as one face with direction −1.
+// A mesh as its multiset of unit faces (cell, direction, payload, which mesh,
+// framed edges), sorted: a merged quad contributes one per cell it covers, so
+// an overlapping or missing quad shows as a difference. A quad reaching past
+// the chunk contributes faces with direction −1 there.
 struct UnitFace {
     int x = 0, y = 0, z = 0;
-    int dir = 0;  // 0..5 as orient::Face, −1: malformed quad
+    int dir = 0;  // 0..5 as orient::Face, −1: outside the chunk
     bool translucent = false;
     FacePayload payload;
+    std::uint32_t frame = 0;  // framed edges (packed_quad.h side bits) of this unit face
     constexpr auto operator<=>(const UnitFace&) const = default;
 };
 std::vector<UnitFace> unitFaces(const WorldMesh& mesh);
@@ -96,8 +98,7 @@ struct QuadSize {
 std::vector<QuadSize> quadSizes(const WorldMesh& mesh);
 // A mesh of the world's chunk with the mesher, from scratch.
 WorldMesh meshWith(ChunkWorld& world, Mesher mesher);
-// The same bytes: vertices, indices, translucent vertices and indices, and
-// the edge lines, in order.
+// The same bytes: origin, opaque and translucent quads, in order.
 bool sameMesh(const WorldMesh& a, const WorldMesh& b);
 
 // A world with the given cells set to stone.

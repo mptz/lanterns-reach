@@ -106,6 +106,8 @@ set(SHADER_SOURCES
   shaders/lines.vert
   shaders/lines.frag
   shaders/translucent.vert
+  shaders/ghost.vert
+  shaders/quad_lines.vert
   shaders/absorbance.frag
   shaders/translucent.frag)
 set(SHADER_OUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/shaders)
@@ -125,6 +127,7 @@ foreach(src ${SHADER_SOURCES})
             ${CMAKE_CURRENT_SOURCE_DIR}/shaders/material.glsl
             ${CMAKE_CURRENT_SOURCE_DIR}/shaders/variants.glsl ${CMAKE_CURRENT_SOURCE_DIR}/shaders/block_texture.glsl
             ${CMAKE_CURRENT_SOURCE_DIR}/shaders/translucent_surface.glsl ${CMAKE_CURRENT_SOURCE_DIR}/shaders/heat.glsl
+            ${CMAKE_CURRENT_SOURCE_DIR}/shaders/quad.glsl
     COMMENT "glslc ${name}"
     VERBATIM)
   list(APPEND SHADER_OUTPUTS ${out})

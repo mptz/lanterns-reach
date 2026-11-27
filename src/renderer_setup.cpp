@@ -47,6 +47,12 @@ const std::uint32_t kLinesFrag[] = {
 const std::uint32_t kTranslucentVert[] = {
 #include "translucent.vert.spv.inc"
 };
+const std::uint32_t kGhostVert[] = {
+#include "ghost.vert.spv.inc"
+};
+const std::uint32_t kQuadLinesVert[] = {
+#include "quad_lines.vert.spv.inc"
+};
 const std::uint32_t kAbsorbanceFrag[] = {
 #include "absorbance.frag.spv.inc"
 };
@@ -112,9 +118,11 @@ vk::raii::PipelineLayout makePipelineLayout(const vk::raii::Device& device,
 
 enum class Geometry {
     Fullscreen,  // fullscreen triangle, no vertex buffer
-    Mesh,        // world mesh triangles (MeshVertex); back-face culled
-    Translucent, // translucent mesh triangles (MeshVertex, same layout); cull per desc
+    Mesh,        // world mesh triangles pulled from packed quads, no vertex input; back-face culled
+    Translucent, // translucent mesh triangles pulled likewise; cull per desc
+    Ghost,       // preview ghost triangles (MeshVertex); cull per desc
     Lines,       // debug lines: position, color; line list
+    QuadLines,   // F3 outlines pulled from packed quads, no vertex input; line list
 };
 
 struct PipelineDesc {
@@ -152,10 +160,7 @@ vk::raii::Pipeline makePipeline(const vk::raii::Device& device, const PipelineDe
         {.location = 1, .binding = 0, .format = vk::Format::eR32G32B32Sfloat, .offset = offsetof(LineVertex, color)},
     };
     vk::PipelineVertexInputStateCreateInfo vertexInput{};
-    if (d.geometry == Geometry::Mesh) {
-        vertexInput.setVertexBindingDescriptions(meshBinding);
-        vertexInput.setVertexAttributeDescriptions(meshAttrs);
-    } else if (d.geometry == Geometry::Translucent) {  // same layout
+    if (d.geometry == Geometry::Ghost) {
         vertexInput.setVertexBindingDescriptions(meshBinding);
         vertexInput.setVertexAttributeDescriptions(meshAttrs);
     } else if (d.geometry == Geometry::Lines) {
@@ -163,7 +168,7 @@ vk::raii::Pipeline makePipeline(const vk::raii::Device& device, const PipelineDe
         vertexInput.setVertexAttributeDescriptions(lineAttrs);
     }
     const vk::PipelineInputAssemblyStateCreateInfo inputAssembly{
-        .topology = d.geometry == Geometry::Lines ? vk::PrimitiveTopology::eLineList
+        .topology = d.geometry == Geometry::Lines || d.geometry == Geometry::QuadLines ? vk::PrimitiveTopology::eLineList
                                                   : vk::PrimitiveTopology::eTriangleList};
     const vk::PipelineViewportStateCreateInfo viewport{.viewportCount = 1, .scissorCount = 1};
 
@@ -298,7 +303,13 @@ Renderer::Renderer(VkContext& ctx, const BlockRegistry& registry)
                                                  T::eCombinedImageSampler, T::eStorageBuffer});
     const Bindings presentB = samplerBindings(9);  // + OIT absorbance, moments, radiance
     const Bindings linesB = samplerBindings(1);
-    const Bindings lightsB = fragmentBindings({T::eStorageBuffer});
+    // The frame's lights (lighting and shading passes) and the translucency
+    // passes' frame constants (both translucency passes, which include them
+    // in their vertex shaders too).
+    const Bindings lightsB = {
+        {.binding = 0, .descriptorType = T::eStorageBuffer, .descriptorCount = 1, .stageFlags = S::eFragment},
+        {.binding = 1, .descriptorType = T::eUniformBuffer, .descriptorCount = 1, .stageFlags = S::eVertex | S::eFragment},
+    };
     // OIT: absorbance = depth + materials (+ block textures at binding 4, as
     // in the shading pass: frame coverage); shading = depth, B0, moments +
     // materials + block textures (frames, ghosts).
@@ -369,7 +380,7 @@ Renderer::Renderer(VkContext& ctx, const BlockRegistry& registry)
     // test (the opaque-depth clamp does occlusion); shading with cullMode
     // BACK, depth-tested in the shader against the opaque depth.
     const auto both = S::eVertex | S::eFragment;
-    absorbancePipelineLayout_ = makePipelineLayout<TranslucentPush>(dev, {*absorbanceLayout_}, both);
+    absorbancePipelineLayout_ = makePipelineLayout<TranslucentPush>(dev, {*absorbanceLayout_, *lightsLayout_}, both);
     translucentPipelineLayout_ = makePipelineLayout<TranslucentPush>(dev, {*translucentLayout_, *lightsLayout_}, both);
     absorbancePipeline_ = makePipeline(dev, {.vert = kTranslucentVert, .frag = kAbsorbanceFrag,
                                              .layout = *absorbancePipelineLayout_,
@@ -381,6 +392,18 @@ Renderer::Renderer(VkContext& ctx, const BlockRegistry& registry)
                                               .colorFormats = {GBuffer::kOitAccum},
                                               .geometry = Geometry::Translucent, .additive = true,
                                               .cull = vk::CullModeFlagBits::eBack});
+    // Preview ghosts: the same passes from their own vertex format.
+    ghostAbsorbancePipeline_ = makePipeline(dev, {.vert = kGhostVert, .frag = kAbsorbanceFrag,
+                                                  .layout = *absorbancePipelineLayout_,
+                                                  .colorFormats = {GBuffer::kOitB0, GBuffer::kOitMoments},
+                                                  .geometry = Geometry::Ghost, .additive = true,
+                                                  .cull = vk::CullModeFlagBits::eNone});
+    ghostTranslucentPipeline_ = makePipeline(dev, {.vert = kGhostVert, .frag = kTranslucentFrag,
+                                                   .layout = *translucentPipelineLayout_,
+                                                   .colorFormats = {GBuffer::kOitAccum},
+                                                   .geometry = Geometry::Ghost, .additive = true,
+                                                   .cull = vk::CullModeFlagBits::eBack});
+    quadLinesPipelineLayout_ = makePipelineLayout<QuadLinesPush>(dev, {*linesLayout_}, S::eVertex);
     createPresentPipeline();
 
     // Per-frame sync + command buffers.
@@ -405,10 +428,17 @@ Renderer::Renderer(VkContext& ctx, const BlockRegistry& registry)
         const vk::DescriptorSetLayout layout = *lightsLayout_;
         f.lightSet = std::move(vk::raii::DescriptorSets(dev, vk::DescriptorSetAllocateInfo{
             .descriptorPool = *descriptorPool_, .descriptorSetCount = 1, .pSetLayouts = &layout})[0]);
+        f.translucentFrame = std::make_unique<HostBuffer>(ctx_, sizeof(TranslucentFrame),
+                                                          vk::BufferUsageFlagBits::eUniformBuffer);
         const vk::DescriptorBufferInfo lightInfo{.buffer = f.lights->get(), .offset = 0, .range = VK_WHOLE_SIZE};
-        dev.updateDescriptorSets(vk::WriteDescriptorSet{.dstSet = *f.lightSet, .dstBinding = 0, .descriptorCount = 1,
-                                                        .descriptorType = T::eStorageBuffer, .pBufferInfo = &lightInfo},
-                                 {});
+        const vk::DescriptorBufferInfo frameInfo{.buffer = f.translucentFrame->get(), .offset = 0, .range = VK_WHOLE_SIZE};
+        const vk::WriteDescriptorSet writes[] = {
+            {.dstSet = *f.lightSet, .dstBinding = 0, .descriptorCount = 1, .descriptorType = T::eStorageBuffer,
+             .pBufferInfo = &lightInfo},
+            {.dstSet = *f.lightSet, .dstBinding = 1, .descriptorCount = 1, .descriptorType = T::eUniformBuffer,
+             .pBufferInfo = &frameInfo},
+        };
+        dev.updateDescriptorSets(writes, {});
     }
 
     recreateSwapchainResources();
@@ -431,6 +461,10 @@ void Renderer::createPresentPipeline() {
                                                 .layout = *linesPipelineLayout_,
                                                 .colorFormats = {presentPipelineFormat_},
                                                 .geometry = Geometry::Lines});
+    quadLinesPipeline_ = makePipeline(ctx_.device, {.vert = kQuadLinesVert, .frag = kLinesFrag,
+                                                    .layout = *quadLinesPipelineLayout_,
+                                                    .colorFormats = {presentPipelineFormat_},
+                                                    .geometry = Geometry::QuadLines});
     if (devUi_) devUi_->setColorFormat(presentPipelineFormat_);
 }
 

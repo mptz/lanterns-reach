@@ -3,7 +3,7 @@
 // that does `using namespace glm;`), so the shaders, the mesher, the ghost
 // builder and the tests share one definition — like pbr.glsl.
 //
-// Set kinds (blocks.h VariantSet; MeshVertex::texInfo bits 2–4):
+// Set kinds (blocks.h VariantSet; texture info bits 2–4):
 //   0 none, 1 random, 2 matched ns, 3 matched nsew, 4 connected.
 //
 // Face frame: for outward normal n, U ("up" on the face, the image's top) is
