@@ -42,6 +42,7 @@
 #include <array>
 #include <cstdint>
 #include <functional>
+#include <memory>
 #include <optional>
 #include <string>
 #include <string_view>
@@ -50,7 +51,9 @@
 
 #include <glm/vec3.hpp>
 
+#include "id128.h"
 #include "orientation.h"
+#include "state_table.h"
 
 struct Image {
     std::uint32_t width = 0, height = 0;
@@ -63,28 +66,6 @@ struct Image {
 // images only).
 Image rotateCcw(const Image& img, int quarterTurns);
 std::optional<Image> loadPng(const std::string& path, std::string& error);
-
-using BlockTypeId = std::uint16_t;
-
-// The whole block state in v0.1.x: type + canonical orientation (the lowest
-// rotation index in the coset gH), so identical-looking states compare equal.
-struct BlockState {
-    static constexpr BlockTypeId kAirType = 0xFFFF;  // no block; never a registry index
-
-    BlockTypeId type = kAirType;
-    orient::Rot orientation = orient::kIdentity;
-
-    static constexpr BlockState air() { return {}; }
-    constexpr bool isAir() const { return type == kAirType; }
-    bool operator==(const BlockState&) const = default;
-};
-
-// The state's canonical 64-bit encoding: what the content digest and the
-// reverse lookup hash (data/content-digest). Process-scoped (the registry
-// index), until state hashes arrive in v0.2.4.
-inline std::uint64_t canonicalEncoding(const BlockState& s) {
-    return (std::uint64_t{s.type} << 8) | s.orientation;
-}
 
 inline constexpr std::uint32_t kTextureSize = 16;  // texels per block face edge (render/block-textures)
 inline constexpr std::uint32_t kSetColumns = 4;    // tiles per atlas row
@@ -133,8 +114,10 @@ struct TextureRef {
 };
 
 struct ParsedDefinition {
+    Ulid ulid;
     std::string name;
     orient::Symmetry symmetry = orient::Symmetry::Uniform;
+    std::vector<PropertyDecl> properties;                        // sorted by name
     std::vector<TextureRef> textures;                            // one per orbit, in orbit order
     MaterialParams material;
     std::optional<Translucency> translucency;
@@ -151,8 +134,10 @@ std::string checkTextures(const ParsedDefinition& def,
                           const std::function<const Image*(const std::string& file)>& image);
 
 struct BlockDef {
+    Ulid ulid;
     std::string name;
     orient::Symmetry symmetry = orient::Symmetry::Uniform;
+    std::vector<PropertyDecl> properties;  // sorted by name; orientation comes from `symmetry`
     MaterialParams material;
     std::optional<Translucency> translucency;
     bool translucent() const { return translucency.has_value(); }
@@ -177,14 +162,23 @@ public:
 
     std::optional<BlockTypeId> find(std::string_view name) const;
     const BlockDef& def(BlockTypeId t) const { return defs_[t]; }
-    BlockState state(BlockTypeId t, orient::Rot placed) const {
-        return {t, orient::canonicalize(defs_[t].symmetry, placed)};
+
+    // Every state of every definition, interned at load (world/brick). The
+    // table is append-only, so code holding a const registry may still
+    // intern a state not seen before.
+    StateTable& states() const { return *states_; }
+    // The table's definition index of block type t (air is definition 0).
+    static std::uint32_t definitionIndex(BlockTypeId t) { return std::uint32_t{t} + 1; }
+    // Block type t's default state turned to `placed` (canonicalised).
+    StateId state(BlockTypeId t, orient::Rot placed) const {
+        return states_->withOrientation(states_->defaultState(definitionIndex(t)), placed);
     }
     // Material ids index the GPU material table; 0 means "no material".
     static std::uint16_t materialId(BlockTypeId t) { return static_cast<std::uint16_t>(t + 1); }
 
 private:
     std::vector<BlockDef> defs_;
+    std::unique_ptr<StateTable> states_ = std::make_unique<StateTable>();
     std::vector<Image> layers_;
     std::vector<std::string> errors_;
 };

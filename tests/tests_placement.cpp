@@ -88,7 +88,7 @@ void testPlacementRule() {
 // the inferred one, until X is released.
 void testOrientationLatch() {
     ChunkWorld w(registry());
-    w.apply({{{{4, 4, 0}, {typeOf("stone"), kIdentity}}}});
+    w.apply({{{{4, 4, 0}, registry().state(typeOf("stone"), orient::kIdentity)}}});
     const BlockTypeId furnace = typeOf("furnace");
     ToolSettings settings;
     OrientationLatch latch;
@@ -101,15 +101,15 @@ void testOrientationLatch() {
     CHECK(rotateGhost(furnace, *t, false, registry(), latch));
     CHECK(latch.count(furnace) == 1 && latch.at(furnace) != inferred);
     const Item stack = Item::blockStack(furnace);
-    CHECK(planEdit(&stack, false, t, ctx, w).edits.edits[0].state.orientation == latch.at(furnace));
+    CHECK(testStates().orientation(planEdit(&stack, false, t, ctx, w).edits.edits[0].state) == latch.at(furnace));
     CHECK(rotateGhost(furnace, *t, true, registry(), latch));  // back to the inferred orientation …
     CHECK(latch.count(furnace) == 1 && latch.at(furnace) == inferred);  // … which is now LOCKED too
     // A different target would infer differently, but the lock holds.
     const auto t2 = aim(w, {7.5, 4.5, 3.0}, {4.5, 4.5, 1.0});
     CHECK(t2 && inferredOrientation(furnace, *t2, registry()) != inferred);
-    if (t2) CHECK(planEdit(&stack, false, t2, ctx, w).edits.edits[0].state.orientation == inferred);
+    if (t2) CHECK(testStates().orientation(planEdit(&stack, false, t2, ctx, w).edits.edits[0].state) == inferred);
     latch.clear();  // X released
-    if (t2) CHECK(planEdit(&stack, false, t2, ctx, w).edits.edits[0].state.orientation != inferred);
+    if (t2) CHECK(testStates().orientation(planEdit(&stack, false, t2, ctx, w).edits.edits[0].state) != inferred);
 }
 
 // From ONE fixed viewpoint, the wheel (turn about the clicked face's normal)
@@ -118,7 +118,7 @@ void testOrientationLatch() {
 // on a wall seen obliquely, where raw screen-right would snap onto n.
 void testGhostReachability() {
     ChunkWorld w(registry());
-    w.apply({{{{4, 4, 0}, {typeOf("stone"), kIdentity}}, {{4, 4, 1}, {typeOf("stone"), kIdentity}}}});
+    w.apply({{{{4, 4, 0}, registry().state(typeOf("stone"), orient::kIdentity)}, {{4, 4, 1}, registry().state(typeOf("stone"), orient::kIdentity)}}});
     struct View {
         WorldPos eye, at;
         glm::dvec3 right;

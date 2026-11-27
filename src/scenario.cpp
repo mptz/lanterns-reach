@@ -338,7 +338,7 @@ EditSet sceneEdits(const Scenario& s, const BlockRegistry& registry, std::vector
     EditSet out;
     std::set<std::string> missing;
     for (const SceneOp& op : s.scene) {
-        BlockState state = BlockState::air();
+        StateId state = kAirState;
         if (op.type != "air") {
             const auto t = registry.find(op.type);
             if (!t) {

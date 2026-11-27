@@ -1,2 +1,2 @@
-{ "name": "bark_wrong", "symmetry": "uniform",
+{ "ulid": "01M8F3N34NT0J4AT96PQW8A0GM", "name": "bark_wrong", "symmetry": "uniform",
   "textures": { "+z": { "matched": "full_atlas.png", "edges": "ns" } } }

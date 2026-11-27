@@ -69,7 +69,7 @@ double median(std::vector<double> v) {
 
 // A chunk at width w holding `entries` distinct live states (air first).
 Chunk chunkWith(std::uint32_t entries, unsigned w) {
-    Chunk d;
+    Chunk d(testStates());
     for (std::uint32_t k = 1; k < entries; ++k) d.set(localOfIndex(k * 3u % kBrickCells), testState(k));
     // Every state live (2 cells each is not needed: one cell each, air elsewhere).
     if (w != 0 && ChunkTestAccess::width(d) != w) ChunkTestAccess::forceWidth(d, w);
@@ -92,7 +92,7 @@ void timeChunkRepresentations() {
             continue;
         }
         constexpr std::uint32_t kEdits = 400000;
-        std::vector<std::pair<glm::ivec3, BlockState>> work(kEdits);
+        std::vector<std::pair<glm::ivec3, StateId>> work(kEdits);
         for (auto& wk : work) wk = {localOfIndex(static_cast<std::uint32_t>(rng() % kBrickCells)), testState(static_cast<std::uint32_t>(rng() % r.entries))};
         std::vector<double> ns;
         for (int rep = 0; rep < 5; ++rep) {
@@ -109,7 +109,7 @@ void timeChunkRepresentations() {
     for (std::uint32_t entries : {2u, 4u, 8u, 12u, 16u, 20u, 24u, 32u, 48u, 64u}) {
         Chunk d = chunkWith(entries, 8);
         constexpr std::uint32_t kEdits = 400000;
-        std::vector<std::pair<glm::ivec3, BlockState>> work(kEdits);
+        std::vector<std::pair<glm::ivec3, StateId>> work(kEdits);
         for (auto& wk : work) wk = {localOfIndex(static_cast<std::uint32_t>(rng() % kBrickCells)), testState(static_cast<std::uint32_t>(rng() % entries))};
         double result[2] = {0, 0};
         for (int table = 0; table < 2; ++table) {
@@ -202,7 +202,7 @@ void timeChunkRepresentations() {
         std::printf("  weights alone, computed (262144 × W):          %7.3f ms\n", median(wCompute));
         std::printf("  weights alone, from a 2 MiB table (sweep):     %7.3f ms   (sink %llu)\n", median(wTable),
                     static_cast<unsigned long long>(sink & 1));
-        Chunk u;
+        Chunk u(testStates());
         TA::dropDigest(u);
         const auto t0 = Clock::now();
         (void)u.digest();
@@ -222,14 +222,14 @@ void timeChunkRepresentations() {
             continue;
         }
         d.set({0, 0, 0}, testState(1));  // a lookup, so the table is built if the palette is above the threshold
-        d.set({0, 0, 0}, BlockState::air());
+        d.set({0, 0, 0}, kAirState);
         std::printf("  width %2u, %6u entries: %8.1f + %8.1f + %8.1f = %8.1f\n", r.w, r.entries,
                     static_cast<double>(TA::indexBytes(d)) / 1024, static_cast<double>(TA::paletteBytes(d)) / 1024,
                     static_cast<double>(TA::tableBytes(d)) / 1024,
                     static_cast<double>(TA::indexBytes(d) + TA::paletteBytes(d) + TA::tableBytes(d)) / 1024);
     }
     {
-        Chunk u;
+        Chunk u(testStates());
         std::printf("  uniform: %zu bytes\n", TA::paletteBytes(u));
     }
 
@@ -273,8 +273,8 @@ void timeMeshers() {
     }
     shapes.push_back({"uniform solid", Cells(kBrickCells, solidState())});
     {
-        Cells c(kBrickCells, BlockState::air());  // a heightmap: stone, dirt, grass
-        const BlockState stone = solidState(), dirt{typeOf("dirt"), orient::kIdentity}, grass{typeOf("grass"), orient::kIdentity};
+        Cells c(kBrickCells, kAirState);  // a heightmap: stone, dirt, grass
+        const StateId stone = solidState(), dirt = registry().state(typeOf("dirt"), orient::kIdentity), grass = registry().state(typeOf("grass"), orient::kIdentity);
         for (int y = 0; y < 64; ++y)
             for (int x = 0; x < 64; ++x) {
                 const int top = 24 + static_cast<int>(8.0 * std::sin(x * 0.15) * std::cos(y * 0.11)) + static_cast<int>(rng() % 2);
@@ -284,7 +284,7 @@ void timeMeshers() {
         shapes.push_back({"heightmap", c});
     }
     {
-        Cells c(kBrickCells, BlockState::air());
+        Cells c(kBrickCells, kAirState);
         for (std::uint32_t i = 0; i < kBrickCells; ++i) {
             const glm::ivec3 l = localOfIndex(i);
             if ((l.x + l.y + l.z) % 2 == 0) c[i] = solidState();
@@ -292,8 +292,8 @@ void timeMeshers() {
         shapes.push_back({"checkerboard", c});
     }
     {
-        Cells c(kBrickCells, BlockState::air());  // random, many states, opaque and translucent
-        for (auto& s : c) s = rng() % 3 == 0 ? testState(1 + static_cast<std::uint32_t>(rng() % (validStateCount() - 1))) : BlockState::air();
+        Cells c(kBrickCells, kAirState);  // random, many states, opaque and translucent
+        for (auto& s : c) s = rng() % 3 == 0 ? testState(1 + static_cast<std::uint32_t>(rng() % (validStateCount() - 1))) : kAirState;
         shapes.push_back({"random, many states", c});
     }
 
@@ -301,7 +301,7 @@ void timeMeshers() {
     std::printf("Mesh time per chunk (ms, median of 7) and size, by mesher:\n");
     std::printf("  %-20s %-9s %9s %8s %8s %9s %8s\n", "case", "mesher", "ms", "quads", "transl.", "KiB", "faces/q");
     for (const Shape& sh : shapes) {
-        Chunk d;
+        Chunk d(testStates());
         fillChunk(d, sh.cells, true);
         for (Mesher m : {Mesher::Greedy, Mesher::Unmerged, Mesher::PerCell}) {
             std::vector<double> ms;
@@ -339,7 +339,7 @@ void timeMeshers() {
     // neighbouring opaque faces (the next cell along either in-plane axis has
     // a face in the same direction) whose payloads differ.
     {
-        Chunk d;
+        Chunk d(testStates());
         fillChunk(d, shapes[0].cells, true);
         WorldMesh out;
         d.meshInto(testContext(), Mesher::PerCell, out);

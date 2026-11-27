@@ -75,7 +75,7 @@ void testChunkEditsMeshEmitters() {
     const ApplyResult r2 = g.apply({{{{-1, 0, 0}, solidState()}, {{0, 64, 0}, solidState()}}});
     CHECK(r2.changed == 0 && r2.rejected.size() == 2);
     CHECK(g.generation() == gen0 + 1 && g.buildMesh(ChunkWorld::kChunk).indices == before.indices);
-    CHECK(g.probe({1, 1, 1}) == solidState() && g.probe({65, 1, 1}).isAir() && g.probe({-1, 0, 0}).isAir());
+    CHECK(g.probe({1, 1, 1}) == solidState() && g.probe({65, 1, 1}) == kAirState && g.probe({-1, 0, 0}) == kAirState);
 
     auto faces = [](const WorldMesh& m) { return unitFaces(m).size(); };  // unit faces: the mesher may merge quads
     CHECK(faces(g.buildMesh(ChunkWorld::kChunk)) == 6);
@@ -85,14 +85,14 @@ void testChunkEditsMeshEmitters() {
     CHECK(faces(g.buildMesh(ChunkWorld::kChunk)) == 16);  // at the chunk's corner: outside counts as air
     const WorldMesh m = meshWith(g, Mesher::PerCell);  // one quad per unit face: 4 vertices, 8 outline points each
     CHECK(m.vertices.size() == faces(m) * 4 && m.edgeLines.size() == faces(m) * 8);
-    g.apply({{{{1, 1, 1}, BlockState::air()}}});
+    g.apply({{{{1, 1, 1}, kAirState}}});
     CHECK(faces(g.buildMesh(ChunkWorld::kChunk)) == 12);
 
     CHECK(g.emitters().empty());
     const auto lamp = registry().find("lamp");
     CHECK(lamp.has_value());
     if (lamp) {
-        g.apply({{{{5, 5, 5}, BlockState{*lamp, orient::kIdentity}}}});
+        g.apply({{{{5, 5, 5}, registry().state(*lamp, orient::kIdentity)}}});
         const auto em = g.emitters();
         CHECK(em.size() == 1 && em[0].cell == CellPos{5, 5, 5} && em[0].emissive.x > 0.0f);
     }
@@ -103,16 +103,16 @@ void testChunkEditsMeshEmitters() {
 // translucent emitters, replaced, removed, edits that change nothing, bulk
 // applies, copies), always in z, y, x order, and equals a brute-force scan.
 void testEmittersFollowEdits() {
-    const BlockState states[] = {BlockState::air(), solidState(), {typeOf("lamp"), kIdentity}, {typeOf("glow"), kIdentity},
-                                 {typeOf("glass_red"), kIdentity}, {typeOf("gold"), kIdentity}};
+    const StateId states[] = {kAirState, solidState(), registry().state(typeOf("lamp"), orient::kIdentity), registry().state(typeOf("glow"), orient::kIdentity),
+                                 registry().state(typeOf("glass_red"), orient::kIdentity), registry().state(typeOf("gold"), orient::kIdentity)};
     auto scan = [](const ChunkWorld& w) {  // every cell of the region the edits use, in z, y, x order
         std::vector<Emitter> out;
         for (std::int64_t z = 0; z < 12; ++z)
             for (std::int64_t y = 0; y < 12; ++y)
                 for (std::int64_t x = 0; x < 12; ++x) {
-                    const BlockState st = w.probe({x, y, z});
-                    if (st.isAir()) continue;
-                    const BlockDef& def = registry().def(st.type);
+                    const StateId st = w.probe({x, y, z});
+                    if (st == kAirState) continue;
+                    const BlockDef& def = registry().def(testStates().type(st));
                     const glm::vec3 e = def.translucent() ? def.translucency->emission : def.material.emissive;
                     if (e.x > 0.0f || e.y > 0.0f || e.z > 0.0f) out.push_back({{x, y, z}, e});
                 }
@@ -145,11 +145,11 @@ void testEmittersFollowEdits() {
     CHECK(!w.emitters().empty());
     // The lamp's light is what the registry says; replacing it with stone removes it.
     ChunkWorld one(registry());
-    one.apply({{{{3, 4, 5}, BlockState{typeOf("lamp"), kIdentity}}}});
+    one.apply({{{{3, 4, 5}, registry().state(typeOf("lamp"), orient::kIdentity)}}});
     CHECK(one.emitters().size() == 1 && one.emitters()[0].cell == CellPos{3, 4, 5} && one.emitters()[0].emissive.x > 0.0f);
     one.apply({{{{3, 4, 5}, solidState()}}});
     CHECK(one.emitters().empty());
-    one.apply({{{{70, 0, 0}, BlockState{typeOf("lamp"), kIdentity}}}});  // rejected: outside the chunk
+    one.apply({{{{70, 0, 0}, registry().state(typeOf("lamp"), orient::kIdentity)}}});  // rejected: outside the chunk
     CHECK(one.emitters().empty());
 }
 

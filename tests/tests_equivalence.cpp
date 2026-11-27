@@ -57,7 +57,7 @@ int oracleRay(const Cells& cells, const Ray& r) {
     for (int n = 0; n < 256; ++n) {
         if (i[0] < 0 || i[1] < 0 || i[2] < 0 || i[0] >= 64 || i[1] >= 64 || i[2] >= 64) return -1;
         const auto c = static_cast<std::uint32_t>(brickCellIndex(i[0], i[1], i[2]));
-        if (!cells[c].isAir()) return static_cast<int>(c);
+        if (cells[c] != kAirState) return static_cast<int>(c);
         const int a = tMax[0] < tMax[1] ? (tMax[0] < tMax[2] ? 0 : 2) : (tMax[1] < tMax[2] ? 1 : 2);
         i[a] += step[a];
         tMax[a] += tDelta[a];
@@ -172,9 +172,9 @@ struct Run {
     }
 
     // `probes`: also probe the cell and four random ones in every copy.
-    void edit(std::uint32_t cell, const BlockState& s, bool probes = true) {
-        oracleD = addMod(oracleD, mulMod(digestWeight(cell), subMod(digestStateHash(canonicalEncoding(s)),
-                                                                    digestStateHash(canonicalEncoding(oracle[cell])))));
+    void edit(std::uint32_t cell, const StateId& s, bool probes = true) {
+        oracleD = addMod(oracleD, mulMod(digestWeight(cell), subMod(testStates().digestTerm(s),
+                                                                    testStates().digestTerm(oracle[cell]))));
         oracle[cell] = s;
         ++edits;
         for (auto& c : copies) {
@@ -187,15 +187,15 @@ struct Run {
     }
 
     std::uint32_t randomCell() { return static_cast<std::uint32_t>(rng() % kBrickCells); }
-    BlockState newState() {
+    StateId newState() {
         pool.push_back(nextK);
         return testState(nextK++);
     }
-    BlockState poolState() { return testState(pool[rng() % pool.size()]); }
+    StateId poolState() { return testState(pool[rng() % pool.size()]); }
 
     bool allMeshable() const {
         const auto types = static_cast<BlockTypeId>(registry().defs().size());
-        return std::all_of(oracle.begin(), oracle.end(), [&](const BlockState& s) { return s.isAir() || s.type < types; });
+        return std::all_of(oracle.begin(), oracle.end(), [&](const StateId& s) { return s == kAirState || testStates().type(s) < types; });
     }
 
     // Every face and corner, every cell, rays, digest and (when asked) mesh.
@@ -272,8 +272,8 @@ void runSeed(unsigned seed, const Params& p, bool mesh, int meshEvery, bool long
                 const std::uint32_t need = brickIndexLimit(TA::width(d)) - TA::paletteSize(d);
                 if (need <= 70000) {
                     while (TA::paletteSize(d) < brickIndexLimit(TA::width(d))) r.edit(r.randomCell(), r.newState(), false);
-                    const BlockState victim = r.oracle[r.randomCell()];
-                    BlockState keep = victim;
+                    const StateId victim = r.oracle[r.randomCell()];
+                    StateId keep = victim;
                     while (keep == victim) keep = r.oracle[r.randomCell()];
                     for (std::uint32_t c = 0; c < kBrickCells; ++c)
                         if (r.oracle[c] == victim) r.edit(c, keep, false);
@@ -324,7 +324,7 @@ void runSeed(unsigned seed, const Params& p, bool mesh, int meshEvery, bool long
 
         // F: collapse to one state by edits, compact to uniform, then promote again.
         {
-            const BlockState s = r.poolState();
+            const StateId s = r.poolState();
             for (std::uint32_t c = 0; c < kBrickCells; ++c) r.edit(c, s, false);
             for (auto& c : r.copies) {
                 TA::compact(c->data());

@@ -39,21 +39,21 @@ void testChunkAddressing() {
 // The chunk data: edits go through it, a state already in the palette reuses
 // its entry, a new state appends one.
 void testChunkDataPalette() {
-    Chunk d;
-    CHECK(ChunkTestAccess::paletteSize(d) == 1 && d.get({0, 0, 0}).isAir() && d.get({63, 63, 63}).isAir());
-    const BlockState stone = solidState();
+    Chunk d(testStates());
+    CHECK(ChunkTestAccess::paletteSize(d) == 1 && d.get({0, 0, 0}) == kAirState && d.get({63, 63, 63}) == kAirState);
+    const StateId stone = solidState();
     CHECK(d.set({1, 2, 3}, stone) && ChunkTestAccess::paletteSize(d) == 2);
-    CHECK(d.get({1, 2, 3}) == stone && d.get({3, 2, 1}).isAir());  // x, y, z not mixed up
+    CHECK(d.get({1, 2, 3}) == stone && d.get({3, 2, 1}) == kAirState);  // x, y, z not mixed up
     CHECK(!d.set({1, 2, 3}, stone));                                // no change
     CHECK(d.set({4, 5, 6}, stone) && ChunkTestAccess::paletteSize(d) == 2);         // reused
-    CHECK(d.set({1, 2, 3}, BlockState::air()) && ChunkTestAccess::paletteSize(d) == 2);  // air is entry 0
-    const BlockState rotated{typeOf("furnace"), orient::kIdentity};
+    CHECK(d.set({1, 2, 3}, kAirState) && ChunkTestAccess::paletteSize(d) == 2);  // air is entry 0
+    const StateId rotated = registry().state(typeOf("furnace"), orient::kIdentity);
     CHECK(d.set({0, 0, 0}, rotated) && ChunkTestAccess::paletteSize(d) == 3);       // appended
     CHECK(d.set({9, 9, 9}, rotated) && ChunkTestAccess::paletteSize(d) == 3);
     CHECK(d.set({9, 9, 9}, stone) && ChunkTestAccess::paletteSize(d) == 3);
     // A copy is independent (it owns its own Brick).
     Chunk copy = d;
-    CHECK(copy.set({20, 20, 20}, stone) && d.get({20, 20, 20}).isAir() && copy.get({4, 5, 6}) == stone);
+    CHECK(copy.set({20, 20, 20}, stone) && d.get({20, 20, 20}) == kAirState && copy.get({4, 5, 6}) == stone);
 }
 
 // Probes and edits at every face and corner of the chunk; just outside reads
@@ -71,7 +71,7 @@ void testChunkBoundary() {
     }
     ChunkWorld w(registry());
     for (const CellPos& c : inside) {
-        CHECK(w.editable(c) && w.probe(c).isAir());
+        CHECK(w.editable(c) && w.probe(c) == kAirState);
         CHECK(w.apply({{{c, solidState()}}}).changed == 1);
         CHECK(w.probe(c) == solidState());
     }
@@ -87,7 +87,7 @@ void testChunkBoundary() {
                 d[axis] = dir;
                 const CellPos o = c + d;
                 if (chunkOf(o) == ChunkCoord{}) continue;  // still inside
-                CHECK(!w.editable(o) && w.probe(o).isAir());
+                CHECK(!w.editable(o) && w.probe(o) == kAirState);
                 const ApplyResult r = w.apply({{{o, solidState()}}});
                 CHECK(r.changed == 0 && r.rejected.size() == 1 && r.rejected[0] == o);
             }
@@ -95,7 +95,7 @@ void testChunkBoundary() {
     CHECK(!w.editable({-1, 0, 0}) && !w.editable({0, 64, 0}) && !w.editable({0, 0, -64}));
     CHECK(!w.editable({1'000'000'000, -1'000'000'000, 5}));
     // Removing everything again reuses air (entry 0); the palette doesn't grow.
-    for (const CellPos& c : inside) CHECK(w.apply({{{c, BlockState::air()}}}).changed == 1);
+    for (const CellPos& c : inside) CHECK(w.apply({{{c, kAirState}}}).changed == 1);
     CHECK(ChunkTestAccess::paletteSize(ChunkWorldTestAccess::chunk(w)) == 2);
 }
 

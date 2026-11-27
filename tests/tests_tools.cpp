@@ -28,8 +28,8 @@ void testToolsPureAndCommit() {
     EditSet ground;
     for (int y = 0; y < 12; ++y)
         for (int x = 0; x < 12; ++x)
-            for (int z = 0; z < 3; ++z) ground.edits.push_back({{x, y, z}, {typeOf(z == 2 ? "grass" : "dirt"), kIdentity}});
-    ground.edits.push_back({{6, 6, 3}, {typeOf("furnace"), kIdentity}});
+            for (int z = 0; z < 3; ++z) ground.edits.push_back({{x, y, z}, registry().state(typeOf(z == 2 ? "grass" : "dirt"), orient::kIdentity)});
+    ground.edits.push_back({{6, 6, 3}, registry().state(typeOf("furnace"), orient::kIdentity)});
     w.apply(ground);
     ToolSettings settings;
     settings.shovelFill = typeOf("dirt");
@@ -55,15 +55,15 @@ void testShovel() {
     EditSet e;
     for (int y = 0; y < 12; ++y)
         for (int x = 0; x < 12; ++x)
-            for (int z = 0; z <= 3; ++z) e.edits.push_back({{x, y, z}, {dirt, kIdentity}});
+            for (int z = 0; z <= 3; ++z) e.edits.push_back({{x, y, z}, registry().state(dirt, orient::kIdentity)});
     // A step: columns x ≥ 7 rise to z = 5 (two soft cells above h = 3) …
     for (int y = 0; y < 12; ++y)
         for (int x = 7; x < 12; ++x)
-            for (int z = 4; z <= 5; ++z) e.edits.push_back({{x, y, z}, {dirt, kIdentity}});
+            for (int z = 4; z <= 5; ++z) e.edits.push_back({{x, y, z}, registry().state(dirt, orient::kIdentity)});
     // … with a rock on that step inside the footprint, and a 2-deep hole.
-    e.edits.push_back({{7, 5, 6}, {stone, kIdentity}});
-    e.edits.push_back({{4, 4, 3}, BlockState::air()});
-    e.edits.push_back({{4, 4, 2}, BlockState::air()});
+    e.edits.push_back({{7, 5, 6}, registry().state(stone, orient::kIdentity)});
+    e.edits.push_back({{4, 4, 3}, kAirState});
+    e.edits.push_back({{4, 4, 2}, kAirState});
     w.apply(e);
     ToolSettings settings;
     settings.shovelFill = dirt;
@@ -99,22 +99,22 @@ void testWrench() {
     // A click about a log's own axis is a no-op once canonicalized.
     ChunkWorld w(registry());
     const BlockTypeId log = typeOf("log");
-    w.apply({{{{2, 2, 2}, {log, kIdentity}}}});  // axis along z
+    w.apply({{{{2, 2, 2}, registry().state(log, orient::kIdentity)}}});  // axis along z
     ToolSettings settings;
     OrientationLatch latch;
     const ToolContext ctx{registry(), settings, latch};
     const Item wrench = Item::wrench();
     const PlannedEdit top = planEdit(&wrench, false, aim(w, {2.5, 2.5, 5.5}, {2.5, 2.5, 2.5}), ctx, w);
-    CHECK(top.edits.edits.size() == 1 && top.edits.edits[0].state == BlockState{log, kIdentity});
+    CHECK(top.edits.edits.size() == 1 && top.edits.edits[0].state == registry().state(log, orient::kIdentity));
     const PlannedEdit side = planEdit(&wrench, false, aim(w, {5.5, 2.5, 2.5}, {2.5, 2.5, 2.5}), ctx, w);
-    CHECK(side.edits.edits.size() == 1 && side.edits.edits[0].state.orientation != kIdentity);
+    CHECK(side.edits.edits.size() == 1 && testStates().orientation(side.edits.edits[0].state) != kIdentity);
 }
 
 void testContainerModes() {
     ChunkWorld w(registry());
     EditSet floor;
     for (int y = 0; y < 40; ++y)
-        for (int x = 0; x < 40; ++x) floor.edits.push_back({{x, y, 0}, {typeOf("stone"), kIdentity}});
+        for (int x = 0; x < 40; ++x) floor.edits.push_back({{x, y, 0}, registry().state(typeOf("stone"), orient::kIdentity)});
     w.apply(floor);
     const BlockTypeId brick = typeOf("brick"), stone = typeOf("stone"), dirt = typeOf("dirt");
     ToolSettings settings;
@@ -138,7 +138,7 @@ void testContainerModes() {
     auto pickAt = [&](std::uint64_t draws) {
         settings.container.draws = draws;
         const PlannedEdit p = planEdit(&box, false, aim(w, {20.5, 20.5, 9.0}, center), ctx, w);
-        return p.edits.edits.empty() ? BlockState::kAirType : p.edits.edits[0].state.type;
+        return p.edits.edits.empty() ? kAirType : testStates().type(p.edits.edits[0].state);
     };
     // In order: one cell cycles through the slots, click by click.
     settings.container.mode = PlacementMode::InOrder;
@@ -164,16 +164,16 @@ void testContainerModes() {
     settings.container.draws = 0;
     {
         ChunkWorld g(registry());
-        g.apply({{{{4, 4, 0}, {stone, kIdentity}}}});
+        g.apply({{{{4, 4, 0}, registry().state(stone, orient::kIdentity)}}});
         const auto t = aim(g, {4.5, 4.5, 6.0}, {4.5, 4.5, 1.0});
         const PlannedEdit first = planEdit(&box, false, t, ctx, g);
-        CHECK(first.edits.edits.size() == 1 && first.edits.edits[0].state.type == brick);
-        afterCommit(&box, false, first, g.apply(first.edits).changed, settings);
+        CHECK(first.edits.edits.size() == 1 && testStates().type(first.edits.edits[0].state) == brick);
+        afterCommit(&box, false, first, g.apply(first.edits).changed, settings, registry().states());
         CHECK(settings.container.draws == 1);
         const auto t2 = aim(g, {4.5, 4.5, 6.0}, {4.5, 4.5, 2.0});  // now on top of the brick
         const PlannedEdit second = planEdit(&box, false, t2, ctx, g);
-        CHECK(second.edits.edits[0].state.type == stone);
-        afterCommit(&box, false, second, 0, settings);  // nothing changed: no roll used
+        CHECK(testStates().type(second.edits.edits[0].state) == stone);
+        afterCommit(&box, false, second, 0, settings, registry().states());  // nothing changed: no roll used
         CHECK(settings.container.draws == 1);
     }
     // Match target ignores the state: the targeted block (stone) is in the
@@ -181,7 +181,7 @@ void testContainerModes() {
     settings.container.mode = PlacementMode::MatchTarget;
     for (std::uint64_t d = 0; d < 5; ++d) CHECK(pickAt(d) == stone);
     settings.container.slots[1] = {typeOf("log"), 30};
-    CHECK(pickAt(0) == BlockState::kAirType);
+    CHECK(pickAt(0) == kAirType);
     CHECK(placementHash({1, 2, 3}, 1, 7) == placementHash({1, 2, 3}, 1, 7));
     CHECK(placementHash({1, 2, 3}, 1, 7) != placementHash({1, 2, 3}, 1, 8));
     CHECK(placementHash({1, 2, 3}, 1, 7) != placementHash({1, 2, 4}, 1, 7));
@@ -193,7 +193,7 @@ void testContainerPatch() {
     ChunkWorld w(registry());
     EditSet floor;
     for (int y = 0; y < 24; ++y)
-        for (int x = 0; x < 24; ++x) floor.edits.push_back({{x, y, 0}, {typeOf("stone"), kIdentity}});
+        for (int x = 0; x < 24; ++x) floor.edits.push_back({{x, y, 0}, registry().state(typeOf("stone"), orient::kIdentity)});
     w.apply(floor);
     const BlockTypeId brick = typeOf("brick"), stone = typeOf("stone"), dirt = typeOf("dirt");
     ToolSettings settings;
@@ -224,13 +224,13 @@ void testContainerPatch() {
         settings.container.draws = d;
         const std::uint64_t h = placementHash(above, settings.container.id, d);
         settings.container.mode = PlacementMode::InOrder;
-        CHECK(planEdit(&box, false, target, ctx, w).edits.edits.at(0).state.type == settings.container.slots[d % 3].type);
+        CHECK(testStates().type(planEdit(&box, false, target, ctx, w).edits.edits.at(0).state) == settings.container.slots[d % 3].type);
         settings.container.mode = PlacementMode::RandomSlot;
-        CHECK(planEdit(&box, false, target, ctx, w).edits.edits.at(0).state.type == settings.container.slots[h % 3].type);
+        CHECK(testStates().type(planEdit(&box, false, target, ctx, w).edits.edits.at(0).state) == settings.container.slots[h % 3].type);
         settings.container.mode = PlacementMode::CountWeighted;
         const std::uint64_t u = h % 100;
         const BlockTypeId expect = u < 60 ? brick : (u < 90 ? stone : dirt);
-        CHECK(planEdit(&box, false, target, ctx, w).edits.edits.at(0).state.type == expect);
+        CHECK(testStates().type(planEdit(&box, false, target, ctx, w).edits.edits.at(0).state) == expect);
     }
     // A patch's cells differ (the cell is in the hash), and in order
     // continues the cursor cell by cell; a commit advances draws by the
@@ -240,11 +240,11 @@ void testContainerPatch() {
     settings.container.mode = PlacementMode::InOrder;
     const PlannedEdit ordered = planEdit(&box, false, target, ctx, w);
     for (std::size_t i = 0; i < ordered.edits.edits.size(); ++i)
-        CHECK(ordered.edits.edits[i].state.type == settings.container.slots[(5 + i) % 3].type);
+        CHECK(testStates().type(ordered.edits.edits[i].state) == settings.container.slots[(5 + i) % 3].type);
     {
         ChunkWorld g(registry());
         g.apply(floor);
-        afterCommit(&box, false, ordered, g.apply(ordered.edits).changed, settings);
+        afterCommit(&box, false, ordered, g.apply(ordered.edits).changed, settings, registry().states());
         CHECK(settings.container.draws == 5 + 9);
     }
     // Consumption: a 5×5 patch from a container of 6 brick / 3 stone / 1
@@ -261,13 +261,13 @@ void testContainerPatch() {
     std::map<BlockTypeId, int> placed;
     std::array<std::uint32_t, 3> left{6, 3, 1};
     for (const Edit& e : bag.edits.edits) {
-        ++placed[e.state.type];
+        ++placed[testStates().type(e.state)];
         // Replay the pick from the counts left at this cell.
         std::uint64_t total = left[0] + left[1] + left[2];
         std::uint64_t u = placementHash(e.cell, settings.container.id, 3) % total;
         std::size_t k = 0;
         while (u >= left[k]) u -= left[k++];
-        CHECK(e.state.type == settings.container.slots[k].type);
+        CHECK(testStates().type(e.state) == settings.container.slots[k].type);
         --left[k];
     }
     CHECK(placed[brick] == 6 && placed[stone] == 3 && placed[dirt] == 1);
@@ -275,13 +275,13 @@ void testContainerPatch() {
     settings.container.mode = PlacementMode::InOrder;
     const PlannedEdit cycle = planEdit(&box, false, target, ctx, w);
     std::map<BlockTypeId, int> cycled;
-    for (const Edit& e : cycle.edits.edits) ++cycled[e.state.type];
+    for (const Edit& e : cycle.edits.edits) ++cycled[testStates().type(e.state)];
     CHECK(cycle.edits.edits.size() == 10 && cycled[brick] == 6 && cycled[stone] == 3 && cycled[dirt] == 1);
     // The commit uses the counts up; then the container is empty.
     {
         ChunkWorld g(registry());
         g.apply(floor);
-        afterCommit(&box, false, bag, g.apply(bag.edits).changed, settings);
+        afterCommit(&box, false, bag, g.apply(bag.edits).changed, settings, registry().states());
         CHECK(settings.container.slots[0].count == 0 && settings.container.slots[1].count == 0 &&
               settings.container.slots[2].count == 0);
         CHECK(settings.container.draws == 3 + 10);
@@ -294,7 +294,7 @@ void testContainerPatch() {
     settings.container.patch = 3;
     const PlannedEdit match = planEdit(&box, false, target, ctx, w);
     CHECK(match.edits.edits.size() == 4 && match.unaffordable.size() == 5);
-    for (const Edit& e : match.edits.edits) CHECK(e.state.type == stone);
+    for (const Edit& e : match.edits.edits) CHECK(testStates().type(e.state) == stone);
 }
 
 // Shift+click (input/per-hand-use): only the wrench has a secondary action;
@@ -302,7 +302,7 @@ void testContainerPatch() {
 // placing did nothing).
 void testSecondaryFallsBack() {
     ChunkWorld w(registry());
-    w.apply({{{{4, 4, 0}, {typeOf("furnace"), kIdentity}}}});  // oriented: every turn shows
+    w.apply({{{{4, 4, 0}, registry().state(typeOf("furnace"), orient::kIdentity)}}});  // oriented: every turn shows
     ToolSettings settings;
     settings.shovelFill = typeOf("dirt");
     settings.container.slots = {{{typeOf("brick"), 6}, {typeOf("stone"), 3}, {typeOf("dirt"), 1}}};
@@ -320,7 +320,7 @@ void testSecondaryFallsBack() {
     // A container's Shift+click commits like a click: draws advance.
     const Item box = Item::container();
     const PlannedEdit p = planEdit(&box, true, t, ctx, w);
-    afterCommit(&box, true, p, w.apply(p.edits).changed, settings);
+    afterCommit(&box, true, p, w.apply(p.edits).changed, settings, registry().states());
     CHECK(settings.container.draws == 1);
 }
 

@@ -1,2 +1,2 @@
-{ "name": "gravel", "symmetry": "uniform",
+{ "ulid": "01M8F3N34M3986D3R50903C7NP", "name": "gravel", "symmetry": "uniform",
   "textures": { "+z": { "matched": "gravel_set.png", "edges": "nsew" } } }

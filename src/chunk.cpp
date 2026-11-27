@@ -4,13 +4,18 @@
 #include <cmath>
 #include <limits>
 
-Chunk::Chunk(ChunkId id) : id_(id), brick_(std::make_unique<UniformBrick<BlockState>>(BlockState::air())) {}
+Chunk::Chunk(const StateTable& states, ChunkId id)
+    : states_(&states), id_(id), brick_(std::make_unique<UniformBrick<StateId>>(kAirState)) {}
 
-Chunk::Chunk(const Chunk& o) : id_(o.id_), brick_(o.brick_->clone()), digest_(o.digest_), growths_(o.growths_), widenings_(o.widenings_) {}
+Chunk::Chunk(const Chunk& o)
+    : states_(o.states_), id_(o.id_), brick_(o.brick_->clone()), digest_(o.digest_), growths_(o.growths_),
+      widenings_(o.widenings_), emitters_(o.emitters_) {}
 
 Chunk& Chunk::operator=(const Chunk& o) {
     if (this != &o) {
+        states_ = o.states_;
         id_ = o.id_;
+        emitters_ = o.emitters_;
         brick_ = o.brick_->clone();
         lookup_.drop();
         digest_ = o.digest_;
@@ -20,30 +25,43 @@ Chunk& Chunk::operator=(const Chunk& o) {
     return *this;
 }
 
-std::optional<BlockState> Chunk::uniformState() const {
+std::optional<StateId> Chunk::uniformState() const {
     if (brick_->width() != 0) return std::nullopt;
-    return static_cast<const UniformBrick<BlockState>&>(*brick_).state();
+    return static_cast<const UniformBrick<StateId>&>(*brick_).state();
+}
+
+glm::vec3 Chunk::emission(StateId s) const {
+    const BlockDef* def = states_->definition(s).def;
+    if (!def) return glm::vec3(0.0f);
+    return def->translucent() ? def->translucency->emission : def->material.emissive;
+}
+
+std::vector<Emitter> Chunk::emitters() const {
+    std::vector<Emitter> out;
+    out.reserve(emitters_.size());
+    for (const CellPos& c : emitters_) out.push_back({c, emission(get(localOf(c)))});
+    return out;
 }
 
 std::uint64_t Chunk::digest() const {
-    if (!digest_) digest_ = brick_->fullDigest();
+    if (!digest_) digest_ = brick_->fullDigest([this](StateId s) { return states_->digestTerm(s); });
     return *digest_;
 }
 
-bool Chunk::set(const glm::ivec3& local, const BlockState& state) {
+bool Chunk::set(const glm::ivec3& local, StateId state) {
     const auto cell = static_cast<std::uint32_t>(brickCellIndex(local.x, local.y, local.z));
-    const BlockState old = brick_->at(cell);
+    const StateId old = brick_->at(cell);
     if (old == state) return false;
     if (brick_->width() == 0) {
         // Promotion: a uniform chunk edited to a second state becomes a
         // palette at 1 bit, all indices 0 = the old state.
-        auto p = makePaletteBrick<BlockState>(1, brickBuildCapacity(1, 2));
+        auto p = makePaletteBrick<StateId>(1, brickBuildCapacity(1, 2));
         p->append(old);
         p->setIndex(cell, p->append(state));
         brick_ = std::move(p);
         lookup_.drop();
     } else {
-        PaletteBrick<BlockState>* p = &palette();
+        PaletteBrick<StateId>* p = &palette();
         std::uint32_t index = lookup_.find(*p, state);
         if (index == kNoIndex) {
             if (p->full()) {
@@ -61,14 +79,16 @@ bool Chunk::set(const glm::ivec3& local, const BlockState& state) {
         }
         p->setIndex(cell, index);
     }
-    if (digest_) digest_ = addMod(*digest_, mulMod(digestWeight(cell), subMod(digestStateHash(canonicalEncoding(state)),
-                                                                              digestStateHash(canonicalEncoding(old)))));
+    if (digest_) digest_ = addMod(*digest_, mulMod(digestWeight(cell), subMod(states_->digestTerm(state), states_->digestTerm(old))));
+    const CellPos world = cellAt(id_.coord, local);
+    if (const glm::vec3 was = emission(old); was.x > 0.0f || was.y > 0.0f || was.z > 0.0f) emitters_.erase(world);
+    if (const glm::vec3 now = emission(state); now.x > 0.0f || now.y > 0.0f || now.z > 0.0f) emitters_.insert(world);
     return true;
 }
 
 std::uint32_t Chunk::liveEntries() const {
     if (brick_->width() == 0) return 1;
-    const PaletteBrick<BlockState>& p = palette();
+    const PaletteBrick<StateId>& p = palette();
     std::vector<std::uint8_t> live(p.entries(), 0);
     for (std::uint32_t c = 0; c < kBrickCells; ++c) live[p.indexAt(c)] = 1;
     return static_cast<std::uint32_t>(std::count(live.begin(), live.end(), std::uint8_t{1}));
@@ -77,14 +97,14 @@ std::uint32_t Chunk::liveEntries() const {
 void Chunk::rebuild(unsigned width, bool keepDead) {
     if (brick_->width() == 0) {
         if (width == 0) return;
-        const BlockState s = static_cast<const UniformBrick<BlockState>&>(*brick_).state();
-        auto q = makePaletteBrick<BlockState>(width, brickBuildCapacity(width, 1));
+        const StateId s = static_cast<const UniformBrick<StateId>&>(*brick_).state();
+        auto q = makePaletteBrick<StateId>(width, brickBuildCapacity(width, 1));
         q->append(s);
         brick_ = std::move(q);
         lookup_.drop();
         return;
     }
-    const PaletteBrick<BlockState>& p = palette();
+    const PaletteBrick<StateId>& p = palette();
     std::vector<std::uint32_t> idx(kBrickCells);
     p.exportIndices(idx.data());
     std::vector<std::uint8_t> live(p.entries(), keepDead ? 1 : 0);
@@ -95,12 +115,12 @@ void Chunk::rebuild(unsigned width, bool keepDead) {
         FATAL_UNLESS(n == 1, "uniform needs exactly one live state");
         std::uint32_t s = 0;
         while (!live[s]) ++s;
-        brick_ = std::make_unique<UniformBrick<BlockState>>(p.entry(s));
+        brick_ = std::make_unique<UniformBrick<StateId>>(p.entry(s));
         lookup_.drop();
         return;
     }
     FATAL_UNLESS(n <= brickIndexLimit(width), "width too narrow for the live entries");
-    auto q = makePaletteBrick<BlockState>(width, brickBuildCapacity(width, n));
+    auto q = makePaletteBrick<StateId>(width, brickBuildCapacity(width, n));
     std::vector<std::uint32_t> remap(p.entries(), 0);
     for (std::uint32_t s = 0; s < p.entries(); ++s)
         if (live[s]) remap[s] = q->append(p.entry(s));
@@ -181,7 +201,7 @@ std::optional<RayHit> Chunk::raycast(const WorldPos& worldOrigin, const glm::dve
         const CellPos c = cellAt(id_.coord, local());
         return RayHit{c, normal, cellCorner(chunkOrigin(id_.coord)) + o + d * t, get(local()), t};
     };
-    if (!get(local()).isAir()) return hitAt(tEnter);  // inside (normal 0) or the entered cell
+    if (!states_->isAir(get(local()))) return hitAt(tEnter);  // inside (normal 0) or the entered cell
 
     glm::dvec3 tMax, tDelta;
     for (int a = 0; a < 3; ++a) {
@@ -206,6 +226,6 @@ std::optional<RayHit> Chunk::raycast(const WorldPos& worldOrigin, const glm::dve
         tMax[a] += tDelta[a];
         normal = glm::ivec3(0);
         normal[a] = -step[a];
-        if (!get(local()).isAir()) return hitAt(t);
+        if (!states_->isAir(get(local()))) return hitAt(t);
     }
 }

@@ -1,6 +1,7 @@
 #include "block_mesh.h"
 
 #include "cube.h"
+#include "fatal.h"
 
 #include <cmath>
 
@@ -9,11 +10,16 @@ using namespace glm;
 #include "variants.glsl"
 }  // namespace shader
 
-FaceTexture faceTexture(const BlockRegistry& registry, BlockState state, orient::Face face) {
+FaceTexture faceTexture(const StateTable& states, StateId state, orient::Face face) {
+    const BlockDef* def = states.definition(state).def;
+    FATAL_UNLESS(def != nullptr, "faceTexture: a state with no block definition (air, or a synthetic test state)");
+    return faceTexture(*def, states.orientation(state), face);
+}
+
+FaceTexture faceTexture(const BlockDef& def, orient::Rot orientation, orient::Face face) {
     const orient::Group& g = orient::group();
-    const BlockDef& def = registry.def(state.type);
-    const orient::Face local = g.faceMap[g.inverse[state.orientation]][face];
-    return {def.faceLayer[local], static_cast<std::uint32_t>((def.faceTurns[local] + g.faceTurns[state.orientation][local]) % 4),
+    const orient::Face local = g.faceMap[g.inverse[orientation]][face];
+    return {def.faceLayer[local], static_cast<std::uint32_t>((def.faceTurns[local] + g.faceTurns[orientation][local]) % 4),
             def.faceSet[local], def.faceTiles[local]};
 }
 

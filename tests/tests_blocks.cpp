@@ -31,43 +31,43 @@ void testRotateCcw() {
 
 void testParseDefinition() {
     std::string err;
-    const auto log = parseDefinition(R"({"name":"log","symmetry":"column","textures":{"+z":"e.png","-y":"s.png"}})", err);
+    const auto log = parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"log","symmetry":"column","textures":{"+z":"e.png","-y":"s.png"}})", err);
     CHECK(log && log->symmetry == Symmetry::Column && log->textures.size() == 2);
     CHECK(log && log->material.roughness == 0.8f && log->material.metallic == 0.0f &&
           log->material.reflectance == 0.5f && log->material.emissive == glm::vec3(0.0f));  // defaults
     // Wrong key set: +x is in the side orbit, whose representative is −y.
-    CHECK(!parseDefinition(R"({"name":"log","symmetry":"column","textures":{"+z":"e.png","+x":"s.png"}})", err));
+    CHECK(!parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"log","symmetry":"column","textures":{"+z":"e.png","+x":"s.png"}})", err));
     CHECK(err.find("orbit representatives") != std::string::npos);
-    CHECK(!parseDefinition(R"({"name":"log","symmetry":"column","textures":{"+z":"e.png"}})", err));
-    CHECK(!parseDefinition(R"({"name":"x","symmetry":"spherical","textures":{"+z":"a.png"}})", err));
-    CHECK(!parseDefinition(R"({"name":"x","symmetry":"uniform","textures":{"+z":"a.png"},"extra":1})", err));
+    CHECK(!parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"log","symmetry":"column","textures":{"+z":"e.png"}})", err));
+    CHECK(!parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"x","symmetry":"spherical","textures":{"+z":"a.png"}})", err));
+    CHECK(!parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"x","symmetry":"uniform","textures":{"+z":"a.png"},"extra":1})", err));
     CHECK(!parseDefinition("not json", err));
     // No assertions any more (v0.1.8: the loader checks structure only).
-    CHECK(!parseDefinition(R"({"name":"x","symmetry":"uniform","textures":{"+z":"a.png"},"asserts":{"+z":["tileable"]}})", err));
+    CHECK(!parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"x","symmetry":"uniform","textures":{"+z":"a.png"},"asserts":{"+z":["tileable"]}})", err));
     CHECK(err.find("unknown field") != std::string::npos);
     // Variant sets: three rules.
-    const auto rnd = parseDefinition(R"({"name":"d","symmetry":"uniform","textures":{"+z":{"random":"d.png","tiles":8}}})", err);
+    const auto rnd = parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"d","symmetry":"uniform","textures":{"+z":{"random":"d.png","tiles":8}}})", err);
     CHECK(rnd && rnd->textures[0].set == VariantSet::Random && rnd->textures[0].tiles == 8 && rnd->textures[0].file == "d.png");
-    const auto ns = parseDefinition(R"({"name":"b","symmetry":"uniform","textures":{"+z":{"matched":"b.png","edges":"ns"}}})", err);
+    const auto ns = parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"b","symmetry":"uniform","textures":{"+z":{"matched":"b.png","edges":"ns"}}})", err);
     CHECK(ns && ns->textures[0].set == VariantSet::MatchedNS && ns->textures[0].tiles == 4);
-    const auto nsew = parseDefinition(R"({"name":"g","symmetry":"uniform","textures":{"+z":{"matched":"g.png","edges":"nsew"}}})", err);
+    const auto nsew = parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"g","symmetry":"uniform","textures":{"+z":{"matched":"g.png","edges":"nsew"}}})", err);
     CHECK(nsew && nsew->textures[0].set == VariantSet::MatchedNSEW && nsew->textures[0].tiles == 16);
-    const auto conn = parseDefinition(R"({"name":"g","symmetry":"uniform","textures":{"+z":{"connected":"g.png"}}})", err);
+    const auto conn = parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"g","symmetry":"uniform","textures":{"+z":{"connected":"g.png"}}})", err);
     CHECK(conn && conn->textures[0].set == VariantSet::Connected && conn->textures[0].tiles == 16);
     for (const char* bad : {R"({"random":"d.png"})", R"({"random":"d.png","tiles":0})", R"({"random":"d.png","tiles":33})",
                             R"({"matched":"b.png"})", R"({"matched":"b.png","edges":"ew"})", R"({"wang":"s.png"})",
                             R"({"connected":"g.png","tiles":4})"}) {
-        const std::string text = std::string(R"({"name":"x","symmetry":"uniform","textures":{"+z":)") + bad + "}}";
+        const std::string text = std::string(R"({"ulid":"0000000000000000000000TEST","name":"x","symmetry":"uniform","textures":{"+z":)") + bad + "}}";
         CHECK(!parseDefinition(text, err));
         CHECK(err.find("bad texture entry") != std::string::npos);
     }
     // Material fields.
-    const auto lamp = parseDefinition(R"({"name":"lamp","symmetry":"uniform","textures":{"+z":"a.png"},
+    const auto lamp = parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"lamp","symmetry":"uniform","textures":{"+z":"a.png"},
                                           "roughness":0.25,"metallic":1,"reflectance":0.75,"emissive":[2,1,0.5]})", err);
     CHECK(lamp && lamp->material.roughness == 0.25f && lamp->material.metallic == 1.0f &&
           lamp->material.reflectance == 0.75f && lamp->material.emissive == glm::vec3(2.0f, 1.0f, 0.5f));
-    CHECK(!parseDefinition(R"({"name":"x","symmetry":"uniform","textures":{"+z":"a.png"},"roughness":1.5})", err));
-    CHECK(!parseDefinition(R"({"name":"x","symmetry":"uniform","textures":{"+z":"a.png"},"emissive":[1,-1,0]})", err));
+    CHECK(!parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"x","symmetry":"uniform","textures":{"+z":"a.png"},"roughness":1.5})", err));
+    CHECK(!parseDefinition(R"({"ulid":"0000000000000000000000TEST","name":"x","symmetry":"uniform","textures":{"+z":"a.png"},"emissive":[1,-1,0]})", err));
 
     // Image checks, structural only: 16×16 singles; a set's atlas is 64 wide
     // and exactly tall enough for its tiles. Asymmetric art is legal.
@@ -127,8 +127,8 @@ void testMeshFaceTextures() {
     CHECK(log.has_value());
     if (!log) return;
     ChunkWorld g(registry());
-    const orient::Rot alongX = registry().state(*log, rotationAbout({0, 1, 0}, 90)).orientation;
-    g.apply({{{{1, 1, 1}, BlockState{*log, alongX}}}});
+    const orient::Rot alongX = testStates().orientation(registry().state(*log, rotationAbout({0, 1, 0}, 90)));
+    g.apply({{{{1, 1, 1}, registry().state(*log, alongX)}}});
     const WorldMesh m = g.buildMesh(ChunkWorld::kChunk);
     const BlockDef& def = registry().def(*log);
     const std::uint32_t endLayer = def.faceLayer[PosZ], sideLayer = def.faceLayer[NegY];

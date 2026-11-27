@@ -256,8 +256,8 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
                 // Ghost faces are single cells: a random or matched tile is
                 // chosen here, with the shader's own code (variants.glsl), so
                 // the ghost shows the tile the placed block will.
-                const FaceTexture tex = resolvePositional(faceTexture(registry_, g.state, face), g.cell, face);
-                appendFace(ghostVerts, ghostIdx, tex, face, corner, ghostMaterialId(g.state.type), kGhostInflate);
+                const FaceTexture tex = resolvePositional(faceTexture(registry_.states(), g.state, face), g.cell, face);
+                appendFace(ghostVerts, ghostIdx, tex, face, corner, ghostMaterialId(registry_.states().type(g.state)), kGhostInflate);
             }
         }
     }

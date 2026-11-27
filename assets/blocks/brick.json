@@ -1,2 +1,2 @@
-{ "name": "brick", "symmetry": "uniform",
+{ "ulid": "01M8F3N34KP3V5GR6YZN05KRG2", "name": "brick", "symmetry": "uniform",
   "textures": { "+z": "brick.png" } }

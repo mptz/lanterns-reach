@@ -19,6 +19,9 @@
 #include <glm/vec3.hpp>
 
 #include "blocks.h"
+#include <set>
+#include <tuple>
+#include <vector>
 #include "brick.h"
 #include "chunk_coord.h"
 #include "digest.h"
@@ -32,8 +35,9 @@ struct WorldMesh;
 
 class Chunk {
 public:
-    // Every cell air (the `empty` generator): a uniform Brick.
-    explicit Chunk(ChunkId id = {});
+    // Every cell air (the `empty` generator): a uniform Brick. The state
+    // table must outlive the chunk (the digest and emitters read it).
+    explicit Chunk(const StateTable& states, ChunkId id = {});
 
     const ChunkId& id() const { return id_; }
     Chunk(const Chunk& o);
@@ -41,17 +45,23 @@ public:
     Chunk(Chunk&&) noexcept = default;
     Chunk& operator=(Chunk&&) noexcept = default;
 
-    BlockState get(const glm::ivec3& local) const {
+    StateId get(const glm::ivec3& local) const {
         return brick_->at(static_cast<std::uint32_t>(brickCellIndex(local.x, local.y, local.z)));
     }
     // Sets a cell; returns whether its state changed. An edit only ever
     // upgrades the representation (uniform to a palette at 1 bit, a full
     // palette to the next width) and never compacts: the reverse lookup finds
     // the state's entry (dead ones included), or appends one.
-    bool set(const glm::ivec3& local, const BlockState& state);
+    bool set(const glm::ivec3& local, StateId state);
 
     // The state filling the chunk, if it is uniform.
-    std::optional<BlockState> uniformState() const;
+    std::optional<StateId> uniformState() const;
+
+    // Light-emitting cells (world cells, z, y, x order), maintained per
+    // edit, so this reads no cell but the emitters
+    // (core/opaque-chunk-queries: O(1) or O(surface), never O(volume)).
+    std::vector<Emitter> emitters() const;
+    const StateTable& states() const { return *states_; }
 
     // The content digest (data/content-digest): computed on first request in
     // one pass, then maintained per edit. Equal for equal content, whatever
@@ -80,8 +90,11 @@ public:
 private:
     friend struct ChunkTestAccess;
 
-    PaletteBrick<BlockState>& palette() { return static_cast<PaletteBrick<BlockState>&>(*brick_); }
-    const PaletteBrick<BlockState>& palette() const { return static_cast<const PaletteBrick<BlockState>&>(*brick_); }
+    PaletteBrick<StateId>& palette() { return static_cast<PaletteBrick<StateId>&>(*brick_); }
+    const PaletteBrick<StateId>& palette() const { return static_cast<const PaletteBrick<StateId>&>(*brick_); }
+    // The light a state emits (an opaque block's emissive, a translucent
+    // block's emission); zero for air and states with no definition.
+    glm::vec3 emission(StateId s) const;
 
     // Replaces the Brick with one holding the same content: uniform if
     // width is 0, else a palette at that width (with room for its entries). keepDead keeps every palette
@@ -94,12 +107,17 @@ private:
     void compact();
     std::uint32_t liveEntries() const;
 
+    const StateTable* states_;
     ChunkId id_;
-    std::unique_ptr<Brick<BlockState>> brick_;
-    ReverseLookup<BlockState> lookup_;     // the owner's reverse lookup, built lazily
+    std::unique_ptr<Brick<StateId>> brick_;
+    ReverseLookup<StateId> lookup_;     // the owner's reverse lookup, built lazily
     mutable std::optional<std::uint64_t> digest_;
     std::uint64_t growths_ = 0;            // swaps by an edit that found the palette full (the fallback path)
     std::uint64_t widenings_ = 0;          // of those, the ones that changed the width
+    struct ZyxLess {
+        bool operator()(const CellPos& a, const CellPos& b) const { return std::tie(a.z, a.y, a.x) < std::tie(b.z, b.y, b.x); }
+    };
+    std::set<CellPos, ZyxLess> emitters_;  // the emitting cells, world coordinates
 };
 
 // Test-only access to the representation (called out in RELEASES.md).

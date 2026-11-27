@@ -30,30 +30,30 @@ struct Case {
     bool glass;            // uniform content of a translucent state
 };
 
-std::vector<BlockState> makePool(std::mt19937_64& rng, std::uint32_t n, bool withGlass) {
-    std::vector<BlockState> pool;
+std::vector<StateId> makePool(std::mt19937_64& rng, std::uint32_t n, bool withGlass) {
+    std::vector<StateId> pool;
     const std::uint32_t valid = validStateCount();
     n = std::min(n, valid - 1);  // the registry has only so many distinct states
     while (pool.size() < n) {
-        const BlockState s = testState(1 + static_cast<std::uint32_t>(rng() % (valid - 1)));
+        const StateId s = testState(1 + static_cast<std::uint32_t>(rng() % (valid - 1)));
         if (std::find(pool.begin(), pool.end(), s) == pool.end()) pool.push_back(s);
     }
     if (withGlass)  // several translucent groups, whatever the draw gave
         for (const char* g : {"glass_red", "glass_blue", "glass_green"}) {
-            const BlockState s{typeOf(g), orient::kIdentity};
+            const StateId s = registry().state(typeOf(g), orient::kIdentity);
             if (std::find(pool.begin(), pool.end(), s) == pool.end()) pool.push_back(s);
         }
     return pool;
 }
 
 Cells makeCells(const Case& c, std::mt19937_64& rng) {
-    Cells cells(kBrickCells, BlockState::air());
+    Cells cells(kBrickCells, kAirState);
     if (c.shape == Shape::Uniform) {
-        const BlockState s = c.glass ? BlockState{typeOf("glass_green"), orient::kIdentity} : solidState();
+        const StateId s = c.glass ? registry().state(typeOf("glass_green"), orient::kIdentity) : solidState();
         std::fill(cells.begin(), cells.end(), s);
         return cells;
     }
-    const std::vector<BlockState> pool = makePool(rng, c.states, c.states > 1);
+    const std::vector<StateId> pool = makePool(rng, c.states, c.states > 1);
     auto pick = [&] { return pool[rng() % pool.size()]; };
     switch (c.shape) {
         case Shape::Sparse:
@@ -80,7 +80,7 @@ Cells makeCells(const Case& c, std::mt19937_64& rng) {
         }
         case Shape::Boxes:
             for (int i = 0; i < 60; ++i) {
-                const BlockState s = pick();
+                const StateId s = pick();
                 const int x0 = static_cast<int>(rng() % 60), y0 = static_cast<int>(rng() % 60), z0 = static_cast<int>(rng() % 60);
                 const int dx = 1 + static_cast<int>(rng() % 20), dy = 1 + static_cast<int>(rng() % 20), dz = 1 + static_cast<int>(rng() % 20);
                 for (int z = z0; z < std::min(64, z0 + dz); ++z)
@@ -95,7 +95,7 @@ Cells makeCells(const Case& c, std::mt19937_64& rng) {
 
 struct Copy {
     std::string name;
-    Chunk data;
+    Chunk data{testStates()};
 };
 
 WorldMesh meshOf(const Chunk& d, Mesher m) {
@@ -152,7 +152,7 @@ void runCase(const Case& c, bool longRun) {
     const bool verbose = std::getenv("SANDBOX_TEST_VERBOSE") != nullptr;
     const auto t0 = std::chrono::steady_clock::now();
     if (verbose) {
-        Chunk probe;
+        Chunk probe(testStates());
         fillChunk(probe, cells, true);
         const WorldMesh m = meshOf(probe, Mesher::Greedy);
         std::fprintf(stderr, "mesh case %u: shape %d, %u live states, greedy %zu quads + %zu translucent, per-cell %zu faces\n", c.seed,
@@ -161,7 +161,7 @@ void runCase(const Case& c, bool longRun) {
     }
     try {
         std::vector<Copy> copies;
-        copies.push_back({"fill", Chunk{}});
+        copies.push_back({"fill", Chunk(testStates())});
         fillChunk(copies.back().data, cells, true);
         const std::uint32_t live = TA::liveEntries(copies[0].data);
         // The widest width that holds it, forced: the palette at another width.
@@ -176,10 +176,10 @@ void runCase(const Case& c, bool longRun) {
                 copies.push_back({"w" + std::to_string(w), copies[0].data});
                 TA::forceWidth(copies.back().data, w);
             }
-        copies.push_back({"edits", Chunk{}});  // promotion and growth on the way, a dead air entry
+        copies.push_back({"edits", Chunk(testStates())});  // promotion and growth on the way, a dead air entry
         fillChunk(copies.back().data, cells, false);
         // Entries in another order: cells set in reverse, then compacted (renumbered by first appearance).
-        copies.push_back({"reordered", Chunk{}});
+        copies.push_back({"reordered", Chunk(testStates())});
         for (std::uint32_t i = kBrickCells; i-- > 0;) copies.back().data.set(localOfIndex(i), cells[i]);
         TA::compact(copies.back().data);
         compare(run, copies, longRun);
@@ -189,7 +189,7 @@ void runCase(const Case& c, bool longRun) {
             const std::uint32_t edits = longRun ? 4000 : 600;
             for (std::uint32_t i = 0; i < edits; ++i) {
                 const auto cell = static_cast<std::uint32_t>(rng() % kBrickCells);
-                const BlockState s = i % 5 == 0 ? testState(1 + static_cast<std::uint32_t>(rng() % (validStateCount() - 1)))
+                const StateId s = i % 5 == 0 ? testState(1 + static_cast<std::uint32_t>(rng() % (validStateCount() - 1)))
                                                 : cells[rng() % kBrickCells];
                 cells[cell] = s;
                 for (Copy& cp : copies) cp.data.set(localOfIndex(cell), s);

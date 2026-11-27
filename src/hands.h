@@ -20,13 +20,13 @@ struct Item {
     // soft ground; a container in hand places from its contents
     // (inventory/hand-pointers). What each does is tools.h's planEdit.
     enum class Kind : std::uint8_t { Block, Pick, Wrench, Shovel, Container } kind = Kind::Block;
-    BlockTypeId block = BlockState::kAirType;  // for Kind::Block (creative: an infinite stack)
+    BlockTypeId block = kAirType;  // for Kind::Block (creative: an infinite stack)
 
     static Item blockStack(BlockTypeId t) { return {Kind::Block, t}; }
-    static Item pick() { return {Kind::Pick, BlockState::kAirType}; }
-    static Item wrench() { return {Kind::Wrench, BlockState::kAirType}; }
-    static Item shovel() { return {Kind::Shovel, BlockState::kAirType}; }
-    static Item container() { return {Kind::Container, BlockState::kAirType}; }  // the one hardcoded container
+    static Item pick() { return {Kind::Pick, kAirType}; }
+    static Item wrench() { return {Kind::Wrench, kAirType}; }
+    static Item shovel() { return {Kind::Shovel, kAirType}; }
+    static Item container() { return {Kind::Container, kAirType}; }  // the one hardcoded container
     bool operator==(const Item&) const = default;
 };
 

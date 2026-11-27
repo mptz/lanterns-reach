@@ -164,7 +164,7 @@ void greedyDirection(const MeshContext& ctx, Phases& phases, int d, bool merge, 
                     rows[r] &= rows[r] - 1;
                 }
                 phases.lap(&MeshTimings::merging);
-                appendQuad(out, d, cellOf(d, slice, b, r), w, h, ctx.appearance.payload(id));
+                appendQuad(out, d, cellOf(d, slice, b, r), w, h, ctx.states.payload(id));
                 phases.lap(&MeshTimings::emission);
             }
         }
@@ -234,21 +234,21 @@ void emitTranslucent(Work& w, const MeshContext& ctx, const ChunkId& id, WorldMe
             while (any != 0) {
                 const int x = std::countr_zero(any);
                 any &= any - 1;
-                const BlockState& st = stateAt(static_cast<std::uint32_t>(brickCellIndex(x, y, z)));
-                const auto slot = static_cast<std::size_t>(w.slotOfType[st.type]);
-                const BlockDef& def = ctx.registry.def(st.type);
+                const StateId st = stateAt(static_cast<std::uint32_t>(brickCellIndex(x, y, z)));
+                const auto slot = static_cast<std::size_t>(w.slotOfType[ctx.states.type(st)]);
+                const BlockDef& def = *ctx.states.definition(st).def;
                 const glm::ivec3 local(x, y, z);
                 const CellPos world = cellAt(id.coord, local);
                 const glm::vec3 corner(static_cast<float>(x), static_cast<float>(y), static_cast<float>(z));
                 for (int d = 0; d < 6; ++d) {
                     if (((w.faceWords[slot * 6 + static_cast<std::size_t>(d)] >> x) & 1) == 0) continue;
                     const auto face = static_cast<Face>(d);
-                    FaceTexture tex = resolvePositional(faceTexture(ctx.registry, st, face), world, face);
+                    FaceTexture tex = resolvePositional(faceTexture(ctx.states, st, face), world, face);
                     if (tex.set == VariantSet::Connected && glm::any(glm::greaterThan(def.translucency->absorption, glm::vec3(0.0f))))
                         tex.layer += connectedTile(frameBitsFromMasks(w, static_cast<int>(slot), d, local), tex.turn);
                     const auto base = static_cast<std::uint32_t>(out.translucentVertices.size());
                     appendFace(out.translucentVertices, out.translucentIndices, tex, face, corner,
-                               BlockRegistry::materialId(st.type));
+                               BlockRegistry::materialId(ctx.states.type(st)));
                     for (std::uint32_t k = 0; k < 4; ++k) {
                         out.edgeLines.push_back(out.translucentVertices[base + k].pos);
                         out.edgeLines.push_back(out.translucentVertices[base + (k + 1) % 4].pos);
@@ -284,7 +284,7 @@ void planeFaces(const Work& w, int d, int slice, std::uint64_t* rows, std::uint6
 }
 
 template <unsigned B>
-void meshAt(const PaletteBrickAt<BlockState, B>& brick, const MeshContext& ctx, const ChunkId& id, bool merge,
+void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, const ChunkId& id, bool merge,
             WorldMesh& out) {
     Work& w = gWork;
     Guard guard(w);
@@ -302,14 +302,14 @@ void meshAt(const PaletteBrickAt<BlockState, B>& brick, const MeshContext& ctx, 
     std::fill_n(w.slotOfEntry.begin(), entries, std::int16_t{-1});
     w.typeOfSlot.clear();
     for (std::uint32_t i = 0; i < entries; ++i) {
-        const BlockState& st = brick.entry(i);
-        if (st.isAir()) {
+        const StateId st = brick.entry(i);
+        if (ctx.states.isAir(st)) {
             w.kind[i] = kAir;
-        } else if (ctx.registry.def(st.type).translucent()) {
+        } else if (ctx.states.translucent(st)) {
             w.kind[i] = kTranslucent;
         } else {
             w.kind[i] = kOpaque;
-            for (int f = 0; f < 6; ++f) w.appearance[i * 6 + static_cast<std::size_t>(f)] = ctx.appearance.id(st, static_cast<Face>(f));
+            for (int f = 0; f < 6; ++f) w.appearance[i * 6 + static_cast<std::size_t>(f)] = ctx.states.appearance(st, static_cast<Face>(f));
         }
     }
 
@@ -328,7 +328,7 @@ void meshAt(const PaletteBrickAt<BlockState, B>& brick, const MeshContext& ctx, 
                     o |= std::uint64_t{1} << x;
                 } else if (k == kTranslucent) {
                     std::int16_t slot = w.slotOfEntry[index];
-                    if (slot < 0) w.slotOfEntry[index] = slot = slotFor(w, brick.entry(index).type);
+                    if (slot < 0) w.slotOfEntry[index] = slot = slotFor(w, ctx.states.type(brick.entry(index)));
                     w.groups[static_cast<std::size_t>(slot) * kRows + row] |= std::uint64_t{1} << x;
                 }
             }
@@ -381,7 +381,7 @@ void meshAt(const PaletteBrickAt<BlockState, B>& brick, const MeshContext& ctx, 
 
     if (!w.typeOfSlot.empty())
         emitTranslucent(w, ctx, id, out, phases,
-                        [&brick](std::uint32_t cell) -> const BlockState& { return brick.entry(brick.indexAt(cell)); });
+                        [&brick](std::uint32_t cell) { return brick.entry(brick.indexAt(cell)); });
 }
 
 }  // namespace
@@ -399,29 +399,29 @@ void transpose64(std::uint64_t a[64]) {
         }
 }
 
-void bitmaskMeshPalette(const PaletteBrick<BlockState>& brick, const MeshContext& context, const ChunkId& id,
+void bitmaskMeshPalette(const PaletteBrick<StateId>& brick, const MeshContext& context, const ChunkId& id,
                         bool merge, WorldMesh& out) {
     switch (brick.width()) {
-        case 1: meshAt<1>(static_cast<const PaletteBrickAt<BlockState, 1>&>(brick), context, id, merge, out); break;
-        case 2: meshAt<2>(static_cast<const PaletteBrickAt<BlockState, 2>&>(brick), context, id, merge, out); break;
-        case 4: meshAt<4>(static_cast<const PaletteBrickAt<BlockState, 4>&>(brick), context, id, merge, out); break;
-        case 8: meshAt<8>(static_cast<const PaletteBrickAt<BlockState, 8>&>(brick), context, id, merge, out); break;
-        case 16: meshAt<16>(static_cast<const PaletteBrickAt<BlockState, 16>&>(brick), context, id, merge, out); break;
-        default: meshAt<32>(static_cast<const PaletteBrickAt<BlockState, 32>&>(brick), context, id, merge, out); break;
+        case 1: meshAt<1>(static_cast<const PaletteBrickAt<StateId, 1>&>(brick), context, id, merge, out); break;
+        case 2: meshAt<2>(static_cast<const PaletteBrickAt<StateId, 2>&>(brick), context, id, merge, out); break;
+        case 4: meshAt<4>(static_cast<const PaletteBrickAt<StateId, 4>&>(brick), context, id, merge, out); break;
+        case 8: meshAt<8>(static_cast<const PaletteBrickAt<StateId, 8>&>(brick), context, id, merge, out); break;
+        case 16: meshAt<16>(static_cast<const PaletteBrickAt<StateId, 16>&>(brick), context, id, merge, out); break;
+        default: meshAt<32>(static_cast<const PaletteBrickAt<StateId, 32>&>(brick), context, id, merge, out); break;
     }
 }
 
-void bitmaskMeshUniform(const BlockState& state, const MeshContext& context, const ChunkId& id, bool merge,
+void bitmaskMeshUniform(StateId state, const MeshContext& context, const ChunkId& id, bool merge,
                         WorldMesh& out) {
-    if (state.isAir()) return;
+    if (context.states.isAir(state)) return;
     Work& w = gWork;
     Guard guard(w);
     Phases phases(w.timings);
-    if (!context.registry.def(state.type).translucent()) {
+    if (!context.states.translucent(state)) {
         // Six sides: only the boundary slice has faces, every row full.
         for (int d = 0; d < 6; ++d) {
             const int boundary = d % 2 == 0 ? kEdge - 1 : 0;
-            const std::uint32_t id0 = context.appearance.id(state, static_cast<Face>(d));
+            const std::uint32_t id0 = context.states.appearance(state, static_cast<Face>(d));
             greedyDirection(
                 context, phases, d, merge, out,
                 [&](int slice, std::uint64_t* rows) {
@@ -438,10 +438,10 @@ void bitmaskMeshUniform(const BlockState& state, const MeshContext& context, con
     sizeAtLeast(w, w.opaque, kRows);
     std::fill(w.slotOfType.begin(), w.slotOfType.begin() + static_cast<std::ptrdiff_t>(context.registry.defs().size()), std::int16_t{-1});
     w.typeOfSlot.clear();
-    slotFor(w, state.type);
+    slotFor(w, context.states.type(state));
     std::fill_n(w.groups.begin(), kRows, kAllBits);
     std::fill_n(w.opaque.begin(), kRows, std::uint64_t{0});
-    emitTranslucent(w, context, id, out, phases, [&state](std::uint32_t) -> const BlockState& { return state; });
+    emitTranslucent(w, context, id, out, phases, [state](std::uint32_t) { return state; });
 }
 
 void setMeshTimings(MeshTimings* timings) { gWork.timings = timings; }

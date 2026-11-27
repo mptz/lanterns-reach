@@ -1,4 +1,4 @@
-{ "name": "glass_red", "symmetry": "uniform",
+{ "ulid": "01M8F3N34M3986D3R50903C7NJ", "name": "glass_red", "symmetry": "uniform",
   "textures": { "+z": { "connected": "glass_frames.png" } },
   "roughness": 0.08,
   "translucency": { "absorption": [0.15, 1.9, 2.2] } }

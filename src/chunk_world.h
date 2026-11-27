@@ -8,11 +8,8 @@
 
 #include <cstdint>
 #include <optional>
-#include <set>
-#include <tuple>
 #include <vector>
 
-#include "appearance.h"
 #include "chunk.h"
 #include "world_query.h"
 
@@ -27,7 +24,7 @@ public:
     Mesher mesher() const { return mesher_; }
 
     std::optional<RayHit> raycast(const WorldPos& origin, const glm::dvec3& dir, double maxDistance) const override;
-    BlockState probe(const CellPos& cell) const override;
+    StateId probe(const CellPos& cell) const override;
     bool editable(const CellPos& cell) const override { return contains(cell); }
     ApplyResult apply(const EditSet& edits) override;
     // Setup only: `apply`, then ends a bulk fill (chunk.h finishBulkFill), so
@@ -43,23 +40,9 @@ public:
 private:
     friend struct ChunkWorldTestAccess;
     bool contains(const CellPos& c) const;
-    // The light a cell's state emits (an opaque block's emissive, a
-    // translucent block's emission); zero if none.
-    glm::vec3 emission(const BlockState& s) const;
-
     const BlockRegistry& registry_;
-    AppearanceTable appearance_;  // the merge key: every face's appearance id
     Mesher mesher_ = Mesher::Greedy;
     Chunk chunk_;
-    // The cells that emit, maintained per edit (core/opaque-chunk-queries:
-    // a public answer is O(1) or O(surface), never O(volume)), in z, y, x
-    // order, so `emitters()` reads no cell but the emitters.
-    struct ZyxLess {
-        bool operator()(const CellPos& a, const CellPos& b) const {
-            return std::tie(a.z, a.y, a.x) < std::tie(b.z, b.y, b.x);
-        }
-    };
-    std::set<CellPos, ZyxLess> emitters_;
     std::uint64_t generation_ = 0;
     std::optional<std::uint64_t> meshedGeneration_;  // the generation buildMesh last meshed
 };

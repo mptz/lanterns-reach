@@ -43,12 +43,12 @@ struct Game {
     bool use(Hand h, bool secondary, const Camera& camera) {
         const PlannedEdit p = plan(h, secondary, camera);
         const std::size_t changed = world.apply(p.edits).changed;
-        afterCommit(hands.bar(h).held(), secondary, p, changed, settings);
+        afterCommit(hands.bar(h).held(), secondary, p, changed, settings, registry.states());
         return changed > 0;
     }
 
     void pick(const Camera& camera) {
-        if (const auto t = aim(camera)) hands.bar(hands.main()).pick(t->hit.state.type);
+        if (const auto t = aim(camera)) hands.bar(hands.main()).pick(registry.states().type(t->hit.state));
     }
 
     const Item* mainItem() const { return hands.bar(hands.main()).held(); }

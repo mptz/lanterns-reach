@@ -41,7 +41,9 @@
 
 // The shipped block definitions, loaded once.
 const BlockRegistry& registry();
-BlockState solidState();               // stone, identity orientation
+StateTable& testStates();          // the registry's state table
+StateId stateOf(const char* name, orient::Rot orientation = orient::kIdentity);  // a shipped block's state
+StateId solidState();               // stone, identity orientation
 BlockTypeId typeOf(const char* name);  // a shipped block type by name
 bool near(double a, double b);         // |a − b| < 1e-9
 
@@ -54,10 +56,10 @@ std::optional<ToolTarget> aim(const WorldQuery& w, WorldPos eye, WorldPos at);
 // canonical states (every type times its canonical orientations), and beyond
 // that synthetic states (types past the registry), which are fine for
 // storage, probes, raycasts and digests but can't be meshed.
-BlockState testState(std::uint32_t k);
+StateId testState(std::uint32_t k);
 std::uint32_t validStateCount();
 
-using Cells = std::vector<BlockState>;  // one per cell, in brickCellIndex order
+using Cells = std::vector<StateId>;  // one per cell, in brickCellIndex order
 glm::ivec3 localOfIndex(std::uint32_t cell);
 std::uint64_t oracleDigest(const Cells& cells);
 // Content with exactly n distinct states (n ≤ 2¹⁸), spatially structured (z
@@ -71,7 +73,6 @@ Cells distinctContent(std::uint32_t n, std::uint32_t base);
 void fillChunk(Chunk& data, const Cells& cells, bool finish);
 
 // What meshing needs besides cells: the registry and its appearance table.
-const AppearanceTable& testAppearance();
 MeshContext testContext();
 
 // A mesh as its multiset of unit faces (cell, direction, payload, which mesh),

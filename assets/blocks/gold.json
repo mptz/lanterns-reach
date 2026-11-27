@@ -1,3 +1,3 @@
-{ "name": "gold", "symmetry": "uniform",
+{ "ulid": "01M8F3N34M3986D3R50903C7NM", "name": "gold", "symmetry": "uniform",
   "textures": { "+z": "gold.png" },
   "roughness": 0.3, "metallic": 1.0 }

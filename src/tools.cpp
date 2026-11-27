@@ -40,7 +40,7 @@ const char* placementModeName(PlacementMode m) {
 constexpr std::array<std::string_view, 4> kSoftMaterials{"dirt", "grass", "sand", "gravel"};
 
 bool isSoft(const BlockRegistry& registry, BlockTypeId t) {
-    if (t == BlockState::kAirType) return false;
+    if (t == kAirType) return false;
     const std::string& n = registry.def(t).name;
     return std::find(kSoftMaterials.begin(), kSoftMaterials.end(), n) != kSoftMaterials.end();
 }
@@ -50,7 +50,7 @@ orient::Rot inferredOrientation(BlockTypeId type, const ToolTarget& t, const Blo
     const glm::ivec3 f = placement::snapPerpendicular(t.eye - t.hit.point, n);
     const WorldPos faceCenter = cellCenter(t.hit.cell) + glm::dvec3(n) * 0.5;
     const glm::dvec2 uv = placement::faceCoords(t.hit.point - faceCenter, n);
-    return registry.state(type, placement::placementRotation(registry.def(type).symmetry, n, f, uv)).orientation;
+    return registry.states().orientation(registry.state(type, placement::placementRotation(registry.def(type).symmetry, n, f, uv)));
 }
 
 orient::Rot placementOrientation(BlockTypeId type, const ToolTarget& t, const ToolContext& ctx) {
@@ -75,7 +75,8 @@ std::uint64_t placementHash(const CellPos& cell, std::uint32_t containerId, std:
 
 bool hasSecondaryAction(const Item* item) { return item && item->kind == Item::Kind::Wrench; }
 
-void afterCommit(const Item* item, bool secondary, const PlannedEdit& plan, std::size_t changed, ToolSettings& settings) {
+void afterCommit(const Item* item, bool secondary, const PlannedEdit& plan, std::size_t changed, ToolSettings& settings,
+                 const StateTable& states) {
     (void)secondary;  // a container has no secondary action, so Shift+click commits like a click
     if (!item || item->kind != Item::Kind::Container || changed == 0) return;
     ContainerState& box = settings.container;
@@ -83,7 +84,7 @@ void afterCommit(const Item* item, bool secondary, const PlannedEdit& plan, std:
     if (!box.consume) return;
     for (const Edit& e : plan.edits.edits)
         for (ContainerSlot& s : box.slots)
-            if (s.type == e.state.type && s.count > 0) {
+            if (s.type == states.type(e.state) && s.count > 0) {
                 --s.count;
                 break;
             }
@@ -94,7 +95,7 @@ bool rotateGhost(BlockTypeId type, const ToolTarget& t, bool counterclockwise, c
     if (t.hit.normal == glm::ivec3(0)) return false;
     const auto it = latch.find(type);
     const Rot current = it != latch.end() ? it->second : inferredOrientation(type, t, registry);
-    latch[type] = registry.state(type, turnAbout(current, t.hit.normal, counterclockwise)).orientation;
+    latch[type] = registry.states().orientation(registry.state(type, turnAbout(current, t.hit.normal, counterclockwise)));
     return true;
 }
 
@@ -130,7 +131,7 @@ void tipGhost(BlockTypeId type, const ToolTarget& t, const glm::dvec3& cameraRig
     const glm::ivec3 axis = t.hit.normal == glm::ivec3(0) ? nearestAxis(cameraRight) : tipAxis(t.hit.normal, cameraRight);
     // A right-handed quarter turn about screen-right brings the top toward
     // the viewer, so "away" is the negative turn: turnAbout's clockwise.
-    latch[type] = registry.state(type, turnAbout(current, axis, /*counterclockwise=*/!away)).orientation;
+    latch[type] = registry.states().orientation(registry.state(type, turnAbout(current, axis, /*counterclockwise=*/!away)));
 }
 
 PlannedEdit planEdit(const Item* item, bool secondary, const std::optional<ToolTarget>& target,
@@ -151,18 +152,18 @@ PlannedEdit planEdit(const Item* item, bool secondary, const std::optional<ToolT
 
     switch (kind) {
         case Item::Kind::Pick: {
-            out.edits.edits.push_back({hit.cell, BlockState::air()});
+            out.edits.edits.push_back({hit.cell, kAirState});
             out.cut = 1;
-            out.action = "break " + blockName(reg, hit.state.type) + breaker;
+            out.action = "break " + blockName(reg, reg.states().type(hit.state)) + breaker;
             return out;
         }
         case Item::Kind::Block: {
             const CellPos cell = hit.cell + n;
-            if (n == glm::ivec3(0) || !world.editable(cell) || !world.probe(cell).isAir()) {
+            if (n == glm::ivec3(0) || !world.editable(cell) || world.probe(cell) != kAirState) {
                 out.action = "place " + blockName(reg, item->block) + " (no room)";
                 return out;
             }
-            out.edits.edits.push_back({cell, {item->block, placementOrientation(item->block, *target, ctx)}});
+            out.edits.edits.push_back({cell, reg.state(item->block, placementOrientation(item->block, *target, ctx))});
             out.fill = 1;
             out.action = "place " + blockName(reg, item->block);
             return out;
@@ -172,9 +173,9 @@ PlannedEdit planEdit(const Item* item, bool secondary, const std::optional<ToolT
                 out.action = "wrench: no face";
                 return out;
             }
-            const BlockState turned = reg.state(hit.state.type, turnAbout(hit.state.orientation, n, secondary));
+            const StateId turned = reg.state(reg.states().type(hit.state), turnAbout(reg.states().orientation(hit.state), n, secondary));
             out.edits.edits.push_back({hit.cell, turned});
-            out.action = std::string("wrench: turn ") + blockName(reg, hit.state.type) + (secondary ? " ccw" : " cw") +
+            out.action = std::string("wrench: turn ") + blockName(reg, reg.states().type(hit.state)) + (secondary ? " ccw" : " cw") +
                          (turned == hit.state ? " (no change: its own symmetry)" : "");
             return out;
         }
@@ -187,10 +188,10 @@ PlannedEdit planEdit(const Item* item, bool secondary, const std::optional<ToolT
                     const std::int64_t x = hit.cell.x + dx, y = hit.cell.y + dy;
                     for (int dz = 1; dz <= kShovelReach; ++dz) {  // above h: cut soft, leave rock
                         const CellPos c{x, y, h + dz};
-                        const BlockState s = world.probe(c);
-                        if (s.isAir() || !world.editable(c)) continue;
-                        if (isSoft(reg, s.type)) {
-                            out.edits.edits.push_back({c, BlockState::air()});
+                        const StateId s = world.probe(c);
+                        if (s == kAirState || !world.editable(c)) continue;
+                        if (isSoft(reg, reg.states().type(s))) {
+                            out.edits.edits.push_back({c, kAirState});
                             ++out.cut;
                         } else {
                             ++out.blocked;
@@ -198,8 +199,8 @@ PlannedEdit planEdit(const Item* item, bool secondary, const std::optional<ToolT
                     }
                     for (int dz = 0; dz < kShovelReach && canFill; ++dz) {  // at/below h: fill down to the first solid
                         const CellPos c{x, y, h - dz};
-                        if (!world.editable(c) || !world.probe(c).isAir()) break;
-                        out.edits.edits.push_back({c, {fill, orient::kIdentity}});
+                        if (!world.editable(c) || world.probe(c) != kAirState) break;
+                        out.edits.edits.push_back({c, reg.state(fill, orient::kIdentity)});
                         ++out.fill;
                     }
                 }
@@ -216,7 +217,7 @@ PlannedEdit planEdit(const Item* item, bool secondary, const std::optional<ToolT
             auto available = [&] {
                 std::vector<std::size_t> slots;
                 for (std::size_t i = 0; i < counts.size(); ++i)
-                    if (counts[i].type != BlockState::kAirType && counts[i].count > 0) slots.push_back(i);
+                    if (counts[i].type != kAirType && counts[i].count > 0) slots.push_back(i);
                 return slots;
             };
             const std::string label = std::string("container (") + placementModeName(box.mode) + "): ";
@@ -227,9 +228,9 @@ PlannedEdit planEdit(const Item* item, bool secondary, const std::optional<ToolT
             std::optional<BlockTypeId> only;
             if (box.mode == PlacementMode::MatchTarget) {
                 for (std::size_t i : available())
-                    if (counts[i].type == hit.state.type) only = counts[i].type;
+                    if (counts[i].type == reg.states().type(hit.state)) only = counts[i].type;
                 if (!only) {
-                    out.action = label + "holds no " + blockName(reg, hit.state.type);
+                    out.action = label + "holds no " + blockName(reg, reg.states().type(hit.state));
                     return out;
                 }
             }
@@ -242,7 +243,7 @@ PlannedEdit planEdit(const Item* item, bool secondary, const std::optional<ToolT
             for (int b = lo; b < lo + N; ++b)
                 for (int a = lo; a < lo + N; ++a) {
                     const CellPos c = base + R * a + U * b;
-                    if (!world.editable(c) || !world.probe(c).isAir()) continue;
+                    if (!world.editable(c) || world.probe(c) != kAirState) continue;
                     const std::vector<std::size_t> avail = available();
                     std::optional<std::size_t> slot;
                     if (box.mode == PlacementMode::MatchTarget) {
@@ -277,11 +278,11 @@ PlannedEdit planEdit(const Item* item, bool secondary, const std::optional<ToolT
                     }
                     const BlockTypeId type = counts[*slot].type;
                     if (box.consume) --counts[*slot].count;
-                    out.edits.edits.push_back({c, {type, placementOrientation(type, *target, ctx)}});
+                    out.edits.edits.push_back({c, reg.state(type, placementOrientation(type, *target, ctx))});
                     ++out.fill;
                 }
             if (out.fill == 1) {
-                out.action = label + "place " + blockName(reg, out.edits.edits.front().state.type);
+                out.action = label + "place " + blockName(reg, reg.states().type(out.edits.edits.front().state));
             } else {
                 out.action = label + "place " + std::to_string(out.fill);
                 if (out.fill == 0 && out.unaffordable.empty()) out.action = label + "no room";

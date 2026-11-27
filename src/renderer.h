@@ -76,7 +76,7 @@ struct FrameOptions {
 // orientation read exactly as they'll be placed.
 struct GhostCell {
     CellPos cell;
-    BlockState state;
+    StateId state;
 };
 
 // A caller-supplied overlay line in authoritative f64 coordinates (rebased

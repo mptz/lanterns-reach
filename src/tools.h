@@ -27,7 +27,7 @@ inline constexpr int kPlacementModeCount = 4;
 const char* placementModeName(PlacementMode m);
 
 struct ContainerSlot {
-    BlockTypeId type = BlockState::kAirType;  // air = empty slot
+    BlockTypeId type = kAirType;  // air = empty slot
     std::uint32_t count = 0;                  // weights for CountWeighted; not consumed in creative
 };
 
@@ -51,7 +51,7 @@ struct ContainerState {
 };
 
 struct ToolSettings {
-    BlockTypeId shovelFill = BlockState::kAirType;  // soft materials only
+    BlockTypeId shovelFill = kAirType;  // soft materials only
     ContainerState container;
 };
 
@@ -97,7 +97,7 @@ PlannedEdit planEdit(const Item* item, bool secondary, const std::optional<ToolT
 // the placement changed the world (`changed` cells), so an empty or
 // rejected edit set uses no roll and no pick is skipped unseen.
 void afterCommit(const Item* item, bool secondary, const PlannedEdit& plan, std::size_t changed,
-                 ToolSettings& settings);
+                 ToolSettings& settings, const StateTable& states);
 
 // --- pieces, exposed for the X ghost and tests ----------------------------------
 

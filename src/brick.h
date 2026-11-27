@@ -10,8 +10,9 @@
 // indices, widths or the palette (core/opaque-chunk-queries).
 //
 // Generic over its palette entry type E: E is regular and has a
-// `std::uint64_t canonicalEncoding(const E&)` found by argument-dependent
-// lookup (the digest and the reverse lookup hash it).
+// `std::uint64_t lookupKey(const E&)` found by argument-dependent lookup (the
+// owner's reverse lookup hashes it, in-process only). The digest's per-entry
+// term comes from the owner, which knows what an entry means.
 //
 // A Brick is never resized in place. Its palette array has a fixed physical
 // capacity, set when the Brick is built and independent of the index width
@@ -27,6 +28,7 @@
 #include <bit>
 #include <cstddef>
 #include <cstdint>
+#include <functional>
 #include <memory>
 #include <vector>
 
@@ -80,8 +82,10 @@ public:
     virtual const E& at(std::uint32_t cell) const = 0;
     // Storage width in bits; 0 is uniform.
     virtual unsigned width() const = 0;
-    // The content digest by a full pass (data/content-digest).
-    virtual std::uint64_t fullDigest() const = 0;
+    // The content digest by a full pass (data/content-digest), with `term`
+    // giving each entry's H(s) (asked once per palette entry, not per cell).
+    using DigestTerm = std::function<std::uint64_t(const E&)>;
+    virtual std::uint64_t fullDigest(const DigestTerm& term) const = 0;
     virtual std::size_t indexBytes() const = 0;
     virtual std::size_t paletteBytes() const = 0;
     virtual std::unique_ptr<Brick> clone() const = 0;
@@ -93,7 +97,7 @@ public:
     explicit UniformBrick(const E& s) : s_(s) {}
     const E& at(std::uint32_t) const override { return s_; }
     unsigned width() const override { return 0; }
-    std::uint64_t fullDigest() const override { return mulMod(digestStateHash(canonicalEncoding(s_)), digestK()); }
+    std::uint64_t fullDigest(const typename Brick<E>::DigestTerm& term) const override { return mulMod(term(s_), digestK()); }
     std::size_t indexBytes() const override { return 0; }
     std::size_t paletteBytes() const override { return sizeof(E); }
     std::unique_ptr<Brick<E>> clone() const override { return std::make_unique<UniformBrick>(*this); }
@@ -218,9 +222,9 @@ public:
         }
     }
 
-    std::uint64_t fullDigest() const override {
+    std::uint64_t fullDigest(const typename Brick<E>::DigestTerm& term) const override {
         std::vector<std::uint64_t> h(this->entries());
-        for (std::size_t s = 0; s < h.size(); ++s) h[s] = digestStateHash(canonicalEncoding(this->entry(static_cast<std::uint32_t>(s))));
+        for (std::size_t s = 0; s < h.size(); ++s) h[s] = term(this->entry(static_cast<std::uint32_t>(s)));
         std::uint64_t d = 0;
         for (std::uint32_t c = 0; c < kBrickCells; ++c) d = addMod(d, mulMod(digestWeight(c), h[indexAt(c)]));
         return d;

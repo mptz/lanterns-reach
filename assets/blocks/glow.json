@@ -1,3 +1,3 @@
-{ "name": "glow", "symmetry": "uniform",
+{ "ulid": "01M8F3N34M3986D3R50903C7NK", "name": "glow", "symmetry": "uniform",
   "textures": { "+z": "glow.png" },
   "translucency": { "emission": [3.0, 2.4, 1.2] } }

@@ -90,9 +90,9 @@ void testScenarioIncludeAndScene() {
     std::vector<std::string> warnings;
     g.apply(sceneEdits(*base, registry(), &warnings));
     CHECK(warnings.empty());
-    CHECK(g.probe({0, 0, 0}).type == typeOf("stone") && g.probe({25, 25, 15}).type == typeOf("grass"));
-    CHECK(g.probe({24, 6, 15}).isAir() && g.probe({27, 5, 18}).type == typeOf("stone"));  // the mound's dip and rock
-    CHECK(g.probe({16, 31, 16}).type == typeOf("dirt") && g.probe({0, 15, 18}).type == typeOf("stone_brick"));
+    CHECK(testStates().type(g.probe({0, 0, 0})) == typeOf("stone") && testStates().type(g.probe({25, 25, 15})) == typeOf("grass"));
+    CHECK(g.probe({24, 6, 15}) == kAirState && testStates().type(g.probe({27, 5, 18})) == typeOf("stone"));  // the mound's dip and rock
+    CHECK(testStates().type(g.probe({16, 31, 16})) == typeOf("dirt") && testStates().type(g.probe({0, 15, 18})) == typeOf("stone_brick"));
     CHECK(g.probe({12, 14, 16}) == registry().state(typeOf("log"), rotationAbout({0, 1, 0}, 90)));
     CHECK(base->absorbance.size() == 5);
     // A missing block type is skipped with one warning.

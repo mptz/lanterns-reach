@@ -157,7 +157,7 @@ void hud(const Game& game, const std::optional<RayHit>& target, const std::array
             ImGui::TextUnformatted("orientation chosen (X held)");
         // No coordinates here (input/no-player-coordinates): just the block's
         // name. Cell, face, canonical index and distance are in F6.
-        if (target) ImGui::Text("target: %s", game.registry.def(target->state.type).name.c_str());
+        if (target) ImGui::Text("target: %s", game.registry.def(game.registry.states().type(target->state)).name.c_str());
         else ImGui::TextDisabled("target: none in reach");
     }
     ImGui::End();
@@ -267,14 +267,14 @@ void inputOverlay(const IntentionFrame& f, const FiredLog& log, double now) {
 // and its symmetry keyword + canonical index at the block.
 void orientationOverlay(const RayHit& target, const BlockRegistry& registry, const Renderer& renderer,
                         const Camera& camera, std::vector<DebugLine>& lines) {
-    const orient::Mat3i& m = orient::group().matrix[target.state.orientation];
+    const orient::Mat3i& m = orient::group().matrix[registry.states().orientation(target.state)];
     const WorldPos c = cellCenter(target.cell);
     const glm::vec3 colors[3] = {{1.0f, 0.05f, 0.05f}, {0.05f, 1.0f, 0.05f}, {0.1f, 0.25f, 1.0f}};
     for (std::size_t axis = 0; axis < 3; ++axis) {  // column `axis` = where local axis `axis` points
         const glm::dvec3 dir(m[0][axis], m[1][axis], m[2][axis]);
         lines.push_back({c, c + dir * 1.0, colors[axis]});
     }
-    const BlockDef& def = registry.def(target.state.type);
+    const BlockDef& def = registry.def(registry.states().type(target.state));
     const glm::vec4 clip = renderer.viewProjection(camera) *
                            glm::vec4(rebase(c + glm::dvec3(0.0, 0.0, 0.85), camera.position).v, 1.0f);
     if (clip.w <= Camera::kNear) return;
@@ -282,7 +282,7 @@ void orientationOverlay(const RayHit& target, const BlockRegistry& registry, con
     const ImVec2 at((clip.x / clip.w * 0.5f + 0.5f) * display.x, (clip.y / clip.w * 0.5f + 0.5f) * display.y);
     char text[96];
     std::snprintf(text, sizeof text, "%s\n%s #%d", def.name.c_str(), orient::symmetry(def.symmetry).keyword,
-                  target.state.orientation);
+                  registry.states().orientation(target.state));
     ImDrawList* draw = ImGui::GetForegroundDrawList();
     const ImVec2 size = ImGui::CalcTextSize(text);
     const ImVec2 min(at.x - size.x * 0.5f - 3.0f, at.y - size.y - 3.0f), max(at.x + size.x * 0.5f + 3.0f, at.y);
@@ -293,7 +293,8 @@ void orientationOverlay(const RayHit& target, const BlockRegistry& registry, con
 // F6: the ray, the hit face's outline and normal, the hit point, and the
 // hit-point regions the placement rule reads (quadrants → nearest vertex,
 // diagonals → nearest edge), with the selected vertex and edge highlighted.
-void targetingOverlay(const Camera& camera, const std::optional<RayHit>& target, std::vector<DebugLine>& lines) {
+void targetingOverlay(const Camera& camera, const std::optional<RayHit>& target, const StateTable& states,
+                      std::vector<DebugLine>& lines) {
     const glm::dvec3 fwd = camera.forward();
     const WorldPos end = target ? target->point : camera.position + fwd * kReach;
     lines.push_back({camera.position + glm::dvec3(0.0, 0.0, -0.05), end, {1.0f, 1.0f, 1.0f}});
@@ -311,7 +312,7 @@ void targetingOverlay(const Camera& camera, const std::optional<RayHit>& target,
             ImGui::Text("cell (%lld, %lld, %lld)", static_cast<long long>(target->cell.x),
                         static_cast<long long>(target->cell.y), static_cast<long long>(target->cell.z));
             ImGui::Text("face %s", face < 0 ? "inside" : orient::kFaceNames[static_cast<std::size_t>(face)]);
-            ImGui::Text("canonical orientation #%d", target->state.orientation);
+            ImGui::Text("canonical orientation #%d", states.orientation(target->state));
             ImGui::Text("distance %.2f blocks (reach %.0f)", target->distance, kReach);
         } else {
             ImGui::Text("no target within %.0f blocks", kReach);
@@ -383,9 +384,9 @@ void outlineCell(const CellPos& c, const glm::vec3& color, std::vector<DebugLine
 // after), and the tool settings (shovel fill, the container, the latch).
 void editSetOverlay(Game& game, const PlannedEdit& plan) {
     const BlockRegistry& reg = game.registry;
-    auto stateText = [&](BlockState st) {
-        if (st.isAir()) return std::string("air");
-        return reg.def(st.type).name + " #" + std::to_string(st.orientation);
+    auto stateText = [&](StateId st) {
+        if (st == kAirState) return std::string("air");
+        return reg.def(reg.states().type(st)).name + " #" + std::to_string(reg.states().orientation(st));
     };
     ImGui::SetNextWindowPos(ImVec2(10.0f, 10.0f), ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowBgAlpha(0.8f);
@@ -405,9 +406,9 @@ void editSetOverlay(Game& game, const PlannedEdit& plan) {
         ImGui::Separator();
         // Tool settings (creative unless "consume counts" is on).
         auto typeCombo = [&](const char* label, BlockTypeId& t, bool softOnly) {
-            const char* current = t == BlockState::kAirType ? "(empty)" : reg.def(t).name.c_str();
+            const char* current = t == kAirType ? "(empty)" : reg.def(t).name.c_str();
             if (ImGui::BeginCombo(label, current)) {
-                if (!softOnly && ImGui::Selectable("(empty)", t == BlockState::kAirType)) t = BlockState::kAirType;
+                if (!softOnly && ImGui::Selectable("(empty)", t == kAirType)) t = kAirType;
                 for (std::size_t i = 0; i < reg.defs().size(); ++i) {
                     const auto id = static_cast<BlockTypeId>(i);
                     if (softOnly && !isSoft(reg, id)) continue;

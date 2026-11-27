@@ -9,17 +9,17 @@ namespace {
 using TA = ChunkTestAccess;
 
 void testPromotion() {
-    Chunk d;
-    CHECK(TA::isUniform(d) && d.uniformState() == BlockState::air());
-    CHECK(!d.set({1, 2, 3}, BlockState::air()) && TA::isUniform(d));  // no change
+    Chunk d(testStates());
+    CHECK(TA::isUniform(d) && d.uniformState() == kAirState);
+    CHECK(!d.set({1, 2, 3}, kAirState) && TA::isUniform(d));  // no change
     CHECK(d.set({1, 2, 3}, testState(4)));
     CHECK(TA::width(d) == 1 && TA::paletteSize(d) == 2 && !d.uniformState());  // the first second state: 1 bit
-    CHECK(d.get({1, 2, 3}) == testState(4) && d.get({0, 0, 0}).isAir());
+    CHECK(d.get({1, 2, 3}) == testState(4) && d.get({0, 0, 0}) == kAirState);
     // Editing back leaves a dead entry: still a palette (an edit never goes back to uniform).
-    CHECK(d.set({1, 2, 3}, BlockState::air()));
+    CHECK(d.set({1, 2, 3}, kAirState));
     CHECK(TA::width(d) == 1 && TA::liveEntries(d) == 1 && TA::paletteSize(d) == 2);
     TA::compact(d);
-    CHECK(TA::isUniform(d) && d.uniformState() == BlockState::air());
+    CHECK(TA::isUniform(d) && d.uniformState() == kAirState);
 }
 
 // Content with exactly n distinct states fills a palette at width w exactly
@@ -28,7 +28,7 @@ void testGrowthAtEveryBoundary() {
     for (unsigned w : {1u, 2u, 4u, 8u}) {
         const std::uint32_t n = std::uint32_t{1} << w;
         Cells cells = distinctContent(n, 1);
-        Chunk d;
+        Chunk d(testStates());
         fillChunk(d, cells, true);
         TA::forceWidth(d, w);  // a repack: the n entries fill a palette at width w exactly
         CHECK(TA::width(d) == w && TA::paletteSize(d) == n && TA::paletteFull(d));
@@ -47,7 +47,7 @@ void testGrowthAtEveryBoundary() {
 // 16 → 32 bits: 2¹⁶ entries fill a 16-bit palette, one more state grows it.
 // The synthetic states are fine for storage.
 void testGrowthTo32Bits() {
-    Chunk d;
+    Chunk d(testStates());
     for (std::uint32_t k = 1; k < 65536; ++k) d.set(localOfIndex(k), testState(k));
     CHECK(TA::width(d) == 16 && TA::paletteSize(d) == 65536 && TA::paletteFull(d));
     const std::uint64_t grew = TA::growths(d);
@@ -55,13 +55,13 @@ void testGrowthTo32Bits() {
     CHECK(TA::width(d) == 32 && TA::growths(d) == grew + 1 && TA::paletteSize(d) == 65537);
     CHECK(TA::paletteCapacity(d) == 131072);  // twice the 2¹⁶ it was full at
     CHECK(d.get(localOfIndex(70000)) == testState(65536) && d.get(localOfIndex(65535)) == testState(65535));
-    CHECK(d.get(localOfIndex(65536)).isAir());
+    CHECK((d.get(localOfIndex(65536)) == kAirState));
 }
 
 // A full palette with a dead entry grows; nothing is reclaimed by an edit.
 void testFullWithDeadEntryGrows() {
     Cells cells = distinctContent(4, 10);
-    Chunk d;
+    Chunk d(testStates());
     fillChunk(d, cells, true);
     CHECK(TA::width(d) == 4 && TA::paletteSize(d) == 4);  // 4 entries > 7/8 of a 2-bit palette: 4 bits
     TA::forceWidth(d, 2);  // a 2-bit palette is full at 4 entries (a repack: entries fit)
@@ -84,7 +84,7 @@ void testFullWithDeadEntryGrows() {
 void testDeadEntryReuse() {
     Cells cells = distinctContent(3, 20);
     cells[0] = testState(29);  // state 29 only at cell 0
-    Chunk d;
+    Chunk d(testStates());
     fillChunk(d, cells, true);
     CHECK(TA::paletteSize(d) == 4);
     d.set({0, 0, 0}, testState(20));  // 29 is now dead
@@ -99,7 +99,7 @@ void testDeadEntryReuse() {
 // palette at its width until an explicit compaction.
 void testEditsNeverCompact() {
     Cells cells = distinctContent(300, 1);  // 16 bits
-    Chunk d;
+    Chunk d(testStates());
     fillChunk(d, cells, true);
     CHECK(TA::width(d) == 16);
     for (std::uint32_t c = 0; c < kBrickCells; ++c)
@@ -110,7 +110,7 @@ void testEditsNeverCompact() {
     for (std::uint32_t c = 0; c < kBrickCells; ++c) d.set(localOfIndex(c), testState(2));
     CHECK(!TA::isUniform(d) && TA::width(d) == 4);
     TA::compact(d);
-    CHECK(TA::isUniform(d) && d.digest() == mulMod(digestStateHash(canonicalEncoding(testState(2))), digestK()));
+    CHECK(TA::isUniform(d) && d.digest() == mulMod(testStates().digestTerm(testState(2)), digestK()));
 }
 
 // Compaction picks the narrowest width at which the live entries sit at or
@@ -132,7 +132,7 @@ void testLowWaterMark() {
 // width; at the limit it moves to the next width, with twice the capacity.
 void testGrowthWithinWidth() {
     Cells cells = distinctContent(20, 1);
-    Chunk d;
+    Chunk d(testStates());
     fillChunk(d, cells, true);
     CHECK(TA::width(d) == 8 && TA::paletteSize(d) == 20 && TA::paletteCapacity(d) == 32);
     std::uint32_t k = 21;
@@ -155,9 +155,9 @@ void testGrowthWithinWidth() {
 // append doesn't, and growth builds another Brick, leaving the old one intact
 // (what a reader holding it during the grace period relies on).
 void testPaletteNeverMoves() {
-    auto p = makePaletteBrick<BlockState>(8, 32);
+    auto p = makePaletteBrick<StateId>(8, 32);
     for (std::uint32_t k = 0; k < 20; ++k) p->append(testState(k));
-    const BlockState* first = &p->entry(0);
+    const StateId* first = &p->entry(0);
     for (std::uint32_t k = 20; k < 32; ++k) p->append(testState(k));
     CHECK(&p->entry(0) == first && p->full());
     p->setIndex(5, 7);
@@ -188,12 +188,12 @@ void testBulkFill() {
     CHECK(TA::width(d) == brickCompactedWidth(live) && live > 1);
     // One state remains: uniform.
     Cells all(kBrickCells, testState(3));
-    Chunk f;
+    Chunk f(testStates());
     fillChunk(f, all, true);
     CHECK(TA::isUniform(f));
     Cells two = all;
     two[7] = testState(4);
-    Chunk g;
+    Chunk g(testStates());
     fillChunk(g, two, true);
     CHECK(TA::width(g) == 2 && TA::paletteSize(g) == 2);  // 2 > 7/8 of a 1-bit palette
 }
@@ -214,7 +214,7 @@ void testUniformMesh() {
 // The reverse lookup agrees on either side of its scan threshold, and the
 // table is built only above it.
 void testReverseLookupThreshold() {
-    Chunk d;
+    Chunk d(testStates());
     const std::uint32_t top = 3 * kReverseScanMax;
     for (std::uint32_t k = 1; k <= top; ++k) {
         d.set(localOfIndex(1000 + k), testState(k));
@@ -234,7 +234,7 @@ void testReverseLookupThreshold() {
 // A palette past 2¹⁸ entries at 32 bits (dead ones included): the capacity
 // doubles by swapping Bricks, the width stays. One cell, rewritten.
 void testThirtyTwoBits() {
-    Chunk d;
+    Chunk d(testStates());
     d.set({0, 0, 0}, testState(1));
     d.set({1, 0, 0}, testState(2));
     TA::forceWidth(d, 32);
@@ -262,7 +262,7 @@ void testThirtyTwoBits() {
 void testFatalChecks() {
     const FatalHandler saved = fatalHandler();
     fatalHandler() = throwingFatalHandler;
-    auto p = makePaletteBrick<BlockState>(1);
+    auto p = makePaletteBrick<StateId>(1);
     p->append(testState(0));
     p->append(testState(1));
     bool pastPalette = false, fullAppend = false;

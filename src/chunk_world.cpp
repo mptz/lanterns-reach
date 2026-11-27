@@ -8,12 +8,12 @@
 
 #include "chunk_mesh.h"
 
-ChunkWorld::ChunkWorld(const BlockRegistry& registry) : registry_(registry), appearance_(registry) {}
+ChunkWorld::ChunkWorld(const BlockRegistry& registry) : registry_(registry), chunk_(registry.states(), kChunk) {}
 
 bool ChunkWorld::contains(const CellPos& c) const { return chunkOf(c) == kChunk.coord; }
 
-BlockState ChunkWorld::probe(const CellPos& cell) const {
-    return contains(cell) ? chunk_.get(localOf(cell)) : BlockState::air();
+StateId ChunkWorld::probe(const CellPos& cell) const {
+    return contains(cell) ? chunk_.get(localOf(cell)) : kAirState;
 }
 
 std::vector<ChunkId> ChunkWorld::dirtyChunks() const {
@@ -28,12 +28,7 @@ ApplyResult ChunkWorld::apply(const EditSet& edits) {
             result.rejected.push_back(e.cell);
             continue;
         }
-        const glm::ivec3 local = localOf(e.cell);
-        const BlockState old = chunk_.get(local);
-        if (!chunk_.set(local, e.state)) continue;
-        ++result.changed;
-        if (const glm::vec3 was = emission(old); was.x > 0.0f || was.y > 0.0f || was.z > 0.0f) emitters_.erase(e.cell);
-        if (const glm::vec3 now = emission(e.state); now.x > 0.0f || now.y > 0.0f || now.z > 0.0f) emitters_.insert(e.cell);
+        if (chunk_.set(localOf(e.cell), e.state)) ++result.changed;
     }
     if (result.changed) ++generation_;
     return result;
@@ -43,24 +38,13 @@ std::optional<RayHit> ChunkWorld::raycast(const WorldPos& origin, const glm::dve
     return chunk_.raycast(origin, dir, maxDistance);
 }
 
-glm::vec3 ChunkWorld::emission(const BlockState& s) const {
-    if (s.isAir()) return glm::vec3(0.0f);
-    const BlockDef& def = registry_.def(s.type);
-    return def.translucent() ? def.translucency->emission : def.material.emissive;
-}
-
-std::vector<Emitter> ChunkWorld::emitters() const {
-    std::vector<Emitter> out;
-    out.reserve(emitters_.size());
-    for (const CellPos& c : emitters_) out.push_back({c, emission(chunk_.get(localOf(c)))});
-    return out;
-}
+std::vector<Emitter> ChunkWorld::emitters() const { return chunk_.emitters(); }
 
 WorldMesh ChunkWorld::buildMesh(const ChunkId& id) {
     WorldMesh mesh;
-    const MeshContext context{registry_, appearance_};
+    const MeshContext context{registry_, registry_.states()};
     if (id != kChunk) {  // every chunk but the one is air
-        Chunk(id).meshInto(context, mesher_, mesh);
+        Chunk(registry_.states(), id).meshInto(context, mesher_, mesh);
         return mesh;
     }
     meshedGeneration_ = generation_;

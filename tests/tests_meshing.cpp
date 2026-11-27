@@ -12,7 +12,6 @@ namespace {
 using namespace orient;
 using TA = ChunkTestAccess;
 
-const AppearanceTable& appearance() { return testAppearance(); }
 MeshContext context() { return testContext(); }
 
 bool wellFormed(const std::vector<UnitFace>& faces) {
@@ -40,7 +39,7 @@ std::size_t faceSetsMatch(ChunkWorld& w) {
     return want.size();
 }
 
-ChunkWorld worldOf(const BlockState& s, std::initializer_list<CellPos> cells) {
+ChunkWorld worldOf(const StateId& s, std::initializer_list<CellPos> cells) {
     ChunkWorld w(registry());
     EditSet e;
     for (const CellPos& c : cells) e.edits.push_back({c, s});
@@ -48,7 +47,7 @@ ChunkWorld worldOf(const BlockState& s, std::initializer_list<CellPos> cells) {
     return w;
 }
 
-BlockState kGlass() { return {typeOf("glass_red"), kIdentity}; }
+StateId kGlass() { return registry().state(typeOf("glass_red"), orient::kIdentity); }
 
 // --- the bit-matrix transpose ------------------------------------------------
 
@@ -88,7 +87,7 @@ void testBoundaryFaces() {
         cells.push_back({31, a, 31});
         cells.push_back({31, 31, a});
     }
-    for (const BlockState& s : {solidState(), kGlass()}) {
+    for (const StateId& s : {solidState(), kGlass()}) {
         ChunkWorld w = worldOf(s, {});
         EditSet e;
         for (const CellPos& c : cells) e.edits.push_back({c, s});
@@ -161,7 +160,7 @@ void testPlanesAndCheckerboard() {
 // --- what merges -------------------------------------------------------------
 
 // Cells (0..n−1, 0, 0) with the given states, one per cell: the quads on `face`.
-std::vector<QuadSize> quadsOnFace(const std::vector<BlockState>& states, int face) {
+std::vector<QuadSize> quadsOnFace(const std::vector<StateId>& states, int face) {
     ChunkWorld w(registry());
     EditSet e;
     for (std::size_t i = 0; i < states.size(); ++i) e.edits.push_back({{static_cast<std::int64_t>(i), 0, 0}, states[i]});
@@ -174,15 +173,15 @@ std::vector<QuadSize> quadsOnFace(const std::vector<BlockState>& states, int fac
 }
 
 void testMergeRules() {
-    const auto& table = appearance();
+    const StateTable& table = testStates();
     const BlockTypeId log = typeOf("log");
     // Orientation: a log along x and one along y show the same bark on top but
     // turned differently, so they never merge; two along x do.
-    const BlockState alongX = registry().state(log, rotationAbout({0, 1, 0}, 90));
-    const BlockState alongY = registry().state(log, rotationAbout({1, 0, 0}, 90));
-    const FaceTexture tx = faceTexture(registry(), alongX, orient::PosZ), ty = faceTexture(registry(), alongY, orient::PosZ);
+    const StateId alongX = registry().state(log, rotationAbout({0, 1, 0}, 90));
+    const StateId alongY = registry().state(log, rotationAbout({1, 0, 0}, 90));
+    const FaceTexture tx = faceTexture(testStates(), alongX, orient::PosZ), ty = faceTexture(testStates(), alongY, orient::PosZ);
     CHECK(tx.layer == ty.layer && tx.turn != ty.turn);
-    CHECK(table.id(alongX, orient::PosZ) != table.id(alongY, orient::PosZ));
+    CHECK(table.appearance(alongX, orient::PosZ) != table.appearance(alongY, orient::PosZ));
     CHECK((quadsOnFace({alongX, alongY}, orient::PosZ).size() == 2));
     CHECK((quadsOnFace({alongX, alongX, alongX}, orient::PosZ) == std::vector<QuadSize>{{orient::PosZ, 3, 1}}));
 
@@ -192,10 +191,10 @@ void testMergeRules() {
     for (BlockTypeId t = 0; t < registry().defs().size() && !foundSame; ++t)
         for (int a = 0; a < orient::kRotCount && !foundSame; ++a)
             for (int b = a + 1; b < orient::kRotCount && !foundSame; ++b) {
-                const BlockState sa = registry().state(t, static_cast<orient::Rot>(a)), sb = registry().state(t, static_cast<orient::Rot>(b));
+                const StateId sa = registry().state(t, static_cast<orient::Rot>(a)), sb = registry().state(t, static_cast<orient::Rot>(b));
                 if (sa == sb || registry().def(t).translucent()) continue;
                 for (int f = 2; f < 6 && !foundSame; ++f)
-                    if (table.id(sa, static_cast<orient::Face>(f)) == table.id(sb, static_cast<orient::Face>(f))) {
+                    if (table.appearance(sa, static_cast<orient::Face>(f)) == table.appearance(sb, static_cast<orient::Face>(f))) {
                         foundSame = true;
                         CHECK((quadsOnFace({sa, sb}, f) == std::vector<QuadSize>{{f, 2, 1}}));
                     }
@@ -208,12 +207,12 @@ void testMergeRules() {
         for (BlockTypeId b = a + 1; b < registry().defs().size() && !foundPair; ++b) {
             if (registry().def(a).translucent() || registry().def(b).translucent()) continue;
             for (int f = 0; f < 6 && !foundPair; ++f) {
-                const FacePayload pa = table.payload(table.id({a, kIdentity}, static_cast<orient::Face>(f)));
-                const FacePayload pb = table.payload(table.id({b, kIdentity}, static_cast<orient::Face>(f)));
+                const FacePayload pa = table.payload(table.appearance(registry().state(a, orient::kIdentity), static_cast<orient::Face>(f)));
+                const FacePayload pb = table.payload(table.appearance(registry().state(b, orient::kIdentity), static_cast<orient::Face>(f)));
                 if (pa.layer == pb.layer && pa.texInfo == pb.texInfo && pa.material != pb.material) {
                     foundPair = true;
-                    CHECK(table.id({a, kIdentity}, static_cast<orient::Face>(f)) != table.id({b, kIdentity}, static_cast<orient::Face>(f)));
-                    if (f >= 2) CHECK(quadsOnFace({{a, kIdentity}, {b, kIdentity}}, f).size() == 2);
+                    CHECK(table.appearance(registry().state(a, orient::kIdentity), static_cast<orient::Face>(f)) != table.appearance(registry().state(b, orient::kIdentity), static_cast<orient::Face>(f)));
+                    if (f >= 2) CHECK(quadsOnFace({registry().state(a, orient::kIdentity), registry().state(b, orient::kIdentity)}, f).size() == 2);
                 }
             }
         }
@@ -229,7 +228,7 @@ void testMergeRules() {
     }
     CHECK(random.has_value() && matched.has_value());
     for (const auto t : {random, matched})
-        if (t) CHECK((quadsOnFace(std::vector<BlockState>(8, {*t, kIdentity}), orient::PosZ) == std::vector<QuadSize>{{orient::PosZ, 8, 1}}));
+        if (t) CHECK((quadsOnFace(std::vector<StateId>(8, registry().state(*t, orient::kIdentity)), orient::PosZ) == std::vector<QuadSize>{{orient::PosZ, 8, 1}}));
 }
 
 // Glass against stone keeps its face (it closes the volume for absorbance),
@@ -261,7 +260,7 @@ void testFrameBitsFromMasks() {
     std::mt19937_64 rng(9);
     ChunkWorld blob(registry());
     EditSet e;
-    const BlockState glass[] = {{typeOf("glass_red"), kIdentity}, {typeOf("glass_blue"), kIdentity}, {typeOf("glass_green"), kIdentity}};
+    const StateId glass[] = {registry().state(typeOf("glass_red"), orient::kIdentity), registry().state(typeOf("glass_blue"), orient::kIdentity), registry().state(typeOf("glass_green"), orient::kIdentity)};
     for (std::int64_t z = 0; z < 8; ++z)
         for (std::int64_t y = 0; y < 8; ++y)
             for (std::int64_t x = 0; x < 8; ++x) {
@@ -323,10 +322,10 @@ void testUniformFastPaths() {
 // --- the working state ----------------------------------------------------------
 
 Cells randomMixed(std::mt19937_64& rng, std::uint32_t states) {
-    Cells cells(kBrickCells, BlockState::air());
-    std::vector<BlockState> pool;
+    Cells cells(kBrickCells, kAirState);
+    std::vector<StateId> pool;
     for (std::uint32_t k = 0; k < states; ++k) pool.push_back(testState(1 + static_cast<std::uint32_t>(rng() % (validStateCount() - 1))));
-    for (const char* g : {"glass_red", "glass_blue", "glass_green"}) pool.push_back({typeOf(g), kIdentity});  // always the same groups
+    for (const char* g : {"glass_red", "glass_blue", "glass_green"}) pool.push_back(registry().state(typeOf(g), orient::kIdentity));  // always the same groups
     for (std::uint32_t c = 0; c < kBrickCells; ++c) {
         const std::uint32_t z = c >> 12;
         if (z < 12 || rng() % 9 == 0) cells[c] = pool[rng() % pool.size()];

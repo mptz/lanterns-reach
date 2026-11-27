@@ -5,7 +5,11 @@ const BlockRegistry& registry() {
     return reg;
 }
 
-BlockState solidState() { return {*registry().find("stone"), orient::kIdentity}; }
+StateTable& testStates() { return registry().states(); }
+
+StateId stateOf(const char* name, orient::Rot orientation) { return registry().state(*registry().find(name), orientation); }
+
+StateId solidState() { return stateOf("stone"); }
 
 BlockTypeId typeOf(const char* name) { return *registry().find(name); }
 
@@ -26,12 +30,12 @@ std::optional<ToolTarget> aim(const WorldQuery& w, WorldPos eye, WorldPos at) {
 }
 
 namespace {
-const std::vector<BlockState>& validStates() {
-    static const std::vector<BlockState> states = [] {
-        std::vector<BlockState> v{BlockState::air()};
+const std::vector<StateId>& validStates() {
+    static const std::vector<StateId> states = [] {
+        std::vector<StateId> v{kAirState};
         for (BlockTypeId t = 0; t < registry().defs().size(); ++t)
             for (int r = 0; r < orient::kRotCount; ++r) {
-                const BlockState s = registry().state(t, static_cast<orient::Rot>(r));
+                const StateId s = registry().state(t, static_cast<orient::Rot>(r));
                 if (std::find(v.begin(), v.end(), s) == v.end()) v.push_back(s);
             }
         return v;
@@ -42,12 +46,24 @@ const std::vector<BlockState>& validStates() {
 
 std::uint32_t validStateCount() { return static_cast<std::uint32_t>(validStates().size()); }
 
-BlockState testState(std::uint32_t k) {
+StateId testState(std::uint32_t k) {
     if (k < validStateCount()) return validStates()[k];
+    // Synthetic definitions in the shared table, each with one property of
+    // 2¹⁰ values, added as needed; their states are interned on first sight.
+    static std::vector<std::uint32_t> synthetic;
     const std::uint32_t j = k - validStateCount();
-    const std::uint32_t type = static_cast<std::uint32_t>(registry().defs().size()) + j / 24;
-    FATAL_UNLESS(type < BlockState::kAirType, "testState: out of synthetic states");
-    return {static_cast<BlockTypeId>(type), static_cast<orient::Rot>(j % 24)};
+    const std::uint32_t which = j / StateTable::kMaxStatesPerDefinition;
+    while (synthetic.size() <= which) {
+        const auto n = static_cast<std::uint32_t>(synthetic.size());
+        const auto type = static_cast<std::uint32_t>(registry().defs().size()) + n;
+        FATAL_UNLESS(type < kAirType, "testState: out of synthetic states");
+        PropertyDecl v{"v", {}};
+        for (std::uint32_t i = 0; i < StateTable::kMaxStatesPerDefinition; ++i) v.values.push_back("v" + std::to_string(i));
+        synthetic.push_back(testStates().addDefinition(Id128::fromParts(0x7E57000000000000ull, n), "synthetic_" + std::to_string(n),
+                                                       static_cast<BlockTypeId>(type), nullptr, orient::Symmetry::Uniform, {v}, false));
+    }
+    const std::uint32_t value = j % StateTable::kMaxStatesPerDefinition;
+    return testStates().intern(synthetic[which], orient::kIdentity, std::span<const std::uint32_t>(&value, 1));
 }
 
 glm::ivec3 localOfIndex(std::uint32_t cell) {
@@ -57,7 +73,7 @@ glm::ivec3 localOfIndex(std::uint32_t cell) {
 std::uint64_t oracleDigest(const Cells& cells) {
     std::uint64_t d = 0;
     for (std::uint32_t c = 0; c < kBrickCells; ++c)
-        d = addMod(d, mulMod(digestWeight(c), digestStateHash(canonicalEncoding(cells[c]))));
+        d = addMod(d, mulMod(digestWeight(c), testStates().digestTerm(cells[c])));
     return d;
 }
 
@@ -196,8 +212,4 @@ bool sameMesh(const WorldMesh& a, const WorldMesh& b) {
            same(a.translucentIndices, b.translucentIndices) && same(a.edgeLines, b.edgeLines);
 }
 
-const AppearanceTable& testAppearance() {
-    static const AppearanceTable table(registry());
-    return table;
-}
-MeshContext testContext() { return {registry(), testAppearance()}; }
+MeshContext testContext() { return {registry(), registry().states()}; }

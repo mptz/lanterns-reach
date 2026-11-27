@@ -20,7 +20,7 @@ Game makeGame(WorldQuery& world, const BlockRegistry& registry, const Scenario& 
     main.push_back(Item::container());
     game.hands.bar(Hand::Right) = Hotbar(main);
     game.hands.bar(Hand::Left) = Hotbar({Item::pick(), Item::wrench(), Item::shovel()});
-    auto type = [&](const char* name) { return registry.find(name).value_or(BlockState::kAirType); };
+    auto type = [&](const char* name) { return registry.find(name).value_or(kAirType); };
     game.settings.shovelFill = type(kShovelFillDefault);
     for (std::size_t i = 0; i < kContainerDefault.size(); ++i)
         game.settings.container.slots[i] = {type(kContainerDefault[i].first), kContainerDefault[i].second};

@@ -75,7 +75,7 @@ private:
         for (std::uint32_t i = 0; i < brick.entries(); ++i) place(brick.entry(i), i);
     }
     std::uint32_t slot(const E& e) const {
-        return static_cast<std::uint32_t>((mix64(canonicalEncoding(e)) * 0x9E3779B97F4A7C15ull) >> shift_);
+        return static_cast<std::uint32_t>((mix64(lookupKey(e)) * 0x9E3779B97F4A7C15ull) >> shift_);
     }
     void place(const E& e, std::uint32_t index) {
         const std::uint32_t mask = static_cast<std::uint32_t>(slots_.size()) - 1;

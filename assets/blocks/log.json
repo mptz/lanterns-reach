@@ -1,2 +1,2 @@
-{ "name": "log", "symmetry": "column",
+{ "ulid": "01M8F3N34M3986D3R50903C7NR", "name": "log", "symmetry": "column",
   "textures": { "+z": "log_end.png", "-y": { "matched": "bark_set.png", "edges": "ns" } } }

@@ -1,4 +1,4 @@
-{ "name": "furnace", "symmetry": "oriented",
+{ "ulid": "01M8F3N34M3986D3R50903C7NF", "name": "furnace", "symmetry": "oriented",
   "textures": { "+z": "furnace_top.png", "-z": "furnace_bottom.png",
                 "-y": "furnace_front.png", "+y": "furnace_back.png",
                 "+x": "furnace_right.png", "-x": "furnace_left.png" },

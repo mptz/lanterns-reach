@@ -11,8 +11,8 @@ namespace {
 struct Probe {
     const Chunk& chunk;
     ChunkCoord coord;
-    BlockState operator()(const CellPos& c) const {
-        return chunkOf(c) == coord ? chunk.get(localOf(c)) : BlockState::air();
+    StateId operator()(const CellPos& c) const {
+        return chunkOf(c) == coord ? chunk.get(localOf(c)) : kAirState;
     }
 };
 
@@ -24,14 +24,14 @@ struct Probe {
 // Bits 0–3 (−R, +R, −U, +U): the edge is a boundary unless the in-plane
 // neighbour is the same type with an identical face (emitted, same surface
 // state) toward n — i.e. the region's surface continues flat across it.
-std::uint32_t frameBits(const BlockRegistry& registry, const Probe& probe, const CellPos& c, BlockTypeId type,
+std::uint32_t frameBits(const StateTable& states, const Probe& probe, const CellPos& c, BlockTypeId type,
                         glm::ivec3 n) {
     auto surfaceOn = [&](const CellPos& cell) -> int {  // −1: no face; 0: face, no surface layer; 1: framed face
-        const BlockState across = probe(cell + n);
-        if (across.type == type) return -1;
-        if (across.isAir()) return 1;
-        if (!registry.def(across.type).translucent()) return 0;
-        return type < across.type ? 1 : 0;
+        const StateId across = probe(cell + n);
+        if (states.type(across) == type) return -1;
+        if (states.isAir(across)) return 1;
+        if (!states.translucent(across)) return 0;
+        return type < states.type(across) ? 1 : 0;
     };
     const int mine = surfaceOn(c);
     if (mine != 1) return 0;
@@ -41,7 +41,7 @@ std::uint32_t frameBits(const BlockRegistry& registry, const Probe& probe, const
     std::uint32_t bits = 16u;
     for (int i = 0; i < 4; ++i) {
         const CellPos e = c + sides[i];
-        const bool continues = probe(e).type == type && surfaceOn(e) == mine;
+        const bool continues = states.type(probe(e)) == type && surfaceOn(e) == mine;
         if (!continues) bits |= 1u << i;
     }
     return bits;
@@ -61,41 +61,41 @@ std::uint32_t frameBits(const BlockRegistry& registry, const Probe& probe, const
 } // namespace
 
 void meshPerCell(const MeshContext& context, const Chunk& chunk, const ChunkId& id, WorldMesh& mesh) {
-    const BlockRegistry& registry = context.registry;
+    const StateTable& states = context.states;
     mesh.origin = cellCorner(chunkOrigin(id.coord));
-    if (const auto u = chunk.uniformState(); u && u->isAir()) return;  // uniform air meshes to nothing
+    if (const auto u = chunk.uniformState(); u && states.isAir(*u)) return;  // uniform air meshes to nothing
     const Probe probe{chunk, id.coord};
     for (int z = 0; z < kChunkSize; ++z)
         for (int y = 0; y < kChunkSize; ++y)
             for (int x = 0; x < kChunkSize; ++x) {
                 const glm::ivec3 local(x, y, z);
-                const BlockState st = chunk.get(local);
-                if (st.isAir()) continue;
+                const StateId st = chunk.get(local);
+                if (states.isAir(st)) continue;
                 const CellPos c = cellAt(id.coord, local);
-                const BlockDef& def = registry.def(st.type);
+                const BlockDef& def = *states.definition(st).def;
                 const bool translucent = def.translucent();
                 auto& verts = translucent ? mesh.translucentVertices : mesh.vertices;
                 auto& idx = translucent ? mesh.translucentIndices : mesh.indices;
                 const glm::vec3 corner(static_cast<float>(x), static_cast<float>(y), static_cast<float>(z));
                 for (int w = 0; w < orient::kFaceCount; ++w) {
                     const auto face = static_cast<orient::Face>(w);
-                    const BlockState n = probe(c + orient::faceNormal(face));
-                    const bool hidden = translucent ? n.type == st.type
-                                                    : !n.isAir() && !registry.def(n.type).translucent();
+                    const StateId n = probe(c + orient::faceNormal(face));
+                    const bool hidden = translucent ? states.type(n) == states.type(st)
+                                                    : !states.isAir(n) && !states.translucent(n);
                     if (hidden) continue;
                     const auto base = static_cast<std::uint32_t>(verts.size());
                     // Translucent faces are drawn per cell, so a random or
                     // matched tile is chosen here; opaque faces choose theirs
                     // per fragment (merged quads, v0.2).
-                    FaceTexture tex = faceTexture(registry, st, face);
+                    FaceTexture tex = faceTexture(states, st, face);
                     if (translucent) tex = resolvePositional(tex, c, face);
                     // A connected set's tile comes from the frame rule
                     // (absorbing translucent faces only).
                     if (tex.set == VariantSet::Connected)
                         tex.layer += translucent && glm::any(glm::greaterThan(def.translucency->absorption, glm::vec3(0.0f)))
-                                         ? connectedTile(frameBits(registry, probe, c, st.type, orient::faceNormal(face)), tex.turn)
+                                         ? connectedTile(frameBits(states, probe, c, states.type(st), orient::faceNormal(face)), tex.turn)
                                          : 0u;
-                    appendFace(verts, idx, tex, face, corner, BlockRegistry::materialId(st.type));
+                    appendFace(verts, idx, tex, face, corner, BlockRegistry::materialId(states.type(st)));
                     for (int k = 0; k < 4; ++k) {
                         mesh.edgeLines.push_back(verts[base + static_cast<std::uint32_t>(k)].pos);
                         mesh.edgeLines.push_back(verts[base + static_cast<std::uint32_t>((k + 1) % 4)].pos);

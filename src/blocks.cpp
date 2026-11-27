@@ -116,7 +116,7 @@ std::optional<ParsedDefinition> parseDefinition(std::string_view text, std::stri
         return std::nullopt;
     }
     for (const auto& [key, value] : j.items())
-        if (key != "name" && key != "symmetry" && key != "textures" && key != "roughness" &&
+        if (key != "ulid" && key != "name" && key != "symmetry" && key != "properties" && key != "textures" && key != "roughness" &&
             key != "metallic" && key != "reflectance" && key != "emissive" && key != "translucency") {
             error = "unknown field \"" + key + "\"";
             return std::nullopt;
@@ -127,6 +127,21 @@ std::optional<ParsedDefinition> parseDefinition(std::string_view text, std::stri
     }
     ParsedDefinition def;
     def.name = j["name"].get<std::string>();
+    // The definition's identity (data/stable-identity): a ULID, minted once
+    // (tools/mint_ulid.py) and kept for good.
+    if (!j.contains("ulid") || !j["ulid"].is_string()) {
+        error = "missing \"ulid\" (mint one with tools/mint_ulid.py --add)";
+        return std::nullopt;
+    }
+    {
+        const std::string ulidText = j["ulid"].get<std::string>();
+        const auto ulid = Ulid::parse(ulidText);
+        if (!ulid) {
+            error = "\"ulid\": \"" + ulidText + "\" is not 26 characters of Crockford base32";
+            return std::nullopt;
+        }
+        def.ulid = *ulid;
+    }
     if (!j.contains("symmetry") || !j["symmetry"].is_string()) {
         error = "missing \"symmetry\"";
         return std::nullopt;
@@ -137,6 +152,52 @@ std::optional<ParsedDefinition> parseDefinition(std::string_view text, std::stri
         return std::nullopt;
     }
     def.symmetry = *sym;
+    // Variant properties (world/brick): each an enumeration of value names,
+    // the first its default, or "bool" (false, then true). Names and values
+    // are [a-z0-9_]+; orientation is reserved (it comes from the symmetry).
+    auto plainName = [](const std::string& n) {
+        return !n.empty() && std::all_of(n.begin(), n.end(), [](char c) { return (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '_'; });
+    };
+    if (j.contains("properties")) {
+        if (!j["properties"].is_object()) {
+            error = "\"properties\" must be an object of name: [values] or \"bool\"";
+            return std::nullopt;
+        }
+        for (const auto& [name, domain] : j["properties"].items()) {
+            if (!plainName(name) || name == "orientation") {
+                error = "property \"" + name + "\": names are [a-z0-9_]+, and \"orientation\" is reserved";
+                return std::nullopt;
+            }
+            PropertyDecl p{name, {}};
+            if (domain.is_string() && domain.get<std::string>() == "bool") {
+                p.values = {"false", "true"};
+            } else if (domain.is_array() && domain.size() >= 2) {
+                for (const auto& v : domain) {
+                    if (!v.is_string() || !plainName(v.get<std::string>()) ||
+                        std::find(p.values.begin(), p.values.end(), v.get<std::string>()) != p.values.end()) {
+                        error = "property \"" + name + "\": values are distinct [a-z0-9_]+ names";
+                        return std::nullopt;
+                    }
+                    p.values.push_back(v.get<std::string>());
+                }
+            } else {
+                error = "property \"" + name + "\" must be \"bool\" or a list of at least two value names";
+                return std::nullopt;
+            }
+            def.properties.push_back(std::move(p));
+        }
+        std::sort(def.properties.begin(), def.properties.end(), [](const PropertyDecl& a, const PropertyDecl& b) { return a.name < b.name; });
+    }
+    // The per-definition cap (world/brick): orientations times every domain.
+    {
+        std::uint64_t states = static_cast<std::uint64_t>(orient::kRotCount) / orient::symmetry(def.symmetry).subgroup.size();
+        for (const PropertyDecl& p : def.properties) states *= p.values.size();
+        if (states > StateTable::kMaxStatesPerDefinition) {
+            error = "has " + std::to_string(states) + " states (orientations times property values); at most " +
+                    std::to_string(StateTable::kMaxStatesPerDefinition);
+            return std::nullopt;
+        }
+    }
     if (!j.contains("textures") || !j["textures"].is_object()) {
         error = "missing \"textures\" object";
         return std::nullopt;
@@ -305,6 +366,15 @@ BlockRegistry BlockRegistry::load(const std::string& dir) {
             reject("duplicate block name \"" + parsed->name + "\"");
             continue;
         }
+        if (parsed->ulid == StateTable::airUlid()) {
+            reject("\"ulid\" " + parsed->ulid.text() + " is air's");
+            continue;
+        }
+        if (const auto other = std::find_if(reg.defs_.begin(), reg.defs_.end(), [&](const BlockDef& d) { return d.ulid == parsed->ulid; });
+            other != reg.defs_.end()) {
+            reject("\"ulid\" " + parsed->ulid.text() + " is also \"" + other->name + "\"'s");
+            continue;
+        }
         auto pathOf = [&](const std::string& tex) { return (file.parent_path() / tex).string(); };
         error = checkTextures(*parsed, [&](const std::string& tex) -> const Image* {
             const std::string path = pathOf(tex);
@@ -318,8 +388,8 @@ BlockRegistry BlockRegistry::load(const std::string& dir) {
             continue;
         }
 
-        BlockDef def{.name = parsed->name, .symmetry = parsed->symmetry, .material = parsed->material,
-                     .translucency = parsed->translucency};
+        BlockDef def{.ulid = parsed->ulid, .name = parsed->name, .symmetry = parsed->symmetry,
+                     .properties = parsed->properties, .material = parsed->material, .translucency = parsed->translucency};
         const orient::SymmetryInfo& info = orient::symmetry(def.symmetry);
         std::map<Face, std::uint32_t> repLayer;
         std::map<Face, VariantSet> repSet;
@@ -346,6 +416,12 @@ BlockRegistry BlockRegistry::load(const std::string& dir) {
             def.faceTiles[fi] = repTiles.at(info.repOf[fi]);
         }
         reg.defs_.push_back(std::move(def));
+    }
+    // Every state of every definition, interned now (world/brick); the
+    // registry's type t is the table's definition t + 1 (air is 0).
+    for (std::size_t t = 0; t < reg.defs_.size(); ++t) {
+        const BlockDef& d = reg.defs_[t];
+        reg.states_->addDefinition(d.ulid, d.name, static_cast<BlockTypeId>(t), &d, d.symmetry, d.properties, true);
     }
     return reg;
 }

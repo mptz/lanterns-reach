@@ -24,13 +24,13 @@ struct RayHit {
     CellPos cell;          // the solid cell hit
     glm::ivec3 normal{0};  // outward normal of the face entered; (0,0,0) if the ray started inside `cell`
     WorldPos point;        // where the ray meets that face (the origin, if it started inside)
-    BlockState state;
+    StateId state;
     double distance = 0.0;
 };
 
 struct Edit {
     CellPos cell;
-    BlockState state;  // BlockState::air() removes
+    StateId state;  // kAirState removes
     bool operator==(const Edit&) const = default;
 };
 struct EditSet {
@@ -86,7 +86,7 @@ public:
     // normalization inside).
     virtual std::optional<RayHit> raycast(const WorldPos& origin, const glm::dvec3& dir, double maxDistance) const = 0;
     // Single-cell semantic probe. Cells outside the world read as air.
-    virtual BlockState probe(const CellPos& cell) const = 0;
+    virtual StateId probe(const CellPos& cell) const = 0;
     // Whether an edit of `cell` would be accepted (apply rejects the rest).
     // Tools use it so their planned edit sets — what preview shows — never
     // contain an edit that apply would drop. Always true for an unbounded

@@ -49,17 +49,17 @@ void testWeights() {
 
 void testUniformDigest() {
     for (std::uint32_t k : {0u, 1u, 77u, 300u}) {
-        const BlockState s = testState(k);
-        Chunk u;
+        const StateId s = testState(k);
+        Chunk u(testStates());
         u.set({0, 0, 0}, s);
-        Cells cells(kBrickCells, BlockState::air());
+        Cells cells(kBrickCells, kAirState);
         cells[0] = s;
         CHECK(u.digest() == oracleDigest(cells));
         // A chunk filled with one state: H(s) · K, whatever the representation.
         Cells all(kBrickCells, s);
-        Chunk f;
+        Chunk f(testStates());
         fillChunk(f, all, true);
-        CHECK((k == 0 || TA::isUniform(f)) && f.digest() == mulMod(digestStateHash(canonicalEncoding(s)), digestK()));
+        CHECK((k == 0 || TA::isUniform(f)) && f.digest() == mulMod(testStates().digestTerm(s), digestK()));
         CHECK(f.digest() == oracleDigest(all));
         for (unsigned w : kBrickWidths) {  // a forced palette of one entry
             Chunk p = f;
@@ -75,12 +75,12 @@ void testIncrementalDigest() {
     std::mt19937_64 rng(11);
     std::vector<std::uint32_t> pool;
     Cells cells = makeContent(40, rng, pool);
-    Chunk d;
+    Chunk d(testStates());
     fillChunk(d, cells, true);
     (void)d.digest();
     for (int i = 0; i < 20000; ++i) {
         const auto c = static_cast<std::uint32_t>(rng() % kBrickCells);
-        const BlockState s = testState(static_cast<std::uint32_t>(rng() % 200));
+        const StateId s = testState(static_cast<std::uint32_t>(rng() % 200));
         d.set(localOfIndex(c), s);
         cells[c] = s;
     }

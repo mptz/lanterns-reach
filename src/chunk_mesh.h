@@ -9,16 +9,16 @@
 //     appearance.
 // `Chunk::meshInto` picks one.
 
-#include "appearance.h"
+#include "state_table.h"
 #include "blocks.h"
 #include "chunk.h"
 #include "world_query.h"
 
-// What meshing needs besides cells: the block definitions and the faces'
-// appearance ids.
+// What meshing needs besides cells: the block definitions and the state
+// table (visibility classes, appearance ids).
 struct MeshContext {
     const BlockRegistry& registry;
-    const AppearanceTable& appearance;
+    const StateTable& states;
 };
 
 // Appends the per-cell rule's faces for the chunk to `out`, in cell order.

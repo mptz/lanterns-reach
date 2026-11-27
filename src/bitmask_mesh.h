@@ -10,7 +10,7 @@
 // the per-cell rule's order.
 //
 // The masks, planes and tables are a private, thread-local working set,
-// allocated on a thread's first mesh and reused. BlockState-specific, and
+// allocated on a thread's first mesh and reused. StateId-specific, and
 // part of chunk code: it reads the Brick it is handed directly.
 
 #include <cstddef>
@@ -21,12 +21,12 @@
 
 // Appends the chunk's faces to `out` (which is only appended to). `merge`
 // false emits every face as its own 1×1 quad.
-void bitmaskMeshPalette(const PaletteBrick<BlockState>& brick, const MeshContext& context, const ChunkId& id,
+void bitmaskMeshPalette(const PaletteBrick<StateId>& brick, const MeshContext& context, const ChunkId& id,
                         bool merge, WorldMesh& out);
 // A uniform chunk: no masks for an opaque state (six sides, each one merged
 // quad), and a translucent state through the translucent pass with its group
 // mask set to all ones.
-void bitmaskMeshUniform(const BlockState& state, const MeshContext& context, const ChunkId& id, bool merge,
+void bitmaskMeshUniform(StateId state, const MeshContext& context, const ChunkId& id, bool merge,
                         WorldMesh& out);
 
 // Transposes a 64×64 bit matrix in place: afterwards bit r of a[c] is what

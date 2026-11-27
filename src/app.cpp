@@ -260,8 +260,8 @@ int run(const RunOptions& opt, const Scenario& sc, bool validation, const BlockR
             const bool xGhost = in.orientHeld && held && held->kind == Item::Kind::Block;
             if (game.preview || xGhost) {
                 for (const Edit& e : mainPlan.edits.edits) {
-                    if (!e.state.isAir()) ghosts.push_back({e.cell, e.state});
-                    else if (!world.probe(e.cell).isAir()) outlineCell(e.cell, kRemovalColor, lines);
+                    if (e.state != kAirState) ghosts.push_back({e.cell, e.state});
+                    else if (world.probe(e.cell) != kAirState) outlineCell(e.cell, kRemovalColor, lines);
                 }
                 // Cells a consuming container can't afford: outlined, not placed.
                 for (const CellPos& c : mainPlan.unaffordable) outlineCell(c, kUnaffordableColor, lines);
@@ -273,7 +273,7 @@ int run(const RunOptions& opt, const Scenario& sc, bool validation, const BlockR
             if (stats) statsOverlay(clock, gpuStats, ctx, camera, frameOpts, meshStats);
             if (orientation && target) orientationOverlay(*target, registry, renderer, camera, lines);
             if (frameOpts.lighting) lightingPanel(frameOpts.light, lights.size());
-            if (targeting) targetingOverlay(camera, target, lines);
+            if (targeting) targetingOverlay(camera, target, registry.states(), lines);
             if (input) inputOverlay(in, firedLog, now);
             if (bounds)
                 for (const ChunkId& id : meshedChunks) boundsOverlay(id, lines);

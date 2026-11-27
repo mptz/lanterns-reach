@@ -19,7 +19,8 @@ struct FaceTexture {
     VariantSet set = VariantSet::None;
     std::uint32_t tiles = 1;  // a random set's tile count
 };
-FaceTexture faceTexture(const BlockRegistry& registry, BlockState state, orient::Face face);
+FaceTexture faceTexture(const BlockDef& def, orient::Rot orientation, orient::Face face);
+FaceTexture faceTexture(const StateTable& states, StateId state, orient::Face face);
 
 // MeshVertex::texInfo (shaders/block_texture.glsl): bits 0–1 turn, 2–4 set
 // kind, 5–9 random tile count − 1.

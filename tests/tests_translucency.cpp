@@ -113,7 +113,7 @@ void testFaceOrder() {
     CHECK(glass.has_value());
     if (!glass) return;
     ChunkWorld g(registry());
-    g.apply({{{{1, 1, 1}, {*glass, kIdentity}}, {{5, 1, 1}, {*glass, kIdentity}}, {{3, 5, 2}, {*glass, kIdentity}}}});
+    g.apply({{{{1, 1, 1}, registry().state(*glass, orient::kIdentity)}, {{5, 1, 1}, registry().state(*glass, orient::kIdentity)}, {{3, 5, 2}, registry().state(*glass, orient::kIdentity)}}});
     const WorldMesh base = g.buildMesh(ChunkWorld::kChunk);
     CHECK(base.indices.empty() && base.translucentIndices.size() == 3 * 6 * 6);  // glass is translucent only
     auto faces = [](const WorldMesh& m) {
@@ -160,13 +160,13 @@ void testTranslucentFaceRule() {
     CHECK(red && blue && glow);
     if (!red || !blue || !glow) return;
     ChunkWorld g(registry());
-    auto put = [&](CellPos c, BlockTypeId t) { g.apply({{{c, {t, kIdentity}}}}); };
+    auto put = [&](CellPos c, BlockTypeId t) { g.apply({{{c, registry().state(t, orient::kIdentity)}}}); };
     put({1, 1, 1}, *red);
     put({2, 1, 1}, *red);  // a run of one tint: 10 faces, no internal pair
     CHECK(g.buildMesh(ChunkWorld::kChunk).translucentIndices.size() / 6 == 10);
     put({3, 1, 1}, *blue);  // another tint: the interface is two coplanar faces
     CHECK(g.buildMesh(ChunkWorld::kChunk).translucentIndices.size() / 6 == 10 + 6);
-    put({1, 1, 0}, solidState().type);  // glass on stone keeps its face; stone keeps its face to the glass
+    put({1, 1, 0}, testStates().type(solidState()));  // glass on stone keeps its face; stone keeps its face to the glass
     const WorldMesh m = g.buildMesh(ChunkWorld::kChunk);
     CHECK(m.translucentIndices.size() / 6 == 16 && m.indices.size() / 6 == 6);
     // Emitters include translucent blocks with emission.
@@ -190,7 +190,7 @@ void testGlassFrames() {
     const BlockDef& redDef = registry().def(*red);
     CHECK(redDef.faceSet[PosZ] == VariantSet::Connected);
     ChunkWorld g(registry());
-    auto put = [&](CellPos c, BlockTypeId t) { g.apply({{{c, {t, kIdentity}}}}); };
+    auto put = [&](CellPos c, BlockTypeId t) { g.apply({{{c, registry().state(t, orient::kIdentity)}}}); };
     // The tile index of the translucent face of `cell` toward n.
     auto tile = [&](const WorldMesh& m, CellPos cell, glm::vec3 n) -> std::optional<std::uint32_t> {
         const glm::vec3 lo(static_cast<float>(cell.x), static_cast<float>(cell.y), static_cast<float>(cell.z));
@@ -199,16 +199,16 @@ void testGlassFrames() {
             for (std::size_t k = 0; k < 4; ++k) c += m.translucentVertices[q + k].pos * 0.25f;
             const MeshVertex& v = m.translucentVertices[q];
             if (v.normal == n && glm::all(glm::lessThan(glm::abs(c - (lo + glm::vec3(0.5f) + n * 0.5f)), glm::vec3(1e-4f)))) {
-                const BlockState st = g.probe(cell);
+                const StateId st = g.probe(cell);
                 const Face f = n.z > 0.5f ? PosZ : n.z < -0.5f ? NegZ : n.x > 0.5f ? PosX : n.x < -0.5f ? NegX : n.y > 0.5f ? PosY : NegY;
-                return v.layer - faceTexture(registry(), st, f).layer;
+                return v.layer - faceTexture(testStates(), st, f).layer;
             }
         }
         return std::nullopt;
     };
     // The +z face of a uniform block: R = +x, U = +y; its turn must be 0
     // for the expectations below to be in the image frame directly.
-    CHECK(faceTexture(registry(), {*red, kIdentity}, PosZ).turn == 0u);
+    CHECK(faceTexture(testStates(), registry().state(*red, orient::kIdentity), PosZ).turn == 0u);
     // A run of 3 along x: the top faces are framed on their outer edges only.
     put({1, 1, 1}, *red);
     put({2, 1, 1}, *red);
@@ -228,7 +228,7 @@ void testGlassFrames() {
     const auto onRed = tile(m, {3, 1, 1}, {1, 0, 0}), onBlue = tile(m, {4, 1, 1}, {-1, 0, 0});
     CHECK(onRed && onBlue && ((*onRed != 0) != (*onBlue != 0)));
     // Against opaque: the face exists (it closes the volume) but uses tile 0.
-    put({1, 1, 0}, solidState().type);
+    put({1, 1, 0}, testStates().type(solidState()));
     m = g.buildMesh(ChunkWorld::kChunk);
     CHECK(tile(m, {1, 1, 1}, {0, 0, -1}) == 0u);
     // Turns: a face turned once CCW shows its image N edge at face position W.

@@ -186,7 +186,7 @@ add_library(sandbox_core STATIC
   src/blocks.cpp
   src/cube.cpp
   src/chunk.cpp
-  src/appearance.cpp
+  src/state_table.cpp
   src/id128.cpp
   src/bitmask_mesh.cpp
   src/chunk_mesh.cpp
