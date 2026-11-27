@@ -598,6 +598,11 @@ bandwidth where it buys material richness and image quality.
   variant sets are one mechanism with three selection rules: `random`,
   `matched` (edge labels matched to neighbours) and `connected` (framed
   edges, from the mesher).
+- Open: decoupling materials from block types. A face's material id is
+  its block type's, so two block types never share an appearance id and
+  never merge in the mesher (`world/chunk-meshing`), even with identical
+  textures; distinct blocks sharing a material would merge once materials
+  are their own definitions. Not yet scheduled (dispositioned in v0.2.4).
 - Open: which natural blocks beyond logs need matching (e.g. stone with
   faint bedding); the Wang edge-color count; the exact port positions and which vein
   sheets ship; whether

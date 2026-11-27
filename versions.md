@@ -114,8 +114,8 @@ in `coords/typed-positions`, and the testing conventions above).
 6. **Every release ends healthy:** playable, the headless suite green, prior
    captures identical.
 7. **Measurements are deliverables:** a release that can first measure an
-   open number records it in `RELEASES.md`, on both reference machines
-   (`engine/reference-hardware`) where it is a performance number.
+   open number records it in `RELEASES.md`, naming the machine it was
+   measured on (`engine/reference-hardware`).
 8. **Detail just in time:** only the next one or two releases are fully
    specified; the rest are one line (claim and slugs) and are detailed when
    the release before them starts building. Releases past the next few
@@ -231,28 +231,37 @@ The chunk payload, single-threaded:
     - *Mesher layering:* the bitmask mesher is `BlockState`-specific inside
       the palette representation; whether to make it entry-agnostic
       (class and appearance tables in, abstract quads out) before coarse
-      Bricks reuse it (v0.2.9).
+      Bricks reuse it (v0.2.9). → **Dropped:** palettes hold block states at
+      every level, so the entry type is always `BlockState`.
     - *Cracks at T-junctions in greedy meshes:* isolated pixels on lavapipe,
       not perceptible to the owner on the GPU machine; enlarge merged quads
       only, enlarge every opaque quad, or leave them; and the `log_columns`
       tile flips at cell edges in merged quads (cause unconfirmed).
+      → **Scheduled to v0.2.5** (the packed quads rewrite that shader path).
     - *Merge key and materials:* material id is `type + 1`, so different
       block types never merge and the orientation/material split counts are
       near-trivial until materials are decoupled from types; and no two
       distinct shipped states share a face payload, so that merge is tested
-      only by construction.
+      only by construction. → **Deferred** until materials are their own
+      definitions (open in `render/block-textures`; not yet scheduled).
     - *Reverse lookup:* the scalar scan (threshold 8) against a SIMD scan;
-      16-bit table slots for palettes under 2¹⁶ entries.
+      16-bit table slots for palettes under 2¹⁶ entries. → **Dropped:** the
+      scalar scan is accepted; revisit only if a profile shows edits.
     - *Sub-byte widths (1, 2, 4 bits):* keep or drop once worldgen shows
-      where chunks sit (the owner expects 8 bits).
+      where chunks sit (the owner expects 8 bits). → **Scheduled to v0.3.**
     - *Per-cell reads through a virtual call* (the per-cell mesher,
       raycasts, `probe`): 13–42% on per-cell meshing since v0.2.1.
+      → **Dropped:** no hot path reads per cell any more.
     - *Discretionary compaction* stays in `world/brick` for chunk actors
-      (v0.2.23): confirm, or remove it from the design.
+      (v0.2.23): confirm, or remove it from the design. → **Decided:**
+      compaction is never automatic; an explicit operation stays, unused
+      (`world/brick`).
     - *Measurements on the second reference machine* (v0.2.1–v0.2.3), which
-      the owner did not gate those releases on.
+      the owner did not gate those releases on. → **Dropped:** measurements
+      name the machine they ran on (`engine/reference-hardware`).
     - *Profiling:* flat `perf` profiles work; call graphs need
       `kernel.perf_event_mlock_kb` raised or a frame-pointer build.
+      → **Done in v0.2.4:** frame pointers in every build.
 - **v0.2.5 Packed quads, translucent merging and a cutout block:** a packed
   quad format (8 bytes per quad, positions pulled in the vertex shader
   from the quad's corner and size) replacing the four-vertex quad, with
@@ -267,6 +276,10 @@ The chunk payload, single-threaded:
   budget are sized for the format they keep. *Claim: every mesh covers
   the same faces as before at about a tenth of the bytes, and translucent
   absorbance stays exact.* `world/chunk-meshing`, `render/block-textures`.
+  Also (from v0.2.4's dispositions): the pinhole cracks at T-junctions
+  between merged quads (enlarge merged quads only, or every opaque quad,
+  in the vertex shader the packed format rewrites) and the `log_columns`
+  tile flips at cell edges in merged quads (`RELEASES.md` v0.2.3).
 - **v0.2.6 The mesh pool:** device-local meshes, VMA virtual ranges, staging
   blocks, deferred release by timeline value, a record list rebuilt each
   frame. *Claim: meshes upload and retire without stalls, and the pool's
@@ -377,8 +390,7 @@ Actors and concurrency:
   run alongside other workers here.
 - **v0.2.20 Concurrent meshing to the GPU:** the shared staging pool and the
   descriptor vector under real concurrency, lock hold-time statistics, sync
-  validation. *Claim: the frame thread never waits behind work.* Measured on
-  both reference machines.
+  validation. *Claim: the frame thread never waits behind work.*
 - **v0.2.21 Priorities and ageing:** advertised priorities, render-class
   meshing urgency, rate caps. *Claim: fast flight keeps frame time steady,
   and terrain degrades to coarser levels rather than gaps.*
@@ -1092,7 +1104,10 @@ Display-required:
 - **v0.2** — octree terrain with progressive level of detail outside in,
   then goals and the concurrency model, then chunks as simulation objects
   and first soft simulation (roadmap above).
-- **v0.3** — worldgen: density fields on stock FastNoise2 at full SIMD,
+- **v0.3** — worldgen (also from v0.2.4's dispositions: whether the 1-,
+  2- and 4-bit Brick widths earn their keep, from where real chunks'
+  palettes sit; the owner expects 8 bits): density fields on stock
+  FastNoise2 at full SIMD,
   keyed by blending fields across release-tier key regions (`deps/noise`,
   `worldgen/seed-keys`); first, a prototype of the blend's transition zones,
   with the fork as the fallback if they show; field-driven

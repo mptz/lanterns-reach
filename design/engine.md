@@ -37,6 +37,12 @@ Language, rendering backend, and target platform.
     Radeon 680M/780M) fall near or above the 1050M, so the range covers
     current thin-and-light laptops too. The Steam Deck (RDNA2, ~1.6 TFLOPS,
     Linux and Vulkan) would be an easy optional fixed-spec check.
+- **Measurements are taken on the machine at hand, which is named with
+  them** (in `RELEASES.md`); releases are not validated on several
+  machines (owner, 2026-11-27). The target range above decides what must
+  scale, not where each number is measured. So far: a Dell Latitude 7480
+  (Intel Core i7-7600U, 2 cores and 4 threads at 2.8–3.9 GHz, 4 MiB L3,
+  16 GB; Intel HD 620, Kaby Lake GT2, the HD 530's class), Debian 13.
 - **Don't optimize for either card; make expensive work scale.** Shadow
   faces per frame (`render/shadows`), cascade count and resolution, lights
   per cluster, render scale and LoD distances are budgets **tuned from

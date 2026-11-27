@@ -477,3 +477,21 @@ The owner accepted the `greedy` captures (`build-debug/cap-023`), cracks and
 | 9 | `render.mergedQuad` rejected; `quad_*` comparisons | ✅ rejected; comparisons pass within the recorded crack budget |
 | 10 | Plays unchanged; F3 shows merged quads | ✅ owner (stripes across the floor, large merged surfaces) |
 | 11 | No cracks or sparkles at T-junctions | ✅ owner: not perceptible on the GPU machine |
+
+## v0.2.4 (in progress)
+
+### Dispositions (owner, 2026-11-27)
+The open items listed at the head of v0.2.4 in `versions.md`, each decided.
+
+| Item | Disposition |
+|---|---|
+| The owner's review of the Brick and chunk designs | **Done (design):** units rather than feet in engine docs; the chunk or terrain node is the abstraction boundary, the Brick only storage; superclasses are blocks and never obtainable; no chunk-data type, `Chunk` is the actor and owns its Brick. **Code in v0.2.4:** `ChunkData` becomes `Chunk`; raycasting and the emitter set move into it. |
+| Mesher layering (entry-agnostic for coarse Bricks) | **Dropped:** palettes hold block states at every level, so the mesher's entry type is always `BlockState`. Meshing at a coarse cell size stays v0.2.9's. |
+| T-junction cracks; `log_columns` tile flips | **Scheduled to v0.2.5**, whose packed quads rewrite the vertex shader path both live in. |
+| Merge key and materials | **Deferred** until materials are their own definitions; open in `render/block-textures`, not yet scheduled. The two vacuous merge tests keep printing their notice. |
+| Reverse lookup: SIMD scan, 16-bit table slots | **Dropped:** the scalar scan is accepted (16–43 ns per edit), and the table is at most about twice the entries. Revisit only if a profile shows edits. |
+| Sub-byte widths (1, 2, 4 bits) | **Scheduled to v0.3**, when real chunks show where palettes sit. |
+| Per-cell reads through a virtual call | **Dropped:** no hot path reads per cell any more (the mesher reads the Brick directly, emitters are maintained, the per-cell mesher is only the reference). |
+| Discretionary compaction | **Decided:** compaction is never automatic, since neither the Brick nor its owner has the context to schedule it. It runs at a save or a bulk fill, or when a caller asks through an explicit operation that nothing uses yet (`world/brick`). |
+| Measurements on a second reference machine | **Dropped:** releases are not validated on several machines. Measurements name the machine they ran on (`engine/reference-hardware`). Every v0.2.x number so far is from a Dell Latitude 7480: Intel Core i7-7600U (2 cores, 4 threads, 2.8–3.9 GHz, 4 MiB L3), 16 GB, Intel HD 620 (Kaby Lake GT2), Debian 13. |
+| Profiling call graphs | **Done in v0.2.4:** frame pointers in every build, so `perf record --call-graph fp` works. |

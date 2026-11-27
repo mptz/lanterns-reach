@@ -105,13 +105,17 @@ as other engine terms share theirs.
   marks is the hysteresis: a just-compacted Brick fills at least 1/16 of
   its capacity before it widens again. A Brick becomes uniform or narrower
   only this way, never through a single edit, since uniform non-air
-  Bricks are rare outside generation. It runs:
-  - **at a save,** where encoding a chunk blob visits every cell anyway; the
-    owner swaps the compacted Brick in as its live one, so a chunk that
-    stays loaded sheds its dead entries at every save;
-  - **at a bulk fill;**
-  - **at its discretion, for churning Bricks:** at the end of the owner's
-    turn, once the palette has gained max(F, α·L₀) entries since the
+  Bricks are rare outside generation. **Compaction is never automatic**
+  (owner, 2026-11-27): neither the Brick nor its owner has the context to
+  schedule it, so it runs only when a caller that does asks:
+  - **at a save,** when the save asks: encoding a chunk blob visits every
+    cell anyway, and the owner swaps the compacted Brick in as its live
+    one, so a chunk that stays loaded sheds its dead entries at a save;
+  - **at a bulk fill,** which ends with one;
+  - **on request:** the owner offers compaction as an explicit operation
+    (to the plain low-water mark, or leaving room for more entries), for
+    whatever layer comes to schedule it; nothing calls it yet. For
+    churning Bricks a caller could use this policy: compact once the palette has gained max(F, α·L₀) entries since the
     last compaction, where L₀ is the live count that compaction found (or
     the palette's size when the Brick was built), F = 4096 and α = 1/4
     (placeholders). F must exceed the set of states a Brick keeps cycling
@@ -122,7 +126,8 @@ as other engine terms share theirs.
     entries plus F fit under the low-water mark, so a churning Brick
     doesn't widen again before its next compaction is due; a compaction
     at a save uses the plain mark, so a quiet Brick isn't forced wide.
-    The signal costs one counter, incremented only when an edit appends.
+    The signal costs one counter, incremented only when an edit appends;
+    the owner keeps it, and the caller reads it to decide.
   - **Telemetry:** compactions per Brick (thrash shows as a high rate),
     and palette size against live entries at each save. F may become
     adaptive if the rate ever says so.
@@ -131,8 +136,8 @@ as other engine terms share theirs.
   an entry): only the owner's turn edits and no reader uses it, so it
   needs no synchronisation and never sits on a reader's path. A linear
   scan of the palette up to a threshold (8 entries with a scalar scan, 32
-  with a SIMD scan over 4-byte entries, measured on one machine; a
-  placeholder until both reference machines are measured); above it, a
+  with a SIMD scan over 4-byte entries, measured on the development
+  machine; a placeholder); above it, a
   flat linear-probing table of palette indices at load at most ½,
   comparing through the palette.
   - **Sized to the Brick's palette capacity** when built, which is at most
@@ -280,5 +285,4 @@ as other engine terms share theirs.
 
 ## Open
 - Where coarse Bricks are used (the coarse-to-fine pipeline).
-- The reverse lookup's scan threshold on both reference machines.
 - The live Brick's dirty-read policy per reader.
