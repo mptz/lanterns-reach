@@ -48,8 +48,20 @@ rather than restating it). Rules:
   headlessly, until the headless subset passes and the display-dependent ones are
   clearly listed for the owner to confirm interactively).
 - **Captures are regression detectors, not specifications.** A
-  "pixel-identical" criterion catches unintended change; it is never a
-  reason to keep a slower or worse design. When a capture diverges,
+  **pixel-checked** criterion (glossary; from v0.2.5, replacing
+  "pixel-identical") catches unintended change; it is never a reason to
+  keep a slower or worse design. A capture is compared with its reference
+  by visible difference (`tools/compare_captures.sh`): a differing pixel
+  passes if its colour is within 1/255 of a pixel of the other image at
+  most one pixel away, so a texel seam or an edge moved by a pixel passes
+  while a wrong tile or tint, a missing face or a crack line doesn't; what
+  remains fails only as a connected cluster of 4 or more pixels. The live
+  text of the F1 and F7 panels is masked. Exact identity is still reported,
+  and differences that pass are listed in `RELEASES.md`, not investigated.
+  Criteria of closed releases keep their wording (they were checked
+  exactly). Comparisons that hold a property rather than catch change
+  (order invariance at 1/255, the variant runs exactly, for determinism)
+  keep their own tolerances. When a capture fails the check,
   investigate the cause and record it in `RELEASES.md`; if it is the
   expected consequence of a sound change (different triangulation, a
   compiler's floating point), say so, and the owner rebaselines after
@@ -1378,6 +1390,11 @@ Display-required:
   floor of its position within the quad, clamped to the quad. This is the
   candidate fix for the `log_columns` flips (merged quads picking a
   neighbour's tile at cell edges); the captures say whether it suffices.
+  **Outcome (v0.2.5b, owner, 2026-11-27):** it didn't, and was reverted for
+  opaque faces: the `log_columns` pixels are texel-seam rounding inside
+  merged quads, not tile flips, and the clamp made the meshers disagree at
+  cell edges (`RELEASES.md`). Translucent faces keep the clamp, which their
+  frames need.
 - **Translucent faces merge, whatever their T-junctions do** (owner,
   2026-11-27): merging is the desired end state, so any specks of wrong
   absorbance at T-junctions are recorded, like the opaque pinholes, for
@@ -1426,18 +1443,18 @@ any change to the merge rule's shape beyond the translucent side constraint.
 Headless:
 1. Build + `ctest` pass, Debug and Release, Clang, `-Werror`, zero
    warnings.
-2. With `per-cell` and `unmerged`, every v0.2.4 capture is pixel-identical
-   (same exceptions as v0.2.0: the live F1 and F7 text), except glass at
-   inner corners, which now shows its corner frames. With `greedy`: opaque
-   surfaces identical to the v0.2.4 `greedy` captures; translucent surfaces
-   within 1/255 of the `per-cell` captures (merging is invisible), specks at
-   T-junctions apart, which are counted and recorded. The differences are recorded and, once
-   inspected, the new captures become the reference. `--check-absorbance`
-   passes with every mesher, and the order-invariance comparisons pass.
-3. The `quad_*` comparisons pass within their recorded crack budget, as in
-   v0.2.3; `log_columns` differs from its `per-cell` capture by no more than
-   v0.2.3's 216 pixels, and less if the cell-from-quad change works
-   (recorded either way).
+2. With every mesher, every v0.2.4 capture is pixel-checked against its
+   v0.2.4 reference for that mesher, except glass at inner corners, which
+   now shows its corner frames; with `greedy`, translucent surfaces are
+   also pixel-checked against the `per-cell` captures (merging is
+   invisible). Exact differences are reported, and the visible ones (the
+   corners) are inspected; then the new captures become the reference.
+   `--check-absorbance` passes with every mesher, and the order-invariance
+   comparisons pass.
+3. The `quad_*` pairs are pixel-checked against each other (merging is
+   invisible). `log_columns`, greedy against per-cell, is reported: the
+   cell-from-quad change was tried and reverted (v0.2.5b in `RELEASES.md`),
+   and its pixels are texel-seam rounding, not tile flips.
 4. The face-set equivalence and rep-swap tests pass on packed quads, now
    including merged translucent faces: decomposed into unit faces, every
    mesher's output equals the per-cell rule's faces, payloads, frame bits

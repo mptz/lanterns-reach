@@ -209,6 +209,14 @@ collision-relevant state into the chunks it overlaps, published by its
 owner with a TTL, so chunks can react to movers they don't own (a pressure
 plate, a pickup). Opt-in per object kind. `sim/vicinity`
 
+**pixel-checked** — Of a capture, compared with its reference by visible
+difference (`tools/compare_captures.sh`, `imgdiff.py --tolerant 1 --cluster
+4`): it passes when every differing pixel's colour is within 1/255 of a
+pixel of the other image at most one pixel away, or the pixels that aren't
+form no 8-connected cluster of 4 or more; the live text of the F1 and F7
+panels is masked. Exact identity is still reported, and small differences
+are listed rather than investigated (`versions.md`, shared rules).
+
 **plentiful** — Everything the simulation holds that isn't scarce: terrain
 shape, ordinary blocks, soft simulation state. It is saved in each chunk's
 chunk blob, not tracked by the ledger, and a crash or bug may duplicate or

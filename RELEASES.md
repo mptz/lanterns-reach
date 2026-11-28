@@ -749,9 +749,10 @@ investigation (step b was one).
   crack line and a tint 8/255 off fail; a mask hides the block.
 - **ꟻLIP** (a perceptual metric) is not adopted yet (owner: premature);
   open to it later.
-- **Release criteria** that say "pixel-identical" are read through this
-  gate: identical captures are still reported, and any `invisible`
-  difference is listed, not investigated.
+- **"Pixel-checked" replaces "pixel-identical"** in the shared rules and
+  v0.2.5's criteria 2 and 3 (`versions.md`, glossary): identical captures
+  are still reported, and any `invisible` difference is listed, not
+  investigated. Closed releases keep their wording.
 
 ### Pending for v0.2.5
 - **Shader unpacking against the C++** (acceptance 5's readback): covered
