@@ -19,6 +19,7 @@
 #include "frame_stats.h"
 #include "game.h"
 #include "harness_checks.h"
+#include "quad_check.h"
 #include "png_write.h"
 #include "renderer.h"
 #include "scene.h"
@@ -70,6 +71,20 @@ int run(const RunOptions& opt, const Scenario& sc, bool validation, const BlockR
             glfwDestroyWindow(window);
             return 1;
         }
+    }
+    if (opt.checkQuads) {  // a device and a dispatch, no frames
+        bool ok = false;
+        {
+            VkContext ctx(window, validation);
+            ok = checkQuadUnpacking(ctx);
+            ctx.device.waitIdle();
+        }
+        glfwDestroyWindow(window);
+        if (const std::uint32_t errors = validationStats().errors.load(); errors > 0) {
+            std::fprintf(stderr, "[sandbox] %u validation error(s) reported\n", errors);
+            return 1;
+        }
+        return ok ? 0 : 1;
     }
     bool stats = sc.overlay(Overlay::Stats), orientation = sc.overlay(Overlay::Orientation),
          targeting = sc.overlay(Overlay::Targeting), input = sc.overlay(Overlay::Input),

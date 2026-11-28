@@ -18,6 +18,9 @@
 //                        run (after a 120-frame warm-up)
 //   --check-absorbance   run the scenario's checks.absorbance cases; exits
 //                        non-zero on any failure (glass frames are off for it)
+//   --check-quads        run the shaders' packed-quad unpacking over pinned
+//                        quads and compare with the C++ (quad_check.h);
+//                        exits non-zero on any difference, drawing no frame
 //   --blocks DIR         block definitions directory (default: assets/blocks)
 //   --check-blocks       load the definitions, report, and exit (no window;
 //                        non-zero if any definition is rejected)
@@ -99,6 +102,7 @@ CommandLine parseCommandLine(int argc, char** argv) {
         else if (a == "--capture") c.run.capture = value();
         else if (a == "--gpu-report") c.run.gpuReport = true;
         else if (a == "--check-absorbance") c.run.checkAbsorbance = true;
+        else if (a == "--check-quads") c.run.checkQuads = true;
         else if (a == "--blocks") c.blocksDir = value();
         else if (a == "--check-blocks") c.checkBlocks = true;
         else {

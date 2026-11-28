@@ -13,7 +13,7 @@ build-debug/sandbox --scenario scenarios/v0.1-scene.json --check-absorbance
 
 Without `--scenario`, `scenarios/v0.1-scene.json` runs. The remaining flags
 are `--scenario`, `--capture`, `--gpu-report`, `--check-absorbance`,
-`--blocks` and `--check-blocks`; every older flag is rejected with the name
+`--check-quads`, `--blocks` and `--check-blocks`; every older flag is rejected with the name
 of the field below that replaced it.
 
 **Unknown fields are errors**, at every level, with the field's path in the

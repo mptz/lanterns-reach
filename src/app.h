@@ -13,6 +13,7 @@ struct RunOptions {
     std::string capture;          // --capture: write the final image and exit
     bool gpuReport = false;       // --gpu-report: per-pass mean GPU times at exit
     bool checkAbsorbance = false; // --check-absorbance: run the scenario's checks
+    bool checkQuads = false;      // --check-quads: the shaders' quad unpacking against the C++ (no frames)
 };
 
 // Runs the scenario; returns the exit code (non-zero on validation errors,

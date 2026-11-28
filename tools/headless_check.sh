@@ -102,6 +102,10 @@ if "$BIN" --scenario "$(scenario_for "$SCN/v0.1-scene.json")" --check-absorbance
 else echo "FAIL absorbance (see $OUT/absorbance.log)"; fail=1; fi
 
 # Debug builds must refuse to run without the validation layer.
+# The shaders unpack packed quads as the C++ does (a compute readback, v0.2.5).
+if "$BIN" --check-quads >"$OUT/quads.log" 2>&1; then echo "PASS quad unpacking ($(grep -o '[0-9]* quads' "$OUT/quads.log"))"
+else echo "FAIL quad unpacking (see $OUT/quads.log)"; fail=1; fi
+
 if grep -q 'validation: on' "$OUT/lit.log"; then
     if VK_LOADER_LAYERS_DISABLE='~all~' "$BIN" --scenario "$SCN/one-frame.json" >"$OUT/novalidation.log" 2>&1; then
         echo "FAIL novalidation (exited 0 without the layer)"; fail=1

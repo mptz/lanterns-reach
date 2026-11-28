@@ -81,7 +81,8 @@ With a mesher (`greedy`, `unmerged`, `per-cell`), every scenario runs under it.
 
 Runs every scenario under `scenarios/headless/` on Mesa lavapipe inside Xvfb,
 screenshotting each, plus the order-invariance, determinism, merged-quad and
-Beer–Lambert comparisons. Every run must exit 0 (no validation errors). It
+Beer–Lambert comparisons, and `--check-quads` (the shaders' packed-quad
+unpacking read back from a compute dispatch and compared with the C++). Every run must exit 0 (no validation errors). It
 sets `VK_DRIVER_FILES` to lavapipe's ICD and forces
 `SANDBOX_GLFW_PLATFORM=x11`, since GLFW prefers Wayland when a compositor is
 reachable. Run only one at a time: each starts Xvfb on display `:97`.

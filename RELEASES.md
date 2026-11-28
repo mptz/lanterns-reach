@@ -916,6 +916,16 @@ random case, where almost nothing merges.
   what is behind it. Two-sided cutout and cutout with tint are deferred to
   foliage (open in `render/transparency`).
 
-### Pending for v0.2.5
-- **Shader unpacking against the C++** (acceptance 5's readback): covered
-  so far only by the pixel-identical captures.
+### Shader unpacking against the C++ (acceptance 5's readback)
+- **`sandbox --check-quads`** creates the device, runs `quad.glsl` in a
+  compute shader (`quad_check.comp`) over 1,288 quads (every field at its
+  extremes: cells 0 and 63, extents 1 and 64, every direction, side and
+  corner bits, appearance ids 0, 1 and 2²³ − 1; then 1,000 seeded random
+  words), reads back each quad's fields and four corners, and compares them
+  with `quad::unpack` and with the unit cube's corners scaled along the
+  face's axes (the v0.2.4 vertices). It draws no frame. The spec's
+  "2²⁴ − 1" was a slip for the 23-bit maximum.
+- **Result:** PASS on lavapipe, 0 of 1,288 differ. With the corner bits'
+  shift deliberately off by one in `quad.glsl`, it fails (1,141 differ), so
+  the comparison bites. `headless_check.sh` runs it (68 runs, all pass;
+  every capture identical to `cap-025e`).

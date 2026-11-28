@@ -109,6 +109,7 @@ set(SHADER_SOURCES
   shaders/translucent.vert
   shaders/ghost.vert
   shaders/quad_lines.vert
+  shaders/quad_check.comp
   shaders/absorbance.frag
   shaders/translucent.frag)
 set(SHADER_OUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/shaders)
@@ -221,6 +222,7 @@ add_executable(sandbox
   src/dev_overlays.cpp
   src/game.cpp
   src/harness_checks.cpp
+  src/quad_check.cpp
   src/scene.cpp
   src/dev_ui.cpp
   src/vk_context.cpp
