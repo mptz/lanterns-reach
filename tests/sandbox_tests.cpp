@@ -50,6 +50,7 @@ int main(int argc, char** argv) {
         runPlacementTests();
         runInputTests();
         runTranslucencyTests();
+        runCutoutTests();
         runToolsTests();
         runScenarioTests();
     }

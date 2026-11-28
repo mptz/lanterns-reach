@@ -87,9 +87,11 @@ struct UnitFace {
     FacePayload payload;
     std::uint32_t frame = 0;    // framed edges (packed_quad.h side bits) of this unit face
     std::uint32_t corners = 0;  // its inner-corner bits (packed_quad.h)
+    bool cutout = false;        // from the cutout array
     constexpr auto operator<=>(const UnitFace&) const = default;
 };
 std::vector<UnitFace> unitFaces(const WorldMesh& mesh);
+std::vector<UnitFace> unitFaces(const WorldMesh& mesh, const StateTable& table);  // another registry's mesh
 // The mesh's quads (opaque and translucent) as {width, height} along each
 // face's axes (unit faces are 1×1), for tests of what merges.
 struct QuadSize {
@@ -99,7 +101,7 @@ struct QuadSize {
 std::vector<QuadSize> quadSizes(const WorldMesh& mesh);
 // A mesh of the world's chunk with the mesher, from scratch.
 WorldMesh meshWith(ChunkWorld& world, Mesher mesher);
-// The same bytes: origin, opaque and translucent quads, in order.
+// The same bytes: origin, opaque, translucent and cutout quads, in order.
 bool sameMesh(const WorldMesh& a, const WorldMesh& b);
 
 // A world with the given cells set to stone.
@@ -125,5 +127,6 @@ void timeStates();                // sandbox_tests --time-states
 void runPlacementTests();
 void runInputTests();
 void runTranslucencyTests();
+void runCutoutTests();
 void runToolsTests();
 void runScenarioTests();

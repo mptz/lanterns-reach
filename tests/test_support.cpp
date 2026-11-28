@@ -116,11 +116,12 @@ void fillChunk(Chunk& data, const Cells& cells, bool finish) {
 }
 
 namespace {
-void decompose(const std::vector<std::uint64_t>& quads, bool translucent, std::vector<UnitFace>& out) {
+void decompose(const StateTable& table, const std::vector<std::uint64_t>& quads, bool translucent, bool cutout,
+               std::vector<UnitFace>& out) {
     for (const std::uint64_t packed : quads) {
         const quad::Quad q = quad::unpack(packed);
         const int dir = static_cast<int>(q.face);
-        const FacePayload payload = testStates().payload(q.appearance);
+        const FacePayload payload = table.payload(q.appearance);
         const bool along = quad::kRightAlongBit[dir];
         for (int i = 0; i < q.w; ++i)
             for (int j = 0; j < q.h; ++j) {
@@ -143,23 +144,26 @@ void decompose(const std::vector<std::uint64_t>& quads, bool translucent, std::v
                     if (atR && atU && (q.corners & (1u << k))) corners |= 1u << k;
                 }
                 const bool outside = c.x > 63 || c.y > 63 || c.z > 63;
-                out.push_back({c.x, c.y, c.z, outside ? -1 : dir, translucent, payload, frame, corners});
+                out.push_back({c.x, c.y, c.z, outside ? -1 : dir, translucent, payload, frame, corners, cutout});
             }
     }
 }
 }  // namespace
 
-std::vector<UnitFace> unitFaces(const WorldMesh& mesh) {
+std::vector<UnitFace> unitFaces(const WorldMesh& mesh) { return unitFaces(mesh, testStates()); }
+
+std::vector<UnitFace> unitFaces(const WorldMesh& mesh, const StateTable& table) {
     std::vector<UnitFace> out;
-    decompose(mesh.quads, false, out);
-    decompose(mesh.translucentQuads, true, out);
+    decompose(table, mesh.quads, false, false, out);
+    decompose(table, mesh.translucentQuads, true, false, out);
+    decompose(table, mesh.cutoutQuads, false, true, out);
     std::sort(out.begin(), out.end());
     return out;
 }
 
 std::vector<QuadSize> quadSizes(const WorldMesh& mesh) {
     std::vector<QuadSize> out;
-    for (const auto* quads : {&mesh.quads, &mesh.translucentQuads})
+    for (const auto* quads : {&mesh.quads, &mesh.translucentQuads, &mesh.cutoutQuads})
         for (const std::uint64_t packed : *quads) {
             const quad::Quad q = quad::unpack(packed);
             out.push_back({static_cast<int>(q.face), q.w, q.h});
@@ -180,7 +184,7 @@ bool sameMesh(const WorldMesh& a, const WorldMesh& b) {
         return x.size() == y.size() && (x.empty() || std::memcmp(x.data(), y.data(), x.size() * sizeof(x[0])) == 0);
     };
     return a.origin.x == b.origin.x && a.origin.y == b.origin.y && a.origin.z == b.origin.z && same(a.quads, b.quads) &&
-           same(a.translucentQuads, b.translucentQuads);
+           same(a.translucentQuads, b.translucentQuads) && same(a.cutoutQuads, b.cutoutQuads);
 }
 
 MeshContext testContext() { return {registry(), registry().states()}; }

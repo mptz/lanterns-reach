@@ -150,8 +150,8 @@ private:
 
     struct GpuMesh {
         WorldPos origin;
-        std::unique_ptr<HostBuffer> quads, tQuads;
-        std::uint32_t quadCount = 0, tQuadCount = 0;
+        std::unique_ptr<HostBuffer> quads, tQuads, cQuads;  // opaque, translucent, cutout
+        std::uint32_t quadCount = 0, tQuadCount = 0, cQuadCount = 0;
         // What the mesh's draws read besides its quads, kept alive with it
         // (both are replaced, never rewritten, when they grow).
         std::shared_ptr<HostBuffer> quadIndices, payloads;
@@ -220,6 +220,7 @@ private:
     vk::raii::PipelineLayout presentPipelineLayout_ = nullptr;
     vk::raii::PipelineLayout linesPipelineLayout_ = nullptr;
     vk::raii::Pipeline gbufferPipeline_ = nullptr;
+    vk::raii::Pipeline cutoutPipeline_ = nullptr;  // the G-buffer pass's cutout faces: alpha-tested
     vk::raii::Pipeline lightingPipeline_ = nullptr;
     vk::raii::Pipeline presentPipeline_ = nullptr;
     vk::raii::Pipeline linesPipeline_ = nullptr;  // draws onto the swapchain too

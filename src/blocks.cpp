@@ -118,7 +118,8 @@ std::optional<ParsedDefinition> parseDefinition(std::string_view text, std::stri
     for (const auto& [key, value] : j.items())
         if (key != "ulid" && key != "name" && key != "symmetry" && key != "properties" && key != "initial" && key != "textures" &&
             key != "roughness" &&
-            key != "metallic" && key != "reflectance" && key != "emissive" && key != "translucency") {
+            key != "metallic" && key != "reflectance" && key != "emissive" && key != "translucency" &&
+            key != "cutout") {
             error = "unknown field \"" + key + "\"";
             return std::nullopt;
         }
@@ -355,6 +356,17 @@ std::optional<ParsedDefinition> parseDefinition(std::string_view text, std::stri
         }
         def.translucency = tr;
     }
+    if (j.contains("cutout")) {
+        if (!j["cutout"].is_boolean()) {
+            error = "\"cutout\" must be true or false";
+            return std::nullopt;
+        }
+        def.cutout = j["cutout"].get<bool>();
+        if (def.cutout && def.translucency) {
+            error = "\"cutout\" and \"translucency\" exclude each other";
+            return std::nullopt;
+        }
+    }
     return def;
 }
 
@@ -436,7 +448,8 @@ BlockRegistry BlockRegistry::load(const std::string& dir) {
         }
 
         BlockDef def{.ulid = parsed->ulid, .name = parsed->name, .symmetry = parsed->symmetry,
-                     .properties = parsed->properties, .material = parsed->material, .translucency = parsed->translucency};
+                     .properties = parsed->properties, .material = parsed->material, .translucency = parsed->translucency,
+                     .cutout = parsed->cutout};
         const orient::SymmetryInfo& info = orient::symmetry(def.symmetry);
         std::map<Face, std::uint32_t> repLayer;
         std::map<Face, VariantSet> repSet;

@@ -66,7 +66,10 @@ std::uint32_t frameBitsAt(const StateTable& states, const Probe& probe, const Ce
 // translucent mesh) wherever its neighbour isn't the same group — block type
 // — so a run of one tint has no internal faces, an interface between two
 // tints is two coplanar faces, and glass against stone keeps its face (it
-// closes the volume for absorbance). Every face is a 1×1 packed quad with
+// closes the volume for absorbance). A cutout cell (v0.2.5) hides no
+// neighbour's face; its own faces are hidden by opaque neighbours and by
+// cutout neighbours of its type, and go to the cutout array. Every face is a
+// 1×1 packed quad with
 // its state's appearance id; a framed translucent face (a connected set on
 // an absorbing block) carries its frame bits as side bits, from which the
 // fragment shader picks the connected tile, and its corner bits. Positions
@@ -85,14 +88,17 @@ void meshPerCell(const MeshContext& context, const Chunk& chunk, const ChunkId& 
                 const StateId st = chunk.get(local);
                 if (states.isAir(st)) continue;
                 const CellPos c = cellAt(id.coord, local);
-                const BlockDef& def = *states.definition(st).def;
-                const bool translucent = def.translucent();
-                auto& quads = translucent ? mesh.translucentQuads : mesh.quads;
+                const bool translucent = states.translucent(st), cutout = states.cutout(st);
+                auto& quads = translucent ? mesh.translucentQuads : cutout ? mesh.cutoutQuads : mesh.quads;
                 for (int w = 0; w < orient::kFaceCount; ++w) {
                     const auto face = static_cast<orient::Face>(w);
                     const StateId n = probe(c + orient::faceNormal(face));
+                    // Translucent: hidden by its own group only. Opaque: by an
+                    // opaque neighbour. Cutout: by an opaque neighbour or one
+                    // of its own type.
                     const bool hidden = translucent ? states.type(n) == states.type(st)
-                                                    : !states.isAir(n) && !states.translucent(n);
+                                        : cutout    ? states.occludes(n) || states.type(n) == states.type(st)
+                                                    : states.occludes(n);
                     if (hidden) continue;
                     quad::Quad q{.cell = local, .face = face, .appearance = states.appearance(st, face)};
                     if (translucent && framedFace(states, st, face)) {

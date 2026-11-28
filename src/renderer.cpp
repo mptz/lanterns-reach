@@ -27,7 +27,7 @@ void Renderer::setWorldMesh(const WorldMesh& mesh) {
     // The current buffers may still be read by frames in flight: retire
     // them, tagged with the current frame number, and free them once every
     // frame that could use them has completed (see drawFrame).
-    if (mesh_.quads || mesh_.tQuads) retiredMeshes_.emplace_back(frameNumber_, std::move(mesh_));
+    if (mesh_.quads || mesh_.tQuads || mesh_.cQuads) retiredMeshes_.emplace_back(frameNumber_, std::move(mesh_));
     mesh_ = GpuMesh{.origin = mesh.origin};
     using U = vk::BufferUsageFlagBits;
     const auto pulled = U::eStorageBuffer | U::eShaderDeviceAddress;
@@ -39,10 +39,11 @@ void Renderer::setWorldMesh(const WorldMesh& mesh) {
     };
     upload(mesh.quads, mesh_.quads, mesh_.quadCount);
     upload(mesh.translucentQuads, mesh_.tQuads, mesh_.tQuadCount);
+    upload(mesh.cutoutQuads, mesh_.cQuads, mesh_.cQuadCount);
 
     // The static index buffer covers the largest mesh drawn so far; a
     // bigger one replaces it (the old one stays with the meshes using it).
-    const std::uint32_t need = std::max(mesh_.quadCount, mesh_.tQuadCount);
+    const std::uint32_t need = std::max({mesh_.quadCount, mesh_.tQuadCount, mesh_.cQuadCount});
     if (need > quadIndexCapacity_) {
         quadIndexCapacity_ = std::max(need, 2 * quadIndexCapacity_);
         std::vector<std::uint32_t> indices;
@@ -183,8 +184,8 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
     const GBufferPush meshPush{viewProj * glm::translate(glm::mat4(1.0f), meshRel),
                                glm::ivec4(static_cast<int>(originCell.x), static_cast<int>(originCell.y),
                                           static_cast<int>(originCell.z), (options.view == DebugView::Variant ? 1 : 0) | (options.variants ? 0 : 2))};
-    const bool hasMesh = mesh_.quadCount > 0;
-    const bool drawEdges = options.wireframe && (mesh_.quadCount > 0 || mesh_.tQuadCount > 0);
+    const bool hasMesh = mesh_.quadCount > 0 || mesh_.cQuadCount > 0;
+    const bool drawEdges = options.wireframe && (hasMesh || mesh_.tQuadCount > 0);
     const std::uint64_t payloadsAddress = mesh_.payloads ? mesh_.payloads->address() : 0;
     GBufferPush meshPushPulled = meshPush;
     meshPushPulled.quads = mesh_.quads ? mesh_.quads->address() : 0;
@@ -328,9 +329,18 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
             if (!hasMesh) return;
             c.bindDescriptorSets(vk::PipelineBindPoint::eGraphics, *gbufferPipelineLayout_, 0, *gbufferSet_, {});
             c.bindIndexBuffer(mesh_.quadIndices->get(), 0, vk::IndexType::eUint32);
-            c.pushConstants(*gbufferPipelineLayout_, vk::ShaderStageFlagBits::eVertex | vk::ShaderStageFlagBits::eFragment, 0,
-                            sizeof(GBufferPush), &meshPushPulled);
-            c.drawIndexed(6 * mesh_.quadCount, 1, 0, 0, 0);  // one draw for the whole world
+            const auto stages = vk::ShaderStageFlagBits::eVertex | vk::ShaderStageFlagBits::eFragment;
+            if (mesh_.quadCount > 0) {  // one draw for the whole world's opaque faces
+                c.pushConstants(*gbufferPipelineLayout_, stages, 0, sizeof(GBufferPush), &meshPushPulled);
+                c.drawIndexed(6 * mesh_.quadCount, 1, 0, 0, 0);
+            }
+            if (mesh_.cQuadCount > 0) {  // and one for its cutout faces, alpha-tested
+                GBufferPush cutoutPush = meshPushPulled;
+                cutoutPush.quads = mesh_.cQuads->address();
+                c.bindPipeline(vk::PipelineBindPoint::eGraphics, *cutoutPipeline_);
+                c.pushConstants(*gbufferPipelineLayout_, stages, 0, sizeof(GBufferPush), &cutoutPush);
+                c.drawIndexed(6 * mesh_.cQuadCount, 1, 0, 0, 0);
+            }
         },
     });
     graph.addPass(PassDesc{
@@ -427,11 +437,12 @@ void Renderer::record(Frame& frame, std::uint32_t imageIndex, const Camera& came
                     c.draw(static_cast<std::uint32_t>(lines.size()), 1, 0, 0);
                 }
                 if (drawEdges) {
-                    // Every quad's outline, opaque then translucent, from the quads themselves.
+                    // Every quad's outline, opaque, translucent then cutout, from the quads themselves.
                     c.bindPipeline(vk::PipelineBindPoint::eGraphics, *quadLinesPipeline_);
                     c.bindDescriptorSets(vk::PipelineBindPoint::eGraphics, *quadLinesPipelineLayout_, 0, *linesSet_, {});
                     for (const auto& [buffer, count] : {std::pair{mesh_.quads.get(), mesh_.quadCount},
-                                                        std::pair{mesh_.tQuads.get(), mesh_.tQuadCount}}) {
+                                                        std::pair{mesh_.tQuads.get(), mesh_.tQuadCount},
+                                                        std::pair{mesh_.cQuads.get(), mesh_.cQuadCount}}) {
                         if (count == 0) continue;
                         edgesPush.quads = buffer->address();
                         c.pushConstants(*quadLinesPipelineLayout_, vk::ShaderStageFlagBits::eVertex, 0,

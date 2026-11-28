@@ -75,7 +75,7 @@ struct PropertyDecl {
 };
 
 // A cell's visibility class (world/chunk-meshing, layer 1).
-enum class Visibility : std::uint8_t { Air, Opaque, Translucent };
+enum class Visibility : std::uint8_t { Air, Opaque, Translucent, Cutout };
 
 class StateTable {
 public:
@@ -138,6 +138,9 @@ public:
     bool isAir(StateId s) const { return s == kAirState; }
     Visibility visibility(StateId s) const { return rows_[s.value].visibility; }
     bool translucent(StateId s) const { return visibility(s) == Visibility::Translucent; }
+    bool cutout(StateId s) const { return visibility(s) == Visibility::Cutout; }
+    // Hides a neighbour's face: opaque only (air, translucent and cutout cells never do).
+    bool occludes(StateId s) const { return visibility(s) == Visibility::Opaque; }
     // The property's value name ("" if it is optional and absent).
     std::string_view value(StateId s, std::string_view property) const;
     std::vector<std::uint32_t> values(StateId s) const;  // one index per property, in name order

@@ -20,7 +20,7 @@ constexpr std::uint32_t kRows = static_cast<std::uint32_t>(kEdge * kEdge);  // r
 constexpr std::uint64_t kAllBits = ~std::uint64_t{0};
 
 // A palette entry's visibility class (world/chunk-meshing, layer 1).
-constexpr std::uint8_t kAir = 0, kOpaque = 1, kTranslucent = 2;
+constexpr std::uint8_t kAir = 0, kOpaque = 1, kTranslucent = 2, kCutout = 3;
 
 // Everything a mesh builds, kept per thread and reused: allocated on a thread's
 // first mesh, grown only when a palette has more entries or translucent groups
@@ -32,6 +32,8 @@ struct Work {
     std::vector<std::int16_t> slotOfEntry;  // per palette entry: its translucent group's slot, or −1
     std::vector<std::int16_t> slotOfType;   // per block type: a translucent group's slot, or −1
     std::vector<BlockTypeId> typeOfSlot;    // per group slot: its block type (the group)
+    std::vector<bool> slotCutout;           // per group slot: a cutout type (else translucent)
+    std::vector<std::uint64_t> occluders;   // one cutout type's occluder plane: O | C_t
     std::vector<std::uint64_t> opaque;      // O[z][y]: one word of x bits per row
     std::vector<std::uint64_t> groups;      // slot × 4096 words: G_g[z][y]
     std::vector<std::uint64_t> planeX;      // the ±x face planes after transposing: [x][z], bits y
@@ -113,8 +115,8 @@ glm::ivec3 cellOf(int d, int slice, int bit, int row) {
 
 // Appends one opaque quad of width w along the face's bit axis and h along
 // its row axis.
-void appendQuad(WorldMesh& out, int face, const glm::ivec3& cell, int w, int h, std::uint32_t appearance) {
-    out.quads.push_back(quad::pack({.cell = cell, .w = w, .h = h, .face = static_cast<Face>(face), .appearance = appearance}));
+void appendQuad(std::vector<std::uint64_t>& out, int face, const glm::ivec3& cell, int w, int h, std::uint32_t appearance) {
+    out.push_back(quad::pack({.cell = cell, .w = w, .h = h, .face = static_cast<Face>(face), .appearance = appearance}));
 }
 
 // One face direction's greedy merge. `rowsFor(slice, rows)` fills the slice's
@@ -125,7 +127,7 @@ void appendQuad(WorldMesh& out, int face, const glm::ivec3& cell, int w, int h, 
 // while the same bits are set and every cell has that id, clearing what the
 // quad covers. Deterministic, not optimal; quads are at most 64×64.
 template <class RowsFn, class IdFn>
-void greedyDirection(Phases& phases, int d, bool merge, WorldMesh& out, RowsFn&& rowsFor,
+void greedyDirection(Phases& phases, int d, bool merge, std::vector<std::uint64_t>& out, RowsFn&& rowsFor,
                      IdFn&& idAt) {
     std::uint64_t rows[kEdge];
     for (int slice = 0; slice < kEdge; ++slice) {
@@ -176,7 +178,7 @@ bool surfaceFace(const Work& w, int slot, int d, const glm::ivec3& c) {
     if (set(mine, n) || set(w.opaque.data(), n)) return false;
     for (std::size_t h = 0; h < w.typeOfSlot.size(); ++h)
         if (static_cast<int>(h) != slot && set(&w.groups[h * kRows], n))
-            return w.typeOfSlot[static_cast<std::size_t>(slot)] < w.typeOfSlot[h];
+            return !w.slotCutout[h] && w.typeOfSlot[static_cast<std::size_t>(slot)] < w.typeOfSlot[h];  // cutout: as opaque
     return true;
 }
 
@@ -214,6 +216,10 @@ void emitTranslucent(Work& w, const MeshContext& ctx, WorldMesh& out, Phases& ph
         for (int y = 0; y < kEdge; ++y) {
             std::uint64_t any = 0;
             for (std::size_t s = 0; s < slots; ++s) {
+                if (w.slotCutout[s]) {  // cutout types are meshed with the opaque faces
+                    std::fill_n(w.faceWords.begin() + static_cast<std::ptrdiff_t>(s * 6), 6, std::uint64_t{0});
+                    continue;
+                }
                 const std::uint64_t* g = &w.groups[s * kRows];
                 for (int d = 0; d < 6; ++d) {
                     const std::uint64_t f = g[z * kEdge + y] & ~neighbourWord(g, d, z, y, false);
@@ -263,6 +269,7 @@ void mergeTranslucent(Work& w, const MeshContext& ctx, WorldMesh& out, Phases& p
     sizeAtLeast(w, w.tKey, kRows);
     sizeAtLeast(w, w.tBits, kRows);
     for (std::size_t s = 0; s < slots; ++s) {
+        if (w.slotCutout[s]) continue;  // meshed with the opaque faces
         const std::uint64_t* g = &w.groups[s * kRows];
         for (int d = 0; d < 6; ++d) {
             if (d < 2) {  // ±x: transposed, as for opaque faces
@@ -349,11 +356,12 @@ void mergeTranslucent(Work& w, const MeshContext& ctx, WorldMesh& out, Phases& p
 
 // --- The palette path -------------------------------------------------------
 
-std::int16_t slotFor(Work& w, BlockTypeId type) {
+std::int16_t slotFor(Work& w, BlockTypeId type, bool cutout) {
     if (w.slotOfType[type] < 0) {
         const std::size_t slot = w.typeOfSlot.size();
         if (w.typeOfSlot.size() == w.typeOfSlot.capacity()) ++w.allocations;
         w.typeOfSlot.push_back(type);
+        w.slotCutout.push_back(cutout);
         sizeAtLeast(w, w.groups, (slot + 1) * kRows);
         std::fill_n(w.groups.begin() + static_cast<std::ptrdiff_t>(slot * kRows), kRows, std::uint64_t{0});
         w.slotOfType[type] = static_cast<std::int16_t>(slot);
@@ -361,13 +369,46 @@ std::int16_t slotFor(Work& w, BlockTypeId type) {
     return w.slotOfType[type];
 }
 
-void planeFaces(const Work& w, int d, int slice, std::uint64_t* rows, std::uint64_t& any) {
-    // Rows of the plane for ±y and ±z (±x comes from the transposed planes).
-    for (int r = 0; r < kEdge; ++r) {
-        const int z = d >= 4 ? slice : r;
-        const int y = d >= 4 ? r : slice;
-        rows[r] = w.opaque[static_cast<std::size_t>(z * kEdge + y)] & ~neighbourWord(w.opaque.data(), d, z, y, false);
-        any |= rows[r];
+// The faces of the cells set in `solid` that no cell of `occluder` covers
+// (outside the chunk is air), merged per direction into `out`: the opaque
+// faces (both planes the opaque mask) and each cutout type's. `idAt(d)` gives
+// a direction's appearance lookup.
+template <class IdAt>
+void solidFaces(Work& w, Phases& phases, const std::uint64_t* solid, const std::uint64_t* occluder, bool merge,
+                std::vector<std::uint64_t>& out, IdAt&& idAt) {
+    for (int d = 0; d < 6; ++d) {
+        if (d < 2) {  // ±x: each z-layer of the face masks (rows y, bits x) is transposed (rows x, bits y)
+            sizeAtLeast(w, w.planeX, kRows);
+            for (int z = 0; z < kEdge; ++z) {
+                std::uint64_t a[kEdge];
+                for (int y = 0; y < kEdge; ++y) a[y] = solid[z * kEdge + y] & ~neighbourWord(occluder, d, z, y, false);
+                phases.lap(&MeshTimings::culling);
+                transpose64(a);
+                phases.lap(&MeshTimings::transposes);
+                for (int x = 0; x < kEdge; ++x) w.planeX[static_cast<std::size_t>(x * kEdge + z)] = a[x];
+            }
+            greedyDirection(
+                phases, d, merge, out,
+                [&](int slice, std::uint64_t* rows) {
+                    std::uint64_t any = 0;
+                    for (int r = 0; r < kEdge; ++r) any |= rows[r] = w.planeX[static_cast<std::size_t>(slice * kEdge + r)];
+                    return any != 0;
+                },
+                idAt(d));
+        } else {
+            greedyDirection(
+                phases, d, merge, out,
+                [&](int slice, std::uint64_t* rows) {
+                    // Rows of the plane for ±y and ±z.
+                    std::uint64_t any = 0;
+                    for (int r = 0; r < kEdge; ++r) {
+                        const int z = d >= 4 ? slice : r, y = d >= 4 ? r : slice;
+                        any |= rows[r] = solid[z * kEdge + y] & ~neighbourWord(occluder, d, z, y, false);
+                    }
+                    return any != 0;
+                },
+                idAt(d));
+        }
     }
 }
 
@@ -386,9 +427,11 @@ void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, boo
     sizeAtLeast(w, w.slotOfEntry, entries);
     sizeAtLeast(w, w.slotOfType, ctx.registry.defs().size());
     sizeAtLeast(w, w.opaque, kRows);
+    sizeAtLeast(w, w.occluders, kRows);  // with the opaque mask, so a first cutout type allocates nothing
     std::fill(w.slotOfType.begin(), w.slotOfType.begin() + static_cast<std::ptrdiff_t>(ctx.registry.defs().size()), std::int16_t{-1});
     std::fill_n(w.slotOfEntry.begin(), entries, std::int16_t{-1});
     w.typeOfSlot.clear();
+    w.slotCutout.clear();
     for (std::uint32_t i = 0; i < entries; ++i) {
         const StateId st = brick.entry(i);
         if (ctx.states.isAir(st)) {
@@ -396,7 +439,7 @@ void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, boo
         } else if (ctx.states.translucent(st)) {
             w.kind[i] = kTranslucent;
         } else {
-            w.kind[i] = kOpaque;
+            w.kind[i] = ctx.states.cutout(st) ? kCutout : kOpaque;
             for (int f = 0; f < 6; ++f) w.appearance[i * 6 + static_cast<std::size_t>(f)] = ctx.states.appearance(st, static_cast<Face>(f));
         }
     }
@@ -404,7 +447,7 @@ void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, boo
     // One pass over the cells, reading each index once: the opaque mask per
     // row and a mask per translucent group, recording which groups occur
     // (presence is taken from the cells; dead palette entries count for nothing).
-    bool anyOpaque = false;
+    bool anyOpaque = false, anyCutout = false, anyTranslucent = false;
     for (int z = 0; z < kEdge; ++z)
         for (int y = 0; y < kEdge; ++y) {
             const auto row = static_cast<std::uint32_t>(z * kEdge + y);
@@ -414,10 +457,11 @@ void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, boo
                 const std::uint8_t k = w.kind[index];
                 if (k == kOpaque) {
                     o |= std::uint64_t{1} << x;
-                } else if (k == kTranslucent) {
+                } else if (k != kAir) {  // a translucent group, or a cutout type
                     std::int16_t slot = w.slotOfEntry[index];
-                    if (slot < 0) w.slotOfEntry[index] = slot = slotFor(w, ctx.states.type(brick.entry(index)));
+                    if (slot < 0) w.slotOfEntry[index] = slot = slotFor(w, ctx.states.type(brick.entry(index)), k == kCutout);
                     w.groups[static_cast<std::size_t>(slot) * kRows + row] |= std::uint64_t{1} << x;
+                    (k == kCutout ? anyCutout : anyTranslucent) = true;
                 }
             }
             w.opaque[row] = o;
@@ -433,41 +477,21 @@ void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, boo
         };
     };
 
-    if (anyOpaque) {
-        for (int d = 0; d < 6; ++d) {
-            if (d < 2) {  // ±x: each z-layer of the face masks (rows y, bits x) is transposed (rows x, bits y)
-                sizeAtLeast(w, w.planeX, kRows);
-                for (int z = 0; z < kEdge; ++z) {
-                    std::uint64_t a[kEdge];
-                    for (int y = 0; y < kEdge; ++y)
-                        a[y] = w.opaque[static_cast<std::size_t>(z * kEdge + y)] & ~neighbourWord(w.opaque.data(), d, z, y, false);
-                    phases.lap(&MeshTimings::culling);
-                    transpose64(a);
-                    phases.lap(&MeshTimings::transposes);
-                    for (int x = 0; x < kEdge; ++x) w.planeX[static_cast<std::size_t>(x * kEdge + z)] = a[x];
-                }
-                greedyDirection(
-                    phases, d, merge, out,
-                    [&](int slice, std::uint64_t* rows) {
-                        std::uint64_t any = 0;
-                        for (int r = 0; r < kEdge; ++r) any |= rows[r] = w.planeX[static_cast<std::size_t>(slice * kEdge + r)];
-                        return any != 0;
-                    },
-                    idAt(d));
-            } else {
-                greedyDirection(
-                    phases, d, merge, out,
-                    [&](int slice, std::uint64_t* rows) {
-                        std::uint64_t any = 0;
-                        planeFaces(w, d, slice, rows, any);
-                        return any != 0;
-                    },
-                    idAt(d));
-            }
+    // Opaque faces (O & ~O shifted), then each cutout type's (C & ~(O | C)
+    // shifted: an opaque neighbour or one of the same type hides a cutout
+    // face; a cutout cell hides nobody's, so it is in no occluder plane but
+    // its own type's).
+    if (anyOpaque) solidFaces(w, phases, w.opaque.data(), w.opaque.data(), merge, out.quads, idAt);
+    if (anyCutout) {
+        for (std::size_t s = 0; s < w.typeOfSlot.size(); ++s) {
+            if (!w.slotCutout[s]) continue;
+            const std::uint64_t* c = &w.groups[s * kRows];
+            for (std::uint32_t r = 0; r < kRows; ++r) w.occluders[r] = w.opaque[r] | c[r];
+            solidFaces(w, phases, c, w.occluders.data(), merge, out.cutoutQuads, idAt);
         }
     }
 
-    if (!w.typeOfSlot.empty()) {
+    if (anyTranslucent) {
         const auto stateAt = [&brick](std::uint32_t cell) { return brick.entry(brick.indexAt(cell)); };
         if (merge) mergeTranslucent(w, ctx, out, phases, stateAt);
         else emitTranslucent(w, ctx, out, phases, stateAt);
@@ -507,12 +531,14 @@ void bitmaskMeshUniform(StateId state, const MeshContext& context, bool merge,
     Guard guard(w);
     Phases phases(w.timings);
     if (!context.states.translucent(state)) {
-        // Six sides: only the boundary slice has faces, every row full.
+        // Six sides: only the boundary slice has faces, every row full (a
+        // cutout state's own type hides the rest, as opaque does).
+        auto& target = context.states.cutout(state) ? out.cutoutQuads : out.quads;
         for (int d = 0; d < 6; ++d) {
             const int boundary = d % 2 == 0 ? kEdge - 1 : 0;
             const std::uint32_t id0 = context.states.appearance(state, static_cast<Face>(d));
             greedyDirection(
-                phases, d, merge, out,
+                phases, d, merge, target,
                 [&](int slice, std::uint64_t* rows) {
                     if (slice != boundary) return false;
                     std::fill_n(rows, kEdge, kAllBits);
@@ -527,7 +553,8 @@ void bitmaskMeshUniform(StateId state, const MeshContext& context, bool merge,
     sizeAtLeast(w, w.opaque, kRows);
     std::fill(w.slotOfType.begin(), w.slotOfType.begin() + static_cast<std::ptrdiff_t>(context.registry.defs().size()), std::int16_t{-1});
     w.typeOfSlot.clear();
-    slotFor(w, context.states.type(state));
+    w.slotCutout.clear();
+    slotFor(w, context.states.type(state), false);
     std::fill_n(w.groups.begin(), kRows, kAllBits);
     std::fill_n(w.opaque.begin(), kRows, std::uint64_t{0});
     const auto stateAt = [state](std::uint32_t) { return state; };
@@ -544,5 +571,5 @@ std::size_t meshWorkingAllocations() { return gWork.allocations; }
 std::size_t meshWorkingBytes() {
     const Work& w = gWork;
     return w.kind.capacity() + w.appearance.capacity() * 4 + w.slotOfEntry.capacity() * 2 + w.slotOfType.capacity() * 2 +
-           w.typeOfSlot.capacity() * sizeof(BlockTypeId) + (w.tKey.capacity() + w.tBits.capacity()) * 4 + (w.opaque.capacity() + w.groups.capacity() + w.planeX.capacity() + w.faceWords.capacity()) * 8;
+           w.typeOfSlot.capacity() * sizeof(BlockTypeId) + w.occluders.capacity() * 8 + (w.tKey.capacity() + w.tBits.capacity()) * 4 + (w.opaque.capacity() + w.groups.capacity() + w.planeX.capacity() + w.faceWords.capacity()) * 8;
 }

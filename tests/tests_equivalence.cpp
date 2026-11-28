@@ -65,14 +65,15 @@ int oracleRay(const Cells& cells, const Ray& r) {
     return -1;
 }
 
-using QuadKey = std::pair<bool, std::uint64_t>;  // (translucent, packed quad)
+using QuadKey = std::pair<int, std::uint64_t>;  // (array: 0 opaque, 1 translucent, 2 cutout; packed quad)
 
 // A mesh as a sorted list of quads (opaque then translucent), so equal
 // content gives equal lists whatever order the faces were emitted in.
 std::vector<QuadKey> quadList(const WorldMesh& m) {
     std::vector<QuadKey> out;
-    for (const std::uint64_t q : m.quads) out.push_back({false, q});
-    for (const std::uint64_t q : m.translucentQuads) out.push_back({true, q});
+    for (const std::uint64_t q : m.quads) out.push_back({0, q});
+    for (const std::uint64_t q : m.translucentQuads) out.push_back({1, q});
+    for (const std::uint64_t q : m.cutoutQuads) out.push_back({2, q});
     std::sort(out.begin(), out.end());
     return out;
 }

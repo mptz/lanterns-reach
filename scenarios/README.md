@@ -23,7 +23,10 @@ message (`events[3].key: unknown key "Q1"`), as in block definitions.
 - `v0.1-scene.json`: the v0.1 test world (was `src/scene.cpp`), the start
   view, and the `--check-absorbance` cases.
 - `headless/*.json`: one per `tools/headless_check.sh` shot; each includes
-  the v0.1 scene and adds a camera, a view and events. The comparison sets
+  the v0.1 scene and adds a camera, a view and events, except
+  `glass_corners` (glass shapes with inner corners) and `cutout` (the grate
+  in front of stone and glass), which build small scenes of their own
+  (v0.2.5). The comparison sets
   (`order_*`, `ghost_order_*`, `variant_run`, `quad_*`) are run in pairs by
   the script.
 - `one-frame.json`: runs one frame (the missing-validation-layer test).

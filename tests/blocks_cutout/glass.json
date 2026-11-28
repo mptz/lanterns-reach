@@ -1,0 +1,2 @@
+{ "ulid": "01M8FZK5KNK4765NXBP4BKWQEW", "name": "glass", "symmetry": "uniform", "textures": { "+z": { "connected": "../../assets/blocks/glass_frames.png" } },
+  "translucency": { "absorption": [0.15, 1.9, 2.2] } }

@@ -129,6 +129,7 @@ StateId StateTable::internDense(std::uint32_t definition, std::uint32_t dense) {
     row.orientation = d.orientations[slot];
     row.visibility = d.type == kAirType ? Visibility::Air
                      : d.def && d.def->translucent() ? Visibility::Translucent
+                     : d.def && d.def->cutout        ? Visibility::Cutout
                                                      : Visibility::Opaque;
     if (d.def)
         for (int f = 0; f < orient::kFaceCount; ++f) {

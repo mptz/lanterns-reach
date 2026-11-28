@@ -1,0 +1,1 @@
+{ "ulid": "01M8FZK5KNK4765NXBP4BKWQEX", "name": "grate_a", "symmetry": "uniform", "textures": { "+z": "../../assets/blocks/grate.png" }, "cutout": true }

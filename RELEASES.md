@@ -857,6 +857,61 @@ elsewhere. Merging translucent faces costs mesh time: about 0.2 ms more for
 the v0.1 scene (culling and merging the group planes), 3 ms more for the
 random case, where almost nothing merges.
 
+- **Owner, 2026-11-27 (display checks 9, part, and 10):** merged glass
+  looks right on the HD 620; no off-tint specks close up, at grazing angles
+  or at distance.
+
+### v0.2.5e: the cutout class and a grate (built 2026-11-27)
+#### Choices
+- **`"cutout": true`** in a definition (excludes `translucency`; a new
+  negative fixture, `cutout_translucent`) gives its states the visibility
+  class `Cutout`. `StateTable::occludes` (opaque only) is what hides a
+  neighbour's face now, so neither meshing rule has to list the classes
+  that don't.
+- **A third mesh array, `WorldMesh::cutoutQuads`** (the spec has opaque and
+  cutout in one array). Cutout faces are drawn by a second G-buffer draw
+  whose fragment shader alpha-tests (`gbuffer_cutout.frag`, the opaque
+  shader with `GBUFFER_CUTOUT` defined; both include `gbuffer_body.glsl`),
+  so the opaque draw has no `discard` and keeps early depth testing.
+  Back faces are culled, as for opaque faces.
+- **The bitmask mesher** gives each cutout type present a group slot, like
+  a translucent group (marked cutout), and meshes it with the opaque
+  machinery: faces C & ~(O | C) shifted, merged by appearance id
+  (`solidFaces`, now shared with the opaque faces). Cutout slots are skipped
+  by the translucent passes, and count as opaque for glass frames (no
+  surface layer against a cutout cell), as in the per-cell rule. A uniform
+  cutout chunk takes the opaque uniform path into the cutout array.
+- **The grate** (`assets/blocks/grate.json`, ULID minted): an iron lattice
+  from the texture generator's new `grate` recipe (bars two texels wide at
+  the edges and through the middle, holes alpha 0), appended last so every
+  other texture's seed is unchanged; metallic, roughness 0.45. It sorts
+  between grass and gravel, so the block types after it (gravel to
+  stone_brick) moved up by one: their material ids too, which is why the
+  `material` capture changed (below).
+- **Cutout tests use a fixture registry** (`tests/blocks_cutout/`: one
+  opaque block, one glass, two cutout types), since only one cutout type
+  ships. `unitFaces` takes the registry's state table.
+
+#### Results
+- `ctest` passes, Debug (27) and Release (26), zero warnings. Tests: a
+  cutout cell against each class on all six sides (air, opaque, glass, its
+  own type, another cutout type): its face is hidden by an opaque neighbour
+  and its own type only, the neighbour's face toward it is kept except
+  between two of one type, and cutout faces land in the cutout array; a row
+  of eight merges to six quads; two types side by side keep the faces
+  between them and don't merge; a uniform cutout chunk is six 64×64 quads,
+  as its palette form is with every mesher; glass against a grate keeps an
+  unframed face. Every case agrees across the three meshers.
+- **Captures** (`cap-025e`, greedy, 67 runs with `cutout`): all pass with
+  zero validation errors. Against `cap-025d` every capture pixel-checks
+  except `material`, the material-id view, whose colours changed for the
+  blocks that moved up (a sound change: ids are indices, not identity).
+  `cutout`'s `per-cell` and `unmerged` captures pixel-check against its
+  greedy one (5 single pixels).
+- **Appearance table:** 91 payloads (largest id 90), 1,456 bytes.
+- **Mesh time:** the v0.1 scene's greedy mesh measured 0.86–0.94 ms in
+  three runs (0.77 in step d); not investigated.
+
 ### Pending for v0.2.5
 - **Shader unpacking against the C++** (acceptance 5's readback): covered
   so far only by the pixel-identical captures.

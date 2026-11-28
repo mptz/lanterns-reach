@@ -100,6 +100,7 @@ FetchContent_MakeAvailable(glfw glm vma vk_bootstrap stb imgui json blake3)  # s
 set(SHADER_SOURCES
   shaders/gbuffer.vert
   shaders/gbuffer.frag
+  shaders/gbuffer_cutout.frag
   shaders/fullscreen.vert
   shaders/lighting.frag
   shaders/present.frag
@@ -127,7 +128,7 @@ foreach(src ${SHADER_SOURCES})
             ${CMAKE_CURRENT_SOURCE_DIR}/shaders/material.glsl
             ${CMAKE_CURRENT_SOURCE_DIR}/shaders/variants.glsl ${CMAKE_CURRENT_SOURCE_DIR}/shaders/block_texture.glsl
             ${CMAKE_CURRENT_SOURCE_DIR}/shaders/translucent_surface.glsl ${CMAKE_CURRENT_SOURCE_DIR}/shaders/heat.glsl
-            ${CMAKE_CURRENT_SOURCE_DIR}/shaders/quad.glsl
+            ${CMAKE_CURRENT_SOURCE_DIR}/shaders/quad.glsl ${CMAKE_CURRENT_SOURCE_DIR}/shaders/gbuffer_body.glsl
     COMMENT "glslc ${name}"
     VERBATIM)
   list(APPEND SHADER_OUTPUTS ${out})
@@ -274,6 +275,7 @@ add_executable(sandbox_tests
   tests/tests_placement.cpp
   tests/tests_input.cpp
   tests/tests_translucency.cpp
+  tests/tests_cutout.cpp
   tests/tests_tools.cpp
   tests/tests_scenario.cpp
   tests/measurements.cpp)
@@ -282,7 +284,8 @@ target_compile_options(sandbox_tests PRIVATE ${SANDBOX_WARNINGS})
 find_package(Threads REQUIRED)
 target_link_libraries(sandbox_tests PRIVATE sandbox_core Threads::Threads)
 target_compile_definitions(sandbox_tests PRIVATE SANDBOX_ASSET_DIR="${CMAKE_CURRENT_SOURCE_DIR}/assets"
-                                               SANDBOX_SCENARIO_DIR="${CMAKE_CURRENT_SOURCE_DIR}/scenarios")
+                                               SANDBOX_SCENARIO_DIR="${CMAKE_CURRENT_SOURCE_DIR}/scenarios"
+                                               SANDBOX_TEST_DIR="${CMAKE_CURRENT_SOURCE_DIR}/tests")
 # The randomized equivalence test is the long pole: its own ctest entry, so it
 # runs beside the rest under `ctest -j`.
 add_test(NAME sandbox_tests COMMAND sandbox_tests --skip-equivalence)
@@ -315,7 +318,8 @@ set(BAD_FIXTURES
   "reserved_property|\"orientation\" is reserved"
   "bad_domain|a mandatory one at least two"
   "no_initial|names each mandatory property's starting value"
-  "too_many_states|has 1032 states")
+  "too_many_states|has 1032 states"
+  "cutout_translucent|\"cutout\" and \"translucency\" exclude each other")
 foreach(entry ${BAD_FIXTURES})
   string(REPLACE "|" ";" parts "${entry}")
   list(GET parts 0 fixture)
@@ -323,10 +327,10 @@ foreach(entry ${BAD_FIXTURES})
   add_test(NAME engine_rejects_${fixture}
     COMMAND ${EXPECT_FAIL} "${why}" $<TARGET_FILE:sandbox> --check-blocks --blocks ${BAD_BLOCKS}/${fixture})
 endforeach()
-# The ULID minting tool: well formed, distinct, monotonic; --add only inserts.
 # The capture comparison's visible-difference gate (tools/imgdiff.py --tolerant).
 add_test(NAME imgdiff_visible
   COMMAND ${Python3_EXECUTABLE} -I ${CMAKE_CURRENT_SOURCE_DIR}/tests/imgdiff_selftest.py)
+# The ULID minting tool: well formed, distinct, monotonic; --add only inserts.
 add_test(NAME mint_ulid
   COMMAND ${Python3_EXECUTABLE} -I ${CMAKE_CURRENT_SOURCE_DIR}/tests/check_mint_ulid.py
           ${CMAKE_CURRENT_SOURCE_DIR}/tools/mint_ulid.py ${CMAKE_CURRENT_BINARY_DIR}/test_out/mint_ulid)

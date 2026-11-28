@@ -50,10 +50,14 @@ struct ApplyResult {
 // to a separate array drawn by the OIT passes. Each translucent cell emits
 // its own faces, wound outward, wherever its neighbour isn't the same group
 // (block type): air, opaque, another tint, or outside the world.
+// Cutout faces (world/chunk-meshing, v0.2.5) are drawn in the G-buffer like
+// opaque ones, by a second draw that alpha-tests, so they have an array of
+// their own and the opaque draw keeps early depth testing.
 struct WorldMesh {
     WorldPos origin;
     std::vector<std::uint64_t> quads;
     std::vector<std::uint64_t> translucentQuads;
+    std::vector<std::uint64_t> cutoutQuads;
 };
 
 struct Emitter {

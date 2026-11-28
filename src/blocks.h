@@ -34,6 +34,12 @@
 // with it is TRANSLUCENT: drawn by the moment-based OIT passes, not the
 // G-buffer, and its group (for face culling) is its block type.
 //
+// `cutout` (optional, v0.2.5): true makes a block CUTOUT: drawn in the
+// G-buffer with an alpha test (texels below 0.5 discarded), opaque for every
+// other purpose. It never hides a neighbour's face; an opaque neighbour
+// hides its faces, and so does a neighbour of the same block type
+// (world/chunk-meshing). Excludes `translucency`.
+//
 // Rotational invariance is not a texture property: it comes from canonical
 // orientations (world/block-orientation). Material fields are optional and
 // default as shown. Texture paths are relative to the definition's
@@ -121,6 +127,7 @@ struct ParsedDefinition {
     std::vector<TextureRef> textures;                            // one per orbit, in orbit order
     MaterialParams material;
     std::optional<Translucency> translucency;
+    bool cutout = false;
 };
 
 // Structural checks: valid JSON, known fields, a symmetry keyword, texture
@@ -140,6 +147,7 @@ struct BlockDef {
     std::vector<PropertyDecl> properties;  // sorted by name; orientation comes from `symmetry`
     MaterialParams material;
     std::optional<Translucency> translucency;
+    bool cutout = false;  // the cutout class: alpha-tested in the G-buffer (world/chunk-meshing)
     bool translucent() const { return translucency.has_value(); }
     // Per local face (orient::Face order): texture-array layer (a set's
     // tile 0; tile i is layer + i), the CCW quarter turns that carry the

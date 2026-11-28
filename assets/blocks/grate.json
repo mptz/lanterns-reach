@@ -1,0 +1,3 @@
+{ "ulid": "01M8FYY29XAKNNSCHWE97AASME", "name": "grate", "symmetry": "uniform",
+  "textures": { "+z": "grate.png" },
+  "roughness": 0.45, "metallic": 1.0, "cutout": true }

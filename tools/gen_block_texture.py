@@ -12,7 +12,8 @@ world/block-orientation).
 
   - single textures: brick (a pinwheel bond, which still reads as a bond on
     every face a uniform block's faces are turned onto), lamp, polished,
-    gold, glow, log end, and the six chiral furnace faces. Each furnace face
+    gold, glow, log end, grate (an iron lattice with transparent holes, the
+    cutout test block), and the six chiral furnace faces. Each furnace face
     carries a letter in its top-left corner (F front, B back, R right,
     L left, U top, D bottom), so mirroring or a wrong turn is visible; the
     front has an opening and the top an arrow toward the front.
@@ -410,6 +411,20 @@ def glass_frames(seed):
     return px
 
 
+def grate(seed):
+    # The cutout test block (v0.2.5): an iron lattice, bars two texels wide
+    # at the edges and through the middle, square holes between them fully
+    # transparent (alpha 0; the G-buffer's alpha test discards below 0.5).
+    bars = {0, 1, 7, 8, 14, 15}
+
+    def px(x, y):
+        if x not in bars and y not in bars:
+            return (0, 0, 0, 0)
+        v = 70 + h01(seed, x, y) * 18 + (10 if (x in (1, 8, 15) or y in (1, 8, 15)) else 0)  # a lit bevel
+        return (v, v + 3, v + 8, 255)
+    return px
+
+
 # --- negative-test fixtures ---------------------------------------------------------
 
 def big(seed):
@@ -459,6 +474,7 @@ TEXTURES = [  # (file name, generator, (width, height))
     ("furnace_top", furnace("U", top_extra), SQ), ("furnace_bottom", furnace("D", plain), SQ),
     ("lamp", lamp, SQ), ("polished", polished, SQ), ("gold", gold, SQ),
     ("glass_frames", glass_frames, atlas_size(16)), ("glow", glow, SQ),
+    ("grate", grate, SQ),  # last: every texture's seed is its position here
 ]
 
 FIXTURES = {

@@ -355,7 +355,8 @@ Cells randomMixed(std::mt19937_64& rng, std::uint32_t states) {
     Cells cells(kBrickCells, kAirState);
     std::vector<StateId> pool;
     for (std::uint32_t k = 0; k < states; ++k) pool.push_back(testState(1 + static_cast<std::uint32_t>(rng() % (validStateCount() - 1))));
-    for (const char* g : {"glass_red", "glass_blue", "glass_green"}) pool.push_back(registry().state(typeOf(g), orient::kIdentity));  // always the same groups
+    for (const char* g : {"glass_red", "glass_blue", "glass_green", "glow", "grate"})  // every translucent group and cutout type, always
+        pool.push_back(registry().state(typeOf(g), orient::kIdentity));
     for (std::uint32_t c = 0; c < kBrickCells; ++c) {
         const std::uint32_t z = c >> 12;
         if (z < 12 || rng() % 9 == 0) cells[c] = pool[rng() % pool.size()];
@@ -367,7 +368,7 @@ void testWorkingState() {
     std::mt19937_64 rng(11);
     ChunkWorld big(registry());
     fillChunk(ChunkWorldTestAccess::chunk(big), randomMixed(rng, 60), true);
-    (void)big.buildMesh(ChunkWorld::kChunk);  // this thread's first mesh sizes the working state
+    for (Mesher m : {Mesher::Greedy, Mesher::Unmerged}) (void)meshWith(big, m);  // sizes the working state for both paths
     const std::size_t after = meshWorkingAllocations();
     CHECK(after > 0 && meshWorkingBytes() > 0);
     // Further meshes of chunks no larger (palette entries, translucent groups) allocate nothing.

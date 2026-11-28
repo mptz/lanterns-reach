@@ -1,0 +1,12 @@
+{
+  "scene": [
+    {"fill": "grass", "from": [0, 0, 0], "to": [30, 30, 0]},
+    {"fill": "stone", "from": [2, 8, 1], "to": [6, 8, 4]},
+    {"fill": "glass_red", "from": [7, 8, 1], "to": [10, 8, 4]},
+    {"fill": "grate", "from": [3, 5, 1], "to": [9, 5, 3]},
+    {"place": "grate", "at": [6, 6, 1]},
+    {"place": "glass_blue", "at": [10, 5, 1]},
+    {"place": "lamp", "at": [6, 3, 6]}
+  ],
+  "camera": {"pos": [6.5, -1.0, 3.5], "look": [6.5, 8.0, 2.0]}
+}

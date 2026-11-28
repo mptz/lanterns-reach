@@ -29,6 +29,9 @@ const std::uint32_t kGBufferVert[] = {
 const std::uint32_t kGBufferFrag[] = {
 #include "gbuffer.frag.spv.inc"
 };
+const std::uint32_t kGBufferCutoutFrag[] = {
+#include "gbuffer_cutout.frag.spv.inc"
+};
 const std::uint32_t kFullscreenVert[] = {
 #include "fullscreen.vert.spv.inc"
 };
@@ -370,6 +373,11 @@ Renderer::Renderer(VkContext& ctx, const BlockRegistry& registry)
     linesPipelineLayout_ = makePipelineLayout<LinesPush>(dev, {*linesLayout_}, S::eVertex);
     gbufferPipeline_ = makePipeline(
         dev, {.vert = kGBufferVert, .frag = kGBufferFrag,
+              .layout = *gbufferPipelineLayout_,
+              .colorFormats = {GBuffer::kGB0, GBuffer::kGB1, GBuffer::kGB2, GBuffer::kGB3},
+              .depthFormat = GBuffer::kDepth, .geometry = Geometry::Mesh});
+    cutoutPipeline_ = makePipeline(
+        dev, {.vert = kGBufferVert, .frag = kGBufferCutoutFrag,
               .layout = *gbufferPipelineLayout_,
               .colorFormats = {GBuffer::kGB0, GBuffer::kGB1, GBuffer::kGB2, GBuffer::kGB3},
               .depthFormat = GBuffer::kDepth, .geometry = Geometry::Mesh});
