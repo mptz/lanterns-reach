@@ -753,11 +753,13 @@ investigation (step b was one).
   v0.2.5's criteria 2 and 3 (`versions.md`, glossary): identical captures
   are still reported, and any `invisible` difference is listed, not
   investigated. Closed releases keep their wording.
-- **Criteria by cost and benefit** (owner, 2026-11-27; `versions.md`, shared
-  rules): a failure is resolved by a fix or by an accepted disposition,
-  and doesn't by itself call for a fix; imperceptible or barely perceptible
-  issues are weighed against what fixing them costs. Correctness that other
-  work depends on is not traded this way.
+- **Image-reproduction criteria by cost and benefit** (owner, 2026-11-27;
+  `versions.md`, shared rules): only the criteria asking for near
+  pixel-for-pixel reproduction of a scene (pixel-checked captures, and
+  comparisons between captures of one view). A failure there is resolved by
+  a fix or by an accepted disposition, and doesn't by itself call for a fix;
+  imperceptible or barely perceptible differences are weighed against what
+  fixing them costs. Every other criterion is a gate as stated.
 
 ### Pending for v0.2.5
 - **Shader unpacking against the C++** (acceptance 5's readback): covered

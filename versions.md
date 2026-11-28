@@ -47,15 +47,18 @@ rather than restating it). Rules:
   criteria**; the build is not done until they pass (or, if they can't be checked
   headlessly, until the headless subset passes and the display-dependent ones are
   clearly listed for the owner to confirm interactively).
-- **Criteria are judged by cost and benefit, not as rigid gates** (owner,
-  2026-11-27). A failing criterion is resolved by a fix, or by a
-  disposition the owner accepts (deferred, accepted as is, or the criterion
-  changed), and recorded in `RELEASES.md`. A failure doesn't by itself mean
-  a fix: whether an imperceptible or barely perceptible issue is worth
-  addressing is weighed against what fixing it costs, and the agent brings
-  that weighing (what the issue is, whether it shows, what a fix would
-  take) rather than starting the fix. Correctness that other work depends on
-  (determinism, digests, face sets, absorbance) is not traded this way.
+- **Image-reproduction criteria are judged by cost and benefit, not as
+  rigid gates** (owner, 2026-11-27). This covers only the criteria that ask
+  for a scene to be reproduced near pixel for pixel: pixel-checked
+  captures, and comparisons between captures of one view (meshers, quads).
+  Every other criterion is a gate as stated. A failing image criterion is
+  resolved by a fix, or by a disposition the owner accepts (deferred,
+  accepted as is, or the criterion changed), and recorded in `RELEASES.md`.
+  A failure doesn't by itself mean a fix: whether an imperceptible or
+  barely perceptible difference is worth addressing is weighed against what
+  fixing it costs, and the agent brings that weighing (what the difference
+  is, whether it shows, what a fix would take) rather than starting the
+  fix.
 - **Captures are regression detectors, not specifications.** A
   **pixel-checked** criterion (glossary; from v0.2.5, replacing
   "pixel-identical") catches unintended change; it is never a reason to
