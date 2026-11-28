@@ -1302,7 +1302,7 @@ Display-required:
   after load).
 
 ## v0.2.5 — Packed quads, translucent merging and a cutout block
-- Status: IN PROGRESS (step a of a–e built 2026-11-27; RELEASES.md). Depends on v0.2.4.
+- Status: IN PROGRESS (steps a and c of a–e built, b tried and reverted, 2026-11-27; RELEASES.md). Depends on v0.2.4.
 - **Claim:** every mesh covers the same faces as before, each with the
   appearance the per-cell rule gives it, at about a tenth of the bytes;
   translucent faces merge like opaque ones and absorbance stays exact; a

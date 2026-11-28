@@ -1,0 +1,16 @@
+{
+  "scene": [
+    {"fill": "stone", "from": [0, 0, 0], "to": [30, 30, 0]},
+    {"place": "glass_red", "at": [4, 4, 1]},
+    {"place": "glass_red", "at": [5, 4, 1]},
+    {"place": "glass_red", "at": [6, 4, 1]},
+    {"place": "glass_red", "at": [4, 5, 1]},
+    {"place": "glass_red", "at": [4, 6, 1]},
+    {"fill": "glass_blue", "from": [9, 4, 1], "to": [11, 6, 1]},
+    {"fill": "air", "from": [10, 5, 1], "to": [10, 5, 1]},
+    {"fill": "glass_green", "from": [14, 3, 1], "to": [18, 7, 1]},
+    {"fill": "air", "from": [16, 5, 1], "to": [16, 5, 1]},
+    {"fill": "air", "from": [17, 6, 1], "to": [18, 7, 1]}
+  ],
+  "camera": {"pos": [11.0, -1.5, 9.0], "look": [11.0, 5.5, 1.0]}
+}

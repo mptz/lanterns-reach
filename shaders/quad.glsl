@@ -77,6 +77,26 @@ uint quadFramedPositions(Quad q, ivec3 cell) {
     return p;
 }
 
+// The inner corner (0–3, as the corner bits) whose square holds a fragment
+// at `pos` in cell `cell`, if that cell is the quad's cell at that corner and
+// the corner's bit is set; 4 otherwise. The square's quadrant is the half of
+// the cell along R and along U the fragment is in.
+uint quadCornerAt(Quad q, ivec3 cell, vec3 pos) {
+    if (q.corners == 0u) return 4u;
+    ivec3 n = quadNormal(q.face);
+    float alongR = fract(dot(pos, vec3(variantFaceRight(n))));
+    float alongU = fract(dot(pos, vec3(variantFaceUp(n))));
+    uint k = (alongR >= 0.5 ? 1u : 0u) | (alongU >= 0.5 ? 2u : 0u);
+    if ((q.corners & (1u << k)) == 0u) return 4u;
+    int b = quadBitAxis(q.face), w = quadRowAxis(q.face);
+    int i = cell[b] - q.cell[b], j = cell[w] - q.cell[w];
+    bool lowBit = i == 0, highBit = i == q.size.x - 1;
+    bool along = quadRightAlongBit(q.face);
+    bool atR = (k & 1u) != 0u ? (along ? highBit : lowBit) : (along ? lowBit : highBit);
+    bool atU = (k & 2u) != 0u ? j == q.size.y - 1 : j == 0;
+    return atR && atU ? k : 4u;
+}
+
 // The mesh-relative cell of a fragment at `pos` on the quad: the cell behind
 // the face (floor(pos − n/2)), clamped to the quad, so a fragment on a cell
 // edge never picks a neighbour outside it.

@@ -180,7 +180,8 @@ bool surfaceFace(const Work& w, int slot, int d, const glm::ivec3& c) {
 
 // The connected-frame bits of a translucent face (block_mesh.h connectedTile):
 // bit 4 the surface layer, bits 0–3 the framed edges (−R, +R, −U, +U), an
-// edge being framed unless the neighbour across it shows a surface face too.
+// edge being framed unless the neighbour across it shows a surface face too;
+// bits 5–8 the inner corners (chunk_mesh.cpp frameBitsAt).
 std::uint32_t frameBitsFromMasks(const Work& w, int slot, int d, const glm::ivec3& c) {
     if (!surfaceFace(w, slot, d, c)) return 0;
     const glm::ivec3 n = orient::faceNormal(static_cast<Face>(d));
@@ -190,6 +191,10 @@ std::uint32_t frameBitsFromMasks(const Work& w, int slot, int d, const glm::ivec
     std::uint32_t bits = 16u;
     for (int i = 0; i < 4; ++i)
         if (!surfaceFace(w, slot, d, c + sides[i])) bits |= 1u << i;
+    for (int k = 0; k < 4; ++k) {  // corners, as chunk_mesh.cpp frameBitsAt
+        const int r = (k & 1) ? 1 : 0, u = (k & 2) ? 3 : 2;
+        if ((bits & ((1u << r) | (1u << u))) == 0 && !surfaceFace(w, slot, d, c + sides[r] + sides[u])) bits |= 32u << k;
+    }
     return bits;
 }
 
@@ -225,7 +230,11 @@ void emitTranslucent(Work& w, const MeshContext& ctx, WorldMesh& out, Phases& ph
                     if (((w.faceWords[slot * 6 + static_cast<std::size_t>(d)] >> x) & 1) == 0) continue;
                     const auto face = static_cast<Face>(d);
                     quad::Quad q{.cell = local, .face = face, .appearance = ctx.states.appearance(st, face)};
-                    if (framedFace(ctx.states, st, face)) q.sides = frameBitsFromMasks(w, static_cast<int>(slot), d, local) & 15u;
+                    if (framedFace(ctx.states, st, face)) {
+                        const std::uint32_t bits = frameBitsFromMasks(w, static_cast<int>(slot), d, local);
+                        q.sides = bits & 15u;
+                        q.corners = (bits >> 5) & 15u;
+                    }
                     out.translucentQuads.push_back(quad::pack(q));
                 }
             }

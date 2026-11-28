@@ -63,10 +63,22 @@ FaceTexel blockFaceTexel(vec3 pos, vec3 normal, ivec3 cell, uint layer, uint tex
 // texels blended over about one screen pixel (fwidth), with mip selection
 // and anisotropy from the true UV derivatives (textureGrad), so distant faces
 // use the mip chain.
-vec4 sampleBlockFace(FaceTexel t) {
-    vec2 texel = fract(t.uvRaw) * kTexelsPerFace;
-    vec2 width = max(fwidth(t.uvRaw * kTexelsPerFace), vec2(1e-5));
-    vec2 seam = floor(texel + 0.5);
-    vec2 aa = (seam + clamp((texel - seam) / width, -0.5, 0.5)) / kTexelsPerFace;
-    return textureGrad(blockTextures, vec3(aa, t.layer), dFdx(t.uvRaw), dFdy(t.uvRaw));
+// The derivatives of a face's UV, taken where control flow is uniform, so
+// further samples of other layers at the same UV can be taken in a branch.
+struct FaceGrad {
+    vec2 dx, dy, width;  // width: fwidth in texels
+};
+FaceGrad blockFaceGrad(FaceTexel t) {
+    FaceGrad g;
+    g.dx = dFdx(t.uvRaw);
+    g.dy = dFdy(t.uvRaw);
+    g.width = max(fwidth(t.uvRaw * kTexelsPerFace), vec2(1e-5));
+    return g;
 }
+vec4 sampleBlockFaceGrad(FaceTexel t, FaceGrad g) {
+    vec2 texel = fract(t.uvRaw) * kTexelsPerFace;
+    vec2 seam = floor(texel + 0.5);
+    vec2 aa = (seam + clamp((texel - seam) / g.width, -0.5, 0.5)) / kTexelsPerFace;
+    return textureGrad(blockTextures, vec3(aa, t.layer), g.dx, g.dy);
+}
+vec4 sampleBlockFace(FaceTexel t) { return sampleBlockFaceGrad(t, blockFaceGrad(t)); }

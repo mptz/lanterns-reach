@@ -761,6 +761,43 @@ investigation (step b was one).
   imperceptible or barely perceptible differences are weighed against what
   fixing them costs. Every other criterion is a gate as stated.
 
+### v0.2.5c: inner corners of glass frames (built 2026-11-27)
+#### Choices
+- **Corner bits** are computed beside the frame bits, by the per-cell rule
+  (`frameBitsAt`) and the bitmask mesher (`frameBitsFromMasks`) alike: bit
+  k of (−R−U), (+R−U), (−R+U), (+R+U) is set when both of the face's edges at
+  that corner continue the surface and the diagonal in-plane neighbour
+  doesn't. Only framed faces (connected, absorbing, showing the surface
+  layer) have them.
+- **The square** is drawn in the fragment shader (`translucent_surface.glsl`)
+  in the corner's quadrant of the quad's corner cell: its coverage is the
+  lesser of the two one-edge tiles' coverage at that texel (exactly the
+  overlap of the two bands, whatever their width), its colour the fully
+  framed tile's, and it replaces the face's own tile where it covers more.
+  The 16 edge tiles stay. The extra samples use derivatives taken before
+  the branch (`blockFaceGrad`), since derivatives are undefined in
+  non-uniform control flow.
+- **A new scenario, `glass_corners`**, shows the case on a stone floor: an
+  L, a 3×3 ring and a 5×5 slab with a hole and a notch. No existing capture
+  has an inner corner: every tint region in the v0.1 scene is a straight
+  run.
+
+#### Results
+- `ctest` passes, Debug (26), zero warnings. A new test (`testInnerCorners`):
+  an L carries one corner bit, at its inside corner; a ring carries one at
+  each corner cell, pointing at the hole, and none at its edge cells; glass
+  under stone has none; all three meshers give the same unit faces,
+  corners included.
+- `ctest` Release (25) passes too.
+- **Captures:** `cap-025c` (greedy, 65 runs, before `glass_corners` was
+  added), `cap-025c-unmerged` and `cap-025c-percell` (60 runs each, with
+  it) all pass, and every capture they share with `cap-025a` is identical. `glass_corners` against the same scene built
+  without step c: 8 clusters of 12–14 pixels differ (up to 74/255), one per
+  expected corner (1 in the L, 4 in the ring, 3 around the slab's hole; the
+  hole's fourth corner cell is in the notch), each a square of the frame's
+  grey filling the gap where two bands met. Its `per-cell` and `unmerged`
+  captures are pixel-checked against it (no cluster).
+
 ### Pending for v0.2.5
 - **Shader unpacking against the C++** (acceptance 5's readback): covered
   so far only by the pixel-identical captures.

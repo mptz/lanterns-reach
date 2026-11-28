@@ -134,8 +134,16 @@ void decompose(const std::vector<std::uint64_t>& quads, bool translucent, std::v
                 if ((along ? highBit : lowBit) && (q.sides & quad::kSidePosR)) frame |= quad::kSidePosR;
                 if (j == 0 && (q.sides & quad::kSideNegU)) frame |= quad::kSideNegU;
                 if (j == q.h - 1 && (q.sides & quad::kSidePosU)) frame |= quad::kSidePosU;
+                // Its corner bits: the quad's, at the quad's corner cells.
+                std::uint32_t corners = 0;
+                for (std::uint32_t k = 0; k < 4; ++k) {
+                    const bool posR = (k & 1) != 0, posU = (k & 2) != 0;
+                    const bool atR = posR ? (along ? highBit : lowBit) : (along ? lowBit : highBit);
+                    const bool atU = posU ? j == q.h - 1 : j == 0;
+                    if (atR && atU && (q.corners & (1u << k))) corners |= 1u << k;
+                }
                 const bool outside = c.x > 63 || c.y > 63 || c.z > 63;
-                out.push_back({c.x, c.y, c.z, outside ? -1 : dir, translucent, payload, frame});
+                out.push_back({c.x, c.y, c.z, outside ? -1 : dir, translucent, payload, frame, corners});
             }
     }
 }

@@ -18,7 +18,22 @@ vec4 translucentSurface(vec3 meshPos, vec3 normal, uint layer, uint texInfo, uve
     Quad q = unpackQuad(packedQuad);
     ivec3 own = quadCellAt(q, meshPos);
     FaceTexel t = blockFaceTexel(meshPos, normal, own + pc.originCell.xyz, layer, texInfo, quadFramedPositions(q, own));
-    vec4 c = sampleBlockFace(t);
+    FaceGrad g = blockFaceGrad(t);
+    vec4 c = sampleBlockFaceGrad(t, g);
+    // An inner corner (the inside of an L, v0.2.5): the corner's square from
+    // the fully framed tile, where the bands of the corner's two edges would
+    // overlap (the lesser of the two one-edge tiles' coverage), over the
+    // face's own tile. The 16 edge tiles serve every face.
+    uint corner = quadCornerAt(q, own, meshPos);
+    if (corner < 4u && texSet(texInfo) == kSetConnected) {
+        uint turn = texTurn(texInfo);
+        FaceTexel e1 = t, e2 = t, full = t;
+        e1.layer = float(layer + variantImageBits((corner & 1u) != 0u ? 2u : 8u, turn));  // E (+R) or W (−R)
+        e2.layer = float(layer + variantImageBits((corner & 2u) != 0u ? 1u : 4u, turn));  // N (+U) or S (−U)
+        full.layer = float(layer + 15u);
+        float square = min(sampleBlockFaceGrad(e1, g).a, sampleBlockFaceGrad(e2, g).a);
+        if (square > c.a) c = vec4(sampleBlockFaceGrad(full, g).rgb, square);
+    }
     if (ghost) return vec4(c.rgb, 0.0);
     bool framed = texSet(texInfo) == kSetConnected && frame.params.w > 0.5;
     return vec4(c.rgb, framed ? c.a : 0.0);

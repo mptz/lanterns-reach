@@ -85,7 +85,8 @@ struct UnitFace {
     int dir = 0;  // 0..5 as orient::Face, −1: outside the chunk
     bool translucent = false;
     FacePayload payload;
-    std::uint32_t frame = 0;  // framed edges (packed_quad.h side bits) of this unit face
+    std::uint32_t frame = 0;    // framed edges (packed_quad.h side bits) of this unit face
+    std::uint32_t corners = 0;  // its inner-corner bits (packed_quad.h)
     constexpr auto operator<=>(const UnitFace&) const = default;
 };
 std::vector<UnitFace> unitFaces(const WorldMesh& mesh);

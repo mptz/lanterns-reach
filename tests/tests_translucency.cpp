@@ -1,5 +1,7 @@
 // Tests: translucency. Registered through sandbox_tests.cpp.
 
+#include <map>
+
 #include "test_support.h"
 
 namespace {
@@ -223,6 +225,47 @@ void testGlassFrames() {
 }
 
 
+// Inner corners (v0.2.5): a top face's corner bit is set where both edges
+// at that corner continue and the diagonal neighbour doesn't. An L carries
+// one at its inside corner and none at its convex corners; a 3×3 slab with a
+// hole carries one at each corner cell of the ring, pointing at the hole.
+// Every mesher agrees with the per-cell rule (unit faces include corners).
+void testInnerCorners() {
+    const auto red = registry().find("glass_red");
+    CHECK(red.has_value());
+    if (!red) return;
+    const StateId glass = registry().state(*red, orient::kIdentity);
+    // Corner bits of the +z face at (x, y, 5), from every mesher.
+    auto cornersOf = [](ChunkWorld& w) {
+        std::map<std::pair<int, int>, std::uint32_t> out;
+        const auto ref = unitFaces(meshWith(w, Mesher::PerCell));
+        for (Mesher m : {Mesher::Greedy, Mesher::Unmerged}) CHECK(unitFaces(meshWith(w, m)) == ref);
+        for (const UnitFace& u : ref)
+            if (u.translucent && u.dir == PosZ) out[{u.x, u.y}] = u.corners;
+        return out;
+    };
+    ChunkWorld l(registry());
+    l.apply({{{{1, 1, 5}, glass}, {{2, 1, 5}, glass}, {{1, 2, 5}, glass}}});
+    auto lc = cornersOf(l);
+    CHECK(lc.size() == 3 && lc[{1, 1}] == 8u && lc[{2, 1}] == 0u && lc[{1, 2}] == 0u);  // +R+U at the inside
+    ChunkWorld ring(registry());
+    EditSet e;
+    for (std::int64_t y = 0; y < 3; ++y)
+        for (std::int64_t x = 0; x < 3; ++x)
+            if (x != 1 || y != 1) e.edits.push_back({{10 + x, 10 + y, 5}, glass});
+    ring.apply(e);
+    auto rc = cornersOf(ring);
+    CHECK(rc.size() == 8 && rc[{10, 10}] == 8u && rc[{12, 10}] == 4u && rc[{10, 12}] == 2u && rc[{12, 12}] == 1u);
+    CHECK(rc[{11, 10}] == 0u && rc[{10, 11}] == 0u && rc[{12, 11}] == 0u && rc[{11, 12}] == 0u);
+    // Glass against stone shows no surface layer, so no corners.
+    ChunkWorld s(registry());
+    EditSet se = e;
+    for (std::int64_t y = 0; y < 3; ++y)
+        for (std::int64_t x = 0; x < 3; ++x) se.edits.push_back({{10 + x, 10 + y, 6}, solidState()});
+    s.apply(se);
+    for (const auto& [cell, bits] : cornersOf(s)) CHECK(bits == 0u);
+}
+
 }  // namespace
 
 void runTranslucencyTests() {
@@ -232,4 +275,5 @@ void runTranslucencyTests() {
     testFaceOrder();
     testTranslucentFaceRule();
     testGlassFrames();
+    testInnerCorners();
 }
