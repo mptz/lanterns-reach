@@ -1,5 +1,5 @@
 #pragma once
-// The state table (world/brick, "Palette entries: block states"): one row per
+// The state table (world/block-states): one row per
 // interned block state, indexed by a 32-bit StateId. A state's identity is its
 // definition's ULID and its named property values; its state hash is BLAKE3
 // (derive_key, deps/hashing) of the canonical text
@@ -9,7 +9,7 @@
 // names its coset without a rotation index (world/block-orientation).
 //
 // Interning hashes; everything else reads by id. Code resolves the ids it
-// needs ahead of time (world/brick), and moving between states of one
+// needs ahead of time (world/block-states), and moving between states of one
 // definition is a lookup in that definition's dense index, not a hash.
 //
 // Single-threaded here: rows are appended, never moved or changed, so the
@@ -35,18 +35,18 @@ struct BlockDef;
 using BlockTypeId = std::uint16_t;
 inline constexpr BlockTypeId kAirType = 0xFFFF;  // air's block type: no registry entry
 
-// A block state's number in this process (world/brick): never persisted.
+// A block state's number in this process (world/block-states): never persisted.
 struct StateId {
     std::uint32_t value = 0;
     constexpr auto operator<=>(const StateId&) const = default;
 };
 inline constexpr StateId kAirState{0};  // air is always state 0
 
-// The Brick's reverse lookup hashes this (in-process only, world/brick).
+// The Brick owner's reverse lookup hashes this (in-process only, world/chunk-representation).
 constexpr std::uint64_t lookupKey(StateId s) { return s.value; }
 
 // A declared variant property (orientation is not one: it comes from the
-// definition's symmetry). No value is a designated default (world/brick):
+// definition's symmetry). No value is a designated default (world/block-states):
 // an optional property is absent or one of its values (a flag is optional
 // with the one value "true"), and a mandatory one always has a value. In
 // the table a value is an index: for an optional property 0 is absent and
@@ -80,7 +80,7 @@ enum class Visibility : std::uint8_t { Air, Opaque, Translucent, Cutout };
 class StateTable {
 public:
     static constexpr std::string_view kHashContext = "lanterns-reach 2026-11-27 block state v1";
-    static constexpr std::uint32_t kMaxStatesPerDefinition = 1024;  // 2¹⁰ (world/brick)
+    static constexpr std::uint32_t kMaxStatesPerDefinition = 1024;  // 2¹⁰ (world/block-states)
     static constexpr Ulid airUlid();
 
     // A definition as the table knows it. `def` is the registry's (textures,
@@ -112,7 +112,7 @@ public:
     // The state with these values (orientation canonicalised under the
     // definition's symmetry; one value index per property, in name order),
     // interned if it wasn't. Fatal past 2³² states, or if the hash is already
-    // another state's (invariant/brick/unique-state-hash).
+    // another state's (invariant/block-state/unique-state-hash).
     StateId intern(std::uint32_t definition, orient::Rot orientation, std::span<const std::uint32_t> values);
     std::optional<StateId> find(const StateHash& hash) const;
     // The state a canonical text names (interned if need be), or nothing if it

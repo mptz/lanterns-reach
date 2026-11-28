@@ -9,7 +9,8 @@ what makes each read safe. It applies `core/isolation-first`,
 assumptions and invariants they share, and the connective tissue between
 them. The entity docs: the Dispenser (`design/dispenser.md`), GoalSource
 (`design/goal-source.md`), the Vicinity (`design/vicinity.md`), the
-chunk's interface (`design/chunk.md`), the Brick (`design/brick.md`), the
+chunk's interface (`design/chunk.md`), the Brick (`design/brick.md`), block states
+(`design/block-states.md`), the
 Surveyor (`design/surveyor.md`), the World actor with its Registrar
 (`design/world-actor.md`), the Cartographer (`design/cartographer.md`),
 the frame thread (`design/frame-thread.md`), audio (`design/audio.md`)
@@ -575,7 +576,7 @@ one of two roles: **owner** or **borrower**.
   - **Enforced:** type: the storage is reachable from other actors only
     through the chunk's read API (`core/opaque-chunk-queries`), and its
     cells are atomic types; review: each read query's validation or
-    declared tolerance (`world/brick`); test: ThreadSanitizer builds.
+    declared tolerance (`world/chunk-representation`); test: ThreadSanitizer builds.
   - **Cost:** relaxed loads (plain loads on x86), plus the version check
     where a query validates.
   - **Why:** lets cross-thread reads of hot chunks be zero-copy

@@ -825,7 +825,7 @@ with residency, degradation, the hard simulation and evaluation use cases in
 
 - Decision: **a cell is exactly its block state.** The Brick holds every
   persisted, digested and replicated fact about a cell, as a 32-bit state id
-  into the process-wide state table (`world/brick`). There is no freeform
+  into the process-wide state table (`world/block-states`). There is no freeform
   per-cell side table. This keeps chunk content tight and pointer-free, and
   keeps concurrent reading of a chunk to the Brick's one validated-read
   path (`world/chunk-representation`), with no second structure to keep
@@ -872,7 +872,7 @@ with residency, degradation, the hard simulation and evaluation use cases in
   to:** a written book is a new state of the book block whose property is a
   reference to a centrally allocated record, persisted at the world level
   and named by its ULID; sign text likewise. Reference properties are the
-  one exception to small closed domains (`world/brick`'s per-definition
+  one exception to small closed domains (`world/block-states`' per-definition
   state cap), allowed only for content that is rare per chunk, so palettes
   stay small. Scarce instances keep their own table (`data/entity-ledger`).
 - **No inter-block references; cross-chunk growth is marker-based only**

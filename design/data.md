@@ -308,7 +308,7 @@ entity ledger, and dimension garbage collection.
     attributes, materials, and so on, not just entities. The grammar
     (`data/grammar`) supports human-readable **nicknames** that resolve to
     ULIDs at parse time. Persisted data and network messages reference ULIDs
-    (and the state hashes derived from them, `world/brick`) only: never
+    (and the state hashes derived from them, `world/block-states`) only: never
     nicknames, and never a numeric index outside the scope that defines it (a
     chunk palette index is chunk-local).
   - **One identifier format.** Every durable id is 128 bits and prints as 26
@@ -319,7 +319,7 @@ entity ledger, and dimension garbage collection.
     millisecond timestamp, then 80 random bits, ordered within a millisecond
     by incrementing the random part. **State hashes** are not ULIDs: they are
     128-bit content hashes (BLAKE3, `deps/hashing`) of a state's canonical
-    text, its definition ULID and named property values (`world/brick`),
+    text, its definition ULID and named property values (`world/block-states`),
     derived by anyone who has the inputs and never minted, so they carry no
     timestamp. They share the encoding so that one
     parser, printer and database key type serves both.

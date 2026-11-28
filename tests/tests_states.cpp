@@ -1,5 +1,5 @@
 // Tests: block definitions' ULIDs, the canonical text, state hashes and the
-// state table (world/brick, data/stable-identity, world/block-orientation;
+// state table (world/block-states, data/stable-identity, world/block-orientation;
 // versions.md v0.2.4 acceptance 4, 5 and 7). Registered through
 // sandbox_tests.cpp.
 

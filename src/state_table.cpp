@@ -109,7 +109,7 @@ StateId StateTable::internDense(std::uint32_t definition, std::uint32_t dense) {
     Definition& d = definitions_[definition];
     FATAL_UNLESS(dense < d.stateCount, "a state outside its definition's domains");
     if (d.dense[dense] != kNoState) return d.dense[dense];
-    FATAL_UNLESS(rows_.size() < 0xFFFFFFFFull, "more than 2^32 block states (invariant/brick/state-ids-never-overflow)");
+    FATAL_UNLESS(rows_.size() < 0xFFFFFFFFull, "more than 2^32 block states (invariant/block-state/state-ids-never-overflow)");
     // Decode the dense index into the orientation slot and property values.
     std::vector<std::uint32_t> vals(d.properties.size());
     std::uint32_t rest = dense;
@@ -138,7 +138,7 @@ StateId StateTable::internDense(std::uint32_t definition, std::uint32_t dense) {
                 internPayload({tex.layer, BlockRegistry::materialId(d.type), packTexInfo(tex)});
         }
     const StateId id{static_cast<std::uint32_t>(rows_.size())};
-    FATAL_UNLESS(byHash_.emplace(row.hash, id).second, "two block states share a state hash (invariant/brick/unique-state-hash)");
+    FATAL_UNLESS(byHash_.emplace(row.hash, id).second, "two block states share a state hash (invariant/block-state/unique-state-hash)");
     rows_.push_back(row);
     d.dense[dense] = id;
     ++interned_;

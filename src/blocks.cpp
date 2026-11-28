@@ -154,7 +154,7 @@ std::optional<ParsedDefinition> parseDefinition(std::string_view text, std::stri
         return std::nullopt;
     }
     def.symmetry = *sym;
-    // Variant properties (world/brick); no value is a designated default:
+    // Variant properties (world/block-states); no value is a designated default:
     //   "flag"                                 optional, the one value "true"
     //   ["a", "b", ...]                        optional: absent, or one of its values
     //   {"values": [...], "mandatory": true}   always one of its values
@@ -236,7 +236,7 @@ std::optional<ParsedDefinition> parseDefinition(std::string_view text, std::stri
                 error = "\"initial\": no property \"" + key + "\"";
                 return std::nullopt;
             }
-    // The per-definition cap (world/brick): orientations times every domain.
+    // The per-definition cap (world/block-states): orientations times every domain.
     {
         std::uint64_t states = static_cast<std::uint64_t>(orient::kRotCount) / orient::symmetry(def.symmetry).subgroup.size();
         for (const PropertyDecl& p : def.properties) states *= p.domainSize();
@@ -477,7 +477,7 @@ BlockRegistry BlockRegistry::load(const std::string& dir) {
         }
         reg.defs_.push_back(std::move(def));
     }
-    // Every state of every definition, interned now (world/brick); the
+    // Every state of every definition, interned now (world/block-states); the
     // registry's type t is the table's definition t + 1 (air is 0).
     for (std::size_t t = 0; t < reg.defs_.size(); ++t) {
         const BlockDef& d = reg.defs_[t];

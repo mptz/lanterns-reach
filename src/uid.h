@@ -34,7 +34,7 @@ struct Uid {
 };
 
 using Ulid = Uid;       // minted once: a definition, a scarce instance
-using StateHash = Uid;  // derived: a block state's content hash (world/brick)
+using StateHash = Uid;  // derived: a block state's content hash (world/block-states)
 
 // BLAKE3 in derive_key mode (deps/hashing): the first 16 bytes of the key
 // derived from `material` under `context`. A context string names one use and

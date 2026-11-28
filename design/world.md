@@ -93,7 +93,7 @@ chunk voxel data.
   to tune.
 - **Superclasses are blocks** (owner, 2026-11-27): "stone", a soil or a
   canopy placeholder is a block definition with a ULID, held in Brick
-  palettes like any block state (`world/brick`), and its members are the
+  palettes like any block state (`world/block-states`), and its members are the
   blocks it may resolve into.
   - **`invariant/world/superclasses-unobtainable`** — No superclass block
     is ever obtained: refinement replaces it before terrain is playable,
@@ -510,6 +510,13 @@ features, which are not additive.
   storage; a chunk's cells are a full-detail Brick, owned by the chunk actor
   or a terrain node.
 
+## world/block-states — Block definitions, block states and the state table
+- **Specified in `design/block-states.md`** (an entity doc): a state is a
+  definition plus its variant property values, identified by a BLAKE3
+  state hash of a canonical text, and numbered in each process by a
+  `StateId` into the shared state table, which every Brick's palette
+  indexes.
+
 ## world/chunk-representation — Virtualized chunk representation (multiple reps, one interface)
 
 - Decision: Chunks expose a common interface backed by swappable internal
@@ -550,10 +557,58 @@ features, which are not additive.
   not the region:** a chunk is generated into a fixed generator palette,
   then stored in the most compact representation holding it; edits promote
   uniform → palette and only widen, and a chunk returns to uniform or
-  narrows only through a bulk fill or a compaction, at a save
-  (`world/brick`). A generator with known bounds may
+  narrows only through a bulk fill or a compaction (`world/brick`; when,
+  below). A generator with known bounds may
   classify a chunk as uniform **without sampling it**; that shortcut must
   agree exactly with full generation (a test, not an assumption).
+- **The owner's Brick policies** (moved from `world/brick`; the Brick
+  provides the mechanics, its owner, a chunk or a terrain node, decides):
+  - **Widening is proactive, at a high-water mark:** once a palette passes
+    15/16 of its capacity (a placeholder), the owner schedules the widening
+    for a later turn of its own, and edits keep appending into the headroom
+    meanwhile, so the copy is off the edit's path. An edit that finds the
+    palette full anyway (a paste, a fill, created blocks in one turn)
+    widens in its own turn; correct, only slower. Telemetry counts those
+    fallbacks, which tune the mark. The swap happens in the owner's own
+    turn, outside any write window, which holds only the pointer store.
+  - **Compaction is never automatic** (owner, 2026-11-27): neither the
+    Brick nor its owner has the context to schedule it, so it runs only
+    when a caller that does asks: **at a save**, when the save asks
+    (encoding a chunk blob visits every cell anyway, and the owner swaps
+    the compacted Brick in as its live one); **at a bulk fill**, which ends
+    with one; and **on request**, an explicit operation (to the plain
+    low-water mark, or leaving room for more entries) that nothing calls
+    yet. The gap between the low-water and high-water marks is the
+    hysteresis: a just-compacted Brick fills at least 1/16 of its capacity
+    before it widens again. A possible policy for churning Bricks, if a caller
+    ever needs one: compact once the palette has gained max(F, α·L₀)
+    entries since the last compaction (L₀ the live count that compaction
+    found; F = 4096 and α = 1/4, placeholders), with room for F more
+    entries; the owner counts appends.
+  - **The reverse lookup** (state id to palette index, which an edit needs
+    to find whether its state is already an entry) is the owner's: only
+    the owner's turn edits and no reader uses it, so it needs no
+    synchronisation. A scalar scan of the palette up to 8 entries
+    (measured; a placeholder), above that a flat linear-probing table of
+    palette indices at load at most ½, sized to the palette's capacity
+    when built, so it never regrows within one Brick's life; a swap drops
+    it, and the next lookup that needs it rebuilds it in O(entries). It is
+    built on the first edit that needs it and dropped when the owner stops
+    editing (a chunk freezing or saving). An edit that finds a dead entry
+    for its state reuses it; writers that already know an index (copying a
+    cell, one state across many cells) write indices directly.
+  - **Generation writes indices into fixed palettes:** each generator (a
+    biome's material set, say) declares its palette up front and writes
+    indices at a width fixed in advance, with no lookup per cell; bulk
+    fills do the same. The dynamic path (append, grow, the reverse lookup)
+    is for edits afterwards. Fixed-palette entries a Brick never uses are
+    dead entries, dropped at the next compaction.
+  - **Concurrent reads:** a retired Brick is never written after its swap,
+    so a reader still holding one sees a consistent but stale snapshot;
+    only the live Brick's in-place cell writes and appends can be read
+    mid-change, which the version counter (below) detects. How much of that
+    each reader tolerates or validates away is the owner's policy, behind
+    its API (open: the policy per reader).
 - **Version counters for concurrent reads** (`sim/concurrency-model`,
   "Reading chunks"): a palette-form chunk carries a
   seqlock-style version counter, one per chunk to start,
@@ -930,7 +985,7 @@ features, which are not additive.
   selection, and whether the X-held orientation choice applies per block
   type or to every block placed while X is held.
 - **Orientation is a property with an enumeration-free name** (v0.2.4):
-  in a state's canonical text (`world/brick`), `orientation` names its
+  in a state's canonical text (`world/block-states`), `orientation` names its
   coset gH by the member that sorts first by (image of +x, image of +z),
   axes ordered +x, −x, +y, −y, +z, −z, written as the two images (`+y+z`).
   The identity's coset is the default and is left out. In-process code

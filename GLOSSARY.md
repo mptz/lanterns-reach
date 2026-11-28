@@ -191,7 +191,7 @@ storage, rendering and replication at every level of detail.
 **optional property**, **mandatory property** — The two kinds of a block's
 variant property: an optional one may be absent (a flag is one, absent
 meaning false), a mandatory one always has a value. No value is a
-designated default. `world/brick`
+designated default. `world/block-states`
 
 **palette** — A Brick's table of the distinct values its cells use, which the
 cells index. `world/brick`
@@ -292,14 +292,14 @@ logic machine), which senses through the body and sends it intentions.
 property values (absent optional properties left out), written like a
 ULID.
 This, not the state id, is what is saved. It is not a ULID: it carries no
-timestamp and is derived, never minted. `world/brick`, `data/stable-identity`
+timestamp and is derived, never minted. `world/block-states`, `data/stable-identity`
 
 **state id** (`StateId`) — A block state's compact 32-bit number within one
 process, used in palettes and resolved ahead of time, never saved.
-`world/brick`
+`world/block-states`
 
 **state table** — The process-wide table of block states and what systems
-need to know about each, indexed by state id. `world/brick`
+need to know about each, indexed by state id. `world/block-states`
 
 **superclass** — A placeholder block that coarse terrain holds where the
 stage ladder hasn't yet chosen a specific block (generic stone, a soil, a

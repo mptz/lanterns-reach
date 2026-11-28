@@ -171,7 +171,7 @@ public:
     std::optional<BlockTypeId> find(std::string_view name) const;
     const BlockDef& def(BlockTypeId t) const { return defs_[t]; }
 
-    // Every state of every definition, interned at load (world/brick). The
+    // Every state of every definition, interned at load (world/block-states). The
     // table is append-only, so code holding a const registry may still
     // intern a state not seen before.
     StateTable& states() const { return *states_; }

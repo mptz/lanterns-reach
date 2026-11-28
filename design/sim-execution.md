@@ -313,7 +313,7 @@ hides its latency.
     A column's maximum height is a hash of its base cell, which a segment at
     height h finds h − 1 cells below its own coordinates, so reeds vary
     (3 to 9 tall, say) from coordinates alone. All 9 states present to
-    players as one reed (`world/brick`).
+    players as one reed (`world/block-states`).
   - **Growing inside a chunk.** The tip's growth is a memoryless hashed
     stream keyed by its state and coordinates (`sim/random-ticks`). Each
     event grows 0 or 1 blocks, keyed by the event's official time and the column's
@@ -374,7 +374,7 @@ hides its latency.
     cell's coordinates (plus the crossing event's official time, for a tree
     growing after worldgen), so random decisions are made once per chunk
     crossed, not once per block. Players see an ordinary log
-    (`world/brick`). This is how continuations carry huge features without
+    (`world/block-states`). This is how continuations carry huge features without
     records (`worldgen/feature-continuations`).
   - **Rejected:** a single anchor at the plant's base with segments in U
     tagged by its version and cross-chunk assertions (inter-block

@@ -233,7 +233,7 @@ The chunk payload, single-threaded:
   from `BlockState` to 32-bit state ids interned from state hashes, with the
   state table's six appearance ids per state (`render/block-textures`).
   Definitions stay JSON; the grammar-based loading arc comes later. *Claim: captures are identical, and every state round-trips
-  through its definition ULID and named property values.* `world/brick`,
+  through its definition ULID and named property values.* `world/block-states`,
   `data/stable-identity`, `world/block-orientation`. (Detailed below.)
   - **Also in v0.2.4: disposition the open items** (owner, 2026-11-27). Each
     item gets a decision: done in v0.2.4, scheduled to a named release, or
@@ -279,7 +279,7 @@ The chunk payload, single-threaded:
     - *Per-cell reads through a virtual call* (the per-cell mesher,
       raycasts, `probe`): 13–42% on per-cell meshing since v0.2.1.
       → **Dropped:** no hot path reads per cell any more.
-    - *Discretionary compaction* stays in `world/brick` for chunk actors
+    - *Discretionary compaction* stays in `world/chunk-representation` for chunk actors
       (v0.2.23): confirm, or remove it from the design. → **Decided:**
       compaction is never automatic; an explicit operation stays, unused
       (`world/brick`).
@@ -741,7 +741,7 @@ Display-required:
     representation pointer, with no scan for dead entries; a Brick is
     never resized in place, and its palette is never a growing vector;
   - the reverse lookup, held by the chunk's data rather than the Brick
-    (`world/brick`): a linear scan up to a threshold, then a table sized
+    (`world/chunk-representation`): a linear scan up to a threshold, then a table sized
     to the palette's capacity (at most about twice its entries), built
     lazily; an edit whose state has a dead entry reuses it;
   - edits only upgrade, and no edit compacts; a chunk becomes uniform or
@@ -1014,7 +1014,7 @@ Display-required:
 - **Appearance ids are precomputed over today's registry** (every type
   times its canonical orientations, through the same accessor), since the
   state table doesn't exist yet: until v0.2.4, when the state table holds
-  them (`world/brick`, `render/block-textures`). Per-mesh interning is
+  them (`world/block-states`, `render/block-textures`). Per-mesh interning is
   never written.
 - **Meshing runs on the frame thread, synchronously,** as in v0.2.1:
   until v0.2.12 (goals on the inline executor), then v0.2.17 and v0.2.20
@@ -1135,7 +1135,7 @@ Display-required:
   its definition ULID and named property values, or through its state hash;
   two distinct states share a state hash; a chunk's digest differs between
   two runs.
-- **Builds on:** v0.2.3; `world/brick` (palette entries, the state table,
+- **Builds on:** v0.2.3; `world/block-states` (palette entries, the state table,
   state ids, interning, the per-definition cap, retrieval ahead of time),
   `data/stable-identity` (ULIDs, the one identifier format, minting),
   `world/block-orientation` (orientation as a property),
@@ -1165,7 +1165,7 @@ Display-required:
   real clock (`data/stable-identity`); simulation minting is not in this
   release.
 - **Variant properties in definitions** (no value is a default, owner
-  2026-11-27, `world/brick`): `"properties"` declares named properties,
+  2026-11-27, `world/block-states`): `"properties"` declares named properties,
   each optional (absent, or one of its values) or mandatory (always one of
   its values): `"flag"` (optional, the one value `true`), a list of value
   names (an optional enumeration), or `{"values": [...], "mandatory":
@@ -1179,7 +1179,7 @@ Display-required:
   (an optional property counts absence as a value), orientations
   included, is at most 2¹⁰; the loader rejects a definition
   over it, naming the file and the product.
-- **The canonical text and the state hash** (`world/brick`):
+- **The canonical text and the state hash** (`world/block-states`):
   `<ULID>[name=value,...]`, absent optional properties left out and
   mandatory ones always written, names sorted, the brackets left out when nothing is written. Orientation is
   written as `world/block-orientation` specifies (the images of +x and +z
@@ -1203,7 +1203,7 @@ Display-required:
     values (orientation under the definition's symmetry), hashes, and
     returns the existing id for that hash or appends a row. Finding the
     hash with a different definition or values is fatal
-    (`invariant/brick/unique-state-hash`); interning past 2³² is fatal.
+    (`invariant/block-state/unique-state-hash`); interning past 2³² is fatal.
   - `find(StateHash) → StateId?`; `parse(text) → StateId?` and
     `text(StateId)`; and per definition a **dense index** of its states by
     property values (mixed radix over its domains, at most 2¹⁰ entries), so
@@ -1223,7 +1223,7 @@ Display-required:
   their block names and rotation indices as input, resolved when the
   scenario loads), harness checks, and tests. `BlockState` is removed.
   Code resolves the ids it needs before the loop that uses them
-  (`world/brick`, retrieval ahead of time): a tool its states when it plans
+  (`world/block-states`, retrieval ahead of time): a tool its states when it plans
   an action, the meshers one table row per palette entry; nothing per cell,
   per face or per frame interns or hashes.
 - **The digest's `H(s)` becomes a function of the state hash:** the state

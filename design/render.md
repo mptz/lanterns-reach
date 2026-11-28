@@ -508,7 +508,7 @@ bandwidth where it buys material richness and image quality.
   into a dense 32-bit **appearance id**. It is a separate id space from
   block states, mapping many to many: states that differ only in data the
   face doesn't show share an id, and one state's six faces may have six.
-  - **Precomputed per state:** the state table (`world/brick`) holds six
+  - **Precomputed per state:** the state table (`world/block-states`) holds six
     appearance ids per state, one per world face (orientation folded in),
     computed when the state is interned, so the hashing happens only
     there.

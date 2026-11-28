@@ -41,7 +41,7 @@
 inline constexpr std::uint32_t kBrickCells = 1u << (3 * kChunkBits);  // 2¹⁸
 static_assert(kBrickCells == kDigestCells, "the digest's weights cover exactly a Brick's cells");
 
-// Layout (world/brick): cell index = x + 64·y + 64²·z (z up), chosen for
+// Layout (world/brick): cell index = x + 64·y + 64²·z, chosen for
 // bitmask meshing. Behind this function; nothing else knows the formula.
 constexpr std::size_t brickCellIndex(int x, int y, int z) {
     return static_cast<std::size_t>(x) + static_cast<std::size_t>(kChunkSize) * static_cast<std::size_t>(y) +
