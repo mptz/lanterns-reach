@@ -1441,8 +1441,10 @@ Display-required:
   frame bits are revisited when ambient occlusion or per-vertex light
   arrives.
 - **Tinted glass as water:** until fluids.
-- **Cutout culling between two of one type:** until foliage exists to judge
-  it by.
+- **Cutout culling between two of one type, single-sided and untinted
+  cutout:** until foliage exists to judge it by; leaves will probably want
+  two-sided cutout with a translucent interior and surface textures
+  (owner, 2026-11-27; `render/transparency`).
 - **Ghosts on their own vertex format:** until ghosts are drawn from packed
   quads, if ever (no release needs it).
 

@@ -912,6 +912,10 @@ random case, where almost nothing merges.
 - **Mesh time:** the v0.1 scene's greedy mesh measured 0.86–0.94 ms in
   three runs (0.77 in step d); not investigated.
 
+- **Owner, 2026-11-27 (display check 9, part):** the grate's holes show
+  what is behind it. Two-sided cutout and cutout with tint are deferred to
+  foliage (open in `render/transparency`).
+
 ### Pending for v0.2.5
 - **Shader unpacking against the C++** (acceptance 5's readback): covered
   so far only by the pixel-identical captures.

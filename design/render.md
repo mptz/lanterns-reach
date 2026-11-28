@@ -150,6 +150,15 @@ bandwidth where it buys material richness and image quality.
   1. **Cutout first.** Leaves, grates, fences, grass are alpha-tested, written
      into the G-buffer, and are opaque for all purposes — most voxel-game
      "transparency" lives here. Near-opaque layers are also treated as cutout.
+     **Open, until foliage (owner, 2026-11-27):** v0.2.5's cutout is
+     single-sided (back faces culled, so a lone grate seen at an angle
+     doesn't show its far bars through its holes) and untinted. Leaves will
+     probably want two-sided cutout (no culling, the normal flipped for back
+     faces) combined with a translucent interior and surface textures. A
+     tinted surface layer with per-texel coverage over a tinted volume is a
+     small step from the glass frames; tinted bars with clear holes are not
+     (absorbance comes from closed volumes, so bars would need a coloured
+     thin-surface term).
   2. **General translucency → MBOIT** (Münstermann et al., 2018): two passes over
      translucent geometry only, both commutative.
   3. **Water surface** — usually a single big layer: its own forward pass after
