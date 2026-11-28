@@ -1302,7 +1302,12 @@ Display-required:
   after load).
 
 ## v0.2.5 — Packed quads, translucent merging and a cutout block
-- Status: IN PROGRESS (steps a, c, d and e built, b tried and reverted, 2026-11-27; RELEASES.md). Depends on v0.2.4.
+- Status: **CLOSED 2026-11-27.** Criteria 1–10 pass; 9 and 10 confirmed by
+  the owner. Built in steps a–e; step b (the fragment's cell from its quad)
+  was tried and reverted, and `log_columns`' pixels were found to be
+  texel-seam rounding. Cutout faces have a mesh array of their own.
+  Captures are pixel-checked from here on (shared rules). Depends on
+  v0.2.4.
 - **Claim:** every mesh covers the same faces as before, each with the
   appearance the per-cell rule gives it, at about a tenth of the bytes;
   translucent faces merge like opaque ones and absorbance stays exact; a

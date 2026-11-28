@@ -594,7 +594,7 @@ The open items listed at the head of v0.2.4 in `versions.md`, each decided.
 | 9 | `ChunkData` and `BlockState` gone; raycast and emitters are `Chunk`'s | ✅ |
 | 10 | The v0.1 world plays unchanged | ✅ owner (interactive use) |
 
-## v0.2.5 (in progress)
+## v0.2.5 (closed 2026-11-27)
 Built in steps, each committed with its own checks (owner, 2026-11-27):
 **a** packed quads and vertex pulling with no visible change; **b** the
 fragment's cell from its quad (`log_columns`); **c** inner-corner bits;
@@ -929,3 +929,35 @@ random case, where almost nothing merges.
   shift deliberately off by one in `quad.glsl`, it fails (1,141 differ), so
   the comparison bites. `headless_check.sh` runs it (68 runs, all pass;
   every capture identical to `cap-025e`).
+
+### GPU time at close (HD 620, `perf-1080p`, `--gpu-report`, 1,377 frames)
+The `v0.2.4` tag against `bac9c12`, two alternating runs each, on the
+owner's display with no input:
+
+| Pass | v0.2.4 ms | v0.2.5 ms |
+|---|---|---|
+| gbuffer | 3.22, 3.16 | 3.16, 3.18 |
+| lighting | 4.62, 4.56 | 4.56, 4.57 |
+| absorbance | 0.48, 0.44 | 0.47, 0.49 |
+| translucent | 0.39, 0.39 | 0.45, 0.45 |
+| present | 2.61, 2.60 | 2.60, 2.61 |
+| total | 11.38, 11.20 | 11.29, 11.37 |
+
+As at step a: the G-buffer pass is unchanged, the translucent pass about
+0.07 ms slower (it now chooses tiles per fragment and samples the corner
+tiles; merging its quads, 132 to 74, didn't change that), and the frame
+within 0.1 ms.
+
+### Acceptance status (v0.2.5)
+| # | Criterion | Status |
+|---|---|---|
+| 1 | Build + ctest, Debug and Release, Clang, `-Werror`, zero warnings | ✅ (27 tests Debug; 26 Release) |
+| 2 | Captures pixel-checked with every mesher; glass inner corners the visible change; absorbance; order invariance | ✅ (68 runs; differences listed under steps a–e: inner corners, merged glass's single-pixel specks, F3 outlines, the material view's shifted ids) |
+| 3 | `quad_*` pairs pixel-checked; `log_columns` reported | ✅ (cell-from-quad tried and reverted; 217 pixels of texel-seam rounding) |
+| 4 | Face-set equivalence and rep-swap tests on packed quads, merged translucent faces, frames and corners | ✅ |
+| 5 | Pack round trip at every field's extremes; shader unpacking against the C++ | ✅ (`--check-quads`, 1,288 quads) |
+| 6 | Translucent merging tests | ✅ |
+| 7 | Cutout tests; `cutout` scenario, zero validation errors | ✅ (a fixture registry with two cutout types) |
+| 8 | Every `--time-meshers` mesh at most a tenth of its v0.2.4 bytes | ✅ (1/33) |
+| 9 | The v0.1 world plays; merged glass in F3, closed inner corners; the grate's holes | ✅ owner |
+| 10 | No visible off-tint specks at translucent T-junctions | ✅ owner |
