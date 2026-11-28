@@ -324,6 +324,9 @@ foreach(entry ${BAD_FIXTURES})
     COMMAND ${EXPECT_FAIL} "${why}" $<TARGET_FILE:sandbox> --check-blocks --blocks ${BAD_BLOCKS}/${fixture})
 endforeach()
 # The ULID minting tool: well formed, distinct, monotonic; --add only inserts.
+# The capture comparison's visible-difference gate (tools/imgdiff.py --tolerant).
+add_test(NAME imgdiff_visible
+  COMMAND ${Python3_EXECUTABLE} -I ${CMAKE_CURRENT_SOURCE_DIR}/tests/imgdiff_selftest.py)
 add_test(NAME mint_ulid
   COMMAND ${Python3_EXECUTABLE} -I ${CMAKE_CURRENT_SOURCE_DIR}/tests/check_mint_ulid.py
           ${CMAKE_CURRENT_SOURCE_DIR}/tools/mint_ulid.py ${CMAKE_CURRENT_BINARY_DIR}/test_out/mint_ulid)

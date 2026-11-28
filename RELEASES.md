@@ -694,6 +694,65 @@ mesh fell from 152 ms to 11.
   uniform buffer rather than push constants. Total frame time is within
   0.1 ms.
 
-#### Pending for v0.2.5
+### v0.2.5b: the fragment's cell from its quad (tried, reverted)
+- **Tried:** the G-buffer fragment shader took the cell a random or matched
+  tile hashes from the quad (its corner plus the floor of the position
+  within it, clamped to the quad) rather than `floor(pos − n/2)`.
+- **Result:** the meshers agreed less. Greedy against per-cell in
+  `log_columns` went from 217 pixels over 1/255 to 270, and the `quad_*`
+  variant-view pair from 5 to 465, failing its budget. With the clamp, every
+  1×1 face keeps its own tile on each cell edge (the rasterizer decides which
+  face owns a pixel there), while a merged quad's interior edges still go
+  by `floor`, so the two meshers break ties differently. Nudging the sample
+  point by a fraction of a pixel in each of four screen directions changed
+  nothing measurable; rasterizer tie-breaking is up to the driver anyway.
+- **What the `log_columns` pixels are:** none is on the logs. They lie on
+  the grass floor (its far edges and short diagonal runs) and along the
+  glass boxes. In 180 of the 217 the greedy colour is the per-cell image's
+  colour at a neighbouring pixel: texel-seam rounding. A position
+  interpolated across a quad up to 64 cells wide rounds differently from one
+  across a single cell, and where a seam runs nearly through pixel centres
+  a run of pixels lands one texel over. The rest are isolated, consistent
+  with cell-edge ties and silhouette pixels (not confirmed one by one).
+  v0.2.3's "tile flips" (merged quads picking a neighbour's bark tile) is
+  withdrawn, and the count is 217 (v0.2.3 recorded 216).
+- **Disposition (owner, 2026-11-27):** reverted; opaque faces hash
+  `floor(pos − n/2)` as in v0.2.4 (translucent faces keep the clamp, which
+  frames need). The `log_columns` pixels are sub-pixel merge artifacts like
+  the T-junction pinholes: not visible on the HD 620, not pursued.
+
+### Capture comparison by visible difference (owner, 2026-11-27)
+Pixel identity stays what a regression shows first, but the gate for
+captures is now **visible difference**, so sub-pixel artifacts stop costing
+investigation (step b was one).
+- **`imgdiff.py --tolerant R`** excuses a pixel over `--max` (default 1)
+  when its colour is within `--max` of a pixel of the other image at most R
+  pixels away, checked both ways. A seam or edge moved by a pixel shows a
+  colour already there nearby; a wrong tile or tint, a missing face, or
+  sky through a crack doesn't. What's left is grouped into 8-connected
+  clusters, and **`--cluster N`** fails on any of N pixels or more.
+  **`--mask`** ignores a rectangle.
+- **The gate is `--tolerant 1 --cluster 4`.** The `quad_*` pairs use it in
+  place of `--max 0/1 --allow 16`. On the v0.2.5a captures they leave 3 and
+  5 single pixels (the pinholes). The order-invariance comparisons (1/255)
+  and the variant runs (exact, for determinism) are unchanged, as is the
+  OIT moment bias (owner).
+- **`tools/compare_captures.sh REF NEW`** compares a run with a reference
+  capture by capture (`identical`, `invisible`, `VISIBLE`, with exact
+  counts), masking the F1 panel (lit, lighting, overlays, resize) and the
+  F7 panel (hotbar). `cap-024` against `cap-025a`: all identical once
+  masked. `cap-025a` against step b's captures: 5 visible (`log_columns`,
+  the four `quad_*`, with clusters of up to 18 pixels in 1-pixel rows), so
+  the gate would have caught step b.
+- **Self-test** (`ctest imgdiff_visible`): on synthetic images a seam moved
+  by a pixel and isolated pinholes pass; a wrong 8×8 block, a 40-pixel
+  crack line and a tint 8/255 off fail; a mask hides the block.
+- **ꟻLIP** (a perceptual metric) is not adopted yet (owner: premature);
+  open to it later.
+- **Release criteria** that say "pixel-identical" are read through this
+  gate: identical captures are still reported, and any `invisible`
+  difference is listed, not investigated.
+
+### Pending for v0.2.5
 - **Shader unpacking against the C++** (acceptance 5's readback): covered
   so far only by the pixel-identical captures.

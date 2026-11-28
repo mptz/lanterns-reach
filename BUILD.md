@@ -84,8 +84,20 @@ screenshotting each, plus the order-invariance, determinism, merged-quad and
 Beer–Lambert comparisons. Every run must exit 0 (no validation errors). It
 sets `VK_DRIVER_FILES` to lavapipe's ICD and forces
 `SANDBOX_GLFW_PLATFORM=x11`, since GLFW prefers Wayland when a compositor is
-reachable. To compare captures between builds, use
-`python3 tools/imgdiff.py A.png B.png [--max N]`.
+reachable. Run only one at a time: each starts Xvfb on display `:97`.
+
+To compare a run's captures with a reference run:
+
+```
+tools/compare_captures.sh build-debug/cap-REF build-debug/cap-NEW   # about a minute
+```
+
+Each capture is reported as `identical`, `invisible` (every differing
+pixel's colour is within a pixel in the other image, or what's left forms no
+cluster of 4 or more pixels) or `VISIBLE`, with its largest clusters; the
+live text of the F1 and F7 panels is masked. For one pair,
+`python3 tools/imgdiff.py A.png B.png [--max N [--allow K]] [--mask
+X0,Y0,X1,Y1] [--tolerant R [--cluster N]]`.
 
 ## Measurements
 
