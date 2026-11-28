@@ -671,9 +671,29 @@ indices, an 8-point outline); a packed quad is 8, so every mesh is 1/33 of
 its v0.2.4 size. Emission no longer dominates: the checkerboard's greedy
 mesh fell from 152 ms to 11.
 
+- **On the HD 620** (owner, 2026-11-27): the v0.1 world draws and meshes,
+  F3 included, through edits and block placement.
+- **GPU time, `perf-1080p` on the HD 620** (`--gpu-report`, mean over 1,377
+  frames; the `v0.2.4` tag built in a worktree against `b3f61e0`, two
+  alternating runs each, on the owner's display with no input; a third
+  pair, disturbed by mouse movement, was discarded):
+
+  | Pass | v0.2.4 ms | v0.2.5a ms |
+  |---|---|---|
+  | gbuffer | 3.16, 3.12 | 3.16, 3.16 |
+  | lighting | 4.70, 4.60 | 4.69, 4.60 |
+  | absorbance | 0.45, 0.46 | 0.47, 0.48 |
+  | translucent | 0.39, 0.38 | 0.46, 0.46 |
+  | present | 2.55, 2.53 | 2.53, 2.50 |
+  | total | 11.33, 11.16 | 11.37, 11.27 |
+
+  Vertex pulling costs nothing measurable in the G-buffer pass (295 quads
+  for the v0.1 scene). The translucent pass is 0.07–0.08 ms slower (about
+  20%), and absorbance about 0.02 ms. Both now unpack the quad and choose
+  the tile per fragment, and they read their frame constants from a
+  uniform buffer rather than push constants. Total frame time is within
+  0.1 ms.
+
 #### Pending for v0.2.5
 - **Shader unpacking against the C++** (acceptance 5's readback): covered
   so far only by the pixel-identical captures.
-- **GPU frame time, `perf-1080p`, v0.2.4 against v0.2.5:** needs the
-  owner's display. Xvfb has no DRI3, so the HD 620 driver can't present
-  there.
