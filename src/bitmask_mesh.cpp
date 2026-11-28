@@ -36,6 +36,8 @@ struct Work {
     std::vector<std::uint64_t> groups;      // slot × 4096 words: G_g[z][y]
     std::vector<std::uint64_t> planeX;      // the ±x face planes after transposing: [x][z], bits y
     std::vector<std::uint64_t> faceWords;   // one row's translucent face words: [slot][6]
+    std::vector<std::uint32_t> tKey, tBits;  // one translucent face plane's merge keys and frame bits: [row][bit]
+    bool sideConstraint = true;              // translucent merging keeps quad sides uniformly framed
     bool busy = false;
     std::size_t allocations = 0;
     MeshTimings* timings = nullptr;
@@ -242,6 +244,109 @@ void emitTranslucent(Work& w, const MeshContext& ctx, WorldMesh& out, Phases& ph
         }
 }
 
+
+// Merges the translucent faces (v0.2.5d), per group, direction and slice, by
+// the opaque rule's shape with two more conditions. The key is the
+// appearance id plus whether the face shows the surface layer (framed faces
+// only; the mesh's property, not the state's). And with the side constraint
+// on, a quad grows only while each of its four sides stays uniformly framed
+// or unframed, so its side bits describe every unit face's frame edges
+// exactly (interior edges of a quad always continue: its faces are one
+// group, all showing the surface or none). The constraint can be switched off
+// to count what it costs (setTranslucentSideConstraint); the side bits are
+// then not meaningful.
+template <class StateAt>
+void mergeTranslucent(Work& w, const MeshContext& ctx, WorldMesh& out, Phases& phases, StateAt&& stateAt) {
+    using namespace quad;
+    const std::size_t slots = w.typeOfSlot.size();
+    sizeAtLeast(w, w.planeX, kRows);
+    sizeAtLeast(w, w.tKey, kRows);
+    sizeAtLeast(w, w.tBits, kRows);
+    for (std::size_t s = 0; s < slots; ++s) {
+        const std::uint64_t* g = &w.groups[s * kRows];
+        for (int d = 0; d < 6; ++d) {
+            if (d < 2) {  // ±x: transposed, as for opaque faces
+                for (int z = 0; z < kEdge; ++z) {
+                    std::uint64_t a[kEdge];
+                    for (int y = 0; y < kEdge; ++y) a[y] = g[z * kEdge + y] & ~neighbourWord(g, d, z, y, false);
+                    transpose64(a);
+                    for (int x = 0; x < kEdge; ++x) w.planeX[static_cast<std::size_t>(x * kEdge + z)] = a[x];
+                }
+            }
+            const bool along = kRightAlongBit[d];
+            const std::uint32_t lowBitSide = along ? kSideNegR : kSidePosR, highBitSide = along ? kSidePosR : kSideNegR;
+            for (int slice = 0; slice < kEdge; ++slice) {
+                std::uint64_t rows[kEdge];
+                std::uint64_t any = 0;
+                for (int r = 0; r < kEdge; ++r) {
+                    if (d < 2) {
+                        rows[r] = w.planeX[static_cast<std::size_t>(slice * kEdge + r)];
+                    } else {
+                        const int z = d >= 4 ? slice : r, y = d >= 4 ? r : slice;
+                        rows[r] = g[z * kEdge + y] & ~neighbourWord(g, d, z, y, false);
+                    }
+                    any |= rows[r];
+                }
+                if (any == 0) continue;
+                phases.lap(&MeshTimings::culling);
+                // Each face's key and frame bits (sides 0–3, surface 4, corners 5–8).
+                for (int r = 0; r < kEdge; ++r)
+                    for (std::uint64_t m = rows[r]; m != 0; m &= m - 1) {
+                        const int b = std::countr_zero(m);
+                        const glm::ivec3 c = cellOf(d, slice, b, r);
+                        const StateId st = stateAt(static_cast<std::uint32_t>(brickCellIndex(c.x, c.y, c.z)));
+                        const auto face = static_cast<Face>(d);
+                        const std::uint32_t bits = framedFace(ctx.states, st, face) ? frameBitsFromMasks(w, static_cast<int>(s), d, c) : 0u;
+                        const auto at = static_cast<std::size_t>(r * kEdge + b);
+                        w.tKey[at] = ctx.states.appearance(st, face) * 2u + ((bits >> 4) & 1u);
+                        w.tBits[at] = bits;
+                    }
+                auto key = [&](int b, int r) { return w.tKey[static_cast<std::size_t>(r * kEdge + b)]; };
+                auto fb = [&](int b, int r) { return w.tBits[static_cast<std::size_t>(r * kEdge + b)]; };
+                const bool constrained = w.sideConstraint;
+                for (int r = 0; r < kEdge; ++r) {
+                    while (rows[r] != 0) {
+                        const int b = std::countr_zero(rows[r]);
+                        const std::uint32_t k = key(b, r);
+                        const std::uint32_t rowSides = fb(b, r) & (kSideNegU | kSidePosU);
+                        int wd = 1, ht = 1;
+                        while (b + wd < kEdge && ((rows[r] >> (b + wd)) & 1) != 0 && key(b + wd, r) == k &&
+                               (!constrained || (fb(b + wd, r) & (kSideNegU | kSidePosU)) == rowSides))
+                            ++wd;
+                        const std::uint64_t mask = runMask(b, wd);
+                        while (r + ht < kEdge && (rows[r + ht] & mask) == mask) {
+                            const int nr = r + ht;
+                            bool ok = true;
+                            for (int i = 0; i < wd && ok; ++i) ok = key(b + i, nr) == k;
+                            if (ok && constrained) {
+                                const std::uint32_t top = fb(b, nr) & kSidePosU;
+                                for (int i = 1; i < wd && ok; ++i) ok = (fb(b + i, nr) & kSidePosU) == top;
+                                ok = ok && (fb(b, nr) & lowBitSide) == (fb(b, r) & lowBitSide) &&
+                                     (fb(b + wd - 1, nr) & highBitSide) == (fb(b + wd - 1, r) & highBitSide);
+                            }
+                            if (!ok) break;
+                            ++ht;
+                        }
+                        for (int i = 0; i < ht; ++i) rows[r + i] &= ~mask;
+                        phases.lap(&MeshTimings::merging);
+                        const int top = r + ht - 1, lowB = b, highB = b + wd - 1;
+                        Quad q{.cell = cellOf(d, slice, b, r), .w = wd, .h = ht, .face = static_cast<Face>(d)};
+                        q.appearance = k >> 1;
+                        q.sides = (fb(lowB, r) & (lowBitSide | kSideNegU)) | (fb(highB, r) & highBitSide) | (fb(lowB, top) & kSidePosU);
+                        for (std::uint32_t corner = 0; corner < 4; ++corner) {
+                            const bool posR = (corner & 1) != 0, posU = (corner & 2) != 0;
+                            const int cb = posR == along ? highB : lowB, cr = posU ? top : r;
+                            q.corners |= (fb(cb, cr) >> 5) & (1u << corner);
+                        }
+                        out.translucentQuads.push_back(pack(q));
+                        phases.lap(&MeshTimings::emission);
+                    }
+                }
+            }
+        }
+    }
+}
+
 // --- The palette path -------------------------------------------------------
 
 std::int16_t slotFor(Work& w, BlockTypeId type) {
@@ -362,9 +467,11 @@ void meshAt(const PaletteBrickAt<StateId, B>& brick, const MeshContext& ctx, boo
         }
     }
 
-    if (!w.typeOfSlot.empty())
-        emitTranslucent(w, ctx, out, phases,
-                        [&brick](std::uint32_t cell) { return brick.entry(brick.indexAt(cell)); });
+    if (!w.typeOfSlot.empty()) {
+        const auto stateAt = [&brick](std::uint32_t cell) { return brick.entry(brick.indexAt(cell)); };
+        if (merge) mergeTranslucent(w, ctx, out, phases, stateAt);
+        else emitTranslucent(w, ctx, out, phases, stateAt);
+    }
 }
 
 }  // namespace
@@ -423,15 +530,19 @@ void bitmaskMeshUniform(StateId state, const MeshContext& context, bool merge,
     slotFor(w, context.states.type(state));
     std::fill_n(w.groups.begin(), kRows, kAllBits);
     std::fill_n(w.opaque.begin(), kRows, std::uint64_t{0});
-    emitTranslucent(w, context, out, phases, [state](std::uint32_t) { return state; });
+    const auto stateAt = [state](std::uint32_t) { return state; };
+    if (merge) mergeTranslucent(w, context, out, phases, stateAt);
+    else emitTranslucent(w, context, out, phases, stateAt);
 }
 
 void setMeshTimings(MeshTimings* timings) { gWork.timings = timings; }
+
+void setTranslucentSideConstraint(bool on) { gWork.sideConstraint = on; }
 
 std::size_t meshWorkingAllocations() { return gWork.allocations; }
 
 std::size_t meshWorkingBytes() {
     const Work& w = gWork;
     return w.kind.capacity() + w.appearance.capacity() * 4 + w.slotOfEntry.capacity() * 2 + w.slotOfType.capacity() * 2 +
-           w.typeOfSlot.capacity() * sizeof(BlockTypeId) + (w.opaque.capacity() + w.groups.capacity() + w.planeX.capacity() + w.faceWords.capacity()) * 8;
+           w.typeOfSlot.capacity() * sizeof(BlockTypeId) + (w.tKey.capacity() + w.tBits.capacity()) * 4 + (w.opaque.capacity() + w.groups.capacity() + w.planeX.capacity() + w.faceWords.capacity()) * 8;
 }

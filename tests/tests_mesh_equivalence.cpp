@@ -129,7 +129,7 @@ void compare(Run& run, std::vector<Copy>& copies, bool everyCopyPerCell) {
         ++run.meshes;
         if (m != Mesher::PerCell) {
             if (unitFaces(base) != want) run.fail("unit faces differ from the per-cell rule", copies[0].name, m);
-            if (base.translucentQuads != ref.translucentQuads)
+            if (m == Mesher::Unmerged && base.translucentQuads != ref.translucentQuads)
                 run.fail("translucent mesh differs from the per-cell rule's bytes", copies[0].name, m);
         }
         for (std::size_t i = 1; i < copies.size(); ++i) {

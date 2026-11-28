@@ -19,8 +19,8 @@ bool wellFormed(const std::vector<UnitFace>& faces) {
 }
 
 // The greedy and unmerged meshes decompose into exactly the per-cell rule's
-// unit faces (payloads and frame bits included), and the translucent quads
-// are identical to its (cell order, then face order). Returns the per-cell mesh's unit-face count.
+// unit faces (payloads, frame and corner bits included), and the unmerged
+// translucent quads are identical to its (cell order, then face order). Returns the per-cell mesh's unit-face count.
 std::size_t faceSetsMatch(ChunkWorld& w) {
     const WorldMesh ref = meshWith(w, Mesher::PerCell);
     const auto want = unitFaces(ref);
@@ -29,7 +29,7 @@ std::size_t faceSetsMatch(ChunkWorld& w) {
         const WorldMesh got = meshWith(w, m);
         const auto faces = unitFaces(got);
         CHECK(wellFormed(faces) && faces == want);
-        CHECK(got.translucentQuads == ref.translucentQuads);
+        if (m == Mesher::Unmerged) CHECK(got.translucentQuads == ref.translucentQuads);
     }
     return want.size();
 }
@@ -149,13 +149,14 @@ void testRunsAndRows() {
         for (const QuadSize& q : sizes)
             if (q.dir >= 2) merged += q.w == n && q.h == 1;
         CHECK(merged == 4);
-        // Glass doesn't merge: one quad per face.
+        // Glass merges the same way (v0.2.5d): every side of a row's long
+        // faces is framed, uniformly.
         ChunkWorld g = worldOf(kGlass(), {});
         EditSet ge;
         for (const CellPos& p : cells) ge.edits.push_back({p, kGlass()});
         g.apply(ge);
-        faceSetsMatch(g);
-        CHECK(g.buildMesh(ChunkWorld::kChunk).translucentQuads.size() == static_cast<std::size_t>(4 * n + 2));
+        CHECK(faceSetsMatch(g) == static_cast<std::size_t>(4 * n + 2));
+        CHECK(g.buildMesh(ChunkWorld::kChunk).translucentQuads.size() == 6);
     }
 }
 
@@ -329,12 +330,15 @@ void testUniformFastPaths() {
     }
 
     // Uniform translucent: the translucent pass with an all-ones group mask,
-    // 24,576 unit quads, byte for byte what its palette form gives.
+    // six 64×64 quads, byte for byte what its palette form gives; unmerged,
+    // 24,576 unit quads in the per-cell rule's order.
     ChunkWorld glass(registry());
     fillChunk(ChunkWorldTestAccess::chunk(glass), Cells(kBrickCells, kGlass()), true);
     CHECK(TA::isUniform(ChunkWorldTestAccess::chunk(glass)));
     const WorldMesh gm = glass.buildMesh(ChunkWorld::kChunk);
-    CHECK(gm.translucentQuads.size() == 6 * 64 * 64 && gm.quads.empty());
+    const auto tsizes = quadSizes(gm);
+    CHECK(gm.translucentQuads.size() == 6 && gm.quads.empty() &&
+          std::all_of(tsizes.begin(), tsizes.end(), [](const QuadSize& q) { return q.w == 64 && q.h == 64; }));
     for (unsigned width : {1u, 8u, 32u}) {
         ChunkWorld p(registry());
         ChunkWorldTestAccess::chunk(p) = ChunkWorldTestAccess::chunk(glass);
@@ -342,7 +346,7 @@ void testUniformFastPaths() {
         CHECK(sameMesh(gm, meshWith(p, Mesher::Greedy)));
     }
     const WorldMesh gref = meshWith(glass, Mesher::PerCell);
-    CHECK(unitFaces(gm) == unitFaces(gref) && gm.translucentQuads == gref.translucentQuads);
+    CHECK(unitFaces(gm) == unitFaces(gref) && meshWith(glass, Mesher::Unmerged).translucentQuads == gref.translucentQuads);
 }
 
 // --- the working state ----------------------------------------------------------

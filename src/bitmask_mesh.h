@@ -6,8 +6,10 @@
 // faces come from word operations (adjacent row words along y and z, shifts
 // along x), cells outside the chunk read as air, and coplanar opaque faces of
 // equal appearance id are merged greedily into quads of at most 64×64.
-// Translucent faces are culled the same way and emitted one quad per face, in
-// the per-cell rule's order. Quads are packed (packed_quad.h), chunk-local.
+// Translucent faces are culled the same way and merged too, per group, with
+// each quad's sides uniformly framed (v0.2.5d); unmerged, they are emitted
+// one quad per face in the per-cell rule's order. Quads are packed
+// (packed_quad.h), chunk-local.
 //
 // The masks, planes and tables are a private, thread-local working set,
 // allocated on a thread's first mesh and reused. StateId-specific, and
@@ -38,6 +40,10 @@ struct MeshTimings {
     double masks = 0, culling = 0, transposes = 0, merging = 0, emission = 0;
 };
 void setMeshTimings(MeshTimings* timings);
+// A measurement hook: with the side constraint off (this thread only),
+// translucent faces merge by key alone, to count what the constraint costs;
+// such meshes' side bits are not meaningful. On by default.
+void setTranslucentSideConstraint(bool on);
 
 // The thread's working state: how many times it has grown (a test checks a
 // second mesh of a chunk no bigger allocates nothing), and its size.

@@ -798,6 +798,65 @@ investigation (step b was one).
   grey filling the gap where two bands met. Its `per-cell` and `unmerged`
   captures are pixel-checked against it (no cluster).
 
+- **Owner, 2026-11-27:** `glass_corners` checked on the HD 620; the corners
+  look right.
+
+### v0.2.5d: translucent faces merge (built 2026-11-27)
+#### Choices
+- **`mergeTranslucent`** (bitmask mesher, `greedy` only) runs the opaque
+  merge's shape per translucent group, direction and slice, on the group's
+  face planes (±x transposed as for opaque faces). The key is the
+  appearance id plus the surface-layer flag, which only framed faces carry.
+  With the side constraint, a run grows along the bits only while every
+  cell's −U and +U frame edges match the first cell's, and a row is added
+  only if its cells' +U edges agree and its end cells' R-side edges match
+  the quad's. The quad's side bits come from its first cell (low bit side
+  and −U), its last column (high bit side) and its top row (+U); its corner
+  bits from its four corner cells. Interior edges always continue (one
+  group, all showing the surface or none), so they need no check.
+- **`unmerged`** keeps one quad per face in the per-cell rule's order, so its
+  translucent quads are still byte-identical to the reference's; greedy's
+  translucent quads are compared as unit faces (frames and corners
+  included), and their order is now by group, direction and slice.
+- **A measurement hook**, `setTranslucentSideConstraint(false)`, merges by
+  key alone so `--time-meshers` can count what the constraint costs.
+- **A new measurement case, "glass lake":** the heightmap with tinted glass
+  (water's stand-in) filling it to z = 26, a large flat surface with a
+  jagged shore.
+
+#### Results
+- `ctest` passes, Debug (26) and Release (25), zero warnings. Tests: a slab
+  merges to six quads, each with all four sides framed; an L and a holed
+  square merge to fewer than half as many quads as faces and match the
+  per-cell frames and corners; an interface between two tints is framed
+  once (the lower type id's face); glass on stone gives one 6×6 bottom quad,
+  unframed. The random equivalence cases now cover merged translucent faces.
+- **Captures** (`cap-025d`, greedy, 66 runs with `glass_corners`): all pass;
+  `--check-absorbance` and the order-invariance comparisons pass. Against
+  `cap-025c` every capture pixel-checks except the two with F3 outlines
+  (overlays, resize), whose outlines now show the merged translucent quads,
+  as expected. The rest are `invisible`: single pixels, at most 7 per
+  capture and up to 94/255, at T-junctions of the merged glass (the specks
+  the spec anticipated; recorded, not pursued). Against `cap-025c-percell`
+  the translucent surfaces pixel-check too (at most 13 single pixels per
+  capture); the only other visible differences are the F3 outlines and one
+  13-pixel row in `floor_far` that greedy and per-cell already differed by
+  in step c (opaque).
+- `compare_captures.sh` masks a larger F1 panel (460×300): its width follows
+  its text, which differs between meshers ("world mesh: N faces").
+
+#### Measurements (Dell Latitude 7480, Release; `sandbox_tests --time-meshers`)
+| Case | translucent quads: unmerged | merged by key alone | with the side constraint | greedy ms (v0.2.5a) |
+|---|---|---|---|---|
+| v0.1 scene | 132 | 74 | 74 (+0%) | 0.77 (0.56) |
+| glass lake | 9,296 | 4,087 | 4,297 (+5.1%) | 1.42 (new) |
+| random, many states | 50,418 | 49,861 | 49,862 (+0%) | 12.3 (9.0) |
+
+The constraint costs 5% more quads on the lake's jagged shore and nothing
+elsewhere. Merging translucent faces costs mesh time: about 0.2 ms more for
+the v0.1 scene (culling and merging the group planes), 3 ms more for the
+random case, where almost nothing merges.
+
 ### Pending for v0.2.5
 - **Shader unpacking against the C++** (acceptance 5's readback): covered
   so far only by the pixel-identical captures.

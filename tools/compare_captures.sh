@@ -19,7 +19,7 @@ DIFF="$(dirname "$0")/imgdiff.py"
 
 masks_for() {  # capture name -> imgdiff mask arguments
     case "$1" in
-        lit|lighting|overlays|resize) echo "--mask 0,0,440,280" ;;  # F1 panel, top left
+        lit|lighting|overlays|resize) echo "--mask 0,0,460,300" ;;  # F1 panel, top left (its width follows its text)
         hotbar) echo "--mask 0,320,260,500" ;;                       # F7 panel, left
         *) echo "" ;;
     esac

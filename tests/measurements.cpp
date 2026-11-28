@@ -284,6 +284,17 @@ void timeMeshers() {
         shapes.push_back({"heightmap", c});
     }
     {
+        Cells c = shapes.back().cells;  // a lake: tinted glass (water's stand-in) over the heightmap, up to z = 26
+        const StateId water = registry().state(typeOf("glass_blue"), orient::kIdentity);
+        for (int y = 0; y < 64; ++y)
+            for (int x = 0; x < 64; ++x)
+                for (int z = 0; z <= 26; ++z) {
+                    auto& cell = c[static_cast<std::size_t>(brickCellIndex(x, y, z))];
+                    if (cell == kAirState) cell = water;
+                }
+        shapes.push_back({"glass lake", c});
+    }
+    {
         Cells c(kBrickCells, kAirState);
         for (std::uint32_t i = 0; i < kBrickCells; ++i) {
             const glm::ivec3 l = localOfIndex(i);
@@ -333,6 +344,25 @@ void timeMeshers() {
         setMeshTimings(nullptr);
         std::printf("  %-20s   greedy phases (ms, mean): masks %.3f, culling %.3f, transposes %.3f, merging %.3f, emission %.3f\n",
                     "", phases.masks / 7, phases.culling / 7, phases.transposes / 7, phases.merging / 7, phases.emission / 7);
+    }
+    // Translucent quads: one per face (unmerged), merged by key alone (the
+    // side constraint off: counted, not drawn), and merged with it.
+    std::printf("\nTranslucent quads: unmerged, merged without the side constraint, with it:\n");
+    for (const Shape& sh : shapes) {
+        Chunk d(testStates());
+        fillChunk(d, sh.cells, true);
+        auto count = [&](Mesher m) {
+            WorldMesh out;
+            d.meshInto(testContext(), m, out);
+            return out.translucentQuads.size();
+        };
+        const std::size_t unmerged = count(Mesher::Unmerged), constrained = count(Mesher::Greedy);
+        setTranslucentSideConstraint(false);
+        const std::size_t free = count(Mesher::Greedy);
+        setTranslucentSideConstraint(true);
+        if (unmerged > 0)
+            std::printf("  %-20s %8zu %8zu %8zu  (the constraint costs %+.1f%%)\n", sh.name, unmerged, free, constrained,
+                        free ? 100.0 * (static_cast<double>(constrained) - static_cast<double>(free)) / static_cast<double>(free) : 0.0);
     }
     std::printf("\nWorking state on this thread after the cases: %zu bytes (%zu allocations)\n", meshWorkingBytes(),
                 meshWorkingAllocations());

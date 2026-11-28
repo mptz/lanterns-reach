@@ -154,14 +154,18 @@ void testTranslucentFaceRule() {
     if (!red || !blue || !glow) return;
     ChunkWorld g(registry());
     auto put = [&](CellPos c, BlockTypeId t) { g.apply({{{c, registry().state(t, orient::kIdentity)}}}); };
+    auto translucentFaces = [](const WorldMesh& m) {
+        const auto u = unitFaces(m);
+        return static_cast<std::size_t>(std::count_if(u.begin(), u.end(), [](const UnitFace& f) { return f.translucent; }));
+    };
     put({1, 1, 1}, *red);
     put({2, 1, 1}, *red);  // a run of one tint: 10 faces, no internal pair
-    CHECK(g.buildMesh(ChunkWorld::kChunk).translucentQuads.size() == 10);
+    CHECK(translucentFaces(g.buildMesh(ChunkWorld::kChunk)) == 10);
     put({3, 1, 1}, *blue);  // another tint: the interface is two coplanar faces
-    CHECK(g.buildMesh(ChunkWorld::kChunk).translucentQuads.size() == 10 + 6);
+    CHECK(translucentFaces(g.buildMesh(ChunkWorld::kChunk)) == 10 + 6);
     put({1, 1, 0}, testStates().type(solidState()));  // glass on stone keeps its face; stone keeps its face to the glass
     const WorldMesh m = g.buildMesh(ChunkWorld::kChunk);
-    CHECK(m.translucentQuads.size() == 16 && m.quads.size() == 6);
+    CHECK(translucentFaces(m) == 16 && unitFaces(m).size() == 16 + 6);
     // Emitters include translucent blocks with emission.
     put({6, 6, 6}, *glow);
     bool found = false;
@@ -266,6 +270,68 @@ void testInnerCorners() {
     for (const auto& [cell, bits] : cornersOf(s)) CHECK(bits == 0u);
 }
 
+// Translucent merging (v0.2.5d, acceptance 6). Every case also passes
+// through faceSetsMatch-style checks: decomposed, the greedy mesh equals the
+// per-cell rule's unit faces, frame and corner bits included.
+void testTranslucentMerging() {
+    const auto red = registry().find("glass_red"), blue = registry().find("glass_blue");
+    CHECK(red && blue);
+    if (!red || !blue) return;
+    const StateId r = registry().state(*red, orient::kIdentity), b = registry().state(*blue, orient::kIdentity);
+    auto matches = [](ChunkWorld& w) { return unitFaces(meshWith(w, Mesher::Greedy)) == unitFaces(meshWith(w, Mesher::PerCell)); };
+    auto box = [](ChunkWorld& w, StateId s, glm::ivec3 lo, glm::ivec3 hi) {
+        EditSet e;
+        for (int z = lo.z; z <= hi.z; ++z)
+            for (int y = lo.y; y <= hi.y; ++y)
+                for (int x = lo.x; x <= hi.x; ++x) e.edits.push_back({{x, y, z}, s});
+        w.apply(e);
+    };
+    // A slab: one quad per side, each with its four sides framed.
+    ChunkWorld slab(registry());
+    box(slab, r, {2, 2, 2}, {6, 5, 3});
+    const WorldMesh sm = meshWith(slab, Mesher::Greedy);
+    CHECK(matches(slab) && sm.translucentQuads.size() == 6);
+    for (const std::uint64_t q : sm.translucentQuads) CHECK(quad::unpack(q).sides == 15u && quad::unpack(q).corners == 0u);
+    // An L and a holed square merge (fewer quads than faces) and reproduce the
+    // per-cell frames and corners.
+    ChunkWorld l(registry());
+    box(l, r, {2, 2, 2}, {9, 3, 2});
+    box(l, r, {2, 4, 2}, {3, 9, 2});
+    ChunkWorld holed(registry());
+    box(holed, r, {2, 2, 2}, {8, 8, 2});
+    holed.apply({{{{5, 5, 2}, kAirState}}});
+    for (ChunkWorld* w : {&l, &holed}) {
+        const WorldMesh m = meshWith(*w, Mesher::Greedy);
+        CHECK(matches(*w) && m.translucentQuads.size() < unitFaces(m).size() / 2);
+    }
+    // An interface between two tints is framed once: of its two coplanar
+    // faces, the lower type id's carries the frame, the other none.
+    ChunkWorld pair(registry());
+    pair.apply({{{{2, 2, 2}, r}, {{3, 2, 2}, b}}});
+    CHECK(matches(pair));
+    std::uint32_t redFrame = 99, blueFrame = 99;
+    for (const UnitFace& u : unitFaces(meshWith(pair, Mesher::Greedy))) {
+        if (u.translucent && u.x == 2 && u.dir == orient::PosX) redFrame = u.frame;
+        if (u.translucent && u.x == 3 && u.dir == orient::NegX) blueFrame = u.frame;
+    }
+    CHECK((*red < *blue ? redFrame : blueFrame) == 15u && (*red < *blue ? blueFrame : redFrame) == 0u);
+    // Glass on stone: its face against the stone shows no surface layer, so
+    // it is unframed and merges into one quad.
+    ChunkWorld onStone(registry());
+    box(onStone, solidState(), {2, 2, 1}, {7, 7, 1});
+    box(onStone, r, {2, 2, 2}, {7, 7, 2});
+    CHECK(matches(onStone));
+    int bottoms = 0;
+    for (const std::uint64_t packed : meshWith(onStone, Mesher::Greedy).translucentQuads) {
+        const quad::Quad q = quad::unpack(packed);
+        if (q.face == orient::NegZ) {
+            ++bottoms;
+            CHECK(q.w == 6 && q.h == 6 && q.sides == 0u && q.corners == 0u);
+        }
+    }
+    CHECK(bottoms == 1);
+}
+
 }  // namespace
 
 void runTranslucencyTests() {
@@ -276,4 +342,5 @@ void runTranslucencyTests() {
     testTranslucentFaceRule();
     testGlassFrames();
     testInnerCorners();
+    testTranslucentMerging();
 }
