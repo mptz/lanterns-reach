@@ -140,6 +140,16 @@ std::uint32_t ChunkTestAccess::paletteSize(const Chunk& c) {
     return c.brick_->width() == 0 ? 1u : c.palette().entries();
 }
 
+bool ChunkTestAccess::paletteDistinct(const Chunk& c) {
+    if (c.brick_->width() == 0) return true;
+    const PaletteBrick<StateId>& p = c.palette();
+    std::vector<StateId> entries;
+    entries.reserve(p.entries());
+    for (std::uint32_t i = 0; i < p.entries(); ++i) entries.push_back(p.entry(i));
+    std::sort(entries.begin(), entries.end());
+    return std::adjacent_find(entries.begin(), entries.end()) == entries.end();
+}
+
 std::uint32_t ChunkTestAccess::paletteCapacity(const Chunk& c) {
     return c.brick_->width() == 0 ? 1u : c.palette().capacity();
 }

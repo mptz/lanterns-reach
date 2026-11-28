@@ -225,7 +225,9 @@ struct Run {
                 if (ci == 0) reference = std::move(q);
                 else if (q != reference) fail("mesh", c->name, 0);
             }
+            // invariant/chunk-representation/edits-never-compact and distinct-palette.
             if (c->forcedWidth != 0 && TA::width(c->data()) < c->forcedWidth) fail("width shrank by an edit", c->name, 0);
+            if (!TA::paletteDistinct(c->data())) fail("a palette names one state twice", c->name, 0);
         }
     }
 

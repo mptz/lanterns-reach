@@ -609,6 +609,21 @@ features, which are not additive.
     mid-change, which the version counter (below) detects. How much of that
     each reader tolerates or validates away is the owner's policy, behind
     its API (open: the policy per reader).
+- **The owner's invariants over its Brick** (moved from `world/brick`,
+  where the class can't check them):
+  - **`invariant/chunk-representation/distinct-palette`** — No two entries
+    of one palette name the same state.
+    - **Enforced:** by construction: an edit appends only after the
+      reverse lookup misses (reusing a dead entry when it finds one), and
+      growth and compaction copy or renumber the entries; test: a
+      duplicate-entry audit (`ChunkTestAccess::paletteDistinct`) after the
+      randomized equivalence edits and in the dead-entry tests.
+  - **`invariant/chunk-representation/edits-never-compact`** — An edit
+    never swaps in a compacted, narrower or uniform Brick; only an explicit
+    compaction (a save, a bulk fill, a request) does.
+    - **Enforced:** structure: the edit path calls only growth; test: the
+      representation tests and the randomized equivalence test (a forced
+      width never shrinks under edits).
 - **Version counters for concurrent reads** (`sim/concurrency-model`,
   "Reading chunks"): a palette-form chunk carries a
   seqlock-style version counter, one per chunk to start,

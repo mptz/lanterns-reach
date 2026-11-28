@@ -92,7 +92,7 @@ void testDeadEntryReuse() {
     const std::uint64_t grew = TA::growths(d);
     d.set({7, 0, 0}, testState(29));  // reuses 29's entry
     CHECK(TA::paletteSize(d) == 4 && TA::growths(d) == grew && TA::liveEntries(d) == 4);
-    CHECK(d.get({7, 0, 0}) == testState(29));
+    CHECK(d.get({7, 0, 0}) == testState(29) && TA::paletteDistinct(d));
 }
 
 // No edit compacts or narrows: a chunk edited down to one state stays a
@@ -252,7 +252,7 @@ void testThirtyTwoBits() {
     CHECK(d.get({2, 0, 0}) == testState(last) && d.get({0, 0, 0}) == testState(1) && d.get({1, 0, 0}) == testState(2));
     CHECK(TA::liveEntries(d) == 4);  // air, 1, 2, the last one
     d.set({2, 0, 0}, testState(5));  // a state with a dead entry
-    CHECK(TA::paletteSize(d) == target);
+    CHECK(TA::paletteSize(d) == target && TA::paletteDistinct(d));  // reused, across sixteen doublings
     TA::compact(d);
     CHECK(TA::width(d) == 4 && TA::paletteSize(d) == 4 && d.get({2, 0, 0}) == testState(5));
 }

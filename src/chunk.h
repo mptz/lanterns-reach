@@ -128,6 +128,9 @@ struct ChunkTestAccess {
     static std::uint32_t liveEntries(const Chunk& c) { return c.liveEntries(); }
     static bool paletteFull(const Chunk& c) { return c.brick_->width() != 0 && c.palette().full(); }
     static std::uint32_t paletteCapacity(const Chunk& c);
+    // No two palette entries name one state (invariant/chunk-representation/
+    // distinct-palette): a test audit, O(entries log entries). True if uniform.
+    static bool paletteDistinct(const Chunk& c);
     // A palette at that width (0: uniform, needs exactly one live state),
     // keeping dead entries when the palette fits, else compacting.
     static void forceWidth(Chunk& c, unsigned width);

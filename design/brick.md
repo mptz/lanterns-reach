@@ -63,12 +63,13 @@ representation swapping).
   two at or above them, at least 16 (a placeholder), at most what its width
   can name, so the 1-, 2- and 4-bit widths hold 2, 4 and 16 entries.
 - **Compaction** is the same copy, renumbering: it finds the live entries,
-  renumbers them, and picks uniform if one state is live, else the narrowest
-  width at which the live entries sit at or below a **low-water mark** of
-  7/8 of capacity (a placeholder).
-- **Edits only upgrade** (uniform to palette, narrower to wider); a Brick
-  becomes uniform or narrower only through compaction, which no edit
-  performs.
+  renumbers them, and builds a uniform Brick if one state is live, else a
+  palette at the narrowest width at which the live entries sit at or below
+  a **low-water mark** of 7/8 of capacity (a placeholder).
+- **The owner chooses the replacement:** a wider Brick (or a palette for a
+  uniform one) when an edit needs room, a narrower or uniform one only when
+  compaction is asked for (`world/chunk-representation`). The Brick class
+  provides the copies; it decides nothing.
 
 ## Invariants (draft)
 - **`invariant/brick/owner-only`** — Only a Brick's owner (a chunk or a
@@ -81,16 +82,11 @@ representation swapping).
   content, uniform or as a palette at any width, answers every query,
   digest and mesh identically.
   - **Enforced:** test: the rep-swap tests (`world/chunk-meshing`).
-- **`invariant/brick/distinct-palette`** — No two entries of one palette
-  name the same state.
-  - **Enforced:** fatal check on insertion.
 - **`invariant/brick/index-in-palette`** — No index refers past the
   palette.
-  - **Enforced:** fatal check on write; debug audit.
-- **`invariant/brick/edits-never-compact`** — No edit compacts, and no
-  edit narrows a Brick.
-  - **Enforced:** fatal check in the edit path; test: the representation
-    tests.
+  - **Enforced:** fatal check in `setIndex`, the owner's one way to write an
+    index, in every build; copies (growth, compaction) write indices they
+    took from a valid palette.
 - **`invariant/brick/never-reallocated-in-place`** — A Brick is never
   reallocated in place: its width and palette capacity are fixed for its
   life, every change of either is a new Brick swapped in by its owner, and
